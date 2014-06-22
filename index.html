@@ -3,9 +3,32 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>It works!</title>
+  
+  <style>
+        blockquote {
+            background: #f9f9f9;
+            border-left: 10px solid #ccc;
+            margin: 1.5em 10px;
+            padding: 0.5em 10px;
+            quotes: "\201C" "\201D" "\2018" "\2019";
+        }
+
+        blockquote:before {
+            color: #ccc;
+            content: open-quote;
+            font-size: 4em;
+            line-height: 0.1em;
+            margin-right: 0.25em;
+            vertical-align: -0.4em;
+        }
+
+        blockquote p {
+            display: inline;
+        }
+    </style>
 </head>
-<body>
- 
+  
+<body style="font-family: Helvetica, sans-serif;">
 <div style="width:800px; margin:0 auto;">
 
     <h1>It's me! Bazlur Rahman Rokon</h1>
@@ -40,6 +63,30 @@
         LinkedIn: - <a href="http://bd.linkedin.com/in/bazlur">Click!</a><br/>
         WebLog: <a href="http://www.codexplo.wordpress.com/">Code Explosion</a><br/>
     </p>
+  
+    <div>
+        <h3>Quotations</h3>
+        <blockquote>
+            I stay up late every night, and realize it's a bad idea every morning.
+        </blockquote>
+
+        <blockquote>
+            Every good work of software starts by scratching a developer’s personal itch. <br/>
+            —Eric S. Raymond, The Cathedral and the Bazaar
+        </blockquote>
+
+        <blockquote>
+            It does not require a majority to prevail, but rather an irate, tireless minority keen to set brush fires in
+            people’s minds. <br/>
+            —Samuel Adams
+        </blockquote>
+
+        <blockquote>
+            Avoid speculative generality
+            (Write code to solve today's problems, and worry about tomorrow's problems when they actually materialize.
+            Everyone loses in the "what if.." school of design) . <p/>
+        </blockquote>
+    </div>
 </div>
 </body>
 </html>
