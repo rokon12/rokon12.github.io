@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>It works!</title>
+    
+    <script src="http://use.edgefonts.net/muli.js"></script>  
+
+    <style>
+
+        blockquote {
+            background: #f9f9f9;
+            border-left: 10px solid #ccc;
+            margin: 1.5em 10px;
+            padding: 0.5em 10px;
+            quotes: "\201C" "\201D" "\2018" "\2019";
+        }
+
+        blockquote:before {
+            color: #ccc;
+            content: open-quote;
+            font-size: 4em;
+            line-height: 0.1em;
+            margin-right: 0.25em;
+            vertical-align: -0.4em;
+        }
+
+        blockquote p {
+            display: inline;
+        }
+    </style>
+</head>
+  
+<body style="font-family: muli, sans-serif;">
+<div style="width:800px; margin:0 auto;">
+
+    <h1>It's me! Bazlur Rahman Rokon</h1>
+
+    <p align="justify">
+        I am a software developer, currently work for a company named <a href="http://therapservices.net/"
+                                                                         target="_blank">'Therap Services, LLC' </a>.
+        <br/><br/>
+        I have years of experience coding in Java, which includes numerous projects – academic, professional, and
+        personal. Amongst these projects are web applications, desktop applications, and mobile applications. From this
+        medley of projects, I have gained a strong familiarity with the tools available to the Java developer – Spring
+        being one of them. Consequently, I am very comfortable with Java development.
+        <br/>
+        <br/>
+        I have 1.5 years of experience coding in C# and in DotNet. My experience in these areas includes both
+        professional projects and personal projects. These projects include both web projects (web forms and MVC) and
+        desktop projects. From these projects, I have gained a competent understanding of DotNet.
+        <br/><br/>
+        And I'm actively involved in <a href="http://www.jugbd.org" target="_blank"> Java User Group, Bangladesh</a>.
+        Recently we have initiated an open source project that targets local health sector.
+        <br/>
+        <br/>
+        Apart from all of these, I love to teach. I teach Java to the kids (students of 1st and 2nd year) of the <a
+            href="http://iit.univdhaka.edu/" target="_blank">
+        Institute of Information Technology </a>, <a href="http://www.du.ac.bd/" target="_blank">University of Dhaka</a>,
+        where I actually went to take my bachelor's degree.
+    </p>
+
+    <p> You can find me :-
+        <br/>
+        EMail: - <a href="mailto:contact@bazlur.com">Click!</a><br/>
+        LinkedIn: - <a href="http://bd.linkedin.com/in/bazlur">Click!</a><br/>
+        WebLog: <a href="http://www.codexplo.wordpress.com/">Code Explosion</a><br/>
+    </p>
+  
+  <div>
+    <h3>Articles : </h3>
+    <ul> 
+      <li>
+        <a href="http://qr.ae/2UB8A">How the java code gets executed and performs better</a></li>
+    </ul>   
+  </div>
+  
+    <div>
+        <h3>Quotations</h3>
+        <blockquote>
+            I stay up late every night, and realize it's a bad idea every morning.
+        </blockquote>
+
+        <blockquote>
+            Every good work of software starts by scratching a developer’s personal itch. <br/>
+            —Eric S. Raymond, The Cathedral and the Bazaar
+        </blockquote>
+
+        <blockquote>
+            It does not require a majority to prevail, but rather an irate, tireless minority keen to set brush fires in
+            people’s minds. <br/>
+            —Samuel Adams
+        </blockquote>
+
+        <blockquote>
+            Avoid speculative generality
+            (Write code to solve today's problems, and worry about tomorrow's problems when they actually materialize.
+            Everyone loses in the "what if.." school of design) . <p/>
+        </blockquote>
+    </div>
+</div>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-20054245-2', 'bazlur.com');
+  ga('send', 'pageview');
+
+
+</script>
+</body>
+</html>
