@@ -1,215 +1,209 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    	<title>Bazlur Rahman :: Home Page</title>
-        <meta name="description" content="Bazlur Rahman Rokon is a programmer, teacher, speaker, technologist and more.">
-        <meta name="author" content="Bazlur Rahman Rokon">
-        <link rel="author" href="humans.txt" />
+<!--
+Copyright (c) 2011 Sam Phippen <samphippen@googlemail.com>
+ 
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+ 
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+ 
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+-->
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Bazlur Rahman :: Home Page</title>
+    <meta name="description" content="Bazlur Rahman Rokon is a programmer, teacher, speaker, technologist and more.">
+    <meta name="author" content="Bazlur Rahman Rokon">
+    <link rel="author" href="humans.txt"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <style type="text/css">
+        body {
+            background-color: #000
+        }
 
-        <script src="http://use.edgefonts.net/muli.js"></script>
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/foundation.css">
+        #console {
+            font-family: courier, monospace;
+            color: #fff;
+            width: 750px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 100px;
+            font-size: 14px;
+        }
 
-        <script src="js/vendor/modernizr.js"></script>
+        a {
+            color: #0bc;
+            text-decoration: none;
+        }
 
-        <style>
-            blockquote {
-                background: #f9f9f9;
-                border-left: 10px solid #ccc;
-                margin: 1.5em 10px;
-                padding: 0.5em 10px;
-                quotes: "\201C" "\201D" "\2018" "\2019";
-            }
+        #a {
+            color: #0f0;
+        }
 
-            blockquote:before {
-                color: #ccc;
-                content: open-quote;
-                font-size: 4em;
-                line-height: 0.1em;
-                margin-right: 0.25em;
-                vertical-align: -0.4em;
-            }
+        #c {
+            color: #0bc;
+        }
 
-            blockquote p {
-                display: inline;
-            }
-        </style>
+        #b {
+            color: #ff0096;
+        }
+    </style>
 </head>
+<body>
+<script type="text/javascript">
+    var Typer = {
+        text: null,
+        accessCountimer: null,
+        index: 0, // current cursor position
+        speed: 2, // speed of the Typer
+        file: "", //file, must be setted
+        accessCount: 0, //times alt is pressed for Access Granted
+        deniedCount: 0, //times caps is pressed for Access Denied
+        init: function () {// inizialize Hacker Typer
+            accessCountimer = setInterval(function () {
+                Typer.updLstChr();
+            }, 500); // inizialize timer for blinking cursor
+            $.get(Typer.file, function (data) {// get the text file
+                Typer.text = data;// save the textfile in Typer.text
+                Typer.text = Typer.text.slice(0, Typer.text.length - 1);
+            });
+        },
 
-<body style="font-family: muli, sans-serif;">
-    <script src="js/vendor/jquery.js"></script>
-    <script src="js/foundation.min.js"></script>
-    <script>
-        $(document).foundation();
-        var doc = document.documentElement;
-        doc.setAttribute('data-useragent', navigator.userAgent);
-    </script>
+        content: function () {
+            return $("#console").html();// get console content
+        },
 
-    <div class="row">
-        <div class="large-3 columns">
-            <h1>(^_-)</h1>
-        </div>
-        <div class="large-9 columns">
-            <ul class="button-group right">
-                <li><a href="http://codexplo.wordpress.com/" target="_blank" class="button">WebLog</a></li>
-                <li><a href="http://careers.stackoverflow.com/bazlur" class="button">Resume</a></li>
-                <li><a href="mailto:contact@bazlur.com" class="button">Contact</a></li>
-                <li><a href="http://bd.linkedin.com/in/bazlur" class="button">LinkedIn</a></li>
-            </ul>
-        </div>
-    </div>
+        write: function (str) {// append to console content
+            $("#console").append(str);
+            return false;
+        },
 
-    <div class="row">
-        <div class="large-12 columns">
-            <div id="slider">
-                <img src="img/coffee.png">
-            </div>
-            <hr>
-        </div>
-    </div>
+        makeAccess: function () {//create Access Granted popUp      FIXME: popup is on top of the page and doesn't show is the page is scrolled
+            Typer.hidepop(); // hide all popups
+            Typer.accessCount = 0; //reset count
+            var ddiv = $("<div id='gran'>").html(""); // create new blank div and id "gran"
+            ddiv.addClass("accessGranted"); // add class to the div
+            ddiv.html("<h1>ACCESS GRANTED</h1>"); // set content of div
+            $(document.body).prepend(ddiv); // prepend div to body
+            return false;
+        },
+        makeDenied: function () {//create Access Denied popUp      FIXME: popup is on top of the page and doesn't show is the page is scrolled
+            Typer.hidepop(); // hide all popups
+            Typer.deniedCount = 0; //reset count
+            var ddiv = $("<div id='deni'>").html(""); // create new blank div and id "deni"
+            ddiv.addClass("accessDenied");// add class to the div
+            ddiv.html("<h1>ACCESS DENIED</h1>");// set content of div
+            $(document.body).prepend(ddiv);// prepend div to body
+            return false;
+        },
 
-    <div class="row">
-        <div class="large-8 columns" role="content">
-            <h1> It's me! Bazlur Rahman Rokon </h1>
+        hidepop: function () {// remove all existing popups
+            $("#deni").remove();
+            $("#gran").remove();
+        },
 
-            <article>
-                <p align="justify">
-                    I am a software developer, currently work for a company named
-                    <a href="http://therapservices.net/" target="_blank">
-            <span data-tooltip class="has-tip" title="is a web-based service organization that provides an integrated solution for documentation,
-                   reporting and communication needs of agencies providing support to people with developmental disabilities.
-                   It offers an easy and efficient alternative to the immense amount of paper work that is done manually by
-                   the care providers.">'Therap Services, LLC' </span></a>.
-
-                    <br/><br/>
-                    I have three years of experience coding in Java, which includes numerous projects – academic,
-                    professional,
-                    and
-                    personal. Amongst these projects are web applications, desktop applications, and mobile
-                    applications.
-                    From this
-                    medley of projects, I have gained a strong familiarity with the tools available to the Java
-                    developer –
-                    Spring
-                    being one of them. Consequently, I am very comfortable with Java development.
-                    <br/>
-                    <br/>
-                    I have 1.5 years of experience coding in C# and in DotNet. My experience in these areas includes
-                    both
-                    professional projects and personal projects. These projects include both web projects (web forms and
-                    MVC) and
-                    desktop projects. From these projects, I have gained a competent understanding of DotNet.
-                    <br/><br/>
-                    And I'm actively involved in <a href="http://www.jugbd.org" target="_blank">
-            <span data-tooltip class="has-tip"
-                  title="Java User Group Bangladesh (JUGBD) is a volunteer organizations that strive to distribute Java-related knowledge. Our plan to provide a meeting place for java user group to get information , share resources and solutions, increase networking, expands Java Technology expertise and above all, drink coke, eat pizza and have fun.">Java User Group, Bangladesh</span></a>.
-                    Recently we have initiated an open source project that targets local health sector.
-                    <br/>
-
-                    <br/>
-                    Apart from all of these, I love to teach. I teach Java to the kids (students of 1st and 2nd year) of
-                    the
-                    <a href="http://iit.univdhaka.edu/" target="_blank"> Institute of Information Technology</span> </a>,
-                    <a href="http://www.du.ac.bd/" target="_blank">University of Dhaka</a>, where I actually went to
-                    take my
-                    bachelor's degree.
-                </p>
-            </article>
-            <div>
-                <h3>Articles : </h3>
-                <ul>
-                    <li>
-                        <a href="http://qr.ae/2UB8A">How the java code gets executed and performs better</a></li>
-                </ul>
-            </div>
-
-        </div>
-        <aside class="large-4 columns">
-            <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/bazlur_rahman"
-               data-widget-id="248746547012050944">Tweets by @bazlur_rahman</a>
-            <script>!function (d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
-                if (!d.getElementById(id)) {
-                    js = d.createElement(s);
-                    js.id = id;
-                    js.src = p + "://platform.twitter.com/widgets.js";
-                    fjs.parentNode.insertBefore(js, fjs);
+        addText: function (key) {//Main function to add the code
+            if (key.keyCode == 18) {// key 18 = alt key
+                Typer.accessCount++; //increase counter
+                if (Typer.accessCount >= 3) {// if it's presed 3 times
+                    Typer.makeAccess(); // make access popup
                 }
-            }(document, "script", "twitter-wjs");</script>
-        </aside>
-    </div>
+            } else if (key.keyCode == 20) {// key 20 = caps lock
+                Typer.deniedCount++; // increase counter
+                if (Typer.deniedCount >= 3) { // if it's pressed 3 times
+                    Typer.makeDenied(); // make denied popup
+                }
+            } else if (key.keyCode == 27) { // key 27 = esc key
+                Typer.hidepop(); // hide all popups
+            } else if (Typer.text) { // otherway if text is loaded
+                var cont = Typer.content(); // get the console content
+                if (cont.substring(cont.length - 1, cont.length) == "|") // if the last char is the blinking cursor
+                    $("#console").html($("#console").html().substring(0, cont.length - 1)); // remove it before adding the text
+                if (key.keyCode != 8) { // if key is not backspace
+                    Typer.index += Typer.speed;	// add to the index the speed
+                } else {
+                    if (Typer.index > 0) // else if index is not less than 0
+                        Typer.index -= Typer.speed;//	remove speed for deleting text
+                }
+                var text = Typer.text.substring(0, Typer.index)// parse the text for stripping html enities
+                var rtn = new RegExp("\n", "g"); // newline regex
 
-    <div class="row">
-        <div class="panel callout radius">
+                $("#console").html(text.replace(rtn, "<br/>"));// replace newline chars with br, tabs with 4 space and blanks with an html blank
+                window.scrollBy(0, 50); // scroll to make sure bottom is always visible
+            }
+            if (key.preventDefault && key.keyCode != 122) { // prevent F11(fullscreen) from being blocked
+                key.preventDefault()
+            }
+            ;
+            if (key.keyCode != 122) { // otherway prevent keys default behavior
+                key.returnValue = false;
+            }
+        },
 
-            <h3>Favorite Quotations</h3>
-            <blockquote>
-                I stay up late every night, and realize it's a bad idea every morning.
-            </blockquote>
+        updLstChr: function () { // blinking cursor
+            var cont = this.content(); // get console
+            if (cont.substring(cont.length - 1, cont.length) == "|") // if last char is the cursor
+                $("#console").html($("#console").html().substring(0, cont.length - 1)); // remove it
+            else
+                this.write("|"); // else write it
+        }
+    };
 
-            <blockquote>
-                Every good work of software starts by scratching a developer’s personal itch. <br/>
-                —Eric S. Raymond, The Cathedral and the Bazaar
-            </blockquote>
+    function replaceUrls(text) {
+        var http = text.indexOf("http://");
+        var space = text.indexOf(".me ", http);
+        if (space != -1) {
+            var url = text.slice(http, space - 1);
+            return text.replace(url, "<a href=\"" + url + "\">" + url + "</a>");
+        } else {
+            return text
+        }
+    }
+    Typer.speed = 3;
+    Typer.file = "bazlur.txt";
+    Typer.init();
 
-            <blockquote>
-                It does not require a majority to prevail, but rather an irate, tireless minority keen to set brush
-                fires in
-                people’s minds. <br/>
-                —Samuel Adams
-            </blockquote>
+    var timer = setInterval("t();", 30);
+    function t() {
+        Typer.addText({"keyCode": 123748});
+        if (Typer.index > Typer.text.length) {
+            clearInterval(timer);
+        }
+    }
 
-            <blockquote>
-                Avoid speculative generality
-                (Write code to solve today's problems, and worry about tomorrow's problems when they actually
-                materialize.
-                Everyone loses in the "what if.." school of design) . <p/>
-            </blockquote>
-            
-            <blockquote>
-                Talk is cheap. Show me the code.<br/>
-                
-                —Linus Torvalds 
-            </blockquote>
-            
-        </div>
+</script>
+<div id="console"></div>
+<script type="text/javascript">
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-    </div>
+    ga('create', 'UA-20054245-2', 'bazlur.com');
+    ga('send', 'pageview');
+</script>
 
-    <footer class="row">
-        <div class="large-12 columns">
-            <hr/>
-            <div class="row">
-                <div class="large-6 columns">
-                    <p>© 2014 Bazlur Rahman Rokon All Rights Reserved.</p>
-                </div>
-                <div class="large-6 columns">
-                    <ul class="inline-list right">
-                        <li><a href="http://codexplo.wordpress.com/" target="_blank">WebLog</a></li>
-                        <li><a href="http://careers.stackoverflow.com/bazlur">Resume</a></li>
-                        <li><a href="mailto:contact@bazlur.com">Contact</a></li>
-                        <li><a href="http://bd.linkedin.com/in/bazlur">LinkedIn</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
 
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-20054245-2', 'bazlur.com');
-      ga('send', 'pageview');
-    </script>
 </body>
-</html>
+</html> 
