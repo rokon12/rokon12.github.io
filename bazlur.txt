@@ -1,7 +1,7 @@
 <span id="a">root@bazlur</span>:<span id="b">~</span><span id="c">$</span> cat bazlur.txt<br/><br/>
 Hi, I'm Bazlur Rahman Rokon.
 <p> I'm incredibly excited to be a software developer, currently working for a company named <a href="http://therapservices.net/" target="_blank">Therap Services, LLC </a> .</p>
-I do some blogging: <a href="http://java.dzone.com/articles/how-java-executes-and-performs">DZone</a><br/>
+I do some blogging: <a href="http://www.dzone.com/users/bazlurrahman">@DZone</a><br/>
 > and write books: <a href="http://java.howtocode.com.bd/">বাংলায় জাভা </a>, <a href="http://scala.howtocode.com.bd/"> Scala দি নেক্সট বিগ থিং</a> <br/>
 > and run a Java User Group: <a href="https://www.facebook.com/groups/jugbd/"> JUGBD</a> <br/>
 > and some tech-casting: <a href="https://www.youtube.com/channel/UCZewAFruuISnDT6EGhEoRUQ">Living on Code Techcast </a> , as a co-host<br/>
