@@ -40,7 +40,7 @@
 <meta name="description">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Bazlur's Notes">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/archives/index.html">
 <meta property="og:site_name" content="Bazlur's Notes">
 <meta property="og:description">
 <meta name="twitter:card" content="summary">
@@ -55,7 +55,7 @@
   };
 </script>
 
-  <title> Bazlur's Notes </title>
+  <title> Archive | Bazlur's Notes </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -73,9 +73,7 @@
 
 
 
-  <div class="container one-column 
-   page-home 
-">
+  <div class="container one-column  page-archive ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -143,78 +141,61 @@
     <main id="main" class="main">
       <div class="main-inner">
         <div id="content" class="content"> 
-  <section id="posts" class="posts-expand">
+
+  <section id="posts" class="posts-collapse">
+    <span class="archive-move-on"></span>
+
+    <span class="archive-page-counter">
+      
+      
+      
+        
+      
+      Um..! 1 post. Keep on posting.
+    </span>
+
     
+
+      
+      
       
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+      
+        
+        <div class="collection-title">
+          <h2 class="archive-year motion-element" id="archive-year-2015">2015</h2>
+        </div>
+      
+      
+
+      
+
+  <article class="post post-type-normal"itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
 
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              <a class="post-title-link" href="/2015/09/05/about-me/" itemprop="url">
-                About Me
-              </a>
-            
-          
-        </h1>
-      
+      <h1 class="post-title">
+        
+            <a class="post-title-link" href="/2015/09/05/about-me/" itemprop="url">
+              <span itemprop="name">About Me</span>
+            </a>
+        
+      </h1>
 
       <div class="post-meta">
-        <span class="post-time">
-          Posted on
-          <time itemprop="dateCreated" datetime="2015-09-05T04:10:12+06:00" content="2015-09-05">
-            2015-09-05
-          </time>
-        </span>
-
-        
-
-        
-          
-        
+        <time class="post-time" datetime="2015-09-04T22:10:12.000Z" itemprop="dateCreated" content="2015-09-04"> 09-05 </time>
       </div>
+
     </header>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody"><p>I’m incredibly excited to be a software developer.</p>
-<p>I do some blogging:  <a href="https://dzone.com/users/1298119/bazlur_rahman.html" target="_blank" rel="external">DZone</a>  and some tweeting: @<a href="https://twitter.com/bazlur_rahman" target="_blank" rel="external">bazlur_rahman</a> and software development, at Vantage Labs, Dhaka, which is amazing and some tech-casting: <a href="https://www.youtube.com/channel/UCZewAFruuISnDT6EGhEoRUQ" target="_blank" rel="external">Living on Code Techcast</a> as a panelist and some meetup-ing, at <a href="www.jugbd.org">JUGBD</a>  and some open-sourcing : <a href="https://github.com/mozammel/bdcbook" target="_blank" rel="external">bdcbook</a> for <a href="https://www.facebook.com/groups/bdcyclists/" target="_blank" rel="external">BDCyclists</a> , <a href="https://github.com/mozammel/mNet" target="_blank" rel="external">mNetServices.com</a>, which is running on production and helping local health sector<br>and some teaching programming to Institute of Information Technology, University of Dhaka, where I actually went to take my bachelor’s degree.</p>
-<p>Im trying to write a few books:   <a href="http://java.howtocode.com.bd/" target="_blank" rel="external">বাংলায় জাভা</a> , <a href="http://scala.howtocode.com.bd/" target="_blank" rel="external">Scala দি নেক্সট বিগ থিং</a>. I mostly write code in Java and Groovy but lately trying to write some code in JavaScript and trying to learn Scala. </p>
-<p>I have a few side projects running which are kind of still in incubation, so when I will make some good progress, I will share them here, hopefully, but chances are less. </p>
-<p>Apart form these activities, I love to listen music(instrumental, celtic etc), watch movies(sci-fi mostly) and series (lately watching Mr.Robot), read books(I love history) and whenever I get sometime time, I try to sleep. </p>
-<p>If you would like to get in touch with me, whether it be for tech support or to just say hi, feel free to send me an email. My email address is: <a href="mailto:contact@bazlur.com" target="_blank" rel="external">contact@bazlur.com</a><br>or find me in <a href="https://www.linkedin.com/in/bazlur" target="_blank" rel="external">LinkedIn</a></p>
-</span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </article>
 
 
+
     
+
   </section>
 
   
+
  </div>
 
         
@@ -324,6 +305,12 @@
   
   
   
+    <script type="text/javascript">
+      postMotionOptions = {stagger: 100, drag: true};
+    </script>
+  
+
+  
     
     
 
@@ -351,6 +338,12 @@
   <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
 
   
+  
+    <script type="text/javascript" id="motion.page.archive">
+      $('.archive-year').velocity('transition.slideLeftIn');
+    </script>
+  
+
 
   <script type="text/javascript">
     $(document).ready(function () {
