@@ -4,23 +4,49 @@
     </html>
   
 <body>
-<pre style="color:#000000;background:#ffffff;"><span style="color:#7f0055; font-weight:bold; ">package</span><span style="color:#7f0055; "> com</span><span style="color:#7f0055; ">.</span><span style="color:#7f0055; ">thinkingofjava</span><span style="color:#7f0055; ">.</span><span style="color:#7f0055; ">hellowrold</span><span style="color:#7f0055; ">;</span>
 
-<span style="color:#7f0055; font-weight:bold; ">public</span> <span style="color:#7f0055; font-weight:bold; ">class</span> App {
-	<span style="color:#7f0055; font-weight:bold; ">public</span> <span style="color:#7f0055; font-weight:bold; ">String</span> getGreeting() {
+	<div>
+    <h1>What would be the output of this code? </h1>
+    <!-- HTML generated using hilite.me -->
+    <div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre
+            style="margin: 0; line-height: 125%"><span style="color: #0000aa">public</span> <span
+            style="color: #0000aa">class</span> <span style="color: #00aa00; text-decoration: underline">Main</span> {
+    <span style="color: #0000aa">private</span> <span style="color: #0000aa">static</span> <span style="color: #00aaaa">boolean</span> running = <span
+                style="color: #0000aa">false</span>;
 
-		<span style="color:#7f0055; font-weight:bold; ">return</span> <span style="color:#2a00ff; ">"Hello, world!"</span>;
-	}
+    <span style="color: #0000aa">public</span> <span style="color: #0000aa">static</span> <span style="color: #00aaaa">void</span> <span
+                style="color: #00aa00">main</span>(String[] args) {
+        Runnable runnable1 = () -&gt; {
+            <span style="color: #0000aa">while</span> (!running) {
+            }
+            System.<span style="color: #1e90ff">out</span>.<span style="color: #1e90ff">println</span>(<span
+                style="color: #aa5500">&quot;Hi&quot;</span>);
+        };
 
-	<span style="color:#7f0055; font-weight:bold; ">public</span> <span style="color:#7f0055; font-weight:bold; ">static</span> <span style="color:#7f0055; font-weight:bold; ">void</span> main(<span style="color:#7f0055; font-weight:bold; ">String</span>[] args) {
-		<span style="color:#7f0055; font-weight:bold; ">System</span>.out.println(<span style="color:#7f0055; font-weight:bold; ">new</span> App().getGreeting());
-	}
+        Runnable runnable2 = () -&gt; {
+            running = <span style="color: #0000aa">true</span>;
+            System.<span style="color: #1e90ff">out</span>.<span style="color: #1e90ff">println</span>(<span
+                style="color: #aa5500">&quot;Hello&quot;</span>);
+        };
+
+        <span style="color: #0000aa">new</span> <span style="color: #00aa00">Thread</span>(runnable1).<span
+                style="color: #1e90ff">start</span>();
+        <span style="color: #0000aa">new</span> <span style="color: #00aa00">Thread</span>(runnable2).<span
+                style="color: #1e90ff">start</span>();
+    }
 }
-
-
-<span style="color:#3f7f59; ">//output:</span>
-Hello world!
 </pre>
+        <p> a) Hi Hello</p>
+        <p> b) Hello Hi</p>
+        <p> c) Hello</p>
+        <p> d) All of the above</p>
+        <p> e) None of the above</p>
+
+        <h4>Write your answer in the comment.</h4>
+    </div>
+
+
+</div>
 	
 	
 <div id="disqus_thread"></div>
