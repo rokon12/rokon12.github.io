@@ -24,13 +24,22 @@
     </nav>
 
 <div class="article-meta">
-<h1><span class="title">স্ট্রিং পুল কী (What is String Pool)</span></h1>
-<h2 class="author">bazlur_rahman</h2>
-<h2 class="date">2017/02/19</h2>
+    <h1><span class="title">স্ট্রিং পুল কী (What is String Pool)</span></h1>
+    <h2 class="author">bazlur_rahman</h2>
+    <h2 class="date">2017/02/19</h2>
 </div>
 
+
+ 
+
+ <li>
+    <a href="http://bazlur.com/tags/java/">java</a>
+</li> <li>
+    <a href="http://bazlur.com/tags/string/">string</a>
+</li> 
+
 <main>
-<p>জাভা ভার্চুয়াল মেশিনে মেমোরি মডেল (Memory Model) দুই ভাবে বিভক্ত। এরা হলো হিপ এবং থ্রেড স্ট্যাক। জাভা অ্যাপ্লিকেশনে যত ধরনের অবজেক্ট তৈরি হয়, সেগুলোর সব থাকে হিপে। স্ট্রিং পুল (String Pool) জাভা হিপের একটি বিশেষ এলাকা।</p>
+    <p>জাভা ভার্চুয়াল মেশিনে মেমোরি মডেল (Memory Model) দুই ভাবে বিভক্ত। এরা হলো হিপ এবং থ্রেড স্ট্যাক। জাভা অ্যাপ্লিকেশনে যত ধরনের অবজেক্ট তৈরি হয়, সেগুলোর সব থাকে হিপে। স্ট্রিং পুল (String Pool) জাভা হিপের একটি বিশেষ এলাকা।</p>
 <p>জাভাতে স্ট্রিং একটি বহুল ব্যবহৃত ক্লাস। যেহেতু এটি ইমিউটেবল, তাই স্ট্রিং নিয়ে কাজ করার সময় হিপে অনেক নতুন নতুন স্ট্রিং অবজেক্ট তৈরি হয়। এছাড়াও স্ট্রিং অবজেক্ট নিজেও অনেক বেশি মেমোরি নিয়ে থাকে। একটি স্ট্রিং অবজেক্ট কত বাইট মেমোরি নেয় তা হিসাব করে বের করে ফেলা যায়।</p>
 <p>একটি স্ট্রিং অবজেক্টে থাকে একটি ক্যারেক্টার অ্যারে এবং একটি ইন্টিজার হ্যাশ (Hash)। ইন্টিজারের জন্য দরকার হয় 4 বাইট এবং ক্যারেক্টারের জন্য দরকার হয় 2 বাইট। সুতরাং একটি স্ট্রিংয়ে যদি n সংখ্যক ক্যারেক্টার থাকে তাহলে,</p>
 <p><img src="data:image/png;base64,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" alt=""></p>
@@ -54,6 +63,445 @@
 
   <footer>
   
+
+
+
+
+
+
+
+
+
+
+<div id="tag-cloud" style="padding: 5px 15px">
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/advance-java" style="font-size:1rem">advance-java</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/agile" style="font-size:1rem">agile</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/algorithm" style="font-size:1.5691756217423825rem">algorithm</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/arraylist" style="font-size:1rem">arraylist</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/article" style="font-size:1rem">article</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/bangla-book" style="font-size:2.138351243484765rem">bangla-book</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/becoming-expert" style="font-size:1rem">becoming-expert</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/book" style="font-size:2.32158486704862rem">book</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/book-review" style="font-size:1.5691756217423825rem">book-review</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/calculator" style="font-size:1rem">calculator</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/cloning" style="font-size:1rem">cloning</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/coding" style="font-size:1rem">coding</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/coding-convention" style="font-size:1rem">coding-convention</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/daemon-thread" style="font-size:1rem">daemon-thread</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/data-race" style="font-size:1rem">data-race</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/data-structure" style="font-size:1rem">data-structure</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/deliberate-practice" style="font-size:1rem">deliberate-practice</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/deserialization" style="font-size:1rem">deserialization</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/developers" style="font-size:1rem">developers</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/file-copy" style="font-size:1rem">file-copy</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/future-java-developers" style="font-size:1rem">future-java-developers</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/hash-function" style="font-size:1.5691756217423825rem">hash-function</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/history" style="font-size:1rem">history</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/history-of-java" style="font-size:1rem">history-of-java</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/how-java-performs-better" style="font-size:1rem">how-java-performs-better</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/how-java-works" style="font-size:1rem">how-java-works</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/import" style="font-size:1rem">import</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/inspiration" style="font-size:1rem">inspiration</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java" style="font-size:3.459936110533385rem">java</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java-developers" style="font-size:1rem">java-developers</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java-programming" style="font-size:1rem">java-programming</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java-thread" style="font-size:1rem">java-thread</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java-thread-programming" style="font-size:1.5691756217423825rem">java-thread-programming</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/learning" style="font-size:1rem">learning</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/linkedlist" style="font-size:1rem">linkedlist</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/methodology" style="font-size:1rem">methodology</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/null-pointer-exception" style="font-size:1rem">null-pointer-exception</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/object-cloning" style="font-size:1rem">object-cloning</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/packaging" style="font-size:1rem">packaging</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/pass-by-reference" style="font-size:1rem">pass-by-reference</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/pass-by-value" style="font-size:1rem">pass-by-value</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/programming" style="font-size:1rem">programming</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/review" style="font-size:1rem">review</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/scrum" style="font-size:1rem">scrum</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/serialization" style="font-size:1.5691756217423825rem">serialization</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/simple-calculator" style="font-size:1rem">simple-calculator</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/software-development" style="font-size:1rem">software-development</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/string" style="font-size:1rem">string</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/string-pool" style="font-size:1rem">string-pool</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/swing" style="font-size:1rem">swing</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/thread" style="font-size:2.32158486704862rem">thread</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/volatile" style="font-size:1rem">volatile</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/why-java" style="font-size:1rem">why-java</a>
+  
+</div>
+
+
 <footer>
   <div>
     <p>

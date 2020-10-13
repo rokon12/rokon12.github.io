@@ -24,13 +24,18 @@
     </nav>
 
 <div class="article-meta">
-<h1><span class="title">জাভা কীভাবে কাজ করে এবং কীভাবে ভাল পারফর্ম করে</span></h1>
-<h2 class="author">bazlur_rahman</h2>
-<h2 class="date">2014/09/22</h2>
+    <h1><span class="title">জাভা কীভাবে কাজ করে এবং কীভাবে ভাল পারফর্ম করে</span></h1>
+    <h2 class="author">bazlur_rahman</h2>
+    <h2 class="date">2014/09/22</h2>
 </div>
 
+
+ 
+
+  
+
 <main>
-<p>জাভা কোড প্রথমে বাইটকোডে কম্পাইলড হয়, তারপর সেটিকে জাভা ভার্চুয়াল মেশিন এক্সিকিউট করে। বাইটকোড হচ্ছে এক ধরনের ইন্টারমিডিয়েড ল্যাংগুয়েজ যা কিনা ঠিক মানুষের পাঠ উপযোগী নয়, আবার মেশিনের জন্য ও নয়। এটি শুধুমাত্র জাভা ভার্চুয়াল মেশিন (JVM)পড়তে পারে। বাইটকোডকে এক্সিকিউট করার জন্য জাভা ভার্চুয়াল মেশিন জাস্ট ইন টাইম (JIT) কম্পাইলার ব্যবহার হরে। JIT বাইটকোড কে সরাসরি ইন্টারপ্রেট করে। এটি রানটাইম-এ বাইটকোড কে ইন্টারপ্রেট করে মেশিন কোড-এ রূপান্তরিত করে যা কিনা সিপিইউ রান করে। এখানে একটি ইন্টারেস্টিং প্রশ্ন হতে পারে, জাভা কি তাহলে ইন্টারেপ্রেটেট ল্যাংগুয়েজ নাকি কম্পাইল্ড ল্যাংগুয়েজ? উত্তর কিন্তু দুটোই । জাভা একি সঙ্গে সঙ্গে কম্পাইলড এবং ইন্টারপ্রেটেড ল্যাংগুয়েজ।</p>
+    <p>জাভা কোড প্রথমে বাইটকোডে কম্পাইলড হয়, তারপর সেটিকে জাভা ভার্চুয়াল মেশিন এক্সিকিউট করে। বাইটকোড হচ্ছে এক ধরনের ইন্টারমিডিয়েড ল্যাংগুয়েজ যা কিনা ঠিক মানুষের পাঠ উপযোগী নয়, আবার মেশিনের জন্য ও নয়। এটি শুধুমাত্র জাভা ভার্চুয়াল মেশিন (JVM)পড়তে পারে। বাইটকোডকে এক্সিকিউট করার জন্য জাভা ভার্চুয়াল মেশিন জাস্ট ইন টাইম (JIT) কম্পাইলার ব্যবহার হরে। JIT বাইটকোড কে সরাসরি ইন্টারপ্রেট করে। এটি রানটাইম-এ বাইটকোড কে ইন্টারপ্রেট করে মেশিন কোড-এ রূপান্তরিত করে যা কিনা সিপিইউ রান করে। এখানে একটি ইন্টারেস্টিং প্রশ্ন হতে পারে, জাভা কি তাহলে ইন্টারেপ্রেটেট ল্যাংগুয়েজ নাকি কম্পাইল্ড ল্যাংগুয়েজ? উত্তর কিন্তু দুটোই । জাভা একি সঙ্গে সঙ্গে কম্পাইলড এবং ইন্টারপ্রেটেড ল্যাংগুয়েজ।</p>
 <p>উপরের লাইনগুলো পড়ে আপনি মনে করতেই পারেন যে, JIT আসলে জাভাকে স্লো করে দিচ্ছে, কারণ এটি প্রোগ্রাম যখন চলে তখন ইন্টারপ্রেট করছে। এই উপসংহার হয়তো ইনটিউটিভ, তবে সঠিক নয়। JIT আসলে অনেক ভাল ভাবেই কাজ করে।</p>
 <p>C/C++-কে সাধারণভাবে ধরা হয় যে জাভা থেকে বেশি ভাল পারফর্ম করে। জাভা যেহেতু অন-দ্যা-ফ্লায় এক্সিকিউট করে, এজন্য অনেকটা এভাবে চিন্তা করা হয়। কোড-কে মেশিন কোড-এ রূপান্তরিত করার জন্য আসলে খুব বেশি সময় লাগে না, তারপরও যদি কোনো ল্যাংগুয়েজের কোডকে এক্সিকিউট করার আগে তাকে মেশিন কোড এ রূপান্তরিত করতে না হয়, তাহলে ধরা হয়, সেই ল্যাংগুয়েজ অনেকটা ফাস্টার। মজার ব্যপার হচ্ছে কোন কম্পাইলার-ই কিন্তু টপ-নচ এসেম্বলি প্রোগ্রামারদের মতো যারা কিনা কোনো হার্ডওয়্যারকেকে টার্গেট করে মেশিন কোডকে সরাসরি মেনিপুলেট করতে পারে, তাদের মতো মেশিন কোড তৈরি করতে পারে না, যা কিনা অনেক বেশি পার্ফরমেন্ট হবে। C/C++ কিংবা জাভা সবগুলোর-ই কিছু না কিছু সমস্যা আছে। জাভাকে রান করার আগে<br>
 অন-দ্যা-ফ্লায় মেশিন কোড তৈরি করতে হয়, C/C++ এর কোড ও কিন্তু অনেকটা জেনেরিক ভাবেই কম্পাইলড হয়। C/C++ এ কিন্তু সরাসরি একটি নির্দিষ্ট হার্ডওয়্যারকে টার্গেট করে কোড লেখা হয় না সবসময়।</p>
@@ -42,6 +47,445 @@
 
   <footer>
   
+
+
+
+
+
+
+
+
+
+
+<div id="tag-cloud" style="padding: 5px 15px">
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/advance-java" style="font-size:1rem">advance-java</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/agile" style="font-size:1rem">agile</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/algorithm" style="font-size:1.5691756217423825rem">algorithm</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/arraylist" style="font-size:1rem">arraylist</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/article" style="font-size:1rem">article</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/bangla-book" style="font-size:2.138351243484765rem">bangla-book</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/becoming-expert" style="font-size:1rem">becoming-expert</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/book" style="font-size:2.32158486704862rem">book</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/book-review" style="font-size:1.5691756217423825rem">book-review</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/calculator" style="font-size:1rem">calculator</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/cloning" style="font-size:1rem">cloning</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/coding" style="font-size:1rem">coding</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/coding-convention" style="font-size:1rem">coding-convention</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/daemon-thread" style="font-size:1rem">daemon-thread</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/data-race" style="font-size:1rem">data-race</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/data-structure" style="font-size:1rem">data-structure</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/deliberate-practice" style="font-size:1rem">deliberate-practice</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/deserialization" style="font-size:1rem">deserialization</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/developers" style="font-size:1rem">developers</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/file-copy" style="font-size:1rem">file-copy</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/future-java-developers" style="font-size:1rem">future-java-developers</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/hash-function" style="font-size:1.5691756217423825rem">hash-function</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/history" style="font-size:1rem">history</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/history-of-java" style="font-size:1rem">history-of-java</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/how-java-performs-better" style="font-size:1rem">how-java-performs-better</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/how-java-works" style="font-size:1rem">how-java-works</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/import" style="font-size:1rem">import</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/inspiration" style="font-size:1rem">inspiration</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java" style="font-size:3.459936110533385rem">java</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java-developers" style="font-size:1rem">java-developers</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java-programming" style="font-size:1rem">java-programming</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java-thread" style="font-size:1rem">java-thread</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java-thread-programming" style="font-size:1.5691756217423825rem">java-thread-programming</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/learning" style="font-size:1rem">learning</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/linkedlist" style="font-size:1rem">linkedlist</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/methodology" style="font-size:1rem">methodology</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/null-pointer-exception" style="font-size:1rem">null-pointer-exception</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/object-cloning" style="font-size:1rem">object-cloning</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/packaging" style="font-size:1rem">packaging</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/pass-by-reference" style="font-size:1rem">pass-by-reference</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/pass-by-value" style="font-size:1rem">pass-by-value</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/programming" style="font-size:1rem">programming</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/review" style="font-size:1rem">review</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/scrum" style="font-size:1rem">scrum</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/serialization" style="font-size:1.5691756217423825rem">serialization</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/simple-calculator" style="font-size:1rem">simple-calculator</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/software-development" style="font-size:1rem">software-development</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/string" style="font-size:1rem">string</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/string-pool" style="font-size:1rem">string-pool</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/swing" style="font-size:1rem">swing</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/thread" style="font-size:2.32158486704862rem">thread</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/volatile" style="font-size:1rem">volatile</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/why-java" style="font-size:1rem">why-java</a>
+  
+</div>
+
+
 <footer>
   <div>
     <p>

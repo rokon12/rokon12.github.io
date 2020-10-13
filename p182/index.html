@@ -24,13 +24,16 @@
     </nav>
 
 <div class="article-meta">
-<h1><span class="title">জাভা থ্রেড প্রোগ্রামিং</span></h1>
-<h2 class="author">bazlur_rahman</h2>
-<h2 class="date">2018/02/16</h2>
+    <h1><span class="title">জাভা থ্রেড প্রোগ্রামিং</span></h1>
+    <h2 class="author">bazlur_rahman</h2>
+    <h2 class="date">2018/02/16</h2>
 </div>
 
+
+ 
+
 <main>
-<p><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->আধুনিক কম্পিউটারের প্রোগ্রামগুলো বেশ বুদ্ধিদীপ্ত ও জটিল। এগুলো একই সঙ্গে একাধিক কাজ সম্পাদন করতে পারে। এই প্রোগ্রামগুলো লিখতে হলে আমাদের নিজেদেরও বুদ্ধির পরিচয় দিতে হয়। সাধারণত একটি বড়ো কাজ কতগুলো ছোটো ছোটো কাজের সমষ্টি হয়। এই ছোটো কাজগুলোকে আলাদাভাবে করে<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->, <!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->এদেরকে জুড়ে দিয়েই সামগ্রিকভাবে বড়ো কাজটি সম্পন্ন করা হয়। এর মধ্যে কিছু কাজ একটি আরেকটির ওপর নির্ভরশীল হয়<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->, <!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->অন্যগুলো স্বাধীনভাবে সম্পাদন করা যায়। আবার এই ছোটো ছোটো কাজগুলো কম্পিউটার ধারাবাহিকভাবে একটির পর আরেকটি সম্পাদন করতে পারে। তবে যে কাজগুলো স্বাধীন সেগুলোকে যদি একই সঙ্গে করা যায়<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->, <!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->তাহলে অল্প সময়ে আমরা একাধিক কাজ করে ফেলতে পারি। এই একই সঙ্গে একাধিক কাজ কীভাবে করা যায়<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->, <!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->তা নির্ভর করে আমাদের প্রোগ্রামটি আমরা কীভাবে লিখছি তার ওপর। জাভা প্রোগ্রামিং ল্যাংগুয়েজ ব্যবহার করে একাধিক ছোটো কাজ খুব সুন্দর ও বুদ্ধিদীপ্তভাবে সাজিয়ে প্রোগ্রাম লেখার উপায় হলো থ্রেডিং। এই সাজানোর প্রক্রিয়াটি শিক্ষানবিশদের কাছে অনেক সময়ই কঠিন মনে হয়। এই কঠিন মনে হওয়াটা যুক্তিসংগত। আমরা মানুষ<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->, <!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->একই সময়ে একাধিক কাজে মনোযোগ দিতে পারি না। আমাদের চিন্তাভাবনার প্রক্রিয়াও ধারাবাহিক। এই কঠিন বিষয়টি অনুশীলনের মাধ্যমে আয়ত্তে আনতে পারলে কাজের অনেক সুবিধা হয়। প্রোগ্রামিংয়ের ক্ষেত্রেও পরপর ধারবাহিক প্রোগ্রাম লেখা বা চালানো সহজ হলেও একই সময়ে প্রোগ্রামের একাধিক অংশ পাশাপাশি একই সঙ্গে চালানো এবং এদের মধ্য সমন্বয় করা খানিকটা কঠিন। তবে কোনো কাজ কঠিন হলেই কি আর আমরা থেমে থাকি<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->? <!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->মানুষ চাঁদে গিয়ে ফিরে এসেছে আর এখন প্রস্তুত হচ্ছে মঙ্গলযাত্রায়।<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+    <p><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->আধুনিক কম্পিউটারের প্রোগ্রামগুলো বেশ বুদ্ধিদীপ্ত ও জটিল। এগুলো একই সঙ্গে একাধিক কাজ সম্পাদন করতে পারে। এই প্রোগ্রামগুলো লিখতে হলে আমাদের নিজেদেরও বুদ্ধির পরিচয় দিতে হয়। সাধারণত একটি বড়ো কাজ কতগুলো ছোটো ছোটো কাজের সমষ্টি হয়। এই ছোটো কাজগুলোকে আলাদাভাবে করে<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->, <!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->এদেরকে জুড়ে দিয়েই সামগ্রিকভাবে বড়ো কাজটি সম্পন্ন করা হয়। এর মধ্যে কিছু কাজ একটি আরেকটির ওপর নির্ভরশীল হয়<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->, <!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->অন্যগুলো স্বাধীনভাবে সম্পাদন করা যায়। আবার এই ছোটো ছোটো কাজগুলো কম্পিউটার ধারাবাহিকভাবে একটির পর আরেকটি সম্পাদন করতে পারে। তবে যে কাজগুলো স্বাধীন সেগুলোকে যদি একই সঙ্গে করা যায়<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->, <!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->তাহলে অল্প সময়ে আমরা একাধিক কাজ করে ফেলতে পারি। এই একই সঙ্গে একাধিক কাজ কীভাবে করা যায়<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->, <!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->তা নির্ভর করে আমাদের প্রোগ্রামটি আমরা কীভাবে লিখছি তার ওপর। জাভা প্রোগ্রামিং ল্যাংগুয়েজ ব্যবহার করে একাধিক ছোটো কাজ খুব সুন্দর ও বুদ্ধিদীপ্তভাবে সাজিয়ে প্রোগ্রাম লেখার উপায় হলো থ্রেডিং। এই সাজানোর প্রক্রিয়াটি শিক্ষানবিশদের কাছে অনেক সময়ই কঠিন মনে হয়। এই কঠিন মনে হওয়াটা যুক্তিসংগত। আমরা মানুষ<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->, <!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->একই সময়ে একাধিক কাজে মনোযোগ দিতে পারি না। আমাদের চিন্তাভাবনার প্রক্রিয়াও ধারাবাহিক। এই কঠিন বিষয়টি অনুশীলনের মাধ্যমে আয়ত্তে আনতে পারলে কাজের অনেক সুবিধা হয়। প্রোগ্রামিংয়ের ক্ষেত্রেও পরপর ধারবাহিক প্রোগ্রাম লেখা বা চালানো সহজ হলেও একই সময়ে প্রোগ্রামের একাধিক অংশ পাশাপাশি একই সঙ্গে চালানো এবং এদের মধ্য সমন্বয় করা খানিকটা কঠিন। তবে কোনো কাজ কঠিন হলেই কি আর আমরা থেমে থাকি<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->? <!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->মানুষ চাঁদে গিয়ে ফিরে এসেছে আর এখন প্রস্তুত হচ্ছে মঙ্গলযাত্রায়।<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
 <p><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->যেকোনো কঠিন বিষয়কে যদি সহজভাবে উপস্থাপন করা যায়<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->, <!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->বিশেষ করে যদি মাতৃভাষায় বোঝানো যায়<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->, <!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->তাহলে যে<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->–<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->কেউ তা বিনা ক্লেশেই ধরে ফেলতে পারে। এই সহজ উপস্থাপনের কথা চিন্তা করেই এই বইটি লেখায় প্রয়াস। বইটি লেখার পেছনে আমার গত পাঁচ বছরের পেশাগত অভিজ্ঞতা অনেকভাবে কাজে লেগেছে। এ ছাড়া জাভা ইউজার গ্রুপ বাংলাদেশের <!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->(jugbd.org) <!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->কল্যাণে অসংখ্য শিক্ষানবিশ<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->, <!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->দেশ ও দেশের বাইরের অনেক সফটওয়্যার নির্মাতা<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->, <!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->আন্তর্জাতিক খ্যাতিসম্পন্ন বিভিন্ন প্রযুক্তি বিশেষজ্ঞ ও বক্তাদের সঙ্গে বিভিন্ন সময় বিভিন্ন রকম যে আলাপচারিতা হয়েছে এবং এ থেকে যে অভিজ্ঞতা সঞ্চিত হয়েছে<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->, <!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->তারও খানিকটা এই বইয়ে প্রতিফলিত হয়েছে। আশা করছি এই ছোট্ট বইটি শুধু শিক্ষানবিশদেরই নয়<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->, <!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->বরং যারা ইতিমধ্যে সফটওয়্যার ইন্ড্রাস্ট্রিতে মাত্র পা রেখেছে<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->, <!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->তাদের অনেকেরই কাজে আসবে এবং পড়ে উপকৃত হবে। <!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
 <p><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->বইটিতে অনেকগুলো গুরুত্বপূর্ণ ধারণা বাংলাতে সহজভাবে উপস্থাপন করার চেষ্টা করেছি এবং এগুলোর সঙ্গে প্রচুর উদাহরণ সংযুক্ত করেছি। বইটি শুধু একবার পড়ে গেলে হবে না<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->, <!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->কয়েকবার পড়তে হবে। এ ছাড়া যে কোডগুলো রয়েছে<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->, <!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->তার প্রতিটি হাতে আইডিইতে লিখে রান করে পরীক্ষা করে দেখতে হবে। <!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
 <p><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->বইটিতে জাভা থ্রেডিংয়ের অনেকগুলো গুরুত্বপূর্ণ বিষয় আলোচনা করা হয়েছে। এটিই শেষ নয়। থ্রেডিং বা কনকারেন্সি অনেক বড়ো এবং জটিল বিষয়। শুধু একটি বই পড়ে এ সম্পর্কে বিস্তর ধারণা নেওয়া সম্ভব নয়। তবে প্রাথমিকভাবে এখানে যে বিষয়গুলো আলোচনা করা হয়েছে সেগুলো ভালোভাবে আয়ত্তে আনতে পারলে জাভা থ্রেড প্রোগ্রামিংয়ের যে ভয়টুকু থাকে<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->, <!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->তা মুছে যাবে বলে আমার বিশ্বাস।<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
@@ -161,6 +164,445 @@ multiple threads)</li>
 
   <footer>
   
+
+
+
+
+
+
+
+
+
+
+<div id="tag-cloud" style="padding: 5px 15px">
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/advance-java" style="font-size:1rem">advance-java</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/agile" style="font-size:1rem">agile</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/algorithm" style="font-size:1.5691756217423825rem">algorithm</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/arraylist" style="font-size:1rem">arraylist</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/article" style="font-size:1rem">article</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/bangla-book" style="font-size:2.138351243484765rem">bangla-book</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/becoming-expert" style="font-size:1rem">becoming-expert</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/book" style="font-size:2.32158486704862rem">book</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/book-review" style="font-size:1.5691756217423825rem">book-review</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/calculator" style="font-size:1rem">calculator</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/cloning" style="font-size:1rem">cloning</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/coding" style="font-size:1rem">coding</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/coding-convention" style="font-size:1rem">coding-convention</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/daemon-thread" style="font-size:1rem">daemon-thread</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/data-race" style="font-size:1rem">data-race</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/data-structure" style="font-size:1rem">data-structure</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/deliberate-practice" style="font-size:1rem">deliberate-practice</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/deserialization" style="font-size:1rem">deserialization</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/developers" style="font-size:1rem">developers</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/file-copy" style="font-size:1rem">file-copy</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/future-java-developers" style="font-size:1rem">future-java-developers</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/hash-function" style="font-size:1.5691756217423825rem">hash-function</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/history" style="font-size:1rem">history</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/history-of-java" style="font-size:1rem">history-of-java</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/how-java-performs-better" style="font-size:1rem">how-java-performs-better</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/how-java-works" style="font-size:1rem">how-java-works</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/import" style="font-size:1rem">import</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/inspiration" style="font-size:1rem">inspiration</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java" style="font-size:3.459936110533385rem">java</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java-developers" style="font-size:1rem">java-developers</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java-programming" style="font-size:1rem">java-programming</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java-thread" style="font-size:1rem">java-thread</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java-thread-programming" style="font-size:1.5691756217423825rem">java-thread-programming</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/learning" style="font-size:1rem">learning</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/linkedlist" style="font-size:1rem">linkedlist</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/methodology" style="font-size:1rem">methodology</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/null-pointer-exception" style="font-size:1rem">null-pointer-exception</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/object-cloning" style="font-size:1rem">object-cloning</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/packaging" style="font-size:1rem">packaging</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/pass-by-reference" style="font-size:1rem">pass-by-reference</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/pass-by-value" style="font-size:1rem">pass-by-value</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/programming" style="font-size:1rem">programming</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/review" style="font-size:1rem">review</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/scrum" style="font-size:1rem">scrum</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/serialization" style="font-size:1.5691756217423825rem">serialization</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/simple-calculator" style="font-size:1rem">simple-calculator</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/software-development" style="font-size:1rem">software-development</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/string" style="font-size:1rem">string</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/string-pool" style="font-size:1rem">string-pool</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/swing" style="font-size:1rem">swing</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/thread" style="font-size:2.32158486704862rem">thread</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/volatile" style="font-size:1rem">volatile</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/why-java" style="font-size:1rem">why-java</a>
+  
+</div>
+
+
 <footer>
   <div>
     <p>
