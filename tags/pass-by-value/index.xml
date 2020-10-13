@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>pass by value on My Stream of Thoughts</title>
+    <link>http://bazlur.com/tags/pass-by-value/</link>
+    <description>Recent content in pass by value on My Stream of Thoughts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 08 Feb 2017 17:55:00 +0000</lastBuildDate><atom:link href="http://bazlur.com/tags/pass-by-value/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>জাভা কী পাস-বাই-ভ্যালু (Pass-by-Value)</title>
+      <link>http://bazlur.com/p35/</link>
+      <pubDate>Wed, 08 Feb 2017 17:55:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p35/</guid>
+      <description>&amp;lt;p&amp;gt; এই প্রশ্ন দুটির উত্তর দিতে হলে আমাদের জানতে হবে অবজেক্টের রেফারেন্স কী। &amp;lt;/p&amp;gt; &amp;lt;p&amp;gt; জাভাতে অবজেক্টগুলো প্রোগ্রাম মেমোরির হিপ অংশে থাকে। এর একটি ঠিকানা বা অ্যাড্রেস আছে। ভ্যারিয়েবল মূলত সেই অবজেক্টের অ্যাড্রেস ধরে রাখে যাকে আমরা বলি অবজেক্টের রেফারেন্স। আমরা যখন কোনো মেথডে আর্গুমেন্ট হিসেবে একটি ভ্যারিয়েবল বা অবজেক্টের রেফারেন্স পাস করি তখন আসলে সেই অবজেক্টের রেফারেন্সটি পাঠাই না বরং সেই রেফারেন্সের একটি কপি পাঠাই। কোনো একটি অবজেক্টের রেফারেন্স ভ্যালু যদি হয়, 66d3c617 তাহলে মেথড আর্গুমেন্ট হিসেবে এই সংখ্যাটির একটি কপি আর্গুমেন্ট হিসেবে যায়। এর মানে দাঁড়ায় আমরা আসলে রেফারেন্সটি পাঠাচ্ছি না বরং সেই রেফারেন্সের কপি পাঠাচ্ছি। &amp;lt;/p&amp;gt;  &amp;lt;p&amp;gt; এতে করে আমরা সহজেই বলতে পারি জাভা পাস-বাই-রেফারেন্স-ভ্যালু (Pass-by-Reference-Value) বা পাস-বাই-কপি-অব-দি-ভ্যারিয়েবল-ভ্যালু (Pass-by-Copy-of-the-Variable-Value) অথবা সহজে পাস-বাই-ভ্যালু (Pass-by-Value)। &amp;lt;/p&amp;gt;  </description>
+    </item>
+    
+  </channel>
+</rss>

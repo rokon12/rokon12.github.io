@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>জাভাতে Declare type এবং Actual type কী? | My Stream of Thoughts</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/about-me/">About me</a></li>
+      
+      <li><a href="/books/">Books</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">জাভাতে Declare type এবং Actual type কী?</span></h1>
+<h2 class="author">bazlur_rahman</h2>
+<h2 class="date">2017/03/07</h2>
+</div>
+
+<main>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<pre><code>&lt;div style=&quot;text-align: justify;&quot;&gt;
+&lt;/div&gt;
+
+&lt;div style=&quot;text-align: justify;&quot;&gt;
+  এখানে animal একটি ভেরিয়েবল। যার টাইপ হচ্ছে Animal। এখন new কিওযার্ড ব্যবহার করে এতে একটি অবজেক্ট তৈরি করে এই ভেরিয়েবলে অ্যাসাইন করতে পারি।
+&lt;/div&gt;
+</code></pre>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<pre><code>&lt;div style=&quot;text-align: justify;&quot;&gt;
+&lt;/div&gt;
+
+&lt;div style=&quot;text-align: justify;&quot;&gt;
+  এখানে animal ভেরিয়েবলটি একটি Animal এর একটি অবজেক্টের একটি রেফারেন্স ধরে রাখে। এক্ষেত্রে এই অবজেক্টের টাইপও এখানে Animal।
+&lt;/div&gt;
+
+&lt;div style=&quot;text-align: justify;&quot;&gt;
+&lt;/div&gt;
+
+&lt;div style=&quot;text-align: justify;&quot;&gt;
+  সাধারণভাবে ভেরিয়েবল টাইপ এবং অবজেক্ট টাইপ একই হলেও কখনো কখনো ভিন্ন হতে পারে। ধরা যাক, এই Animal ক্লাসকে এক্সটেন্ড করে আরেকটি ক্লাস তৈরি করা হলো, Dog. তাহলে new Dog দিয়ে যে অবজেক্ট তৈরি হবে তার টাইপ হবে &amp;nbsp;Dog.
+&lt;/div&gt;
+</code></pre>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<pre><code>&lt;div style=&quot;text-align: justify;&quot;&gt;
+  উপরের উদাহরণটি খেয়াল করুন। এখানে ভেরিয়েবল টাইপ এবং অবজেক্ট টাইপ ভিন্ন। কিন্তু এই স্টেটমেন্টটি বৈধ। এর কারণ হলো &amp;#8211; যেকোনো ভেরিয়েবলের টাইপের যেকোনো সাব-ক্লাসের অবজেক্টের রেফারেন্স রাখতে পারে। এর মানে হচ্ছে এই animal ভেরিয়েবলে যেকোনো Animal ক্লাসের সাব-ক্লাসের ইনস্ট্যান্স বা অবজেক্টের রেফারেন্স রাখতে পারি।
+&lt;/div&gt;
+
+&lt;div style=&quot;text-align: justify;&quot;&gt;
+&lt;/div&gt;
+
+&lt;div style=&quot;text-align: justify;&quot;&gt;
+  ঠিক একইভাবে, কোনো মেথডের প্যারামিটার যদি সুপার টাইপ হয়, সেখানে এর যেকোনো একটি সাবটাইপ এর অবজেক্ট এর রেফারেন্স আর্গুমেন্ট হিসেবে পাস করা যায়।
+&lt;/div&gt;
+
+&lt;div style=&quot;text-align: justify;&quot;&gt;
+&lt;/div&gt;
+
+&lt;div style=&quot;text-align: justify;&quot;&gt;
+  তাহলে এভাবেও বলতে পারি, ভেরিয়েবল টাইপ হচ্ছে ডিক্ল্যায়ার টাইপ। আর অবজেক্ট টাইপ হচ্ছে একচুয়াল টাইপ।
+&lt;/div&gt;
+
+&lt;div style=&quot;text-align: justify;&quot;&gt;
+&lt;/div&gt;
+
+&lt;div style=&quot;text-align: justify;&quot;&gt;
+  কিছু প্রয়োজনীয় তথ্য-
+&lt;/div&gt;
+
+&lt;ul style=&quot;text-align: left;&quot;&gt;
+  &lt;li style=&quot;text-align: justify;&quot;&gt;
+    একটি সাব-ক্লাসের অবজেক্টকে এর সুপার-ক্লাসের রেফারেন্স এ অ্যাসাইন করতে পারি।
+  &lt;/li&gt;
+  &lt;li style=&quot;text-align: justify;&quot;&gt;
+    সাব ক্লাসের অবজেক্টকে সুপার ক্লাসের রেফারেন্স-এ অ্যাসাইন করলে, মেথড কল করার সময় শুধুমাত্র সুপার ক্লাসের মেথড গুলোকেই কল করতে পারি।
+  &lt;/li&gt;
+  &lt;li style=&quot;text-align: justify;&quot;&gt;
+    তবে সাব ক্লাস যদি সুপার ক্লাসের মেথড ওভাররাইড করে, তাহলে যদিও আমরা সুপার ক্লাসের রেফারেন্স ধরে মেথড কল করছি, কিন্তু রানটাইম-এ সাব ক্লাসের মেথডটি কল হবে। মনে রাখতে হবে এটি শুধুমাত্র মেথড ওভাররাইড করা হলেই সত্য হবে।
+  &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<!-- raw HTML omitted -->
+
+</main>
+
+  <footer>
+  
+<footer>
+  <div>
+    <p>
+    &copy; <a href="https://bazlur.com"> A N M Bazlur Rahman</a> 2012 -- 2020 | <a href="https://github.com/rokon12">Github</a>
+    | <a href=" https://twitter.com/bazlur_rahman"> @bazlur_rahman</a>
+    </p>
+  </div>
+</footer>
+  
+  </footer>
+  </body>
+</html>
+

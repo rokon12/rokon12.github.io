@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>programming on My Stream of Thoughts</title>
+    <link>http://bazlur.com/categories/programming/</link>
+    <description>Recent content in programming on My Stream of Thoughts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 13 Jan 2017 17:38:00 +0000</lastBuildDate><atom:link href="http://bazlur.com/categories/programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>প্রোগ্রামিং প্যারাডাইম</title>
+      <link>http://bazlur.com/p44/</link>
+      <pubDate>Fri, 13 Jan 2017 17:38:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p44/</guid>
+      <description>&amp;lt;div style=&amp;quot;text-align: justify;&amp;quot;&amp;gt; &amp;lt;span style=&amp;quot;font-size: large;&amp;quot;&amp;gt; &amp;lt;/span&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div style=&amp;quot;text-align: justify;&amp;quot;&amp;gt; &amp;lt;span style=&amp;quot;font-size: large;&amp;quot;&amp;gt;এই আলোচনার বিষয়বস্তু হচ্ছে প্রোগ্রামিং স্টাইল। &amp;lt;/span&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div style=&amp;quot;text-align: justify;&amp;quot;&amp;gt; &amp;lt;span style=&amp;quot;font-size: large;&amp;quot;&amp;gt; &amp;lt;/span&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div style=&amp;quot;text-align: justify;&amp;quot;&amp;gt; &amp;lt;span style=&amp;quot;font-size: large;&amp;quot;&amp;gt;উদাহরণসরূপ বলা যেতে পারে যে, আমরা সাবাই পোশাক পড়ি। কিন্তু প্রত্যেকে আলাদা আলাদা পোশাক পড়ে থাকে, বাঙালীদের পোশাকের নিজস্ব স্টাইল রয়েছে। তবে কেউ কেউ ওয়েস্ট্রার্ন ড্রেস পড়তে স্বাচ্ছন্দবোধ করে। আবার কোনো কোনো বিশেষ অনুষ্ঠানে ড্রেস কোড থাকে। তবে আপনি সে রকম পোশাকই পরিধান করুন না কেনো, পোশাক পড়ার মূল কারণ একই।&amp;lt;/span&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div style=&amp;quot;text-align: justify;&amp;quot;&amp;gt; &amp;lt;span style=&amp;quot;font-size: large;&amp;quot;&amp;gt; &amp;lt;/span&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div style=&amp;quot;text-align: justify;&amp;quot;&amp;gt; &amp;lt;span style=&amp;quot;font-size: large;&amp;quot;&amp;gt;একইভাবে প্রোগ্রামিং করার ক্ষেত্রেও এরকম অনেকগুলো স্টাইল রয়েছে। তবে যে স্টাইলেই প্রোগ্রাম লিখুন না কেনো, মূল উদ্দ্যেশ্য কম্পিউটারকে ইনস্ট্রাকশন দেওয়া, তাকে দিয়ে কাজ করিয়ে নেওয়া। &amp;lt;/span&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div style=&amp;quot;text-align: justify;&amp;quot;&amp;gt; &amp;lt;span style=&amp;quot;font-size: large;&amp;quot;&amp;gt; &amp;lt;/span&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div style=&amp;quot;text-align: justify;&amp;quot;&amp;gt; &amp;lt;span style=&amp;quot;font-size: large;&amp;quot;&amp;gt;প্রোগ্রামিংয়ের স্টাইলগুলোকে প্রোগ্রামিং প্যারাডাইমও বলা হয়। প্রোগ্রামিংয়ের বেশ কতগুলো প্যারাডাইম রয়েছে &amp;amp;#8211;&amp;lt;/span&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div style=&amp;quot;text-align: justify;&amp;quot;&amp;gt; &amp;lt;span style=&amp;quot;font-size: large;&amp;quot;&amp;gt; &amp;lt;/span&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div style=&amp;quot;text-align: justify;&amp;quot;&amp;gt; &amp;lt;span style=&amp;quot;font-size: large;&amp;quot;&amp;gt;১.</description>
+    </item>
+    
+    <item>
+      <title>কীভাবে ভাল প্রোগ্রামার হওয়া যায়</title>
+      <link>http://bazlur.com/p50/</link>
+      <pubDate>Tue, 01 Nov 2016 15:31:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p50/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>জাভা কীভাবে কাজ করে এবং কীভাবে ভাল পারফর্ম করে</title>
+      <link>http://bazlur.com/p63/</link>
+      <pubDate>Mon, 22 Sep 2014 17:09:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p63/</guid>
+      <description>জাভা কোড প্রথমে বাইটকোডে কম্পাইলড হয়, তারপর সেটিকে জাভা ভার্চুয়াল মেশিন এক্সিকিউট করে। বাইটকোড হচ্ছে এক ধরনের ইন্টারমিডিয়েড ল্যাংগুয়েজ যা কিনা ঠিক মানুষের পাঠ উপযোগী নয়, আবার মেশিনের জন্য ও নয়। এটি শুধুমাত্র জাভা ভার্চুয়াল মেশিন (JVM)পড়তে পারে। বাইটকোডকে এক্সিকিউট করার জন্য জাভা ভার্চুয়াল মেশিন জাস্ট ইন টাইম (JIT) কম্পাইলার ব্যবহার হরে। JIT বাইটকোড কে সরাসরি ইন্টারপ্রেট করে। এটি রানটাইম-এ বাইটকোড কে ইন্টারপ্রেট করে মেশিন কোড-এ রূপান্তরিত করে যা কিনা সিপিইউ রান করে। এখানে একটি ইন্টারেস্টিং প্রশ্ন হতে পারে, জাভা কি তাহলে ইন্টারেপ্রেটেট ল্যাংগুয়েজ নাকি কম্পাইল্ড ল্যাংগুয়েজ?</description>
+    </item>
+    
+    <item>
+      <title>Do we have programming freedom ?</title>
+      <link>http://bazlur.com/p66/</link>
+      <pubDate>Wed, 26 Jun 2013 21:33:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p66/</guid>
+      <description>&amp;lt;p&amp;gt; &amp;lt;span&amp;gt;But&amp;lt;/span&amp;gt; the problem is &amp;lt;span&amp;gt;to map&amp;lt;/span&amp;gt; our conceptual model&amp;amp;nbsp;into the&amp;amp;nbsp;programming language. This is not an easy task to do as we are heavily dependent on programming infrastructure.&amp;amp;nbsp;Sometimes we wait for the language designer to update certain things (we used to joke about Java updates), and if it requires additional power from the IDE,&amp;amp;nbsp;we must wait for the IDE vendor. Most importantly programming language has simple, and few notations that can be expressed in comparison with our natural language.</description>
+    </item>
+    
+  </channel>
+</rss>

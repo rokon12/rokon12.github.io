@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>টিউটোরিয়াল on My Stream of Thoughts</title>
+    <link>http://bazlur.com/categories/%E0%A6%9F%E0%A6%BF%E0%A6%89%E0%A6%9F%E0%A7%8B%E0%A6%B0%E0%A6%BF%E0%A7%9F%E0%A6%BE%E0%A6%B2/</link>
+    <description>Recent content in টিউটোরিয়াল on My Stream of Thoughts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 14 Apr 2017 22:59:00 +0000</lastBuildDate><atom:link href="http://bazlur.com/categories/%E0%A6%9F%E0%A6%BF%E0%A6%89%E0%A6%9F%E0%A7%8B%E0%A6%B0%E0%A6%BF%E0%A7%9F%E0%A6%BE%E0%A6%B2/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ল্যামডা এক্সপ্রেশনঃ পর্ব এক (Lambda Expression: Part 1)</title>
+      <link>http://bazlur.com/p15/</link>
+      <pubDate>Fri, 14 Apr 2017 22:59:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p15/</guid>
+      <description> for (Contact contact : contactList) { if (contact.getAge() &amp;amp;gt;= 18 &amp;amp;&amp;amp; contact.getAge() &amp;amp;lt;= 25 &amp;amp;&amp;amp; contact.getSex() == Contact.Sex.MALE) { contacts.add(contact); } } return contacts; }&amp;lt;/pre&amp;gt;   return contact.getAge() &amp;amp;gt;= 18 &amp;amp;&amp;amp; contact.getAge() &amp;amp;lt;= 25 &amp;amp;&amp;amp; contact.getSex() == Contact.Sex.FEMALE; } });&amp;lt;/pre&amp;gt;  &amp;lt;tr&amp;gt; &amp;lt;td style=&amp;quot;text-align: center;&amp;quot;&amp;gt; চিত্র: প্রয়োজনীয় কোড লজিক &amp;lt;/td&amp;gt; &amp;lt;/tr&amp;gt;   return contact.getAge() &amp;amp;gt;= 18 &amp;amp;&amp;amp; contact.getAge() &amp;amp;lt;= 25 &amp;amp;&amp;amp; contact.getSex() == Contact.Sex.FEMALE; });&amp;lt;/pre&amp;gt; &amp;lt;p&amp;gt; উপরের কোডটুকু লক্ষ্য করুন, এতে শুধুমাত্র প্রয়োজনীয় কোডটুকু রয়েছে। তাহলে আমাদের প্রথম ল্যাম্বডা এক্সপ্রেশন লেখা হয়ে গেলো। &amp;lt;/p&amp;gt;  </description>
+    </item>
+    
+    <item>
+      <title>হ্যাশ ফাংশন -২</title>
+      <link>http://bazlur.com/p47/</link>
+      <pubDate>Mon, 21 Nov 2016 17:20:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p47/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>হ্যাশ ফাংশন</title>
+      <link>http://bazlur.com/p48/</link>
+      <pubDate>Sun, 20 Nov 2016 08:25:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p48/</guid>
+      <description>&amp;lt;p&amp;gt; &amp;amp;nbsp; &amp;lt;/p&amp;gt; &amp;lt;p&amp;gt; পরের অংশ: &amp;lt;a href=&amp;quot;https://bazlur.com/%E0%A6%B9%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B6-%E0%A6%AB%E0%A6%BE%E0%A6%82%E0%A6%B6%E0%A6%A8-%E0%A7%A8/&amp;quot; target=&amp;quot;_blank&amp;quot; rel=&amp;quot;noopener noreferrer&amp;quot;&amp;gt;লিংক&amp;lt;/a&amp;gt; &amp;lt;/p&amp;gt;  </description>
+    </item>
+    
+  </channel>
+</rss>

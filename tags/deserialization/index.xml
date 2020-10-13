@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>deserialization on My Stream of Thoughts</title>
+    <link>http://bazlur.com/tags/deserialization/</link>
+    <description>Recent content in deserialization on My Stream of Thoughts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 24 Jun 2017 03:37:00 +0000</lastBuildDate><atom:link href="http://bazlur.com/tags/deserialization/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>জাভা অবজেক্ট সিরিয়ালাইজেশন (Java serialization)</title>
+      <link>http://bazlur.com/p10/</link>
+      <pubDate>Sat, 24 Jun 2017 03:37:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p10/</guid>
+      <description>public class Person implements Serializable { private String name; private int age; // more properties &amp;amp; methods } return (List&amp;amp;lt;OrderLine&amp;amp;gt;) inputStream.readObject(); } catch (IOException | ClassNotFoundException e) { e.printStackTrace(); } return null; }&amp;lt;/pre&amp;gt;  &amp;lt;pre class=&amp;quot;lang:java decode:true&amp;quot;&amp;gt;package article.serialization;  import java.io.*; import java.util.Arrays; import java.util.List;
+import static article.serialization.Price.; import static article.serialization.Weight.;
+public class Store { public static void main(String[] args) { Product toothPaste = new Product(&amp;ldquo;Tooth Paste&amp;rdquo;, price(1.5), weight(0.5)); Product toothBrush = new Product(&amp;ldquo;Tooth Brush&amp;rdquo;, price(3.</description>
+    </item>
+    
+  </channel>
+</rss>

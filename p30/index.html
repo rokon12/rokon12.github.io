@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>স্ট্রিং পুল কী (What is String Pool) | My Stream of Thoughts</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/about-me/">About me</a></li>
+      
+      <li><a href="/books/">Books</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">স্ট্রিং পুল কী (What is String Pool)</span></h1>
+<h2 class="author">bazlur_rahman</h2>
+<h2 class="date">2017/02/19</h2>
+</div>
+
+<main>
+<p>জাভা ভার্চুয়াল মেশিনে মেমোরি মডেল (Memory Model) দুই ভাবে বিভক্ত। এরা হলো হিপ এবং থ্রেড স্ট্যাক। জাভা অ্যাপ্লিকেশনে যত ধরনের অবজেক্ট তৈরি হয়, সেগুলোর সব থাকে হিপে। স্ট্রিং পুল (String Pool) জাভা হিপের একটি বিশেষ এলাকা।</p>
+<p>জাভাতে স্ট্রিং একটি বহুল ব্যবহৃত ক্লাস। যেহেতু এটি ইমিউটেবল, তাই স্ট্রিং নিয়ে কাজ করার সময় হিপে অনেক নতুন নতুন স্ট্রিং অবজেক্ট তৈরি হয়। এছাড়াও স্ট্রিং অবজেক্ট নিজেও অনেক বেশি মেমোরি নিয়ে থাকে। একটি স্ট্রিং অবজেক্ট কত বাইট মেমোরি নেয় তা হিসাব করে বের করে ফেলা যায়।</p>
+<p>একটি স্ট্রিং অবজেক্টে থাকে একটি ক্যারেক্টার অ্যারে এবং একটি ইন্টিজার হ্যাশ (Hash)। ইন্টিজারের জন্য দরকার হয় 4 বাইট এবং ক্যারেক্টারের জন্য দরকার হয় 2 বাইট। সুতরাং একটি স্ট্রিংয়ে যদি n সংখ্যক ক্যারেক্টার থাকে তাহলে,</p>
+<p><img src="data:image/png;base64,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" alt=""></p>
+<p>সুতরাং দেখা যাচ্ছে যে জাভা অ্যাপ্লিকেশনে অনেক বেশি স্ট্রিং ব্যবহারের ফলে অনেক বেশি মেমোরির প্রয়োজন হয়। যেহেতু সব অবজেক্ট হিপে থাকে, সুতরাং স্ট্রিংগুলোও হিপে থাকবে। এছাড়াও স্ট্রিং নিয়ে কাজ করার ফলে অনেক সময় একই রকম অবজেক্ট (স্ট্রিংয়ের ক্যারেক্টারগুলো একই) তৈরি হয়। একই রকম ক্যারেক্টারের অবজেক্টের জন্য একাধিক অবজেক্ট তৈরি না করে একটি অবজেক্টকে যদি শেয়ার করে ব্যবহার করা যায়, তাহলে কিছুটা মেমোরি বাঁচানো যায়। এই ধারণা থেকেই তৈরি হয় স্ট্রিং পুল। এটি জাভা হিপের একটি বিশেষ এলাকা যেখানে শুধু স্ট্রিং রাখা হয়।</p>
+<p>উদ্ধৃতি চিহ্ন দিয়ে অর্থাৎ স্ট্রিং লিটারেল ব্যবহার করে নতুন একটি স্ট্রিং তৈরি করা সময়, একইরকম স্ট্রিং অবজেক্ট যদি আগে থেকেই স্ট্রিং পুলে থেকে থাকে, তাহলে নতুন করে আর তৈরি না করে আগের অবজেক্টটির রেফারেন্স দেওয়া হয়।</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>ওপরের দুটি লাইনের জন্য যদিও দুটি অবেজেক্ট থাকার কথা, কিন্তু আসলে জাভা হিপে একটি স্ট্রিং অবজেক্টই থাকবে, দুটি তৈরি হবে না।</p>
+<p>তবে new অপারেটর ও কনস্ট্রাক্টর ব্যবহার করে স্ট্রিং তৈরি করলে তা স্ট্রিং পুলে যায় না।</p>
+<!-- raw HTML omitted -->
+<p>ওপরের লাইনটি আসলে দুটি স্ট্রিং তৈরি করে। এটিকে এভাবে লেখা যায়,</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>সুতরাং দেখা যাচ্ছে যে এভাবে স্ট্রিং তৈরি করলে সবসময় অতিরিক্তি স্ট্রিং তৈরি হচ্ছে যা মোটেও কাম্য নয়। সুতরাং স্ট্রিং তৈরি করার জন্য সবসময় লিটারেল ব্যবহার করুন।</p>
+<p>এখন যদি স্ট্রিং ইমিউটেবল না হয়, তাহলে একটি স্ট্রিং যদি পরিবর্তন করি, তাহলে আসলে অন্যান্য রেফারেন্সগুলোও পরিবর্তন হয়ে যাবে।</p>
+<p>এছাড়াও, আমরা জানি যে স্ট্রিংয়ের হ্যাশকোড (Hashcode) খুব বেশি ব্যবহার করা হয়। যেমন হ্যাশম্যাপ (HashMap)। স্ট্রিং ইমিউটেবল হওয়ায় এটা নিশ্চিত যে, সবসময় হ্যাশকোড একই হবে, সুতরাং আমরা প্রতিবার হ্যাশকোড হিসাব না করে নির্দ্বিধায় ক্যাশিং (Caching) করতে পারি।</p>
+<p>আবার স্ট্রিং আর্গুমেন্ট হিসেবে অনেক বেশি ব্যবহার করা হয়ে থাকে, যেমন, নেটওয়ার্ক সংযোগের ইউআরএল (URL), ফাইল পাথ ইত্যাদির ক্ষেত্রে। সুতরাং এটি ইমিউটেবল না হলে পরিবর্তন করে ফেলা সম্ভব যা কিনা একটি নিরাপত্তার জন্য হুমকির কারণ হতে পারে। কিন্তু যেহেতু স্ট্রিং ইমিউটেবল, তাই সেই সম্ভবনা নেই।</p>
+<p>তাছাড়া স্ট্রিং ইমিউটেবল হওয়ায় এটি স্বাভাবিকভাবে থ্রেড সেইফ (Thread safe) এবং স্বাধীনভাবে যেকোনো থ্রেড অ্যাকসেস করে পারে। এতে করে আমাদেরকে কষ্ট করে এর থ্রেড সেইফটি নিয়ে চিন্তা করতে হয় না।</p>
+
+</main>
+
+  <footer>
+  
+<footer>
+  <div>
+    <p>
+    &copy; <a href="https://bazlur.com"> A N M Bazlur Rahman</a> 2012 -- 2020 | <a href="https://github.com/rokon12">Github</a>
+    | <a href=" https://twitter.com/bazlur_rahman"> @bazlur_rahman</a>
+    </p>
+  </div>
+</footer>
+  
+  </footer>
+  </body>
+</html>
+

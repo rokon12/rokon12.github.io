@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>null on My Stream of Thoughts</title>
+    <link>http://bazlur.com/categories/null/</link>
+    <description>Recent content in null on My Stream of Thoughts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 20 Feb 2017 09:32:00 +0000</lastBuildDate><atom:link href="http://bazlur.com/categories/null/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>নাল (null in Java)</title>
+      <link>http://bazlur.com/p28/</link>
+      <pubDate>Mon, 20 Feb 2017 09:32:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p28/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>swing on My Stream of Thoughts</title>
+    <link>http://bazlur.com/tags/swing/</link>
+    <description>Recent content in swing on My Stream of Thoughts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 17 Mar 2018 22:05:00 +0000</lastBuildDate><atom:link href="http://bazlur.com/tags/swing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>জাভা সুইয়িং ব্যবহার করে একটি ক্যালকুলেটর</title>
+      <link>http://bazlur.com/p275/</link>
+      <pubDate>Sat, 17 Mar 2018 22:05:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p275/</guid>
+      <description>একদম শুরুতে যখন আমার জাভা প্রোগ্রামিংয়ের হাতে খড়ি বলা যায়, তখন জাভার সুইয়িং ব্যবহার করে একটি ক্যালকুলেটর তৈরি করেছিলাম।
+এটি একটি ফোরামে দিয়েছিলাম। সেখানে অনেকেই পছন্দ করেছিল। হঠাৎ করেই পেয়ে গেলাম প্রায় ৮ বছর আগের একটি কোড।
+আজকের এই পোস্টে এই কোডটি শেয়ার করছি।
+  ওপরের কোডগুলো কপি করে রান করুন। তাহলে পেয়ে যাবেন একটি সিম্পল ক্যালকুলেটর।</description>
+    </item>
+    
+  </channel>
+</rss>

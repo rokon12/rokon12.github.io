@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>জাভা অবজেক্ট সিরিয়ালাইজেশন (Java serialization) | My Stream of Thoughts</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/about-me/">About me</a></li>
+      
+      <li><a href="/books/">Books</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">জাভা অবজেক্ট সিরিয়ালাইজেশন (Java serialization)</span></h1>
+<h2 class="author">bazlur_rahman</h2>
+<h2 class="date">2017/06/24</h2>
+</div>
+
+<main>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>public class Person implements Serializable {
+      private String name;
+      private int age;
+      // more properties &amp; methods 
+}<!-- raw HTML omitted --> <!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<pre><code>        return (List&amp;lt;OrderLine&amp;gt;) inputStream.readObject();
+
+    } catch (IOException | ClassNotFoundException e) {
+        e.printStackTrace();
+    }
+
+    return null;
+}&lt;/pre&gt;
+</code></pre>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<pre><code>&lt;pre class=&quot;lang:java decode:true&quot;&gt;package article.serialization;
+</code></pre>
+<p>import java.io.*;
+import java.util.Arrays;
+import java.util.List;</p>
+<p>import static article.serialization.Price.<em>;
+import static article.serialization.Weight.</em>;</p>
+<p>public class Store {
+public static void main(String[] args) {
+Product toothPaste = new Product(&ldquo;Tooth Paste&rdquo;, price(1.5), weight(0.5));
+Product toothBrush = new Product(&ldquo;Tooth Brush&rdquo;, price(3.5), weight(0.3));</p>
+<pre><code>    List&amp;lt;OrderLine&amp;gt; orders =
+            Arrays.asList(new OrderLine(toothPaste, 2),
+                    new OrderLine(toothBrush, 3));
+
+    System.out.println(&quot;Before serialization: &quot;);
+    printOrder(orders);
+
+    String fileName = &quot;orders.ser&quot;;
+    serializeToDisk(fileName, orders);
+
+    System.out.println();
+    System.out.println(&quot;After serialization: &quot;);
+    List&amp;lt;OrderLine&amp;gt; deserializeOrders = deserializeFromDisk(fileName);
+    printOrder(deserializeOrders);
+
+    /*
+    Output:
+    Before serialization:
+    Total Price: 13.5
+    Total Weight: 1.9
+
+    After serialization:
+    Total Price: 13.5
+    Total Weight: 1.9
+    */
+}
+
+private static void printOrder(List&amp;lt;OrderLine&amp;gt; orders) {
+    orders.stream()
+            .map(OrderLine::getAmount)
+            .reduce(Price::add)
+            .ifPresent(price -&amp;gt;
+                    System.out.println(String.format(&quot;Total Price: %s&quot;, price)));
+
+    orders.stream()
+            .map(OrderLine::getWeight)
+            .reduce(Weight::add)
+            .ifPresent(weight -&amp;gt;
+                    System.out.println(String.format(&quot;Total Weight: %s&quot;, weight)));
+}
+
+public static void serializeToDisk(String fileName, List&amp;lt;OrderLine&amp;gt; orders) {
+    File file = new File(fileName);
+
+    try (ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream(file))) {
+        outputStream.writeObject(orders);
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
+}
+
+public static List&amp;lt;OrderLine&amp;gt; deserializeFromDisk(String fileName) {
+    File file = new File(fileName);
+
+    try (ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream(file))) {
+
+        return (List&amp;lt;OrderLine&amp;gt;) inputStream.readObject();
+
+    } catch (IOException | ClassNotFoundException e) {
+        e.printStackTrace();
+    }
+
+    return null;
+}
+</code></pre>
+<p>}
+<!-- raw HTML omitted --></p>
+<pre><code>&lt;pre class=&quot;lang:java decode:true &quot;&gt;package article.serialization;
+</code></pre>
+<p>import java.io.Serializable;</p>
+<p>public class OrderLine implements Serializable {
+private Product product;
+private int count;</p>
+<pre><code>public OrderLine(Product product, int count) {
+    this.product = product;
+    this.count = count;
+}
+
+public Product getProduct() {
+    return product;
+}
+
+public void setProduct(Product product) {
+    this.product = product;
+}
+
+public int getCount() {
+    return count;
+}
+
+public void setCount(int count) {
+    this.count = count;
+}
+
+public Weight getWeight() {
+    return this.product.getWeight().mult(this.count);
+}
+
+public Price getAmount() {
+    return this.product.getPrice().mult(this.count);
+}
+</code></pre>
+<p>}
+<!-- raw HTML omitted --></p>
+<pre><code>&lt;pre class=&quot;lang:java decode:true &quot;&gt;package article.serialization;
+</code></pre>
+<p>import java.io.Serializable;</p>
+<p>public class Price implements Serializable {
+public final double value;</p>
+<pre><code>private Price(double value) {
+    this.value = value;
+}
+
+public static Price price(double value) {
+    if (value &amp;lt;= 0) {
+        throw new IllegalArgumentException(&quot;Price must be greater than 0&quot;);
+    } else {
+        return new Price(value);
+    }
+}
+
+
+public Price add(Price price) {
+    return new Price(this.value + price.value);
+}
+
+public Price mult(int count) {
+    return new Price(this.value * count);
+}
+
+@Override
+public String toString() {
+    return Double.toString(this.value);
+}
+</code></pre>
+<p>}
+<!-- raw HTML omitted --></p>
+<pre><code>&lt;pre class=&quot;lang:java decode:true &quot;&gt;package article.serialization;
+</code></pre>
+<p>import java.io.Serializable;</p>
+<p>public class Product implements Serializable{
+private final String name;
+private final Price price;
+private final Weight weight;</p>
+<pre><code>public Product(String name, Price price, Weight weight) {
+    this.name = name;
+    this.price = price;
+    this.weight = weight;
+}
+
+public String getName() {
+    return name;
+}
+
+public Price getPrice() {
+    return price;
+}
+
+public Weight getWeight() {
+    return weight;
+}
+</code></pre>
+<p>}
+<!-- raw HTML omitted --></p>
+<pre><code>&lt;pre class=&quot;lang:java decode:true &quot;&gt;package article.serialization;
+</code></pre>
+<p>import java.io.Serializable;</p>
+<p>public class Weight implements Serializable {
+public final double value;</p>
+<pre><code>private Weight(double value) {
+    this.value = value;
+}
+
+public static Weight weight(double value) {
+    if (value &amp;lt;= 0) {
+        throw new IllegalArgumentException(&quot;Weight must be greater than 0&quot;);
+    }
+
+    return new Weight(value);
+}
+
+public Weight add(Weight weight) {
+    return new Weight(this.value + weight.value);
+}
+
+public Weight mult(int count) {
+    return new Weight(this.value * count);
+}
+
+@Override
+public String toString() {
+    return Double.toString(this.value);
+}
+</code></pre>
+<p>}
+<!-- raw HTML omitted --></p>
+<pre><code>&lt;p&gt;
+  &amp;nbsp;
+&lt;/p&gt;
+</code></pre>
+<!-- raw HTML omitted -->
+
+</main>
+
+  <footer>
+  
+<footer>
+  <div>
+    <p>
+    &copy; <a href="https://bazlur.com"> A N M Bazlur Rahman</a> 2012 -- 2020 | <a href="https://github.com/rokon12">Github</a>
+    | <a href=" https://twitter.com/bazlur_rahman"> @bazlur_rahman</a>
+    </p>
+  </div>
+</footer>
+  
+  </footer>
+  </body>
+</html>
+

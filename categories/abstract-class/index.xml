@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>abstract class on My Stream of Thoughts</title>
+    <link>http://bazlur.com/categories/abstract-class/</link>
+    <description>Recent content in abstract class on My Stream of Thoughts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 15 Feb 2017 09:29:00 +0000</lastBuildDate><atom:link href="http://bazlur.com/categories/abstract-class/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>অ্যবস্ট্রাক্ট ক্লাসের প্রয়োজনীয়তা (why we need abstract class )</title>
+      <link>http://bazlur.com/p32/</link>
+      <pubDate>Wed, 15 Feb 2017 09:29:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p32/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

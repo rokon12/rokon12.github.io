@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>design pattern on My Stream of Thoughts</title>
+    <link>http://bazlur.com/categories/design-pattern/</link>
+    <description>Recent content in design pattern on My Stream of Thoughts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 28 Jul 2017 17:57:00 +0000</lastBuildDate><atom:link href="http://bazlur.com/categories/design-pattern/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ইনভার্শন অব কন্ট্রোল কী (What is Inversion of Control)?</title>
+      <link>http://bazlur.com/p7/</link>
+      <pubDate>Fri, 28 Jul 2017 17:57:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p7/</guid>
+      <description>&amp;lt;div&amp;gt; [spacer height=&amp;amp;#8221;20px&amp;amp;#8221;] &amp;lt;/div&amp;gt; &amp;lt;div style=&amp;quot;text-align: justify;&amp;quot;&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div style=&amp;quot;text-align: justify;&amp;quot;&amp;gt; একইভাবে অবজেক্ট ওরিয়েন্টেড প্রোগ্রামিংয়ের মূল ব্যপার হলো বাস্তব জগতের সঙ্গে সাদৃশ্য রেখে কোনো সমস্যা সমাধান করা। এতে অনেকগুলো অবজেক্ট থাকা যারা নিদির্ষ্ট কোনো কাজ করে এবং এগুলোকে একত্রে জুড়ে দিয়ে একটি বড় অবজেক্ট তৈরি করা হয়। প্রত্যেকটি অবজেক্ট একটি বাস্তব জগতের কোনো কিছুর প্রতিরূপ। Airplane অবজেক্ট একটি উড়োজাহাজকে নির্দেশ করতে পারে, সেভাবে একটি Purchase অবজেক্ট একটি বই কেনার বিভিন্ন ডেটা যেমন- দাম, বই অবজেক্টের রেফারেন্স, কত কপি ইত্যাদি নির্দেশ করতে পারে। &amp;lt;/div&amp;gt; &amp;lt;div style=&amp;quot;text-align: justify;&amp;quot;&amp;gt; [spacer height=&amp;amp;#8221;20px&amp;amp;#8221;] &amp;lt;/div&amp;gt; &amp;lt;div&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div style=&amp;quot;text-align: justify;&amp;quot;&amp;gt; একটি অবজেক্টকে সঠিকভাবে কাজ করতে হলে অনেক সময়ই অন্য এক বা একাধিক অবজেক্টের উপর নির্ভর করতে হয়। যে অবজেক্টের উপর নির্ভর করে কোনো কাজ করতে হয় তাকে অন্য অবজেক্টটির ডিপেডেন্সি বলা হয়। অর্থাৎ A কে কাজ করতে হলে যদি B এর উপর নির্ভর করতে হয়, তাহলে B, A এর ডিপেডেন্সি। &amp;lt;/div&amp;gt; &amp;lt;div style=&amp;quot;text-align: justify;&amp;quot;&amp;gt; [spacer height=&amp;amp;#8221;20px&amp;amp;#8221;] &amp;lt;/div&amp;gt; &amp;lt;div&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div style=&amp;quot;text-align: justify;&amp;quot;&amp;gt; এখন মনে করুন, আপনি একটি ইমেইল অ্যাপ্লিকেশন লিখবেন। এই অ্যাপ্লিকেশনের বেশ কতগুলো অংশ থাকতে পারে। &amp;lt;/div&amp;gt; &amp;lt;div style=&amp;quot;text-align: justify;&amp;quot;&amp;gt; [spacer height=&amp;amp;#8221;20px&amp;amp;#8221;] &amp;lt;/div&amp;gt; &amp;lt;div&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div style=&amp;quot;text-align: justify;&amp;quot;&amp;gt; &amp;lt;strong&amp;gt;এক-&amp;lt;/strong&amp;gt; একটি টেক্সট এডিটরের প্রয়োজন হবে, যা একটি অবজেক্ট। &amp;lt;/div&amp;gt; &amp;lt;div style=&amp;quot;text-align: justify;&amp;quot;&amp;gt; &amp;lt;strong&amp;gt;দুই-&amp;lt;/strong&amp;gt; আপনি যে টেক্সটটি লিখবেন, সেটিকে নির্দেশ করতে একটি অবজেক্ট প্রয়োজন হবে। &amp;lt;/div&amp;gt; &amp;lt;div style=&amp;quot;text-align: justify;&amp;quot;&amp;gt; &amp;lt;strong&amp;gt;তিন-&amp;lt;/strong&amp;gt; ইমেইল সেন্ড করার আগে অবশ্যই আপনি বানানগুলো ঠিক করে নিতে চান, সেক্ষেত্রে বানান শুদ্ধিকরণ একটি অবজেক্টের প্রয়োজন হবে। &amp;lt;/div&amp;gt; &amp;lt;div style=&amp;quot;text-align: justify;&amp;quot;&amp;gt; &amp;lt;strong&amp;gt;চার-&amp;lt;/strong&amp;gt; আপনাকে ইমেইলটি পাঠানোর জন্য ইমেইল অ্যাড্রেস প্রয়োজন। এগুলোর জন্য একটি অ্যাড্রেসবুক অবজেক্টের প্রয়োজন হবে, যেখানে আপানার সব ইমেইল অ্যাড্রেসগুলো রয়েছে। &amp;lt;/div&amp;gt; &amp;lt;div style=&amp;quot;text-align: justify;&amp;quot;&amp;gt; &amp;lt;strong&amp;gt;পাঁচ-&amp;lt;/strong&amp;gt; একটি ইমেইলার অবজেক্ট যে কিনা ইমেইলটি ইন্টারনেট ব্যবহার করে গন্তব্যে পৌঁছানোর কাজটি করবে। &amp;lt;/div&amp;gt; &amp;lt;div style=&amp;quot;text-align: justify;&amp;quot;&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div style=&amp;quot;text-align: justify;&amp;quot;&amp;gt; ইত্যাদি .</description>
+    </item>
+    
+  </channel>
+</rss>

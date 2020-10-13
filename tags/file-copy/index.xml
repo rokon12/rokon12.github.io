@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>file copy on My Stream of Thoughts</title>
+    <link>http://bazlur.com/tags/file-copy/</link>
+    <description>Recent content in file copy on My Stream of Thoughts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 22 Mar 2017 14:08:00 +0000</lastBuildDate><atom:link href="http://bazlur.com/tags/file-copy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>জাভাতে কীভাবে ফাইল কপি করা যায়(File Copying in Java)</title>
+      <link>http://bazlur.com/p21/</link>
+      <pubDate>Wed, 22 Mar 2017 14:08:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p21/</guid>
+      <description>জাভাতে বিভিন্নভাবে ফাইল কপি করা যায়।
+প্রথমে ইনপুট স্ট্রিম ব্যবহার করে ফাইল কপি করতে পারি।
+copy() মেথডটিতে দুটি প্যারামিটার রয়েছে। প্রথমটিতে ফাইলের সোর্সটি স্ট্রিং আকারে দিতে হবে, অর্থাৎ যে ফাইলটি কপি করা হবে তার পাথ। দ্বিতীয়টি যেখানে ফাইলটি কপি করা হবে। এটি ডেস্টিনেশন ফাইল। এই ফাইলটি সিস্টেমে না থাকলে নতুন করে তৈরি হবে। আর যদি ফাইলটি আগে থেকেই তৈরি করা থাকে, তাহলে এর কন্টেন্ট রিপ্লেস হবে।
+এতে প্রথমে একটি ইনপুট স্ট্রিম ব্যবহার করা হয়েছে যা দিয়ে ফাইল থেকে ডেটা পড়া হয়, এবং একটি আউটপুট স্ট্রিম ব্যবহার করা হয়েছে যা দিয়ে ডেস্টিনেশন ফাইলে রাইট করা হয়।</description>
+    </item>
+    
+  </channel>
+</rss>

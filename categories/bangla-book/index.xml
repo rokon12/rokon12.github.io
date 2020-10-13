@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>bangla book on My Stream of Thoughts</title>
+    <link>http://bazlur.com/categories/bangla-book/</link>
+    <description>Recent content in bangla book on My Stream of Thoughts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 01 Mar 2019 18:15:46 +0000</lastBuildDate><atom:link href="http://bazlur.com/categories/bangla-book/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>অ্যাডভান্সড জাভা প্রোগ্রামিং</title>
+      <link>http://bazlur.com/p400/</link>
+      <pubDate>Fri, 01 Mar 2019 18:15:46 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p400/</guid>
+      <description>প্রাপ্তিস্থান অনলাইন এবং ফেসবুকে সারাদেশে হোম ডেলিভারি
+**দ্বিমিক প্রকাশনী, **ফোন: ০১৭০৭ ৯৬ ০৩ ৭২ (যোগাযোগ ও বিকাশ)
+রকমারি ডট কম, ফোন: ১৬২৯৭
+দারাজ ডট কম ডট বিডি, ফোন: ১৬৪৯২
+ঢাকা
+হক লাইব্রেরী, নীলক্ষেত, ঢাকা, ফোন: ০১৮২০-১৫৭১৮১
+মানিক লাইব্রেরী, নীলক্ষেত, ঢাকা, ফোন: ০১৭৩৫-৭৪২৯০৮
+রানা বুক পাবলিশার্স, নীলক্ষেত, ঢাকা, ফোন: ০১৬২৩-০৫৮৪২৮
+বাতিঘর ঢাকা, বিশ্বসাহিত্যকেন্দ্র, বাংলামটর।
+চট্টগ্রাম
+বাতিঘর, প্রেস ক্লাব ভবন, জামালখান রোড, চট্টগ্রাম।
+বরিশাল
+বুক ভিলা, বিবিরপুকুর পাড়।
+রাজশাহী
+বুক পয়েন্ট, সোনাদীঘির মোড়, রাজশাহী।</description>
+    </item>
+    
+    <item>
+      <title>জাভা থ্রেড প্রোগ্রামিংঃ রিভিউ-৪</title>
+      <link>http://bazlur.com/p228/</link>
+      <pubDate>Mon, 26 Feb 2018 14:11:38 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p228/</guid>
+      <description>জাভা থ্রেড প্রোগ্রামিং বইটি নিয়ে নিচের চমৎকার রিভিউটি লিখেছেন Ruhul Quddus Shakkhor   This is a great book, but this is not for everyone. If you’re new to Java, then it’s probably better to learn the basics first. However, if you’re an intermediate to the advanced learner, this book will give you a deeper understanding of Java threads. At this moment, I’m not aware of another Bangla book for any programming language that can give you a similar overview of threads.</description>
+    </item>
+    
+    <item>
+      <title>জাভা থ্রেড প্রোগ্রামিংঃ রিভিউ-৩</title>
+      <link>http://bazlur.com/p222/</link>
+      <pubDate>Thu, 22 Feb 2018 17:47:41 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p222/</guid>
+      <description>জাভা থ্রেড প্রোগ্রামিং বইটি নিয়ে নিচের চমৎকার রিভিউটি লিখেছেন অরণ্য আব্দুলাহ আল মামুনভাই।  জাভা বেসড এপ্লিকেশন ডেভেলপমেন্টের একটা গুরুত্বপূর্ন বিষয় হলো থ্রেডিং। সেইটা সার্ভার-সাইড ডেভেলপমেন্ট-ই হোক আর ক্লায়েন্ট সাইড ডেভেলপমেন্ট। সার্ভার-সাইড ডেভেলপমেন্ট এ বিভিন্ন প্রসেসকে একধিক কাজে ভাগ করে faster response করা কিংবা ক্লায়েন্ট সাইড ডেভেলপমেন্ট এ GUI এর পাশাপাশি Network request বা IO Request সঠিক ভাবে handle করা – এগুলা খুবই গুরুত্বপূর্ন বিষয়। থ্রেডিং এর concept ভালো না থাকলে ভালো মানের application develop করা এক কথায় অসম্ভব।</description>
+    </item>
+    
+    <item>
+      <title>I’m writing a book</title>
+      <link>http://bazlur.com/p52/</link>
+      <pubDate>Tue, 18 Oct 2016 19:06:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p52/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

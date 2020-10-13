@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ইনভার্শন অব কন্ট্রোল কী (What is Inversion of Control)? | My Stream of Thoughts</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/about-me/">About me</a></li>
+      
+      <li><a href="/books/">Books</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">ইনভার্শন অব কন্ট্রোল কী (What is Inversion of Control)?</span></h1>
+<h2 class="author">bazlur_rahman</h2>
+<h2 class="date">2017/07/28</h2>
+</div>
+
+<main>
+<!-- raw HTML omitted -->
+<pre><code>&lt;div&gt;
+  [spacer height=&amp;#8221;20px&amp;#8221;]
+&lt;/div&gt;
+
+&lt;div style=&quot;text-align: justify;&quot;&gt;
+&lt;/div&gt;
+
+&lt;div style=&quot;text-align: justify;&quot;&gt;
+  একইভাবে অবজেক্ট ওরিয়েন্টেড প্রোগ্রামিংয়ের মূল ব্যপার হলো বাস্তব জগতের সঙ্গে সাদৃশ্য রেখে কোনো সমস্যা সমাধান করা। এতে অনেকগুলো অবজেক্ট থাকা যারা নিদির্ষ্ট কোনো কাজ করে এবং এগুলোকে একত্রে জুড়ে দিয়ে একটি বড় অবজেক্ট তৈরি করা হয়। প্রত্যেকটি অবজেক্ট একটি বাস্তব জগতের কোনো কিছুর প্রতিরূপ। Airplane অবজেক্ট একটি উড়োজাহাজকে নির্দেশ করতে পারে, সেভাবে একটি Purchase অবজেক্ট একটি বই কেনার বিভিন্ন ডেটা যেমন- দাম, বই অবজেক্টের রেফারেন্স, কত কপি ইত্যাদি নির্দেশ করতে পারে।
+&lt;/div&gt;
+
+&lt;div style=&quot;text-align: justify;&quot;&gt;
+  [spacer height=&amp;#8221;20px&amp;#8221;]
+&lt;/div&gt;
+
+&lt;div&gt;
+&lt;/div&gt;
+
+&lt;div style=&quot;text-align: justify;&quot;&gt;
+  একটি অবজেক্টকে সঠিকভাবে কাজ করতে হলে অনেক সময়ই অন্য এক বা একাধিক অবজেক্টের উপর নির্ভর করতে হয়। যে অবজেক্টের উপর নির্ভর করে কোনো কাজ করতে হয় তাকে অন্য অবজেক্টটির ডিপেডেন্সি বলা হয়। অর্থাৎ A কে কাজ করতে হলে যদি B এর উপর নির্ভর করতে হয়, তাহলে B, A এর ডিপেডেন্সি।
+&lt;/div&gt;
+
+&lt;div style=&quot;text-align: justify;&quot;&gt;
+  [spacer height=&amp;#8221;20px&amp;#8221;]
+&lt;/div&gt;
+
+&lt;div&gt;
+&lt;/div&gt;
+
+&lt;div style=&quot;text-align: justify;&quot;&gt;
+  এখন মনে করুন, আপনি একটি ইমেইল অ্যাপ্লিকেশন লিখবেন। এই অ্যাপ্লিকেশনের বেশ কতগুলো অংশ থাকতে পারে।
+&lt;/div&gt;
+
+&lt;div style=&quot;text-align: justify;&quot;&gt;
+  [spacer height=&amp;#8221;20px&amp;#8221;]
+&lt;/div&gt;
+
+&lt;div&gt;
+&lt;/div&gt;
+
+&lt;div style=&quot;text-align: justify;&quot;&gt;
+  &lt;strong&gt;এক-&lt;/strong&gt; একটি টেক্সট এডিটরের প্রয়োজন হবে, যা একটি অবজেক্ট।
+&lt;/div&gt;
+
+&lt;div style=&quot;text-align: justify;&quot;&gt;
+  &lt;strong&gt;দুই-&lt;/strong&gt; আপনি যে টেক্সটটি লিখবেন, সেটিকে নির্দেশ করতে একটি অবজেক্ট প্রয়োজন হবে।
+&lt;/div&gt;
+
+&lt;div style=&quot;text-align: justify;&quot;&gt;
+  &lt;strong&gt;তিন-&lt;/strong&gt; ইমেইল সেন্ড করার আগে অবশ্যই আপনি বানানগুলো ঠিক করে নিতে চান, সেক্ষেত্রে বানান শুদ্ধিকরণ একটি অবজেক্টের প্রয়োজন হবে।
+&lt;/div&gt;
+
+&lt;div style=&quot;text-align: justify;&quot;&gt;
+  &lt;strong&gt;চার-&lt;/strong&gt; আপনাকে ইমেইলটি পাঠানোর জন্য ইমেইল অ্যাড্রেস প্রয়োজন। এগুলোর জন্য একটি অ্যাড্রেসবুক অবজেক্টের প্রয়োজন হবে, যেখানে আপানার সব ইমেইল অ্যাড্রেসগুলো রয়েছে।
+&lt;/div&gt;
+
+&lt;div style=&quot;text-align: justify;&quot;&gt;
+  &lt;strong&gt;পাঁচ-&lt;/strong&gt; একটি ইমেইলার অবজেক্ট যে কিনা ইমেইলটি ইন্টারনেট ব্যবহার করে গন্তব্যে পৌঁছানোর কাজটি করবে।
+&lt;/div&gt;
+
+&lt;div style=&quot;text-align: justify;&quot;&gt;
+&lt;/div&gt;
+
+&lt;div style=&quot;text-align: justify;&quot;&gt;
+  ইত্যাদি ..।
+&lt;/div&gt;
+
+&lt;div style=&quot;text-align: justify;&quot;&gt;
+  [spacer height=&amp;#8221;20px&amp;#8221;]
+&lt;/div&gt;
+
+&lt;div&gt;
+&lt;/div&gt;
+
+&lt;div style=&quot;text-align: justify;&quot;&gt;
+  তাহলে দেখা যাচ্ছে এই ইমেইলার অবজেক্টটি টেক্সট এডিটর, একচুয়াল টেক্সট, স্পেলচেকার এবং অ্যাড্রেসবুকের উপর নির্ভর করে। এগুলো ইমেইলার অবজেক্টের ডিপেডেন্সি।
+&lt;/div&gt;
+
+&lt;div style=&quot;text-align: justify;&quot;&gt;
+  [spacer height=&amp;#8221;20px&amp;#8221;]
+&lt;/div&gt;
+
+&lt;div&gt;
+&lt;/div&gt;
+
+&lt;div style=&quot;text-align: justify;&quot;&gt;
+  উদাহরণের সুবিধার্থে এবং মূল বিষয়টি সংক্ষিপ্তভাবে বোঝার জন্য মনে করুন, আপনার দুটি অবজেক্ট রয়েছে, একটি ইমেইলার অবজেক্ট যাতে একটি সেন্ড মেথড রয়েছে। আপনি ইমেইল সেন্ড করার আগে বানানগুলো ঠিক করে নিতে চান, সে জন্য প্রয়োজন SpellFixer অবজেক্ট। যেমন-
+&lt;/div&gt;
+
+&lt;div&gt;
+&lt;/div&gt;
+</code></pre>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<pre><code>public Emailer() {
+    this.spellFixer = new SpellFixer();
+}
+
+public void send(String text, String emailAddress) {
+    String fixedText = spellFixer.fixSpelling(text);
+
+    System.out.println(&quot;sending email to: &quot;
+            + emailAddress + &quot; with following text: &quot; + fixedText);
+}
+</code></pre>
+<p>}
+<!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<pre><code>&lt;div&gt;
+  [spacer height=&amp;#8221;20px&amp;#8221;]
+&lt;/div&gt;
+
+&lt;div style=&quot;text-align: justify;&quot;&gt;
+&lt;/div&gt;
+
+&lt;div style=&quot;text-align: justify;&quot;&gt;
+  তবে আমরা সব সময় যে ইংরেজিতে ইমেল লিখবো, এমনটি হওয়ার কোনো কারণ নেই। কখনো বাংলা বা অন্য কোনো ভাষাতে লিখতে পারি। সেক্ষেত্রে আমাদের এইওপরের সমাধানটি কাজ করবে না। ধরা যাক আমরা বাংলাতে একটি ইমেইল লিখতে চাই এবং এক্ষেত্রে একটি বাংলা স্পেলফিক্সার তৈরি করতে হবে। এক্ষেত্রে &amp;#8211;
+&lt;/div&gt;
+
+&lt;div&gt;
+   [spacer height=&amp;#8221;20px&amp;#8221;]
+&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;pre class=&quot;lang:java decode:true&quot;&gt;public class BanglaSpellFixer {
+public String fixSpelling(String text) {
+    //bangla spell fixer
+    return text;
+}
+</code></pre>
+<p>}<!-- raw HTML omitted -->
+<!-- raw HTML omitted --></p>
+<pre><code>&lt;div style=&quot;text-align: justify;&quot;&gt;
+  তবে এটি সরাসরি আমাদের ইমেলারে প্লাগ করার কোনো উপায় নেই। যদিও বা আমরা করতে চাই, সেক্ষেত্রে আমাদের নতুন করে আরেকটি ইমেইলার তৈরি করতে হবে &amp;#8211;
+&lt;/div&gt;
+</code></pre>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<pre><code>&lt;div style=&quot;text-align: justify;&quot;&gt;
+  [spacer height=&amp;#8221;20px&amp;#8221;]
+&lt;/div&gt;
+
+&lt;div style=&quot;text-align: justify;&quot;&gt;
+  ১. এতে ইমেলারের সাথে স্পেল চেকার খুব টাইটলি কাপলড। এরা আলাদা আলাদাভাবে কাজ করতে পারে না। বাস্তব জগতের প্রত্যেকটি বস্তুই স্বাধীন। সুতরাং বাস্তব জগতের সঙ্গে সাদৃশ্য রইল না।
+&lt;/div&gt;
+
+&lt;div&gt;
+&lt;/div&gt;
+
+&lt;div style=&quot;text-align: justify;&quot;&gt;
+  ২. আলাদা আলাদা স্পেল ফিক্সারের জন্য আলাদা ইমেইলারের প্রয়োজন হচ্ছে,এবং আলাদাভাবে কোড লিখতে হচ্ছে যাতে কোড ডুপ্লিকেশন হচ্ছে।
+&lt;/div&gt;
+
+&lt;div&gt;
+&lt;/div&gt;
+
+&lt;div style=&quot;text-align: justify;&quot;&gt;
+  ৩. আমরা যদি দুটি অবজেক্টকে আলদা আলাদাভাবে টেস্ট করতে চাই, তা সম্ভব হয়ে উঠছে না। এখানে যদিও স্পেল চেকারকে আলাদা করে টেস্ট করা গেলেও, ইমেইলার টেস্ট করতে হলে স্পেল চেকারের অবজেক্ট প্রয়োজন।
+&lt;/div&gt;
+
+&lt;div&gt;
+&lt;/div&gt;
+
+&lt;div style=&quot;text-align: justify;&quot;&gt;
+  ৪. এখানে দুইজন ডেভেলপার বা প্রোগ্রামার আলাদা আলাদাভাবে দুটি ক্লাস নিয়ে কাজ করতে পারবে না।
+&lt;/div&gt;
+
+&lt;div style=&quot;text-align: justify;&quot;&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  [spacer height=&amp;#8221;20px&amp;#8221;]
+&lt;/div&gt;
+
+&lt;div style=&quot;text-align: justify;&quot;&gt;
+  এই ওপরের সমস্যাগুলো সমাধান করার উপায় রয়েছে-
+&lt;/div&gt;
+
+&lt;div style=&quot;text-align: justify;&quot;&gt;
+&lt;/div&gt;
+
+&lt;div style=&quot;text-align: justify;&quot;&gt;
+  নিচের কোডগুলো খেয়াল করুন-
+&lt;/div&gt;
+</code></pre>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<pre><code>&lt;div style=&quot;text-align: justify;&quot;&gt;
+  পরবর্তীতে ইমেলার ক্লাসটিতে একটি সেটার মেথড দিয়ে স্পেল চেকারটি ইনজেক্ট করা হয়েছে। অর্থাৎ আমরা কোন স্পেল ফিক্সারটি ব্যবহার করবো তা নির্ভর করছে ইমেলার ইনস্ট্যানসিয়েট করার পর।
+&lt;/div&gt;
+</code></pre>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<pre><code>    SpellFixer spellFixer = new EnglishSpellChecker();
+    emailer.setSpellFixer(spellFixer);
+    emailer.send(&quot;bla bla bla&quot;, &quot;contact@bazlur.com&quot;);
+    
+    BanglaSpellFixer banglaSpellFixer = new BanglaSpellFixer();
+    emailer.setSpellFixer(banglaSpellFixer);
+    emailer.send(&quot;আমি বাংলার গান গাই&quot;, &quot;contact@bazlur.com&quot;);
+</code></pre>
+<p><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<pre><code>&lt;div style=&quot;text-align: justify;&quot;&gt;
+   [spacer height=&amp;#8221;20px&amp;#8221;]
+&lt;/div&gt;
+
+&lt;div style=&quot;text-align: justify;&quot;&gt;
+  ১. স্পেল ফিক্সার একাধিক থাকলেও ইমেইলারে অবজেক্ট একই থাকছে।
+&lt;/div&gt;
+
+&lt;div&gt;
+&lt;/div&gt;
+
+&lt;div style=&quot;text-align: justify;&quot;&gt;
+  ২. এখানে কোনো কোড ডুপ্লিকেশন নেই।
+&lt;/div&gt;
+
+&lt;div&gt;
+&lt;/div&gt;
+
+&lt;div style=&quot;text-align: justify;&quot;&gt;
+  ৩. আমি যখন ইমেইলার টেস্ট করবো তখন যদি কোনো স্পেল চেকার না থাকে,তাহলে একটি মক (Mock) স্পেল চেকার দিয়ে আমার কাজ করে নিতে পারবো। এতে টেস্টিং প্রক্রিয়া অনেক সহজ হয়ে যায়।
+&lt;/div&gt;
+
+&lt;div&gt;
+&lt;/div&gt;
+
+&lt;div style=&quot;text-align: justify;&quot;&gt;
+  ৪. আলদা আলদাভাবে স্পেল চেকার ও ইমেলার তৈরি করা সম্ভব হয়ে যাচ্ছে।
+&lt;/div&gt;
+
+&lt;div style=&quot;text-align: justify;&quot;&gt;
+   [spacer height=&amp;#8221;20px&amp;#8221;]
+&lt;/div&gt;
+
+&lt;div style=&quot;text-align: justify;&quot;&gt;
+  নিচে একটি টেস্টকোড দেওয়া হলো &amp;#8211;
+&lt;/div&gt;
+</code></pre>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<pre><code>    String text = &quot;hello world&quot;;
+
+    when(spellFixer.fixSpelling(text))
+            .thenReturn(text);
+
+    Emailer emailer = new Emailer();
+    emailer.setSpellFixer(spellFixer);
+
+    emailer.send(text, &quot;contact@bazlur.com&quot;);
+}
+</code></pre>
+<p>}<!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<pre><code>&lt;div style=&quot;text-align: justify;&quot;&gt;
+  এখানে টেস্টিং ফ্রেমওয়ার্ক JUnit ও Mockito ব্যবহার করা হয়েছে। &lt;span style=&quot;color: #545454;&quot;&gt;&lt;span style=&quot;font-family: SolaimanLipi;&quot;&gt;&lt;span style=&quot;font-size: medium;&quot;&gt;&lt;span lang=&quot;hi-IN&quot;&gt;ওপরের &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;টেস্ট কোডটি যদিও কোনো অর্থপূর্ণ টেস্ট করে না, কিন্তু বোঝার জন্য দেওয়া হয়েছে। এখানে SpellFixer ইন্টারফেস ব্যবহার না করে বরং একে মক কর হয়েছে। অর্থাৎ এই পদ্ধতি ব্যবহার করলে যেকোনো ক্লাসকে স্বাধীনভাবে টেস্ট করা যায় এবং টেস্টেবল কোড লেখা যায়।
+&lt;/div&gt;
+
+&lt;div style=&quot;text-align: justify;&quot;&gt;
+   [spacer height=&amp;#8221;20px&amp;#8221;]
+&lt;/div&gt;
+
+&lt;div&gt;
+&lt;/div&gt;
+
+&lt;div style=&quot;text-align: justify;&quot;&gt;
+  ওপরের কোডটিতে সেটার ব্যবহার করে অবজেক্ট ইনজেক্ট করা হয়েছে। তবে যদি আমরা কোনো বিশেষ কন্টেইনার যেমন- Spring, Google Guice, picoContainer ইত্যাদি ব্যবহার করে প্রক্রিয়াটি আরও সহজ করে ফেলা যায়।
+&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;pre class=&quot;lang:java decode:true &quot;&gt;public class Emailer {
+
+@Autowired
+private SpellFixer spellFixer;
+
+public void send(String text, String emailAddress) {
+    String fixedText = spellFixer.fixSpelling(text);
+
+    System.out.println(&quot;sending email to: &quot; + emailAddress + &quot; with following text: &quot; + fixedText);
+}
+</code></pre>
+<p>}
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted --></p>
+<pre><code>&lt;div style=&quot;text-align: justify;&quot;&gt;
+  ওপরের কোডটিতে শুধু একটি অ্যানোটেশন ব্যবহার করা হয়েছে। এই ইমেইলার ব্যবহার করতে হলে SpellFixer এর ইমপ্লিমেন্টেশনের কোনো ইনস্ট্যান্স নিউ অপারেটর ব্যবহার করে তৈরি করার প্রয়োজন নেই। এখানে স্প্রিং কন্টেইনারের ইনস্ট্যান্স তৈরি করে ইনজেক্ট করে দেয় যখন প্রয়োজন হয়। এতে করে কোডটি আগের থেকে অনেক সংক্ষিপ্ত হয়।
+&lt;/div&gt;
+</code></pre>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+
+</main>
+
+  <footer>
+  
+<footer>
+  <div>
+    <p>
+    &copy; <a href="https://bazlur.com"> A N M Bazlur Rahman</a> 2012 -- 2020 | <a href="https://github.com/rokon12">Github</a>
+    | <a href=" https://twitter.com/bazlur_rahman"> @bazlur_rahman</a>
+    </p>
+  </div>
+</footer>
+  
+  </footer>
+  </body>
+</html>
+

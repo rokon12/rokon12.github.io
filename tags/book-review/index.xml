@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>book review on My Stream of Thoughts</title>
+    <link>http://bazlur.com/tags/book-review/</link>
+    <description>Recent content in book review on My Stream of Thoughts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 26 Feb 2018 14:11:38 +0000</lastBuildDate><atom:link href="http://bazlur.com/tags/book-review/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>জাভা থ্রেড প্রোগ্রামিংঃ রিভিউ-৪</title>
+      <link>http://bazlur.com/p228/</link>
+      <pubDate>Mon, 26 Feb 2018 14:11:38 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p228/</guid>
+      <description>জাভা থ্রেড প্রোগ্রামিং বইটি নিয়ে নিচের চমৎকার রিভিউটি লিখেছেন Ruhul Quddus Shakkhor   This is a great book, but this is not for everyone. If you’re new to Java, then it’s probably better to learn the basics first. However, if you’re an intermediate to the advanced learner, this book will give you a deeper understanding of Java threads. At this moment, I’m not aware of another Bangla book for any programming language that can give you a similar overview of threads.</description>
+    </item>
+    
+    <item>
+      <title>জাভা থ্রেড প্রোগ্রামিংঃ রিভিউ-১</title>
+      <link>http://bazlur.com/p215/</link>
+      <pubDate>Mon, 19 Feb 2018 20:53:04 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p215/</guid>
+      <description>জাভা থ্রেড প্রোগ্রামিং বইটি নিয়ে একটি চমৎকার রিভিউ লিখেছেন তামিম শাহরিয়ার সুবিনভাই। </description>
+    </item>
+    
+  </channel>
+</rss>

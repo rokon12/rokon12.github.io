@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>null pointer exception on My Stream of Thoughts</title>
+    <link>http://bazlur.com/tags/null-pointer-exception/</link>
+    <description>Recent content in null pointer exception on My Stream of Thoughts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 12 Mar 2018 22:01:13 +0000</lastBuildDate><atom:link href="http://bazlur.com/tags/null-pointer-exception/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Java তে Null Pointer Exception কী? কীভাবে একে Handle করা যায়?</title>
+      <link>http://bazlur.com/p243/</link>
+      <pubDate>Mon, 12 Mar 2018 22:01:13 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p243/</guid>
+      <description>কোনো ভেরিয়েবল যদি কোনো অবজেক্টের রেফারেন্স না রাখে,তাহলে সেই ভেরিয়েবল মূলত একটি নাল রেফারেন্স বা শূণ্য রেফারেন্স ধরে রাখে। সেই ভেরিয়েবল নিয়ে কোনো কাজ করতে চাই, তাহলে জাভা ভার্চুয়াল মেশিন এই এক্সেপশন থ্রো করে। বেশ কয়েকটি জায়গায় এই এক্সেপশন থ্রো হতে পারে। যেমন-
+১. একটি ক্লাসের অবজেক্ট তৈরি না করেই সেই ক্লাসের কোনো মেথড করলে। তবে সেই ক্লাসের স্ট্যাটিক মেথড কল করা হলে NullPointerException (NPE) থ্রো হবে না।
+২. কোনো ভেরিয়েবলের টাইপ যদি ক্লাস হয় এবং এটি যদি নাল(null) হয়, তাহলে সেই ভেরিয়েবলের কোনো ফ্লিল্ড পরিবর্তন না অ্যাকসেস করতে গেলে NPE থ্রো হবে।</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ইনমেমোরী ফাইল সিস্টেম (In memory file system in java) | My Stream of Thoughts</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/about-me/">About me</a></li>
+      
+      <li><a href="/books/">Books</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">ইনমেমোরী ফাইল সিস্টেম (In memory file system in java)</span></h1>
+<h2 class="author">bazlur_rahman</h2>
+<h2 class="date">2017/04/07</h2>
+</div>
+
+<main>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<pre><code>public Node(String name) {
+    this.name = name;
+    this.created = LocalDateTime.now();
+    this.lastUpdated = LocalDateTime.now();
+    this.lastAccessed = LocalDateTime.now();
+}
+
+public boolean isDirectory() {
+    return this instanceof Directory;
+}
+
+public String getPath() {
+    return root != null ? root.getPath() + &quot;/&quot; + name : name;
+}
+
+public Node getParent() {
+    return root;
+}
+
+public abstract long getLength();
+
+public String getName() {
+    return name;
+}
+
+@Override
+public int compareTo(Node o) {
+    return this.getName().compareTo(o.getName());
+}
+
+public void setRoot(Directory root) {
+    this.root = root;
+}
+
+public LocalDateTime getCreated() {
+    return created;
+}
+
+public LocalDateTime getLastUpdated() {
+    return lastUpdated;
+}
+
+public LocalDateTime getLastAccessed() {
+    return lastAccessed;
+}
+
+@Override
+public String toString() {
+    return &quot;root=&quot; + root +
+            &quot;, nname='&quot; + name + ''' +
+            &quot;, ncreated=&quot; + created +
+            &quot;, nlastUpdated=&quot; + lastUpdated +
+            &quot;, nlastAccessed=&quot; + lastAccessed;
+}
+</code></pre>
+<p>}<!-- raw HTML omitted --></p>
+<pre><code>&lt;p&gt;
+  এখানে কম্পেয়ারেবল ইন্টারফেইস ইমপ্লিমেন্ট করার কারণ হলো, যাতে আমরা সর্ট করতে পারি।
+&lt;/p&gt;
+</code></pre>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+
+</main>
+
+  <footer>
+  
+<footer>
+  <div>
+    <p>
+    &copy; <a href="https://bazlur.com"> A N M Bazlur Rahman</a> 2012 -- 2020 | <a href="https://github.com/rokon12">Github</a>
+    | <a href=" https://twitter.com/bazlur_rahman"> @bazlur_rahman</a>
+    </p>
+  </div>
+</footer>
+  
+  </footer>
+  </body>
+</html>
+

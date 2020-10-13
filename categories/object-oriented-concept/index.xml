@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>object oriented concept on My Stream of Thoughts</title>
+    <link>http://bazlur.com/categories/object-oriented-concept/</link>
+    <description>Recent content in object oriented concept on My Stream of Thoughts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 07 Apr 2017 20:36:00 +0000</lastBuildDate><atom:link href="http://bazlur.com/categories/object-oriented-concept/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ইনমেমোরী ফাইল সিস্টেম (In memory file system in java)</title>
+      <link>http://bazlur.com/p16/</link>
+      <pubDate>Fri, 07 Apr 2017 20:36:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p16/</guid>
+      <description>public Node(String name) { this.name = name; this.created = LocalDateTime.now(); this.lastUpdated = LocalDateTime.now(); this.lastAccessed = LocalDateTime.now(); } public boolean isDirectory() { return this instanceof Directory; } public String getPath() { return root != null ? root.getPath() + &amp;quot;/&amp;quot; + name : name; } public Node getParent() { return root; } public abstract long getLength(); public String getName() { return name; } @Override public int compareTo(Node o) { return this.getName().compareTo(o.getName()); } public void setRoot(Directory root) { this.</description>
+    </item>
+    
+    <item>
+      <title>অ্যবস্ট্রাক্ট ক্লাসের প্রয়োজনীয়তা (why we need abstract class )</title>
+      <link>http://bazlur.com/p32/</link>
+      <pubDate>Wed, 15 Feb 2017 09:29:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p32/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

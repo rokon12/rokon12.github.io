@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>how java performs better on My Stream of Thoughts</title>
+    <link>http://bazlur.com/tags/how-java-performs-better/</link>
+    <description>Recent content in how java performs better on My Stream of Thoughts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 22 Sep 2014 17:09:00 +0000</lastBuildDate><atom:link href="http://bazlur.com/tags/how-java-performs-better/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>জাভা কীভাবে কাজ করে এবং কীভাবে ভাল পারফর্ম করে</title>
+      <link>http://bazlur.com/p63/</link>
+      <pubDate>Mon, 22 Sep 2014 17:09:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p63/</guid>
+      <description>জাভা কোড প্রথমে বাইটকোডে কম্পাইলড হয়, তারপর সেটিকে জাভা ভার্চুয়াল মেশিন এক্সিকিউট করে। বাইটকোড হচ্ছে এক ধরনের ইন্টারমিডিয়েড ল্যাংগুয়েজ যা কিনা ঠিক মানুষের পাঠ উপযোগী নয়, আবার মেশিনের জন্য ও নয়। এটি শুধুমাত্র জাভা ভার্চুয়াল মেশিন (JVM)পড়তে পারে। বাইটকোডকে এক্সিকিউট করার জন্য জাভা ভার্চুয়াল মেশিন জাস্ট ইন টাইম (JIT) কম্পাইলার ব্যবহার হরে। JIT বাইটকোড কে সরাসরি ইন্টারপ্রেট করে। এটি রানটাইম-এ বাইটকোড কে ইন্টারপ্রেট করে মেশিন কোড-এ রূপান্তরিত করে যা কিনা সিপিইউ রান করে। এখানে একটি ইন্টারেস্টিং প্রশ্ন হতে পারে, জাভা কি তাহলে ইন্টারেপ্রেটেট ল্যাংগুয়েজ নাকি কম্পাইল্ড ল্যাংগুয়েজ?</description>
+    </item>
+    
+  </channel>
+</rss>

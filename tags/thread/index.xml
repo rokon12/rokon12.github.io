@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>thread on My Stream of Thoughts</title>
+    <link>http://bazlur.com/tags/thread/</link>
+    <description>Recent content in thread on My Stream of Thoughts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 07 Mar 2018 14:24:28 +0000</lastBuildDate><atom:link href="http://bazlur.com/tags/thread/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>জাভা থ্রেড প্রোগ্রামিংঃ ডেটা রেইস (Java Thread Programming: Data Race)</title>
+      <link>http://bazlur.com/p233/</link>
+      <pubDate>Wed, 07 Mar 2018 14:24:28 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p233/</guid>
+      <description>আমরা যখনি একাধিক থ্রেডের জন্য কোড লিখব তখনি আমাদের চিন্তা করতে হবে যে, এই কোডটি থ্রেড সেফ কি না। থ্রেইড সেইফের সহজ সংজ্ঞা আমরা জানি। এর অর্থ হলো, কোড সঠিকভাবে কাজ করবে। আমরা যখন একটি প্রোগ্রাম লিখি, সেই ক্লাসের একটি স্পেসিফিকেশন থাকে। আমরা সাধারণত প্রোগ্রাম লেখার সময় এর ফরমাল কোনো স্পেসিফিকেশন লিখি না, তবে এই ক্লাসের উদ্দেশ্য সম্পর্কে আমাদের ধারণা থাকে। প্রোগ্রামটিকে রান করা হলে এর ফলাফল সম্পর্কে আমাদের একটি পরিষ্কার ধারণা থাকে। এই প্রোগ্রামটি হয়তো একটি থ্রেড দিয়ে রান করলে যে ফলাফল দেয় সেই সম্পর্কে আমাদের আস্থা থাকে। একই প্রোগ্রামটি যদি একাধিক থ্রেডে রান করা হয়, তাহলে যদি আগের মতো একই রকম আস্থা আমাদের থাকে, তাহলে সেই প্রোগ্রামটিকে আমরা থ্রেড সেফ বলতে পারি।</description>
+    </item>
+    
+    <item>
+      <title>জাভা থ্রেড প্রোগ্রামিংঃ রিভিউ-৪</title>
+      <link>http://bazlur.com/p228/</link>
+      <pubDate>Mon, 26 Feb 2018 14:11:38 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p228/</guid>
+      <description>জাভা থ্রেড প্রোগ্রামিং বইটি নিয়ে নিচের চমৎকার রিভিউটি লিখেছেন Ruhul Quddus Shakkhor   This is a great book, but this is not for everyone. If you’re new to Java, then it’s probably better to learn the basics first. However, if you’re an intermediate to the advanced learner, this book will give you a deeper understanding of Java threads. At this moment, I’m not aware of another Bangla book for any programming language that can give you a similar overview of threads.</description>
+    </item>
+    
+    <item>
+      <title>জাভা থ্রেড প্রোগ্রামিংঃ রিভিউ-১</title>
+      <link>http://bazlur.com/p215/</link>
+      <pubDate>Mon, 19 Feb 2018 20:53:04 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p215/</guid>
+      <description>জাভা থ্রেড প্রোগ্রামিং বইটি নিয়ে একটি চমৎকার রিভিউ লিখেছেন তামিম শাহরিয়ার সুবিনভাই। </description>
+    </item>
+    
+    <item>
+      <title>ডিমন থ্রেড কী(What is daemon thread in java)?</title>
+      <link>http://bazlur.com/p107/</link>
+      <pubDate>Sun, 28 Jan 2018 22:10:54 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p107/</guid>
+      <description>জাভা ভাচুয়াল মেশিন চালু হওয়ার পর কতগুলাে থ্রেড তৈরি হয়। এর মধ্যে মেইন থ্রেড আমাদের কোডগুলো এক্সিকিউট করে। মেইন থ্রেড থেকে আমরা আরও একাধিক থ্রেড তৈরি করতে পারি। যতক্ষণ পর্যন্ত এই থ্রেডগুলো চলতে থাকে, ততক্ষন পর্যন্ত জাভা ভার্চুয়াল মেশিন চলতে থাকে।
+তবে অনেক সময় কোনো প্রোগ্রামের একটি প্রধান থ্রেডের সঙ্গে আরও কতগুলো থ্রেড তৈরি করতে হয়, যেগুলো বিভিন্ন সহায়ক কাজ করতে থাকে, কিন্তু প্রধান থ্রেডটি বন্ধ হয়ে গেলে এই সহায়ক থ্রেডগুলো প্রয়োজন নেই। এই সহায়ক থ্রেডগুলোকে ডিমন থ্রেড হিসেবে তৈরি করা যায়।</description>
+    </item>
+    
+    <item>
+      <title>জাভা মেইন থ্রেড (Java Main Thread)</title>
+      <link>http://bazlur.com/p17/</link>
+      <pubDate>Sat, 25 Mar 2017 02:13:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p17/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

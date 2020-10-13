@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>java programming on My Stream of Thoughts</title>
+    <link>http://bazlur.com/categories/java-programming/</link>
+    <description>Recent content in java programming on My Stream of Thoughts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 21 Jun 2018 05:11:48 +0000</lastBuildDate><atom:link href="http://bazlur.com/categories/java-programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ওয়ার্ল্ডকাপের ফাঁকে একটি অত্যন্ত জ্ঞানগর্ভ মূলক দামী পোস্ট </title>
+      <link>http://bazlur.com/p326/</link>
+      <pubDate>Thu, 21 Jun 2018 05:11:48 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p326/</guid>
+      <description>একজন প্রোগ্রামার লাইফ যত সহজ একজন পদার্থবিজ্ঞানীর লাইফ তত সহজ নয়। প্রোগ্রামার কোনাে কিছু চিন্তা করলেই তা সঙ্গে সঙ্গে পরীক্ষা করে দেখতে পারে। এক্সপেরিমেন্টের যোগার-যন্ত্র ব্যবস্থা করা খুব সহজ। সবার পকেটেই একটা করে থাকে।
+চিন্তা করে দেখেন, পদার্থবিজ্ঞানীদের একটি তত্ত্ব প্রমাণ করতে কত সময়, অর্থ লাগে ?
+গ্রাভিটেশনাল ওয়েবের কথাই চিন্তা করেন, ১৯১৬ সালে আইনস্টাইন এ নিয়ে চিন্তা করেছিলেন। কিন্তু তাঁর কাছে কোনো টুলস ছিল না এটা প্রমাণ করা। এটি প্রমাণ করতে গ্রাভিটেশনাল-ওয়েব ফেসিলিটি লাইগো তৈরি করতে লেগে গেছে ৬২০ মিলিয়ন ডলার এবং সময় লেগে গেল প্রায় ১০০ বছর।</description>
+    </item>
+    
+    <item>
+      <title>জাভাতে সিরিয়ালাইজেশন কী (What is serialization in java)?</title>
+      <link>http://bazlur.com/p257/</link>
+      <pubDate>Mon, 12 Mar 2018 22:36:41 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p257/</guid>
+      <description>আমরা জানি যে ক্লাস থেকে অবজেক্ট তৈরি করা হয়। ক্লাসে মূলত একটি অবজেক্টে কী কী প্রোপ্রার্টিজ থাকবে এবং এটি কী কী কাজ করতে পারবে তার বর্ণনা থাকে। কিন্তু যখন নিউ(new) অপারেটর ব্যবহার করে একে অবজেক্ট তৈরি করা হয়, তখন এটি একটি জীবন্ত প্রাণির মতো অবজেক্টে পরিণত হয়। একটি জীবন্ত প্রাণির যেমন অনেকগুলো নিজস্ব ও অনন্য (unique) বৈশিষ্ট্য থাকে (যেমন- নাম, বয়স, ডিএনএ সিকুয়েন্স ইত্যাদি), তেমনি একটি অবজেক্টের একইরকম অনন্য পরিচয় (unique identity) থাকে। প্রত্যেকটি অবজেক্ট কিছু না কিছু স্টেট(state) বা ডেটা থাকে। প্রত্যেকটি অবজেক্টের একটি জীবন চক্র থাকে (life cycle)। এটি নিউ অপারেটর দিয়ে শুরু হয় এবং গারবেজ কালেক্টর(garbage collector) দিয়ে শেষ হয়। এই শুরু এবং শেষ হওয়ার মধ্যবর্তী অবজেক্টের কোনো অবস্থাকে বাইনারী ফরমেটে স্টোর করা যায় এবং সেই একই অবস্থা থেকে পুনর্গঠিত করা যায়।</description>
+    </item>
+    
+    <item>
+      <title>জাভাতে অবজেক্ট ক্লোনিং কী(What is object cloning in java)?</title>
+      <link>http://bazlur.com/p253/</link>
+      <pubDate>Mon, 12 Mar 2018 22:32:37 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p253/</guid>
+      <description>ক্লােন শব্দের অর্থ হুবহু কপি করা। অবজেক্ট ক্লাোনিংয়ের অর্থ একই রকম আরেকটি অবজেক্ট তৈরি করা।
+আমরা জানি যে ক্লাস থেকে অবজেক্ট তৈরি করা হয়। একটি ক্লাস থেকে একাধিক অবজেক্ট তৈরি করা যায়। প্রত্যেকটি অবেজেক্টের আলাদা আলদা স্টেট থাকে। অর্থাৎ অবজেক্টগুলো সম্পূর্ণ ভিন্ন হয়। তবে কখনো কখনো একটি অবজেক্টের স্টেটগুলো নিয়ে আরেকটি সম্পূর্ণ একইরকম অবজেক্ট তৈরি করার প্রয়োজন হয়। একইরকম অবজেক্ট তৈরির এই প্রক্রিয়াকে অবজেক্ট ক্লোনিং বলা হয়।
+উদাহরণসরূপ নিজের উদাহরণটি দেখা যাক –</description>
+    </item>
+    
+    <item>
+      <title>Java তে Null Pointer Exception কী? কীভাবে একে Handle করা যায়?</title>
+      <link>http://bazlur.com/p243/</link>
+      <pubDate>Mon, 12 Mar 2018 22:01:13 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p243/</guid>
+      <description>কোনো ভেরিয়েবল যদি কোনো অবজেক্টের রেফারেন্স না রাখে,তাহলে সেই ভেরিয়েবল মূলত একটি নাল রেফারেন্স বা শূণ্য রেফারেন্স ধরে রাখে। সেই ভেরিয়েবল নিয়ে কোনো কাজ করতে চাই, তাহলে জাভা ভার্চুয়াল মেশিন এই এক্সেপশন থ্রো করে। বেশ কয়েকটি জায়গায় এই এক্সেপশন থ্রো হতে পারে। যেমন-
+১. একটি ক্লাসের অবজেক্ট তৈরি না করেই সেই ক্লাসের কোনো মেথড করলে। তবে সেই ক্লাসের স্ট্যাটিক মেথড কল করা হলে NullPointerException (NPE) থ্রো হবে না।
+২. কোনো ভেরিয়েবলের টাইপ যদি ক্লাস হয় এবং এটি যদি নাল(null) হয়, তাহলে সেই ভেরিয়েবলের কোনো ফ্লিল্ড পরিবর্তন না অ্যাকসেস করতে গেলে NPE থ্রো হবে।</description>
+    </item>
+    
+    <item>
+      <title>কীভাবে মার্শাল আর্টের ধারণা আপনাকে জাভাতে মাস্টার হতে সাহায্য করে? (How martial art helps you to master Java)</title>
+      <link>http://bazlur.com/p767/</link>
+      <pubDate>Thu, 03 Aug 2017 14:27:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p767/</guid>
+      <description>Shu, Ha, Ri এই শব্দ তিনটি এসেছে জাপানি মার্শাল আর্টসের কনসেপ্ট থেকে। এটি সাধারণত কোনো কিছু শেখার ক্ষেত্রে ব্যবহার করা হয়। শব্দ তিনটির অর্থ করলে দাঁড়ায় –
+১. shu (守) “protect”, “obey” বা মান্য করা
+২. ha (破) “detach”, “digress”, “break” ভাঙ্গা বা বিচ্ছিন্ন করা
+৩. ri (離) “leave”, “separate” আলাদা হওয়া
+জাভা প্রোগ্রামিং শেখার ক্ষেত্রে এই তিনটি ধারণা ব্যবহার করা যেতে পারে। কীভাবে তা নিয়েই এই আলোচনা-
+প্রথমেই সু, অর্থাৎ এখানে প্রত্যেক শিক্ষানবিসদের যে কোনো একটি বই নিয়ে পড়তে শুরু করা উচিৎ(প্রথম পৃষ্টা থেকে একদম শেষ পৃষ্ঠা পর্যন্ত )। বইয়ে যে অনুশীলনীগুলো রয়েছে সেগুলো ভালোভাবে করা। অনেক ক্ষেত্রে বুঝতে অসুবিধা হতে পারে। না বুঝলেও সমস্যা নেই, তবুও বেশি বেশি করে আয়ত্বের মধ্যে নিয়ে আসা। যেমন- জাভাতে কোনো একটি প্রোগ্রাম রান করতে হলে মেইন মেথড লিখতে হয়। মেইন মেথড কেনো লিখতে হয়, এই ব্যাপারটি এখনই না বুঝলে সমস্যা নেই, বরং –</description>
+    </item>
+    
+    <item>
+      <title>জাভাতে কীভাবে ক্লাস লোড করা হয়</title>
+      <link>http://bazlur.com/p13/</link>
+      <pubDate>Sun, 04 Jun 2017 23:29:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p13/</guid>
+      <description> </description>
+    </item>
+    
+    <item>
+      <title>ল্যামডা এক্সপ্রেশনঃ পর্ব এক (Lambda Expression: Part 1)</title>
+      <link>http://bazlur.com/p15/</link>
+      <pubDate>Fri, 14 Apr 2017 22:59:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p15/</guid>
+      <description> for (Contact contact : contactList) { if (contact.getAge() &amp;amp;gt;= 18 &amp;amp;&amp;amp; contact.getAge() &amp;amp;lt;= 25 &amp;amp;&amp;amp; contact.getSex() == Contact.Sex.MALE) { contacts.add(contact); } } return contacts; }&amp;lt;/pre&amp;gt;   return contact.getAge() &amp;amp;gt;= 18 &amp;amp;&amp;amp; contact.getAge() &amp;amp;lt;= 25 &amp;amp;&amp;amp; contact.getSex() == Contact.Sex.FEMALE; } });&amp;lt;/pre&amp;gt;  &amp;lt;tr&amp;gt; &amp;lt;td style=&amp;quot;text-align: center;&amp;quot;&amp;gt; চিত্র: প্রয়োজনীয় কোড লজিক &amp;lt;/td&amp;gt; &amp;lt;/tr&amp;gt;   return contact.getAge() &amp;amp;gt;= 18 &amp;amp;&amp;amp; contact.getAge() &amp;amp;lt;= 25 &amp;amp;&amp;amp; contact.getSex() == Contact.Sex.FEMALE; });&amp;lt;/pre&amp;gt; &amp;lt;p&amp;gt; উপরের কোডটুকু লক্ষ্য করুন, এতে শুধুমাত্র প্রয়োজনীয় কোডটুকু রয়েছে। তাহলে আমাদের প্রথম ল্যাম্বডা এক্সপ্রেশন লেখা হয়ে গেলো। &amp;lt;/p&amp;gt;  </description>
+    </item>
+    
+    <item>
+      <title>জাভাতে কালেকশন ফ্রেমওয়ার্ক কী এবং এর প্রয়োজনীয়তা কী?</title>
+      <link>http://bazlur.com/p23/</link>
+      <pubDate>Tue, 07 Mar 2017 13:21:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p23/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>জাভাতে Declare type এবং Actual type কী?</title>
+      <link>http://bazlur.com/p24/</link>
+      <pubDate>Tue, 07 Mar 2017 13:18:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p24/</guid>
+      <description>&amp;lt;div style=&amp;quot;text-align: justify;&amp;quot;&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div style=&amp;quot;text-align: justify;&amp;quot;&amp;gt; এখানে animal একটি ভেরিয়েবল। যার টাইপ হচ্ছে Animal। এখন new কিওযার্ড ব্যবহার করে এতে একটি অবজেক্ট তৈরি করে এই ভেরিয়েবলে অ্যাসাইন করতে পারি। &amp;lt;/div&amp;gt;  &amp;lt;div style=&amp;quot;text-align: justify;&amp;quot;&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div style=&amp;quot;text-align: justify;&amp;quot;&amp;gt; এখানে animal ভেরিয়েবলটি একটি Animal এর একটি অবজেক্টের একটি রেফারেন্স ধরে রাখে। এক্ষেত্রে এই অবজেক্টের টাইপও এখানে Animal। &amp;lt;/div&amp;gt; &amp;lt;div style=&amp;quot;text-align: justify;&amp;quot;&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div style=&amp;quot;text-align: justify;&amp;quot;&amp;gt; সাধারণভাবে ভেরিয়েবল টাইপ এবং অবজেক্ট টাইপ একই হলেও কখনো কখনো ভিন্ন হতে পারে। ধরা যাক, এই Animal ক্লাসকে এক্সটেন্ড করে আরেকটি ক্লাস তৈরি করা হলো, Dog.</description>
+    </item>
+    
+    <item>
+      <title>প্রোগ্রামিং আড্ডা: জাভা প্রোগ্রামিং ও অ্যান্ড্রয়েড: দশটি প্রশ্নের উত্তর</title>
+      <link>http://bazlur.com/p27/</link>
+      <pubDate>Tue, 21 Feb 2017 20:59:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p27/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>এনাম (Enum)</title>
+      <link>http://bazlur.com/p33/</link>
+      <pubDate>Sun, 12 Feb 2017 18:40:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p33/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>কেনো জাভা শেখা উচিত ?</title>
+      <link>http://bazlur.com/p41/</link>
+      <pubDate>Fri, 27 Jan 2017 16:20:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p41/</guid>
+      <description>&amp;lt;p&amp;gt; &amp;lt;b&amp;gt;&amp;lt;u&amp;gt;পাদটীকা&amp;lt;/u&amp;gt;&amp;lt;/b&amp;gt; &amp;lt;/p&amp;gt;  </description>
+    </item>
+    
+    <item>
+      <title>জাভা প্রোগ্রামিং ল্যাংগুয়েজ তৈরির পেছনের গল্প</title>
+      <link>http://bazlur.com/p43/</link>
+      <pubDate>Wed, 25 Jan 2017 15:25:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p43/</guid>
+      <description>&amp;lt;p&amp;gt; সে সময় জাভাতে কাজ করে এমন লোকের সংখ্যা ত্রিশেরও কম। তারা কখনোই চিন্তা করেনি তাদের এই টিম ভবিষ্যৎ পৃথিবীর প্রধানতম টেকনোলজি নির্ধারণ করতে যাচ্ছে। ২০০৪ সালের ৩ জানুয়ারি মার্স এক্সপ্লোরেশন রোভার (Mars Exploration Rover)2 মঙ্গল গ্রহের মাটিতে পা রাখে যার কন্ট্রোল সিস্টেম থেকে শুরু করে পৃথিবীর অধিকাংশ কনজুমার ইলেকট্রনিক্স, যেমন– কেবল সেট-টপ বক্স (STB), ভিসিআর (VCR), টোস্টার (Toaster), পিডিএ (PDA), স্মার্টফোনসহ প্রায় ১৫ বিলিয়ন ডিভাইস3, ১০০% ব্লু-রে ডিস্ক প্লেয়ার জাভা রান করে। &amp;lt;/p&amp;gt; &amp;lt;p&amp;gt; চলুন একটু পেছনের ইতিহাস জেনে নেই। &amp;lt;/p&amp;gt; &amp;lt;p&amp;gt; তখন সি++ (C++) এর একচ্ছত্রাধিপত্য। &amp;lt;/p&amp;gt; &amp;lt;p&amp;gt; সান মাইক্রোসিস্টেমস (Sun Microsystems, Inc.</description>
+    </item>
+    
+    <item>
+      <title>জাভা ইন্টারফেস এর ক্ষেত্রে multiple inheritance সাপোর্ট করলেও ক্লাসের ক্ষেত্রে কেনো করে না ?</title>
+      <link>http://bazlur.com/p49/</link>
+      <pubDate>Wed, 02 Nov 2016 18:09:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p49/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>learning on My Stream of Thoughts</title>
+    <link>http://bazlur.com/categories/learning/</link>
+    <description>Recent content in learning on My Stream of Thoughts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 03 Aug 2017 14:27:00 +0000</lastBuildDate><atom:link href="http://bazlur.com/categories/learning/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>কীভাবে মার্শাল আর্টের ধারণা আপনাকে জাভাতে মাস্টার হতে সাহায্য করে? (How martial art helps you to master Java)</title>
+      <link>http://bazlur.com/p767/</link>
+      <pubDate>Thu, 03 Aug 2017 14:27:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p767/</guid>
+      <description>Shu, Ha, Ri এই শব্দ তিনটি এসেছে জাপানি মার্শাল আর্টসের কনসেপ্ট থেকে। এটি সাধারণত কোনো কিছু শেখার ক্ষেত্রে ব্যবহার করা হয়। শব্দ তিনটির অর্থ করলে দাঁড়ায় –
+১. shu (守) “protect”, “obey” বা মান্য করা
+২. ha (破) “detach”, “digress”, “break” ভাঙ্গা বা বিচ্ছিন্ন করা
+৩. ri (離) “leave”, “separate” আলাদা হওয়া
+জাভা প্রোগ্রামিং শেখার ক্ষেত্রে এই তিনটি ধারণা ব্যবহার করা যেতে পারে। কীভাবে তা নিয়েই এই আলোচনা-
+প্রথমেই সু, অর্থাৎ এখানে প্রত্যেক শিক্ষানবিসদের যে কোনো একটি বই নিয়ে পড়তে শুরু করা উচিৎ(প্রথম পৃষ্টা থেকে একদম শেষ পৃষ্ঠা পর্যন্ত )। বইয়ে যে অনুশীলনীগুলো রয়েছে সেগুলো ভালোভাবে করা। অনেক ক্ষেত্রে বুঝতে অসুবিধা হতে পারে। না বুঝলেও সমস্যা নেই, তবুও বেশি বেশি করে আয়ত্বের মধ্যে নিয়ে আসা। যেমন- জাভাতে কোনো একটি প্রোগ্রাম রান করতে হলে মেইন মেথড লিখতে হয়। মেইন মেথড কেনো লিখতে হয়, এই ব্যাপারটি এখনই না বুঝলে সমস্যা নেই, বরং –</description>
+    </item>
+    
+    <item>
+      <title>Types of Learners – the dabblers, the hacker, and the master</title>
+      <link>http://bazlur.com/p36/</link>
+      <pubDate>Mon, 06 Feb 2017 10:21:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p36/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

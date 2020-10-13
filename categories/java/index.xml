@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Java on My Stream of Thoughts</title>
+    <link>http://bazlur.com/categories/java/</link>
+    <description>Recent content in Java on My Stream of Thoughts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 06 Mar 2020 00:19:33 +0000</lastBuildDate><atom:link href="http://bazlur.com/categories/java/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>জাভা ওয়েব প্রোগ্রামিং</title>
+      <link>http://bazlur.com/p782/</link>
+      <pubDate>Fri, 06 Mar 2020 00:19:33 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p782/</guid>
+      <description>ভূমিকা প্রায় ১৪ বছর আগে যখন বিশ্ববিদ্যালয়ে প্রোগ্রামিংয়ের সঙ্গে যুক্ত হয়েছিলাম, তখন থেকেই লক্ষ করেছি জাভা সবচেয়ে জনপ্রিয় এবং বহুল ব্যবহৃত প্রোগ্রামিং ভাষা। তখন সফটওয়্যার অ্যাপ্লিকেশন বলতে শুধু ডেস্কটপ অ্যাপ্লিকেশনই বুঝতাম।কিন্তু একটি বিষয় মাথায় ঢুকত না যে নিত্যদিনের ব্যবহার করা বেশিরভাগ ডেস্কটপ অ্যাপ্লিকেশন জাভায় ডেভেলপ করা না হলেও জাভা কীভাবে এত জনপ্রিয় হয়? এমন তো নয় যে, এটিই একমাত্র ওপেনসোর্স ও পুরনো ভাষা। জাভার কাছাকাছি জনপ্রিয় অন্যান্য ভাষা, যেমন : পাইথন, রুবি, পিএইচপি – এগুলো জাভার আগে বা কাছাকাছি সময়েই রিলিজ হয়েছে। তাহলে জাভা কেন বা কীভাবে এতো বহুল ব্যবহৃত এবং জনপ্রিয় হলো?</description>
+    </item>
+    
+    <item>
+      <title>অ্যাডভান্সড জাভা প্রোগ্রামিং</title>
+      <link>http://bazlur.com/p400/</link>
+      <pubDate>Fri, 01 Mar 2019 18:15:46 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p400/</guid>
+      <description>প্রাপ্তিস্থান অনলাইন এবং ফেসবুকে সারাদেশে হোম ডেলিভারি
+**দ্বিমিক প্রকাশনী, **ফোন: ০১৭০৭ ৯৬ ০৩ ৭২ (যোগাযোগ ও বিকাশ)
+রকমারি ডট কম, ফোন: ১৬২৯৭
+দারাজ ডট কম ডট বিডি, ফোন: ১৬৪৯২
+ঢাকা
+হক লাইব্রেরী, নীলক্ষেত, ঢাকা, ফোন: ০১৮২০-১৫৭১৮১
+মানিক লাইব্রেরী, নীলক্ষেত, ঢাকা, ফোন: ০১৭৩৫-৭৪২৯০৮
+রানা বুক পাবলিশার্স, নীলক্ষেত, ঢাকা, ফোন: ০১৬২৩-০৫৮৪২৮
+বাতিঘর ঢাকা, বিশ্বসাহিত্যকেন্দ্র, বাংলামটর।
+চট্টগ্রাম
+বাতিঘর, প্রেস ক্লাব ভবন, জামালখান রোড, চট্টগ্রাম।
+বরিশাল
+বুক ভিলা, বিবিরপুকুর পাড়।
+রাজশাহী
+বুক পয়েন্ট, সোনাদীঘির মোড়, রাজশাহী।</description>
+    </item>
+    
+    <item>
+      <title>ওয়ার্ল্ডকাপের ফাঁকে একটি অত্যন্ত জ্ঞানগর্ভ মূলক দামী পোস্ট </title>
+      <link>http://bazlur.com/p326/</link>
+      <pubDate>Thu, 21 Jun 2018 05:11:48 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p326/</guid>
+      <description>একজন প্রোগ্রামার লাইফ যত সহজ একজন পদার্থবিজ্ঞানীর লাইফ তত সহজ নয়। প্রোগ্রামার কোনাে কিছু চিন্তা করলেই তা সঙ্গে সঙ্গে পরীক্ষা করে দেখতে পারে। এক্সপেরিমেন্টের যোগার-যন্ত্র ব্যবস্থা করা খুব সহজ। সবার পকেটেই একটা করে থাকে।
+চিন্তা করে দেখেন, পদার্থবিজ্ঞানীদের একটি তত্ত্ব প্রমাণ করতে কত সময়, অর্থ লাগে ?
+গ্রাভিটেশনাল ওয়েবের কথাই চিন্তা করেন, ১৯১৬ সালে আইনস্টাইন এ নিয়ে চিন্তা করেছিলেন। কিন্তু তাঁর কাছে কোনো টুলস ছিল না এটা প্রমাণ করা। এটি প্রমাণ করতে গ্রাভিটেশনাল-ওয়েব ফেসিলিটি লাইগো তৈরি করতে লেগে গেছে ৬২০ মিলিয়ন ডলার এবং সময় লেগে গেল প্রায় ১০০ বছর।</description>
+    </item>
+    
+    <item>
+      <title>জাভা সুইয়িং ব্যবহার করে একটি ক্যালকুলেটর</title>
+      <link>http://bazlur.com/p275/</link>
+      <pubDate>Sat, 17 Mar 2018 22:05:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p275/</guid>
+      <description>একদম শুরুতে যখন আমার জাভা প্রোগ্রামিংয়ের হাতে খড়ি বলা যায়, তখন জাভার সুইয়িং ব্যবহার করে একটি ক্যালকুলেটর তৈরি করেছিলাম।
+এটি একটি ফোরামে দিয়েছিলাম। সেখানে অনেকেই পছন্দ করেছিল। হঠাৎ করেই পেয়ে গেলাম প্রায় ৮ বছর আগের একটি কোড।
+আজকের এই পোস্টে এই কোডটি শেয়ার করছি।
+  ওপরের কোডগুলো কপি করে রান করুন। তাহলে পেয়ে যাবেন একটি সিম্পল ক্যালকুলেটর।</description>
+    </item>
+    
+    <item>
+      <title>জাভাতে সিরিয়ালাইজেশন কী (What is serialization in java)?</title>
+      <link>http://bazlur.com/p257/</link>
+      <pubDate>Mon, 12 Mar 2018 22:36:41 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p257/</guid>
+      <description>আমরা জানি যে ক্লাস থেকে অবজেক্ট তৈরি করা হয়। ক্লাসে মূলত একটি অবজেক্টে কী কী প্রোপ্রার্টিজ থাকবে এবং এটি কী কী কাজ করতে পারবে তার বর্ণনা থাকে। কিন্তু যখন নিউ(new) অপারেটর ব্যবহার করে একে অবজেক্ট তৈরি করা হয়, তখন এটি একটি জীবন্ত প্রাণির মতো অবজেক্টে পরিণত হয়। একটি জীবন্ত প্রাণির যেমন অনেকগুলো নিজস্ব ও অনন্য (unique) বৈশিষ্ট্য থাকে (যেমন- নাম, বয়স, ডিএনএ সিকুয়েন্স ইত্যাদি), তেমনি একটি অবজেক্টের একইরকম অনন্য পরিচয় (unique identity) থাকে। প্রত্যেকটি অবজেক্ট কিছু না কিছু স্টেট(state) বা ডেটা থাকে। প্রত্যেকটি অবজেক্টের একটি জীবন চক্র থাকে (life cycle)। এটি নিউ অপারেটর দিয়ে শুরু হয় এবং গারবেজ কালেক্টর(garbage collector) দিয়ে শেষ হয়। এই শুরু এবং শেষ হওয়ার মধ্যবর্তী অবজেক্টের কোনো অবস্থাকে বাইনারী ফরমেটে স্টোর করা যায় এবং সেই একই অবস্থা থেকে পুনর্গঠিত করা যায়।</description>
+    </item>
+    
+    <item>
+      <title>জাভাতে অবজেক্ট ক্লোনিং কী(What is object cloning in java)?</title>
+      <link>http://bazlur.com/p253/</link>
+      <pubDate>Mon, 12 Mar 2018 22:32:37 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p253/</guid>
+      <description>ক্লােন শব্দের অর্থ হুবহু কপি করা। অবজেক্ট ক্লাোনিংয়ের অর্থ একই রকম আরেকটি অবজেক্ট তৈরি করা।
+আমরা জানি যে ক্লাস থেকে অবজেক্ট তৈরি করা হয়। একটি ক্লাস থেকে একাধিক অবজেক্ট তৈরি করা যায়। প্রত্যেকটি অবেজেক্টের আলাদা আলদা স্টেট থাকে। অর্থাৎ অবজেক্টগুলো সম্পূর্ণ ভিন্ন হয়। তবে কখনো কখনো একটি অবজেক্টের স্টেটগুলো নিয়ে আরেকটি সম্পূর্ণ একইরকম অবজেক্ট তৈরি করার প্রয়োজন হয়। একইরকম অবজেক্ট তৈরির এই প্রক্রিয়াকে অবজেক্ট ক্লোনিং বলা হয়।
+উদাহরণসরূপ নিজের উদাহরণটি দেখা যাক –</description>
+    </item>
+    
+    <item>
+      <title>জাভাতে প্যাকেজিং কী? কীভাবে প্যাকেজ ইম্পোর্ট করতে হয় ?</title>
+      <link>http://bazlur.com/p247/</link>
+      <pubDate>Mon, 12 Mar 2018 22:08:47 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p247/</guid>
+      <description>আমরা কম্পিউটারে নানা ধরনের ফাইল বিভিন্ন ফোল্ডারে সাজিয়ে রাখি। যেমন- মুভি ফোল্ডারে হয়তো আমরা শুধুই মুভি রাখি, সেখানে অন্য কোনো ফাইল রাখি না। আবার মুভি ফোল্ডারে এর মধ্যে সাব-ফোল্ডার তৈরি করি আরও আলাদা করার জন্য, যেমন – বাংলা মুভি, ইংরেজি মুভি ইত্যাদি। জাভাতে প্যাকেজ বলতে এই ধারণাটিকেই বোঝায়। একটি জাভা প্রোগ্রামিং ভাষায় লেখা সফ্টওয়্যারে শত শত বা হাজার হাজার পৃথক ক্লাস থাকতে পারে। এজন্য প্যাকেজ ডিক্লেয়ারেশনের মাধ্যমে একই রকম ক্লাসগুলো একাধিক প্যাকেজের মধ্যে আলাদা করে রাখা হয়। এছাড়াও অনেক সময় একই নামের একাধিক ক্লাস লেখার প্রয়োজন হতে পারে যা পরম্পরবিরোধী। এক্ষেত্রে একই নামের ক্লাস বিভিন্ন প্যাকেজে রাখা যেতে পারে।</description>
+    </item>
+    
+    <item>
+      <title>Java তে Null Pointer Exception কী? কীভাবে একে Handle করা যায়?</title>
+      <link>http://bazlur.com/p243/</link>
+      <pubDate>Mon, 12 Mar 2018 22:01:13 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p243/</guid>
+      <description>কোনো ভেরিয়েবল যদি কোনো অবজেক্টের রেফারেন্স না রাখে,তাহলে সেই ভেরিয়েবল মূলত একটি নাল রেফারেন্স বা শূণ্য রেফারেন্স ধরে রাখে। সেই ভেরিয়েবল নিয়ে কোনো কাজ করতে চাই, তাহলে জাভা ভার্চুয়াল মেশিন এই এক্সেপশন থ্রো করে। বেশ কয়েকটি জায়গায় এই এক্সেপশন থ্রো হতে পারে। যেমন-
+১. একটি ক্লাসের অবজেক্ট তৈরি না করেই সেই ক্লাসের কোনো মেথড করলে। তবে সেই ক্লাসের স্ট্যাটিক মেথড কল করা হলে NullPointerException (NPE) থ্রো হবে না।
+২. কোনো ভেরিয়েবলের টাইপ যদি ক্লাস হয় এবং এটি যদি নাল(null) হয়, তাহলে সেই ভেরিয়েবলের কোনো ফ্লিল্ড পরিবর্তন না অ্যাকসেস করতে গেলে NPE থ্রো হবে।</description>
+    </item>
+    
+    <item>
+      <title>জাভা থ্রেড প্রোগ্রামিংঃ ডেটা রেইস (Java Thread Programming: Data Race)</title>
+      <link>http://bazlur.com/p233/</link>
+      <pubDate>Wed, 07 Mar 2018 14:24:28 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p233/</guid>
+      <description>আমরা যখনি একাধিক থ্রেডের জন্য কোড লিখব তখনি আমাদের চিন্তা করতে হবে যে, এই কোডটি থ্রেড সেফ কি না। থ্রেইড সেইফের সহজ সংজ্ঞা আমরা জানি। এর অর্থ হলো, কোড সঠিকভাবে কাজ করবে। আমরা যখন একটি প্রোগ্রাম লিখি, সেই ক্লাসের একটি স্পেসিফিকেশন থাকে। আমরা সাধারণত প্রোগ্রাম লেখার সময় এর ফরমাল কোনো স্পেসিফিকেশন লিখি না, তবে এই ক্লাসের উদ্দেশ্য সম্পর্কে আমাদের ধারণা থাকে। প্রোগ্রামটিকে রান করা হলে এর ফলাফল সম্পর্কে আমাদের একটি পরিষ্কার ধারণা থাকে। এই প্রোগ্রামটি হয়তো একটি থ্রেড দিয়ে রান করলে যে ফলাফল দেয় সেই সম্পর্কে আমাদের আস্থা থাকে। একই প্রোগ্রামটি যদি একাধিক থ্রেডে রান করা হয়, তাহলে যদি আগের মতো একই রকম আস্থা আমাদের থাকে, তাহলে সেই প্রোগ্রামটিকে আমরা থ্রেড সেফ বলতে পারি।</description>
+    </item>
+    
+    <item>
+      <title>জাভা থ্রেড প্রোগ্রামিংঃ রিভিউ-৪</title>
+      <link>http://bazlur.com/p228/</link>
+      <pubDate>Mon, 26 Feb 2018 14:11:38 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p228/</guid>
+      <description>জাভা থ্রেড প্রোগ্রামিং বইটি নিয়ে নিচের চমৎকার রিভিউটি লিখেছেন Ruhul Quddus Shakkhor   This is a great book, but this is not for everyone. If you’re new to Java, then it’s probably better to learn the basics first. However, if you’re an intermediate to the advanced learner, this book will give you a deeper understanding of Java threads. At this moment, I’m not aware of another Bangla book for any programming language that can give you a similar overview of threads.</description>
+    </item>
+    
+    <item>
+      <title>জাভা থ্রেড প্রোগ্রামিংঃ রিভিউ-৩</title>
+      <link>http://bazlur.com/p222/</link>
+      <pubDate>Thu, 22 Feb 2018 17:47:41 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p222/</guid>
+      <description>জাভা থ্রেড প্রোগ্রামিং বইটি নিয়ে নিচের চমৎকার রিভিউটি লিখেছেন অরণ্য আব্দুলাহ আল মামুনভাই।  জাভা বেসড এপ্লিকেশন ডেভেলপমেন্টের একটা গুরুত্বপূর্ন বিষয় হলো থ্রেডিং। সেইটা সার্ভার-সাইড ডেভেলপমেন্ট-ই হোক আর ক্লায়েন্ট সাইড ডেভেলপমেন্ট। সার্ভার-সাইড ডেভেলপমেন্ট এ বিভিন্ন প্রসেসকে একধিক কাজে ভাগ করে faster response করা কিংবা ক্লায়েন্ট সাইড ডেভেলপমেন্ট এ GUI এর পাশাপাশি Network request বা IO Request সঠিক ভাবে handle করা – এগুলা খুবই গুরুত্বপূর্ন বিষয়। থ্রেডিং এর concept ভালো না থাকলে ভালো মানের application develop করা এক কথায় অসম্ভব।</description>
+    </item>
+    
+    <item>
+      <title>জাভা থ্রেড প্রোগ্রামিংঃ রিভিউ-১</title>
+      <link>http://bazlur.com/p215/</link>
+      <pubDate>Mon, 19 Feb 2018 20:53:04 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p215/</guid>
+      <description>জাভা থ্রেড প্রোগ্রামিং বইটি নিয়ে একটি চমৎকার রিভিউ লিখেছেন তামিম শাহরিয়ার সুবিনভাই। </description>
+    </item>
+    
+    <item>
+      <title>জাভা থ্রেড প্রোগ্রামিংঃ রিভিউ-২</title>
+      <link>http://bazlur.com/p211/</link>
+      <pubDate>Mon, 19 Feb 2018 20:41:38 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p211/</guid>
+      <description> আ ন ম বজলুর রহমান(রোকন) জাভা থ্রেড পোগ্রামিং নিয়ে একটি নতুন বই লিখেছে। বইটি আমি আগাগোড়া পড়েছি। বেশকতগুলো জিনিস আমার বেশ পছন্দ হয়েছে। আমি এগুলো পয়েন্ট আকারে লিখতে চাইঃ –  কেনো থ্রেড প্রোগ্রামিং শেখা জরুরি, এটি নিয়ে বেশ ভালো আলোচনা রয়েছে।  অপারেটিং সিস্টেম কীভাবে থ্রেড ম্যানেজ করে, তা নিয়েও আলোচনা আছে।  এছাড়া জাভা ভার্চুয়াল মেশিনে কীভাবে থ্রেড কাজ করে তাও লিখেছে।  আমরা হয়তো অনেকই থ্রেড ব্যবহার করি, কিন্তু এর অভ্যন্তরীণ বিষয়গুলোর দিকে মনযোগ দিই না। এটি অত্যন্ত গুরুত্বপূর্ণ। এগুলো নিয়েও এই বইতে বিস্তর আলোচনা রয়েছে। জাভাতে থ্রেড প্রোগ্রামিং দুইভাবে করা হয়। এর একটি খানিকটা সেকেলে এবং একটি আধুনিক পদ্ধতি। থ্রেডিংয়ের ধারণা বুঝতে হলে সেকেলে পদ্ধটি জানা জরুরী। এই বইয়ে দুটি পদ্ধতিই আলোকপাত করা হয়েছে।  থ্রেড ব্যাবহার করতে গেলে যে মেথড বা কিওয়ার্ড বা বিষয়গুলো খেয়াল অত্যন্ত জরুরী সেগুলোর দিকে অনেক জোড় দেয়া হয়েছে।  থ্রেড ব্যাবহারের বহুল প্রচলিত প্রন্থাগুলো বেশ সমৃদ্ধ এই বইয়ে। এগুলো প্রায়শই বিভিন্ন চাকরির ইন্টারভিউতে প্রশ্ন করা হয়ে থাকে। বাড়তি হিসেবে ইম্যুটেবল অবজেক্ট সম্পর্কেও বেশ খানিকটা লিখেছে যা আমার মতে অত্যন্ত জরুরী একটি বিষয়।  থ্রেড ব্যাবহারের বহুল প্রচলিত সমসস্যাগুলো নিয়েও লেখা হয়েছে, যা জানা খুবই জরুরি।   তবে আমি একতরফা ভাল বলে যাবো তা নয়। বইটিতে কিছু টপিক রয়েছে যেগুলো চাইলে আরও উন্নত করা যায়। আমি পরামর্শ দেবো এগুলো যাতে পরবর্তী সংস্করণে যাতে যুক্ত করা হয়।  থ্রেড ব্যাবহার করার অতি আধুনিক প্রচলিত পন্থাগুলো যেগুলো বড় বড় সফটওয়ারে ব্যাবহার হচ্ছে, সেগুলো নিয়ে বিস্তারিত লেখা।  থ্রেডের কর্মক্ষমতা পারফর্মেন্স(performance) কীভাবে টেস্ট বা পরীক্ষা করা যায় এবং কীভাবে থ্রেড সম্পর্কিত বিভিন্ন সমস্যা সমাধান করা যায় সেগুলো নিয়ে লেখা যেতে পারে।  jstack, JConsoleনিয়ে আরেকটু বিস্তারিত বলা উচিত বলে আমার মনে হয়। থ্রেড নিয়ে কাজ করতে গেলে আমরা ,VisualVM ব্যাবহার করি, এটি নিয়ে লেখায় হয়নি এই বইয়ে। এটি নিয়েই একটি চ্যাপ্টার লেখা যেতে পারে। থ্রেডের আরও কিছু হাইলেভেল এপিআই যেমন- সেমাফোর, এক্সচেঞ্জার, সাইক্লিক ব্যারিয়ার ইত্যাদি নিয়ে কোনো আলোচনা নেই বইটিতে। এগুলোও যুক্ত করা উচিত। সিনক্রোনাইজেশনের উদাহরণগুলো আরেকটু সহজ করা যায়।  থ্রেড ব্যাবহারের আধুনিক পদ্ধতির আরও কিছু উদাহরন সংযুক্ত করা যেতে পারে।   অবশেষে বলতে চাই, এই বইটি বাংলাদেশের জাভা প্রোগ্রামারদের জীবন অনেকটাই সহজ করে দেবে। থ্রেড সম্পর্কে এমন প্রয়োজনীয় সহজ বর্ণনা বাংলাতে আর নেই বলে মনে হয়। আশাকরি পাঠক সমাজে ও ছাত্রছাত্রীদের মধ্যে বইটি বেশ জনপ্রিয় হয়ে উঠবে।</description>
+    </item>
+    
+    <item>
+      <title>জাভা থ্রেড প্রোগ্রামিং</title>
+      <link>http://bazlur.com/p182/</link>
+      <pubDate>Fri, 16 Feb 2018 14:53:57 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p182/</guid>
+      <description>আধুনিক কম্পিউটারের প্রোগ্রামগুলো বেশ বুদ্ধিদীপ্ত ও জটিল। এগুলো একই সঙ্গে একাধিক কাজ সম্পাদন করতে পারে। এই প্রোগ্রামগুলো লিখতে হলে আমাদের নিজেদেরও বুদ্ধির পরিচয় দিতে হয়। সাধারণত একটি বড়ো কাজ কতগুলো ছোটো ছোটো কাজের সমষ্টি হয়। এই ছোটো কাজগুলোকে আলাদাভাবে করে, এদেরকে জুড়ে দিয়েই সামগ্রিকভাবে বড়ো কাজটি সম্পন্ন করা হয়। এর মধ্যে কিছু কাজ একটি আরেকটির ওপর নির্ভরশীল হয়, অন্যগুলো স্বাধীনভাবে সম্পাদন করা যায়। আবার এই ছোটো ছোটো কাজগুলো কম্পিউটার ধারাবাহিকভাবে একটির পর আরেকটি সম্পাদন করতে পারে। তবে যে কাজগুলো স্বাধীন সেগুলোকে যদি একই সঙ্গে করা যায়, তাহলে অল্প সময়ে আমরা একাধিক কাজ করে ফেলতে পারি। এই একই সঙ্গে একাধিক কাজ কীভাবে করা যায়, তা নির্ভর করে আমাদের প্রোগ্রামটি আমরা কীভাবে লিখছি তার ওপর। জাভা প্রোগ্রামিং ল্যাংগুয়েজ ব্যবহার করে একাধিক ছোটো কাজ খুব সুন্দর ও বুদ্ধিদীপ্তভাবে সাজিয়ে প্রোগ্রাম লেখার উপায় হলো থ্রেডিং। এই সাজানোর প্রক্রিয়াটি শিক্ষানবিশদের কাছে অনেক সময়ই কঠিন মনে হয়। এই কঠিন মনে হওয়াটা যুক্তিসংগত। আমরা মানুষ, একই সময়ে একাধিক কাজে মনোযোগ দিতে পারি না। আমাদের চিন্তাভাবনার প্রক্রিয়াও ধারাবাহিক। এই কঠিন বিষয়টি অনুশীলনের মাধ্যমে আয়ত্তে আনতে পারলে কাজের অনেক সুবিধা হয়। প্রোগ্রামিংয়ের ক্ষেত্রেও পরপর ধারবাহিক প্রোগ্রাম লেখা বা চালানো সহজ হলেও একই সময়ে প্রোগ্রামের একাধিক অংশ পাশাপাশি একই সঙ্গে চালানো এবং এদের মধ্য সমন্বয় করা খানিকটা কঠিন। তবে কোনো কাজ কঠিন হলেই কি আর আমরা থেমে থাকি?</description>
+    </item>
+    
+    <item>
+      <title>প্রশ্ন: Checked Exception এবং Unchecked Exception এর মধ্যে পার্থক্য কী?</title>
+      <link>http://bazlur.com/p149/</link>
+      <pubDate>Mon, 29 Jan 2018 00:01:22 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p149/</guid>
+      <description>প্রোগ্রাম লিখতে গেলে নানা রকম সমস্যা হয়। কিছু সমস্যা সিস্টেম থেকে হতে পারে, আবার কিছু সসমস্যা প্রোগ্রাম লেখার সময় ভুলের জন্য হতে পারে। যেমন- আমরা যদি ডেটাবেজই সম্পর্কিত কোনো কোড লিখি, কোনো কারণে ইন্টারনেট কানেকাশন বন্ধ হয়ে যেতে পারে, এবং আমরা ডেটাবেইজে কানেক্ট করতে না পারি। আবার কোনো সিকুয়েল কোডে যে বিশেষ আর্গুমেন্টটি পাস করার কথা ছিল সেটি না করলে সিকুয়েলটি ঠিকমতো এক্সিকিউট হবে না এমন হতে পারে। এরকম পরিস্থিতিতে আমাদের অ্যাপ্লিকেশন কোড একধরেণের এক্সেপশন থ্রু করে জানান দেয় যে কোনো রকম সমস্যা হয়েছে।</description>
+    </item>
+    
+    <item>
+      <title>ArrayList ও LinkedList মধ্যে পার্থক্য কী? (Difference between ArrayList and LinkedList in Java)</title>
+      <link>http://bazlur.com/p766/</link>
+      <pubDate>Fri, 18 Aug 2017 13:17:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p766/</guid>
+      <description>&amp;lt;div&amp;gt; [spacer height=&amp;amp;#8221;20px&amp;amp;#8221;] &amp;lt;/div&amp;gt;  public class TemplateService { public static void main(String[] args) { //using LinkedList List&amp;lt;String&amp;gt; countries = new ArrayList&amp;lt;&amp;gt;(); //adding elements to the ArrayList countries.add(&amp;ldquo;Bangladesh&amp;rdquo;); countries.add(&amp;ldquo;India&amp;rdquo;); countries.add(&amp;ldquo;Bhutan&amp;rdquo;); countries.add(&amp;ldquo;Pakistan&amp;rdquo;);
+// searching element by index String bangladesh = countries.get(0);
+//adding element by index countries.add(2, &amp;ldquo;Indonesia&amp;rdquo;);
+//removing element countries.remove(4);
+//using LinkedList List&amp;lt;String&amp;gt; cities = new LinkedList&amp;lt;&amp;gt;(); //adding elements to the LinkedList cities.add(&amp;ldquo;Dhaka&amp;rdquo;); cities.add(&amp;ldquo;London&amp;rdquo;); cities.add(&amp;ldquo;Beijing&amp;rdquo;);
+// searching element by index String dhaka = cities.</description>
+    </item>
+    
+    <item>
+      <title>কীভাবে মার্শাল আর্টের ধারণা আপনাকে জাভাতে মাস্টার হতে সাহায্য করে? (How martial art helps you to master Java)</title>
+      <link>http://bazlur.com/p767/</link>
+      <pubDate>Thu, 03 Aug 2017 14:27:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p767/</guid>
+      <description>Shu, Ha, Ri এই শব্দ তিনটি এসেছে জাপানি মার্শাল আর্টসের কনসেপ্ট থেকে। এটি সাধারণত কোনো কিছু শেখার ক্ষেত্রে ব্যবহার করা হয়। শব্দ তিনটির অর্থ করলে দাঁড়ায় –
+১. shu (守) “protect”, “obey” বা মান্য করা
+২. ha (破) “detach”, “digress”, “break” ভাঙ্গা বা বিচ্ছিন্ন করা
+৩. ri (離) “leave”, “separate” আলাদা হওয়া
+জাভা প্রোগ্রামিং শেখার ক্ষেত্রে এই তিনটি ধারণা ব্যবহার করা যেতে পারে। কীভাবে তা নিয়েই এই আলোচনা-
+প্রথমেই সু, অর্থাৎ এখানে প্রত্যেক শিক্ষানবিসদের যে কোনো একটি বই নিয়ে পড়তে শুরু করা উচিৎ(প্রথম পৃষ্টা থেকে একদম শেষ পৃষ্ঠা পর্যন্ত )। বইয়ে যে অনুশীলনীগুলো রয়েছে সেগুলো ভালোভাবে করা। অনেক ক্ষেত্রে বুঝতে অসুবিধা হতে পারে। না বুঝলেও সমস্যা নেই, তবুও বেশি বেশি করে আয়ত্বের মধ্যে নিয়ে আসা। যেমন- জাভাতে কোনো একটি প্রোগ্রাম রান করতে হলে মেইন মেথড লিখতে হয়। মেইন মেথড কেনো লিখতে হয়, এই ব্যাপারটি এখনই না বুঝলে সমস্যা নেই, বরং –</description>
+    </item>
+    
+    <item>
+      <title>জাভাতে toString() এর কাজ কী? (Use of toString() Method in java)</title>
+      <link>http://bazlur.com/p9/</link>
+      <pubDate>Sat, 01 Jul 2017 14:06:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p9/</guid>
+      <description>&amp;lt;p&amp;gt; কোনো জাভা অবজেক্টেকে স্ট্রিংয়ে রূপান্তর করতে চাইলে toString() মেথড কল করা হয়। এটি নানা কাজে বিশেষ করে ডিবাগিং কাজে ব্যবহার করা হয়। &amp;lt;/p&amp;gt;  public Employee(String name, int age) { this.name = name; this.age = age; }  } public Employee(String name, int age) { this.name = name; this.age = age; } @Override public String toString() { return name + &amp;quot;: &amp;quot; + age; } public static void main(String[] args) { Employee employee = new Employee(&amp;quot;Rahim&amp;quot;, 27); System.</description>
+    </item>
+    
+    <item>
+      <title>জাভা অবজেক্ট সিরিয়ালাইজেশন (Java serialization)</title>
+      <link>http://bazlur.com/p10/</link>
+      <pubDate>Sat, 24 Jun 2017 03:37:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p10/</guid>
+      <description>public class Person implements Serializable { private String name; private int age; // more properties &amp;amp; methods } return (List&amp;amp;lt;OrderLine&amp;amp;gt;) inputStream.readObject(); } catch (IOException | ClassNotFoundException e) { e.printStackTrace(); } return null; }&amp;lt;/pre&amp;gt;  &amp;lt;pre class=&amp;quot;lang:java decode:true&amp;quot;&amp;gt;package article.serialization;  import java.io.*; import java.util.Arrays; import java.util.List;
+import static article.serialization.Price.; import static article.serialization.Weight.;
+public class Store { public static void main(String[] args) { Product toothPaste = new Product(&amp;ldquo;Tooth Paste&amp;rdquo;, price(1.5), weight(0.5)); Product toothBrush = new Product(&amp;ldquo;Tooth Brush&amp;rdquo;, price(3.</description>
+    </item>
+    
+    <item>
+      <title>ল্যামডা এক্সপ্রেশনঃ পর্ব তিন (Lambda Expression: Part 3) –  ফাংশন বনাম মেথড</title>
+      <link>http://bazlur.com/p12/</link>
+      <pubDate>Sun, 11 Jun 2017 17:21:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p12/</guid>
+      <description>–&amp;gt;</description>
+    </item>
+    
+    <item>
+      <title>জাভাতে কীভাবে ক্লাস লোড করা হয়</title>
+      <link>http://bazlur.com/p13/</link>
+      <pubDate>Sun, 04 Jun 2017 23:29:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p13/</guid>
+      <description> </description>
+    </item>
+    
+    <item>
+      <title>ইনমেমোরী ফাইল সিস্টেম (In memory file system in java)</title>
+      <link>http://bazlur.com/p16/</link>
+      <pubDate>Fri, 07 Apr 2017 20:36:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p16/</guid>
+      <description>public Node(String name) { this.name = name; this.created = LocalDateTime.now(); this.lastUpdated = LocalDateTime.now(); this.lastAccessed = LocalDateTime.now(); } public boolean isDirectory() { return this instanceof Directory; } public String getPath() { return root != null ? root.getPath() + &amp;quot;/&amp;quot; + name : name; } public Node getParent() { return root; } public abstract long getLength(); public String getName() { return name; } @Override public int compareTo(Node o) { return this.getName().compareTo(o.getName()); } public void setRoot(Directory root) { this.</description>
+    </item>
+    
+    <item>
+      <title>জাভা মেইন থ্রেড (Java Main Thread)</title>
+      <link>http://bazlur.com/p17/</link>
+      <pubDate>Sat, 25 Mar 2017 02:13:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p17/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Try-with-resource statement in java</title>
+      <link>http://bazlur.com/p18/</link>
+      <pubDate>Sat, 25 Mar 2017 01:00:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p18/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>জাভা থ্রেড প্রোগ্রামিংঃ পর্ব- এক (Java threading: part -1 )</title>
+      <link>http://bazlur.com/p20/</link>
+      <pubDate>Thu, 23 Mar 2017 14:22:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p20/</guid>
+      <description>public class MyThread extends Thread {
+@Override public void run() { for (int i = 0; i &amp;amp;lt; 10; i++) { System.out.println(i); try { Thread.sleep(100); } catch (InterruptedException e) { e.printStackTrace(); } } }  }&amp;lt;p&amp;gt; ওপরের প্রোগ্রামটিতে Thread ক্লাসটিকে ইনহেরিট করে একটি MyThread নামে একটি ক্লাস লেখা হয়েছে। Thread ক্লাসটি run() নামে একটি মেথড রয়েছে। এই মেথডটিতে ওভাররাইড করে এতে কিছু কোড লেখা হয়েছে। এই কোড অংশটুকু আমরা কনকারেন্টলি রান করতে চাই। এখানে একটি লুপ লেখা হয়েছে এবং এতে একটি প্রিন্ট মেথড রয়েছে। &amp;lt;/p&amp;gt;  চলবে…</description>
+    </item>
+    
+    <item>
+      <title>জাভাতে কীভাবে ফাইল কপি করা যায়(File Copying in Java)</title>
+      <link>http://bazlur.com/p21/</link>
+      <pubDate>Wed, 22 Mar 2017 14:08:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p21/</guid>
+      <description>জাভাতে বিভিন্নভাবে ফাইল কপি করা যায়।
+প্রথমে ইনপুট স্ট্রিম ব্যবহার করে ফাইল কপি করতে পারি।
+copy() মেথডটিতে দুটি প্যারামিটার রয়েছে। প্রথমটিতে ফাইলের সোর্সটি স্ট্রিং আকারে দিতে হবে, অর্থাৎ যে ফাইলটি কপি করা হবে তার পাথ। দ্বিতীয়টি যেখানে ফাইলটি কপি করা হবে। এটি ডেস্টিনেশন ফাইল। এই ফাইলটি সিস্টেমে না থাকলে নতুন করে তৈরি হবে। আর যদি ফাইলটি আগে থেকেই তৈরি করা থাকে, তাহলে এর কন্টেন্ট রিপ্লেস হবে।
+এতে প্রথমে একটি ইনপুট স্ট্রিম ব্যবহার করা হয়েছে যা দিয়ে ফাইল থেকে ডেটা পড়া হয়, এবং একটি আউটপুট স্ট্রিম ব্যবহার করা হয়েছে যা দিয়ে ডেস্টিনেশন ফাইলে রাইট করা হয়।</description>
+    </item>
+    
+    <item>
+      <title>জাভাতে কালেকশন ফ্রেমওয়ার্ক কী এবং এর প্রয়োজনীয়তা কী?</title>
+      <link>http://bazlur.com/p23/</link>
+      <pubDate>Tue, 07 Mar 2017 13:21:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p23/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>জাভাতে Declare type এবং Actual type কী?</title>
+      <link>http://bazlur.com/p24/</link>
+      <pubDate>Tue, 07 Mar 2017 13:18:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p24/</guid>
+      <description>&amp;lt;div style=&amp;quot;text-align: justify;&amp;quot;&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div style=&amp;quot;text-align: justify;&amp;quot;&amp;gt; এখানে animal একটি ভেরিয়েবল। যার টাইপ হচ্ছে Animal। এখন new কিওযার্ড ব্যবহার করে এতে একটি অবজেক্ট তৈরি করে এই ভেরিয়েবলে অ্যাসাইন করতে পারি। &amp;lt;/div&amp;gt;  &amp;lt;div style=&amp;quot;text-align: justify;&amp;quot;&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div style=&amp;quot;text-align: justify;&amp;quot;&amp;gt; এখানে animal ভেরিয়েবলটি একটি Animal এর একটি অবজেক্টের একটি রেফারেন্স ধরে রাখে। এক্ষেত্রে এই অবজেক্টের টাইপও এখানে Animal। &amp;lt;/div&amp;gt; &amp;lt;div style=&amp;quot;text-align: justify;&amp;quot;&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div style=&amp;quot;text-align: justify;&amp;quot;&amp;gt; সাধারণভাবে ভেরিয়েবল টাইপ এবং অবজেক্ট টাইপ একই হলেও কখনো কখনো ভিন্ন হতে পারে। ধরা যাক, এই Animal ক্লাসকে এক্সটেন্ড করে আরেকটি ক্লাস তৈরি করা হলো, Dog.</description>
+    </item>
+    
+    <item>
+      <title>Largest known prime number</title>
+      <link>http://bazlur.com/p25/</link>
+      <pubDate>Wed, 01 Mar 2017 16:19:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p25/</guid>
+      <description>&amp;lt;p&amp;gt; এতে 17,425,170 টি সংখ্যা রয়েছে। এই সংখ্যাটি দেখতে চাইলে ঝটপট একটি জাভা প্রোগ্রাম লিখে ফেলা যায়। এর জন্য জাভার BigInteger ক্লাসটি প্রয়োজন হবে। &amp;lt;/p&amp;gt; &amp;lt;pre class=&amp;quot;lang:java decode:true &amp;quot;&amp;gt;import java.math.BigInteger;  public class LargestPrimeNumber { public static void main(String[] args) { BigInteger two = BigInteger.valueOf(2); BigInteger largest = two.pow(57_885_161); BigInteger largestPrimeNumber = largest.subtract(BigInteger.ONE); System.out.println(largestPrimeNumber); } }&amp;lt;p&amp;gt; &amp;amp;nbsp; &amp;lt;/p&amp;gt; &amp;lt;p&amp;gt; এটি প্রিন্ট হতে বেশ খানিকটা সময় নেবে। &amp;lt;/p&amp;gt; &amp;lt;div style=&amp;quot;clear: both; text-align: center;&amp;quot;&amp;gt; &amp;lt;a style=&amp;quot;margin-left: 1em; margin-right: 1em;&amp;quot; href=&amp;quot;https://4.</description>
+    </item>
+    
+    <item>
+      <title>কোডিং কনভেনশন (coding convention)</title>
+      <link>http://bazlur.com/p26/</link>
+      <pubDate>Sun, 26 Feb 2017 00:27:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p26/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>প্রোগ্রামিং আড্ডা: জাভা প্রোগ্রামিং ও অ্যান্ড্রয়েড: দশটি প্রশ্নের উত্তর</title>
+      <link>http://bazlur.com/p27/</link>
+      <pubDate>Tue, 21 Feb 2017 20:59:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p27/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>স্ট্রিং পুল কী (What is String Pool)</title>
+      <link>http://bazlur.com/p30/</link>
+      <pubDate>Sun, 19 Feb 2017 00:39:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p30/</guid>
+      <description>জাভা ভার্চুয়াল মেশিনে মেমোরি মডেল (Memory Model) দুই ভাবে বিভক্ত। এরা হলো হিপ এবং থ্রেড স্ট্যাক। জাভা অ্যাপ্লিকেশনে যত ধরনের অবজেক্ট তৈরি হয়, সেগুলোর সব থাকে হিপে। স্ট্রিং পুল (String Pool) জাভা হিপের একটি বিশেষ এলাকা।
+জাভাতে স্ট্রিং একটি বহুল ব্যবহৃত ক্লাস। যেহেতু এটি ইমিউটেবল, তাই স্ট্রিং নিয়ে কাজ করার সময় হিপে অনেক নতুন নতুন স্ট্রিং অবজেক্ট তৈরি হয়। এছাড়াও স্ট্রিং অবজেক্ট নিজেও অনেক বেশি মেমোরি নিয়ে থাকে। একটি স্ট্রিং অবজেক্ট কত বাইট মেমোরি নেয় তা হিসাব করে বের করে ফেলা যায়।</description>
+    </item>
+    
+    <item>
+      <title>অ্যবস্ট্রাক্ট ক্লাসের প্রয়োজনীয়তা (why we need abstract class )</title>
+      <link>http://bazlur.com/p32/</link>
+      <pubDate>Wed, 15 Feb 2017 09:29:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p32/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>জাভা কী পাস-বাই-ভ্যালু (Pass-by-Value)</title>
+      <link>http://bazlur.com/p35/</link>
+      <pubDate>Wed, 08 Feb 2017 17:55:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p35/</guid>
+      <description>&amp;lt;p&amp;gt; এই প্রশ্ন দুটির উত্তর দিতে হলে আমাদের জানতে হবে অবজেক্টের রেফারেন্স কী। &amp;lt;/p&amp;gt; &amp;lt;p&amp;gt; জাভাতে অবজেক্টগুলো প্রোগ্রাম মেমোরির হিপ অংশে থাকে। এর একটি ঠিকানা বা অ্যাড্রেস আছে। ভ্যারিয়েবল মূলত সেই অবজেক্টের অ্যাড্রেস ধরে রাখে যাকে আমরা বলি অবজেক্টের রেফারেন্স। আমরা যখন কোনো মেথডে আর্গুমেন্ট হিসেবে একটি ভ্যারিয়েবল বা অবজেক্টের রেফারেন্স পাস করি তখন আসলে সেই অবজেক্টের রেফারেন্সটি পাঠাই না বরং সেই রেফারেন্সের একটি কপি পাঠাই। কোনো একটি অবজেক্টের রেফারেন্স ভ্যালু যদি হয়, 66d3c617 তাহলে মেথড আর্গুমেন্ট হিসেবে এই সংখ্যাটির একটি কপি আর্গুমেন্ট হিসেবে যায়। এর মানে দাঁড়ায় আমরা আসলে রেফারেন্সটি পাঠাচ্ছি না বরং সেই রেফারেন্সের কপি পাঠাচ্ছি। &amp;lt;/p&amp;gt;  &amp;lt;p&amp;gt; এতে করে আমরা সহজেই বলতে পারি জাভা পাস-বাই-রেফারেন্স-ভ্যালু (Pass-by-Reference-Value) বা পাস-বাই-কপি-অব-দি-ভ্যারিয়েবল-ভ্যালু (Pass-by-Copy-of-the-Variable-Value) অথবা সহজে পাস-বাই-ভ্যালু (Pass-by-Value)। &amp;lt;/p&amp;gt;  </description>
+    </item>
+    
+    <item>
+      <title>ক্যারেক্টার সেট (Character Set)</title>
+      <link>http://bazlur.com/p37/</link>
+      <pubDate>Sat, 04 Feb 2017 07:04:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p37/</guid>
+      <description>&amp;lt;td bgcolor=&amp;quot;#e5e5e5&amp;quot; style=&amp;quot;border: 1px solid #00000a; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in; padding-top: 0in;&amp;quot; width=&amp;quot;112&amp;quot;&amp;gt; &amp;lt;div style=&amp;quot;margin-top: 0.08in;&amp;quot;&amp;gt; Encoding &amp;lt;/div&amp;gt; &amp;lt;/td&amp;gt; &amp;lt;td bgcolor=&amp;quot;#e5e5e5&amp;quot; style=&amp;quot;border: 1px solid #00000a; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in; padding-top: 0in;&amp;quot; width=&amp;quot;321&amp;quot;&amp;gt; &amp;lt;div style=&amp;quot;margin-top: 0.08in;&amp;quot;&amp;gt; Bits &amp;lt;/div&amp;gt; &amp;lt;/td&amp;gt; &amp;lt;/tr&amp;gt; &amp;lt;tr valign=&amp;quot;top&amp;quot;&amp;gt; &amp;lt;td style=&amp;quot;border: 1px solid #00000a; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in; padding-top: 0in;&amp;quot; width=&amp;quot;64&amp;quot;&amp;gt; &amp;lt;div style=&amp;quot;margin-top: 0.08in;&amp;quot;&amp;gt; A &amp;lt;/div&amp;gt; &amp;lt;/td&amp;gt; &amp;lt;td style=&amp;quot;border: 1px solid #00000a; padding-bottom: 0in; padding-left: 0.</description>
+    </item>
+    
+    <item>
+      <title>জাভা কেন মাল্টিপল ইনহেরিটেন্স (Multiple Inheritance) সাপোর্ট করে না?</title>
+      <link>http://bazlur.com/p38/</link>
+      <pubDate>Fri, 27 Jan 2017 18:18:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p38/</guid>
+      <description>&amp;lt;div style=&amp;quot;clear: both; line-height: 19.2px; text-align: center;&amp;quot;&amp;gt; &amp;lt;/div&amp;gt;  </description>
+    </item>
+    
+    <item>
+      <title>জাভাতে প্রাইভেট ফিল্ড(private field) প্রয়োজন কেনো? এগুলো অ্যাকসেস করার জন্য গেটার সেটার কেনো ব্যবহার করা হয় ?</title>
+      <link>http://bazlur.com/p39/</link>
+      <pubDate>Fri, 27 Jan 2017 18:06:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p39/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Java তে String কে immutable বলা হয় কেন?</title>
+      <link>http://bazlur.com/p40/</link>
+      <pubDate>Fri, 27 Jan 2017 17:57:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p40/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>কেনো জাভা শেখা উচিত ?</title>
+      <link>http://bazlur.com/p41/</link>
+      <pubDate>Fri, 27 Jan 2017 16:20:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p41/</guid>
+      <description>&amp;lt;p&amp;gt; &amp;lt;b&amp;gt;&amp;lt;u&amp;gt;পাদটীকা&amp;lt;/u&amp;gt;&amp;lt;/b&amp;gt; &amp;lt;/p&amp;gt;  </description>
+    </item>
+    
+    <item>
+      <title>প্যারামিটার (Parameter) ও আর্গুমেন্ট (Argument) এর পার্থক্য</title>
+      <link>http://bazlur.com/p42/</link>
+      <pubDate>Wed, 25 Jan 2017 16:06:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p42/</guid>
+      <description>&amp;lt;p&amp;gt; &amp;lt;a href=&amp;quot;https://3.bp.blogspot.com/-7j64_JeHI_4/WIjMxVaBw_I/AAAAAAAACVk/f0gTWpwAqIAajDFb2BOvCtvua_JMkdPNACLcB/s1600/parameter%2Bvs%2Barguments.png&amp;quot; style=&amp;quot;margin-left: 1em; margin-right: 1em;&amp;quot;&amp;gt;&amp;lt;img loading=&amp;quot;lazy&amp;quot; border=&amp;quot;0&amp;quot; height=&amp;quot;233&amp;quot; src=&amp;quot;https://3.bp.blogspot.com/-7j64_JeHI_4/WIjMxVaBw_I/AAAAAAAACVk/f0gTWpwAqIAajDFb2BOvCtvua_JMkdPNACLcB/s400/parameter%2Bvs%2Barguments.png&amp;quot; width=&amp;quot;400&amp;quot; /&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;div style=&amp;quot;line-height: 108%; margin-bottom: 0.11in;&amp;quot;&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div style=&amp;quot;text-align: center;&amp;quot;&amp;gt; চিত্র: প্যারামিটার ও আর্গুমেন্ট &amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt; </description>
+    </item>
+    
+    <item>
+      <title>জাভা প্রোগ্রামিং ল্যাংগুয়েজ তৈরির পেছনের গল্প</title>
+      <link>http://bazlur.com/p43/</link>
+      <pubDate>Wed, 25 Jan 2017 15:25:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p43/</guid>
+      <description>&amp;lt;p&amp;gt; সে সময় জাভাতে কাজ করে এমন লোকের সংখ্যা ত্রিশেরও কম। তারা কখনোই চিন্তা করেনি তাদের এই টিম ভবিষ্যৎ পৃথিবীর প্রধানতম টেকনোলজি নির্ধারণ করতে যাচ্ছে। ২০০৪ সালের ৩ জানুয়ারি মার্স এক্সপ্লোরেশন রোভার (Mars Exploration Rover)2 মঙ্গল গ্রহের মাটিতে পা রাখে যার কন্ট্রোল সিস্টেম থেকে শুরু করে পৃথিবীর অধিকাংশ কনজুমার ইলেকট্রনিক্স, যেমন– কেবল সেট-টপ বক্স (STB), ভিসিআর (VCR), টোস্টার (Toaster), পিডিএ (PDA), স্মার্টফোনসহ প্রায় ১৫ বিলিয়ন ডিভাইস3, ১০০% ব্লু-রে ডিস্ক প্লেয়ার জাভা রান করে। &amp;lt;/p&amp;gt; &amp;lt;p&amp;gt; চলুন একটু পেছনের ইতিহাস জেনে নেই। &amp;lt;/p&amp;gt; &amp;lt;p&amp;gt; তখন সি++ (C++) এর একচ্ছত্রাধিপত্য। &amp;lt;/p&amp;gt; &amp;lt;p&amp;gt; সান মাইক্রোসিস্টেমস (Sun Microsystems, Inc.</description>
+    </item>
+    
+    <item>
+      <title>জাভা ইন্টারফেস এর ক্ষেত্রে multiple inheritance সাপোর্ট করলেও ক্লাসের ক্ষেত্রে কেনো করে না ?</title>
+      <link>http://bazlur.com/p49/</link>
+      <pubDate>Wed, 02 Nov 2016 18:09:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p49/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>I’m writing a book</title>
+      <link>http://bazlur.com/p52/</link>
+      <pubDate>Tue, 18 Oct 2016 19:06:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p52/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>জাভা কীভাবে কাজ করে এবং কীভাবে ভাল পারফর্ম করে</title>
+      <link>http://bazlur.com/p63/</link>
+      <pubDate>Mon, 22 Sep 2014 17:09:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p63/</guid>
+      <description>জাভা কোড প্রথমে বাইটকোডে কম্পাইলড হয়, তারপর সেটিকে জাভা ভার্চুয়াল মেশিন এক্সিকিউট করে। বাইটকোড হচ্ছে এক ধরনের ইন্টারমিডিয়েড ল্যাংগুয়েজ যা কিনা ঠিক মানুষের পাঠ উপযোগী নয়, আবার মেশিনের জন্য ও নয়। এটি শুধুমাত্র জাভা ভার্চুয়াল মেশিন (JVM)পড়তে পারে। বাইটকোডকে এক্সিকিউট করার জন্য জাভা ভার্চুয়াল মেশিন জাস্ট ইন টাইম (JIT) কম্পাইলার ব্যবহার হরে। JIT বাইটকোড কে সরাসরি ইন্টারপ্রেট করে। এটি রানটাইম-এ বাইটকোড কে ইন্টারপ্রেট করে মেশিন কোড-এ রূপান্তরিত করে যা কিনা সিপিইউ রান করে। এখানে একটি ইন্টারেস্টিং প্রশ্ন হতে পারে, জাভা কি তাহলে ইন্টারেপ্রেটেট ল্যাংগুয়েজ নাকি কম্পাইল্ড ল্যাংগুয়েজ?</description>
+    </item>
+    
+    <item>
+      <title>A great place to learn and mingle</title>
+      <link>http://bazlur.com/p65/</link>
+      <pubDate>Mon, 09 Dec 2013 03:30:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p65/</guid>
+      <description>&amp;lt;p&amp;gt; &amp;lt;/p&amp;gt; &amp;lt;div style=&amp;quot;clear: both; text-align: center;&amp;quot;&amp;gt; &amp;lt;a href=&amp;quot;https://3.bp.blogspot.com/-VjSE7wC7sWU/WIiyGj6VjoI/AAAAAAAACU8/G7A_qxFlvREvA7aJMm0NiRRSxj5jQUvfwCLcB/s1600/936785_10201990445116485_528530179_n.jpg&amp;quot; style=&amp;quot;margin-left: 1em; margin-right: 1em;&amp;quot;&amp;gt;&amp;lt;img loading=&amp;quot;lazy&amp;quot; border=&amp;quot;0&amp;quot; height=&amp;quot;266&amp;quot; src=&amp;quot;https://3.bp.blogspot.com/-VjSE7wC7sWU/WIiyGj6VjoI/AAAAAAAACU8/G7A_qxFlvREvA7aJMm0NiRRSxj5jQUvfwCLcB/s400/936785_10201990445116485_528530179_n.jpg&amp;quot; width=&amp;quot;400&amp;quot; /&amp;gt;&amp;lt;/a&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;p&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div style=&amp;quot;background-color: white; color: #1d2129; font-family: helvetica, arial, sans-serif; font-size: 14px; line-height: 20px; text-align: justify;&amp;quot;&amp;gt; The Java User Group Bangladesh (JUGBD) is now formed and successfully finished its 2nd meetup in last week. We are doing great, it’s not an exaggeration. &amp;lt;/div&amp;gt; &amp;lt;div style=&amp;quot;background-color: white; color: #1d2129; font-family: helvetica, arial, sans-serif; font-size: 14px; line-height: 20px; text-align: justify;&amp;quot;&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div style=&amp;quot;background-color: white; color: #1d2129; font-family: helvetica, arial, sans-serif; font-size: 14px; line-height: 20px; text-align: justify;&amp;quot;&amp;gt; For those who doesn’t know what is JUG, let me brief a little.</description>
+    </item>
+    
+    <item>
+      <title>ভবিষ্যৎ জাভা ডেভলপারদের স্বাধীনতা</title>
+      <link>http://bazlur.com/p67/</link>
+      <pubDate>Sat, 31 Mar 2012 00:30:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p67/</guid>
+      <description>তোমরা কি জানো ব্রাজিলে সবচেয়ে জনপ্রিয় টেকনোলজি হচ্ছে জাভা, হয়তো অনেকেই জেনে থাকবে, না জানলেও সমস্যা নেই, এখন জেনে নাও। আজকে একজন ব্রাজিলিয়ান এর সাথে পরিচয় করিয়ে দেবো যার নাম হচ্ছে ব্রুনো সোজা। তাকে সাধারণত জাভা-মানব বলে ডাকা হয়। এই জাভা-মানব সত্যিকার অর্থেই জাভা-মানব। তার সব কাজ জাভা নিয়ে। তিনি সুজাভা (SouJava-Java Technology Users Society) এর প্রতিষ্ঠাতা। তাকে নিয়ে গুগল করলেই অনেক কিছু জানতে পারবে। আমি নিচে তার ব্লগ লিংক এবং টুইটার আইডি দিয়ে দেবো, তোমরা ইচ্ছে করলে তাকে ফলো করতে পারো। যাহোক কিছুদিন আগে ভবিষ্যৎ জাভা ডেভেলপার নিয়ে একটি প্রজেন্টেশান দিয়েছেন। তার একটা ইন্টারভিও আমি পড়লাম। সেখানে তিনি ভবিষ্যৎ জাভা ডেপলপার দের কিছু স্বাধীনতার কথা বলেছেন। আমার আজকের নোটটি হবে সেগুলো নিয়ে। তোমাদের যদি সেগুলো ভাল লাগে, তাহলে নিজেকে জাভা ডেভেলপার হিসেবে তৈরি করতে পারো।</description>
+    </item>
+    
+  </channel>
+</rss>

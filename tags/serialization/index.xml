@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>serialization on My Stream of Thoughts</title>
+    <link>http://bazlur.com/tags/serialization/</link>
+    <description>Recent content in serialization on My Stream of Thoughts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 12 Mar 2018 22:36:41 +0000</lastBuildDate><atom:link href="http://bazlur.com/tags/serialization/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>জাভাতে সিরিয়ালাইজেশন কী (What is serialization in java)?</title>
+      <link>http://bazlur.com/p257/</link>
+      <pubDate>Mon, 12 Mar 2018 22:36:41 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p257/</guid>
+      <description>আমরা জানি যে ক্লাস থেকে অবজেক্ট তৈরি করা হয়। ক্লাসে মূলত একটি অবজেক্টে কী কী প্রোপ্রার্টিজ থাকবে এবং এটি কী কী কাজ করতে পারবে তার বর্ণনা থাকে। কিন্তু যখন নিউ(new) অপারেটর ব্যবহার করে একে অবজেক্ট তৈরি করা হয়, তখন এটি একটি জীবন্ত প্রাণির মতো অবজেক্টে পরিণত হয়। একটি জীবন্ত প্রাণির যেমন অনেকগুলো নিজস্ব ও অনন্য (unique) বৈশিষ্ট্য থাকে (যেমন- নাম, বয়স, ডিএনএ সিকুয়েন্স ইত্যাদি), তেমনি একটি অবজেক্টের একইরকম অনন্য পরিচয় (unique identity) থাকে। প্রত্যেকটি অবজেক্ট কিছু না কিছু স্টেট(state) বা ডেটা থাকে। প্রত্যেকটি অবজেক্টের একটি জীবন চক্র থাকে (life cycle)। এটি নিউ অপারেটর দিয়ে শুরু হয় এবং গারবেজ কালেক্টর(garbage collector) দিয়ে শেষ হয়। এই শুরু এবং শেষ হওয়ার মধ্যবর্তী অবজেক্টের কোনো অবস্থাকে বাইনারী ফরমেটে স্টোর করা যায় এবং সেই একই অবস্থা থেকে পুনর্গঠিত করা যায়।</description>
+    </item>
+    
+    <item>
+      <title>জাভা অবজেক্ট সিরিয়ালাইজেশন (Java serialization)</title>
+      <link>http://bazlur.com/p10/</link>
+      <pubDate>Sat, 24 Jun 2017 03:37:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p10/</guid>
+      <description>public class Person implements Serializable { private String name; private int age; // more properties &amp;amp; methods } return (List&amp;amp;lt;OrderLine&amp;amp;gt;) inputStream.readObject(); } catch (IOException | ClassNotFoundException e) { e.printStackTrace(); } return null; }&amp;lt;/pre&amp;gt;  &amp;lt;pre class=&amp;quot;lang:java decode:true&amp;quot;&amp;gt;package article.serialization;  import java.io.*; import java.util.Arrays; import java.util.List;
+import static article.serialization.Price.; import static article.serialization.Weight.;
+public class Store { public static void main(String[] args) { Product toothPaste = new Product(&amp;ldquo;Tooth Paste&amp;rdquo;, price(1.5), weight(0.5)); Product toothBrush = new Product(&amp;ldquo;Tooth Brush&amp;rdquo;, price(3.</description>
+    </item>
+    
+  </channel>
+</rss>

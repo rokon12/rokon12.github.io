@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>arraylist on My Stream of Thoughts</title>
+    <link>http://bazlur.com/tags/arraylist/</link>
+    <description>Recent content in arraylist on My Stream of Thoughts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 18 Aug 2017 13:17:00 +0000</lastBuildDate><atom:link href="http://bazlur.com/tags/arraylist/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ArrayList ও LinkedList মধ্যে পার্থক্য কী? (Difference between ArrayList and LinkedList in Java)</title>
+      <link>http://bazlur.com/p766/</link>
+      <pubDate>Fri, 18 Aug 2017 13:17:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p766/</guid>
+      <description>&amp;lt;div&amp;gt; [spacer height=&amp;amp;#8221;20px&amp;amp;#8221;] &amp;lt;/div&amp;gt;  public class TemplateService { public static void main(String[] args) { //using LinkedList List&amp;lt;String&amp;gt; countries = new ArrayList&amp;lt;&amp;gt;(); //adding elements to the ArrayList countries.add(&amp;ldquo;Bangladesh&amp;rdquo;); countries.add(&amp;ldquo;India&amp;rdquo;); countries.add(&amp;ldquo;Bhutan&amp;rdquo;); countries.add(&amp;ldquo;Pakistan&amp;rdquo;);
+// searching element by index String bangladesh = countries.get(0);
+//adding element by index countries.add(2, &amp;ldquo;Indonesia&amp;rdquo;);
+//removing element countries.remove(4);
+//using LinkedList List&amp;lt;String&amp;gt; cities = new LinkedList&amp;lt;&amp;gt;(); //adding elements to the LinkedList cities.add(&amp;ldquo;Dhaka&amp;rdquo;); cities.add(&amp;ldquo;London&amp;rdquo;); cities.add(&amp;ldquo;Beijing&amp;rdquo;);
+// searching element by index String dhaka = cities.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>functional programming on My Stream of Thoughts</title>
+    <link>http://bazlur.com/categories/functional-programming/</link>
+    <description>Recent content in functional programming on My Stream of Thoughts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 18 Feb 2017 23:44:00 +0000</lastBuildDate><atom:link href="http://bazlur.com/categories/functional-programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ফাংশনাল প্রোগ্রামিং কী  (What is functional programming)</title>
+      <link>http://bazlur.com/p31/</link>
+      <pubDate>Sat, 18 Feb 2017 23:44:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p31/</guid>
+      <description>&amp;lt;p&amp;gt; এই সাইড ইফেক্ট না থাকার অনেকগুলো অর্থ হয়। কোনো ফাংশন কলের ফলে নিচের কাজগুলো হবে না &amp;amp;#8211;&amp;lt;br /&amp;gt;১. কোনো ভ্যারিয়েবল পরিবর্তন হবে না। &amp;lt;br /&amp;gt;২. কনসোল বা স্ক্রিনে কোনো কিছু প্রিন্ট হবে না। &amp;lt;br /&amp;gt;৩. ডাটাবেইজ, নেটওয়ার্ক বা অন্যকোনো ডিভাইসে ডেটা রাইট হবে না। &amp;lt;br /&amp;gt;৪. কোনোরকম এক্সেপশন থ্রু করবে না। &amp;lt;br /&amp;gt;ইত্যাদি &amp;lt;/p&amp;gt; &amp;lt;div style=&amp;quot;line-height: 100%; text-align: justify;&amp;quot;&amp;gt; &amp;lt;/div&amp;gt;  &amp;lt;p&amp;gt; রেফারেন্সিয়াল ট্রান্সপারেন্ট ফাংশনের আরও বেশ কয়েকটি বেশিষ্ট্য হলো &amp;amp;#8211; &amp;lt;/p&amp;gt; &amp;lt;p&amp;gt; ১.</description>
+    </item>
+    
+  </channel>
+</rss>

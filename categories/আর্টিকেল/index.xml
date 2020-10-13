@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>আর্টিকেল on My Stream of Thoughts</title>
+    <link>http://bazlur.com/categories/%E0%A6%86%E0%A6%B0%E0%A7%8D%E0%A6%9F%E0%A6%BF%E0%A6%95%E0%A7%87%E0%A6%B2/</link>
+    <description>Recent content in আর্টিকেল on My Stream of Thoughts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 17 Mar 2018 22:05:00 +0000</lastBuildDate><atom:link href="http://bazlur.com/categories/%E0%A6%86%E0%A6%B0%E0%A7%8D%E0%A6%9F%E0%A6%BF%E0%A6%95%E0%A7%87%E0%A6%B2/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>জাভা সুইয়িং ব্যবহার করে একটি ক্যালকুলেটর</title>
+      <link>http://bazlur.com/p275/</link>
+      <pubDate>Sat, 17 Mar 2018 22:05:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p275/</guid>
+      <description>একদম শুরুতে যখন আমার জাভা প্রোগ্রামিংয়ের হাতে খড়ি বলা যায়, তখন জাভার সুইয়িং ব্যবহার করে একটি ক্যালকুলেটর তৈরি করেছিলাম।
+এটি একটি ফোরামে দিয়েছিলাম। সেখানে অনেকেই পছন্দ করেছিল। হঠাৎ করেই পেয়ে গেলাম প্রায় ৮ বছর আগের একটি কোড।
+আজকের এই পোস্টে এই কোডটি শেয়ার করছি।
+  ওপরের কোডগুলো কপি করে রান করুন। তাহলে পেয়ে যাবেন একটি সিম্পল ক্যালকুলেটর।</description>
+    </item>
+    
+    <item>
+      <title>জাভাতে সিরিয়ালাইজেশন কী (What is serialization in java)?</title>
+      <link>http://bazlur.com/p257/</link>
+      <pubDate>Mon, 12 Mar 2018 22:36:41 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p257/</guid>
+      <description>আমরা জানি যে ক্লাস থেকে অবজেক্ট তৈরি করা হয়। ক্লাসে মূলত একটি অবজেক্টে কী কী প্রোপ্রার্টিজ থাকবে এবং এটি কী কী কাজ করতে পারবে তার বর্ণনা থাকে। কিন্তু যখন নিউ(new) অপারেটর ব্যবহার করে একে অবজেক্ট তৈরি করা হয়, তখন এটি একটি জীবন্ত প্রাণির মতো অবজেক্টে পরিণত হয়। একটি জীবন্ত প্রাণির যেমন অনেকগুলো নিজস্ব ও অনন্য (unique) বৈশিষ্ট্য থাকে (যেমন- নাম, বয়স, ডিএনএ সিকুয়েন্স ইত্যাদি), তেমনি একটি অবজেক্টের একইরকম অনন্য পরিচয় (unique identity) থাকে। প্রত্যেকটি অবজেক্ট কিছু না কিছু স্টেট(state) বা ডেটা থাকে। প্রত্যেকটি অবজেক্টের একটি জীবন চক্র থাকে (life cycle)। এটি নিউ অপারেটর দিয়ে শুরু হয় এবং গারবেজ কালেক্টর(garbage collector) দিয়ে শেষ হয়। এই শুরু এবং শেষ হওয়ার মধ্যবর্তী অবজেক্টের কোনো অবস্থাকে বাইনারী ফরমেটে স্টোর করা যায় এবং সেই একই অবস্থা থেকে পুনর্গঠিত করা যায়।</description>
+    </item>
+    
+    <item>
+      <title>জাভাতে অবজেক্ট ক্লোনিং কী(What is object cloning in java)?</title>
+      <link>http://bazlur.com/p253/</link>
+      <pubDate>Mon, 12 Mar 2018 22:32:37 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p253/</guid>
+      <description>ক্লােন শব্দের অর্থ হুবহু কপি করা। অবজেক্ট ক্লাোনিংয়ের অর্থ একই রকম আরেকটি অবজেক্ট তৈরি করা।
+আমরা জানি যে ক্লাস থেকে অবজেক্ট তৈরি করা হয়। একটি ক্লাস থেকে একাধিক অবজেক্ট তৈরি করা যায়। প্রত্যেকটি অবেজেক্টের আলাদা আলদা স্টেট থাকে। অর্থাৎ অবজেক্টগুলো সম্পূর্ণ ভিন্ন হয়। তবে কখনো কখনো একটি অবজেক্টের স্টেটগুলো নিয়ে আরেকটি সম্পূর্ণ একইরকম অবজেক্ট তৈরি করার প্রয়োজন হয়। একইরকম অবজেক্ট তৈরির এই প্রক্রিয়াকে অবজেক্ট ক্লোনিং বলা হয়।
+উদাহরণসরূপ নিজের উদাহরণটি দেখা যাক –</description>
+    </item>
+    
+    <item>
+      <title>জাভাতে প্যাকেজিং কী? কীভাবে প্যাকেজ ইম্পোর্ট করতে হয় ?</title>
+      <link>http://bazlur.com/p247/</link>
+      <pubDate>Mon, 12 Mar 2018 22:08:47 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p247/</guid>
+      <description>আমরা কম্পিউটারে নানা ধরনের ফাইল বিভিন্ন ফোল্ডারে সাজিয়ে রাখি। যেমন- মুভি ফোল্ডারে হয়তো আমরা শুধুই মুভি রাখি, সেখানে অন্য কোনো ফাইল রাখি না। আবার মুভি ফোল্ডারে এর মধ্যে সাব-ফোল্ডার তৈরি করি আরও আলাদা করার জন্য, যেমন – বাংলা মুভি, ইংরেজি মুভি ইত্যাদি। জাভাতে প্যাকেজ বলতে এই ধারণাটিকেই বোঝায়। একটি জাভা প্রোগ্রামিং ভাষায় লেখা সফ্টওয়্যারে শত শত বা হাজার হাজার পৃথক ক্লাস থাকতে পারে। এজন্য প্যাকেজ ডিক্লেয়ারেশনের মাধ্যমে একই রকম ক্লাসগুলো একাধিক প্যাকেজের মধ্যে আলাদা করে রাখা হয়। এছাড়াও অনেক সময় একই নামের একাধিক ক্লাস লেখার প্রয়োজন হতে পারে যা পরম্পরবিরোধী। এক্ষেত্রে একই নামের ক্লাস বিভিন্ন প্যাকেজে রাখা যেতে পারে।</description>
+    </item>
+    
+    <item>
+      <title>Java তে Null Pointer Exception কী? কীভাবে একে Handle করা যায়?</title>
+      <link>http://bazlur.com/p243/</link>
+      <pubDate>Mon, 12 Mar 2018 22:01:13 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p243/</guid>
+      <description>কোনো ভেরিয়েবল যদি কোনো অবজেক্টের রেফারেন্স না রাখে,তাহলে সেই ভেরিয়েবল মূলত একটি নাল রেফারেন্স বা শূণ্য রেফারেন্স ধরে রাখে। সেই ভেরিয়েবল নিয়ে কোনো কাজ করতে চাই, তাহলে জাভা ভার্চুয়াল মেশিন এই এক্সেপশন থ্রো করে। বেশ কয়েকটি জায়গায় এই এক্সেপশন থ্রো হতে পারে। যেমন-
+১. একটি ক্লাসের অবজেক্ট তৈরি না করেই সেই ক্লাসের কোনো মেথড করলে। তবে সেই ক্লাসের স্ট্যাটিক মেথড কল করা হলে NullPointerException (NPE) থ্রো হবে না।
+২. কোনো ভেরিয়েবলের টাইপ যদি ক্লাস হয় এবং এটি যদি নাল(null) হয়, তাহলে সেই ভেরিয়েবলের কোনো ফ্লিল্ড পরিবর্তন না অ্যাকসেস করতে গেলে NPE থ্রো হবে।</description>
+    </item>
+    
+    <item>
+      <title>জাভা থ্রেড প্রোগ্রামিংঃ ডেটা রেইস (Java Thread Programming: Data Race)</title>
+      <link>http://bazlur.com/p233/</link>
+      <pubDate>Wed, 07 Mar 2018 14:24:28 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p233/</guid>
+      <description>আমরা যখনি একাধিক থ্রেডের জন্য কোড লিখব তখনি আমাদের চিন্তা করতে হবে যে, এই কোডটি থ্রেড সেফ কি না। থ্রেইড সেইফের সহজ সংজ্ঞা আমরা জানি। এর অর্থ হলো, কোড সঠিকভাবে কাজ করবে। আমরা যখন একটি প্রোগ্রাম লিখি, সেই ক্লাসের একটি স্পেসিফিকেশন থাকে। আমরা সাধারণত প্রোগ্রাম লেখার সময় এর ফরমাল কোনো স্পেসিফিকেশন লিখি না, তবে এই ক্লাসের উদ্দেশ্য সম্পর্কে আমাদের ধারণা থাকে। প্রোগ্রামটিকে রান করা হলে এর ফলাফল সম্পর্কে আমাদের একটি পরিষ্কার ধারণা থাকে। এই প্রোগ্রামটি হয়তো একটি থ্রেড দিয়ে রান করলে যে ফলাফল দেয় সেই সম্পর্কে আমাদের আস্থা থাকে। একই প্রোগ্রামটি যদি একাধিক থ্রেডে রান করা হয়, তাহলে যদি আগের মতো একই রকম আস্থা আমাদের থাকে, তাহলে সেই প্রোগ্রামটিকে আমরা থ্রেড সেফ বলতে পারি।</description>
+    </item>
+    
+    <item>
+      <title>প্রশ্ন: Checked Exception এবং Unchecked Exception এর মধ্যে পার্থক্য কী?</title>
+      <link>http://bazlur.com/p149/</link>
+      <pubDate>Mon, 29 Jan 2018 00:01:22 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p149/</guid>
+      <description>প্রোগ্রাম লিখতে গেলে নানা রকম সমস্যা হয়। কিছু সমস্যা সিস্টেম থেকে হতে পারে, আবার কিছু সসমস্যা প্রোগ্রাম লেখার সময় ভুলের জন্য হতে পারে। যেমন- আমরা যদি ডেটাবেজই সম্পর্কিত কোনো কোড লিখি, কোনো কারণে ইন্টারনেট কানেকাশন বন্ধ হয়ে যেতে পারে, এবং আমরা ডেটাবেইজে কানেক্ট করতে না পারি। আবার কোনো সিকুয়েল কোডে যে বিশেষ আর্গুমেন্টটি পাস করার কথা ছিল সেটি না করলে সিকুয়েলটি ঠিকমতো এক্সিকিউট হবে না এমন হতে পারে। এরকম পরিস্থিতিতে আমাদের অ্যাপ্লিকেশন কোড একধরেণের এক্সেপশন থ্রু করে জানান দেয় যে কোনো রকম সমস্যা হয়েছে।</description>
+    </item>
+    
+    <item>
+      <title>কীভাবে মার্শাল আর্টের ধারণা আপনাকে জাভাতে মাস্টার হতে সাহায্য করে? (How martial art helps you to master Java)</title>
+      <link>http://bazlur.com/p767/</link>
+      <pubDate>Thu, 03 Aug 2017 14:27:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p767/</guid>
+      <description>Shu, Ha, Ri এই শব্দ তিনটি এসেছে জাপানি মার্শাল আর্টসের কনসেপ্ট থেকে। এটি সাধারণত কোনো কিছু শেখার ক্ষেত্রে ব্যবহার করা হয়। শব্দ তিনটির অর্থ করলে দাঁড়ায় –
+১. shu (守) “protect”, “obey” বা মান্য করা
+২. ha (破) “detach”, “digress”, “break” ভাঙ্গা বা বিচ্ছিন্ন করা
+৩. ri (離) “leave”, “separate” আলাদা হওয়া
+জাভা প্রোগ্রামিং শেখার ক্ষেত্রে এই তিনটি ধারণা ব্যবহার করা যেতে পারে। কীভাবে তা নিয়েই এই আলোচনা-
+প্রথমেই সু, অর্থাৎ এখানে প্রত্যেক শিক্ষানবিসদের যে কোনো একটি বই নিয়ে পড়তে শুরু করা উচিৎ(প্রথম পৃষ্টা থেকে একদম শেষ পৃষ্ঠা পর্যন্ত )। বইয়ে যে অনুশীলনীগুলো রয়েছে সেগুলো ভালোভাবে করা। অনেক ক্ষেত্রে বুঝতে অসুবিধা হতে পারে। না বুঝলেও সমস্যা নেই, তবুও বেশি বেশি করে আয়ত্বের মধ্যে নিয়ে আসা। যেমন- জাভাতে কোনো একটি প্রোগ্রাম রান করতে হলে মেইন মেথড লিখতে হয়। মেইন মেথড কেনো লিখতে হয়, এই ব্যাপারটি এখনই না বুঝলে সমস্যা নেই, বরং –</description>
+    </item>
+    
+    <item>
+      <title>জাভা অবজেক্ট সিরিয়ালাইজেশন (Java serialization)</title>
+      <link>http://bazlur.com/p10/</link>
+      <pubDate>Sat, 24 Jun 2017 03:37:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p10/</guid>
+      <description>public class Person implements Serializable { private String name; private int age; // more properties &amp;amp; methods } return (List&amp;amp;lt;OrderLine&amp;amp;gt;) inputStream.readObject(); } catch (IOException | ClassNotFoundException e) { e.printStackTrace(); } return null; }&amp;lt;/pre&amp;gt;  &amp;lt;pre class=&amp;quot;lang:java decode:true&amp;quot;&amp;gt;package article.serialization;  import java.io.*; import java.util.Arrays; import java.util.List;
+import static article.serialization.Price.; import static article.serialization.Weight.;
+public class Store { public static void main(String[] args) { Product toothPaste = new Product(&amp;ldquo;Tooth Paste&amp;rdquo;, price(1.5), weight(0.5)); Product toothBrush = new Product(&amp;ldquo;Tooth Brush&amp;rdquo;, price(3.</description>
+    </item>
+    
+    <item>
+      <title>জাভাতে কীভাবে ফাইল কপি করা যায়(File Copying in Java)</title>
+      <link>http://bazlur.com/p21/</link>
+      <pubDate>Wed, 22 Mar 2017 14:08:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p21/</guid>
+      <description>জাভাতে বিভিন্নভাবে ফাইল কপি করা যায়।
+প্রথমে ইনপুট স্ট্রিম ব্যবহার করে ফাইল কপি করতে পারি।
+copy() মেথডটিতে দুটি প্যারামিটার রয়েছে। প্রথমটিতে ফাইলের সোর্সটি স্ট্রিং আকারে দিতে হবে, অর্থাৎ যে ফাইলটি কপি করা হবে তার পাথ। দ্বিতীয়টি যেখানে ফাইলটি কপি করা হবে। এটি ডেস্টিনেশন ফাইল। এই ফাইলটি সিস্টেমে না থাকলে নতুন করে তৈরি হবে। আর যদি ফাইলটি আগে থেকেই তৈরি করা থাকে, তাহলে এর কন্টেন্ট রিপ্লেস হবে।
+এতে প্রথমে একটি ইনপুট স্ট্রিম ব্যবহার করা হয়েছে যা দিয়ে ফাইল থেকে ডেটা পড়া হয়, এবং একটি আউটপুট স্ট্রিম ব্যবহার করা হয়েছে যা দিয়ে ডেস্টিনেশন ফাইলে রাইট করা হয়।</description>
+    </item>
+    
+    <item>
+      <title>সফটওয়্যার ডেভেলপার এবং সফটওয়্যার ইঞ্জিনিয়ারের মধ্যে পার্থক্য কী (What is the difference between software developer and software engineer)</title>
+      <link>http://bazlur.com/p22/</link>
+      <pubDate>Thu, 16 Mar 2017 20:58:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p22/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>জাভা দিয়ে ওয়েব ক্রলার (Java Web Crawler Implementation)</title>
+      <link>http://bazlur.com/p29/</link>
+      <pubDate>Sun, 19 Feb 2017 20:40:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p29/</guid>
+      <description>&amp;lt;p&amp;gt; সোর্সকোডটি পড়ে বোঝার চেষ্টা করুন। কোনো ফিডব্যাক বা উন্নতি করার উপায় থাকলে ক্লোন করে পুল রিকোয়েস্ট পাঠাতে পারেন।&amp;amp;nbsp; &amp;lt;/p&amp;gt;  </description>
+    </item>
+    
+    <item>
+      <title>জাভা কী পাস-বাই-ভ্যালু (Pass-by-Value)</title>
+      <link>http://bazlur.com/p35/</link>
+      <pubDate>Wed, 08 Feb 2017 17:55:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p35/</guid>
+      <description>&amp;lt;p&amp;gt; এই প্রশ্ন দুটির উত্তর দিতে হলে আমাদের জানতে হবে অবজেক্টের রেফারেন্স কী। &amp;lt;/p&amp;gt; &amp;lt;p&amp;gt; জাভাতে অবজেক্টগুলো প্রোগ্রাম মেমোরির হিপ অংশে থাকে। এর একটি ঠিকানা বা অ্যাড্রেস আছে। ভ্যারিয়েবল মূলত সেই অবজেক্টের অ্যাড্রেস ধরে রাখে যাকে আমরা বলি অবজেক্টের রেফারেন্স। আমরা যখন কোনো মেথডে আর্গুমেন্ট হিসেবে একটি ভ্যারিয়েবল বা অবজেক্টের রেফারেন্স পাস করি তখন আসলে সেই অবজেক্টের রেফারেন্সটি পাঠাই না বরং সেই রেফারেন্সের একটি কপি পাঠাই। কোনো একটি অবজেক্টের রেফারেন্স ভ্যালু যদি হয়, 66d3c617 তাহলে মেথড আর্গুমেন্ট হিসেবে এই সংখ্যাটির একটি কপি আর্গুমেন্ট হিসেবে যায়। এর মানে দাঁড়ায় আমরা আসলে রেফারেন্সটি পাঠাচ্ছি না বরং সেই রেফারেন্সের কপি পাঠাচ্ছি। &amp;lt;/p&amp;gt;  &amp;lt;p&amp;gt; এতে করে আমরা সহজেই বলতে পারি জাভা পাস-বাই-রেফারেন্স-ভ্যালু (Pass-by-Reference-Value) বা পাস-বাই-কপি-অব-দি-ভ্যারিয়েবল-ভ্যালু (Pass-by-Copy-of-the-Variable-Value) অথবা সহজে পাস-বাই-ভ্যালু (Pass-by-Value)। &amp;lt;/p&amp;gt;  </description>
+    </item>
+    
+    <item>
+      <title>ক্যারেক্টার সেট (Character Set)</title>
+      <link>http://bazlur.com/p37/</link>
+      <pubDate>Sat, 04 Feb 2017 07:04:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p37/</guid>
+      <description>&amp;lt;td bgcolor=&amp;quot;#e5e5e5&amp;quot; style=&amp;quot;border: 1px solid #00000a; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in; padding-top: 0in;&amp;quot; width=&amp;quot;112&amp;quot;&amp;gt; &amp;lt;div style=&amp;quot;margin-top: 0.08in;&amp;quot;&amp;gt; Encoding &amp;lt;/div&amp;gt; &amp;lt;/td&amp;gt; &amp;lt;td bgcolor=&amp;quot;#e5e5e5&amp;quot; style=&amp;quot;border: 1px solid #00000a; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in; padding-top: 0in;&amp;quot; width=&amp;quot;321&amp;quot;&amp;gt; &amp;lt;div style=&amp;quot;margin-top: 0.08in;&amp;quot;&amp;gt; Bits &amp;lt;/div&amp;gt; &amp;lt;/td&amp;gt; &amp;lt;/tr&amp;gt; &amp;lt;tr valign=&amp;quot;top&amp;quot;&amp;gt; &amp;lt;td style=&amp;quot;border: 1px solid #00000a; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in; padding-top: 0in;&amp;quot; width=&amp;quot;64&amp;quot;&amp;gt; &amp;lt;div style=&amp;quot;margin-top: 0.08in;&amp;quot;&amp;gt; A &amp;lt;/div&amp;gt; &amp;lt;/td&amp;gt; &amp;lt;td style=&amp;quot;border: 1px solid #00000a; padding-bottom: 0in; padding-left: 0.</description>
+    </item>
+    
+    <item>
+      <title>কেনো জাভা শেখা উচিত ?</title>
+      <link>http://bazlur.com/p41/</link>
+      <pubDate>Fri, 27 Jan 2017 16:20:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p41/</guid>
+      <description>&amp;lt;p&amp;gt; &amp;lt;b&amp;gt;&amp;lt;u&amp;gt;পাদটীকা&amp;lt;/u&amp;gt;&amp;lt;/b&amp;gt; &amp;lt;/p&amp;gt;  </description>
+    </item>
+    
+    <item>
+      <title>প্রোগ্রামিং প্যারাডাইম</title>
+      <link>http://bazlur.com/p44/</link>
+      <pubDate>Fri, 13 Jan 2017 17:38:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p44/</guid>
+      <description>&amp;lt;div style=&amp;quot;text-align: justify;&amp;quot;&amp;gt; &amp;lt;span style=&amp;quot;font-size: large;&amp;quot;&amp;gt; &amp;lt;/span&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div style=&amp;quot;text-align: justify;&amp;quot;&amp;gt; &amp;lt;span style=&amp;quot;font-size: large;&amp;quot;&amp;gt;এই আলোচনার বিষয়বস্তু হচ্ছে প্রোগ্রামিং স্টাইল। &amp;lt;/span&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div style=&amp;quot;text-align: justify;&amp;quot;&amp;gt; &amp;lt;span style=&amp;quot;font-size: large;&amp;quot;&amp;gt; &amp;lt;/span&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div style=&amp;quot;text-align: justify;&amp;quot;&amp;gt; &amp;lt;span style=&amp;quot;font-size: large;&amp;quot;&amp;gt;উদাহরণসরূপ বলা যেতে পারে যে, আমরা সাবাই পোশাক পড়ি। কিন্তু প্রত্যেকে আলাদা আলাদা পোশাক পড়ে থাকে, বাঙালীদের পোশাকের নিজস্ব স্টাইল রয়েছে। তবে কেউ কেউ ওয়েস্ট্রার্ন ড্রেস পড়তে স্বাচ্ছন্দবোধ করে। আবার কোনো কোনো বিশেষ অনুষ্ঠানে ড্রেস কোড থাকে। তবে আপনি সে রকম পোশাকই পরিধান করুন না কেনো, পোশাক পড়ার মূল কারণ একই।&amp;lt;/span&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div style=&amp;quot;text-align: justify;&amp;quot;&amp;gt; &amp;lt;span style=&amp;quot;font-size: large;&amp;quot;&amp;gt; &amp;lt;/span&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div style=&amp;quot;text-align: justify;&amp;quot;&amp;gt; &amp;lt;span style=&amp;quot;font-size: large;&amp;quot;&amp;gt;একইভাবে প্রোগ্রামিং করার ক্ষেত্রেও এরকম অনেকগুলো স্টাইল রয়েছে। তবে যে স্টাইলেই প্রোগ্রাম লিখুন না কেনো, মূল উদ্দ্যেশ্য কম্পিউটারকে ইনস্ট্রাকশন দেওয়া, তাকে দিয়ে কাজ করিয়ে নেওয়া। &amp;lt;/span&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div style=&amp;quot;text-align: justify;&amp;quot;&amp;gt; &amp;lt;span style=&amp;quot;font-size: large;&amp;quot;&amp;gt; &amp;lt;/span&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div style=&amp;quot;text-align: justify;&amp;quot;&amp;gt; &amp;lt;span style=&amp;quot;font-size: large;&amp;quot;&amp;gt;প্রোগ্রামিংয়ের স্টাইলগুলোকে প্রোগ্রামিং প্যারাডাইমও বলা হয়। প্রোগ্রামিংয়ের বেশ কতগুলো প্যারাডাইম রয়েছে &amp;amp;#8211;&amp;lt;/span&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div style=&amp;quot;text-align: justify;&amp;quot;&amp;gt; &amp;lt;span style=&amp;quot;font-size: large;&amp;quot;&amp;gt; &amp;lt;/span&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div style=&amp;quot;text-align: justify;&amp;quot;&amp;gt; &amp;lt;span style=&amp;quot;font-size: large;&amp;quot;&amp;gt;১.</description>
+    </item>
+    
+    <item>
+      <title>Agile and Scrum</title>
+      <link>http://bazlur.com/p45/</link>
+      <pubDate>Sun, 08 Jan 2017 22:04:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p45/</guid>
+      <description>&amp;lt;p&amp;gt; Agile এর বাংলা অর্থ হতে পারে কর্মদক্ষ কিংবা চটপটে। অর্থাৎ যা খুব সহজে নিজেকে পরিবর্তন করতে পারে প্রয়োজন অনুসারে। &amp;lt;/p&amp;gt; &amp;lt;p&amp;gt; সফটওয়্যার ডেভেলপমেন্টের বেশ কয়েকটি পদ্ধতি বা মেথডোলজি রয়েছে। যেমন- ওয়াটারফল ডেভেলপমেন্ট, প্রোটোটাইপিং, স্পাইরাল, রেপিড সফটওয়্যার ডেভেলপমেন্ট, অ্যাজাইল সফটওয়্যারড ডেভেলপমেন্ট ইত্যাদি। এগুলো বিভিন্ন সফটওয়্যার ইনড্রাস্টিতে ব্যবহার করা হয়। এগুলোর মধ্যে বর্তমানে অ্যাজাইল অনেক বেশি প্রচলিত এবং বলা যায় যে সব সফটওয়্যার ইনড্রাস্ট্রি এই মেথডোলজির দিকে ধাবিত হচ্ছে। &amp;lt;/p&amp;gt; &amp;lt;p&amp;gt; একটা সফটওয়্যার তৈরি করার জন্যে বেশ কতগুলো প্রক্রিয়ার মধ্য দিয়ে যেতে হয়। মনে করুন, আপনি একজন সফটওয়্যার ডেভেলপার। আপনাকে একজন আইডিয়া দিল যে তার একটি ই-কমার্স ওয়েবসাইট লাগবে যা ব্যবহার করে যে কেউ বিভিন্ন পণ্য কিনতে পারবে। এটি একটা আইডিয়া। আপনি এই আইডিয়া নিয়ে বিশ্লেষণ করতে বসে গেলেন। সবকিছু চুলচেড়া বিশ্লেষণ হয়ে গেলে আপনি একটা ডিজাইন করলেন। ডিজাইন সম্পূর্ণ করার পর আপনি তা তৈরি করতে বসে গেলেন। সম্পূর্ণ সফ্টওয়্যার তৈরি করার পর আপনি টেস্ট করলেন ভাল করে। সবকিছু ঠিকঠাক থাকলে আপনার সাইটটি তৈরি হয়ে গেলো। &amp;lt;/p&amp;gt; &amp;lt;p&amp;gt; ওপরের উপায়টিকে ওয়াটারফল মেথডোলজি(waterfall methodology) বলা হয়। তবে এর একটা সমস্যা হলো, আপনার ডেভেলপমেন্ট করার পর আগেই সবকিছু ঠিকঠাক করে ডিজাইন করতে হবে। একটা স্টেজে থেকে আরেকটি স্টেজে যাওয়ার সময় কোনোরকম ভুল করার উপায় নেই। আপনি যখন রিকোয়ারমেন্ট নিয়ে বিশ্লেষণ বা ডিজাইন করছেন তখন কিন্তু মূল প্রোডাক্ট বা সাইটটি তৈরি হয়নি। আপনি যখন পুরোপুরি তৈরি করে ফেললেন তখন আপনার ক্লায়েন্টকে দেখালেন। কিন্তু ক্লায়েন্ট হয়তো সাইটটি দেখে বললো, না আমিতো এভাবে চাইনি। এটি এভাবে করতে হবে। ইতিমধ্যে আপনি পুরো সফটওয়্যার তৈরি করে ফেলেছেন, এখন আর পরিবর্তন করার কোন উপায় নেই। করতে গেলে পুরো প্রক্রিয়ার মধ্যে দিয়ে আবার যেতে হবে যা কষ্টসাধ্য। &amp;lt;/p&amp;gt; &amp;lt;p&amp;gt; এরকম সমস্যা সমাধান করার জন্য অ্যাজাইল মেথডোলজি বলে, না আমরা পুরো সফটওয়্যার সিস্টেমটি একবারে না তৈরি করে একে ছোট ছোট কতগুলো অংশে বিভক্ত করবো। যেমন- যেকোনো সাইটের একটি হোম পেইজ থাকে, ইউজারের রেজিস্ট্রেশন করার জন্য একটি উপায় থাকে। তারপর প্রোডাক্ট লিস্ট করার জন্য একটি ফর্ম থাকে ইত্যাদি। অ্যাজাইলের মতে প্রথমে আমরা একটা ছোট অংশ নিয়ে কাজ শুরু করি, মনে করুন, সেটা হতে পারে ইউজার রেজিস্ট্রেশন সিস্টেম। এটি নিয়ে বিশ্লেষণ, ডিজাইন, ডেভেলপমেন্ট, টেস্ট করে ক্লায়েন্টকে দেখালেন যে এইভাবে সাইটের রেজিস্ট্রেশন সিস্টেম কাজ করবে। ক্লায়েন্ট দেখে ফিডব্যাক দিলো যে তারা কয়েকটি জিনিস পরিবর্তন করতে চায়। অ্যাজাইল সিস্টেম ফিডব্যাক নিয়ে সাথে সাথে সেই পরিবর্তনগুলো করে ফেলবে। তারপর নতুন অংশতে চলে যাবে। এতে সুবিধা হচ্ছে যেকোনো ভুল হলে খুব অল্প সময়ের ব্যবধানে ঠিক করে ফেলা যাচ্ছে। এতে করে রিস্ক কমে যাচ্ছে( পুরো সিস্টেম তৈরি করার পর পুনরায় করতে হচ্ছে না) এবং ক্লায়েন্টকে অল্প সময়েই কিছু ডেলিভার করা যাচ্ছে এবং তারা ব্যবহার করতে পারছে। &amp;lt;/p&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div style=&amp;quot;text-align: justify;&amp;quot;&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div style=&amp;quot;text-align: justify;&amp;quot;&amp;gt; অ্যাজাইলের ১২ টি ম্যানিফেস্টো রয়েছে। &amp;lt;/div&amp;gt;  &amp;lt;div style=&amp;quot;text-align: justify;&amp;quot;&amp;gt; http://agilemanifesto.</description>
+    </item>
+    
+    <item>
+      <title>Act with Prudence</title>
+      <link>http://bazlur.com/p46/</link>
+      <pubDate>Thu, 05 Jan 2017 18:38:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p46/</guid>
+      <description>&amp;lt;div style=&amp;quot;text-align: justify;&amp;quot;&amp;gt; &amp;lt;a href=&amp;quot;https://l.facebook.com/l.php?u=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FKevlin_Henney&amp;amp;h=cAQHpjRqM&amp;amp;s=1&amp;quot;&amp;gt;Kevlin Henney&amp;lt;/a&amp;gt; এর একট বই আছে, নাম &amp;lt;b&amp;gt;&amp;lt;i&amp;gt;97 Things Every Programmer Should Know&amp;lt;/i&amp;gt;&amp;lt;/b&amp;gt;.&amp;amp;nbsp; &amp;lt;/div&amp;gt; &amp;lt;div style=&amp;quot;text-align: justify;&amp;quot;&amp;gt; &amp;lt;/div&amp;gt;  &amp;lt;div style=&amp;quot;text-align: justify;&amp;quot;&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div&amp;gt; &amp;lt;div style=&amp;quot;text-align: justify;&amp;quot;&amp;gt; Prudence শব্দের অর্থ দূরদর্শিতা বা বিচক্ষণতা।&amp;amp;nbsp; &amp;lt;/div&amp;gt; &amp;lt;div style=&amp;quot;text-align: justify;&amp;quot;&amp;gt; লাইনটার মানে দাড়ায় &amp;amp;#8211; বিচক্ষণতা সহিত কাজ কর।&amp;amp;nbsp; &amp;lt;/div&amp;gt; &amp;lt;div&amp;gt; &amp;lt;div style=&amp;quot;text-align: justify;&amp;quot;&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div style=&amp;quot;text-align: justify;&amp;quot;&amp;gt; এবার মূল আলোচনায় চলে আসি। আলোচনার বিষয়বস্তু টেকনিক্যাল ডেব্ট(technical debt) &amp;lt;/div&amp;gt; &amp;lt;div style=&amp;quot;text-align: justify;&amp;quot;&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div&amp;gt; &amp;lt;div style=&amp;quot;text-align: justify;&amp;quot;&amp;gt; এই জিনিস খায় না মাথায় দেয় তাই বলছি-&amp;amp;nbsp; &amp;lt;/div&amp;gt; &amp;lt;div style=&amp;quot;text-align: justify;&amp;quot;&amp;gt; লোন নেওয়ার স্বল্পকালিন কিছু সুবিধা আছে। আমার হয়তো কিছু টাকার দরকার পড়েছে, আমি ব্যাংক থেকে লোন নিয়ে সাময়িক প্রয়োজনটা মেটাতে পারি। যেকোনো লোনের দীর্ঘ মেয়াদী ফলাফল মোটেও ভালো নয় এই জিনিস সবাই জানে। যতই দিন যাবে চক্রবৃদ্ধি হারে সুদ বাড়তে থাকবে এবং কোনো একসময় আমি যে পরিমান লোন নিয়েছিলাম তার থেকে কয়েকগুণ (ক্ষেত্রবিশেষে ৪/৫ গুণ) বেশি টাকা পরিশোধ করতে হয়।&amp;amp;nbsp; &amp;lt;/div&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div&amp;gt; &amp;lt;div style=&amp;quot;text-align: justify;&amp;quot;&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div style=&amp;quot;text-align: justify;&amp;quot;&amp;gt; তবে এই লোন যত তাড়াতাড়ি শোধ করা যায় ততই মঙ্গলজনক (এতে সুদের পরিমান কম থাকে)। মূল বিষয়টা হচ্ছে লোন নেওয়া সাময়িক সুবিধার মনে হলেও এটি মোটেও ভালো কোনো বিষয় নয়।&amp;amp;nbsp; &amp;lt;/div&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div&amp;gt; &amp;lt;div style=&amp;quot;text-align: justify;&amp;quot;&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div style=&amp;quot;text-align: justify;&amp;quot;&amp;gt; টেকনিক্যাল ডেব্‌ট মূলত রুপক অর্থে ব্যবহৃত(metaphorical term) শব্দ। যেকোনো কাজের কিছু নিয়ম কানুন(discipline) থাকে। ধরুণ আপনি একটি ব্রিজ তৈরি করতে চান। কোনোরকম শৃঙ্খলা ছাড়া একটি ব্রিজ ইচ্ছমতো বানানো সম্ভব নয়। সিভিল ইঞ্জিনিয়াররা পুরো প্রক্রিয়ার পরিকল্পনা তৈরি করে, এই পরিকল্পনাতে প্রচুর হিসেব নিকেশ থাকে, কীভাবে কোন রিসোর্স কোথায় ব্যবহার করা হবে তা নির্দিষ্ট করা হয়।&amp;amp;nbsp; &amp;lt;/div&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div&amp;gt; &amp;lt;div style=&amp;quot;text-align: justify;&amp;quot;&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div style=&amp;quot;text-align: justify;&amp;quot;&amp;gt; এখন মনে করুণ, আপনি একজন সিভিল ইঞ্জিনিয়ার। আপনার এলাকার একজন মন্ত্রী এসে বললো, এই এলাকার উন্নয়নের জন্যে এই নদীতে একটা ব্রিজ তৈরি করে দিতে চাই। ব্রিজটি খুব দ্রুত বানাতে হবে। ১ সপ্তাহের মধ্যেই বানাতে হবে কারণ আমি জনগণের কাছে ওয়াদা দিয়েছি। এখন আপনি নিশ্চয় খাওয়া দাওয়া বাদ দিয়ে ১ সপ্তাহে তাকে ব্রিজ বানিয়ে দেবেন না। কারণ আপনি ভালোভাবেই জানেন যে, এটি সম্ভব নয়। ব্রিজ তৈরি করার জন্যে প্রথমে জায়গা নির্বাচন করতে হবে। যেখানে ব্রিজ তৈরি করা হবে সেখানের মাটি পরীক্ষা করতে হবে। আরও নানারকম পরিকল্পনা করে তারপর কাজে নেমে যেতে হবে। এবং এই কাজের কোথাও ফাঁকি দেওয়া যাবে না। কারণ কোনোরকম হিসাবের গোলমাল হলে ব্রিজ ভেঙ্গে যেতে পারে ইত্যাদি (আমি সিভিল ইঞ্জিয়ার নয়, সুতরাং সব ডিটেইল জানি না)।&amp;amp;nbsp; &amp;lt;/div&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div&amp;gt; &amp;lt;div style=&amp;quot;text-align: justify;&amp;quot;&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div style=&amp;quot;text-align: justify;&amp;quot;&amp;gt; একজন সফটওয়্যার ইঞ্জিনিয়ারিংয়েরও এমন একটি ডিসিপ্লিন রয়েছে। হুটহাট যা ইচ্ছেমতো এই কাজ করা যায় না। একজন ইঞ্জিনিয়ারের অনেকগুলো ডিজাইন ডিসিপ্লিন শিখতে হয়। নানা করম ডেটাস্ট্রাকচার, এলগরিদম এবং ডিজাইন প্যাটার্ন শিখতে হয়। এইগুলোর ভাল মন্দ আছে। অর্থাৎ একটি প্রক্রিয়া খুব ভালোভাবে করা যায় আবার একটু কম ভালোভাবেও করা যায়। ধরুন, আপনাকে একটা ১০ এর নামতা লেখার জন্যে একটি প্রোগ্রাম লিখতে বলা হলো। আপনি ১০ বার প্রিন্ট মেথড লিখে লিখে দিতে পারেন আবার একটা লুপের মধ্যে একটা প্রিন্ট মেথড ব্যবহার করেও লিখতে পারেন। প্রথম প্রক্রিয়াটি যদিও ১০ এর নামতা প্রিন্ট করবে কিন্তু সেটি আসলে মোটেও ভাল ডিজাইন নয়। এটি সাময়িকভাবে কাজ করলেও পরবর্তীতে ভেঙ্গে পরবে।&amp;amp;nbsp; &amp;lt;/div&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div&amp;gt; &amp;lt;div style=&amp;quot;text-align: justify;&amp;quot;&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div style=&amp;quot;text-align: justify;&amp;quot;&amp;gt; আপনি যখন কোনো প্রোগ্রাম লিখেন বা সফটওয়্যার তৈরি করেন, তখন আপনার সবসময় ভালো ডিজাইনগুলো পছন্দ করার উপায় থাকে। এই সিন্ধান্তটি আপনি ডেভেলপার/প্রোগ্রামার হিসেবে নিবেন। তবে এই পছ্ন্দ যে সবসময় করা যায় তা নয়। কখনো কখনো কাস্টোমারকে খুশি করতে খু্ব দ্রুত একটা আউটপুট তৈরি করতে একটা বাঝে সিন্ধান্ত নিতে হয়। এই বাজে সিন্ধান্তের পেছনে একটি ভালো সিন্ধান্ত ছিল যা আপনি নেননি। একে টেকনিক্যাল ডেবট বলা হয়।&amp;amp;nbsp; &amp;lt;/div&amp;gt; &amp;lt;div style=&amp;quot;text-align: justify;&amp;quot;&amp;gt; এটি অনেকটা ব্যাংক থেকে লোন নেওয়ার মতো। সাময়িকভাবে সুবিধা দিলেও আপানাকে এর সুদ দিয়ে যেতে হবে যতক্ষণ পর্যন্ত আপনি পুরোপুরি মিটিয়ে না দেন।&amp;amp;nbsp; &amp;lt;/div&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div&amp;gt; &amp;lt;div style=&amp;quot;text-align: justify;&amp;quot;&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div style=&amp;quot;text-align: justify;&amp;quot;&amp;gt; অনেকসময় একজন ডেভেলপার/প্রোগ্রামারকে এমন সিন্ধান্তের মুখোমুখি হতে হয় &amp;amp;#8211;&amp;amp;nbsp; &amp;lt;/div&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div&amp;gt; &amp;lt;ol style=&amp;quot;text-align: left;&amp;quot;&amp;gt; &amp;lt;li style=&amp;quot;text-align: justify;&amp;quot;&amp;gt; doing it right.</description>
+    </item>
+    
+    <item>
+      <title>হ্যাশ ফাংশন -২</title>
+      <link>http://bazlur.com/p47/</link>
+      <pubDate>Mon, 21 Nov 2016 17:20:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p47/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>হ্যাশ ফাংশন</title>
+      <link>http://bazlur.com/p48/</link>
+      <pubDate>Sun, 20 Nov 2016 08:25:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p48/</guid>
+      <description>&amp;lt;p&amp;gt; &amp;amp;nbsp; &amp;lt;/p&amp;gt; &amp;lt;p&amp;gt; পরের অংশ: &amp;lt;a href=&amp;quot;https://bazlur.com/%E0%A6%B9%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B6-%E0%A6%AB%E0%A6%BE%E0%A6%82%E0%A6%B6%E0%A6%A8-%E0%A7%A8/&amp;quot; target=&amp;quot;_blank&amp;quot; rel=&amp;quot;noopener noreferrer&amp;quot;&amp;gt;লিংক&amp;lt;/a&amp;gt; &amp;lt;/p&amp;gt;  </description>
+    </item>
+    
+    <item>
+      <title>জাভা কীভাবে কাজ করে এবং কীভাবে ভাল পারফর্ম করে</title>
+      <link>http://bazlur.com/p63/</link>
+      <pubDate>Mon, 22 Sep 2014 17:09:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p63/</guid>
+      <description>জাভা কোড প্রথমে বাইটকোডে কম্পাইলড হয়, তারপর সেটিকে জাভা ভার্চুয়াল মেশিন এক্সিকিউট করে। বাইটকোড হচ্ছে এক ধরনের ইন্টারমিডিয়েড ল্যাংগুয়েজ যা কিনা ঠিক মানুষের পাঠ উপযোগী নয়, আবার মেশিনের জন্য ও নয়। এটি শুধুমাত্র জাভা ভার্চুয়াল মেশিন (JVM)পড়তে পারে। বাইটকোডকে এক্সিকিউট করার জন্য জাভা ভার্চুয়াল মেশিন জাস্ট ইন টাইম (JIT) কম্পাইলার ব্যবহার হরে। JIT বাইটকোড কে সরাসরি ইন্টারপ্রেট করে। এটি রানটাইম-এ বাইটকোড কে ইন্টারপ্রেট করে মেশিন কোড-এ রূপান্তরিত করে যা কিনা সিপিইউ রান করে। এখানে একটি ইন্টারেস্টিং প্রশ্ন হতে পারে, জাভা কি তাহলে ইন্টারেপ্রেটেট ল্যাংগুয়েজ নাকি কম্পাইল্ড ল্যাংগুয়েজ?</description>
+    </item>
+    
+    <item>
+      <title>ভবিষ্যৎ জাভা ডেভলপারদের স্বাধীনতা</title>
+      <link>http://bazlur.com/p67/</link>
+      <pubDate>Sat, 31 Mar 2012 00:30:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p67/</guid>
+      <description>তোমরা কি জানো ব্রাজিলে সবচেয়ে জনপ্রিয় টেকনোলজি হচ্ছে জাভা, হয়তো অনেকেই জেনে থাকবে, না জানলেও সমস্যা নেই, এখন জেনে নাও। আজকে একজন ব্রাজিলিয়ান এর সাথে পরিচয় করিয়ে দেবো যার নাম হচ্ছে ব্রুনো সোজা। তাকে সাধারণত জাভা-মানব বলে ডাকা হয়। এই জাভা-মানব সত্যিকার অর্থেই জাভা-মানব। তার সব কাজ জাভা নিয়ে। তিনি সুজাভা (SouJava-Java Technology Users Society) এর প্রতিষ্ঠাতা। তাকে নিয়ে গুগল করলেই অনেক কিছু জানতে পারবে। আমি নিচে তার ব্লগ লিংক এবং টুইটার আইডি দিয়ে দেবো, তোমরা ইচ্ছে করলে তাকে ফলো করতে পারো। যাহোক কিছুদিন আগে ভবিষ্যৎ জাভা ডেভেলপার নিয়ে একটি প্রজেন্টেশান দিয়েছেন। তার একটা ইন্টারভিও আমি পড়লাম। সেখানে তিনি ভবিষ্যৎ জাভা ডেপলপার দের কিছু স্বাধীনতার কথা বলেছেন। আমার আজকের নোটটি হবে সেগুলো নিয়ে। তোমাদের যদি সেগুলো ভাল লাগে, তাহলে নিজেকে জাভা ডেভেলপার হিসেবে তৈরি করতে পারো।</description>
+    </item>
+    
+  </channel>
+</rss>

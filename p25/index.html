@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Largest known prime number | My Stream of Thoughts</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/about-me/">About me</a></li>
+      
+      <li><a href="/books/">Books</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">Largest known prime number</span></h1>
+<h2 class="author">bazlur_rahman</h2>
+<h2 class="date">2017/03/01</h2>
+</div>
+
+<main>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<pre><code>&lt;p&gt;
+  এতে 17,425,170 টি সংখ্যা রয়েছে। এই সংখ্যাটি দেখতে চাইলে ঝটপট একটি জাভা প্রোগ্রাম লিখে ফেলা যায়। এর জন্য জাভার BigInteger ক্লাসটি প্রয়োজন হবে।
+&lt;/p&gt;
+
+&lt;pre class=&quot;lang:java decode:true &quot;&gt;import java.math.BigInteger;
+</code></pre>
+<p>public class LargestPrimeNumber {
+public static void main(String[] args) {
+BigInteger two = BigInteger.valueOf(2);
+BigInteger largest = two.pow(57_885_161);
+BigInteger largestPrimeNumber = largest.subtract(BigInteger.ONE);
+System.out.println(largestPrimeNumber);
+}
+}<!-- raw HTML omitted --></p>
+<pre><code>&lt;p&gt;
+  &amp;nbsp;
+&lt;/p&gt;
+
+&lt;p&gt;
+  এটি প্রিন্ট হতে বেশ খানিকটা সময় নেবে।
+&lt;/p&gt;
+
+&lt;div style=&quot;clear: both; text-align: center;&quot;&gt;
+  &lt;a style=&quot;margin-left: 1em; margin-right: 1em;&quot; href=&quot;https://4.bp.blogspot.com/-tsU9x9Qi2bA/WLbzv2r_TJI/AAAAAAAACis/E5CuFxRpqzMbSjfUNdVq2JYLJCpe8vfkwCLcB/s1600/largest_prime_number.png&quot;&gt;&lt;img loading=&quot;lazy&quot; src=&quot;https://4.bp.blogspot.com/-tsU9x9Qi2bA/WLbzv2r_TJI/AAAAAAAACis/E5CuFxRpqzMbSjfUNdVq2JYLJCpe8vfkwCLcB/s400/largest_prime_number.png&quot; width=&quot;400&quot; height=&quot;253&quot; border=&quot;0&quot; /&gt;&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;
+  ফাইলে স্টোর করতে চাইলে নিচের কোড অংশটুকু যুক্ত করুন-
+&lt;/p&gt;
+
+&lt;pre class=&quot;&quot;&gt;
+</code></pre>
+<p>try {
+Files.write(Paths.get(&ldquo;prime.txt&rdquo;), largestPrimeNumber.toString().getBytes());
+} catch (IOException e) {
+e.printStackTrace();
+}<!-- raw HTML omitted --></p>
+<pre><code>&lt;div style=&quot;line-height: 100%; margin-bottom: 0in;&quot;&gt;
+&lt;/div&gt;
+</code></pre>
+<!-- raw HTML omitted -->
+<p> </p>
+
+</main>
+
+  <footer>
+  
+<footer>
+  <div>
+    <p>
+    &copy; <a href="https://bazlur.com"> A N M Bazlur Rahman</a> 2012 -- 2020 | <a href="https://github.com/rokon12">Github</a>
+    | <a href=" https://twitter.com/bazlur_rahman"> @bazlur_rahman</a>
+    </p>
+  </div>
+</footer>
+  
+  </footer>
+  </body>
+</html>
+

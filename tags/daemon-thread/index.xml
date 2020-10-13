@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>daemon thread on My Stream of Thoughts</title>
+    <link>http://bazlur.com/tags/daemon-thread/</link>
+    <description>Recent content in daemon thread on My Stream of Thoughts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 28 Jan 2018 22:10:54 +0000</lastBuildDate><atom:link href="http://bazlur.com/tags/daemon-thread/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ডিমন থ্রেড কী(What is daemon thread in java)?</title>
+      <link>http://bazlur.com/p107/</link>
+      <pubDate>Sun, 28 Jan 2018 22:10:54 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p107/</guid>
+      <description>জাভা ভাচুয়াল মেশিন চালু হওয়ার পর কতগুলাে থ্রেড তৈরি হয়। এর মধ্যে মেইন থ্রেড আমাদের কোডগুলো এক্সিকিউট করে। মেইন থ্রেড থেকে আমরা আরও একাধিক থ্রেড তৈরি করতে পারি। যতক্ষণ পর্যন্ত এই থ্রেডগুলো চলতে থাকে, ততক্ষন পর্যন্ত জাভা ভার্চুয়াল মেশিন চলতে থাকে।
+তবে অনেক সময় কোনো প্রোগ্রামের একটি প্রধান থ্রেডের সঙ্গে আরও কতগুলো থ্রেড তৈরি করতে হয়, যেগুলো বিভিন্ন সহায়ক কাজ করতে থাকে, কিন্তু প্রধান থ্রেডটি বন্ধ হয়ে গেলে এই সহায়ক থ্রেডগুলো প্রয়োজন নেই। এই সহায়ক থ্রেডগুলোকে ডিমন থ্রেড হিসেবে তৈরি করা যায়।</description>
+    </item>
+    
+  </channel>
+</rss>

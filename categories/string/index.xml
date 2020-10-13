@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>String on My Stream of Thoughts</title>
+    <link>http://bazlur.com/categories/string/</link>
+    <description>Recent content in String on My Stream of Thoughts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 19 Feb 2017 00:39:00 +0000</lastBuildDate><atom:link href="http://bazlur.com/categories/string/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>স্ট্রিং পুল কী (What is String Pool)</title>
+      <link>http://bazlur.com/p30/</link>
+      <pubDate>Sun, 19 Feb 2017 00:39:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/p30/</guid>
+      <description>জাভা ভার্চুয়াল মেশিনে মেমোরি মডেল (Memory Model) দুই ভাবে বিভক্ত। এরা হলো হিপ এবং থ্রেড স্ট্যাক। জাভা অ্যাপ্লিকেশনে যত ধরনের অবজেক্ট তৈরি হয়, সেগুলোর সব থাকে হিপে। স্ট্রিং পুল (String Pool) জাভা হিপের একটি বিশেষ এলাকা।
+জাভাতে স্ট্রিং একটি বহুল ব্যবহৃত ক্লাস। যেহেতু এটি ইমিউটেবল, তাই স্ট্রিং নিয়ে কাজ করার সময় হিপে অনেক নতুন নতুন স্ট্রিং অবজেক্ট তৈরি হয়। এছাড়াও স্ট্রিং অবজেক্ট নিজেও অনেক বেশি মেমোরি নিয়ে থাকে। একটি স্ট্রিং অবজেক্ট কত বাইট মেমোরি নেয় তা হিসাব করে বের করে ফেলা যায়।</description>
+    </item>
+    
+  </channel>
+</rss>
