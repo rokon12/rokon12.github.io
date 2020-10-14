@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>code review on My Stream of Thoughts</title>
+    <link>http://bazlur.com/tags/code-review/</link>
+    <description>Recent content in code review on My Stream of Thoughts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 14 Oct 2020 00:57:21 -0400</lastBuildDate><atom:link href="http://bazlur.com/tags/code-review/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>7 Ways to Improve Your Code Reading Skills</title>
+      <link>http://bazlur.com/2020/10/7-ways-to-improve-your-code-reading-skills/</link>
+      <pubDate>Wed, 14 Oct 2020 00:57:21 -0400</pubDate>
+      
+      <guid>http://bazlur.com/2020/10/7-ways-to-improve-your-code-reading-skills/</guid>
+      <description>Reading source code is in the job description of a software developer. However, this experience is not always pleasant. Not everyone would like to read someone else’s code because they find it boring, sometimes frustrating. There are cases when you start reading someone else’s code but end up getting a bitter feeling because you are not being able to understand it or the code is not well written. Most developers want to focus on writing code rather reading it, not realizing that reading code is also an important skill to have.</description>
+    </item>
+    
+  </channel>
+</rss>

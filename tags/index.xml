@@ -6,7 +6,43 @@
     <description>Recent content in Tags on My Stream of Thoughts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 01 Mar 2019 18:15:46 +0000</lastBuildDate><atom:link href="http://bazlur.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 14 Oct 2020 00:57:21 -0400</lastBuildDate><atom:link href="http://bazlur.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>agile</title>
+      <link>http://bazlur.com/tags/agile/</link>
+      <pubDate>Wed, 14 Oct 2020 00:57:21 -0400</pubDate>
+      
+      <guid>http://bazlur.com/tags/agile/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>code readability</title>
+      <link>http://bazlur.com/tags/code-readability/</link>
+      <pubDate>Wed, 14 Oct 2020 00:57:21 -0400</pubDate>
+      
+      <guid>http://bazlur.com/tags/code-readability/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>code review</title>
+      <link>http://bazlur.com/tags/code-review/</link>
+      <pubDate>Wed, 14 Oct 2020 00:57:21 -0400</pubDate>
+      
+      <guid>http://bazlur.com/tags/code-review/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>source code</title>
+      <link>http://bazlur.com/tags/source-code/</link>
+      <pubDate>Wed, 14 Oct 2020 00:57:21 -0400</pubDate>
+      
+      <guid>http://bazlur.com/tags/source-code/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>advance java</title>
       <link>http://bazlur.com/tags/advance-java/</link>
@@ -373,15 +409,6 @@
       <pubDate>Wed, 25 Jan 2017 15:25:00 +0000</pubDate>
       
       <guid>http://bazlur.com/tags/history-of-java/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>agile</title>
-      <link>http://bazlur.com/tags/agile/</link>
-      <pubDate>Sun, 08 Jan 2017 22:04:00 +0000</pubDate>
-      
-      <guid>http://bazlur.com/tags/agile/</guid>
       <description></description>
     </item>
     

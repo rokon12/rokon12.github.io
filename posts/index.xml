@@ -6,7 +6,16 @@
     <description>Recent content in Posts on My Stream of Thoughts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 06 Mar 2020 00:19:33 +0000</lastBuildDate><atom:link href="http://bazlur.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 14 Oct 2020 00:57:21 -0400</lastBuildDate><atom:link href="http://bazlur.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>7 Ways to Improve Your Code Reading Skills</title>
+      <link>http://bazlur.com/2020/10/7-ways-to-improve-your-code-reading-skills/</link>
+      <pubDate>Wed, 14 Oct 2020 00:57:21 -0400</pubDate>
+      
+      <guid>http://bazlur.com/2020/10/7-ways-to-improve-your-code-reading-skills/</guid>
+      <description>Reading source code is in the job description of a software developer. However, this experience is not always pleasant. Not everyone would like to read someone else’s code because they find it boring, sometimes frustrating. There are cases when you start reading someone else’s code but end up getting a bitter feeling because you are not being able to understand it or the code is not well written. Most developers want to focus on writing code rather reading it, not realizing that reading code is also an important skill to have.</description>
+    </item>
+    
     <item>
       <title>জাভা ওয়েব প্রোগ্রামিং</title>
       <link>http://bazlur.com/posts/2020-03-06-%E0%A6%9C%E0%A6%BE%E0%A6%AD%E0%A6%BE-%E0%A6%93%E0%A6%AF%E0%A6%BC%E0%A7%87%E0%A6%AC-%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A7%8B%E0%A6%97%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%AE%E0%A6%BF/</link>
