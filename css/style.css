@@ -10,7 +10,8 @@ body {
 .menu li { display: inline-block; }
 .article-meta, .menu a {
   text-decoration: none;
-  background: #eee;
+  /*background: #eee;*/
+  line-height: 250%;
   padding: 5px;
   border-radius: 5px;
 }
