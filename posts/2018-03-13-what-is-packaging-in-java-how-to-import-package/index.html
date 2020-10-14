@@ -37,32 +37,34 @@
 <main>
     <p>আমরা কম্পিউটারে নানা ধরনের ফাইল বিভিন্ন ফোল্ডারে সাজিয়ে রাখি। যেমন- মুভি ফোল্ডারে হয়তো আমরা শুধুই মুভি রাখি, সেখানে অন্য কোনো ফাইল রাখি না। আবার মুভি ফোল্ডারে এর মধ্যে সাব-ফোল্ডার তৈরি করি আরও আলাদা করার জন্য, যেমন – বাংলা মুভি, ইংরেজি মুভি ইত্যাদি। জাভাতে প্যাকেজ বলতে এই ধারণাটিকেই বোঝায়। একটি জাভা প্রোগ্রামিং ভাষায় লেখা সফ্টওয়্যারে শত শত বা হাজার হাজার পৃথক ক্লাস থাকতে পারে। এজন্য প্যাকেজ ডিক্লেয়ারেশনের মাধ্যমে একই রকম ক্লাসগুলো একাধিক প্যাকেজের মধ্যে আলাদা করে রাখা হয়। এছাড়াও অনেক সময় একই নামের একাধিক ক্লাস লেখার প্রয়োজন হতে পারে যা পরম্পরবিরোধী। এক্ষেত্রে একই নামের ক্লাস বিভিন্ন প্যাকেজে রাখা যেতে পারে।</p>
 <p>প্যাকেজ তৈরি করতে হলে একটি নাম বাছায় করতে হয় এবং তা ফাইলের শুরুতে প্যাকেজে স্ট্যাটমেন্ট হিসেবে লিখতে হয়। উদাহরণ-</p>
-<pre class="lang:java decode:true ">package pub.dimik.qa;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> pub.dimik.qa<span style="color:#f92672">;</span>
 
-public class Question {
-    private String text;
-    private String subText;
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Question</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">private</span> String text<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">private</span> String subText<span style="color:#f92672">;</span>
 
-    public void validate() {
-    }
-}</pre>
-<p>ওপরের Question ক্লাসটি pub.dimik.qa প্যাকেজে রাখা হয়েছে।</p>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">validate</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>ওপরের Question ক্লাসটি pub.dimik.qa প্যাকেজে রাখা হয়েছে।</p>
 <p>প্যাকেজের নাম বাছায় করার জন্য কতগুলো নিয়মকানুন রয়েছে। এগুলোকে naming convention বলা হয়। যেমন-<br />
 ১. প্যাকেজের নামগুলো ছোট হাতের অক্ষরে (lowercase) লিখতে হয় যাতে করে একই নামে ছোট হাতের বা বড় হাতের নামের সমস্যা এড়ানো যায়।<br />
 ২. সাধারণত বিভিন্ন কোম্পানি বা সফটওয়্যার ডেভেলপমেন্ট হাউজ তাদের ডোমেইনের নাম ব্যবহার করে প্যাকেজ নির্ধারন করে। এক্ষেত্রে শুরুতে টপ লেভেল ডোমেইন (TLD) আগে বসে এবং এরপর ডট (.) দিয়ে পরবর্তীতে ডোমেইনের নাম, এবং আরও একাধিক গ্রুপিং থাকলে তাদের নাম ডট দিয়ে যুক্ত করা হয়। যেমন- কোনো কোম্পানির নাম যদি example.com হয় তাহলে প্যাকেজের নাম হবে, com.example.qa<br />
 ৩. তবে প্যাকেজের নামে কোন সংখ্যা দিয়ে শুরু বা কোনো জাভা কিওয়ার্ড বা বৈধ নয় এমন কোনো অক্ষর ব্যবহার করা যায় না</p>
 <p>একটি প্যাকেজের কোনো ক্লাস অন্য একটি প্যাকেজের ক্লাসে যুক্ত বা ইম্পোর্ট করতে হলে জাভা ফাইলটিতে ইম্পোর্ট স্ট্যাটমেন্ট ব্যবহার করতে হয়। উদাহরণ –</p>
-<pre class="lang:java decode:true ">package pub.dimik.qa;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> pub.dimik.qa<span style="color:#f92672">;</span>
 
-import java.util.ArrayList;
-import java.util.List;
+<span style="color:#f92672">import</span> java.util.ArrayList<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> java.util.List<span style="color:#f92672">;</span>
 
-public class QuestionBank {
-    private List&lt;Question&gt; questions = new ArrayList&lt;&gt;();
-}</pre>
-<p>ওপরের QuestionBank জাভা ক্লাসটিতে প্যাকেজ স্ট্যাটমেন্টের পর কতগুলো import স্ট্যাটমেন্ট ব্যবহার করা হয়েছে। এতে প্রথমে import কিওয়ার্ড ব্যবহার করে যে যে ক্লাসটি ইম্পোর্ট করতে হয় সেই ক্লাসের fully qualified name লিখতে হয় এবং শেষে সেমিকোন ব্যবহার করে স্ট্যাটমেন্ট শেষ করতে হয়।</p>
-<p>কোনো ক্লাসের প্যাকেজ নাম সহ নামকে fully qualified name বলা হয়। উপরের QuestionBank ক্লাসটির fully qualified name হচ্ছে – pub.dimik.qa.QuestionBank</p>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">QuestionBank</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">private</span> List<span style="color:#f92672">&amp;</span>lt<span style="color:#f92672">;</span>Question<span style="color:#f92672">&amp;</span>gt<span style="color:#f92672">;</span> questions <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&amp;</span>lt<span style="color:#f92672">;&amp;</span>gt<span style="color:#f92672">;();</span>
+<span style="color:#f92672">}</span>
+<span style="color:#960050;background-color:#1e0010">````</span>java
 
+ওপর<span style="color:#960050;background-color:#1e0010">ে</span>র QuestionBank জ<span style="color:#960050;background-color:#1e0010">া</span>ভ<span style="color:#960050;background-color:#1e0010">া</span> ক্ল<span style="color:#960050;background-color:#1e0010">া</span>সট<span style="color:#960050;background-color:#1e0010">ি</span>ত<span style="color:#960050;background-color:#1e0010">ে</span> প্য<span style="color:#960050;background-color:#1e0010">া</span>ক<span style="color:#960050;background-color:#1e0010">ে</span>জ স্ট্য<span style="color:#960050;background-color:#1e0010">া</span>টম<span style="color:#960050;background-color:#1e0010">ে</span>ন্ট<span style="color:#960050;background-color:#1e0010">ে</span>র পর কতগুল<span style="color:#960050;background-color:#1e0010">ো</span> <span style="color:#f92672">import</span> স্ট্য<span style="color:#960050;background-color:#1e0010">া</span>টম<span style="color:#960050;background-color:#1e0010">ে</span>ন্ট ব্যবহ<span style="color:#960050;background-color:#1e0010">া</span>র কর<span style="color:#960050;background-color:#1e0010">া</span> হয়<span style="color:#960050;background-color:#1e0010">ে</span>ছ<span style="color:#960050;background-color:#1e0010">ে।</span> এত<span style="color:#960050;background-color:#1e0010">ে</span> প্রথম<span style="color:#960050;background-color:#1e0010">ে</span> <span style="color:#f92672">import</span> ক<span style="color:#960050;background-color:#1e0010">ি</span>ওয়<span style="color:#960050;background-color:#1e0010">া</span>র্ড ব্যবহ<span style="color:#960050;background-color:#1e0010">া</span>র কর<span style="color:#960050;background-color:#1e0010">ে</span> য<span style="color:#960050;background-color:#1e0010">ে</span> য<span style="color:#960050;background-color:#1e0010">ে</span> ক্ল<span style="color:#960050;background-color:#1e0010">া</span>সট<span style="color:#960050;background-color:#1e0010">ি</span> ইম্প<span style="color:#960050;background-color:#1e0010">ো</span>র্ট করত<span style="color:#960050;background-color:#1e0010">ে</span> হয় স<span style="color:#960050;background-color:#1e0010">ে</span>ই ক্ল<span style="color:#960050;background-color:#1e0010">া</span>স<span style="color:#960050;background-color:#1e0010">ে</span>র fully qualified name ল<span style="color:#960050;background-color:#1e0010">ি</span>খত<span style="color:#960050;background-color:#1e0010">ে</span> হয় এব<span style="color:#960050;background-color:#1e0010">ং</span> শ<span style="color:#960050;background-color:#1e0010">ে</span>ষ<span style="color:#960050;background-color:#1e0010">ে</span> স<span style="color:#960050;background-color:#1e0010">ে</span>ম<span style="color:#960050;background-color:#1e0010">ি</span>ক<span style="color:#960050;background-color:#1e0010">ো</span>ন ব্যবহ<span style="color:#960050;background-color:#1e0010">া</span>র কর<span style="color:#960050;background-color:#1e0010">ে</span> স্ট্য<span style="color:#960050;background-color:#1e0010">া</span>টম<span style="color:#960050;background-color:#1e0010">ে</span>ন্ট শ<span style="color:#960050;background-color:#1e0010">ে</span>ষ করত<span style="color:#960050;background-color:#1e0010">ে</span> হয়<span style="color:#960050;background-color:#1e0010">।</span>
+
+ক<span style="color:#960050;background-color:#1e0010">ো</span>ন<span style="color:#960050;background-color:#1e0010">ো</span> ক্ল<span style="color:#960050;background-color:#1e0010">া</span>স<span style="color:#960050;background-color:#1e0010">ে</span>র প্য<span style="color:#960050;background-color:#1e0010">া</span>ক<span style="color:#960050;background-color:#1e0010">ে</span>জ ন<span style="color:#960050;background-color:#1e0010">া</span>ম সহ ন<span style="color:#960050;background-color:#1e0010">া</span>মক<span style="color:#960050;background-color:#1e0010">ে</span> fully qualified name বল<span style="color:#960050;background-color:#1e0010">া</span> হয়<span style="color:#960050;background-color:#1e0010">।</span> উপর<span style="color:#960050;background-color:#1e0010">ে</span>র QuestionBank ক্ল<span style="color:#960050;background-color:#1e0010">া</span>সট<span style="color:#960050;background-color:#1e0010">ি</span>র fully qualified name হচ্ছ<span style="color:#960050;background-color:#1e0010">ে</span> <span style="color:#f92672">&amp;</span><span style="color:#960050;background-color:#1e0010">#</span>8211<span style="color:#f92672">;</span> pub<span style="color:#f92672">.</span><span style="color:#a6e22e">dimik</span><span style="color:#f92672">.</span><span style="color:#a6e22e">qa</span><span style="color:#f92672">.</span><span style="color:#a6e22e">QuestionBank</span></code></pre></div>
 </main>
 
 <p class="post-tag">

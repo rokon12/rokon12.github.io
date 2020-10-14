@@ -35,92 +35,50 @@
 </p>
 
 <main>
-    <div dir="ltr" style="text-align: left;">
-  <div style="text-align: justify;">
-    <p>
-      <b>জাভাতে toString() এর কাজ কী?</b>
-    </p>
-<pre><code>&lt;p&gt;
-  কোনো জাভা অবজেক্টেকে স্ট্রিংয়ে রূপান্তর করতে চাইলে toString() মেথড কল করা হয়। এটি নানা কাজে বিশেষ করে ডিবাগিং কাজে ব্যবহার করা হয়।
-&lt;/p&gt;
-</code></pre>
-  </div>
-  <div style="text-align: justify;">
-    নিচের ক্লাসটি খেয়াল করুন-
-  </div>
-</div>
-<div>
-  <pre class="lang:java decode:true ">public class Employee {
-    private String name;
-    private int age;
-<pre><code>public Employee(String name, int age) {
-    this.name = name;
-    this.age = age;
-}
-</code></pre>
-<p>}<br />
-</pre></p>
-</div>
-<div dir="ltr" style="text-align: left;">
-  <p>
-    <span style="text-align: justify;">এবার একটি অবজেক্ট তৈরি করে toString()মেথড কল করা যাক। </span>
-  </p>
-  <pre class="lang:java decode:true ">    public static void main(String[] args) {
-        Employee employee = new Employee("Rahim", 27);
-        System.out.println(employee.toString());
-    }</pre>
-  <div style="text-align: justify;">
-    এটিকে রান করলে &#8211;
-  </div>
-  <div style="text-align: justify;">
-    <span style="font-family: Courier New, Courier, monospace;"> </span>
-  </div>
-  <div style="text-align: justify;">
-    <a href="mailto:Employee@66d3c617"><span style="font-family: Courier New, Courier, monospace;"><b>Employee@66d3c617</b></span></a>
-  </div>
-  <div style="text-align: justify;">
-  </div>
-  <div style="text-align: justify;">
-    যেহেতু Employee ক্লাসটিতে toString() মেথডটি ওভাররাইড করা হয়নি, তাই এটি Object ক্লাসের toString()মেথডটি কল হয় যা ক্লাস নামের সঙ্গে হ্যাশকোড যুক্ত করে রিটার্ন করেন।
-  </div>
-  <div style="text-align: justify;">
-  </div>
-  <div style="text-align: justify;">
-    অর্থপূর্ণ কোনো কিছু রিটার্ন করতে হলে চলুন এটিকে ওভাররাইড করি।
-  </div>
-</div>
-<div>
-  <pre class="lang:java decode:true ">public class Employee {
-    private String name;
-    private int age;
-<pre><code>public Employee(String name, int age) {
-    this.name = name;
-    this.age = age;
-}
+    <p><strong>জাভাতে toString() এর কাজ কী?</strong></p>
+<p>কোনো জাভা অবজেক্টেকে স্ট্রিংয়ে রূপান্তর করতে চাইলে toString() মেথড কল করা হয়। এটি নানা কাজে বিশেষ করে ডিবাগিং কাজে ব্যবহার করা হয়।</p>
+<p>নিচের ক্লাসটি খেয়াল করুন-</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Employee</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">private</span> String name<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">int</span> age<span style="color:#f92672">;</span>
 
-@Override
-public String toString() {
+    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Employee</span><span style="color:#f92672">(</span>String name<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> age<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> name<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">age</span> <span style="color:#f92672">=</span> age<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>এবার একটি অবজেক্ট তৈরি করে toString()মেথড কল করা যাক।</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#960050;background-color:#1e0010">\</span><span style="color:#f92672">[</span><span style="color:#960050;background-color:#1e0010">\</span><span style="color:#f92672">]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        Employee employee <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Employee<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Rahim&#34;</span><span style="color:#f92672">,</span> 27<span style="color:#f92672">);</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>employee<span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">());</span>
+    <span style="color:#f92672">}</span>
+</code></pre></div><p>এটিকে রান করলে –</p>
+<p><a href="mailto:Employee@66d3c617"><strong>Employee@66d3c617</strong></a></p>
+<p>যেহেতু Employee ক্লাসটিতে toString() মেথডটি ওভাররাইড করা হয়নি, তাই এটি Object ক্লাসের toString()মেথডটি কল হয় যা ক্লাস নামের সঙ্গে হ্যাশকোড যুক্ত করে রিটার্ন করেন।</p>
+<p>অর্থপূর্ণ কোনো কিছু রিটার্ন করতে হলে চলুন এটিকে ওভাররাইড করি।</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Employee</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">private</span> String name<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">int</span> age<span style="color:#f92672">;</span>
 
-    return name + &quot;: &quot; + age;
-}
+    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Employee</span><span style="color:#f92672">(</span>String name<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> age<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> name<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">age</span> <span style="color:#f92672">=</span> age<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
 
-public static void main(String[] args) {
-    Employee employee = new Employee(&quot;Rahim&quot;, 27);
-    System.out.println(employee.toString());
-}
-</code></pre>
-<p>}</pre></p>
-</div>
-<div dir="ltr" style="text-align: left;">
-  <div style="text-align: justify;">
-    এটিকে রান করলে আউটপুট পাওয়া যাবে &#8211;
-  </div>
-  <div style="text-align: justify;">
-  </div>
-  <div style="text-align: justify;">
-    <span style="font-family: Courier New, Courier, monospace;"><b>Rahim: 27</b></span>
-  </div>
-</div>
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">toString</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+
+        <span style="color:#66d9ef">return</span> name <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;: &#34;</span> <span style="color:#f92672">+</span> age<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        Employee employee <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Employee<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Rahim&#34;</span><span style="color:#f92672">,</span> 27<span style="color:#f92672">);</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>employee<span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">());</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>এটিকে রান করলে আউটপুট পাওয়া যাবে –</p>
+<p><strong>Rahim: 27</strong></p>
+
 </main>
 
 <p class="post-tag">

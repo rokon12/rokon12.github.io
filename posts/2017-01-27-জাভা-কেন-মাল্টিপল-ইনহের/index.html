@@ -35,60 +35,20 @@
 </p>
 
 <main>
-    <div dir="ltr" style="text-align: left;">
-  <div style="clear: both; text-align: justify;">
-    এর উত্তর এভাবে দেওয়া যায়। জাভা প্রোগ্রামিং ভাষার ডিজাইনাররা কয়েকটি গুরুত্বপূর্ণ বিষয় মাথায় রেখে এই ভাষাকে ডিজাইন করে। এগুলো হলো,&nbsp;
-  </div>
-  <div style="clear: both; text-align: center;">
-  </div>
-  <ol style="text-align: left;">
-    <li style="text-align: justify;">
-      এটি হতে হবে খুবই সরল, অবজেক্ট ওরিয়েন্টেড এবং পরিচিত, অর্থাৎ যারা তখন সি বা সি++ জানতো তারা যাতে করে সহজেই বুঝতে পারে।&nbsp;
-    </li>
-    <li style="text-align: justify;">
-      এটিকে অবশ্যই অনেক শক্তসমর্থ এবং নিরাপদ (robust and secure) হতে হবে।&nbsp;
-    </li>
-    <li style="text-align: justify;">
-      এটি যেকোনো অপারেটিং সিস্টেমে চলবে।&nbsp;
-    </li>
-    <li style="text-align: justify;">
-      এর পারফরমেন্স অনেক ভালো হতে হবে।&nbsp;
-    </li>
-    <li style="text-align: justify;">
-      এটি ইন্টারপ্রেটেড (Interpreted), থ্রেডেড (Threaded) এবং ডায়নামিক (Dynamic) হতে হবে। (এখানে বলে রাখি, জাভা যদিও কম্পাইল্ড ভাষা, কিন্তু জাভা ভার্চুয়াল মেশিন মূলত বাইটকোড ইন্টারপ্রেট করে আর জেভিএম একটা ডায়নামিক মেশিন)।&nbsp;
-    </li>
-  </ol>
-  <div style="text-align: justify;">
-  </div>
-  <div style="text-align: justify;">
-    এই কয়কেটা উদ্দেশ্যের সঙ্গে আরেকটি গুরুত্বপূর্ণ জিনিস হলো, এর ফিচার খুব অল্প হতে হবে যাতে একজন প্রোগ্রামার খুব সহজেই মনে রাখতে পারে। যেসব ফিচার খুব ঝামেলাযুক্ত এবং আসলে তেমন প্রয়োজন নেই খুব একটা সেগুলোকে তারা বাদ দিয়ে ডিজাইন করেছে। যেমন, অপারেটর ওভারলোডিং (Operator Overloading), মাল্টিপল ইনহেরিটেন্স (Multiple Inheritence)। এগুলো সুবিধার চেয়ে প্রোগ্রামারদের অসুবিধার কারণ বেশি তৈরি করে।
-  </div>
-  <div style="text-align: justify;">
-  </div>
-  <div style="text-align: justify;">
-    মাল্টিপল ইনহেরিটেন্সের ক্ষেত্রে একটি বড় সমস্যা হলো ডায়মন্ড সমস্যা (Diamond Problem)। একটি উদাহরণ দেওয়া যাক,
-  </div>
-  <div style="text-align: justify;">
-  </div>
-  <div style="text-align: justify;">
-    মনে করা যাক, একটি ক্লাস A, একে B ও C এক্সটেন্ড করে। আবার আরেকটি ক্লাস D যা কিনা B ও C কে এক্সটেন্ড করে। এখন যদি A এর কোনো একটি মেথডকে B ও C দুটিই ওভাররাইড করে এবং D থেকে সেই মেথডটি কল করা হয়, তাহলে সেটি কোন ক্লাসের মেথডকে কল করবে? B না C? সমস্যাটি নিশ্চই বোঝা যাচ্ছে।
-  </div>
-  <div style="text-align: justify;">
-  </div>
-  <div style="clear: both; text-align: center;">
-    <a href="https://2.bp.blogspot.com/-0ZNEBoJzkMc/WIuOV5pOQmI/AAAAAAAACWE/rGn_TGO4RFAdE4z6pfJixF_a5FU_snhdgCEw/s1600/diamond%2Bproblem%2B.png" style="display: inline !important; margin-left: 1em; margin-right: 1em;"><img loading="lazy" border="0" height="193" src="https://2.bp.blogspot.com/-0ZNEBoJzkMc/WIuOV5pOQmI/AAAAAAAACWE/rGn_TGO4RFAdE4z6pfJixF_a5FU_snhdgCEw/s320/diamond%2Bproblem%2B.png" width="320" /></a>
-  </div>
-  <div style="text-align: justify;">
-  </div>
-  <div style="text-align: justify;">
-    <div>
-      জাভা ডিজাইনাররা এরকম সমস্যার মধ্য দিয়ে যেতে চায়নি। তাই জাভাতে মাল্টিপল ইনহেরিটেন্স নেই।
-    </div>
-<pre><code>&lt;div style=&quot;clear: both; line-height: 19.2px; text-align: center;&quot;&gt;
-&lt;/div&gt;
-</code></pre>
-  </div>
-</div>
+    <p>এর উত্তর এভাবে দেওয়া যায়। জাভা প্রোগ্রামিং ভাষার ডিজাইনাররা কয়েকটি গুরুত্বপূর্ণ বিষয় মাথায় রেখে এই ভাষাকে ডিজাইন করে। এগুলো হলো, </p>
+<ol>
+<li>এটি হতে হবে খুবই সরল, অবজেক্ট ওরিয়েন্টেড এবং পরিচিত, অর্থাৎ যারা তখন সি বা সি++ জানতো তারা যাতে করে সহজেই বুঝতে পারে। </li>
+<li>এটিকে অবশ্যই অনেক শক্তসমর্থ এবং নিরাপদ (robust and secure) হতে হবে। </li>
+<li>এটি যেকোনো অপারেটিং সিস্টেমে চলবে। </li>
+<li>এর পারফরমেন্স অনেক ভালো হতে হবে। </li>
+<li>এটি ইন্টারপ্রেটেড (Interpreted), থ্রেডেড (Threaded) এবং ডায়নামিক (Dynamic) হতে হবে। (এখানে বলে রাখি, জাভা যদিও কম্পাইল্ড ভাষা, কিন্তু জাভা ভার্চুয়াল মেশিন মূলত বাইটকোড ইন্টারপ্রেট করে আর জেভিএম একটা ডায়নামিক মেশিন)। </li>
+</ol>
+<p>এই কয়কেটা উদ্দেশ্যের সঙ্গে আরেকটি গুরুত্বপূর্ণ জিনিস হলো, এর ফিচার খুব অল্প হতে হবে যাতে একজন প্রোগ্রামার খুব সহজেই মনে রাখতে পারে। যেসব ফিচার খুব ঝামেলাযুক্ত এবং আসলে তেমন প্রয়োজন নেই খুব একটা সেগুলোকে তারা বাদ দিয়ে ডিজাইন করেছে। যেমন, অপারেটর ওভারলোডিং (Operator Overloading), মাল্টিপল ইনহেরিটেন্স (Multiple Inheritence)। এগুলো সুবিধার চেয়ে প্রোগ্রামারদের অসুবিধার কারণ বেশি তৈরি করে।</p>
+<p>মাল্টিপল ইনহেরিটেন্সের ক্ষেত্রে একটি বড় সমস্যা হলো ডায়মন্ড সমস্যা (Diamond Problem)। একটি উদাহরণ দেওয়া যাক,</p>
+<p>মনে করা যাক, একটি ক্লাস A, একে B ও C এক্সটেন্ড করে। আবার আরেকটি ক্লাস D যা কিনা B ও C কে এক্সটেন্ড করে। এখন যদি A এর কোনো একটি মেথডকে B ও C দুটিই ওভাররাইড করে এবং D থেকে সেই মেথডটি কল করা হয়, তাহলে সেটি কোন ক্লাসের মেথডকে কল করবে? B না C? সমস্যাটি নিশ্চই বোঝা যাচ্ছে।</p>
+<p><a href="https://2.bp.blogspot.com/-0ZNEBoJzkMc/WIuOV5pOQmI/AAAAAAAACWE/rGn_TGO4RFAdE4z6pfJixF_a5FU_snhdgCEw/s1600/diamond%2Bproblem%2B.png"><img src="https://2.bp.blogspot.com/-0ZNEBoJzkMc/WIuOV5pOQmI/AAAAAAAACWE/rGn_TGO4RFAdE4z6pfJixF_a5FU_snhdgCEw/s320/diamond%2Bproblem%2B.png" alt="" /></a></p>
+<p>জাভা ডিজাইনাররা এরকম সমস্যার মধ্য দিয়ে যেতে চায়নি। তাই জাভাতে মাল্টিপল ইনহেরিটেন্স নেই।</p>
+
 </main>
 
 <p class="post-tag">

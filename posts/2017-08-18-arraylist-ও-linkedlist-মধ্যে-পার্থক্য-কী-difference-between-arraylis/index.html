@@ -35,263 +35,89 @@
 </p>
 
 <main>
-    <div dir="ltr" style="text-align: left;">
-  <div style="text-align: justify;">
-    <a href="https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html">ArrayList</a> ও <a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedList.html">LinkedList</a> ক্লাস দুটি লিস্ট ইন্টারফেসকে ইমপ্লিমেন্ট করে। যার ফলে এদের মেথড ও ফলাফল একইরকম হলেও ইম্প্লিমেন্টেশনের দিক থেকে এদের মধ্যে বেশ কিছু পার্থক্য রয়েছে। পার্থক্যগুলো নিয়ে আলোচনা করার আগে লিস্ট ইন্টারফেসের প্রধান মেথডগুলো দেখা যাক-
-  </div>
-  <div>
-    [spacer height=&#8221;20px&#8221;]
-  </div>
-</div>
-<div>
-  <pre class="lang:java decode:true">public interface List{
-      public E get(int index);
-      public void add(E element);
-      public void add(E element, int index);
-      public void remove(int index);
-}</pre>
-</div>
-<div dir="ltr" style="text-align: left;">
-  <div>
-    <div style="text-align: justify;">
-      উপরের এই মেথডগুলোর ইমপ্লিমেন্টেশন অ্যারেলিস্ট ও লিংকডলিস্ট দুটো ক্লাসেই রয়েছে। ব্যবহারের দিক থেকে এই মেথডগুলোর কোনো পার্থক্য নেই। উদাহরণ-
-    </div>
-<pre><code>&lt;div&gt;
-  [spacer height=&amp;#8221;20px&amp;#8221;]
-&lt;/div&gt;
-</code></pre>
-  </div>
-  <div>
-    <pre class="lang:java decode:true">import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-<p>public class TemplateService {<br />
-public static void main(String[] args) {<br />
-//using LinkedList<br />
-List&lt;String&gt; countries = new ArrayList&lt;&gt;();<br />
-//adding elements to the ArrayList<br />
-countries.add(&ldquo;Bangladesh&rdquo;);<br />
-countries.add(&ldquo;India&rdquo;);<br />
-countries.add(&ldquo;Bhutan&rdquo;);<br />
-countries.add(&ldquo;Pakistan&rdquo;);</p>
-<p>// searching element by index<br />
-String bangladesh = countries.get(0);</p>
-<p>//adding element by index<br />
-countries.add(2, &ldquo;Indonesia&rdquo;);</p>
-<p>//removing element<br />
-countries.remove(4);</p>
-<p>//using LinkedList<br />
-List&lt;String&gt; cities = new LinkedList&lt;&gt;();<br />
-//adding elements to the LinkedList<br />
-cities.add(&ldquo;Dhaka&rdquo;);<br />
-cities.add(&ldquo;London&rdquo;);<br />
-cities.add(&ldquo;Beijing&rdquo;);</p>
-<p>// searching element by index<br />
-String dhaka = cities.get(0);</p>
-<p>//adding element by index<br />
-cities.add(3, &ldquo;Islamabad&rdquo;);</p>
-<p>//removing element<br />
-cities.remove(3);<br />
-}<br />
-}</pre></p>
-  </div>
-  <div>
-    <div>
-      [spacer height=&#8221;20px&#8221;]
-    </div>
-<pre><code>&lt;div style=&quot;text-align: justify;&quot;&gt;
-  ইমপ্লিমেন্টেশনের দিক থেকে ArrayList উপাদানগুলো রাখার জন্য একটি অ্যারে ব্যবহার করে এবং অ্যারের সাইজ প্রয়োজন অনুযায়ী বড় করতে পারে। অন্যদিকে LinkedList ডাবলি-লিকংডলিস্ট ডেটা স্ট্রাকচার ব্যবহার করে ইমপ্লিমেন্ট করা হয়ছে।
-&lt;/div&gt;
+    <p><a href="https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html">ArrayList</a> ও <a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedList.html">LinkedList</a> ক্লাস দুটি লিস্ট ইন্টারফেসকে ইমপ্লিমেন্ট করে। যার ফলে এদের মেথড ও ফলাফল একইরকম হলেও ইম্প্লিমেন্টেশনের দিক থেকে এদের মধ্যে বেশ কিছু পার্থক্য রয়েছে। পার্থক্যগুলো নিয়ে আলোচনা করার আগে লিস্ট ইন্টারফেসের প্রধান মেথডগুলো দেখা যাক-</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">List</span><span style="color:#f92672">{</span>
+      <span style="color:#66d9ef">public</span> E <span style="color:#a6e22e">get</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> index<span style="color:#f92672">);</span>
+      <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>E element<span style="color:#f92672">);</span>
+      <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>E element<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> index<span style="color:#f92672">);</span>
+      <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">remove</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> index<span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>উপরের এই মেথডগুলোর ইমপ্লিমেন্টেশন অ্যারেলিস্ট ও লিংকডলিস্ট দুটো ক্লাসেই রয়েছে। ব্যবহারের দিক থেকে এই মেথডগুলোর কোনো পার্থক্য নেই। উদাহরণ-</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> java.util.ArrayList<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> java.util.LinkedList<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> java.util.List<span style="color:#f92672">;</span>
 
-&lt;div style=&quot;text-align: justify;&quot;&gt;
-  [spacer height=&amp;#8221;20px&amp;#8221;]
-&lt;/div&gt;
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TemplateService</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+<span style="color:#75715e">//using LinkedList
+</span><span style="color:#75715e"></span>        List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> countries <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;();</span>
+<span style="color:#75715e">//adding elements to the ArrayList
+</span><span style="color:#75715e"></span>        countries<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Bangladesh&#34;</span><span style="color:#f92672">);</span>
+        countries<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;India&#34;</span><span style="color:#f92672">);</span>
+        countries<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Bhutan&#34;</span><span style="color:#f92672">);</span>
+        countries<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Pakistan&#34;</span><span style="color:#f92672">);</span>
 
-&lt;div style=&quot;text-align: justify;&quot;&gt;
-  এবার উপরের মেথডগুলোর টাইম কমপ্লেক্সিটি দেখা যাক &amp;#8211;
-&lt;/div&gt;
+<span style="color:#75715e">// searching element by index
+</span><span style="color:#75715e"></span>        String bangladesh <span style="color:#f92672">=</span> countries<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>0<span style="color:#f92672">);</span>
 
-&lt;div&gt;
-&lt;/div&gt;
+<span style="color:#75715e">//adding element by index
+</span><span style="color:#75715e"></span>        countries<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>2<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;Indonesia&#34;</span><span style="color:#f92672">);</span>
 
-&lt;table style=&quot;text-align: justify;&quot;&gt;
-  &lt;tr&gt;
-    &lt;td style=&quot;background-color: white; color: #333333;&quot;&gt;
-      মেথডের নাম
-    &lt;/td&gt;
-    
-    &lt;td style=&quot;background-color: white; color: #333333;&quot;&gt;
-      &lt;b&gt;অ্যারেলিস্ট &lt;/b&gt;
-    &lt;/td&gt;
-    
-    &lt;td style=&quot;background-color: white; color: #333333;&quot;&gt;
-      &lt;b&gt;লিংকডলিস্ট &lt;/b&gt;
-    &lt;/td&gt;
-  &lt;/tr&gt;
-  
-  &lt;tr&gt;
-    &lt;td style=&quot;background-color: white; color: #333333;&quot;&gt;
-      E get(int index)
-    &lt;/td&gt;
-    
-    &lt;td style=&quot;background-color: white; color: #333333;&quot;&gt;
-      &lt;i&gt;O(1)&lt;/i&gt;
-    &lt;/td&gt;
-    
-    &lt;td style=&quot;background-color: white; color: #333333;&quot;&gt;
-      &lt;i&gt;O&lt;/i&gt;(n)
-    &lt;/td&gt;
-  &lt;/tr&gt;
-  
-  &lt;tr&gt;
-    &lt;td style=&quot;background-color: white; color: #333333;&quot;&gt;
-      void add(E element)
-    &lt;/td&gt;
-    
-    &lt;td style=&quot;background-color: white; color: #333333;&quot;&gt;
-      &lt;i&gt;O(1)&lt;/i&gt;&lt;i&gt;&lt;i&gt;&lt;i&gt;&lt;i&gt;&lt;i&gt; &lt;/i&gt;&lt;/i&gt;&lt;/i&gt;&lt;/i&gt;&lt;/i&gt;amortized
-    &lt;/td&gt;
-    
-    &lt;td style=&quot;background-color: white; color: #333333;&quot;&gt;
-      &lt;i&gt;O(1)&lt;/i&gt;
-    &lt;/td&gt;
-  &lt;/tr&gt;
-  
-  &lt;tr&gt;
-    &lt;td style=&quot;background-color: white; color: #333333;&quot;&gt;
-      void add(E element, int index)
-    &lt;/td&gt;
-    
-    &lt;td style=&quot;background-color: white; color: #333333;&quot;&gt;
-      &lt;i&gt;O(n)&lt;/i&gt;
-    &lt;/td&gt;
-    
-    &lt;td style=&quot;background-color: white; color: #333333;&quot;&gt;
-      &lt;i&gt;O&lt;/i&gt;(1)
-    &lt;/td&gt;
-  &lt;/tr&gt;
-  
-  &lt;tr&gt;
-    &lt;td style=&quot;background-color: white; color: #333333;&quot;&gt;
-      void remove(int index)
-    &lt;/td&gt;
-    
-    &lt;td style=&quot;background-color: white; color: #333333;&quot;&gt;
-      &lt;i&gt;O(n)&lt;/i&gt;
-    &lt;/td&gt;
-    
-    &lt;td style=&quot;background-color: white; color: #333333;&quot;&gt;
-      &lt;i&gt;O&lt;/i&gt;(1)
-    &lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;
+<span style="color:#75715e">//removing element
+</span><span style="color:#75715e"></span>        countries<span style="color:#f92672">.</span><span style="color:#a6e22e">remove</span><span style="color:#f92672">(</span>4<span style="color:#f92672">);</span>
 
-&lt;div style=&quot;text-align: justify;&quot;&gt;
-  ওপরের চার্ট থেকে দেখতে পারি যে, অ্যারেলিস্ট থেকে কোনো উপাদান খুব দ্রুত খুঁজে বের করা যায় লিংকলিস্টের চেয়ে। এর কারণ, অ্যারেলিস্ট উপাদানগুলো রাখার জন্য একটি অ্যারে ব্যবহার করে যা থেকে কোনো উপাদানের ইনডেক্স জানা থাকলে কনস্ট্যান্ট টাইমে বের করে আনা যায়। অপর দিকে লিংকলিস্ট যেহেতু ডাবলি-লিংকলিস্ট ডেটা স্ট্রাকচার ব্যবহার করে, তাই কোনো উপাদান খুঁজে বের করতে সবগুলো উপাদান খুঁজতে হয়। এজন্যে লিংকলিস্টে কোনো উপাদান অ্যাকসেস করার সময় সময় O(n)।
-&lt;/div&gt;
-</code></pre>
-  </div>
-  <div>
-    <div style="text-align: justify;">
-      [spacer height=&#8221;20px&#8221;]
-    </div>
-<pre><code>&lt;div style=&quot;text-align: justify;&quot;&gt;
-  অ্যারেলিস্টে ডাইনামিক অ্যারে ব্যবহার করা হয়। আমরা জানি যে অ্যারে একটি নির্দিষ্ট দৈর্ঘ্যের (length) উপাদান রাখতে পারে। তবে ডাইনামিক অ্যারের দৈর্ঘ্য প্রয়োজন মতো বাড়ানো বা কমানো যায়। এটি করার পদ্ধতিটি হলো &amp;#8211; প্রথমে একটি নির্দিষ্ট দৈর্ঘ্যের অ্যারে তৈরি করা হয়। অ্যারেটি উপাদান পূর্ণ হয়ে গেলে একটি নতুন দৈর্ঘ্যের অ্যারে তৈরি করা হয় যা আগের অ্যারের দৈর্ঘ্যের চেয়ে বড়। আগের অ্যারে থেকে উপাদানগুলো কপি করে নতুন অ্যারেতে রাখা হয় এবং এতে যে অতিরিক্ত ফাঁকা ঘরগুলো রয়ে যায় সেগুলোতে নতুন উপাদান রাখা হয়। এভাবে আবার অ্যারিটি পুর্ণ হয়ে গেলে নতুন দৈর্ঘ্যের অ্যারে তৈরি করা হয়। তবে নতুন দৈর্ঘ্য একটি চিন্তা ভাবনা করে নেওয়া হয় যাতে প্রতিবার নতুন উপাদান যুক্ত করার জন্য অ্যারের দৈর্ঘ্য বৃদ্ধি করার প্রয়োজন না পারে। যেমন- প্রতিবার অ্যারের দৈর্ঘ্য বৃদ্ধির সময় আমরা আগের দৈর্ঘ্যের চেয়ে দিগুণ নেওয়া পারে। এর ফলে প্রতিবার নতুন উপাদান যুক্ত করার সময় নতুন অ্যারে তৈরি এবং আগের অ্যারে থেকে কপি করার কাজ করতে হয় না, বরং এটি একটি নির্দিষ্ট সময় পর পর প্রয়োজন হয়।
-&lt;/div&gt;
+<span style="color:#75715e">//using LinkedList
+</span><span style="color:#75715e"></span>        List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> cities <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> LinkedList<span style="color:#f92672">&lt;&gt;();</span>
+<span style="color:#75715e">//adding elements to the LinkedList
+</span><span style="color:#75715e"></span>        cities<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Dhaka&#34;</span><span style="color:#f92672">);</span>
+        cities<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;London&#34;</span><span style="color:#f92672">);</span>
+        cities<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Beijing&#34;</span><span style="color:#f92672">);</span>
 
-&lt;div style=&quot;text-align: justify;&quot;&gt;
-&lt;/div&gt;
+<span style="color:#75715e">// searching element by index
+</span><span style="color:#75715e"></span>        String dhaka <span style="color:#f92672">=</span> cities<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>0<span style="color:#f92672">);</span>
 
-&lt;div style=&quot;text-align: justify;&quot;&gt;
-  অ্যারেলিস্টের অ্যারেতে প্রথমে একটি 10 দৈর্ঘ্যের অ্যারে থাকে। এটি পূর্ণ হয়ে গেলে নতুন অ্যারে তৈরি করা হয় যা আগের অ্যারে থেকে দেড় গুণ হয়। এই অ্যারের দৈর্ঘ্যের বৃদ্ধির ফরমুলা হলো &amp;#8211;
-&lt;/div&gt;
+<span style="color:#75715e">//adding element by index
+</span><span style="color:#75715e"></span>        cities<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>3<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;Islamabad&#34;</span><span style="color:#f92672">);</span>
 
-&lt;div style=&quot;text-align: justify;&quot;&gt;
-  &lt;pre class=&quot;lang:java decode:true&quot;&gt;int newCapacity = oldCapacity + (oldCapacity &amp;gt;&amp;gt; 1);&lt;/pre&gt;
-&lt;/div&gt;
+<span style="color:#75715e">//removing element
+</span><span style="color:#75715e"></span>        cities<span style="color:#f92672">.</span><span style="color:#a6e22e">remove</span><span style="color:#f92672">(</span>3<span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
 
-&lt;div style=&quot;text-align: justify;&quot;&gt;
-  এখানে capacity হচ্ছে অ্যারেলিস্টের ভেতরের অ্যারের দৈর্ঘ্য।
-&lt;/div&gt;
-
-&lt;div style=&quot;text-align: justify;&quot;&gt;
-&lt;/div&gt;
-
-&lt;div style=&quot;text-align: justify;&quot;&gt;
-  অর্থাৎ আমরা যদি 10 টি উপাদান অ্যারেতে যুক্ত করতে চাই, তাহলে এই অ্যারের দৈর্ঘ্য বৃদ্ধি করার প্রয়োজন নেই। তবে যদি n টি উপাদান যুক্ত করতে চাই, তাহে বেশ কতবার দৈর্ঘ্য বৃদ্ধি করা ও আগের অ্যারে থেকে উপাদান কপি কররে আনার প্রয়োজন পরবে।
-&lt;/div&gt;
-
-&lt;div style=&quot;text-align: justify;&quot;&gt;
-&lt;/div&gt;
-
-&lt;div style=&quot;text-align: justify;&quot;&gt;
-  তাহলে n সংখ্যক উপাদান যুক্ত করার সময় O(n) + মাঝে মধ্যে কপি অপারেশন (একটি লুপের মাধ্যমে আগের n আইটেম কপি করা)আমরা সাধারণভাবে বলতে পারি, গড়ে এর টাইম কমপ্লেক্সিটি (amortized) O(1)
-&lt;/div&gt;
-
-&lt;div style=&quot;text-align: justify;&quot;&gt;
-&lt;/div&gt;
-
-&lt;div style=&quot;text-align: justify;&quot;&gt;
-  অ্যারেলিস্টের শেষে যুক্ত না করে মাঝে কেনাে উপাদান যুক্ত করতে হলে যেই উপাদান থেকে পরের উপাদানগুলো শিফট (কপি করে এক ঘর সরানো) করার প্রয়োজন হবে। একদম শুরুতে যদি উপাদান যুক্ত করতে হয় তাহলে সবগুলো উপাদান প্রথমে থেকে ডান দিকে শিফট করতে হবে সেক্ষেত্রে এর কম্প্লিক্সিটি হবে O(n)
-&lt;/div&gt;
-
-&lt;div style=&quot;text-align: justify;&quot;&gt;
-&lt;/div&gt;
-
-&lt;div style=&quot;text-align: justify;&quot;&gt;
-  অ্যারেলিস্ট থেকে কোনো উপাদান রিমুভ করতে হলেও এই শিফ্টিং বা কপি করার প্রয়োজন পরে। অ্যারের লিস্টের মাঝ থেকে কোনো উপাদান রিমুভ করতে হলে, মাঝ থেকে পরবর্তি উপাদানগুলো কপি করে একঘর সামনে আনতে হয়। উপাদানটি যদি প্রথমে হয়, তাহলে সবগুলো উপাদান কপি করে সামনে আনতে হয়। তবে শেষ থেকে উপাদান রিমুভ করলে এর টাইম কমপ্লেক্সিটি হয় O(1) কারণ এতে কোনো কপি বা শিফটিংয়ের প্রয়োজন হয় না।
-&lt;/div&gt;
-
-&lt;div style=&quot;text-align: justify;&quot;&gt;
-  [spacer height=&amp;#8221;20px&amp;#8221;]
-&lt;/div&gt;
-
-&lt;div style=&quot;text-align: justify;&quot;&gt;
-  সুতরাং দেখা যাচ্ছে যে, অ্যারেলিস্ট থেকে কোনো উপাদান রিমুভ করার করার কমপ্লেক্সিটি সাধারণভাবে O(n)
-&lt;/div&gt;
-
-&lt;div style=&quot;text-align: justify;&quot;&gt;
-   [spacer height=&amp;#8221;20px&amp;#8221;]
-&lt;/div&gt;
-
-&lt;div style=&quot;text-align: justify;&quot;&gt;
-  অপরদিকে লিংকলিস্টে কোনো উপাদান যুক্ত করার সময় O(1) । লিংকলিস্ট যেহেতু ডাবলিলিংকলিস্ট ডেটা স্ট্রাকচার ব্যবহার করে তাই এর প্রত্যেকটি নোড এর আগের এবং পরের নোডের রেফারেন্স ধরে রাখে। এক্ষেত্রে কোনো উপাদান যুক্ত করার ক্ষেত্রে কোনো কপি বা শিফটিংয়ের প্রয়োজন নেই, বরং শুধুামাত্র দুটি পয়েন্টারের পরিবর্তন ছাড়া।
-&lt;/div&gt;
-
-&lt;div style=&quot;text-align: justify;&quot;&gt;
-&lt;/div&gt;
-
-&lt;div style=&quot;text-align: justify;&quot;&gt;
-  একইভাবে লিংকলিস্ট থেকে কোনো উপাদান রিমুভ করার ক্ষেত্রে কোনো কপি বা শিফটিংয়ের প্রয়োজন নেই, শুধুমাত্র দুটি রেফারেন্সের পরিবর্তন হয়। তাই এর টাইম কমপ্লেক্সিটি O(1)।
-&lt;/div&gt;
-
-&lt;div style=&quot;text-align: justify;&quot;&gt;
-  [spacer height=&amp;#8221;20px&amp;#8221;]
-&lt;/div&gt;
-
-&lt;div style=&quot;text-align: justify;&quot;&gt;
-  এখন প্রশ্ন হচ্ছে তাহলে কখন কোনটি ব্যবহার করা উত্তম।
-&lt;/div&gt;
-
-&lt;div style=&quot;text-align: justify;&quot;&gt;
-  [spacer height=&amp;#8221;20px&amp;#8221;]
-&lt;/div&gt;
-
-&lt;div style=&quot;text-align: justify;&quot;&gt;
-  সাধারণভাবে আমরা সব কাজেই অ্যারেলিস্ট ব্যবহার করে থাকি। তবে কোনটি করা উচিৎ তা নির্ভর করে কী কাজ করছি তার উপর। যেমন- উপাদান যুক্ত করার চেয়ে অনেক বেশিবার অ্যাকসেস করার প্রয়োজন হলে অথবা আগে থেকেই কতগুলো উপাদান রাখার প্রয়োজন হবে তা সম্পর্কে ধারণা থাকলে অ্যারেলিস্ট ব্যবহার করা উচিত।
-&lt;/div&gt;
-
-&lt;div style=&quot;text-align: justify;&quot;&gt;
-  [spacer height=&amp;#8221;20px&amp;#8221;]
-&lt;/div&gt;
-
-&lt;div style=&quot;text-align: justify;&quot;&gt;
-  অন্যদিকে আমাদের যদি অ্যাকসেস করার চেয়ে অনেক বেশি উপাদান যুক্ত বা রিমুভ করার প্রয়োজন হয় তাহলে লিংকলিস্ট ব্যবহার করা উত্তম।
-&lt;/div&gt;
-</code></pre>
-  </div>
-</div>
+</code></pre></div><p>ইমপ্লিমেন্টেশনের দিক থেকে ArrayList উপাদানগুলো রাখার জন্য একটি অ্যারে ব্যবহার করে এবং অ্যারের সাইজ প্রয়োজন অনুযায়ী বড় করতে পারে। অন্যদিকে LinkedList ডাবলি-লিকংডলিস্ট ডেটা স্ট্রাকচার ব্যবহার করে ইমপ্লিমেন্ট করা হয়ছে।</p>
+<p>এবার উপরের মেথডগুলোর টাইম কমপ্লেক্সিটি দেখা যাক –</p>
+<p>মেথডের নাম</p>
+<p><strong>অ্যারেলিস্ট</strong></p>
+<p><strong>লিংকডলিস্ট</strong></p>
+<p>E get(int index)</p>
+<p><em>O(1)</em></p>
+<p><em>O</em>(n)</p>
+<p>void add(E element)</p>
+<p><em>O(1)</em> amortized</p>
+<p><em>O(1)</em></p>
+<p>void add(E element, int index)</p>
+<p><em>O(n)</em></p>
+<p><em>O</em>(1)</p>
+<p>void remove(int index)</p>
+<p><em>O(n)</em></p>
+<p><em>O</em>(1)</p>
+<p>ওপরের চার্ট থেকে দেখতে পারি যে, অ্যারেলিস্ট থেকে কোনো উপাদান খুব দ্রুত খুঁজে বের করা যায় লিংকলিস্টের চেয়ে। এর কারণ, অ্যারেলিস্ট উপাদানগুলো রাখার জন্য একটি অ্যারে ব্যবহার করে যা থেকে কোনো উপাদানের ইনডেক্স জানা থাকলে কনস্ট্যান্ট টাইমে বের করে আনা যায়। অপর দিকে লিংকলিস্ট যেহেতু ডাবলি-লিংকলিস্ট ডেটা স্ট্রাকচার ব্যবহার করে, তাই কোনো উপাদান খুঁজে বের করতে সবগুলো উপাদান খুঁজতে হয়। এজন্যে লিংকলিস্টে কোনো উপাদান অ্যাকসেস করার সময় সময় O(n)।</p>
+<p>অ্যারেলিস্টে ডাইনামিক অ্যারে ব্যবহার করা হয়। আমরা জানি যে অ্যারে একটি নির্দিষ্ট দৈর্ঘ্যের (length) উপাদান রাখতে পারে। তবে ডাইনামিক অ্যারের দৈর্ঘ্য প্রয়োজন মতো বাড়ানো বা কমানো যায়। এটি করার পদ্ধতিটি হলো – প্রথমে একটি নির্দিষ্ট দৈর্ঘ্যের অ্যারে তৈরি করা হয়। অ্যারেটি উপাদান পূর্ণ হয়ে গেলে একটি নতুন দৈর্ঘ্যের অ্যারে তৈরি করা হয় যা আগের অ্যারের দৈর্ঘ্যের চেয়ে বড়। আগের অ্যারে থেকে উপাদানগুলো কপি করে নতুন অ্যারেতে রাখা হয় এবং এতে যে অতিরিক্ত ফাঁকা ঘরগুলো রয়ে যায় সেগুলোতে নতুন উপাদান রাখা হয়। এভাবে আবার অ্যারিটি পুর্ণ হয়ে গেলে নতুন দৈর্ঘ্যের অ্যারে তৈরি করা হয়। তবে নতুন দৈর্ঘ্য একটি চিন্তা ভাবনা করে নেওয়া হয় যাতে প্রতিবার নতুন উপাদান যুক্ত করার জন্য অ্যারের দৈর্ঘ্য বৃদ্ধি করার প্রয়োজন না পারে। যেমন- প্রতিবার অ্যারের দৈর্ঘ্য বৃদ্ধির সময় আমরা আগের দৈর্ঘ্যের চেয়ে দিগুণ নেওয়া পারে। এর ফলে প্রতিবার নতুন উপাদান যুক্ত করার সময় নতুন অ্যারে তৈরি এবং আগের অ্যারে থেকে কপি করার কাজ করতে হয় না, বরং এটি একটি নির্দিষ্ট সময় পর পর প্রয়োজন হয়।</p>
+<p>অ্যারেলিস্টের অ্যারেতে প্রথমে একটি 10 দৈর্ঘ্যের অ্যারে থাকে। এটি পূর্ণ হয়ে গেলে নতুন অ্যারে তৈরি করা হয় যা আগের অ্যারে থেকে দেড় গুণ হয়। এই অ্যারের দৈর্ঘ্যের বৃদ্ধির ফরমুলা হলো –</p>
+<p>int newCapacity = oldCapacity + (oldCapacity &raquo; 1);</p>
+<p>এখানে capacity হচ্ছে অ্যারেলিস্টের ভেতরের অ্যারের দৈর্ঘ্য।</p>
+<p>অর্থাৎ আমরা যদি 10 টি উপাদান অ্যারেতে যুক্ত করতে চাই, তাহলে এই অ্যারের দৈর্ঘ্য বৃদ্ধি করার প্রয়োজন নেই। তবে যদি n টি উপাদান যুক্ত করতে চাই, তাহে বেশ কতবার দৈর্ঘ্য বৃদ্ধি করা ও আগের অ্যারে থেকে উপাদান কপি কররে আনার প্রয়োজন পরবে।</p>
+<p>তাহলে n সংখ্যক উপাদান যুক্ত করার সময় O(n) + মাঝে মধ্যে কপি অপারেশন (একটি লুপের মাধ্যমে আগের n আইটেম কপি করা)আমরা সাধারণভাবে বলতে পারি, গড়ে এর টাইম কমপ্লেক্সিটি (amortized) O(1)</p>
+<p>অ্যারেলিস্টের শেষে যুক্ত না করে মাঝে কেনাে উপাদান যুক্ত করতে হলে যেই উপাদান থেকে পরের উপাদানগুলো শিফট (কপি করে এক ঘর সরানো) করার প্রয়োজন হবে। একদম শুরুতে যদি উপাদান যুক্ত করতে হয় তাহলে সবগুলো উপাদান প্রথমে থেকে ডান দিকে শিফট করতে হবে সেক্ষেত্রে এর কম্প্লিক্সিটি হবে O(n)</p>
+<p>অ্যারেলিস্ট থেকে কোনো উপাদান রিমুভ করতে হলেও এই শিফ্টিং বা কপি করার প্রয়োজন পরে। অ্যারের লিস্টের মাঝ থেকে কোনো উপাদান রিমুভ করতে হলে, মাঝ থেকে পরবর্তি উপাদানগুলো কপি করে একঘর সামনে আনতে হয়। উপাদানটি যদি প্রথমে হয়, তাহলে সবগুলো উপাদান কপি করে সামনে আনতে হয়। তবে শেষ থেকে উপাদান রিমুভ করলে এর টাইম কমপ্লেক্সিটি হয় O(1) কারণ এতে কোনো কপি বা শিফটিংয়ের প্রয়োজন হয় না।</p>
+<p>সুতরাং দেখা যাচ্ছে যে, অ্যারেলিস্ট থেকে কোনো উপাদান রিমুভ করার করার কমপ্লেক্সিটি সাধারণভাবে O(n)</p>
 <p> </p>
+<p>অপরদিকে লিংকলিস্টে কোনো উপাদান যুক্ত করার সময় O(1) । লিংকলিস্ট যেহেতু ডাবলিলিংকলিস্ট ডেটা স্ট্রাকচার ব্যবহার করে তাই এর প্রত্যেকটি নোড এর আগের এবং পরের নোডের রেফারেন্স ধরে রাখে। এক্ষেত্রে কোনো উপাদান যুক্ত করার ক্ষেত্রে কোনো কপি বা শিফটিংয়ের প্রয়োজন নেই, বরং শুধুামাত্র দুটি পয়েন্টারের পরিবর্তন ছাড়া।</p>
+<p>একইভাবে লিংকলিস্ট থেকে কোনো উপাদান রিমুভ করার ক্ষেত্রে কোনো কপি বা শিফটিংয়ের প্রয়োজন নেই, শুধুমাত্র দুটি রেফারেন্সের পরিবর্তন হয়। তাই এর টাইম কমপ্লেক্সিটি O(1)।</p>
+<p>এখন প্রশ্ন হচ্ছে তাহলে কখন কোনটি ব্যবহার করা উত্তম।</p>
+<p>সাধারণভাবে আমরা সব কাজেই অ্যারেলিস্ট ব্যবহার করে থাকি। তবে কোনটি করা উচিৎ তা নির্ভর করে কী কাজ করছি তার উপর। যেমন- উপাদান যুক্ত করার চেয়ে অনেক বেশিবার অ্যাকসেস করার প্রয়োজন হলে অথবা আগে থেকেই কতগুলো উপাদান রাখার প্রয়োজন হবে তা সম্পর্কে ধারণা থাকলে অ্যারেলিস্ট ব্যবহার করা উচিত।</p>
+<p>অন্যদিকে আমাদের যদি অ্যাকসেস করার চেয়ে অনেক বেশি উপাদান যুক্ত বা রিমুভ করার প্রয়োজন হয় তাহলে লিংকলিস্ট ব্যবহার করা উত্তম।<br />
+ </p>
 
 </main>
 

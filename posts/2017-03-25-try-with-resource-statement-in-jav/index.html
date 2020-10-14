@@ -35,69 +35,16 @@
 </p>
 
 <main>
-    <div dir="ltr" style="text-align: left;">
-  <div style="text-align: justify;">
-    প্রোগ্রামের কাজ শেষ হয়ে গেলে যে অবজেক্টগুলোকে ক্লোজ করে দেওয়া অত্যাবশ্যক সেগুলোকে রিসোর্স (Resource) বলা হয়। যেমন, <span style="font-family: Courier New, Courier, monospace;">FileOutputStream</span>, <span style="font-family: Courier New, Courier, monospace;">BufferRedear</span>। এই ক্লাসগুলো <span style="font-family: Courier New, Courier, monospace;">java.io.Cloasble</span> ই্ন্টারফেসকে ইমপ্লিমেন্ট করে।
-  </div>
-  <div style="text-align: justify;">
-  </div>
-  <div style="text-align: justify;">
-  </div>
-  <div style="text-align: justify;">
-  </div>
-  <div style="text-align: justify;">
-    উপরের ইন্টারফেসটিতে দেখা যাচ্ছে যে close() মেথডটি IOException থ্রো করে যা একটি চেকড এক্সেপশন। চেকড এক্সেপশন সবসময় হ্যান্ডেল করতে হয়। এর অর্থ হচ্ছে, এই মেথডটি কল করতে গেলে অবশ্যই try-catch ব্লকের ভেতরে তা কল করতে হবে। উদাহরণ হিসেবে নিচের মেথডটি খেয়াল করা যাক,
-  </div>
-  <div style="text-align: justify;">
-  </div>
-  <div style="text-align: justify;">
-  </div>
-  <div style="text-align: justify;">
-  </div>
-  <div style="text-align: justify;">
-    উপরের মেথডটিতে close() মেথডটি finally ব্লকের মধ্যে কল করা হয়েছে। এর কারণ প্রোগ্রামটির কাজ শেষ হলেই আমরা রিসোর্স ক্লোজ করতে পারি। এই কোড ব্লক দেখেই মনে হচ্ছে কাজটুকু খুবই বিরক্তিকর। একটি ছোট কাজের জন্য অনেক কোড লিখতে হচ্ছে। এই বিরক্তি দূর করতে জাভা 7 এ নতুন একটি ফিচার সংযুক্ত করা হয়েছে যাকে বলে try-with-resource স্টেটমেন্ট। উপরের মেথডটিকে try-with-resource স্টেটমেন্ট ব্যবহার করে লিখলে দাঁড়ায়,
-  </div>
-  <div style="text-align: justify;">
-  </div>
-  <div style="text-align: justify;">
-  </div>
-  <p>
-  </p>
-  <div style="text-align: justify;">
-  </div>
-  <div style="text-align: justify;">
-    দুটি কোড মেথড যদিও একই কাজ করে, কিন্তু নিচের মেথডটিকে কম সংখ্যক লাইন কোড রয়েছে উপরের মেথডটি থেকে এবং এতে close() মেথডটি কল করা হয়নি।
-  </div>
-  <div style="text-align: justify;">
-  </div>
-  <div style="text-align: justify;">
-    এবার নিচের লাইনটি ভালো করে লক্ষ করা যাক,
-  </div>
-  <div style="text-align: justify;">
-  </div>
-  <div style="text-align: justify;">
-    <span style="font-family: Courier New, Courier, monospace;">try (FileInputStream fis = new FileInputStream(&#8220;file.txt&#8221;))</span>
-  </div>
-  <div style="text-align: justify;">
-  </div>
-  <div style="text-align: justify;">
-    এটি একটি try-with-resource স্টেটমেন্ট। FileInputStream এর ভ্যারিয়েবলটি try কিওয়ার্ডের ভেতরে ডিক্লেয়ার করা হয়েছ এবং ইনস্ট্যানসিয়েট করা হয়েছে। এখানে যখন এই try ব্লক শেষ হয়ে যাবে তখন FileInputStream রিসোর্সটি নিজে থেকেই ক্লোজ হয়ে যাবে। এটি সম্ভব হবে কারণ FileInputStream ক্লাসটি AutoCloseable ইন্টারফেসকে ইমপ্লিমেন্ট করে। যে সব ক্লাসগুলো এই ইন্টারফেসকে ইমপ্লিমেন্ট করে, তাদের প্রত্যেকের ক্ষেত্রে এই try-with-resource স্টেটমেন্ট ব্যবহার করা যাবে।
-  </div>
-  <div style="text-align: justify;">
-  </div>
-  <div style="text-align: justify;">
-    একাধিক রিসোর্সের ক্ষেত্রেও এই try-with-resource স্টেটমেন্ট ব্যবহার করা যায়। যেমন,
-  </div>
-  <div style="text-align: justify;">
-  </div>
-  <div style="text-align: justify;">
-  </div>
-  <div style="text-align: justify;">
-  </div>
-  <div style="text-align: justify;">
-    এক্ষেত্রে FileInputStream এবং BufferInputStream দুটি ক্লাসই try ব্লক শেষ হওয়ার সঙ্গে সঙ্গেই ক্লোজ হয়ে যাবে।
-  </div>
-</div>
+    <p>প্রোগ্রামের কাজ শেষ হয়ে গেলে যে অবজেক্টগুলোকে ক্লোজ করে দেওয়া অত্যাবশ্যক সেগুলোকে রিসোর্স (Resource) বলা হয়। যেমন, FileOutputStream, BufferRedear। এই ক্লাসগুলো java.io.Cloasble ই্ন্টারফেসকে ইমপ্লিমেন্ট করে।</p>
+<p>উপরের ইন্টারফেসটিতে দেখা যাচ্ছে যে close() মেথডটি IOException থ্রো করে যা একটি চেকড এক্সেপশন। চেকড এক্সেপশন সবসময় হ্যান্ডেল করতে হয়। এর অর্থ হচ্ছে, এই মেথডটি কল করতে গেলে অবশ্যই try-catch ব্লকের ভেতরে তা কল করতে হবে। উদাহরণ হিসেবে নিচের মেথডটি খেয়াল করা যাক,</p>
+<p>উপরের মেথডটিতে close() মেথডটি finally ব্লকের মধ্যে কল করা হয়েছে। এর কারণ প্রোগ্রামটির কাজ শেষ হলেই আমরা রিসোর্স ক্লোজ করতে পারি। এই কোড ব্লক দেখেই মনে হচ্ছে কাজটুকু খুবই বিরক্তিকর। একটি ছোট কাজের জন্য অনেক কোড লিখতে হচ্ছে। এই বিরক্তি দূর করতে জাভা 7 এ নতুন একটি ফিচার সংযুক্ত করা হয়েছে যাকে বলে try-with-resource স্টেটমেন্ট। উপরের মেথডটিকে try-with-resource স্টেটমেন্ট ব্যবহার করে লিখলে দাঁড়ায়,</p>
+<p>দুটি কোড মেথড যদিও একই কাজ করে, কিন্তু নিচের মেথডটিকে কম সংখ্যক লাইন কোড রয়েছে উপরের মেথডটি থেকে এবং এতে close() মেথডটি কল করা হয়নি।</p>
+<p>এবার নিচের লাইনটি ভালো করে লক্ষ করা যাক,</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">try</span> <span style="color:#f92672">(</span>FileInputStream fis <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> FileInputStream<span style="color:#f92672">(</span><span style="color:#960050;background-color:#1e0010">“</span>file<span style="color:#f92672">.</span><span style="color:#a6e22e">txt</span><span style="color:#960050;background-color:#1e0010">”</span><span style="color:#f92672">))</span>
+</code></pre></div><p>এটি একটি try-with-resource স্টেটমেন্ট। FileInputStream এর ভ্যারিয়েবলটি try কিওয়ার্ডের ভেতরে ডিক্লেয়ার করা হয়েছ এবং ইনস্ট্যানসিয়েট করা হয়েছে। এখানে যখন এই try ব্লক শেষ হয়ে যাবে তখন FileInputStream রিসোর্সটি নিজে থেকেই ক্লোজ হয়ে যাবে। এটি সম্ভব হবে কারণ FileInputStream ক্লাসটি AutoCloseable ইন্টারফেসকে ইমপ্লিমেন্ট করে। যে সব ক্লাসগুলো এই ইন্টারফেসকে ইমপ্লিমেন্ট করে, তাদের প্রত্যেকের ক্ষেত্রে এই try-with-resource স্টেটমেন্ট ব্যবহার করা যাবে।</p>
+<p>একাধিক রিসোর্সের ক্ষেত্রেও এই try-with-resource স্টেটমেন্ট ব্যবহার করা যায়। যেমন,</p>
+<p>এক্ষেত্রে FileInputStream এবং BufferInputStream দুটি ক্লাসই try ব্লক শেষ হওয়ার সঙ্গে সঙ্গেই ক্লোজ হয়ে যাবে।</p>
+
 </main>
 
 <p class="post-tag">

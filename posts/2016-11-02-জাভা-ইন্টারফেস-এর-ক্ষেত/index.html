@@ -35,47 +35,20 @@
 </p>
 
 <main>
-    <div dir="ltr" style="text-align: left;">
-  <div style="background-color: white; border: medium none; font-family: sans-serif; font-size: 13px; line-height: 18.2px; margin-bottom: 13px; max-width: 700px; padding: 0px;">
-    জাভা প্রোগ্রামিং ল্যাংগুয়েজের ডিজাইনাররা কয়েকটি গুরুত্বপূর্ণ বিষয় মাথায় রেখে এই ল্যাংগুয়েজকে ডিজাইন করে। এগুলো হলো-
-  </div>
-  <ol style="background-color: white; font-family: sans-serif; font-size: 13px; list-style-image: none; list-style-position: outside; margin-bottom: 1em; margin-left: 30px; padding-left: 0px;">
-    <li style="border: medium none; margin: 0px; padding: 0px;">
-      এটি হতে হবে খুবই সিম্পল, অবজেক্ট ওরিয়েন্টেড এবং পরিচিত, অর্থাৎ যারা তখন সি বা সি++ জানতো তারা যাতে করে সহজেই বুঝতে পারে।
-    </li>
-    <li style="border: medium none; margin: 0px; padding: 0px;">
-      এটিকে অবশ্যই অনেক শক্তসমর্থ এবং নিরাপদ (robust and secure) হতে হবে।
-    </li>
-    <li style="border: medium none; margin: 0px; padding: 0px;">
-      এটি যেকোন অপারেটিং সিস্টেমে চলবে।
-    </li>
-    <li style="border: medium none; margin: 0px; padding: 0px;">
-      এর পারফর্মেন্স অনেক ভাল হতে হবে ।
-    </li>
-    <li style="border: medium none; margin: 0px; padding: 0px;">
-      এটি ইন্টারপ্রেটেড, থ্রেডেড এবং ডাইনামিক হতে হবে। (এখানে বলে রাখি, জাভা যদিও কম্পাইল্ড ল্যাংগুয়েজ, কিন্তু জাভা ভার্চুয়াল মেশিন মূলত বাইটকোড ইন্টারপ্রেট করে আর জেভিএম একটা ডাইনামিক মেশিন)।
-    </li>
-  </ol>
-  <div style="background-color: white; border: medium none; font-family: sans-serif; font-size: 13px; line-height: 18.2px; margin-bottom: 13px; max-width: 700px; padding: 0px;">
-    এই কয়কেটা উদ্দেশ্যের সাথে আরেকটি গুরুত্বপূর্ণ জিনিস হলো- এর ল্যাংগুয়েজ ফিচার খুব অল্প হতে হবে যাতে একজন প্রোগ্রামার খুব সহজেই মনে রাখতে পারে। যেসব ফিচার খুব ঝামেলাযুক্ত এবং আসলে তেমন প্রয়োজন নেই খুবএকটা সেগুলোকে তারা বাদ দিয়ে ডিজাইন করেছে। যেমন- অপারেটর ওভারলোডিং, মাল্টিপল ইনহেরিটেন্স। এগুলো সুবিধার চেয়ে প্রোগ্রামারদের অসুবিধার কারণ বেশি তৈরি করে।
-  </div>
-  <div style="background-color: white; border: medium none; font-family: sans-serif; font-size: 13px; line-height: 18.2px; margin-bottom: 13px; max-width: 700px; padding: 0px;">
-    মাল্টিপল ইনহেরিটেন্সের ক্ষেত্রে একটি বড় সমস্যা হলো ডাইমন্ড সমস্যা। একটি উদাহরণ দেওয়া যাক- মনে কর, একটি ক্লাস A, একে B ও C এক্সটেন্ড করে। আবার আরেকটি ক্লাস D যা কিনা B ও C কে এক্সটেন্ড করে। এখন ধরো, যদি A এর কোনো একটি মেথডকে B ও C দুটিই ওভারাইড করে। এখন যদি D থেকে সেই মেথডটি কল করতে চাও, তাহলে সেটি কোন ক্লাসের মেথডকে কল করবে ? B না C ? সমস্যাটি নিশ্চয় বোঝা যাচ্ছে?&nbsp;
-  </div>
-  <div style="background-color: white; border: medium none; font-family: sans-serif; font-size: 13px; line-height: 18.2px; margin-bottom: 13px; max-width: 700px; padding: 0px;">
-    ইন্টারফেসের ক্ষেত্রে এই সমস্যা হওয়ার কোন উপায় নেই, কারণ প্রত্যেকটি ক্লাস যেহেতু মেথডগুলো ইম্প্লিমেন্ট করবে, তাই সবাই আসলে নিজের মেথডকেই কল করবে।
-  </div>
-  <div style="background-color: white; border: medium none; font-family: sans-serif; font-size: 13px; line-height: 18.2px; margin-bottom: 13px; max-width: 700px; padding: 0px;">
-    জাভা ডিজাইনাররা এরকম সমস্যার মধ্য দিয়ে যেতে চায় নি। তাই জাভাতে মাল্টিপল ইনহেরিটেন্স নেই।
-  </div>
-  <div style="background-color: white; border: medium none; font-family: sans-serif; font-size: 13px; line-height: 18.2px; margin-bottom: 13px; max-width: 700px; padding: 0px;">
-  </div>
-  <div style="background-color: white; border: medium none; font-family: sans-serif; font-size: 13px; line-height: 18.2px; margin-bottom: 13px; max-width: 700px; padding: 0px;">
-    Ref:&nbsp;http://programabad.com/questions/5613/multiple-inheritence/5614
-  </div>
-  <div style="background-color: white; border: medium none; font-family: sans-serif; font-size: 13px; line-height: 18.2px; margin-bottom: 13px; max-width: 700px; padding: 0px;">
-  </div>
-</div>
+    <p>জাভা প্রোগ্রামিং ল্যাংগুয়েজের ডিজাইনাররা কয়েকটি গুরুত্বপূর্ণ বিষয় মাথায় রেখে এই ল্যাংগুয়েজকে ডিজাইন করে। এগুলো হলো-</p>
+<ol>
+<li>এটি হতে হবে খুবই সিম্পল, অবজেক্ট ওরিয়েন্টেড এবং পরিচিত, অর্থাৎ যারা তখন সি বা সি++ জানতো তারা যাতে করে সহজেই বুঝতে পারে।</li>
+<li>এটিকে অবশ্যই অনেক শক্তসমর্থ এবং নিরাপদ (robust and secure) হতে হবে।</li>
+<li>এটি যেকোন অপারেটিং সিস্টেমে চলবে।</li>
+<li>এর পারফর্মেন্স অনেক ভাল হতে হবে ।</li>
+<li>এটি ইন্টারপ্রেটেড, থ্রেডেড এবং ডাইনামিক হতে হবে। (এখানে বলে রাখি, জাভা যদিও কম্পাইল্ড ল্যাংগুয়েজ, কিন্তু জাভা ভার্চুয়াল মেশিন মূলত বাইটকোড ইন্টারপ্রেট করে আর জেভিএম একটা ডাইনামিক মেশিন)।</li>
+</ol>
+<p>এই কয়কেটা উদ্দেশ্যের সাথে আরেকটি গুরুত্বপূর্ণ জিনিস হলো- এর ল্যাংগুয়েজ ফিচার খুব অল্প হতে হবে যাতে একজন প্রোগ্রামার খুব সহজেই মনে রাখতে পারে। যেসব ফিচার খুব ঝামেলাযুক্ত এবং আসলে তেমন প্রয়োজন নেই খুবএকটা সেগুলোকে তারা বাদ দিয়ে ডিজাইন করেছে। যেমন- অপারেটর ওভারলোডিং, মাল্টিপল ইনহেরিটেন্স। এগুলো সুবিধার চেয়ে প্রোগ্রামারদের অসুবিধার কারণ বেশি তৈরি করে।</p>
+<p>মাল্টিপল ইনহেরিটেন্সের ক্ষেত্রে একটি বড় সমস্যা হলো ডাইমন্ড সমস্যা। একটি উদাহরণ দেওয়া যাক- মনে কর, একটি ক্লাস A, একে B ও C এক্সটেন্ড করে। আবার আরেকটি ক্লাস D যা কিনা B ও C কে এক্সটেন্ড করে। এখন ধরো, যদি A এর কোনো একটি মেথডকে B ও C দুটিই ওভারাইড করে। এখন যদি D থেকে সেই মেথডটি কল করতে চাও, তাহলে সেটি কোন ক্লাসের মেথডকে কল করবে ? B না C ? সমস্যাটি নিশ্চয় বোঝা যাচ্ছে? </p>
+<p>ইন্টারফেসের ক্ষেত্রে এই সমস্যা হওয়ার কোন উপায় নেই, কারণ প্রত্যেকটি ক্লাস যেহেতু মেথডগুলো ইম্প্লিমেন্ট করবে, তাই সবাই আসলে নিজের মেথডকেই কল করবে।</p>
+<p>জাভা ডিজাইনাররা এরকম সমস্যার মধ্য দিয়ে যেতে চায় নি। তাই জাভাতে মাল্টিপল ইনহেরিটেন্স নেই।</p>
+<p>Ref: http://programabad.com/questions/5613/multiple-inheritence/5614</p>
+
 </main>
 
 <p class="post-tag">

@@ -35,245 +35,208 @@
 </p>
 
 <main>
-    <div dir="ltr" style="text-align: left;">
-  <div style="text-align: justify;">
-    ফাইল সিস্টেম হলো এক ধরণের ডেটা স্ট্রাকচার ও পদ্ধতি যার মাধ্যে অপারেটিং সিস্টেম ডিস্কে যে বিভিন্নরকম ফাইল রাখা হয় তার ট্র্যাক রাখে।
-  </div>
-  <div style="text-align: justify;">
-  </div>
-  <div style="text-align: justify;">
-    অনেক সময়ই বিভিন্ন ইন্টারভিউতে ইন মেমোরী ফাইল সিস্টেম তৈরি করতে বলে। প্রশ্নটি এমন থাকে যে, একই ইন মেমোরী ফাইল সিস্টেম তৈরি রকতে হলে আপনি কীভাবে ডিজাইন করবেন এবং কী কী ডেটা স্ট্রাকচার ব্যবহার করবেন। সম্ভব হলে কিছু কোড লিখে দেখান। (<i>Explain the data structures and algorithm that  you would use to design an in-memory file system. Illustrate with an example in code if possible.</i> )
-  </div>
-  <div style="text-align: justify;">
-  </div>
-  <div style="text-align: justify;">
-    অনেকই ফাইল সিস্টেমের নাম শুনেই ভয় পেয়ে যায়, মনে করে এটি অনেক লো লেভেল <i>(low level)</i> অর্থাৎ অপারেটিং সিস্টেমের সঙ্গে সম্পর্কিত। কিন্তু সহজ-সরল ডিজাইন কিন্তু খুব কঠিন কিছু নয়। অবজেক্ট ওরিয়েন্টেড ডিজাইন ব্যবহার করেই এটি সমাধান করে ফেলা যায়।
-  </div>
-  <div style="text-align: justify;">
-  </div>
-  <div style="text-align: justify;">
-    একটি ফাইল সিস্টেমে থাকে কতগুলো ফাইল এবং ডিরেক্টরী। এরা বেশ কিছু বৈশিষ্ট্য শেয়ার করে। যেমন &#8211; এদের নাম থাকে, এদের পাথ থাকে, এগুলোর কখন তৈরি করা হয়েছে, কখন মোডিফাই করা হয়েছে, কবে শেষবার অ্যাকসেস করা হয়েছে ইত্যাদি। এই বৈশিষ্ট্যগুলো নিয়ে আমরা একটি অ্যাবস্ট্রাক্ট সুপার ক্লাস তৈরি করতে পারি।
-  </div>
-  <div>
-  </div>
-  <div style="text-align: justify;">
-    <pre class="lang:java decode:true ">public abstract class Node implements Comparable&lt;Node&gt; {
-    private Directory root;
-    private String name;
-    private LocalDateTime created;
-    private LocalDateTime lastUpdated;
-    private LocalDateTime lastAccessed;
-<pre><code>public Node(String name) {
-    this.name = name;
-    this.created = LocalDateTime.now();
-    this.lastUpdated = LocalDateTime.now();
-    this.lastAccessed = LocalDateTime.now();
-}
+    <p>ফাইল সিস্টেম হলো এক ধরণের ডেটা স্ট্রাকচার ও পদ্ধতি যার মাধ্যে অপারেটিং সিস্টেম ডিস্কে যে বিভিন্নরকম ফাইল রাখা হয় তার ট্র্যাক রাখে।</p>
+<p>অনেক সময়ই বিভিন্ন ইন্টারভিউতে ইন মেমোরী ফাইল সিস্টেম তৈরি করতে বলে। প্রশ্নটি এমন থাকে যে, একই ইন মেমোরী ফাইল সিস্টেম তৈরি রকতে হলে আপনি কীভাবে ডিজাইন করবেন এবং কী কী ডেটা স্ট্রাকচার ব্যবহার করবেন। সম্ভব হলে কিছু কোড লিখে দেখান। (<em>Explain the data structures and algorithm that  you would use to design an in-memory file system. Illustrate with an example in code if possible.</em> )</p>
+<p>অনেকই ফাইল সিস্টেমের নাম শুনেই ভয় পেয়ে যায়, মনে করে এটি অনেক লো লেভেল <em>(low level)</em> অর্থাৎ অপারেটিং সিস্টেমের সঙ্গে সম্পর্কিত। কিন্তু সহজ-সরল ডিজাইন কিন্তু খুব কঠিন কিছু নয়। অবজেক্ট ওরিয়েন্টেড ডিজাইন ব্যবহার করেই এটি সমাধান করে ফেলা যায়।</p>
+<p>একটি ফাইল সিস্টেমে থাকে কতগুলো ফাইল এবং ডিরেক্টরী। এরা বেশ কিছু বৈশিষ্ট্য শেয়ার করে। যেমন – এদের নাম থাকে, এদের পাথ থাকে, এগুলোর কখন তৈরি করা হয়েছে, কখন মোডিফাই করা হয়েছে, কবে শেষবার অ্যাকসেস করা হয়েছে ইত্যাদি। এই বৈশিষ্ট্যগুলো নিয়ে আমরা একটি অ্যাবস্ট্রাক্ট সুপার ক্লাস তৈরি করতে পারি।</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">abstract</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Node</span> <span style="color:#66d9ef">implements</span> Comparable<span style="color:#f92672">&lt;</span>Node<span style="color:#f92672">&gt;</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">private</span> Directory root<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">private</span> String name<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">private</span> LocalDateTime created<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">private</span> LocalDateTime lastUpdated<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">private</span> LocalDateTime lastAccessed<span style="color:#f92672">;</span>
 
-public boolean isDirectory() {
-    return this instanceof Directory;
-}
+    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Node</span><span style="color:#f92672">(</span>String name<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> name<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">created</span> <span style="color:#f92672">=</span> LocalDateTime<span style="color:#f92672">.</span><span style="color:#a6e22e">now</span><span style="color:#f92672">();</span>
+        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">lastUpdated</span> <span style="color:#f92672">=</span> LocalDateTime<span style="color:#f92672">.</span><span style="color:#a6e22e">now</span><span style="color:#f92672">();</span>
+        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">lastAccessed</span> <span style="color:#f92672">=</span> LocalDateTime<span style="color:#f92672">.</span><span style="color:#a6e22e">now</span><span style="color:#f92672">();</span>
+    <span style="color:#f92672">}</span>
 
-public String getPath() {
-    return root != null ? root.getPath() + &quot;/&quot; + name : name;
-}
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">isDirectory</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span> <span style="color:#66d9ef">instanceof</span> Directory<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
 
-public Node getParent() {
-    return root;
-}
+    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getPath</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> root <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">?</span> root<span style="color:#f92672">.</span><span style="color:#a6e22e">getPath</span><span style="color:#f92672">()</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;/&#34;</span> <span style="color:#f92672">+</span> name <span style="color:#f92672">:</span> name<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
 
-public abstract long getLength();
+    <span style="color:#66d9ef">public</span> Node <span style="color:#a6e22e">getParent</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> root<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
 
-public String getName() {
-    return name;
-}
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">abstract</span> <span style="color:#66d9ef">long</span> <span style="color:#a6e22e">getLength</span><span style="color:#f92672">();</span>
 
-@Override
-public int compareTo(Node o) {
-    return this.getName().compareTo(o.getName());
-}
+    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getName</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> name<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
 
-public void setRoot(Directory root) {
-    this.root = root;
-}
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">compareTo</span><span style="color:#f92672">(</span>Node o<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">getName</span><span style="color:#f92672">().</span><span style="color:#a6e22e">compareTo</span><span style="color:#f92672">(</span>o<span style="color:#f92672">.</span><span style="color:#a6e22e">getName</span><span style="color:#f92672">());</span>
+    <span style="color:#f92672">}</span>
 
-public LocalDateTime getCreated() {
-    return created;
-}
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setRoot</span><span style="color:#f92672">(</span>Directory root<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">root</span> <span style="color:#f92672">=</span> root<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
 
-public LocalDateTime getLastUpdated() {
-    return lastUpdated;
-}
+    <span style="color:#66d9ef">public</span> LocalDateTime <span style="color:#a6e22e">getCreated</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> created<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
 
-public LocalDateTime getLastAccessed() {
-    return lastAccessed;
-}
+    <span style="color:#66d9ef">public</span> LocalDateTime <span style="color:#a6e22e">getLastUpdated</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> lastUpdated<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
 
-@Override
-public String toString() {
-    return &quot;root=&quot; + root +
-            &quot;, nname='&quot; + name + ''' +
-            &quot;, ncreated=&quot; + created +
-            &quot;, nlastUpdated=&quot; + lastUpdated +
-            &quot;, nlastAccessed=&quot; + lastAccessed;
-}
-</code></pre>
-<p>}</pre></p>
-<pre><code>&lt;p&gt;
-  এখানে কম্পেয়ারেবল ইন্টারফেইস ইমপ্লিমেন্ট করার কারণ হলো, যাতে আমরা সর্ট করতে পারি।
-&lt;/p&gt;
-</code></pre>
-  </div>
-  <p>
-    <!-- HTML generated using hilite.me -->
-  </p>
-  <p>
-    প্রত্যেকটি ফাইলের একটি করে রুট থাকে। রুট না থাকলে সে নিজেই রুট। এই নোডকে এক্সটেন্ড করে একটি ফাইল তৈরি করে ফেলা যাক &#8211;
-  </p>
-  <p>
-    <!-- HTML generated using hilite.me -->
-  </p>
-  <pre class="lang:java decode:true">public class File extends Node {
-    private String content; // for simplicity
+    <span style="color:#66d9ef">public</span> LocalDateTime <span style="color:#a6e22e">getLastAccessed</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> lastAccessed<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
 
-    public File(String name, String content) {
-        super(name);
-        this.content = content;
-    }
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">toString</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;root=&#34;</span> <span style="color:#f92672">+</span> root <span style="color:#f92672">+</span>
+                <span style="color:#e6db74">&#34;, nname=&#39;&#34;</span> <span style="color:#f92672">+</span> name <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;&#39;&#39;</span> <span style="color:#f92672">+</span>
+                <span style="color:#e6db74">&#34;, ncreated=&#34;</span> <span style="color:#f92672">+</span> created <span style="color:#f92672">+</span>
+                <span style="color:#e6db74">&#34;, nlastUpdated=&#34;</span> <span style="color:#f92672">+</span> lastUpdated <span style="color:#f92672">+</span>
+                <span style="color:#e6db74">&#34;, nlastAccessed=&#34;</span> <span style="color:#f92672">+</span> lastAccessed<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>এখানে কম্পেয়ারেবল ইন্টারফেইস ইমপ্লিমেন্ট করার কারণ হলো, যাতে আমরা সর্ট করতে পারি।</p>
+<p>প্রত্যেকটি ফাইলের একটি করে রুট থাকে। রুট না থাকলে সে নিজেই রুট। এই নোডকে এক্সটেন্ড করে একটি ফাইল তৈরি করে ফেলা যাক –</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">File</span> <span style="color:#66d9ef">extends</span> Node <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">private</span> String content<span style="color:#f92672">;</span> <span style="color:#75715e">// for simplicity
+</span><span style="color:#75715e"></span>
+    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">File</span><span style="color:#f92672">(</span>String name<span style="color:#f92672">,</span> String content<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">super</span><span style="color:#f92672">(</span>name<span style="color:#f92672">);</span>
+        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">content</span> <span style="color:#f92672">=</span> content<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
 
-    public File(String name) {
-        super(name);
-    }
+    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">File</span><span style="color:#f92672">(</span>String name<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">super</span><span style="color:#f92672">(</span>name<span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
 
-    public String getContent() {
-        return content;
-    }
+    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getContent</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> content<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
 
-    public void setContent(String content) {
-        this.content = content;
-    }
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setContent</span><span style="color:#f92672">(</span>String content<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">content</span> <span style="color:#f92672">=</span> content<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
 
-    @Override
-    public long getLength() {
-        if (content != null) {
-            return content.getBytes().length;
-        }
-        return 0;
-    }
-}</pre>
-  <p>
-    প্রত্যেকটি ফাইল কিছু কন্টেন্ট রাখে। সহজভাবে বুঝানোর জন্য এতে আপরা স্ট্রিং রেখেছি।<br /> এবার ডিরেক্টরী স্ট্রাকচার তৈরি করা যাক &#8211;
-  </p>
-  <pre class="lang:java decode:true">public class Directory extends Node {
-    private Set&lt;Node&gt; nodes;
-    public Directory(String path) {
-        super(path);
-        nodes = new TreeSet&lt;&gt;();
-    }
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">long</span> <span style="color:#a6e22e">getLength</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>content <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">return</span> content<span style="color:#f92672">.</span><span style="color:#a6e22e">getBytes</span><span style="color:#f92672">().</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#66d9ef">return</span> 0<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>প্রত্যেকটি ফাইল কিছু কন্টেন্ট রাখে। সহজভাবে বুঝানোর জন্য এতে আপরা স্ট্রিং রেখেছি।<br />
+এবার ডিরেক্টরী স্ট্রাকচার তৈরি করা যাক –</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Directory</span> <span style="color:#66d9ef">extends</span> Node <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">private</span> Set<span style="color:#f92672">&lt;</span>Node<span style="color:#f92672">&gt;</span> nodes<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Directory</span><span style="color:#f92672">(</span>String path<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">super</span><span style="color:#f92672">(</span>path<span style="color:#f92672">);</span>
+        nodes <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> TreeSet<span style="color:#f92672">&lt;&gt;();</span>
+    <span style="color:#f92672">}</span>
 
-    public void add(Node node) {
-        node.setRoot(this);
-        nodes.add(node);
-    }
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>Node node<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        node<span style="color:#f92672">.</span><span style="color:#a6e22e">setRoot</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">);</span>
+        nodes<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>node<span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
 
-    public Set&lt;Node&gt; getNodes() {
-        return nodes;
-    }
+    <span style="color:#66d9ef">public</span> Set<span style="color:#f92672">&lt;</span>Node<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">getNodes</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> nodes<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
 
-    @Override
-    public long getLength() {
-        long length = 0;
-        for (Node node : nodes) {
-            length += node.getLength();
-        }
-        return length;
-    }
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">long</span> <span style="color:#a6e22e">getLength</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">long</span> length <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span>Node node <span style="color:#f92672">:</span> nodes<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            length <span style="color:#f92672">+=</span> node<span style="color:#f92672">.</span><span style="color:#a6e22e">getLength</span><span style="color:#f92672">();</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#66d9ef">return</span> length<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
 
-    public int numberOfFiles() {
-        int count = 0;
-        for (Node node : nodes) {
-            if (node instanceof Directory) {
-                count++;/// Directory counts as a file
-                Directory directory = (Directory) node;
-                count += directory.numberOfFiles();
-            } else if (node instanceof File) {
-                count++;
-            }
-        }
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">numberOfFiles</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">int</span> count <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span>Node node <span style="color:#f92672">:</span> nodes<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>node <span style="color:#66d9ef">instanceof</span> Directory<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                count<span style="color:#f92672">++;</span><span style="color:#75715e">/// Directory counts as a file
+</span><span style="color:#75715e"></span>                Directory directory <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>Directory<span style="color:#f92672">)</span> node<span style="color:#f92672">;</span>
+                count <span style="color:#f92672">+=</span> directory<span style="color:#f92672">.</span><span style="color:#a6e22e">numberOfFiles</span><span style="color:#f92672">();</span>
+            <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>node <span style="color:#66d9ef">instanceof</span> File<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                count<span style="color:#f92672">++;</span>
+            <span style="color:#f92672">}</span>
+        <span style="color:#f92672">}</span>
 
-        return count;
-    }
-}</pre>
-  <p>
-    প্রত্যেকটি ডিরেক্টরীতে অারও অনেকগুলো করে ফাইল বা ডিরেক্টরী থাকতে পারে। এক্ষেত্রে ডিরেক্টরীতে একটি ট্রিসেটে (TreeSet) রাখা হয়েছে যা সেই ফাইল বা ডিরেক্টরীগুলো ধরে রাখে।
-  </p>
-  <p>
-    ডিরেক্টরী স্ট্রাকচারকরে সুন্দর করে প্রিন্ট করার জন্য কতগুলো মেথড যুক্ত করা যেতে পারে । যেমন-
-  </p>
-  <pre class="lang:java decode:true">public void printTree() {
-    int indent = 0;
-    StringBuilder sb = new StringBuilder();
-    printDirectoryTree(this, indent, sb);
-    System.out.println(sb.toString());
-}
+        <span style="color:#66d9ef">return</span> count<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>প্রত্যেকটি ডিরেক্টরীতে অারও অনেকগুলো করে ফাইল বা ডিরেক্টরী থাকতে পারে। এক্ষেত্রে ডিরেক্টরীতে একটি ট্রিসেটে (TreeSet) রাখা হয়েছে যা সেই ফাইল বা ডিরেক্টরীগুলো ধরে রাখে।</p>
+<p>ডিরেক্টরী স্ট্রাকচারকরে সুন্দর করে প্রিন্ট করার জন্য কতগুলো মেথড যুক্ত করা যেতে পারে । যেমন-</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">printTree</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">int</span> indent <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+    StringBuilder sb <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> StringBuilder<span style="color:#f92672">();</span>
+    printDirectoryTree<span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">,</span> indent<span style="color:#f92672">,</span> sb<span style="color:#f92672">);</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>sb<span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">());</span>
+<span style="color:#f92672">}</span>
 
-private void printDirectoryTree(Node node, int indent, StringBuilder sb) {
-    sb.append(getIndentString(indent));
-    sb.append("+--");
-    sb.append(node.getName());
-    sb.append("/");
-    sb.append("n");
-    if (node.isDirectory()) {
-        Directory directory = (Directory) node;
-        for (Node file : directory.getNodes()) {
-            printDirectoryTree(file, indent + 1, sb);
-        }
-    }
-}
+<span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">printDirectoryTree</span><span style="color:#f92672">(</span>Node node<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> indent<span style="color:#f92672">,</span> StringBuilder sb<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    sb<span style="color:#f92672">.</span><span style="color:#a6e22e">append</span><span style="color:#f92672">(</span>getIndentString<span style="color:#f92672">(</span>indent<span style="color:#f92672">));</span>
+    sb<span style="color:#f92672">.</span><span style="color:#a6e22e">append</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;+--&#34;</span><span style="color:#f92672">);</span>
+    sb<span style="color:#f92672">.</span><span style="color:#a6e22e">append</span><span style="color:#f92672">(</span>node<span style="color:#f92672">.</span><span style="color:#a6e22e">getName</span><span style="color:#f92672">());</span>
+    sb<span style="color:#f92672">.</span><span style="color:#a6e22e">append</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/&#34;</span><span style="color:#f92672">);</span>
+    sb<span style="color:#f92672">.</span><span style="color:#a6e22e">append</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;n&#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>node<span style="color:#f92672">.</span><span style="color:#a6e22e">isDirectory</span><span style="color:#f92672">())</span> <span style="color:#f92672">{</span>
+        Directory directory <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>Directory<span style="color:#f92672">)</span> node<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span>Node file <span style="color:#f92672">:</span> directory<span style="color:#f92672">.</span><span style="color:#a6e22e">getNodes</span><span style="color:#f92672">())</span> <span style="color:#f92672">{</span>
+            printDirectoryTree<span style="color:#f92672">(</span>file<span style="color:#f92672">,</span> indent <span style="color:#f92672">+</span> 1<span style="color:#f92672">,</span> sb<span style="color:#f92672">);</span>
+        <span style="color:#f92672">}</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
 
-private static String getIndentString(int indent) {
-    StringBuilder sb = new StringBuilder();
-    for (int i = 0; i &lt; indent; i++) {
-        sb.append("|  ");
-    }
-    return sb.toString();
-}</pre>
-  <p>
-    এবার একটি মেইন মেথড থেকে এগুলোকে ব্যবহার করা যাক &#8211;
-  </p>
-  <pre class="lang:java decode:true ">public class Main {
-    public static void main(String[] args) {
-        Directory root = new Directory("root");
-        File file = new File("profile.jpg");
-        root.add(file);
+<span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> String <span style="color:#a6e22e">getIndentString</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> indent<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    StringBuilder sb <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> StringBuilder<span style="color:#f92672">();</span>
+    <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> indent<span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+        sb<span style="color:#f92672">.</span><span style="color:#a6e22e">append</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;|  &#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+    <span style="color:#66d9ef">return</span> sb<span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">();</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>এবার একটি মেইন মেথড থেকে এগুলোকে ব্যবহার করা যাক –</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#960050;background-color:#1e0010">\</span><span style="color:#f92672">[</span><span style="color:#960050;background-color:#1e0010">\</span><span style="color:#f92672">]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        Directory root <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Directory<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;root&#34;</span><span style="color:#f92672">);</span>
+        File file <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> File<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;profile.jpg&#34;</span><span style="color:#f92672">);</span>
+        root<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>file<span style="color:#f92672">);</span>
 
-        Directory movie = new Directory("movie");
-        root.add(movie);
+        Directory movie <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Directory<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;movie&#34;</span><span style="color:#f92672">);</span>
+        root<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>movie<span style="color:#f92672">);</span>
 
-        Directory englishMovie = new Directory("english");
-        englishMovie.add(new File("IronFist.mp4"));
-        englishMovie.add(new File("The Shawshank Redemption.mp4"));
-        englishMovie.add(new File("ZotaPia.mp4"));
-        File despicableMe = new File("DespicableMe.mp4");
-        englishMovie.add(despicableMe);
+        Directory englishMovie <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Directory<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;english&#34;</span><span style="color:#f92672">);</span>
+        englishMovie<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> File<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;IronFist.mp4&#34;</span><span style="color:#f92672">));</span>
+        englishMovie<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> File<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;The Shawshank Redemption.mp4&#34;</span><span style="color:#f92672">));</span>
+        englishMovie<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> File<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;ZotaPia.mp4&#34;</span><span style="color:#f92672">));</span>
+        File despicableMe <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> File<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;DespicableMe.mp4&#34;</span><span style="color:#f92672">);</span>
+        englishMovie<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>despicableMe<span style="color:#f92672">);</span>
 
-        movie.add(englishMovie);
+        movie<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>englishMovie<span style="color:#f92672">);</span>
 
-        Directory banglaMovie = new Directory("Bangla");
-        banglaMovie.add(new File("The Clay Bird.mp4"));
-        banglaMovie.add(new File("Jibon Thekey Neya.mp4"));
-        movie.add(banglaMovie);
+        Directory banglaMovie <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Directory<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Bangla&#34;</span><span style="color:#f92672">);</span>
+        banglaMovie<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> File<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;The Clay Bird.mp4&#34;</span><span style="color:#f92672">));</span>
+        banglaMovie<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> File<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Jibon Thekey Neya.mp4&#34;</span><span style="color:#f92672">));</span>
+        movie<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>banglaMovie<span style="color:#f92672">);</span>
 
-        root.printTree();
+        root<span style="color:#f92672">.</span><span style="color:#a6e22e">printTree</span><span style="color:#f92672">();</span>
 
-        System.out.println("name: " + movie.getName());
-        System.out.println("Created: " + movie.getCreated());
-    }
-}</pre>
-  <p>
-    <span style="background-color: #f0f0f0;">এটিকে রান করলে নিচের আউটপুটটি পাওয়া যাবে-</span>
-  </p>
-  <pre class="lang:java decode:true ">+--root/
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;name: &#34;</span> <span style="color:#f92672">+</span> movie<span style="color:#f92672">.</span><span style="color:#a6e22e">getName</span><span style="color:#f92672">());</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Created: &#34;</span> <span style="color:#f92672">+</span> movie<span style="color:#f92672">.</span><span style="color:#a6e22e">getCreated</span><span style="color:#f92672">());</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>এটিকে রান করলে নিচের আউটপুটটি পাওয়া যাবে-</p>
+<pre><code>
++--root/
 |  +--movie/
 |  |  +--Bangla/
 |  |  |  +--Jibon Thekey Neya.mp4/
@@ -286,11 +249,10 @@ private static String getIndentString(int indent) {
 |  +--profile.jpg/
 
 name: movie
-Created: 2017-04-08T02:26:38.341</pre>
-  <p>
-    <span style="font-family: 'courier new' , 'courier' , monospace;">সম্পূর্ণ কোডটি পাওয়া যাবে এখানে: <a href="https://gist.github.com/rokon12/d3c83562c785de6d1a483a5585205b92">https://gist.github.com/rokon12/d3c83562c785de6d1a483a5585205b92</a></span>
-  </p>
-</div>
+Created: 2017-04-08T02:26:38.341
+
+</code></pre><p>সম্পূর্ণ কোডটি পাওয়া যাবে এখানে: <a href="https://gist.github.com/rokon12/d3c83562c785de6d1a483a5585205b92">https://gist.github.com/rokon12/d3c83562c785de6d1a483a5585205b92</a></p>
+
 </main>
 
 <p class="post-tag">

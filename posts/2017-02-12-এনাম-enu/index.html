@@ -35,110 +35,89 @@
 </p>
 
 <main>
-    <div dir="ltr" style="text-align: left;">
-  <p>
-    জাভাতে এনাম (enum) একটি বিশেষ টাইপ। একটি নির্দিষ্ট সংখ্যক কনস্ট্যান্ট (Constant) তৈরি করতে এটি ব্যবহার করা হয়। যেমন, সপ্তাহের দিনের নাম (days of the week), বছরে মাসের নাম (month in the year), দিক (উত্তর, দক্ষিণ, পূর্ব, পশ্চিম) ইত্যাদি।<br /> উদাহরণ,
-  </p>
-  <pre class="lang:java decode:true ">public enum Day {
-   SATURDAY,
-   SUNDAY,
-   MONDAY,
-   TUESDAY,
-   WEDNESDAY,
-   THURSDAY,
+    <p>জাভাতে এনাম (enum) একটি বিশেষ টাইপ। একটি নির্দিষ্ট সংখ্যক কনস্ট্যান্ট (Constant) তৈরি করতে এটি ব্যবহার করা হয়। যেমন, সপ্তাহের দিনের নাম (days of the week), বছরে মাসের নাম (month in the year), দিক (উত্তর, দক্ষিণ, পূর্ব, পশ্চিম) ইত্যাদি।<br />
+উদাহরণ,</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">enum</span> Day <span style="color:#f92672">{</span>
+   SATURDAY<span style="color:#f92672">,</span>
+   SUNDAY<span style="color:#f92672">,</span>
+   MONDAY<span style="color:#f92672">,</span>
+   TUESDAY<span style="color:#f92672">,</span>
+   WEDNESDAY<span style="color:#f92672">,</span>
+   THURSDAY<span style="color:#f92672">,</span>
    FRIDAY
-}</pre>
-  <p>
-    &nbsp;
-  </p>
-  <p>
-    উদাহরণটি Day নামে একটি এনাম তৈরি করা হয়ছে। এতে সাতটি কনস্ট্যান্ট রয়েছে। এনাম তৈরি করতে ক্লাস বা ইন্টারফেসের মতো একটি কিওয়ার্ড enum ব্যবহার করা হয়েছে।<br /> এনাম সরাসরি ডট(&#8216;.&#8217;) অপারেটর ব্যবহার করে অ্যাকসেস করা যায় এবং ভ্যারিয়েবল হিসেবে ব্যবহার করা যায়। উদাহরণ,
-  </p>
-  <p>
-    Day day = Day.SATURDAY;
-  </p>
-  <p>
-    এনাম, if স্টেটমেন্টে ব্যবহার করা যায়। উদাহরণ,
-  </p>
-  <pre class="lang:java decode:true">public class EnumExample {
-   public void displayDay(Day day) {
-      if (day == Day.SATURDAY) {
-         System.out.println("Its saturday! Weekend!");
-      } else if (day == Day.FRIDAY) {
-         System.out.println("It's Friday!! Weekend!");
-      } else {
-         System.out.println("Weekday!");
-      }
-   }
-   public static void main(String[] args) {
-      EnumExample enumExample = new EnumExample();
-      Day day = Day.SATURDAY;
-      enumExample.displayDay(day);
-   }
-}</pre>
-  <p>
-    এনাম সুইচ স্টেটমেন্টে ব্যবহার করা যায়। উদাহরণ,
-  </p>
-  <pre class="lang:java decode:true">public void displayDay(Day day) {
-   switch (day) {
-      case SATURDAY:
-         System.out.println("Its saturday! Weekend!");
-         break;
-      case FRIDAY:
-         System.out.println("It's Friday!! Weekend!");
-         break;
-      default:
-         System.out.println("Weekday!");
-         break;
-   }
-}</pre>
-  <p>
-    জাভা প্রোগ্রামিং ভাষায় এনাম খুব শক্তিশালী একটি ফিচার। কম্পাইল টাইমে জাভা কম্পাইলার এতে বেশ কিছু স্ট্যাটিক মেথড যুক্ত করে। যেমন, values()। এটি একটি অ্যারে রিটার্ন করে যাতে সবগুলো এনামের ভ্যালুগুলো থাকে।<br /> উদাহরণ,
-  </p>
-  <pre class="lang:java decode:true">Day[] values = Day.values();
-for (Day day : values) {
-   System.out.println(day);
-}</pre>
-  <pre name="code"></pre>
-  <p>
-    আউটপুট,
-  </p>
-  <pre class="lang:java decode:true">SATURDAY
+<span style="color:#f92672">}</span>
+</code></pre></div><p>উদাহরণটি Day নামে একটি এনাম তৈরি করা হয়ছে। এতে সাতটি কনস্ট্যান্ট রয়েছে। এনাম তৈরি করতে ক্লাস বা ইন্টারফেসের মতো একটি কিওয়ার্ড enum ব্যবহার করা হয়েছে।<br />
+এনাম সরাসরি ডট(‘.’) অপারেটর ব্যবহার করে অ্যাকসেস করা যায় এবং ভ্যারিয়েবল হিসেবে ব্যবহার করা যায়। উদাহরণ,</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">Day day <span style="color:#f92672">=</span> Day<span style="color:#f92672">.</span><span style="color:#a6e22e">SATURDAY</span><span style="color:#f92672">;</span>
+</code></pre></div><p>এনাম, if স্টেটমেন্টে ব্যবহার করা যায়। উদাহরণ,</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">EnumExample</span> <span style="color:#f92672">{</span>
+   <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">displayDay</span><span style="color:#f92672">(</span>Day day<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+      <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>day <span style="color:#f92672">==</span> Day<span style="color:#f92672">.</span><span style="color:#a6e22e">SATURDAY</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+         System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Its saturday! Weekend!&#34;</span><span style="color:#f92672">);</span>
+      <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>day <span style="color:#f92672">==</span> Day<span style="color:#f92672">.</span><span style="color:#a6e22e">FRIDAY</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+         System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;It&#39;s Friday!! Weekend!&#34;</span><span style="color:#f92672">);</span>
+      <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+         System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Weekday!&#34;</span><span style="color:#f92672">);</span>
+      <span style="color:#f92672">}</span>
+   <span style="color:#f92672">}</span>
+   <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#960050;background-color:#1e0010">\</span><span style="color:#f92672">[</span><span style="color:#960050;background-color:#1e0010">\</span><span style="color:#f92672">]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+      EnumExample enumExample <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> EnumExample<span style="color:#f92672">();</span>
+      Day day <span style="color:#f92672">=</span> Day<span style="color:#f92672">.</span><span style="color:#a6e22e">SATURDAY</span><span style="color:#f92672">;</span>
+      enumExample<span style="color:#f92672">.</span><span style="color:#a6e22e">displayDay</span><span style="color:#f92672">(</span>day<span style="color:#f92672">);</span>
+   <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>এনাম সুইচ স্টেটমেন্টে ব্যবহার করা যায়। উদাহরণ,</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">displayDay</span><span style="color:#f92672">(</span>Day day<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+   <span style="color:#66d9ef">switch</span> <span style="color:#f92672">(</span>day<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+      <span style="color:#66d9ef">case</span> SATURDAY<span style="color:#f92672">:</span>
+         System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Its saturday! Weekend!&#34;</span><span style="color:#f92672">);</span>
+         <span style="color:#66d9ef">break</span><span style="color:#f92672">;</span>
+      <span style="color:#66d9ef">case</span> FRIDAY<span style="color:#f92672">:</span>
+         System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;It&#39;s Friday!! Weekend!&#34;</span><span style="color:#f92672">);</span>
+         <span style="color:#66d9ef">break</span><span style="color:#f92672">;</span>
+      <span style="color:#66d9ef">default</span><span style="color:#f92672">:</span>
+         System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Weekday!&#34;</span><span style="color:#f92672">);</span>
+         <span style="color:#66d9ef">break</span><span style="color:#f92672">;</span>
+   <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>জাভা প্রোগ্রামিং ভাষায় এনাম খুব শক্তিশালী একটি ফিচার। কম্পাইল টাইমে জাভা কম্পাইলার এতে বেশ কিছু স্ট্যাটিক মেথড যুক্ত করে। যেমন, values()। এটি একটি অ্যারে রিটার্ন করে যাতে সবগুলো এনামের ভ্যালুগুলো থাকে।<br />
+উদাহরণ,</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">Day<span style="color:#f92672">[]</span> values <span style="color:#f92672">=</span> Day<span style="color:#f92672">.</span><span style="color:#a6e22e">values</span><span style="color:#f92672">();</span>
+<span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span>Day day <span style="color:#f92672">:</span> values<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+   System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>day<span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>আউটপুট,</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">SATURDAY
 SUNDAY
 MONDAY
 TUESDAY
 WEDNESDAY
 THURSDAY
-FRIDAY</pre>
-  <p>
-    এতে ফিল্ড, মেথড এবং কনস্ট্রাক্টর লেখা যায়। উদাহরণ,
-  </p>
-  <p>
-    &nbsp;
-  </p>
-  <pre class="lang:java decode:true">public enum Level {
-   HIGH(3),
-   MEDIUM(2),
-   LOW(1);
-   private final int levelCode;
+FRIDAY
+</code></pre></div><p>এতে ফিল্ড, মেথড এবং কনস্ট্রাক্টর লেখা যায়। উদাহরণ,</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">enum</span> Level <span style="color:#f92672">{</span>
+   HIGH<span style="color:#f92672">(</span>3<span style="color:#f92672">),</span>
+   MEDIUM<span style="color:#f92672">(</span>2<span style="color:#f92672">),</span>
+   LOW<span style="color:#f92672">(</span>1<span style="color:#f92672">);</span>
+   <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">int</span> levelCode<span style="color:#f92672">;</span>
 
-   Level(int levelCode) {
-      this.levelCode = levelCode;
-   }
+   Level<span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> levelCode<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+      <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">levelCode</span> <span style="color:#f92672">=</span> levelCode<span style="color:#f92672">;</span>
+   <span style="color:#f92672">}</span>
 
-   public int getLevelCode() {
-      return this.levelCode;
-   }
-}</pre>
-  <p>
-    এছাড়াও এনাম সম্পর্কে বেশ কতগুলো তথ্য যা জেনে রাখা বিশেষ প্রয়োজন,<br /> 1. এনাম ডিক্লেয়ারেশন মূলত একটি ক্লাস যা কিনা java.lang.Enum ক্লাসকে এক্সটেন্ড করে। একে এক্সটেন্ড করা যায় না বা অন্য কোনো ক্লাসকে এটি এক্সটেন্ড করতে পারে না। তবে এনাম ইন্টারফেস ইমপ্লিমেন্ট করতে পারে।<br /> 2. এনাম টাইপ সেইফ। অর্থাৎ কোন এনাম ভ্যারিয়েবলে অন্য কোনো ভ্যালু অ্যাসাইন করা সম্ভবন না। উদাহরণ,
-  </p>
-  <pre class="lang:java decode:true">Day day = Day.MONDAY;
-day = 4;</pre>
-  <p>
-    এখানে দ্বিতীয় লাইনটি বৈধ নয়।<br /> 3. এনামকে == অপারেটর ব্যবহার করে এবং equals() মেথড ব্যবহার করে দুই ভাবেই তুলনা করা যায়।<br /> 4. এনামকে নিউ (new) অপারেটর ব্যবহার করে এর ইনস্ট্যান্স তৈরি করা যাবে না।
-  </p>
-</div>
+   <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">getLevelCode</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+      <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">levelCode</span><span style="color:#f92672">;</span>
+   <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>এছাড়াও এনাম সম্পর্কে বেশ কতগুলো তথ্য যা জেনে রাখা বিশেষ প্রয়োজন,<br />
+1. এনাম ডিক্লেয়ারেশন মূলত একটি ক্লাস যা কিনা java.lang.Enum ক্লাসকে এক্সটেন্ড করে। একে এক্সটেন্ড করা যায় না বা অন্য কোনো ক্লাসকে এটি এক্সটেন্ড করতে পারে না। তবে এনাম ইন্টারফেস ইমপ্লিমেন্ট করতে পারে।<br />
+2. এনাম টাইপ সেইফ। অর্থাৎ কোন এনাম ভ্যারিয়েবলে অন্য কোনো ভ্যালু অ্যাসাইন করা সম্ভবন না। উদাহরণ,</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">Day day <span style="color:#f92672">=</span> Day<span style="color:#f92672">.</span><span style="color:#a6e22e">MONDAY</span><span style="color:#f92672">;</span>
+day <span style="color:#f92672">=</span> 4<span style="color:#f92672">;</span>
+</code></pre></div><p>এখানে দ্বিতীয় লাইনটি বৈধ নয়।<br />
+3. এনামকে == অপারেটর ব্যবহার করে এবং equals() মেথড ব্যবহার করে দুই ভাবেই তুলনা করা যায়।<br />
+4. এনামকে নিউ (new) অপারেটর ব্যবহার করে এর ইনস্ট্যান্স তৈরি করা যাবে না।</p>
+
 </main>
 
 <p class="post-tag">

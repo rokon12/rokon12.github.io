@@ -36,7 +36,7 @@
       <pubDate>Mon, 26 Feb 2018 14:11:38 +0000</pubDate>
       
       <guid>http://bazlur.com/posts/2018-02-26-java-thread-programming-review-/</guid>
-      <description>জাভা থ্রেড প্রোগ্রামিং বইটি নিয়ে নিচের চমৎকার রিভিউটি লিখেছেন Ruhul Quddus Shakkhor   This is a great book, but this is not for everyone. If you’re new to Java, then it’s probably better to learn the basics first. However, if you’re an intermediate to the advanced learner, this book will give you a deeper understanding of Java threads. At this moment, I’m not aware of another Bangla book for any programming language that can give you a similar overview of threads.</description>
+      <description>#### **জাভা থ্রেড প্রোগ্রামিং বইটি নিয়ে নিচের চমৎকার রিভিউটি লিখেছেন **Ruhul Quddus Shakkhor &amp;gt; This is a great book, but this is not for everyone. If you’re new to Java, then it’s probably better to learn the basics first. However, if you’re an intermediate to the advanced learner, this book will give you a deeper understanding of Java threads. At this moment, I’m not aware of another Bangla book for any programming language that can give you a similar overview of threads.</description>
     </item>
     
     <item>
@@ -45,7 +45,7 @@
       <pubDate>Thu, 22 Feb 2018 17:47:41 +0000</pubDate>
       
       <guid>http://bazlur.com/posts/2018-02-22-java-thread-programming-review-/</guid>
-      <description>জাভা থ্রেড প্রোগ্রামিং বইটি নিয়ে নিচের চমৎকার রিভিউটি লিখেছেন অরণ্য আব্দুলাহ আল মামুন ভাই।  জাভা বেসড এপ্লিকেশন ডেভেলপমেন্টের একটা গুরুত্বপূর্ন বিষয় হলো থ্রেডিং। সেইটা সার্ভার-সাইড ডেভেলপমেন্ট-ই হোক আর ক্লায়েন্ট সাইড ডেভেলপমেন্ট। সার্ভার-সাইড ডেভেলপমেন্ট এ বিভিন্ন প্রসেসকে একধিক কাজে ভাগ করে faster response করা কিংবা ক্লায়েন্ট সাইড ডেভেলপমেন্ট এ GUI এর পাশাপাশি Network request বা IO Request সঠিক ভাবে handle করা – এগুলা খুবই গুরুত্বপূর্ন বিষয়। থ্রেডিং এর concept ভালো না থাকলে ভালো মানের application develop করা এক কথায় অসম্ভব।</description>
+      <description>#### **জাভা থ্রেড প্রোগ্রামিং বইটি নিয়ে নিচের চমৎকার রিভিউটি লিখেছেন অরণ্য আব্দুলাহ আল মামুন ভাই।** জাভা বেসড এপ্লিকেশন ডেভেলপমেন্টের একটা গুরুত্বপূর্ন বিষয় হলো থ্রেডিং। সেইটা সার্ভার-সাইড ডেভেলপমেন্ট-ই হোক আর ক্লায়েন্ট সাইড ডেভেলপমেন্ট। সার্ভার-সাইড ডেভেলপমেন্ট এ বিভিন্ন প্রসেসকে একধিক কাজে ভাগ করে faster response করা কিংবা ক্লায়েন্ট সাইড ডেভেলপমেন্ট এ GUI এর পাশাপাশি Network request বা IO Request সঠিক ভাবে handle করা – এগুলা খুবই গুরুত্বপূর্ন বিষয়। থ্রেডিং এর concept ভালো না থাকলে ভালো মানের application develop করা এক কথায় অসম্ভব।</description>
     </item>
     
     <item>
@@ -54,7 +54,11 @@
       <pubDate>Tue, 18 Oct 2016 19:06:00 +0000</pubDate>
       
       <guid>http://bazlur.com/posts/2016-10-18-im-writing-a-boo/</guid>
-      <description>Yes, that&amp;#8217;s true!     It&amp;#8217;s a book about a programming language called Java. The written language of the book is Bangla, and I targeting mostly Bangladeshi developers who know a basic programming language eg C or python and want to explore Java.     I, in fact, intend to write three separate part of the book.     Here is the outline of the books:&amp;nbsp;       Java : &amp;nbsp;Part 1 (Basic Java)    Introduction&amp;nbsp;   Your First Java Programming&amp;nbsp;   Syntax&amp;nbsp;   Data Types, Operators&amp;nbsp;   Control flow-looping-branching&amp;nbsp;   Array&amp;nbsp;   Object Oriented Programming&amp;nbsp;   Exception Handling&amp;nbsp;   Generics&amp;nbsp;   Java IO&amp;nbsp;   Java NIO&amp;nbsp;   String Operations&amp;nbsp;   Collection Framework&amp;nbsp;   Core Utilities&amp;nbsp;   Unit Testing&amp;nbsp;       Java : Part 1.</description>
+      <description>Yes, that’s true!
+It’s a book about a programming language called Java. The written language of the book is Bangla, and I targeting mostly Bangladeshi developers who know a basic programming language eg C or python and want to explore Java.
+I, in fact, intend to write three separate part of the book.
+Here is the outline of the books: Java : Part 1 (Basic Java)
+ Introduction  Your First Java Programming  Syntax  Data Types, Operators  Control flow-looping-branching  Array  Object Oriented Programming  Exception Handling  Generics  Java IO  Java NIO  String Operations  Collection Framework  Core Utilities  Unit Testing   Java : Part 1.</description>
     </item>
     
   </channel>

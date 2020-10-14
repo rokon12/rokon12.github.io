@@ -35,121 +35,44 @@
 </p>
 
 <main>
-    <div dir="ltr" style="text-align: left;">
-  <div style="text-align: justify;">
-    <a href="http://www.bazlur.com/2017/04/lambda-expression-part-1.html" target="_blank" rel="noopener noreferrer">আগে পর্বে</a> জাভাতে ল্যামডা এক্সপ্রেশন কী এবং কীভাবে ব্যবহার করা হয় তার একটি প্রস্তাবনা দেওয়া হয়েছে। এবার আরও ভেতরে প্রবেশ করা যাক-
-  </div>
-  <div style="text-align: justify;">
-  </div>
-  <div style="text-align: justify;">
-    খুব সহজে করে সংজ্ঞায়িত করা যায় এভাবে &#8211; ল্যামডা এক্সপ্রেশন হলো অ্যানোনিমাস ফাংশন যা অন্য মেথডে আর্গুমেন্ট হিসেবে পাস করা যায় বা ভ্যারিয়েবলে অ্যাসাইন করা যায়।
-  </div>
-  <div style="text-align: justify;">
-  </div>
-  <div style="text-align: justify;">
-    আমরা সংজ্ঞা থেকে এর তিনটি বৈশিষ্ট্যকে আলাদা করতে পারি &#8211;
-  </div>
-  <div style="text-align: justify;">
-  </div>
-  <div style="text-align: justify;">
-    ১. <b>অ্যানোনিমাস</b>&#8211; এদের নাম নেই।
-  </div>
-  <div style="text-align: justify;">
-    ২. <b>ফাংশন</b>&#8211; এটিতে মেথডের মতো প্যারামিটার লিস্ট থাকে, রিটার্ন টাইপ থাকে এবং এক্সেপশন লিস্ট থাকতে পারে। তবে যেহেতু এগুলো কোনো ক্লাসের সাথে সংযুক্ত নয় তাই এগুলোকে ফাংশন বলা হয়।
-  </div>
-  <div style="text-align: justify;">
-    ৩. <b>পাসড অ্যারাউন্ড</b>&#8211; এগুলোকে কোনো মেথডের আর্গুমেন্ট হিসেবে পাস করা যায় বা ভ্যারিয়েবলে অ্যাসাইন করা যায়।
-  </div>
-  <div style="text-align: justify;">
-  </div>
-  <div style="text-align: justify;">
-    তবে ল্যামডা এক্সপ্রেশনের আরকটি বৈশিষ্ট্য হলো, সংক্ষিপ্ত। এতে অনেক কম লাইন কোড লিখে একই কাজ করা যায়। এতে বয়লারপ্লেট কোড কম থাকে।
-  </div>
-  <div style="text-align: justify;">
-  </div>
-  <div style="text-align: justify;">
-    এবার ল্যামডা এক্সপ্রেশনের সিনট্যাক্স দেখা যাক। ল্যামডা এক্সপ্রেশনের তিনটি অংশ থাকে-
-  </div>
-  <div style="text-align: justify;">
-  </div>
-  <div style="text-align: justify;">
-    ১. <b>প্যারামিটার লিস্ট</b>&#8211; এতে শুরুতে কতগুলো প্যারামিটার থাকে। প্যরামিটারগুলোতে টাইপ থাকতে পারে। তবে অনেক্ষেত্রেই টাইপ ইনফরমেশন দেওয়ার প্রয়োজন পরে না। কম্পাইলার বুঝে নিতে পারে। একাধিক প্যরিমিটার থাকলে এগলোকে কমা দিয়ে আলাদা করতে হয় এবং প্যারামিটারগুলো একটি প্যারেন্থেসিসের মধ্যে থাকে। তবে একটি প্যারামিটার থাকলে প্যারেন্থেসিস দেওয়ার প্রয়োজন হয় না।
-  </div>
-  <div style="text-align: justify;">
-    ২. <b>অ্যারো সাইন</b> &#8211; অ্যারো ( -> ) সাইন প্যারামিটার লিস্টকে বডি থেকে আলাদা করে। এটি দুটি ক্যারেক্টার (-) ড্যাশ ও (>) রাইট অ্যাঙ্গেল ব্রাকেট সংযুক্ত করে লেখা হয়।
-  </div>
-  <div style="text-align: justify;">
-    ৩. <b>বডি</b> &#8211; যেখানে মূল কোড অংশটুকু থাকে।
-  </div>
-  <div style="text-align: justify;">
-  </div>
-  <div style="text-align: justify;">
-    কতগুলো উদাহরণ দেখা যাক &#8211;
-  </div>
-  <div style="text-align: justify;">
-    <pre class="lang:java decode:true ">(Contact contact1, Contact contact2) -&gt; {
-          return contact1.getName().compareTo(contact2.getName());
-};</pre>
-  </div>
-  <div style="text-align: justify;">
-    তবে একে সংক্ষিপ্ত করে এক লাইনেও লেখা যায়-
-  </div>
-  <div>
-    <pre class="lang:java decode:true ">(Contact contact1, Contact contact2) -&gt; contact1.getName().compareTo(contact2.getName());
-</pre>
-  </div>
-  <div style="text-align: justify;">
-    একে ভ্যারিয়েবলে অ্যাসাইন করা যায়-
-  </div>
-  <div>
-    <pre class="lang:java decode:true ">Comparator contactComparator = (Contact contact1, Contact contact2) -&gt; contact1.getName().compareTo(contact2.getName());
-</pre>
-  </div>
-  <div style="text-align: justify;">
-    আরও কয়েকটি উদাহরণ-
-  </div>
-</div>
-<div>
-  <pre class="lang:java decode:true">(String s) -&gt; {
-        return s.toUpperCase();
-}</pre>
-</div>
-<div dir="ltr" style="text-align: left;">
-  <div style="text-align: justify;">
-    তবে একে সংক্ষি্প্ত করে লিখলে &#8211;
-  </div>
-</div>
-<div>
-  <pre class="lang:java decode:true">(String s) -&gt; s.toUpperCase()</pre>
-</div>
-<div dir="ltr" style="text-align: left;">
-  <div style="text-align: justify;">
-    সুতরাং ল্যামডা এক্ষপ্রেশন দু রকম হতে পারে &#8211;
-  </div>
-  <div style="text-align: justify;">
-  </div>
-  <div style="text-align: justify;">
-    <i>(parameters) → expression</i>
-  </div>
-  <div style="text-align: justify;">
-  </div>
-  <div style="text-align: justify;">
-    অথবা
-  </div>
-  <div style="text-align: justify;">
-  </div>
-  <div style="text-align: justify;">
-    <i>(parameters) → {statements;}</i>
-  </div>
-  <div style="text-align: justify;">
-  </div>
-  <div style="text-align: justify;">
-    বডিতে একাধিক স্ট্যাটমেন্ট থাকলে কার্লি ব্রেসের প্রয়োজন হয়।
-  </div>
-  <p>
-    &nbsp;
-  </p>
-</div>
+    <p><a href="http://www.bazlur.com/2017/04/lambda-expression-part-1.html">আগে পর্বে</a> জাভাতে ল্যামডা এক্সপ্রেশন কী এবং কীভাবে ব্যবহার করা হয় তার একটি প্রস্তাবনা দেওয়া হয়েছে। এবার আরও ভেতরে প্রবেশ করা যাক-</p>
+<p>খুব সহজে করে সংজ্ঞায়িত করা যায় এভাবে – ল্যামডা এক্সপ্রেশন হলো অ্যানোনিমাস ফাংশন যা অন্য মেথডে আর্গুমেন্ট হিসেবে পাস করা যায় বা ভ্যারিয়েবলে অ্যাসাইন করা যায়।</p>
+<p>আমরা সংজ্ঞা থেকে এর তিনটি বৈশিষ্ট্যকে আলাদা করতে পারি –</p>
+<p>১. <strong>অ্যানোনিমাস</strong>– এদের নাম নেই।</p>
+<p>২. <strong>ফাংশন</strong>– এটিতে মেথডের মতো প্যারামিটার লিস্ট থাকে, রিটার্ন টাইপ থাকে এবং এক্সেপশন লিস্ট থাকতে পারে। তবে যেহেতু এগুলো কোনো ক্লাসের সাথে সংযুক্ত নয় তাই এগুলোকে ফাংশন বলা হয়।</p>
+<p>৩. <strong>পাসড অ্যারাউন্ড</strong>– এগুলোকে কোনো মেথডের আর্গুমেন্ট হিসেবে পাস করা যায় বা ভ্যারিয়েবলে অ্যাসাইন করা যায়।</p>
+<p>তবে ল্যামডা এক্সপ্রেশনের আরকটি বৈশিষ্ট্য হলো, সংক্ষিপ্ত। এতে অনেক কম লাইন কোড লিখে একই কাজ করা যায়। এতে বয়লারপ্লেট কোড কম থাকে।</p>
+<p>এবার ল্যামডা এক্সপ্রেশনের সিনট্যাক্স দেখা যাক। ল্যামডা এক্সপ্রেশনের তিনটি অংশ থাকে-</p>
+<p>১. <strong>প্যারামিটার লিস্ট</strong>– এতে শুরুতে কতগুলো প্যারামিটার থাকে। প্যরামিটারগুলোতে টাইপ থাকতে পারে। তবে অনেক্ষেত্রেই টাইপ ইনফরমেশন দেওয়ার প্রয়োজন পরে না। কম্পাইলার বুঝে নিতে পারে। একাধিক প্যরিমিটার থাকলে এগলোকে কমা দিয়ে আলাদা করতে হয় এবং প্যারামিটারগুলো একটি প্যারেন্থেসিসের মধ্যে থাকে। তবে একটি প্যারামিটার থাকলে প্যারেন্থেসিস দেওয়ার প্রয়োজন হয় না।</p>
+<p>২. <strong>অ্যারো সাইন</strong> – অ্যারো ( -&gt; ) সাইন প্যারামিটার লিস্টকে বডি থেকে আলাদা করে। এটি দুটি ক্যারেক্টার (-) ড্যাশ ও (&gt;) রাইট অ্যাঙ্গেল ব্রাকেট সংযুক্ত করে লেখা হয়।</p>
+<p>৩. <strong>বডি</strong> – যেখানে মূল কোড অংশটুকু থাকে।</p>
+<p>কতগুলো উদাহরণ দেখা যাক –</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">(</span>Contact contact1<span style="color:#f92672">,</span> Contact contact2<span style="color:#f92672">)</span> <span style="color:#f92672">-&gt;</span> <span style="color:#f92672">{</span>
+          <span style="color:#66d9ef">return</span> contact1<span style="color:#f92672">.</span><span style="color:#a6e22e">getName</span><span style="color:#f92672">().</span><span style="color:#a6e22e">compareTo</span><span style="color:#f92672">(</span>contact2<span style="color:#f92672">.</span><span style="color:#a6e22e">getName</span><span style="color:#f92672">());</span>
+<span style="color:#f92672">};</span>
+
+</code></pre></div><p>তবে একে সংক্ষিপ্ত করে এক লাইনেও লেখা যায়-</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">(</span>Contact contact1<span style="color:#f92672">,</span> Contact contact2<span style="color:#f92672">)</span> <span style="color:#f92672">-&gt;</span> contact1<span style="color:#f92672">.</span><span style="color:#a6e22e">getName</span><span style="color:#f92672">().</span><span style="color:#a6e22e">compareTo</span><span style="color:#f92672">(</span>contact2<span style="color:#f92672">.</span><span style="color:#a6e22e">getName</span><span style="color:#f92672">());</span>
+<span style="color:#960050;background-color:#1e0010">```</span>
+
+এক<span style="color:#960050;background-color:#1e0010">ে</span> ভ্য<span style="color:#960050;background-color:#1e0010">া</span>র<span style="color:#960050;background-color:#1e0010">ি</span>য়<span style="color:#960050;background-color:#1e0010">ে</span>বল<span style="color:#960050;background-color:#1e0010">ে</span> অ্য<span style="color:#960050;background-color:#1e0010">া</span>স<span style="color:#960050;background-color:#1e0010">া</span>ইন কর<span style="color:#960050;background-color:#1e0010">া</span> য<span style="color:#960050;background-color:#1e0010">া</span>য়<span style="color:#f92672">-</span>
+
+<span style="color:#960050;background-color:#1e0010">````</span>java
+Comparator contactComparator <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>Contact contact1<span style="color:#f92672">,</span> Contact contact2<span style="color:#f92672">)</span> <span style="color:#f92672">-&gt;</span> contact1<span style="color:#f92672">.</span><span style="color:#a6e22e">getName</span><span style="color:#f92672">().</span><span style="color:#a6e22e">compareTo</span><span style="color:#f92672">(</span>contact2<span style="color:#f92672">.</span><span style="color:#a6e22e">getName</span><span style="color:#f92672">());</span>
+</code></pre></div><p>আরও কয়েকটি উদাহরণ-</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">(</span>String s<span style="color:#f92672">)</span> <span style="color:#f92672">-&gt;</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> s<span style="color:#f92672">.</span><span style="color:#a6e22e">toUpperCase</span><span style="color:#f92672">();</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>তবে একে সংক্ষি্প্ত করে লিখলে –</p>
+<pre><code>(String s) -&gt; s.toUpperCase()
+</code></pre><p>সুতরাং ল্যামডা এক্ষপ্রেশন দু রকম হতে পারে –</p>
+<pre><code>_(parameters) → expression_
+
+</code></pre><p>অথবা</p>
+<pre><code>_(parameters) → {statements;}_
+
+</code></pre><p>বডিতে একাধিক স্ট্যাটমেন্ট থাকলে কার্লি ব্রেসের প্রয়োজন হয়।</p>
+
 </main>
 
 <p class="post-tag">

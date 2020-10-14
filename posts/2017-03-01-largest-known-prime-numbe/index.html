@@ -35,63 +35,29 @@
 </p>
 
 <main>
-    <div dir="ltr" style="text-align: left;">
-  <p>
-    সবচেয়ে বড় মৌলিক সংখ্যাটি কতো ?
-  </p>
-  <p>
-    এখন পর্যন্ত খুঁজে পাওয়া সবচেয়ে বড় মৌলিক সংখ্যাটি হলো &#8211; 2^57,885,161 -1।
-  </p>
-  <div>
-    <p>
-      <a href="https://www.sciencedaily.com/releases/2013/02/130213225424.htm" target="_blank" rel="noopener noreferrer">এই লিংকে </a>এ সম্পর্কে আরও বিস্তারিত জানা যাবে।
-    </p>
-<pre><code>&lt;p&gt;
-  এতে 17,425,170 টি সংখ্যা রয়েছে। এই সংখ্যাটি দেখতে চাইলে ঝটপট একটি জাভা প্রোগ্রাম লিখে ফেলা যায়। এর জন্য জাভার BigInteger ক্লাসটি প্রয়োজন হবে।
-&lt;/p&gt;
+    <p>সবচেয়ে বড় মৌলিক সংখ্যাটি কতো ?</p>
+<p>এখন পর্যন্ত খুঁজে পাওয়া সবচেয়ে বড় মৌলিক সংখ্যাটি হলো – 2^57,885,161 -1।</p>
+<p><a href="https://www.sciencedaily.com/releases/2013/02/130213225424.htm">এই লিংকে</a> এ সম্পর্কে আরও বিস্তারিত জানা যাবে।</p>
+<p>এতে 17,425,170 টি সংখ্যা রয়েছে। এই সংখ্যাটি দেখতে চাইলে ঝটপট একটি জাভা প্রোগ্রাম লিখে ফেলা যায়। এর জন্য জাভার BigInteger ক্লাসটি প্রয়োজন হবে।</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> java.math.BigInteger<span style="color:#f92672">;</span>
 
-&lt;pre class=&quot;lang:java decode:true &quot;&gt;import java.math.BigInteger;
-</code></pre>
-<p>public class LargestPrimeNumber {<br />
-public static void main(String[] args) {<br />
-BigInteger two = BigInteger.valueOf(2);<br />
-BigInteger largest = two.pow(57_885_161);<br />
-BigInteger largestPrimeNumber = largest.subtract(BigInteger.ONE);<br />
-System.out.println(largestPrimeNumber);<br />
-}<br />
-}</pre></p>
-<pre><code>&lt;p&gt;
-  &amp;nbsp;
-&lt;/p&gt;
-
-&lt;p&gt;
-  এটি প্রিন্ট হতে বেশ খানিকটা সময় নেবে।
-&lt;/p&gt;
-
-&lt;div style=&quot;clear: both; text-align: center;&quot;&gt;
-  &lt;a style=&quot;margin-left: 1em; margin-right: 1em;&quot; href=&quot;https://4.bp.blogspot.com/-tsU9x9Qi2bA/WLbzv2r_TJI/AAAAAAAACis/E5CuFxRpqzMbSjfUNdVq2JYLJCpe8vfkwCLcB/s1600/largest_prime_number.png&quot;&gt;&lt;img loading=&quot;lazy&quot; src=&quot;https://4.bp.blogspot.com/-tsU9x9Qi2bA/WLbzv2r_TJI/AAAAAAAACis/E5CuFxRpqzMbSjfUNdVq2JYLJCpe8vfkwCLcB/s400/largest_prime_number.png&quot; width=&quot;400&quot; height=&quot;253&quot; border=&quot;0&quot; /&gt;&lt;/a&gt;
-&lt;/div&gt;
-
-&lt;div&gt;
-&lt;/div&gt;
-
-&lt;p&gt;
-  ফাইলে স্টোর করতে চাইলে নিচের কোড অংশটুকু যুক্ত করুন-
-&lt;/p&gt;
-
-&lt;pre class=&quot;&quot;&gt;
-</code></pre>
-<p>try {<br />
-Files.write(Paths.get(&ldquo;prime.txt&rdquo;), largestPrimeNumber.toString().getBytes());<br />
-} catch (IOException e) {<br />
-e.printStackTrace();<br />
-}</pre></p>
-<pre><code>&lt;div style=&quot;line-height: 100%; margin-bottom: 0in;&quot;&gt;
-&lt;/div&gt;
-</code></pre>
-  </div>
-</div>
-<p> </p>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">LargestPrimeNumber</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#960050;background-color:#1e0010">\</span><span style="color:#f92672">[</span><span style="color:#960050;background-color:#1e0010">\</span><span style="color:#f92672">]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        BigInteger two <span style="color:#f92672">=</span> BigInteger<span style="color:#f92672">.</span><span style="color:#a6e22e">valueOf</span><span style="color:#f92672">(</span>2<span style="color:#f92672">);</span>
+        BigInteger largest <span style="color:#f92672">=</span> two<span style="color:#f92672">.</span><span style="color:#a6e22e">pow</span><span style="color:#f92672">(</span>57<span style="color:#960050;background-color:#1e0010">\</span>_885<span style="color:#960050;background-color:#1e0010">\</span>_161<span style="color:#f92672">);</span>
+        BigInteger largestPrimeNumber <span style="color:#f92672">=</span> largest<span style="color:#f92672">.</span><span style="color:#a6e22e">subtract</span><span style="color:#f92672">(</span>BigInteger<span style="color:#f92672">.</span><span style="color:#a6e22e">ONE</span><span style="color:#f92672">);</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>largestPrimeNumber<span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>এটি প্রিন্ট হতে বেশ খানিকটা সময় নেবে।</p>
+<p><a href="https://4.bp.blogspot.com/-tsU9x9Qi2bA/WLbzv2r_TJI/AAAAAAAACis/E5CuFxRpqzMbSjfUNdVq2JYLJCpe8vfkwCLcB/s1600/largest_prime_number.png"><img src="https://4.bp.blogspot.com/-tsU9x9Qi2bA/WLbzv2r_TJI/AAAAAAAACis/E5CuFxRpqzMbSjfUNdVq2JYLJCpe8vfkwCLcB/s400/largest_prime_number.png" alt="" /></a></p>
+<p>ফাইলে স্টোর করতে চাইলে নিচের কোড অংশটুকু যুক্ত করুন-</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
+    Files<span style="color:#f92672">.</span><span style="color:#a6e22e">write</span><span style="color:#f92672">(</span>Paths<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;prime.txt&#34;</span><span style="color:#f92672">),</span> largestPrimeNumber<span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">().</span><span style="color:#a6e22e">getBytes</span><span style="color:#f92672">());</span>
+<span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>IOException e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    e<span style="color:#f92672">.</span><span style="color:#a6e22e">printStackTrace</span><span style="color:#f92672">();</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p> </p>
 
 </main>
 

@@ -35,35 +35,19 @@
 </p>
 
 <main>
-    <div dir="ltr" style="text-align: left;">
-  <div style="background-color: #ebffe6; border: medium none; font-family: sans-serif; font-size: 13px; line-height: 18.2px; margin-bottom: 13px; max-width: 700px; padding: 0px;">
-    এর প্রয়োজনীয়তা বুঝতে হলে আগে এনক্যাপসুলেশনের(encapsulation) প্রয়োজনীয়তা বুঝতে হবে। ধরা যাক, একটি ক্লাসে একটি ভ্যারিয়েবল আছে, সেই ভ্যারিয়েবলের ভিত্তিতে ক্লাসটি কিছু সিন্ধান্ত নেয়। ক্লাসটিতে অনেকগুলো মেথডও রয়েছে, এগুলো দিয়ে কিছু কাজ করা যায়। আপনার এই ক্লাসটির নিশ্চয় কেউ ব্যবহার করবে। এই ভ্যারিয়েবলটি যদি পাবলিক(public) হয়, তাহলে যে এই ক্লাসটি ব্যবহার করছে সে চাইলেই পরিবর্তন করে দিতে পারবে। ইচ্ছাকৃতভাবে পরিবর্তন না করে ভুল করেও করতে পারে। এই পরিবর্তনের ফলে ক্লাসটি যে কাজগুলো করছে তার লজিকের ভুল হতে পারে। এখন এই কাজটি যাতে না করতে পারে সেজন্য এই ভেরিয়েবলটিকে প্রাইভেট(private) করে দিলেই সমস্যা সমস্যাটি সমাধান হয়ে যায়। অন্যদিকে, ব্যবহারকারী সেই ভ্যারিয়েবলের&nbsp;ভ্যালুটি পড়ার দরকার হতে পারে। যেহেতু ভেরিয়েবলটি প্রাইভেট(private), তাই এটিকে সরাসরি পড়ার উপায় নেই। এই উপায় বের করার জন্যে এতে একটি গেটার মেথড যুক্ত করা যেতে পারে। এভাবে একটি ক্লাসে যদি সেটার থাকে তাহলে যে ভ্যালু সেট করছে সে নিশ্চিত হয়ে ভ্যালু সেট করবে। ভুলক্রমে ভ্যালু পড়তে গিয়ে সেট করার সম্ভবনা কমে যায় এতে।
-  </div>
-  <div style="background-color: #ebffe6; border: medium none; font-family: sans-serif; font-size: 13px; line-height: 18.2px; margin-bottom: 13px; max-width: 700px; padding: 0px;">
-    এছাড়ারও আরও বেশ কিছু কারণ রয়েছে, তবে এগুলোকে সঠিক ভাবে ব্যবহার করায় উত্তম, অর্থাৎ যেখানে যেভাবে লাগে। এগুলো হলো &#8211;
-  </div>
-  <ul style="background-color: #ebffe6; border: medium none; font-family: sans-serif; font-size: 13px; list-style-image: none; list-style-position: outside; margin: 0px 0px 1em 20px; padding: 0px; vertical-align: middle;">
-    <li style="border: medium none; margin: 0px; padding: 0px;">
-      ১. আপনি একটি ক্লাসকে রিডওনলি(read only) করতে পারে। অর্থাৎ ক্লাসের ভ্যালুগুলো শুধু পড়া যাবে। এক্ষেত্রে সেই ক্লাসে শুধুমাত্রে গেটার(getter) থাকবে।
-    </li>
-    <li style="border: medium none; margin: 0px; padding: 0px;">
-      ২. আপনি একটি ক্লাসকে কনফিগারেবল (configurable) করতে চাইতে পারেন। অর্থাৎ ভ্যালু সেট করবে। সেক্ষেত্রে আপনি শুধু সেটার রাখতে পারেন।
-    </li>
-    <li style="border: medium none; margin: 0px; padding: 0px;">
-      ৩. একটি গেটার যে শুধুমাত্র একটি ভেরিয়েবল থাকে ডাটা পড়ে রিটার্ন করবে এমনটি নাও হতে পারে। অনেকগুলো ভেরিয়েবল থেকে ডেটা কম্পিউট করে রিটার্ন করতে পারে।
-    </li>
-    <li style="border: medium none; margin: 0px; padding: 0px;">
-      ৪. মনে করুন আপনি ভ্যালু সেট করতে চান যা একটি নির্দিষ্ট রেঞ্জের হবে। এই রেঞ্জের বাইরে কোন ভ্যালু দিলে তা সেটার থেকে একসেপশন থ্রুক করতে পারেন।
-    </li>
-  </ul>
-  <div style="background-color: #ebffe6; border: medium none; font-family: sans-serif; font-size: 13px; line-height: 18.2px; margin-bottom: 13px; max-width: 700px; padding: 0px;">
-    একটি উদাহরণ দেওয়া যাক &#8211;
-  </div>
-  <pre style="background-color: #ffffcc; border: 1px dashed rgb(0, 0, 0); font-family: &quot;Courier New&quot;, Courier, mono; font-size: 12px; margin-bottom: 10px; overflow: auto; padding: 8px; white-space: pre-wrap; width: auto;"><code style="font-family: Consolas, Monaco, &quot;Liberation Mono&quot;, &quot;Lucida Console&quot;, monospace; font-size: 10.8px;">    public class Measurement{&lt;br />&lt;br />    /**&lt;br />     * The distance in centimeters.&lt;br />     */&lt;br />    private double distance;&lt;br />&lt;br />    /**&lt;br />     * Gets the distance in inches.&lt;br />     * &lt;a href="http://programabad.com/users/14811/return_zero" style="color: #3060a8; text-decoration: none;">@return&lt;/a> A distance value.&lt;br />     */&lt;br />    public double getDistance()&lt;br />    {&lt;br />        return distance / 2.54;&lt;br />    }&lt;br />&lt;br />    /**&lt;br />     * Sets the distance.&lt;br />     * @param distance The distance, in inches.&lt;br />     */&lt;br />    public void setDistance(double distance)&lt;br />    {&lt;br />        this.distance = distance * 2.54;&lt;br />    }&lt;br />}&lt;br /></code></pre>
-  <div style="background-color: #ebffe6; border: medium none; font-family: sans-serif; font-size: 13px; line-height: 18.2px; margin-bottom: 13px; max-width: 700px; padding: 0px;">
-    এছাড়াও এটি একটি good practice (উত্তম উপায়)। উত্তম উপায় অভ্যাস করায় শ্রেয়।
-  </div>
-</div>
+    <p>এর প্রয়োজনীয়তা বুঝতে হলে আগে এনক্যাপসুলেশনের(encapsulation) প্রয়োজনীয়তা বুঝতে হবে। ধরা যাক, একটি ক্লাসে একটি ভ্যারিয়েবল আছে, সেই ভ্যারিয়েবলের ভিত্তিতে ক্লাসটি কিছু সিন্ধান্ত নেয়। ক্লাসটিতে অনেকগুলো মেথডও রয়েছে, এগুলো দিয়ে কিছু কাজ করা যায়। আপনার এই ক্লাসটির নিশ্চয় কেউ ব্যবহার করবে। এই ভ্যারিয়েবলটি যদি পাবলিক(public) হয়, তাহলে যে এই ক্লাসটি ব্যবহার করছে সে চাইলেই পরিবর্তন করে দিতে পারবে। ইচ্ছাকৃতভাবে পরিবর্তন না করে ভুল করেও করতে পারে। এই পরিবর্তনের ফলে ক্লাসটি যে কাজগুলো করছে তার লজিকের ভুল হতে পারে। এখন এই কাজটি যাতে না করতে পারে সেজন্য এই ভেরিয়েবলটিকে প্রাইভেট(private) করে দিলেই সমস্যা সমস্যাটি সমাধান হয়ে যায়। অন্যদিকে, ব্যবহারকারী সেই ভ্যারিয়েবলের ভ্যালুটি পড়ার দরকার হতে পারে। যেহেতু ভেরিয়েবলটি প্রাইভেট(private), তাই এটিকে সরাসরি পড়ার উপায় নেই। এই উপায় বের করার জন্যে এতে একটি গেটার মেথড যুক্ত করা যেতে পারে। এভাবে একটি ক্লাসে যদি সেটার থাকে তাহলে যে ভ্যালু সেট করছে সে নিশ্চিত হয়ে ভ্যালু সেট করবে। ভুলক্রমে ভ্যালু পড়তে গিয়ে সেট করার সম্ভবনা কমে যায় এতে।</p>
+<p>এছাড়ারও আরও বেশ কিছু কারণ রয়েছে, তবে এগুলোকে সঠিক ভাবে ব্যবহার করায় উত্তম, অর্থাৎ যেখানে যেভাবে লাগে। এগুলো হলো –</p>
+<ul>
+<li>১. আপনি একটি ক্লাসকে রিডওনলি(read only) করতে পারে। অর্থাৎ ক্লাসের ভ্যালুগুলো শুধু পড়া যাবে। এক্ষেত্রে সেই ক্লাসে শুধুমাত্রে গেটার(getter) থাকবে।</li>
+<li>২. আপনি একটি ক্লাসকে কনফিগারেবল (configurable) করতে চাইতে পারেন। অর্থাৎ ভ্যালু সেট করবে। সেক্ষেত্রে আপনি শুধু সেটার রাখতে পারেন।</li>
+<li>৩. একটি গেটার যে শুধুমাত্র একটি ভেরিয়েবল থাকে ডাটা পড়ে রিটার্ন করবে এমনটি নাও হতে পারে। অনেকগুলো ভেরিয়েবল থেকে ডেটা কম্পিউট করে রিটার্ন করতে পারে।</li>
+<li>৪. মনে করুন আপনি ভ্যালু সেট করতে চান যা একটি নির্দিষ্ট রেঞ্জের হবে। এই রেঞ্জের বাইরে কোন ভ্যালু দিলে তা সেটার থেকে একসেপশন থ্রুক করতে পারেন।</li>
+</ul>
+<p>একটি উদাহরণ দেওয়া যাক –</p>
+<pre><code>    public class Measurement{&lt;br /&gt;&lt;br /&gt;    /**&lt;br /&gt;     * The distance in centimeters.&lt;br /&gt;     */&lt;br /&gt;    private double distance;&lt;br /&gt;&lt;br /&gt;    /**&lt;br /&gt;     * Gets the distance in inches.&lt;br /&gt;     * &lt;a href=&quot;http://programabad.com/users/14811/return_zero&quot; style=&quot;color: #3060a8; text-decoration: none;&quot;&gt;@return&lt;/a&gt; A distance value.&lt;br /&gt;     */&lt;br /&gt;    public double getDistance()&lt;br /&gt;    {&lt;br /&gt;        return distance / 2.54;&lt;br /&gt;    }&lt;br /&gt;&lt;br /&gt;    /**&lt;br /&gt;     * Sets the distance.&lt;br /&gt;     * @param distance The distance, in inches.&lt;br /&gt;     */&lt;br /&gt;    public void setDistance(double distance)&lt;br /&gt;    {&lt;br /&gt;        this.distance = distance * 2.54;&lt;br /&gt;    }&lt;br /&gt;}&lt;br /&gt;
+</code></pre>
+<p>এছাড়াও এটি একটি good practice (উত্তম উপায়)। উত্তম উপায় অভ্যাস করায় শ্রেয়।</p>
+
 </main>
 
 <p class="post-tag">

@@ -39,41 +39,38 @@
 <p>এক্সেপশন একধরণের অবজেক্ট যাতে কারণে সমস্যাটি কেনো এবং কোথা থেকে হয়েছে তা বর্ণনা করা থাকে এবং এই বর্ণনা থেকে এরকম পরিস্থিতিতে প্রোগ্রামটির আচরণ কেমন হওয়া উচিৎ তা নির্ধারণ করা যায়। যেমন- ডেটাবেইজে কানেক্ট না করা গেলে আমরা অ্যাপ্লিকেশন ইউজারকে বলতে পারি যে, এই মুহূর্তে ডেটাবেইজের সঙ্গে কানেক্ট করা যাচ্ছে না, একটু অপেক্ষা করুন। আর্গুমেন্ট পাস করতে ভুল হলে, প্রোগ্রামারকে এক্সেপশন থ্রু করে বলতে পারি যে, আপনি আর্গুমেন্ট পাস করতে ভুলে গেছে না ভুল হয়েছে।</p>
 <p>উপরের বর্ণনা থেকে বোঝা গেল যে, কোনো সমস্যা হলে, অর্থাৎ এক্সেপশন থ্রু হলে তা নিয়ে কাজ করতে হয় অর্থাৎ তা হ্যান্ডেল করতে হয়। এই এক্সেপশন হ্যান্ডেল করা হয় ট্রাই-ক্যাচ (try-catch) ব্লক দিয়ে।</p>
 <p>জাভাতে দুই ধরণের এক্সেপশন রয়েছে। চেকড এক্সেপশন ও আনচেক্ড এক্সেপশন। চেক্ড এক্সেপশনগুলো কম্পাইল টাইমে হ্যান্ডেল করতে হয়। হ্যান্ডেল করা না হলে প্রোগ্রামটি কাজ করবে না। অন্যদিকে আনচেক্ড এক্সেপশনগুলো হ্যান্ডেল করা নিয়ে বাধ্যবাদকতা নেই। উদাহরণ দেওয়া যাক-</p>
-<pre class="lang:java decode:true ">public void executeSql(String sql) {
-        try (Connection connection = dataSource.getConnection();
-             PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">executeSql</span><span style="color:#f92672">(</span>String sql<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">try</span> <span style="color:#f92672">(</span>Connection connection <span style="color:#f92672">=</span> dataSource<span style="color:#f92672">.</span><span style="color:#a6e22e">getConnection</span><span style="color:#f92672">();</span>
+             PreparedStatement preparedStatement <span style="color:#f92672">=</span> connection<span style="color:#f92672">.</span><span style="color:#a6e22e">prepareStatement</span><span style="color:#f92672">(</span>sql<span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
 
-            preparedStatement.execute();
+            preparedStatement<span style="color:#f92672">.</span><span style="color:#a6e22e">execute</span><span style="color:#f92672">();</span>
 
-        } catch (SQLException e) {
-            System.err.println("Couldn't runt he sql deu to " + e.getMessage());
-        }
-}</pre>
-<p>উপরের মেথডটিতে ট্রাই-ক্যাচ-রিসোর্স স্ট্যাটমেন্টের মধ্যে একটি ডেটাসোর্স অবজেক্ট থেকে একটি সিকুয়েল কানেকশন তেরি করা হয়েছে তার পর একটি সিকুয়েল কানেকশন এক্সিকিউট করা হয়েছে। এই ডেটাসোর্স অবজেক্টটিতে getConnection() মেথডটি একটি চেক্ড এক্সেপশন থ্রু করে।</p>
-<pre class="lang:java decode:true ">Connection getConnection() throws SQLException
-</pre>
-<p>মেথডের সিগনেচারে চেকড এক্সেপশনগুলো throws কিওয়ার্ডের পাশে লেখা থাকে। এথেকে বোঝা যায় যে এই মেথডটি কোনো কারণে SQLException এক্সপেশনটি থ্রু করতে পারে এবং আমরা যখন আমাদের কোড থেকে এই মেথডটি কল করবো তখন আমাদের এই এক্সেপশটি হ্যান্ডেল করতে হবে। আমরা যদি উপরে এক্সেপশনটি হ্যান্ডেল না করে কোড লিখি তাহলে প্রোগ্রামটি কম্পাইল করতে গেলে এরর দেখাবে।</p>
+        <span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>SQLException e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            System<span style="color:#f92672">.</span><span style="color:#a6e22e">err</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Couldn&#39;t runt he sql deu to &#34;</span> <span style="color:#f92672">+</span> e<span style="color:#f92672">.</span><span style="color:#a6e22e">getMessage</span><span style="color:#f92672">());</span>
+        <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>উপরের মেথডটিতে ট্রাই-ক্যাচ-রিসোর্স স্ট্যাটমেন্টের মধ্যে একটি ডেটাসোর্স অবজেক্ট থেকে একটি সিকুয়েল কানেকশন তেরি করা হয়েছে তার পর একটি সিকুয়েল কানেকশন এক্সিকিউট করা হয়েছে। এই ডেটাসোর্স অবজেক্টটিতে getConnection() মেথডটি একটি চেক্ড এক্সেপশন থ্রু করে।</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">Connection <span style="color:#a6e22e">getConnection</span><span style="color:#f92672">()</span> <span style="color:#66d9ef">throws</span> SQLException
+</code></pre></div><p>মেথডের সিগনেচারে চেকড এক্সেপশনগুলো throws কিওয়ার্ডের পাশে লেখা থাকে। এথেকে বোঝা যায় যে এই মেথডটি কোনো কারণে SQLException এক্সপেশনটি থ্রু করতে পারে এবং আমরা যখন আমাদের কোড থেকে এই মেথডটি কল করবো তখন আমাদের এই এক্সেপশটি হ্যান্ডেল করতে হবে। আমরা যদি উপরে এক্সেপশনটি হ্যান্ডেল না করে কোড লিখি তাহলে প্রোগ্রামটি কম্পাইল করতে গেলে এরর দেখাবে।</p>
 <p>তাহলে উপরের আলোচনা থেকে বুঝলাম যে, চেক্ড এক্সেপশনগুলো সব সময় হ্যান্ডেল করতে হয় এবং এগুলো মেথড সিগনেচারে দেওয়া থাকে।</p>
-<p>চেক্ড এক্সেপশনের পাশাপাশি জাভাতে কোনো মেথড আনচেক্ড এক্সপেশনও থ্রু করতে পারে। উদাহরণ –<br />
-<code>&lt;br /&gt;</code></p>
-<pre class="lang:java decode:true ">public int divide(int a, int b) {
-        if (b == 0) {
-            throw new ArithmeticException("argument b cannot be zero");
-        }
+<p>চেক্ড এক্সেপশনের পাশাপাশি জাভাতে কোনো মেথড আনচেক্ড এক্সপেশনও থ্রু করতে পারে। উদাহরণ –</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">divide</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> a<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> b<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>b <span style="color:#f92672">==</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> ArithmeticException<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;argument b cannot be zero&#34;</span><span style="color:#f92672">);</span>
+        <span style="color:#f92672">}</span>
 
-        return a / b;
-    }</pre>
-<p>উপরের মেথড সিগনেচারে কোনো কোনো throws কিওয়ার্ড নেই তবে মেথডের বডিতে একটি এক্সেপশন থ্রু করার কোড লেখা রয়ছে। এতে লেখা রয়েছে যে যদি কোনো কারণে পরের আর্গুমেন্টি শূণ্য হয় তাহলে ArithmeticException এক্সেপশনি থ্রু হবে। এখন এই মেথডটি যদি আমদের কোডটি থেকে কল করি এবং কোনো কারণে পরের আর্গুমেন্টটি শূণ্য দিই, তাহলে এই এক্সপশন থ্রু হবে, তবে এটি আমাদের কোড থেকে ট্রাই-ক্যাচ ব্লক দিয়ে হ্যান্ডেল না করলেও চলবে এবং এটি রানটাইম ধরা পরবে।</p>
+        <span style="color:#66d9ef">return</span> a <span style="color:#f92672">/</span> b<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+</code></pre></div><p>উপরের মেথড সিগনেচারে কোনো কোনো throws কিওয়ার্ড নেই তবে মেথডের বডিতে একটি এক্সেপশন থ্রু করার কোড লেখা রয়ছে। এতে লেখা রয়েছে যে যদি কোনো কারণে পরের আর্গুমেন্টি শূণ্য হয় তাহলে ArithmeticException এক্সেপশনি থ্রু হবে। এখন এই মেথডটি যদি আমদের কোডটি থেকে কল করি এবং কোনো কারণে পরের আর্গুমেন্টটি শূণ্য দিই, তাহলে এই এক্সপশন থ্রু হবে, তবে এটি আমাদের কোড থেকে ট্রাই-ক্যাচ ব্লক দিয়ে হ্যান্ডেল না করলেও চলবে এবং এটি রানটাইম ধরা পরবে।</p>
 <p>জাভাতে এক্সেপশন ক্লাসগুলো Throwable ক্লাস থেকে ইনহেরিট করে। Throwable ক্লাসটি একটি চেক্ড এক্সেপশন। এর দুটি সাব ক্লাস হলো – Exception ও Error। Error এক্সেপশনগুলো সাধারণত খুব সিস্টেম যেমন জাভা রানটাইম ইনভাইরনমেন্ট থ্রু করে। এ পর্যায়ে অ্যাপ্লিকেশনকে আর পুনরুদ্ধার করা যায় না। আমারা সাধারণত যে কোডগুলো লিখে থাকি সেগুলোতে এর ব্যবহার করা হয় না এবং এগুলো হ্যান্ডেল করারও প্রয়োজন নেই। কারণ এটি একটি আনচেক্ড এক্সেপশন। Exception ক্লাস ও এর সাবক্লাসগুলো হলো চেক্ড এক্সেপশন। কোনো মেথডের সিগনেচারে এই এক্সেপশনগুলো throws কিওয়ার্ডের পরে উল্লেখ থাকলে সেই মেথডগুলোকে কল করার সময় হ্যান্ডেল করতে হয় অথবা যে মেথড থেকে কল করা হয়েছে সেই মেথডের সিগনেচারে throws কিওয়ার্ড দিয়ে লিখতে হয়।<br />
 ``</p>
-<pre class="lang:java decode:true">public void executeSql(Connection connection, String sql) throws SQLException {
-        PreparedStatement preparedStatement = connection.prepareStatement(sql);
-        preparedStatement.execute();
-        preparedStatement.close();
-    }</pre>
-<p>``</p>
-<p><code>&lt;br /&gt;</code><br />
-উপরের মেথডটিতে prepareStatement(), exectue() এবং close () তিনটি মেথডই চেকড এক্সপেশন থ্রু করে, কিন্তু এগুলোকে হ্যান্ডেল না করে executeSql() মেথডের সিগনেচারে দেওয়া হয়েছে। এর ফলে এই executeSql() মেথডটি যেখান থেকে হ্যান্ডেল করতে হবে।</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">executeSql</span><span style="color:#f92672">(</span>Connection connection<span style="color:#f92672">,</span> String sql<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> SQLException <span style="color:#f92672">{</span>
+        PreparedStatement preparedStatement <span style="color:#f92672">=</span> connection<span style="color:#f92672">.</span><span style="color:#a6e22e">prepareStatement</span><span style="color:#f92672">(</span>sql<span style="color:#f92672">);</span>
+        preparedStatement<span style="color:#f92672">.</span><span style="color:#a6e22e">execute</span><span style="color:#f92672">();</span>
+        preparedStatement<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>
+    <span style="color:#f92672">}</span>
+
+</code></pre></div><p>উপরের মেথডটিতে prepareStatement(), exectue() এবং close () তিনটি মেথডই চেকড এক্সপেশন থ্রু করে, কিন্তু এগুলোকে হ্যান্ডেল না করে executeSql() মেথডের সিগনেচারে দেওয়া হয়েছে। এর ফলে এই executeSql() মেথডটি যেখান থেকে হ্যান্ডেল করতে হবে।</p>
 <p>তাহলে প্রশ্ন হতে পারে কােনটি কখন ব্যবহার উচিৎ। সাধারণত যে এক্সেপশনগুলো সহজে অনুমান করা যায় এবং এগুলো থেকে বাচার সহজ কোনো উপায় নেই, সেসব ক্ষেত্রে চেকড এক্সেপশন ব্যবহার করা হয়। আর বাকি সব ক্ষেত্রে আনচেক্ড এক্সেপশন ব্যবহার করা হয়।</p>
 <p>Exception ক্লাসগুলো একটি ব্যতিক্রম হলো RuntimeException ক্লাস। এই ক্লাস ও এর সাব্ক্লাসগুলো আনচেক্ড এক্সপেশন । এগুলো হ্যান্ডেল করার কোনো বাধ্যবাধকতা নেই। এটি প্রোগ্রাম ও প্রোগ্রামারের উপর নির্ভর করে। নিচে জাভা এক্সেপশন হায়ার্কির ছবি দেওয়া হলো।</p>
 <p><img loading="lazy" class="alignnone size-medium" src="https://bazlur.quip.com/-/blob/QJVAAAadYBI/8JqWhv9ZXaesVrNt822aSQ" width="738" height="378" /></p>
