@@ -17,6 +17,13 @@
   </url>
   
   <url>
+    <loc>http://bazlur.com/</loc>
+    <lastmod>2020-10-14T00:57:21-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://bazlur.com/tags/code-readability/</loc>
     <lastmod>2020-10-14T00:57:21-04:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -25,13 +32,6 @@
   
   <url>
     <loc>http://bazlur.com/tags/code-review/</loc>
-    <lastmod>2020-10-14T00:57:21-04:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://bazlur.com/</loc>
     <lastmod>2020-10-14T00:57:21-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
