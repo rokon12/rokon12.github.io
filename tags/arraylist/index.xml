@@ -13,12 +13,7 @@
       <pubDate>Fri, 18 Aug 2017 13:17:00 +0000</pubDate>
       
       <guid>http://bazlur.com/p766/</guid>
-      <description>&amp;lt;div&amp;gt; [spacer height=&amp;amp;#8221;20px&amp;amp;#8221;] &amp;lt;/div&amp;gt;  public class TemplateService { public static void main(String[] args) { //using LinkedList List&amp;lt;String&amp;gt; countries = new ArrayList&amp;lt;&amp;gt;(); //adding elements to the ArrayList countries.add(&amp;ldquo;Bangladesh&amp;rdquo;); countries.add(&amp;ldquo;India&amp;rdquo;); countries.add(&amp;ldquo;Bhutan&amp;rdquo;); countries.add(&amp;ldquo;Pakistan&amp;rdquo;);
-// searching element by index String bangladesh = countries.get(0);
-//adding element by index countries.add(2, &amp;ldquo;Indonesia&amp;rdquo;);
-//removing element countries.remove(4);
-//using LinkedList List&amp;lt;String&amp;gt; cities = new LinkedList&amp;lt;&amp;gt;(); //adding elements to the LinkedList cities.add(&amp;ldquo;Dhaka&amp;rdquo;); cities.add(&amp;ldquo;London&amp;rdquo;); cities.add(&amp;ldquo;Beijing&amp;rdquo;);
-// searching element by index String dhaka = cities.</description>
+      <description>ArrayList ও LinkedList ক্লাস দুটি লিস্ট ইন্টারফেসকে ইমপ্লিমেন্ট করে। যার ফলে এদের মেথড ও ফলাফল একইরকম হলেও ইম্প্লিমেন্টেশনের দিক থেকে এদের মধ্যে বেশ কিছু পার্থক্য রয়েছে। পার্থক্যগুলো নিয়ে আলোচনা করার আগে লিস্ট ইন্টারফেসের প্রধান মেথডগুলো দেখা যাক-   [spacer height=&amp;#8221;20px&amp;#8221;]    public interface List{ public E get(int index); public void add(E element); public void add(E element, int index); public void remove(int index); }   উপরের এই মেথডগুলোর ইমপ্লিমেন্টেশন অ্যারেলিস্ট ও লিংকডলিস্ট দুটো ক্লাসেই রয়েছে। ব্যবহারের দিক থেকে এই মেথডগুলোর কোনো পার্থক্য নেই। উদাহরণ-  &amp;lt;div&amp;gt; [spacer height=&amp;amp;#8221;20px&amp;amp;#8221;] &amp;lt;/div&amp;gt;    import java.</description>
     </item>
     
   </channel>

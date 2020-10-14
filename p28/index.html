@@ -35,16 +35,28 @@
 </p>
 
 <main>
-    <!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-
+    <div dir="ltr" style="text-align: left;">
+  <p>
+    জাভাতে নাল (null) একটি সংরক্ষিত কিওয়ার্ড। আমরা জানি যে, যেকোনো অবজেক্টের একটি রেফারেন্স থাকে। একটি ক্লাস থেকে প্রথমে একটি অবজেক্ট তৈরি করা হয়। সেই অবজেক্টকে আমরা রেফারেন্স দিয়ে অ্যাকসেস করতে পারি। যেমন,
+  </p>
+  <pre class="lang:java decode:true ">Person person1 = new Person("Bazlur", "Rahman");</pre>
+  <p>
+    এখানে new অপারেটর দিয়ে একটি Person অবজেক্ট তৈরি করা হয়েছে। person1 হচ্ছে সেই অবজেক্টের রেফারেন্স।
+  </p>
+  <pre class="lang:java decode:true ">Person person2;</pre>
+  <p>
+    এখানে person2 একটি রেফারেন্স। কিন্তু এটি কোনো অবজেক্টকে রেফার করে না। কারণ person2 এর জন্য কোনো অবজেক্ট তৈরি করা হয় নি। এই রকম কোনো রেফারেন্স যদি কোনো অবজেক্টকে রেফারেন্স না করে, তাহলে আমরা বলি এটি একটি নাল রেফারেন্স (Null Reference)। এই রেফারন্সটি কাউকে রেফার করে না।
+  </p>
+  <p>
+    উপরের person2 একটি নাল (null) বা নাল রেফারেন্স (Null Reference)। এই রেফারেন্স দিয়ে কোনো কাজ করার উপায় নেই। কারণ এর মধ্যে আসলে কিছু নেই। যদি এই রেফারেন্স দিয়ে আমরা কোনো কাজ করতে চাই, তাহলে জাভা ভার্চুয়াল মেশিন NullPointerException থ্রো করবে।
+  </p>
+  <pre class="lang:java decode:true ">if (person2 != null) {
+      System.out.println(person2.getFullName());
+}</pre>
+  <p>
+    এই এক্সেপশন থেকে বাঁচতে হলে একটি if স্টেটমেন্ট ব্যবহার করে যাচাই করা যেতে পারে যে, রেফারেন্সটি null কিনা।
+  </p>
+</div>
 </main>
 
 

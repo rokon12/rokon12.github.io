@@ -37,7 +37,9 @@
 </p>
 
 <main>
-    <!-- raw HTML omitted -->
+    <div dir="ltr" style="text-align: left;">
+  <div style="text-align: justify;">
+    যখন একটি মেথডে আর্গুমেন্ট হিসেবে একটি অবজেক্ট পাঠানো হয় তখন কী ঘটনা ঘটে? এটি কি পাস-বাই-ভ্যালু (Pass-by-Value) না কি পাস-বাই-রেফারেন্স (Pass-by-Reference)?</p> 
 <pre><code>&lt;p&gt;
   এই প্রশ্ন দুটির উত্তর দিতে হলে আমাদের জানতে হবে অবজেক্টের রেফারেন্স কী।
 &lt;/p&gt;
@@ -46,18 +48,53 @@
   জাভাতে অবজেক্টগুলো প্রোগ্রাম মেমোরির হিপ অংশে থাকে। এর একটি ঠিকানা বা অ্যাড্রেস আছে। ভ্যারিয়েবল মূলত সেই অবজেক্টের অ্যাড্রেস ধরে রাখে যাকে আমরা বলি অবজেক্টের রেফারেন্স। আমরা যখন কোনো মেথডে আর্গুমেন্ট হিসেবে একটি ভ্যারিয়েবল বা অবজেক্টের রেফারেন্স পাস করি তখন আসলে সেই অবজেক্টের রেফারেন্সটি পাঠাই না বরং সেই রেফারেন্সের একটি কপি পাঠাই। কোনো একটি অবজেক্টের রেফারেন্স ভ্যালু যদি হয়, 66d3c617 তাহলে মেথড আর্গুমেন্ট হিসেবে এই সংখ্যাটির একটি কপি আর্গুমেন্ট হিসেবে যায়। এর মানে দাঁড়ায় আমরা আসলে রেফারেন্সটি পাঠাচ্ছি না বরং সেই রেফারেন্সের কপি পাঠাচ্ছি।
 &lt;/p&gt;
 </code></pre>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+    <pre class="lang:java decode:true ">public class Person {
+   private String name;
+   public Person(String name) {
+      this.name = name;
+   }
+   public void setName(String name) {
+      this.name = name;
+   }
+   public static void main(String[] args) {
+      Person person; // 1
+      person = new Person("Bazlur"); // 2
+      changePersonName(person); // 3
+   }
+ 
+   public static void changePersonName(Person copyOfTheReferenceOfPersonObject) {
+      copyOfTheReferenceOfPersonObject.setName("Rahman");
+   }
+}</pre>
+  </div>
+  <div style="text-align: justify;">
+    উপরের কোডটি খেয়াল করুন,
+  </div>
+  <div style="text-align: justify;">
+    <ol>
+      <li>
+        প্রথমে একটি Person ক্লাসের ভ্যারিয়েবল person তৈরি করেছি।
+      </li>
+      <li>
+        তারপর এর অবজেক্ট তৈরি করেছি যা কিনা মেমোরির হিপ অংশে রয়েছে। এর একটি রেফারেন্স তৈরি হয়েছে। ধরা যাক এটি, 66d3c617
+      </li>
+      <li>
+        person ভ্যারিয়েবলটি Person ক্লাসের একটি অবজেক্টের রেফারেন্স ধরে রাখে যা কিনা changePersonName() মেথডের আর্গুমেন্ট হিসেবে পাস করা হয়েছে।
+      </li>
+    </ol>
+  </div>
+  <div style="text-align: justify;">
+    এই মেথডটি যখনই কল করা হয়েছে তখন, person ভ্যারিয়েবলের একটি কপি তৈরি হয়েছে যা এই মেথডের লোকাল ভ্যারিয়েবল copyOfTheReferenceOfPersonObject। তার মানে দাঁড়ায়, এখানে person এবং copyOfTheReferenceOfPersonObject এই দুটি ভ্যারিয়েবলের ভ্যালু একই অর্থাৎ 66d3c617। এর অর্থ, এই ভ্যারিয়েবল দুটি একই অবজেক্টকে নির্দেশ বা রেফার করে।</p> 
 <pre><code>&lt;p&gt;
   এতে করে আমরা সহজেই বলতে পারি জাভা পাস-বাই-রেফারেন্স-ভ্যালু (Pass-by-Reference-Value) বা পাস-বাই-কপি-অব-দি-ভ্যারিয়েবল-ভ্যালু (Pass-by-Copy-of-the-Variable-Value) অথবা সহজে পাস-বাই-ভ্যালু (Pass-by-Value)।
 &lt;/p&gt;
 </code></pre>
-<!-- raw HTML omitted -->
-
+  </div>
+</div>
 </main>
 
 

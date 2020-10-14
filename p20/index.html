@@ -35,20 +35,42 @@
 </p>
 
 <main>
-    <!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+    <div dir="ltr" style="text-align: left;">
+  <div style="text-align: justify;">
+    বর্তমানে সব ধরণের কম্পিউটারই একই সঙ্গে একাধিক কাজ করে থাকে অর্থাৎ অনেকগুলো প্রোগ্রাম রান করে। প্রত্যেকটি আলাদা আলাদা প্রোগ্রামের জন্য অপারেটিং সিস্টেম একটি করে প্রসেস রান করে। প্রসেসগুলো একে অপরের থেকে স্বাধীন এবং ভিন্ন হয়। এগুলোর নিজস্ব এক্সিকিউশন এনভাইরনমেন্ট ও মেমোরি স্পেস থাকে। প্রসেসগুলো একইসঙ্গে পাশাপাশি চলতে থাকে। উদাহরণসরূপ- আমরা একইসঙ্গে ইউটিউবে গান শুনতে পারি ও ওয়ার্ড প্রসেসরে ডকুমেন্ট টাইপ করতে পারি।
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+    তবে কখনো কখনো কোনো একটি প্রোগ্রামের বিভিন্ন অংশ পাশাপাশি চলার প্রয়োজন হতে পারে। সহজভাবে বোঝার জন্য ধরা ওয়ার্ডপ্রসেসরের দুটি ফাংশনালিটি কথা চিন্তা করা যাক- ইউজার যখন কিবোর্ড টাইপ করে সেগুলো ইনপুট হিসেবে নেওয়া ও বানান দেখা। এটি একটি নির্দিষ্ট প্রোগ্রামের দুটি অংশ। এগুলো পাশাপাশি চলে। অর্থাৎ আমরা যখন টাইপ করি, সঙ্গে সঙ্গে এগুলোর বানান ঠিক আছে কিনা তা দেখার প্রক্রিয়াটিও চলতে থাকে। একই প্রোগ্রামের একাধিক কাজ পাশাপাশি করার জন্য থ্রেড প্রয়োজন হয়। থ্রেডকে অনেকসময় লাইটওয়েট প্রসেসও বলা হয়। অর্থাৎ এগুলো একটি প্রসেসের মধ্যে ছোট ছোট প্রসেস যাদের নিজস্ব এক্সিকিউশন এনভাইরনমেন্ট থাকে। এক্সিকিউশন এনভাইরনমেন্ট অর্থ হলো যেখানে নির্দিষ্ট কোড এক্সিকিউট হয়। একটি প্রোগ্রামে অনেকগুলো থ্রেড কাজ করলে তাকে মাল্টিথ্রেডেড প্রোগ্রাম বলা হয়।
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+    আধুনিক প্রায় সব প্রোগ্রাম বা সফটওয়্যারগুলো মাল্টিথ্রেডেড। মাল্টিথ্রেডেড প্রোগ্রামিংকে কনকারেন্ট প্রোগ্রামিংও বলা হয়। কারণ এতে কোনো প্রোগ্রামের বিভিন্ন অংশ কনকারেন্টলি(concurrently) বা একইসঙ্গে চলে। জাভা প্রোগ্রামিং ল্যাংগুয়েজ ব্যবহার করে মাল্টিথ্রেডেড প্রোগ্রাম লেখা খুব সহজ।
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+    জাভাতে থ্রেড প্রোগ্রামিংয়ের ক্ষেত্রে Thread ক্লাসটি ব্যবহার করা হয়। জাভাতে দুইভাবে এই ক্লাসটি ব্যবহার করা যায়।
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+    ১. Thread ক্লাসটিকে এক্সটেন্ড করে।
+  </div>
+  <div style="text-align: justify;">
+    ২. Runnable ইন্টারিফেস ব্যবহার করে।
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+    প্রথমে আমরা Thread ক্লাসটিকে এক্সটেন্ড করে একটি উদাহরণ দেখি-
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+    <pre class="lang:java decode:true ">package threads;
 <p>public class MyThread extends Thread {</p>
 <pre><code>@Override
 public void run() {
@@ -63,58 +85,161 @@ public void run() {
     }
 }
 </code></pre>
-<p>}<!-- raw HTML omitted --></p>
+<p>}</pre></p>
 <pre><code>&lt;p&gt;
   ওপরের প্রোগ্রামটিতে Thread ক্লাসটিকে ইনহেরিট করে একটি MyThread নামে একটি ক্লাস লেখা হয়েছে। Thread ক্লাসটি run() নামে একটি মেথড রয়েছে। এই মেথডটিতে ওভাররাইড করে এতে কিছু কোড লেখা হয়েছে। এই কোড অংশটুকু আমরা কনকারেন্টলি রান করতে চাই। এখানে একটি লুপ লেখা হয়েছে এবং এতে একটি প্রিন্ট মেথড রয়েছে।
 &lt;/p&gt;
 </code></pre>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+  </div>
+  <div>
+    [spacer height=&#8221;20px&#8221;]
+  </div>
+  <div style="text-align: justify;">
+    এরপর থ্রেড ক্লাসের একটি স্ট্যাটিক মেথড sleep() ব্যবহার করে কিছুক্ষণের জন্য প্রোগ্রামটিকে থামিয়ে দেওয়া হয়েছে। এই মেথড আর্গুমেন্ট হিসেবে একটি সংখ্যা নেয়। যে সংখ্যাটি দেওয়া হবে, ঠিক ততো মিলি সেকেন্ড এই থ্রেডটি বন্ধ হয়ে থাকেবে এবং আবার শুরু করবে। একটি সংখ্যা প্রিন্ট করতে মোটেও কোনো সময় লাগে না, এটি শুধুমাত্রে বোঝার সুবিধার্থে ব্যবহার করা হয়েছে যে, যাতে মনে হয় থ্রেডটি বেশ কিছুক্ষণ কাজ করছে। এই মেথডটি একটি চেকড এক্সেপশন থ্রো করে, এজন্য একে ট্রাই ক্যাচ ব্লকের মধ্যে রাখা হয়েছে।
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+    এবার এই ক্লাসটিকে একটি মেইন মেথড থেকে ব্যবহার করা যাক-
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <pre class="lang:java decode:true ">package threads;
+
+public class ThreadDemo {
+
+    public static void main(String[] args) {
+        Thread t1 = new MyThread();
+        Thread t2 = new MyThread();
+
+        t1.start();
+        t2.start();
+    }
+}</pre>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+    এখানে MyThread ক্লাসটির দুটি ইনস্ট্যান্স তৈরি করা হয়েছে। থ্রেড রান করা জন্য এর start() মেথডটি কল করতে হয়।
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+    এই প্রোগ্রামটি রান করলে যে আউটপুট আসবে তা হলো &#8211;
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+    1
+  </div>
+  <div style="text-align: justify;">
+    1
+  </div>
+  <div style="text-align: justify;">
+    2
+  </div>
+  <div style="text-align: justify;">
+    2
+  </div>
+  <div style="text-align: justify;">
+    3
+  </div>
+  <div style="text-align: justify;">
+    3
+  </div>
+  <div style="text-align: justify;">
+    4
+  </div>
+  <div style="text-align: justify;">
+    4
+  </div>
+  <div style="text-align: justify;">
+    5
+  </div>
+  <div style="text-align: justify;">
+    5
+  </div>
+  <div style="text-align: justify;">
+    6
+  </div>
+  <div style="text-align: justify;">
+    6
+  </div>
+  <div style="text-align: justify;">
+    7
+  </div>
+  <div style="text-align: justify;">
+    7
+  </div>
+  <div style="text-align: justify;">
+    8
+  </div>
+  <div style="text-align: justify;">
+    8
+  </div>
+  <div style="text-align: justify;">
+    9
+  </div>
+  <div style="text-align: justify;">
+    9
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+    এর অর্থ হলো দুটি লুপই পাশাপাশি রান করছে।
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+    এবার দ্বিতীয় উপায়টি অর্থাৎ Runnable ইন্টারফেইস ব্যবহার করে একটি উদাহরণ দেখা যাক-
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <pre class="lang:java decode:true ">package threads;
+
+public class MyRunnable implements Runnable {
+    @Override
+    public void run() {
+        System.out.println("Inside run method");
+        System.out.println("Doing some important work concurrently");
+
+        System.out.println("sleep for a while.");
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.out.println("End of run method");
+    }
+}</pre>
+  <div style="text-align: justify;">
+    এখানে MyRunnable ক্লাসটি Runnable ইন্টারফেইসকে ইমপ্লিমেন্ট করেছে। এই ইন্টারফেইসটিতে একটি মাত্র মেথড run() রয়েছে। যে কোড অংশটুকু কনকারেন্টলি রান করার প্রয়োজন সেই কোড অংশটুকু এই মেথডে লিখতে হয়। এই ক্লাসটিকে ব্যবহার করতে হলে-
+  </div>
+  <pre class="lang:java decode:true">package threads;
+
+public class MyRunnableDemo {
+    public static void main(String[] args) {
+
+        MyRunnable myRunnable = new MyRunnable();
+        Thread t1 = new Thread(myRunnable);
+
+        t1.start();
+    }
+}</pre>
+  <div style="text-align: justify;">
+    এখানে প্রথমে একটি MyRunnable ক্লাসের ইনস্ট্যান্স তৈরি করা হয়েছে। এরপর Thread ক্লাসের কনস্ট্রাক্টরে এই ইনস্ট্যান্সটি আর্গুমেন্ট হিসেবে দিয়ে Thread ক্লাসের ইনস্ট্যান্স তৈরি করা হয়েছে। এরপর থ্রেডটিকে রান করার জন্য start() মেথডটি কল করা হয়েছে।
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+    এখানে একটি বিষয় মনে রাখতে হবে যে, যদিও যে কোড অংশটুকু কনকারেন্টলি রান করার প্রয়োজন তা রান মেথডের মধ্যে লিখতে হয়, কিন্তু থ্রেড রান করার জন্য এই মেথডটি ব্যবহার করা হয় না। এই মেথডটি থ্রেড নিজে ব্যবহার করে থেকে। থ্রেড রান করার জন্য start() মেথডটি কল করতে হয়।
+  </div>
+</div>
 <p>চলবে…</p>
 
 </main>

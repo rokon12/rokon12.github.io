@@ -37,27 +37,73 @@
 </p>
 
 <main>
-    <!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+    <div dir="ltr" style="text-align: left;">
+  <div style="text-align: justify;">
+    মনে করো, তুমি একটি মুদি দোকান দিয়েছো। তোমার দোকানে হরেকরকম পণ্যদ্রব্য রয়েছে। এই পণ্যগুলোর নাম ও দাম আলাদা আলাদা। এগুলো মনে রাখতে গিয়ে তুমি হিমশিম খাচ্ছো। তুমি সবগুলো খাতায় লিখে রেখেছো। যখনই তুমি একটি পণ্য বিক্রি করো, তোমাকে সেই খাতা দেখতে হয়। খাতা থেকে খুঁজে বের করতে হয়।
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+    খাতাতে যদি নামগুলো বর্ণানুক্রমে রাখা না থাকে, তাহলে তোমার প্রতিবার খুঁজে বের করতে অনেক সময় লাগে। অ্যালগরিমদ ক্লাসে নিশ্চয় শিখেছো যে এক্ষেত্রে খুঁজে বের করার সময় O(n) । তবে নামগুলো যদি বর্ণানুক্রমে রাখা থাকে তাহলে <a href="http://cpbook.subeen.com/2011/08/binary-search.html">বাইনারি সার্চ</a> ব্যবহার করা যায় আর তখন সময় লাগবে O(log n)। তুমি নিশ্চয় জানো যে O(n) চেয়ে O(log n) কম সময় লাগে।
+  </div>
+</div>
+<div style="text-align: justify;">
+  <p>
+    <figure id="attachment_360" aria-describedby="caption-attachment-360" style="width: 291px" class="wp-caption aligncenter"><img loading="lazy" class="wp-image-360 size-full" src="https://bazlur.com/wp-content/uploads/2016/11/Hash1.jpg" alt="" width="291" height="291" /><figcaption id="caption-attachment-360" class="wp-caption-text">চিত্র: O(n) vs O(log n)</figcaption></figure>
+  </p>
+</div>
+<div dir="ltr" style="text-align: left;">
+  <div style="text-align: justify;">
+    যদিও O(log n) কম সময় লাগছে, তবুও কিছুটা সময় লাগছে। সবচেয়ে ভাল হতো যদি কোন সময়ই না লাগতো। তুমি সবগুলো পণ্যের নাম এবং দাম মুখস্থ করে ফেলতে পারতে এবং ক্রেতা কোন পণ্যের নাম বলার সঙ্গে সঙ্গেই তুমি দাম বলে দিতে পারতে।
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+    চলো, তাহলে কিভাবে এই সমস্যার সমাধান করা যায়, তার একটা উপায় বের করে ফেলি। এর জন্যে একটি বিশেষ উপায় আছে যার নাম হ্যাশ ফাংশন। হ্যাশ ফাংশন এমন একটি ফাংশন যাতে একটি স্ট্রিং ইনপুট হিসেবে দিলে তা একটি ইন্টিজার রিটার্ন করে। এই ফাংশন একই স্ট্রিং এর জন্যে সবসময় একই সংখ্যা রিটার্ন করে।
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+    তুমি নিশ্চয় <a href="http://cpbook.subeen.com/2011/08/array-programming-c.html">অ্যারে</a> সম্পর্কে জানো। এটি একই রকম ডেটাটাইপের অনেকগুলো ডাটা ধরে রাখতে পারে।এখন মনে করো, তুমি প্রত্যেকটি পণ্যের নামের জন্যে এর দাম অ্যারেতে রাখতে চাও। এক্ষেত্রে নামগুলো দিয়ে যদি একটি হ্যাশ ফাংশনের মধ্যে দিই, এবং হ্যাশ ফাংশন যে ইন্টিজার রিটার্ন করে সেই ইন্টিজারকে ইনডেক্স হিসেবে ব্যবহার করে অ্যারেতে পণ্যের দাম রাখতে পারি। এই অ্যারেকে আমরা বলি হ্যাশ টেবিল।
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+    মনে করো, তোমার ১০ সাইজের একটি অ্যারে রয়েছে। এখন, ধরো, পেঁপের দাম ২০ টাকা। পেঁপে নামটি যদি হ্যাশ ফাংশনে দাও, তাহলে এটি যদি ৪ রিটার্ন করে, তাহলে অ্যারের চতুর্থ নম্বর ইনডেক্সে পেঁপের দামর রেখে দেবে। এভাবে আদার নাম হ্যাশ ফাংশনে দিলে যদি ৩ রিটার্ন করে, তাহলে তাকে তিন নম্বর ইনডেক্সে রেখে দিলে। এভাবে কলা, মরিচ ইত্যাদি রেখে দিলে। এখন যখন তোমার এগুলো দাম জানার দরকার হয়, তাহলে চট করে হ্যাশ ফাংশনে নামটি দিয়ে তার ইনডেক্সটি বের করে নিলে। অ্যারতে ইনডেক্স জানলে ভ্যালু পড়ে আনা খুব সহজ। অ্যারে থেকে ভ্যালু পরে আনার সময় আসলে O(1) ।
+  </div>
+</div>
+<div style="text-align: justify;">
+</div>
+<div>
+  <p>
+    <figure id="attachment_361" aria-describedby="caption-attachment-361" style="width: 595px" class="wp-caption aligncenter"><img loading="lazy" class="wp-image-361 size-full" src="https://bazlur.com/wp-content/uploads/2016/11/hash2.jpg" alt="" width="595" height="291" /><figcaption id="caption-attachment-361" class="wp-caption-text">চিত্র: হ্যাশ ফাংশন</figcaption></figure>
+  </p>
+</div>
+<div>
+</div>
+<div dir="ltr" style="text-align: left;">
+  <div style="text-align: justify;">
+  </div>
+</div>
+<div style="text-align: justify;">
+  <p>
+    <figure id="attachment_362" aria-describedby="caption-attachment-362" style="width: 768px" class="wp-caption aligncenter"><img loading="lazy" class="wp-image-362 size-full" src="https://bazlur.com/wp-content/uploads/2016/11/hash3.jpg" alt="" width="768" height="163" /><figcaption id="caption-attachment-362" class="wp-caption-text">চিত্র: হ্যাশ টেবিল</figcaption></figure>
+  </p>
+</div>
+<div dir="ltr" style="text-align: left;">
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+    এখন তুমি নিজে নিজে তোমার পছন্দের কোন পোগ্রামিং ল্যাংগুয়েজে এটি ইমপ্লিমেন্ট করে দেখতে পারো। সাধারণত সবগুলো আধুনিক প্রোগ্রামিং ল্যাংগুয়েজে এই ডেটা স্ট্রাকচার তৈরি করে দেওয়া থাকে, তবে এটি সম্পর্কে জানাটা জরুরী। এতে করে তুমি নিশ্চিত করে কোথায় কোথায় ব্যবহার করা যায় বুঝতে পারবে।
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+    <p>
+      উপরের যে উদাহরণটি দিয়েছি তাতে একটি সমস্যা রয়েছে। সেটি নিয়ে পরবর্তীতে আলোচনা করবো। তবে সমস্যাটি তুমি চিন্তা করে যদি খুঁজে বের করতে পারো তাহলে নিচে কমেন্ট করে জানাও।
+    </p>
 <pre><code>&lt;p&gt;
   &amp;nbsp;
 &lt;/p&gt;
@@ -66,9 +112,10 @@
   পরের অংশ:  &lt;a href=&quot;https://bazlur.com/%E0%A6%B9%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B6-%E0%A6%AB%E0%A6%BE%E0%A6%82%E0%A6%B6%E0%A6%A8-%E0%A7%A8/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;লিংক&lt;/a&gt;
 &lt;/p&gt;
 </code></pre>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-
+  </div>
+  <div style="text-align: justify;">
+  </div>
+</div>
 </main>
 
 

@@ -37,39 +37,94 @@
 </p>
 
 <main>
-    <!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p>public class Person implements Serializable {
-      private String name;
-      private int age;
-      // more properties &amp; methods 
-}<!-- raw HTML omitted --> <!-- raw HTML omitted --><!-- raw HTML omitted --></p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+    <div dir="ltr" style="text-align: left;">
+  <div style="text-align: justify;">
+    <b>সিরিয়ালাইজেশন (Serialization) </b>
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+    আমরা জানি যে ক্লাস থেকে অবজেক্ট তৈরি করা হয়। ক্লাসে মূলত একটি অবজেক্টে কী কী প্রোপ্রার্টিজ থাকবে এবং এটি কী কী কাজ করতে পারবে তার বর্ণনা থাকে। কিন্তু যখন নিউ(new) অপারেটর ব্যবহার করে একে অবজেক্ট তৈরি করা হয়, তখন এটি একটি জীবন্ত প্রাণির মতো অবজেক্টে পরিণত হয়। একটি জীবন্ত প্রাণির যেমন অনেকগুলো নিজস্ব ও অনন্য (unique) বৈশিষ্ট্য থাকে (যেমন- নাম, বয়স, ডিএনএ সিকুয়েন্স ইত্যাদি), তেমনি একটি অবজেক্টের একইরকম অনন্য পরিচয় (unique identity) থাকে। প্রত্যেকটি অবজেক্ট কিছু না কিছু স্টেট(state) বা ডেটা থাকে। প্রত্যেকটি অবজেক্টের একটি জীবন চক্র থাকে (life cycle)। এটি নিউ অপারেটর দিয়ে শুরু হয় এবং গারবেজ কালেক্টর(garbage collector) দিয়ে শেষ হয়। এই শুরু এবং শেষ হওয়ার মধ্যবর্তী অবজেক্টের কোনো অবস্থাকে বাইনারী ফরমেটে স্টোর করা যায় এবং সেই একই অবস্থা থেকে পুনর্গঠিত করা যায়।
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+    অবজেক্টের এই কোনো অবস্থাকে বাইনারী ফরমেটে রূপান্তর করার প্রক্রিয়াকে সিরিয়ালাইজেশন(serialization) বলা হয়। আবার এই বাইনারী ফরমেট থেকে অবজেক্টে পুনর্গঠিত করার প্রক্রিয়াকে ডিসিরিয়ালাইজেশন(deserialization) বলা হয়।
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+    সাধারণত দুটি কাজে এই সিরিয়ালাইজেশনের দরকার হয় &#8211;
+  </div>
+  <div style="text-align: justify;">
+    ১. অ্যাপ্লিকেশনের কোনো প্রয়োজনে অবজেক্টের অবস্থানকে স্থায়িভাবে সংরক্ষণ করার প্রয়োজন হতে পারে। যেমন- ডেটাবেইজে সংরক্ষণ।
+  </div>
+  <div style="text-align: justify;">
+    ২. একটি অজবেক্টেকে একটি কম্পিউটার থেকে অন্য কম্পিউটারে পাঠোনোর প্রয়োজন হতে পারে।
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+    এবার তাহলে দেখা যাক কীভাবে অবজেক্টকে সিরিয়ালাইজ করা যায়।
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+    সব অবজেক্টকেই সিরিয়ালাইজ করা যায় না। কোনো অবজেক্টকে সিরিয়ালাইজ করতে হলে, সেই অবজেক্টের ক্লাসকে অবশ্যই java.io.Serializable ইন্টারফেসকে ইমপ্লিমেন্ট করতে হবে। এই ইন্টারফেসটিতে কোনো মেথড নেই। এটি মূলত একটি মার্কার ইন্টারফেইস।
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div>
+    <pre class="lang:java decode:true">import java.io.Serializable;
+<p>public class Person implements Serializable {<br />
+      private String name;<br />
+      private int age;<br />
+      // more properties &amp; methods <br />
+}<span style="text-align: justify;"> </span></pre></p>
+  </div>
+  <div style="text-align: justify;">
+    উপরের Person ক্লাসটি Serializable ইন্টরফেসটিকে ইমপ্লিমেন্ট করে। এর অর্থ হলো, এই ক্লাসের যেকোনো অবজেক্টকে সিরিয়ালাইজ করা যাবে।
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+    তবে যদি কোনো ক্লাস যদি এই ইন্টারফেসকে ইমপ্লিমেন্ট না করে, এবং সেই ক্লাসের অবজেক্টকে সিরিয়ালাইজ করার চেষ্টা করা হয়, তাহলে জাভা রানটাইম NotSerializableException থ্রু করবে।
+  </div>
+  <p>
+    &nbsp;
+  </p>
+  <div style="text-align: justify;">
+    <b><b>সিরিয়ালাইজেশন প্রক্রিয়া: </b></b><br /> <b><b><br /> </b></b>
+  </div>
+  <p>
+    <span style="text-align: justify;">প্রথমে আমাদের একটি অবজেক্ট তৈরি করতে হবে। আমরা অবজেক্টের বাইনারি ফরমেটটি একটি ফাইলে সংরক্ষণ করতে চাই। এজন্য আমাদের একটি আউটপুট স্ট্রিম লাগবে- সেক্ষেত্রে যা FileOutputStream । একে একটি ObjectOutputStream দিয়ে wrap করে এর writeObject() মেথডটি কল করলেই অবজেক্টটি সিরিয়ালাইজ হয়ে আউটপুট স্ট্রিমে রাইট হবে। </span>
+  </p>
+  <div>
+    <pre class="lang:java decode:true ">    public static void serializeToDisk(String fileName, List&lt;OrderLine&gt; orders) {
+        File file = new File(fileName);
+        try (ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream(file))) {
+            outputStream.writeObject(orders);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }</pre>
+  </div>
+  <div style="text-align: justify;">
+    উপরের মেথডটি একটি অর্ডার লিস্টকে একটি নির্দিষ্ট ফাইলে সংরক্ষণ করে। এখানে আর্গুমেন্ট থেকে প্রাপ্ত ফাইলের নাম দিয়ে একটি ফাইল তৈরি করা হয়েছে। তারপর <a href="http://www.bazlur.com/2017/03/try-with-resource-statement-in-java.html" target="_blank" rel="noopener noreferrer">ট্রাই-রিসোর্স </a>ব্যবহার করে আউটপুট স্ট্রিম তৈরি করা হয়েছে। এবং ট্রাই ব্লকের ভেতরে অর্ডার লিস্টকে writeObject() মেথড দিয়ে সিরিয়ালাইজ করা হয়েছে।
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+    <b><b>ডিসিরিয়ালাইজেশন প্রক্রিয়া </b></b><br /> <b><b><br /> </b></b>
+  </div>
+  <div style="text-align: justify;">
+    সিরিয়ালেশনের মূল উদ্দেশ্য হচ্ছে সিরিয়ালাইজ কৃত অবজেক্টিকে আবার পুনর্গঠিন করে ব্যবহার করা। এই প্রক্রিয়াটি উপরের প্রক্রিয়াটির মতোই সহজ। এক্ষেত্রে একটি ইনপুট স্ট্রিমের প্রয়োজন হয়।
+  </div>
+</div>
+<div>
+  <pre class="lang:java decode:true ">    public static List&lt;OrderLine&gt; deserializeFromDisk(String fileName) {
+        File file = new File(fileName);
+        try (ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream(file))) {
 <pre><code>        return (List&amp;lt;OrderLine&amp;gt;) inputStream.readObject();
 
     } catch (IOException | ClassNotFoundException e) {
@@ -79,20 +134,30 @@
     return null;
 }&lt;/pre&gt;
 </code></pre>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+</div>
+<div dir="ltr" style="text-align: left;">
+  <div style="text-align: justify;">
+    উপরের মেথডে আর্গুমেন্ট থেকে প্রাপ্ত থেকে ফাইলের নাম থেকে একটি ফাইল তৈরি করা হয়েছে। এরপর <a href="http://www.bazlur.com/2017/03/try-with-resource-statement-in-java.html" target="_blank" rel="noopener noreferrer">ট্রাই-রিসোর্স </a>স্টেটমেন্ট ব্যবহার করে ইনপুট স্ট্রিম তৈরি করা হয়েছে। ট্রাই ব্লকের মধ্যে ইনপুট স্ট্রিমে মেথড readObject() ব্যবহার করে সিরিয়ালাইজকৃত অবজেক্টটি পুনর্গঠন করা হয়েছে।
+  </div>
+  <div style="text-align: justify;">
+    <p>
+      &nbsp;
+    </p>
+  </div>
+  <div style="text-align: justify;">
+    <p>
+      <b>সম্পূর্ণ সোর্সকোড:</b>
+    </p>
 <pre><code>&lt;pre class=&quot;lang:java decode:true&quot;&gt;package article.serialization;
 </code></pre>
-<p>import java.io.*;
-import java.util.Arrays;
+<p>import java.io.*;<br />
+import java.util.Arrays;<br />
 import java.util.List;</p>
-<p>import static article.serialization.Price.<em>;
+<p>import static article.serialization.Price.<em>;<br />
 import static article.serialization.Weight.</em>;</p>
-<p>public class Store {
-public static void main(String[] args) {
-Product toothPaste = new Product(&ldquo;Tooth Paste&rdquo;, price(1.5), weight(0.5));
+<p>public class Store {<br />
+public static void main(String[] args) {<br />
+Product toothPaste = new Product(&ldquo;Tooth Paste&rdquo;, price(1.5), weight(0.5));<br />
 Product toothBrush = new Product(&ldquo;Tooth Brush&rdquo;, price(3.5), weight(0.3));</p>
 <pre><code>    List&amp;lt;OrderLine&amp;gt; orders =
             Arrays.asList(new OrderLine(toothPaste, 2),
@@ -159,13 +224,13 @@ public static List&amp;lt;OrderLine&amp;gt; deserializeFromDisk(String fileName)
     return null;
 }
 </code></pre>
-<p>}
-<!-- raw HTML omitted --></p>
+<p>}<br />
+</pre></p>
 <pre><code>&lt;pre class=&quot;lang:java decode:true &quot;&gt;package article.serialization;
 </code></pre>
 <p>import java.io.Serializable;</p>
-<p>public class OrderLine implements Serializable {
-private Product product;
+<p>public class OrderLine implements Serializable {<br />
+private Product product;<br />
 private int count;</p>
 <pre><code>public OrderLine(Product product, int count) {
     this.product = product;
@@ -196,12 +261,12 @@ public Price getAmount() {
     return this.product.getPrice().mult(this.count);
 }
 </code></pre>
-<p>}
-<!-- raw HTML omitted --></p>
+<p>}<br />
+</pre></p>
 <pre><code>&lt;pre class=&quot;lang:java decode:true &quot;&gt;package article.serialization;
 </code></pre>
 <p>import java.io.Serializable;</p>
-<p>public class Price implements Serializable {
+<p>public class Price implements Serializable {<br />
 public final double value;</p>
 <pre><code>private Price(double value) {
     this.value = value;
@@ -229,14 +294,14 @@ public String toString() {
     return Double.toString(this.value);
 }
 </code></pre>
-<p>}
-<!-- raw HTML omitted --></p>
+<p>}<br />
+</pre></p>
 <pre><code>&lt;pre class=&quot;lang:java decode:true &quot;&gt;package article.serialization;
 </code></pre>
 <p>import java.io.Serializable;</p>
-<p>public class Product implements Serializable{
-private final String name;
-private final Price price;
+<p>public class Product implements Serializable{<br />
+private final String name;<br />
+private final Price price;<br />
 private final Weight weight;</p>
 <pre><code>public Product(String name, Price price, Weight weight) {
     this.name = name;
@@ -256,12 +321,12 @@ public Weight getWeight() {
     return weight;
 }
 </code></pre>
-<p>}
-<!-- raw HTML omitted --></p>
+<p>}<br />
+</pre></p>
 <pre><code>&lt;pre class=&quot;lang:java decode:true &quot;&gt;package article.serialization;
 </code></pre>
 <p>import java.io.Serializable;</p>
-<p>public class Weight implements Serializable {
+<p>public class Weight implements Serializable {<br />
 public final double value;</p>
 <pre><code>private Weight(double value) {
     this.value = value;
@@ -288,14 +353,14 @@ public String toString() {
     return Double.toString(this.value);
 }
 </code></pre>
-<p>}
-<!-- raw HTML omitted --></p>
+<p>}<br />
+</pre></p>
 <pre><code>&lt;p&gt;
   &amp;nbsp;
 &lt;/p&gt;
 </code></pre>
-<!-- raw HTML omitted -->
-
+  </div>
+</div>
 </main>
 
 

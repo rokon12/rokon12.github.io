@@ -13,9 +13,7 @@
       <pubDate>Sat, 24 Jun 2017 03:37:00 +0000</pubDate>
       
       <guid>http://bazlur.com/p10/</guid>
-      <description>public class Person implements Serializable { private String name; private int age; // more properties &amp;amp; methods } return (List&amp;amp;lt;OrderLine&amp;amp;gt;) inputStream.readObject(); } catch (IOException | ClassNotFoundException e) { e.printStackTrace(); } return null; }&amp;lt;/pre&amp;gt;  &amp;lt;pre class=&amp;quot;lang:java decode:true&amp;quot;&amp;gt;package article.serialization;  import java.io.*; import java.util.Arrays; import java.util.List;
-import static article.serialization.Price.; import static article.serialization.Weight.;
-public class Store { public static void main(String[] args) { Product toothPaste = new Product(&amp;ldquo;Tooth Paste&amp;rdquo;, price(1.5), weight(0.5)); Product toothBrush = new Product(&amp;ldquo;Tooth Brush&amp;rdquo;, price(3.</description>
+      <description>সিরিয়ালাইজেশন (Serialization)    আমরা জানি যে ক্লাস থেকে অবজেক্ট তৈরি করা হয়। ক্লাসে মূলত একটি অবজেক্টে কী কী প্রোপ্রার্টিজ থাকবে এবং এটি কী কী কাজ করতে পারবে তার বর্ণনা থাকে। কিন্তু যখন নিউ(new) অপারেটর ব্যবহার করে একে অবজেক্ট তৈরি করা হয়, তখন এটি একটি জীবন্ত প্রাণির মতো অবজেক্টে পরিণত হয়। একটি জীবন্ত প্রাণির যেমন অনেকগুলো নিজস্ব ও অনন্য (unique) বৈশিষ্ট্য থাকে (যেমন- নাম, বয়স, ডিএনএ সিকুয়েন্স ইত্যাদি), তেমনি একটি অবজেক্টের একইরকম অনন্য পরিচয় (unique identity) থাকে। প্রত্যেকটি অবজেক্ট কিছু না কিছু স্টেট(state) বা ডেটা থাকে। প্রত্যেকটি অবজেক্টের একটি জীবন চক্র থাকে (life cycle)। এটি নিউ অপারেটর দিয়ে শুরু হয় এবং গারবেজ কালেক্টর(garbage collector) দিয়ে শেষ হয়। এই শুরু এবং শেষ হওয়ার মধ্যবর্তী অবজেক্টের কোনো অবস্থাকে বাইনারী ফরমেটে স্টোর করা যায় এবং সেই একই অবস্থা থেকে পুনর্গঠিত করা যায়।   অবজেক্টের এই কোনো অবস্থাকে বাইনারী ফরমেটে রূপান্তর করার প্রক্রিয়াকে সিরিয়ালাইজেশন(serialization) বলা হয়। আবার এই বাইনারী ফরমেট থেকে অবজেক্টে পুনর্গঠিত করার প্রক্রিয়াকে ডিসিরিয়ালাইজেশন(deserialization) বলা হয়।   সাধারণত দুটি কাজে এই সিরিয়ালাইজেশনের দরকার হয় &amp;#8211;  ১.</description>
     </item>
     
   </channel>

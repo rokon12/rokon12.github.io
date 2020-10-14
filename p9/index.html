@@ -35,33 +35,64 @@
 </p>
 
 <main>
-    <!-- raw HTML omitted -->
+    <div dir="ltr" style="text-align: left;">
+  <div style="text-align: justify;">
+    <p>
+      <b>জাভাতে toString() এর কাজ কী?</b>
+    </p>
 <pre><code>&lt;p&gt;
   কোনো জাভা অবজেক্টেকে স্ট্রিংয়ে রূপান্তর করতে চাইলে toString() মেথড কল করা হয়। এটি নানা কাজে বিশেষ করে ডিবাগিং কাজে ব্যবহার করা হয়।
 &lt;/p&gt;
 </code></pre>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+  </div>
+  <div style="text-align: justify;">
+    নিচের ক্লাসটি খেয়াল করুন-
+  </div>
+</div>
+<div>
+  <pre class="lang:java decode:true ">public class Employee {
+    private String name;
+    private int age;
 <pre><code>public Employee(String name, int age) {
     this.name = name;
     this.age = age;
 }
 </code></pre>
-<p>}
-<!-- raw HTML omitted --></p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<p>}<br />
+</pre></p>
+</div>
+<div dir="ltr" style="text-align: left;">
+  <p>
+    <span style="text-align: justify;">এবার একটি অবজেক্ট তৈরি করে toString()মেথড কল করা যাক। </span>
+  </p>
+  <pre class="lang:java decode:true ">    public static void main(String[] args) {
+        Employee employee = new Employee("Rahim", 27);
+        System.out.println(employee.toString());
+    }</pre>
+  <div style="text-align: justify;">
+    এটিকে রান করলে &#8211;
+  </div>
+  <div style="text-align: justify;">
+    <span style="font-family: Courier New, Courier, monospace;"> </span>
+  </div>
+  <div style="text-align: justify;">
+    <a href="mailto:Employee@66d3c617"><span style="font-family: Courier New, Courier, monospace;"><b>Employee@66d3c617</b></span></a>
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+    যেহেতু Employee ক্লাসটিতে toString() মেথডটি ওভাররাইড করা হয়নি, তাই এটি Object ক্লাসের toString()মেথডটি কল হয় যা ক্লাস নামের সঙ্গে হ্যাশকোড যুক্ত করে রিটার্ন করেন।
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+    অর্থপূর্ণ কোনো কিছু রিটার্ন করতে হলে চলুন এটিকে ওভাররাইড করি।
+  </div>
+</div>
+<div>
+  <pre class="lang:java decode:true ">public class Employee {
+    private String name;
+    private int age;
 <pre><code>public Employee(String name, int age) {
     this.name = name;
     this.age = age;
@@ -78,12 +109,18 @@ public static void main(String[] args) {
     System.out.println(employee.toString());
 }
 </code></pre>
-<p>}<!-- raw HTML omitted --></p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-
+<p>}</pre></p>
+</div>
+<div dir="ltr" style="text-align: left;">
+  <div style="text-align: justify;">
+    এটিকে রান করলে আউটপুট পাওয়া যাবে &#8211;
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+    <span style="font-family: Courier New, Courier, monospace;"><b>Rahim: 27</b></span>
+  </div>
+</div>
 </main>
 
 

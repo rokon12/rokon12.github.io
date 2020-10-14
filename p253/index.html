@@ -40,22 +40,92 @@
     <p>ক্লােন শব্দের অর্থ হুবহু কপি করা। অবজেক্ট ক্লাোনিংয়ের অর্থ একই রকম আরেকটি অবজেক্ট তৈরি করা।</p>
 <p>আমরা জানি যে ক্লাস থেকে অবজেক্ট তৈরি করা হয়। একটি ক্লাস থেকে একাধিক অবজেক্ট তৈরি করা যায়। প্রত্যেকটি অবেজেক্টের আলাদা আলদা স্টেট থাকে। অর্থাৎ অবজেক্টগুলো সম্পূর্ণ ভিন্ন হয়। তবে কখনো কখনো একটি অবজেক্টের স্টেটগুলো নিয়ে আরেকটি সম্পূর্ণ একইরকম অবজেক্ট তৈরি করার প্রয়োজন হয়। একইরকম অবজেক্ট তৈরির এই প্রক্রিয়াকে অবজেক্ট ক্লোনিং বলা হয়।</p>
 <p>উদাহরণসরূপ নিজের উদাহরণটি দেখা যাক –</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<pre class="lang:java decode:true ">public class Person {
+
+    private String firstName;
+    private String lastName;
+    private int age;
+
+    public Person(String firstName, String lastName, int age) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public int getAge() {
+        return age;
+    }
+}</pre>
 <p>এই ক্লাসটির অবজেক্ট তৈরি করতে হলে –</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<pre class="lang:java decode:true ">public class PersonDemo {
+    public static void main(String[] args) {
+        Person person1 = new Person("Mashrafe", "Mortaza", 33);
+        Person person2 = new Person("Tamim", "Iqbal", 28);
+        Person person3 = new Person("Mustafizur", "Rahman", 21);
+    }
+}</pre>
 <p>ওপরের উদাহরণটিতে তিনটি আলাদা আলাদা অবজেক্ট তৈরি করা হয়েছে। এই অবজেক্টগুলো প্রতিটি আলাদা আলদা। প্রথমটির সঙ্গে দ্বিতীয়টি বা তৃতিয়টির স্টেট (ফিল্ডগুলোর ভ্যালুর) কোনো মিল নেই।</p>
 <p>এখন কাজের প্রয়োজনে প্রথম অবজেক্টটির একটি কপি তৈরি করার প্রয়োজন হতে পারে যার স্টেট বা ফিল্ডগুলোর ভ্যালু একই থাকবে।</p>
 <p>জাভাতে প্রত্যেকটি ক্লাস Object ক্লাসকে ইনহেরিট করে। এই ক্লাসে clone() মেথড রয়েছে। তাই প্রতিটি অবেজেক্টেই এই মেথডটি পাওয়া যায়। তবে এই মেথডটি থাকলেও একে ব্যবহার করা যায় না। এই মেথডটি ব্যবহার উপযোগী করতে হলে দুটি কাজ করতে হয় –</p>
-<p>১. ক্লাসটিকে Cloneable ইন্টারফেইসটি ইমপ্লিমেন্ট করতে হয়।<br>
+<p>১. ক্লাসটিকে Cloneable ইন্টারফেইসটি ইমপ্লিমেন্ট করতে হয়।<br />
 ২. এবং ক্লাসটিতে Object এর clone() মেথডকে ওভাররাইড করতে হয়। এবং ক্লাসটিতে Object এর clone() মেথডকে ওভাররাইড করতে হয়। এটি না করলে এক্সেপশন থ্রুু হবে অর্থাৎ ক্লোন করা যাবে না।</p>
 <p>তাহলে উপরের Person ক্লাসের অবজেক্ট কে ক্লোন করার জন্য উপযোগী করতে হলে –</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<pre class="lang:java decode:true ">public class Person implements Cloneable{
+
+    private String firstName;
+    private String lastName;
+    private int age;
+
+    public Person(String firstName, String lastName, int age) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+
+        return super.clone();
+    }
+}</pre>
 <p>এখন ক্লোন করার উদাহরণ দেখা যাক-</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<pre class="lang:java decode:true">public class PersonDemo {
+    public static void main(String[] args) {
+        Person person1 = new Person("Mashrafe", "Mortaza", 33);
+
+        try {
+            Person clone = (Person) person1.clone();
+            String firstName = clone.getFirstName();
+            String lastName = clone.getLastName();
+            int age = clone.getAge();
+            System.out.println("name: " + firstName + " " + lastName + " and age: " + age);
+
+        } catch (CloneNotSupportedException e) {
+            e.printStackTrace();
+        }
+    }
+}
+</pre>
 <p>clone মেথড একটি চেকড এক্সসেপশন CloneNotSupportedException থ্রু করে। সুতরাং এটি ব্যবহার করতে হলে try-catch ব্যবহার করতে হয়।</p>
 <p>ক্লোন করার উপরের এই পদ্ধতিকে শ্যালো ক্লোনিং (Shallow cloning) বলা হয়।</p>
 <p>একটি ক্লাসের ফিল্ডগুলো রেফারেন্স টাইপ বা প্রিমিটিভ টাইপ দু-রকমই হতে পারে। শ্যালো ক্লোনিংয়ে রেফারেন্স অবজেকটগুলোর জন্য নতুন অবজেক্ট তৈরি হয় না, বরং এদের রেফারেন্স কপি হয়। অন্যদিকে প্রিমিটিভ টাইপের ক্ষেত্রে সম্পূর্ণ নতুন ভ্যালু তৈরি হয় ।</p>

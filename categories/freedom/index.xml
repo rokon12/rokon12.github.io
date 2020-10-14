@@ -13,7 +13,7 @@
       <pubDate>Wed, 26 Jun 2013 21:33:00 +0000</pubDate>
       
       <guid>http://bazlur.com/p66/</guid>
-      <description>&amp;lt;p&amp;gt; &amp;lt;span&amp;gt;But&amp;lt;/span&amp;gt; the problem is &amp;lt;span&amp;gt;to map&amp;lt;/span&amp;gt; our conceptual model&amp;amp;nbsp;into the&amp;amp;nbsp;programming language. This is not an easy task to do as we are heavily dependent on programming infrastructure.&amp;amp;nbsp;Sometimes we wait for the language designer to update certain things (we used to joke about Java updates), and if it requires additional power from the IDE,&amp;amp;nbsp;we must wait for the IDE vendor. Most importantly programming language has simple, and few notations that can be expressed in comparison with our natural language.</description>
+      <description>There is no such thing as true freedom. This is probably a true realization. As I understand it, freedom means-&amp;nbsp; minimizing the level of dependence. As a programmer, we love to think that we have a true freedom in the computer, as it seems we can do whatever we want to do. It is true, at least in theory, but in practice, we are simply in the opposite. We think about a problem and make a conceptual design in our mind to solve that particular problem, then select a programming language to implement.</description>
     </item>
     
   </channel>

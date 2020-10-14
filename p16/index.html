@@ -35,15 +35,34 @@
 </p>
 
 <main>
-    <!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+    <div dir="ltr" style="text-align: left;">
+  <div style="text-align: justify;">
+    ফাইল সিস্টেম হলো এক ধরণের ডেটা স্ট্রাকচার ও পদ্ধতি যার মাধ্যে অপারেটিং সিস্টেম ডিস্কে যে বিভিন্নরকম ফাইল রাখা হয় তার ট্র্যাক রাখে।
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+    অনেক সময়ই বিভিন্ন ইন্টারভিউতে ইন মেমোরী ফাইল সিস্টেম তৈরি করতে বলে। প্রশ্নটি এমন থাকে যে, একই ইন মেমোরী ফাইল সিস্টেম তৈরি রকতে হলে আপনি কীভাবে ডিজাইন করবেন এবং কী কী ডেটা স্ট্রাকচার ব্যবহার করবেন। সম্ভব হলে কিছু কোড লিখে দেখান। (<i>Explain the data structures and algorithm that  you would use to design an in-memory file system. Illustrate with an example in code if possible.</i> )
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+    অনেকই ফাইল সিস্টেমের নাম শুনেই ভয় পেয়ে যায়, মনে করে এটি অনেক লো লেভেল <i>(low level)</i> অর্থাৎ অপারেটিং সিস্টেমের সঙ্গে সম্পর্কিত। কিন্তু সহজ-সরল ডিজাইন কিন্তু খুব কঠিন কিছু নয়। অবজেক্ট ওরিয়েন্টেড ডিজাইন ব্যবহার করেই এটি সমাধান করে ফেলা যায়।
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+    একটি ফাইল সিস্টেমে থাকে কতগুলো ফাইল এবং ডিরেক্টরী। এরা বেশ কিছু বৈশিষ্ট্য শেয়ার করে। যেমন &#8211; এদের নাম থাকে, এদের পাথ থাকে, এগুলোর কখন তৈরি করা হয়েছে, কখন মোডিফাই করা হয়েছে, কবে শেষবার অ্যাকসেস করা হয়েছে ইত্যাদি। এই বৈশিষ্ট্যগুলো নিয়ে আমরা একটি অ্যাবস্ট্রাক্ট সুপার ক্লাস তৈরি করতে পারি।
+  </div>
+  <div>
+  </div>
+  <div style="text-align: justify;">
+    <pre class="lang:java decode:true ">public abstract class Node implements Comparable&lt;Node&gt; {
+    private Directory root;
+    private String name;
+    private LocalDateTime created;
+    private LocalDateTime lastUpdated;
+    private LocalDateTime lastAccessed;
 <pre><code>public Node(String name) {
     this.name = name;
     this.created = LocalDateTime.now();
@@ -99,32 +118,179 @@ public String toString() {
             &quot;, nlastAccessed=&quot; + lastAccessed;
 }
 </code></pre>
-<p>}<!-- raw HTML omitted --></p>
+<p>}</pre></p>
 <pre><code>&lt;p&gt;
   এখানে কম্পেয়ারেবল ইন্টারফেইস ইমপ্লিমেন্ট করার কারণ হলো, যাতে আমরা সর্ট করতে পারি।
 &lt;/p&gt;
 </code></pre>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+  </div>
+  <p>
+    <!-- HTML generated using hilite.me -->
+  </p>
+  <p>
+    প্রত্যেকটি ফাইলের একটি করে রুট থাকে। রুট না থাকলে সে নিজেই রুট। এই নোডকে এক্সটেন্ড করে একটি ফাইল তৈরি করে ফেলা যাক &#8211;
+  </p>
+  <p>
+    <!-- HTML generated using hilite.me -->
+  </p>
+  <pre class="lang:java decode:true">public class File extends Node {
+    private String content; // for simplicity
 
+    public File(String name, String content) {
+        super(name);
+        this.content = content;
+    }
+
+    public File(String name) {
+        super(name);
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    @Override
+    public long getLength() {
+        if (content != null) {
+            return content.getBytes().length;
+        }
+        return 0;
+    }
+}</pre>
+  <p>
+    প্রত্যেকটি ফাইল কিছু কন্টেন্ট রাখে। সহজভাবে বুঝানোর জন্য এতে আপরা স্ট্রিং রেখেছি।<br /> এবার ডিরেক্টরী স্ট্রাকচার তৈরি করা যাক &#8211;
+  </p>
+  <pre class="lang:java decode:true">public class Directory extends Node {
+    private Set&lt;Node&gt; nodes;
+    public Directory(String path) {
+        super(path);
+        nodes = new TreeSet&lt;&gt;();
+    }
+
+    public void add(Node node) {
+        node.setRoot(this);
+        nodes.add(node);
+    }
+
+    public Set&lt;Node&gt; getNodes() {
+        return nodes;
+    }
+
+    @Override
+    public long getLength() {
+        long length = 0;
+        for (Node node : nodes) {
+            length += node.getLength();
+        }
+        return length;
+    }
+
+    public int numberOfFiles() {
+        int count = 0;
+        for (Node node : nodes) {
+            if (node instanceof Directory) {
+                count++;/// Directory counts as a file
+                Directory directory = (Directory) node;
+                count += directory.numberOfFiles();
+            } else if (node instanceof File) {
+                count++;
+            }
+        }
+
+        return count;
+    }
+}</pre>
+  <p>
+    প্রত্যেকটি ডিরেক্টরীতে অারও অনেকগুলো করে ফাইল বা ডিরেক্টরী থাকতে পারে। এক্ষেত্রে ডিরেক্টরীতে একটি ট্রিসেটে (TreeSet) রাখা হয়েছে যা সেই ফাইল বা ডিরেক্টরীগুলো ধরে রাখে।
+  </p>
+  <p>
+    ডিরেক্টরী স্ট্রাকচারকরে সুন্দর করে প্রিন্ট করার জন্য কতগুলো মেথড যুক্ত করা যেতে পারে । যেমন-
+  </p>
+  <pre class="lang:java decode:true">public void printTree() {
+    int indent = 0;
+    StringBuilder sb = new StringBuilder();
+    printDirectoryTree(this, indent, sb);
+    System.out.println(sb.toString());
+}
+
+private void printDirectoryTree(Node node, int indent, StringBuilder sb) {
+    sb.append(getIndentString(indent));
+    sb.append("+--");
+    sb.append(node.getName());
+    sb.append("/");
+    sb.append("n");
+    if (node.isDirectory()) {
+        Directory directory = (Directory) node;
+        for (Node file : directory.getNodes()) {
+            printDirectoryTree(file, indent + 1, sb);
+        }
+    }
+}
+
+private static String getIndentString(int indent) {
+    StringBuilder sb = new StringBuilder();
+    for (int i = 0; i &lt; indent; i++) {
+        sb.append("|  ");
+    }
+    return sb.toString();
+}</pre>
+  <p>
+    এবার একটি মেইন মেথড থেকে এগুলোকে ব্যবহার করা যাক &#8211;
+  </p>
+  <pre class="lang:java decode:true ">public class Main {
+    public static void main(String[] args) {
+        Directory root = new Directory("root");
+        File file = new File("profile.jpg");
+        root.add(file);
+
+        Directory movie = new Directory("movie");
+        root.add(movie);
+
+        Directory englishMovie = new Directory("english");
+        englishMovie.add(new File("IronFist.mp4"));
+        englishMovie.add(new File("The Shawshank Redemption.mp4"));
+        englishMovie.add(new File("ZotaPia.mp4"));
+        File despicableMe = new File("DespicableMe.mp4");
+        englishMovie.add(despicableMe);
+
+        movie.add(englishMovie);
+
+        Directory banglaMovie = new Directory("Bangla");
+        banglaMovie.add(new File("The Clay Bird.mp4"));
+        banglaMovie.add(new File("Jibon Thekey Neya.mp4"));
+        movie.add(banglaMovie);
+
+        root.printTree();
+
+        System.out.println("name: " + movie.getName());
+        System.out.println("Created: " + movie.getCreated());
+    }
+}</pre>
+  <p>
+    <span style="background-color: #f0f0f0;">এটিকে রান করলে নিচের আউটপুটটি পাওয়া যাবে-</span>
+  </p>
+  <pre class="lang:java decode:true ">+--root/
+|  +--movie/
+|  |  +--Bangla/
+|  |  |  +--Jibon Thekey Neya.mp4/
+|  |  |  +--The Clay Bird.mp4/
+|  |  +--english/
+|  |  |  +--DespicableMe.mp4/
+|  |  |  +--IronFist.mp4/
+|  |  |  +--The Shawshank Redemption.mp4/
+|  |  |  +--ZotaPia.mp4/
+|  +--profile.jpg/
+
+name: movie
+Created: 2017-04-08T02:26:38.341</pre>
+  <p>
+    <span style="font-family: 'courier new' , 'courier' , monospace;">সম্পূর্ণ কোডটি পাওয়া যাবে এখানে: <a href="https://gist.github.com/rokon12/d3c83562c785de6d1a483a5585205b92">https://gist.github.com/rokon12/d3c83562c785de6d1a483a5585205b92</a></span>
+  </p>
+</div>
 </main>
 
 

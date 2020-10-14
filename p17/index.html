@@ -37,16 +37,35 @@
 </p>
 
 <main>
-    <!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+    <div dir="ltr" style="text-align: left;">
+  <div style="text-align: justify;">
+    জাভা ভার্চুয়াল মেশিন যখন চলা শুরু করে, তখন এটি একটি থ্রেড তৈরি করে। একে মেইন থ্রেড বলা হয়। আমরা জাভাতে যে কোডগুলো করি সেগুলোকে মেইন থ্রেড রান করে। আমরা জানি যে প্রত্যেকটি জাভা প্রোগ্রামের একটি এন্ট্রি পয়েন্ট থাকে আর সেটি হলো মেইন মেথড (static void main(String[] args))। এই মেইন থ্রেড শুরুতেই এই মেইন মেথডটি খুঁজে। এই মেইন মেথড থেকেই প্রোগ্রাম চলা শুরু করে। উদাহরণ-
+  </div>
+  <p>
+    <!-- HTML generated using hilite.me -->
+  </p>
+  <pre class="lang:java decode:true  ">public class MainThreadDemo {
 
+ public static void main(String[] args) {
+
+  Thread thread = Thread.currentThread();
+  System.out.println("Current Thread: " + thread.getName());
+ }
+}</pre>
+  <div style="text-align: justify;">
+    এই প্রোগ্রামটি রান করলে আউটপুট আসবে-
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+    Current Thread: main
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+    এথেকে বোঝা যাচ্ছে যে, জাভাতে আমরা যে কোডগুলো এক্সিকিউট করি সেগুলো কোনো না কোনো থ্রেড রান করে থাকে।
+  </div>
+</div>
 </main>
 
 

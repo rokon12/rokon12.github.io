@@ -13,7 +13,8 @@
       <pubDate>Sun, 12 Feb 2017 18:40:00 +0000</pubDate>
       
       <guid>http://bazlur.com/p33/</guid>
-      <description></description>
+      <description>জাভাতে এনাম (enum) একটি বিশেষ টাইপ। একটি নির্দিষ্ট সংখ্যক কনস্ট্যান্ট (Constant) তৈরি করতে এটি ব্যবহার করা হয়। যেমন, সপ্তাহের দিনের নাম (days of the week), বছরে মাসের নাম (month in the year), দিক (উত্তর, দক্ষিণ, পূর্ব, পশ্চিম) ইত্যাদি।
+উদাহরণ, public enum Day { SATURDAY, SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY }  &amp;nbsp;  উদাহরণটি Day নামে একটি এনাম তৈরি করা হয়ছে। এতে সাতটি কনস্ট্যান্ট রয়েছে। এনাম তৈরি করতে ক্লাস বা ইন্টারফেসের মতো একটি কিওয়ার্ড enum ব্যবহার করা হয়েছে।</description>
     </item>
     
   </channel>

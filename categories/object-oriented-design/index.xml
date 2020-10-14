@@ -13,7 +13,7 @@
       <pubDate>Fri, 07 Apr 2017 20:36:00 +0000</pubDate>
       
       <guid>http://bazlur.com/p16/</guid>
-      <description>public Node(String name) { this.name = name; this.created = LocalDateTime.now(); this.lastUpdated = LocalDateTime.now(); this.lastAccessed = LocalDateTime.now(); } public boolean isDirectory() { return this instanceof Directory; } public String getPath() { return root != null ? root.getPath() + &amp;quot;/&amp;quot; + name : name; } public Node getParent() { return root; } public abstract long getLength(); public String getName() { return name; } @Override public int compareTo(Node o) { return this.getName().compareTo(o.getName()); } public void setRoot(Directory root) { this.</description>
+      <description>ফাইল সিস্টেম হলো এক ধরণের ডেটা স্ট্রাকচার ও পদ্ধতি যার মাধ্যে অপারেটিং সিস্টেম ডিস্কে যে বিভিন্নরকম ফাইল রাখা হয় তার ট্র্যাক রাখে।   অনেক সময়ই বিভিন্ন ইন্টারভিউতে ইন মেমোরী ফাইল সিস্টেম তৈরি করতে বলে। প্রশ্নটি এমন থাকে যে, একই ইন মেমোরী ফাইল সিস্টেম তৈরি রকতে হলে আপনি কীভাবে ডিজাইন করবেন এবং কী কী ডেটা স্ট্রাকচার ব্যবহার করবেন। সম্ভব হলে কিছু কোড লিখে দেখান। (Explain the data structures and algorithm that you would use to design an in-memory file system.</description>
     </item>
     
   </channel>

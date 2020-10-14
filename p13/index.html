@@ -35,49 +35,132 @@
 </p>
 
 <main>
-    <!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+    <div dir="ltr" style="text-align: left;">
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+    একটি জাভা ক্লাসকে(.java) কম্পাইল করলে একটি ক্লাস(.class) ফাইল তৈরি হয়। এই ক্লাস ফাইলে বিভিন্নরকম ফিল্ড, ইনহেরিট্যানস সম্পর্কিত তথ্য, অ্যানোটেশন ও মেটাডেটা থাকে। এটি জাভা ভার্চুয়ালে মেশিনের একটি টাইপ নির্দেশ করে। এই ক্লাস ফাইল একটি একটি নির্দিষ্ট স্ট্যান্ডার্ড মেনে তৈরি করা হয় এবং এতে সবরকম তথ্য থাকে যা জাভা ভার্চুয়াল মেশিনের এক্সিকিউট করতে হলে প্রয়োজন হয়। একটি প্রোগ্রামের এই ক্লাস সবচেয়ে ছোট অংশ। একটি ক্লাস থেকে অবজেক্ট তৈরি এবং তা এক্সিকিউট করতে হলে জাভা ভার্চুয়াল মেশিনকে ক্লাস ফাইলটিকে প্রথমে লোড করতে হয়। এরপর একে লিংকড করতে হয় এবং খুব ভালোভাবে পরীক্ষা-নিরীক্ষা(verify) করে দেখতে হয়। পরীক্ষার পর প্রত্যেকটি ক্লাস ফাইলের জন্য একটি করে ক্লাস(Class) অবজেক্ট তৈরি হয়। এটি রানটাইম সিস্টেমে একটি টাইপকে প্রতিনিধিত্ব করে।
+  </div>
+  <div style="text-align: justify;">
+     [spacer height=&#8221;20px&#8221;]
+  </div>
+  <div style="text-align: justify;">
+    একটি ক্লাস ফাইলে বাইটকোড থাকে। এই বাইটকোড হলো বিশেষ ইন্সট্রাকশন যা জাভা ভার্চুয়াল মেশিন এক্সিকিউট করে। তাহলে এই বাইটকোডগুলোকে এক্সিকিউট করতে হলে জাভা ভার্চুয়াল মেশিনকে এই বাইটকোড প্রসেস করতে হয়। এই প্রসেসের প্রক্রিয়া শুরু হয় লোডিং ও লিংকিং (loading and linking) এর মাধ্যমে।
+  </div>
+  <div style="text-align: justify;">
+     [spacer height=&#8221;20px&#8221;]
+  </div>
+  <div style="text-align: justify;">
+    এবার এই ক্লাস লোডিং ও লিংকিং প্রক্রিটি দেখা যাক &#8211;
+  </div>
+  <div style="text-align: justify;">
+     [spacer height=&#8221;20px&#8221;]
+  </div>
+  <div style="text-align: justify;">
+    <b>ক্লাস লোডিং (Class Loading)</b>
+  </div>
+  <div style="text-align: justify;">
+     [spacer height=&#8221;20px&#8221;]
+  </div>
+  <div style="text-align: justify;">
+    এটি জাভা ভার্চুয়ালে মেশিনে কোনো ক্লাস থেকে অবজেক্ট তৈরি এবং তারপর তা রান করা শুরু ধাপ। ক্লাস ফাইল থেকে বাইট স্ট্রিম বা বাইট অ্যারে আকারে ডেটা জাভা ভার্চুয়াল মেশিনে লোড করা হয়। ক্লাস লোড হয় ক্লাসলোডার দিয়ে। ক্লাসলোডার নিয়ে পরবর্তী পোস্টে আলোচনা করা হবে। এখানে কিছু প্রাথমিক প্রক্রিয়ার যাচাই বা পরীক্ষা চলে। এরপর একটি ক্লাস(Class) অবজেক্ট তৈরি হয়। তবে এই ক্লাস অবজেক্ট ব্যবহারযোগ্য হতে হলে একে লিংকিং প্রক্রিয়ার মধ্য দিয়ে যেতে হয়।
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+     [spacer height=&#8221;20px&#8221;]
+  </div>
+  <div style="text-align: justify;">
+    <b>লিংকিং (Linking)</b>
+  </div>
+  <div style="text-align: justify;">
+     [spacer height=&#8221;20px&#8221;]
+  </div>
+  <div style="text-align: justify;">
+    ক্লাস লােড হওয়ার পরের ধাপ হলো লিংকিং। এই ধাপ সংগঠিত হয় তিনটি ধাপে। এগুলো হলো &#8211;
+  </div>
+  <div style="text-align: justify;">
+    ১. ভ্যারিফিকেশন (Verification)
+  </div>
+  <div style="text-align: justify;">
+    ২. প্রিপারেশন (Preparation)
+  </div>
+  <div style="text-align: justify;">
+    ৩. রেজ্যুলুশন (Resolution)
+  </div>
+  <div style="text-align: justify;">
+     [spacer height=&#8221;20px&#8221;]
+  </div>
+  <div style="text-align: justify;">
+    ভ্যারিফিকেশন প্রক্রিয়া দেখা হয় কোনো ক্লাসের ফরম্যাট ঠিক আছে কিনা, বা এটি রানটাইমে কোনো প্রকার সমস্যা তৈরি করবে কিনা। ভ্যারিফিকেশনে সবকিছু ঠিকঠাক থাকলে ক্লাসটি ব্যবহারের জন্য তৈরি করা হয়। একটি ক্লাসে অন্য ক্লাসের রেফারেন্স থাকতে পারে। এরপরের ধাপে যে ক্লাসগুলো রেফারেন্স করা হয়েছে সেগুলো জাভা রানটাইমের কাছে পরিচিত কিনা তা দেখা হয়।
+  </div>
+  <div style="text-align: justify;">
+    <b>[spacer height=&#8221;20px&#8221;]<br /> </b>
+  </div>
+  <div style="text-align: justify;">
+    <b>ভ্যারিফিকেশন (</b>Verification<b>)</b>
+  </div>
+  <div style="text-align: justify;">
+     [spacer height=&#8221;20px&#8221;]
+  </div>
+  <div style="text-align: justify;">
+    এটি বেশ জটিল একটি প্রক্রিয়া। এটি বেশকতগুলো ধাপে সংগঠিত হয়।
+  </div>
+  <div style="text-align: justify;">
+     [spacer height=&#8221;20px&#8221;]
+  </div>
+  <div style="text-align: justify;">
+    প্রথমে দেখা হয় ক্লাসর ফরম্যাট ঠিক আছে কিনা এবং ক্লাসটি ব্যবহারযোগ্য কিনা। একটি ক্লাসে একটি কনস্ট্যান্ট পুল থাকে যাতে বিভিন্নরকম সিম্বলিক তথ্য থাকে। এপর্যায়ে এগুলো ঠিক আছে তা দেখা হয়। এছাড়াও যেমন- কোনো ফাইনাল মেথড ওভারাইড করা হয়েছে কিনা ইত্যাদির যাচাই প্রক্রিয়াও এই ধাপে হয়ে থাকে। এরপর বাইটকোডগুলো ঠিক আছে তা পরীক্ষা করে দেখা হয়। এগুলোতে কোনো এমন কোনো ইন্সট্রাকশন আছে কিনা যা জাভা ভার্চুয়াল মেশিনকে বিপদে ফেলে দিতে পারে তা দেখা হয়। মেথডগুলোতে যে অ্যাকসেস রেস্ট্রিকশন দেওয়া রয়েছে যেমন- প্রাইভেট মেথডগুলোকে কোনোভাবে অন্য ক্লাস থেকে কল করা হয়েছে কিনা ইত্যাদি যাচাই করা হয়। মেথডকলগুলোতে যে যে অার্গুমেন্ট থাকার কথা সেগুলো ঠিকঠাক মতো রয়েছে কিনা, কোনো ভ্যারিয়েবল ব্যবহার করার আগে সেগুলো ইনিশিয়ালাইজ করা হয়েছে কিনা, এদের টাইপ ঠিক রয়েছে কিনা ইত্যাদি যাচাই করা হয়।
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+    [spacer height=&#8221;20px&#8221;]
+  </div>
+  <div style="text-align: justify;">
+    এই যাচাইগুলো আগেই করা হয় যাতে করে রানটাইমে এই চেকগুলো করতে না হয়। এতে করে রানটাইমে জাভা আরও দ্রুত কাজ করতে পারে এবং কোনো রকম যাতাই বাচাই ছাড়াই বাইটকোড ট্রান্সলেট করতে পারে।
+  </div>
+  <div style="text-align: justify;">
+    [spacer height=&#8221;20px&#8221;]
+  </div>
+  <div style="text-align: justify;">
+    <b>প্রিপারেশন (Preparation)</b>
+  </div>
+  <div style="text-align: justify;">
+     [spacer height=&#8221;20px&#8221;]
+  </div>
+  <div style="text-align: justify;">
+    এ প্রক্রিয়ায় ক্লাসে কোনো স্ট্যটিক ফিল্ড থাকলে সেগুলোকে তৈরি করা ও ইনিশিয়ালাইজ করা হয়। কিন্তু এ ধাপে জাভা ভার্চুয়াল মেশিনে কোনো বাইটকোড ইন্সট্রাকশন এক্সিকিউট হয় না।
+  </div>
+  <div style="text-align: justify;">
+     [spacer height=&#8221;20px&#8221;]
+  </div>
+  <div style="text-align: justify;">
+    <b>রেজ্যুলুশন (Resolution) </b>
+  </div>
+  <div style="text-align: justify;">
+     [spacer height=&#8221;20px&#8221;]
+  </div>
+  <div style="text-align: justify;">
+    একটি ক্লাসে একাধিক ক্লাসের রেফারেন্স থাকতে পারে। এধাপে সেই রেফারেন্স ক্লাসগুলো জাভা ভার্চুয়াল মেশিনে রয়েছে কিনা তা দেখা হয়। কোনো ক্লাস যদি লোড করা না হয়ে থাকে তাহলে সেই ক্লাসের জন্য ক্লাস লোডিং প্রক্রিয়া পুনারায় শুরু হয়। কেনাে ক্লাসে স্ট্যাটিক ফিল্ড বা স্ট্যাটিক ব্লক থাকলে এধাপে এগুলো ইনিশিয়ালাইজ ও রান হয়।
+  </div>
+  <div style="text-align: justify;">
+    [spacer height=&#8221;20px&#8221;]
+  </div>
+  <div style="text-align: justify;">
+    এই ধাপ সম্পন্ন হওয়ার পর একটি ক্লাস ব্যবহারের জন্য তৈরি হয়ে যায়।
+  </div>
+  <div style="text-align: justify;">
+     [spacer height=&#8221;20px&#8221;]
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div style="clear: both; text-align: center;">
+    <a style="margin-left: 1em; margin-right: 1em;" href="http://bazlur.com/wp-content/uploads/2017/06/linking-2Band-2Bloading.png"><img loading="lazy" src="http://bazlur.com/wp-content/uploads/2017/06/linking-2Band-2Bloading-300x137.png" width="400" height="181" border="0" data-original-height="438" data-original-width="958" /></a>
+  </div>
+  <div style="text-align: justify;">
+  </div>
+</div>
 <p> </p>
 
 </main>

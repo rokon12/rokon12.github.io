@@ -42,17 +42,26 @@
 <p>copy() মেথডটিতে দুটি প্যারামিটার রয়েছে। প্রথমটিতে ফাইলের সোর্সটি স্ট্রিং আকারে দিতে হবে, অর্থাৎ যে ফাইলটি কপি করা হবে তার পাথ। দ্বিতীয়টি যেখানে ফাইলটি কপি করা হবে। এটি ডেস্টিনেশন ফাইল। এই ফাইলটি সিস্টেমে না থাকলে নতুন করে তৈরি হবে। আর যদি ফাইলটি আগে থেকেই তৈরি করা থাকে, তাহলে এর কন্টেন্ট রিপ্লেস হবে।</p>
 <p>এতে প্রথমে একটি ইনপুট স্ট্রিম ব্যবহার করা হয়েছে যা দিয়ে ফাইল থেকে ডেটা পড়া হয়, এবং একটি আউটপুট স্ট্রিম ব্যবহার করা হয়েছে যা দিয়ে ডেস্টিনেশন ফাইলে রাইট করা হয়।</p>
 <p>ডেটা রিপ্লেস না করতে চাইলে আউটপুট স্ট্রিমকে নিচের মতো তৈরি করা যেতে পারে-</p>
-<!-- raw HTML omitted -->
+<pre class="lang:java decode:true ">OutputStream os = new FileOutputStream(destFile, true)</pre>
 <p>এই উদাহরণটি জাভার সকল ভার্সনে চলবে।</p>
 <p>এছাড়াও জাভা এনআইও (Java NIO) ব্যবাহার করে আরও দ্রুত ফাইল কপি করা যায়।</p>
 <p>তবে জাভা ৭ ও এর পরবর্তীতে আরও সংক্ষিপ্তভাবে কপি করার মেথড রয়েছে।</p>
 <p>এতে শুধুমাত্র একটি মেথড দিয়েই ফাইল কপি করা যাচ্ছে –</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-
+<pre class="lang:java decode:true ">Files.copy(src, dest);</pre>
+<div>
+  সবগুলোকে রান করতে হলে &#8211;
+</div>
+<div>
+  <p>
+    &nbsp;
+  </p>
+  <p>
+    এই সম্পর্কে আরও বিস্তারিত জানতে হলে<a href="https://bazlur.com/java-programming/" target="_blank" rel="noopener noreferrer"> জাভা প্রোগ্রামিং</a> বইটির অধ্যায় ৯ ও ১০ টি পড়া যেতে পারে।
+  </p>
+  <p>
+    বইটি পাওয়া যাবে : <span style="background-color: white; color: #1d2129; font-family: Helvetica, Arial, sans-serif; font-size: 14px; line-height: 18px;">রকমারি ডট কম, ফোন: ১৬২৯৭:  </span><a style="background-color: white; color: #365899; cursor: pointer; font-family: Helvetica, Arial, sans-serif; font-size: 14px; line-height: 18px; text-decoration: none;" href="https://goo.gl/FpfSvO" target="_blank" rel="nofollow noopener noreferrer">https://goo.gl/FpfSvO</a>
+  </p>
+</div>
 </main>
 
 
