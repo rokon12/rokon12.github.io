@@ -49,3 +49,23 @@ table {
 table thead th { border-bottom: 1px solid #ddd; }
 th, td { padding: 5px; }
 thead, tfoot, tr:nth-child(even) { background: #eee; }
+
+.post-tag {
+  font-family: "Fira Sans", Helvetica, Arial, sans-serif;
+  font-size: small;
+  text-transform: uppercase;
+}
+
+a.post-tag {
+  background-color: #dee5e9;
+  border: 1px solid #7b9cb0;
+  border-radius: 5px;
+  color: #316586;
+  padding: 0.15em 0.3em 0.1em 0.3em;
+  text-decoration: none;
+}
+
+a.post-tag:hover {
+  background-color: #7b9cb0;
+  color: #fff;
+}

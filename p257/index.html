@@ -29,14 +29,12 @@
     <h2 class="date">2018/03/12</h2>
 </div>
 
+<p class="post-tag">Tags:
 
  
 
- <li>
-    <a href="http://bazlur.com/tags/java/">java</a>
-</li> <li>
-    <a href="http://bazlur.com/tags/serialization/">serialization</a>
-</li>
+ <a class="post-tag" href="http://bazlur.com/tags/java/">java</a> <a class="post-tag" href="http://bazlur.com/tags/serialization/">serialization</a>
+</p>
 
 <main>
     <p>আমরা জানি যে ক্লাস থেকে অবজেক্ট তৈরি করা হয়। ক্লাসে মূলত একটি অবজেক্টে কী কী প্রোপ্রার্টিজ থাকবে এবং এটি কী কী কাজ করতে পারবে তার বর্ণনা থাকে। কিন্তু যখন নিউ(new) অপারেটর ব্যবহার করে একে অবজেক্ট তৈরি করা হয়, তখন এটি একটি জীবন্ত প্রাণির মতো অবজেক্টে পরিণত হয়। একটি জীবন্ত প্রাণির যেমন অনেকগুলো নিজস্ব ও অনন্য (unique) বৈশিষ্ট্য থাকে (যেমন- নাম, বয়স, ডিএনএ সিকুয়েন্স ইত্যাদি), তেমনি একটি অবজেক্টের একইরকম অনন্য পরিচয় (unique identity) থাকে। প্রত্যেকটি অবজেক্ট কিছু না কিছু স্টেট(state) বা ডেটা থাকে। প্রত্যেকটি অবজেক্টের একটি জীবন চক্র থাকে (life cycle)। এটি নিউ অপারেটর দিয়ে শুরু হয় এবং গারবেজ কালেক্টর(garbage collector) দিয়ে শেষ হয়। এই শুরু এবং শেষ হওয়ার মধ্যবর্তী অবজেক্টের কোনো অবস্থাকে বাইনারী ফরমেটে স্টোর করা যায় এবং সেই একই অবস্থা থেকে পুনর্গঠিত করা যায়।</p>
@@ -50,10 +48,6 @@
 
 <div id="disqus_thread"></div>
 <script>
-
-    
-
-
     var disqus_config = function () {
         this.page.identifier = 'http:\/\/bazlur.com\/p257\/';
         this.page.title = 'জাভাতে সিরিয়ালাইজেশন কী (What is serialization in java)?';
