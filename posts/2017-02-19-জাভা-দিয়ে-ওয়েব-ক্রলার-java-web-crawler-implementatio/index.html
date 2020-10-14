@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>জাভা দিয়ে ওয়েব ক্রলার (Java Web Crawler Implementation) | My Stream of Thoughts</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/about-me/">About me</a></li>
+      
+      <li><a href="/books/">Books</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+    <h1><span class="title">জাভা দিয়ে ওয়েব ক্রলার (Java Web Crawler Implementation)</span></h1>
+    <h2 class="author">A N M Bazlur Rahman</h2>
+    <h2 class="date">2017/02/19</h2>
+</div>
+
+<p class="post-tag">
+    
+ 
+</p>
+
+<main>
+    <div dir="ltr" style="text-align: left;">
+  <div style="text-align: justify;">
+    ওয়েব ক্রলার মূলত একটি প্রোগ্রাম যা বিভিন্ন ওয়েব সাইট ব্রাউজ করে বিভিন্ন তথ্য বের করে। একে অনেক সময় স্পাইডার বা ইন্টারনেট বট ও বলা হয়। একটি ওয়েব ক্রলার তৈরি করা একটি ফান প্রজেক্ট হতে পারে।
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+    জাভা দিয়ে এটি তৈরি করার সময় বেশ কতগুলো বিষয় অর্থাৎ ডিজাইন নিয়ে চিন্তা করা যায়। যেমন &#8211;
+  </div>
+  <div style="text-align: justify;">
+    ১. এটি সিঙ্গেল থ্রেডেড (Single threaded,) ও সিনক্রোনাস (synchronous) হতে পারে।
+  </div>
+  <div style="text-align: justify;">
+    ২. মাল্টি থ্রেডেড (multi threaded ) ও কনকারেন্ট (concurrent) হতে পারে।
+  </div>
+  <div style="text-align: justify;">
+    ৩. জাভা ইনপুট/আউটপুটের(I/O) জন্যে স্ট্রিম বেইজড বা নিউআইও(NIO) এর বাফার ও চ্যানেল বেইজড হতে পারে।
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+    শুধুমাত্র ফান প্রজেক্ট হিসেবে করতে চাইলে প্রত্যেকটি কম্বিনেশনের জন্যে আলাদা আলাদা করে তৈরি করা যেতে পারে।
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+    সিঙ্গেল থ্রেডেড ও সিনক্রোনাস ক্রলারের তৈরি করা সহজ। এটি তৈরি করতে হলে নিচের কাজগুলো করতে হবে &#8211;
+  </div>
+  <div style="text-align: justify;">
+    ১. প্রথমে একটি ওয়েব অ্যাড্রেস থেকে HTML পেইজ ডাউনলোড করতে হবে।
+  </div>
+  <div style="text-align: justify;">
+    ২. HTML পেইজকে পার্স(parse) করতে হবে।
+  </div>
+  <div style="text-align: justify;">
+    ৩. পার্স করারপর প্রয়োজনীয় তথ্যগুলো আলাদা করতে হবে।
+  </div>
+  <div style="text-align: justify;">
+    ৪. পেইজে আরও কোনো লিংক থাকলে সেগুলো আলাদা করতে হবে।
+  </div>
+  <div style="text-align: justify;">
+    ৫. সেই লিংক থেকে আবার ১ নং এর মতো পুরো প্রক্রিয়াটি শুরু করতে হবে।
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+    এই রকম একটি উদাহরণ পাওয়া যাবে এই লিংকে : <a href="https://goo.gl/0EiQnC">https://goo.gl/0EiQnC</a>
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+    তবে এর চেয়ে ভাল উপায় হতে পারে যদি মাল্টি থ্রেডেড ক্রলার তৈরি করতে পারি, যাতে অনেকগুলো থ্রেড একই সাথে পাশাপাশি কাজ করবে।
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+    এইরকম একটি ক্রলার তৈরির চেষ্টা করেছিলাম বেশ কিছুদিন আগে। গিটহাবের <a href="https://github.com/rokon12/webcrawler" target="_blank" rel="noopener noreferrer">এই লিংকে</a> এর সোর্সকোড পাওয়া যাবে।
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+    এটি রান করতে হলে আপনার মেশিনে যে যে টুলগুলো থাকবে হবে সেগুলো হলো &#8211;
+  </div>
+  <div style="text-align: justify;">
+    ১. গিট (Git)
+  </div>
+  <div style="text-align: justify;">
+    ২. গ্রাডল (Gradle)
+  </div>
+  <div style="text-align: justify;">
+    ৩. জাভা ৮
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+    এটি একটি সংক্ষিপ্ত প্রজেক্ট যাতে ৪ টি ক্লাস রয়েছে এবং দুটি ইন্টারফেস রয়েছে।
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+    মূল অংশ শুরু হবে নিচের ক্লাস থেকে &#8211;
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+    এতে প্রথমে একটি বেইজ ইউআরএল দিতে হবে যে ওয়েব সাইট থেকে ক্রল শুরু করবে।
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+    এরপরেই রয়েছে Crawler ক্লাস যেখানে থেকে নতুন থ্রেড তৈরি করা হয়। এই থ্রেড HTML পেইজকে ডাওনলোড করে পার্স করতে থাকে। এতে একটি PageProcessor ইন্টারফেইসের ইমপ্লিমেন্টেশন দিতে হয়, যা HTML পেইজটিকে প্রসেস করে। এখানে একাধিক প্রসেসর দেওয়া যেতে পারে। এই প্রজেক্টে HTML পেইজ থেকে লিংকগুলো আলাদা করে পেইজ টি ফাইলে সংরক্ষণ করার জন্যে SaveOnDiskProcessor ক্লাসটি ব্যবহার করা হয়েছে। এতে একটি ফাইলের পাথ দিতে হয়। আপনার প্রয়োজন অনুযায়ী এক বা একাধিক প্রসেসর তৈরি করতে পারেন। এখানে ফাইলে সংরক্ষণ করা হয়েছে, আপনার ডেটাবেইজে সংরক্ষণ করার প্রয়োজন হতে পারে।</p> 
+<pre><code>&lt;p&gt;
+  সোর্সকোডটি পড়ে বোঝার চেষ্টা করুন। কোনো ফিডব্যাক বা উন্নতি করার উপায় থাকলে ক্লোন করে পুল রিকোয়েস্ট পাঠাতে পারেন।&amp;nbsp;
+&lt;/p&gt;
+</code></pre>
+  </div>
+</div>
+</main>
+
+
+<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+        this.page.identifier = 'http:\/\/bazlur.com\/posts\/2017-02-19-%E0%A6%9C%E0%A6%BE%E0%A6%AD%E0%A6%BE-%E0%A6%A6%E0%A6%BF%E0%A6%AF%E0%A6%BC%E0%A7%87-%E0%A6%93%E0%A6%AF%E0%A6%BC%E0%A7%87%E0%A6%AC-%E0%A6%95%E0%A7%8D%E0%A6%B0%E0%A6%B2%E0%A6%BE%E0%A6%B0-java-web-crawler-implementatio\/';
+        this.page.title = 'জাভা দিয়ে ওয়েব ক্রলার (Java Web Crawler Implementation)';
+        this.page.url = 'http:\/\/bazlur.com\/posts\/2017-02-19-%E0%A6%9C%E0%A6%BE%E0%A6%AD%E0%A6%BE-%E0%A6%A6%E0%A6%BF%E0%A6%AF%E0%A6%BC%E0%A7%87-%E0%A6%93%E0%A6%AF%E0%A6%BC%E0%A7%87%E0%A6%AC-%E0%A6%95%E0%A7%8D%E0%A6%B0%E0%A6%B2%E0%A6%BE%E0%A6%B0-java-web-crawler-implementatio\/';
+    };
+
+    (function () { 
+        var d = document, s = d.createElement('script');
+        s.src = 'https://bazlur-com.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+    Disqus.</a></noscript>
+
+  <footer>
+  
+
+
+
+
+
+
+
+
+
+
+<div id="tag-cloud" style="padding: 5px 15px">
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/advance-java" style="font-size:1rem">advance-java</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/agile" style="font-size:1rem">agile</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/algorithm" style="font-size:1.5691756217423825rem">algorithm</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/arraylist" style="font-size:1rem">arraylist</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/article" style="font-size:1rem">article</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/bangla-book" style="font-size:2.138351243484765rem">bangla-book</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/becoming-expert" style="font-size:1rem">becoming-expert</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/book" style="font-size:2.32158486704862rem">book</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/book-review" style="font-size:1.5691756217423825rem">book-review</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/calculator" style="font-size:1rem">calculator</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/cloning" style="font-size:1rem">cloning</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/coding" style="font-size:1rem">coding</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/coding-convention" style="font-size:1rem">coding-convention</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/daemon-thread" style="font-size:1rem">daemon-thread</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/data-race" style="font-size:1rem">data-race</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/data-structure" style="font-size:1rem">data-structure</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/deliberate-practice" style="font-size:1rem">deliberate-practice</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/deserialization" style="font-size:1rem">deserialization</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/developers" style="font-size:1rem">developers</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/file-copy" style="font-size:1rem">file-copy</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/future-java-developers" style="font-size:1rem">future-java-developers</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/hash-function" style="font-size:1.5691756217423825rem">hash-function</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/history" style="font-size:1rem">history</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/history-of-java" style="font-size:1rem">history-of-java</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/how-java-performs-better" style="font-size:1rem">how-java-performs-better</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/how-java-works" style="font-size:1rem">how-java-works</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/import" style="font-size:1rem">import</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/inspiration" style="font-size:1rem">inspiration</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java" style="font-size:3.459936110533385rem">java</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java-developers" style="font-size:1rem">java-developers</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java-programming" style="font-size:1rem">java-programming</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java-thread" style="font-size:1rem">java-thread</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java-thread-programming" style="font-size:1.5691756217423825rem">java-thread-programming</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/learning" style="font-size:1rem">learning</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/linkedlist" style="font-size:1rem">linkedlist</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/methodology" style="font-size:1rem">methodology</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/null-pointer-exception" style="font-size:1rem">null-pointer-exception</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/object-cloning" style="font-size:1rem">object-cloning</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/packaging" style="font-size:1rem">packaging</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/pass-by-reference" style="font-size:1rem">pass-by-reference</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/pass-by-value" style="font-size:1rem">pass-by-value</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/programming" style="font-size:1rem">programming</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/review" style="font-size:1rem">review</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/scrum" style="font-size:1rem">scrum</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/serialization" style="font-size:1.5691756217423825rem">serialization</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/simple-calculator" style="font-size:1rem">simple-calculator</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/software-development" style="font-size:1rem">software-development</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/string" style="font-size:1rem">string</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/string-pool" style="font-size:1rem">string-pool</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/swing" style="font-size:1rem">swing</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/thread" style="font-size:2.32158486704862rem">thread</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/volatile" style="font-size:1rem">volatile</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/why-java" style="font-size:1rem">why-java</a>
+  
+</div>
+
+
+<footer>
+  <div>
+    <p>
+    &copy; <a href="https://bazlur.com"> A N M Bazlur Rahman</a> 2012 - 2020 | <a href="https://github.com/rokon12">Github</a>
+    | <a href=" https://twitter.com/bazlur_rahman"> @bazlur_rahman</a>
+    </p>
+  </div>
+</footer>
+  
+  </footer>
+  </body>
+</html>
+

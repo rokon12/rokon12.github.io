@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ইনমেমোরী ফাইল সিস্টেম (In memory file system in java) | My Stream of Thoughts</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/about-me/">About me</a></li>
+      
+      <li><a href="/books/">Books</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+    <h1><span class="title">ইনমেমোরী ফাইল সিস্টেম (In memory file system in java)</span></h1>
+    <h2 class="author">A N M Bazlur Rahman</h2>
+    <h2 class="date">2017/04/07</h2>
+</div>
+
+<p class="post-tag">
+    
+ 
+</p>
+
+<main>
+    <div dir="ltr" style="text-align: left;">
+  <div style="text-align: justify;">
+    ফাইল সিস্টেম হলো এক ধরণের ডেটা স্ট্রাকচার ও পদ্ধতি যার মাধ্যে অপারেটিং সিস্টেম ডিস্কে যে বিভিন্নরকম ফাইল রাখা হয় তার ট্র্যাক রাখে।
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+    অনেক সময়ই বিভিন্ন ইন্টারভিউতে ইন মেমোরী ফাইল সিস্টেম তৈরি করতে বলে। প্রশ্নটি এমন থাকে যে, একই ইন মেমোরী ফাইল সিস্টেম তৈরি রকতে হলে আপনি কীভাবে ডিজাইন করবেন এবং কী কী ডেটা স্ট্রাকচার ব্যবহার করবেন। সম্ভব হলে কিছু কোড লিখে দেখান। (<i>Explain the data structures and algorithm that  you would use to design an in-memory file system. Illustrate with an example in code if possible.</i> )
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+    অনেকই ফাইল সিস্টেমের নাম শুনেই ভয় পেয়ে যায়, মনে করে এটি অনেক লো লেভেল <i>(low level)</i> অর্থাৎ অপারেটিং সিস্টেমের সঙ্গে সম্পর্কিত। কিন্তু সহজ-সরল ডিজাইন কিন্তু খুব কঠিন কিছু নয়। অবজেক্ট ওরিয়েন্টেড ডিজাইন ব্যবহার করেই এটি সমাধান করে ফেলা যায়।
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+    একটি ফাইল সিস্টেমে থাকে কতগুলো ফাইল এবং ডিরেক্টরী। এরা বেশ কিছু বৈশিষ্ট্য শেয়ার করে। যেমন &#8211; এদের নাম থাকে, এদের পাথ থাকে, এগুলোর কখন তৈরি করা হয়েছে, কখন মোডিফাই করা হয়েছে, কবে শেষবার অ্যাকসেস করা হয়েছে ইত্যাদি। এই বৈশিষ্ট্যগুলো নিয়ে আমরা একটি অ্যাবস্ট্রাক্ট সুপার ক্লাস তৈরি করতে পারি।
+  </div>
+  <div>
+  </div>
+  <div style="text-align: justify;">
+    <pre class="lang:java decode:true ">public abstract class Node implements Comparable&lt;Node&gt; {
+    private Directory root;
+    private String name;
+    private LocalDateTime created;
+    private LocalDateTime lastUpdated;
+    private LocalDateTime lastAccessed;
+<pre><code>public Node(String name) {
+    this.name = name;
+    this.created = LocalDateTime.now();
+    this.lastUpdated = LocalDateTime.now();
+    this.lastAccessed = LocalDateTime.now();
+}
+
+public boolean isDirectory() {
+    return this instanceof Directory;
+}
+
+public String getPath() {
+    return root != null ? root.getPath() + &quot;/&quot; + name : name;
+}
+
+public Node getParent() {
+    return root;
+}
+
+public abstract long getLength();
+
+public String getName() {
+    return name;
+}
+
+@Override
+public int compareTo(Node o) {
+    return this.getName().compareTo(o.getName());
+}
+
+public void setRoot(Directory root) {
+    this.root = root;
+}
+
+public LocalDateTime getCreated() {
+    return created;
+}
+
+public LocalDateTime getLastUpdated() {
+    return lastUpdated;
+}
+
+public LocalDateTime getLastAccessed() {
+    return lastAccessed;
+}
+
+@Override
+public String toString() {
+    return &quot;root=&quot; + root +
+            &quot;, nname='&quot; + name + ''' +
+            &quot;, ncreated=&quot; + created +
+            &quot;, nlastUpdated=&quot; + lastUpdated +
+            &quot;, nlastAccessed=&quot; + lastAccessed;
+}
+</code></pre>
+<p>}</pre></p>
+<pre><code>&lt;p&gt;
+  এখানে কম্পেয়ারেবল ইন্টারফেইস ইমপ্লিমেন্ট করার কারণ হলো, যাতে আমরা সর্ট করতে পারি।
+&lt;/p&gt;
+</code></pre>
+  </div>
+  <p>
+    <!-- HTML generated using hilite.me -->
+  </p>
+  <p>
+    প্রত্যেকটি ফাইলের একটি করে রুট থাকে। রুট না থাকলে সে নিজেই রুট। এই নোডকে এক্সটেন্ড করে একটি ফাইল তৈরি করে ফেলা যাক &#8211;
+  </p>
+  <p>
+    <!-- HTML generated using hilite.me -->
+  </p>
+  <pre class="lang:java decode:true">public class File extends Node {
+    private String content; // for simplicity
+
+    public File(String name, String content) {
+        super(name);
+        this.content = content;
+    }
+
+    public File(String name) {
+        super(name);
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    @Override
+    public long getLength() {
+        if (content != null) {
+            return content.getBytes().length;
+        }
+        return 0;
+    }
+}</pre>
+  <p>
+    প্রত্যেকটি ফাইল কিছু কন্টেন্ট রাখে। সহজভাবে বুঝানোর জন্য এতে আপরা স্ট্রিং রেখেছি।<br /> এবার ডিরেক্টরী স্ট্রাকচার তৈরি করা যাক &#8211;
+  </p>
+  <pre class="lang:java decode:true">public class Directory extends Node {
+    private Set&lt;Node&gt; nodes;
+    public Directory(String path) {
+        super(path);
+        nodes = new TreeSet&lt;&gt;();
+    }
+
+    public void add(Node node) {
+        node.setRoot(this);
+        nodes.add(node);
+    }
+
+    public Set&lt;Node&gt; getNodes() {
+        return nodes;
+    }
+
+    @Override
+    public long getLength() {
+        long length = 0;
+        for (Node node : nodes) {
+            length += node.getLength();
+        }
+        return length;
+    }
+
+    public int numberOfFiles() {
+        int count = 0;
+        for (Node node : nodes) {
+            if (node instanceof Directory) {
+                count++;/// Directory counts as a file
+                Directory directory = (Directory) node;
+                count += directory.numberOfFiles();
+            } else if (node instanceof File) {
+                count++;
+            }
+        }
+
+        return count;
+    }
+}</pre>
+  <p>
+    প্রত্যেকটি ডিরেক্টরীতে অারও অনেকগুলো করে ফাইল বা ডিরেক্টরী থাকতে পারে। এক্ষেত্রে ডিরেক্টরীতে একটি ট্রিসেটে (TreeSet) রাখা হয়েছে যা সেই ফাইল বা ডিরেক্টরীগুলো ধরে রাখে।
+  </p>
+  <p>
+    ডিরেক্টরী স্ট্রাকচারকরে সুন্দর করে প্রিন্ট করার জন্য কতগুলো মেথড যুক্ত করা যেতে পারে । যেমন-
+  </p>
+  <pre class="lang:java decode:true">public void printTree() {
+    int indent = 0;
+    StringBuilder sb = new StringBuilder();
+    printDirectoryTree(this, indent, sb);
+    System.out.println(sb.toString());
+}
+
+private void printDirectoryTree(Node node, int indent, StringBuilder sb) {
+    sb.append(getIndentString(indent));
+    sb.append("+--");
+    sb.append(node.getName());
+    sb.append("/");
+    sb.append("n");
+    if (node.isDirectory()) {
+        Directory directory = (Directory) node;
+        for (Node file : directory.getNodes()) {
+            printDirectoryTree(file, indent + 1, sb);
+        }
+    }
+}
+
+private static String getIndentString(int indent) {
+    StringBuilder sb = new StringBuilder();
+    for (int i = 0; i &lt; indent; i++) {
+        sb.append("|  ");
+    }
+    return sb.toString();
+}</pre>
+  <p>
+    এবার একটি মেইন মেথড থেকে এগুলোকে ব্যবহার করা যাক &#8211;
+  </p>
+  <pre class="lang:java decode:true ">public class Main {
+    public static void main(String[] args) {
+        Directory root = new Directory("root");
+        File file = new File("profile.jpg");
+        root.add(file);
+
+        Directory movie = new Directory("movie");
+        root.add(movie);
+
+        Directory englishMovie = new Directory("english");
+        englishMovie.add(new File("IronFist.mp4"));
+        englishMovie.add(new File("The Shawshank Redemption.mp4"));
+        englishMovie.add(new File("ZotaPia.mp4"));
+        File despicableMe = new File("DespicableMe.mp4");
+        englishMovie.add(despicableMe);
+
+        movie.add(englishMovie);
+
+        Directory banglaMovie = new Directory("Bangla");
+        banglaMovie.add(new File("The Clay Bird.mp4"));
+        banglaMovie.add(new File("Jibon Thekey Neya.mp4"));
+        movie.add(banglaMovie);
+
+        root.printTree();
+
+        System.out.println("name: " + movie.getName());
+        System.out.println("Created: " + movie.getCreated());
+    }
+}</pre>
+  <p>
+    <span style="background-color: #f0f0f0;">এটিকে রান করলে নিচের আউটপুটটি পাওয়া যাবে-</span>
+  </p>
+  <pre class="lang:java decode:true ">+--root/
+|  +--movie/
+|  |  +--Bangla/
+|  |  |  +--Jibon Thekey Neya.mp4/
+|  |  |  +--The Clay Bird.mp4/
+|  |  +--english/
+|  |  |  +--DespicableMe.mp4/
+|  |  |  +--IronFist.mp4/
+|  |  |  +--The Shawshank Redemption.mp4/
+|  |  |  +--ZotaPia.mp4/
+|  +--profile.jpg/
+
+name: movie
+Created: 2017-04-08T02:26:38.341</pre>
+  <p>
+    <span style="font-family: 'courier new' , 'courier' , monospace;">সম্পূর্ণ কোডটি পাওয়া যাবে এখানে: <a href="https://gist.github.com/rokon12/d3c83562c785de6d1a483a5585205b92">https://gist.github.com/rokon12/d3c83562c785de6d1a483a5585205b92</a></span>
+  </p>
+</div>
+</main>
+
+
+<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+        this.page.identifier = 'http:\/\/bazlur.com\/posts\/2017-04-07-%E0%A6%87%E0%A6%A8%E0%A6%AE%E0%A7%87%E0%A6%AE%E0%A7%8B%E0%A6%B0%E0%A7%80-%E0%A6%AB%E0%A6%BE%E0%A6%87%E0%A6%B2-%E0%A6%B8%E0%A6%BF%E0%A6%B8%E0%A7%8D%E0%A6%9F%E0%A7%87%E0%A6%AE-in-memory-file-\/';
+        this.page.title = 'ইনমেমোরী ফাইল সিস্টেম (In memory file system in java)';
+        this.page.url = 'http:\/\/bazlur.com\/posts\/2017-04-07-%E0%A6%87%E0%A6%A8%E0%A6%AE%E0%A7%87%E0%A6%AE%E0%A7%8B%E0%A6%B0%E0%A7%80-%E0%A6%AB%E0%A6%BE%E0%A6%87%E0%A6%B2-%E0%A6%B8%E0%A6%BF%E0%A6%B8%E0%A7%8D%E0%A6%9F%E0%A7%87%E0%A6%AE-in-memory-file-\/';
+    };
+
+    (function () { 
+        var d = document, s = d.createElement('script');
+        s.src = 'https://bazlur-com.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+    Disqus.</a></noscript>
+
+  <footer>
+  
+
+
+
+
+
+
+
+
+
+
+<div id="tag-cloud" style="padding: 5px 15px">
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/advance-java" style="font-size:1rem">advance-java</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/agile" style="font-size:1rem">agile</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/algorithm" style="font-size:1.5691756217423825rem">algorithm</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/arraylist" style="font-size:1rem">arraylist</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/article" style="font-size:1rem">article</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/bangla-book" style="font-size:2.138351243484765rem">bangla-book</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/becoming-expert" style="font-size:1rem">becoming-expert</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/book" style="font-size:2.32158486704862rem">book</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/book-review" style="font-size:1.5691756217423825rem">book-review</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/calculator" style="font-size:1rem">calculator</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/cloning" style="font-size:1rem">cloning</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/coding" style="font-size:1rem">coding</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/coding-convention" style="font-size:1rem">coding-convention</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/daemon-thread" style="font-size:1rem">daemon-thread</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/data-race" style="font-size:1rem">data-race</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/data-structure" style="font-size:1rem">data-structure</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/deliberate-practice" style="font-size:1rem">deliberate-practice</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/deserialization" style="font-size:1rem">deserialization</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/developers" style="font-size:1rem">developers</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/file-copy" style="font-size:1rem">file-copy</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/future-java-developers" style="font-size:1rem">future-java-developers</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/hash-function" style="font-size:1.5691756217423825rem">hash-function</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/history" style="font-size:1rem">history</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/history-of-java" style="font-size:1rem">history-of-java</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/how-java-performs-better" style="font-size:1rem">how-java-performs-better</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/how-java-works" style="font-size:1rem">how-java-works</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/import" style="font-size:1rem">import</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/inspiration" style="font-size:1rem">inspiration</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java" style="font-size:3.459936110533385rem">java</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java-developers" style="font-size:1rem">java-developers</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java-programming" style="font-size:1rem">java-programming</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java-thread" style="font-size:1rem">java-thread</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java-thread-programming" style="font-size:1.5691756217423825rem">java-thread-programming</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/learning" style="font-size:1rem">learning</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/linkedlist" style="font-size:1rem">linkedlist</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/methodology" style="font-size:1rem">methodology</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/null-pointer-exception" style="font-size:1rem">null-pointer-exception</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/object-cloning" style="font-size:1rem">object-cloning</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/packaging" style="font-size:1rem">packaging</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/pass-by-reference" style="font-size:1rem">pass-by-reference</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/pass-by-value" style="font-size:1rem">pass-by-value</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/programming" style="font-size:1rem">programming</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/review" style="font-size:1rem">review</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/scrum" style="font-size:1rem">scrum</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/serialization" style="font-size:1.5691756217423825rem">serialization</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/simple-calculator" style="font-size:1rem">simple-calculator</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/software-development" style="font-size:1rem">software-development</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/string" style="font-size:1rem">string</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/string-pool" style="font-size:1rem">string-pool</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/swing" style="font-size:1rem">swing</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/thread" style="font-size:2.32158486704862rem">thread</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/volatile" style="font-size:1rem">volatile</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/why-java" style="font-size:1rem">why-java</a>
+  
+</div>
+
+
+<footer>
+  <div>
+    <p>
+    &copy; <a href="https://bazlur.com"> A N M Bazlur Rahman</a> 2012 - 2020 | <a href="https://github.com/rokon12">Github</a>
+    | <a href=" https://twitter.com/bazlur_rahman"> @bazlur_rahman</a>
+    </p>
+  </div>
+</footer>
+  
+  </footer>
+  </body>
+</html>
+

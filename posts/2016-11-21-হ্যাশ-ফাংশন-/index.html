@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>হ্যাশ ফাংশন -২ | My Stream of Thoughts</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/about-me/">About me</a></li>
+      
+      <li><a href="/books/">Books</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+    <h1><span class="title">হ্যাশ ফাংশন -২</span></h1>
+    <h2 class="author">A N M Bazlur Rahman</h2>
+    <h2 class="date">2016/11/21</h2>
+</div>
+
+<p class="post-tag">
+    
+ 
+
+ <a class="post-tag" href="http://bazlur.com/tags/algorithm/">algorithm</a>  
+</p>
+
+<main>
+    <div dir="ltr" style="text-align: left;">
+  <p>
+    <a href="http://www.bazlur.com/2016/11/blog-post_20.html">আগের পোস্টের</a> সমস্যাটি হলো- দুটি ভিন্ন ভিন্ন স্ট্রিং হ্যাশ ফাংশনে দিলে যদি একই ভ্যালু পাওয়া যায় তাহলে কী হবে? উত্তরটির জন্য পুরো আর্টিক্যাল পড়তে হবে।
+  </p>
+  <p>
+    এখন শুরুতে আমি একটি প্রশ্ন করি, দুটি ভিন্ন স্ট্রিংয়ের জন্য হ্যাশ ফাংশন কি একই ভ্যালু রিটার্ন করতে পারে? উত্তরটি নির্ভর করে তোমার হ্যাশ ফাংশনের উপর। তুমি কীভাবে সেটি ইমপ্লিমেন্ট করছো তার ওপর। তবে বাস্তবে কোনো হ্যাশ ফাংশনই শতভাগ এই নিশ্চয়তা দেয় না যে, সে সবসময়ই ভিন্ন ভিন্ন স্ট্রিংয়ের জন্য ভিন্ন ভিন্ন ভ্যালু রিটার্ন করবে।
+  </p>
+  <p>
+    আরো গভীরে যাওয়ার আগে সমস্যাটা নিয়ে আরো একটু আলোচনা করি। মনে করো, তোমার হ্যাশ ফাংশনটি খুবই সাধারণ। এটি অ্যারেতে উপাদানগুলো বর্ণানুক্রমে স্থান দেয়। তোমার পণ্যগুলো যথাক্রমে আদা, রসুন, পেঁপে, কলা ইত্যাদি হয় এবং তোমার অ্যারের সাইজ যদি 10।
+  </p>
+  <p>
+    &nbsp;
+  </p>
+  <p>
+    &nbsp;
+  </p>
+  <p>
+    <img loading="lazy" class="aligncenter wp-image-363 size-full" src="https://bazlur.com/wp-content/uploads/2016/11/hash4.jpg" alt="" width="585" height="586" />
+  </p>
+  <p>
+    <img loading="lazy" class="alignnone wp-image-364 size-full" src="https://bazlur.com/wp-content/uploads/2016/11/hash5.jpg" alt="" width="817" height="210" />
+  </p>
+  <p>
+    &nbsp;
+  </p>
+  <p>
+    ওপরের ছবি দুটি থেকে দেখতে পাচ্ছো, আদা, কলা, পেঁপে, রসুন এবং মরিচ এগুলোর হ্যাশ ভ্যালু যথাক্রমে ১,২,৩ ও ৭, ৮। সুতরাং এগুলো অ্যারের ০,১,২ ও ৬,৭ নম্বর ইন্ডেক্সে বসনো হয়েছে। কিন্তু জীবন তো আর পুষ্পশয্যা নয়। একটু পরেই এসেছে আম। আর তোমার হ্যাশ ফাংশন এর জন্যে ভ্যালু রিটার্ন করেছে ১।
+  </p>
+  <p>
+    সমস্যাটি নিশ্চয় বুঝতে পারছো। এই সমস্যাকে বলা হয় কলিশন (collision)। এখন তুমি যদি অ্যারের ১ নম্বর ইনডেক্সে আমের দাম রাখো, তাহলে আগের আদার দামের সাথে এটি রিপ্লেস হয়ে যাবে। এতে করে তুমি যদি পরবর্তীতে আদার দাম দাও, তোমার হ্যাশটেবিল আমের দাম দিয়ে দিবে যা হওয়া উচিৎ নয়।
+  </p>
+  <p>
+    কলিশন সমাধানের উপায় কী হতে পারে? এ সমস্যা সমাধানের আসলে অনেকগুলো উপায় হতে পারে। তবে সবচেয়ে সহজ উপায় হলো, যে সব পণ্যের হ্যাশ ভ্যালু একই সেগুলোকে একই স্লটে রাখা এবং এজন্যে লিংকডলিস্ট ব্যবহার করা।
+  </p>
+  <p>
+    লিংকডলিস্টের নাম নিশ্চয় শুনেছো এবং আমার ধারণা প্রত্যেকেই ইমপ্লিমেন্ট করেছো। লিংকডলিস্ট হচ্ছে ট্রেনের মতো। একটির পেছনে আরেকটি বগি জোড়া লাগিয়ে তাতে ভ্যালু রাখা।
+  </p>
+  <p>
+    তবে এতেও একটি সমস্যা আছে। তোমার মুদির দোকানের সবগুলো পণ্য যদি একটি নির্দিষ্ট বর্ণ দিয়ে শুরু হয় তাহলে প্রথম স্লটে একটি বিশাল চেইন হবে। এক্ষেত্রে হ্যাশ টেবিল থেকে কোন পণ্যের দাম খুঁজে আনার সময় আর O(1) থাকবে না বরং সেটি হয়ে যাবে O(n)। কারণ তখন তোমাকে লিংকডলিস্ট থেকে উপাদানটি খুঁজতে হবে। লিংকডলিস্ট থেকে কোন উপাদান খুঁজে বের করতে সময় লাগে O(n)।
+  </p>
+  <p>
+    &nbsp;
+  </p>
+  <p>
+    <img loading="lazy" class="alignnone wp-image-366 size-full" src="https://bazlur.com/wp-content/uploads/2016/11/hash7.jpg" alt="" width="768" height="312" />
+  </p>
+  <p>
+    ওপরের ছবি থেকে নিশ্চয় দেখতে পাচ্ছো সমস্যাটি কোথায়? তোমার অ্যারের বাকি স্লটগুলো প্রায় খালি রয়ে গেছে।<br /> তাহলে এখান থেকে দুটি বিষয় জানা গেলো –<br /> ১. হ্যাশ ফাংশন অনেক গুরুত্বপুর্ণ। এটি খুব সিম্পল হলে সমস্যা।<br /> ২. প্রত্যেকটি স্লটেই যদি অনেক বড় লিংকলিস্ট থাকে, তাহলে কনস্ট্যান্ট টাইম অর্থাৎ O(‌1) সময়ে তুমি উপাদান খুঁজে বের করতে পারছো না।<br /> এখন যদি তুমি একটি ভালো হ্যাশ ফাংশন লিখতে পারো, এবং প্রত্যেক স্লটেই যাতে বিশাল লিংকডলিস্টের চেইন না হয় তা নিশ্চিত করতে পারো তাহলেই O(‌1) সময়ে হ্যাশ টেবিল থেকে ভ্যালু পড়তে পারবে।
+  </p>
+  <p>
+    এবার Load Factor বলে একটা টার্ম আছে, এটি নিয়ে একটু বলি তোমাদের। একটি হ্যাশটেবিলের লোড ফ্যাক্টর খুব সহজেই বের করা যায়।
+  </p>
+  <p>
+    Load Factor = Number of items in the hash table / Total slot in the array
+  </p>
+  <p>
+    তাহলে তোমার অ্যারেতে যদি স্লট হয় 10 এবং উপাদানের সংখ্যা যদি হয় ৭ তাহলে লোড ফ্যাক্টর হবে- 0.7। এটি দিয়ে একটি হ্যাশটেবলি কতগুলো স্লট ফাকা আছে তা বের করা যায়। একটি হ্যাশটেবিলের লোড ফ্যাক্টর যদি 1 হয় তাহলে এর বোঝায়, এর প্রত্যেকটি স্লটে একটি করে উপাদান রয়েছে। লোড ফ্যাক্টর একের অধিক থাকার অর্থ হলো, টেবিলের কোন স্লটে একাধিক উপাদান রয়েছে।
+  </p>
+  <p>
+    কনস্ট্যান্ট টাইম অর্থাৎ O(1) সময়ে কোন উপাদান খুঁজে পাওয়া নিশ্চিত করতে চাইলে লোড ফ্যাক্টর সবসময় একের নিচে রাখতে হবে। এটি করার জন্যে যখনই লোড ফ্যাক্টর ১ এর বেশি হবে তখনই টেবিলকে রিসাইজ করে আবার প্রত্যেকটি উপাদানের হ্যাশ ক্যালকুলেট করে বিভিন্ন স্লটে বসাতে হবে। এই অপারেশনটি মোটামুটি এক্সপেনসিভ। তবে তুমি কনস্ট্যান্ট টাইম উপাদানগুলো খুঁজে পাচ্ছো টেবিলের সাইজ যতোই হোক না কেনো।
+  </p>
+  <p>
+    তাহলে উপরের আলোচনা থেকে নিশ্চয় বুঝতে পারছো যে, যদিও কনস্ট্যান্ট টাইমে আমরা উপাদান খুঁজে বের করতে চাচ্ছি, কিন্তু সবসময় তা সম্ভব নয়। তবে best case এটি অবশ্যই O(1) হবে এবং worst case-এ এটি O(n) হতে পারে।
+  </p>
+</div>
+</main>
+
+
+<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+        this.page.identifier = 'http:\/\/bazlur.com\/posts\/2016-11-21-%E0%A6%B9%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B6-%E0%A6%AB%E0%A6%BE%E0%A6%82%E0%A6%B6%E0%A6%A8-\/';
+        this.page.title = 'হ্যাশ ফাংশন -২';
+        this.page.url = 'http:\/\/bazlur.com\/posts\/2016-11-21-%E0%A6%B9%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B6-%E0%A6%AB%E0%A6%BE%E0%A6%82%E0%A6%B6%E0%A6%A8-\/';
+    };
+
+    (function () { 
+        var d = document, s = d.createElement('script');
+        s.src = 'https://bazlur-com.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+    Disqus.</a></noscript>
+
+  <footer>
+  
+
+
+
+
+
+
+
+
+
+
+<div id="tag-cloud" style="padding: 5px 15px">
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/advance-java" style="font-size:1rem">advance-java</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/agile" style="font-size:1rem">agile</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/algorithm" style="font-size:1.5691756217423825rem">algorithm</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/arraylist" style="font-size:1rem">arraylist</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/article" style="font-size:1rem">article</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/bangla-book" style="font-size:2.138351243484765rem">bangla-book</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/becoming-expert" style="font-size:1rem">becoming-expert</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/book" style="font-size:2.32158486704862rem">book</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/book-review" style="font-size:1.5691756217423825rem">book-review</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/calculator" style="font-size:1rem">calculator</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/cloning" style="font-size:1rem">cloning</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/coding" style="font-size:1rem">coding</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/coding-convention" style="font-size:1rem">coding-convention</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/daemon-thread" style="font-size:1rem">daemon-thread</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/data-race" style="font-size:1rem">data-race</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/data-structure" style="font-size:1rem">data-structure</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/deliberate-practice" style="font-size:1rem">deliberate-practice</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/deserialization" style="font-size:1rem">deserialization</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/developers" style="font-size:1rem">developers</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/file-copy" style="font-size:1rem">file-copy</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/future-java-developers" style="font-size:1rem">future-java-developers</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/hash-function" style="font-size:1.5691756217423825rem">hash-function</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/history" style="font-size:1rem">history</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/history-of-java" style="font-size:1rem">history-of-java</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/how-java-performs-better" style="font-size:1rem">how-java-performs-better</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/how-java-works" style="font-size:1rem">how-java-works</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/import" style="font-size:1rem">import</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/inspiration" style="font-size:1rem">inspiration</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java" style="font-size:3.459936110533385rem">java</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java-developers" style="font-size:1rem">java-developers</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java-programming" style="font-size:1rem">java-programming</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java-thread" style="font-size:1rem">java-thread</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java-thread-programming" style="font-size:1.5691756217423825rem">java-thread-programming</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/learning" style="font-size:1rem">learning</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/linkedlist" style="font-size:1rem">linkedlist</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/methodology" style="font-size:1rem">methodology</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/null-pointer-exception" style="font-size:1rem">null-pointer-exception</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/object-cloning" style="font-size:1rem">object-cloning</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/packaging" style="font-size:1rem">packaging</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/pass-by-reference" style="font-size:1rem">pass-by-reference</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/pass-by-value" style="font-size:1rem">pass-by-value</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/programming" style="font-size:1rem">programming</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/review" style="font-size:1rem">review</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/scrum" style="font-size:1rem">scrum</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/serialization" style="font-size:1.5691756217423825rem">serialization</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/simple-calculator" style="font-size:1rem">simple-calculator</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/software-development" style="font-size:1rem">software-development</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/string" style="font-size:1rem">string</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/string-pool" style="font-size:1rem">string-pool</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/swing" style="font-size:1rem">swing</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/thread" style="font-size:2.32158486704862rem">thread</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/volatile" style="font-size:1rem">volatile</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/why-java" style="font-size:1rem">why-java</a>
+  
+</div>
+
+
+<footer>
+  <div>
+    <p>
+    &copy; <a href="https://bazlur.com"> A N M Bazlur Rahman</a> 2012 - 2020 | <a href="https://github.com/rokon12">Github</a>
+    | <a href=" https://twitter.com/bazlur_rahman"> @bazlur_rahman</a>
+    </p>
+  </div>
+</footer>
+  
+  </footer>
+  </body>
+</html>
+

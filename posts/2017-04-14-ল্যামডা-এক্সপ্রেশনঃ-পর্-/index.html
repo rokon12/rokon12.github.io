@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ল্যামডা এক্সপ্রেশনঃ পর্ব এক (Lambda Expression: Part 1) | My Stream of Thoughts</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/about-me/">About me</a></li>
+      
+      <li><a href="/books/">Books</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+    <h1><span class="title">ল্যামডা এক্সপ্রেশনঃ পর্ব এক (Lambda Expression: Part 1)</span></h1>
+    <h2 class="author">A N M Bazlur Rahman</h2>
+    <h2 class="date">2017/04/14</h2>
+</div>
+
+<p class="post-tag">
+    
+ 
+</p>
+
+<main>
+    <div dir="ltr" style="text-align: left;">
+  <div style="text-align: justify;">
+    অনেকগুলো জনপ্রিয় প্রোগ্রামিং ল্যাংগুয়েজেই ল্যামডা এক্সপ্রেশন রয়েছে। যেমন- জাভাস্ক্রিপ্ট, পাইথন, গ্রুভি, স্ক্যালা, সি শার্প, সি++ ইত্যাদি। জাভাতে এই বিশেষ ফিচারটি অনেকদিন অনুপস্থিত থাকায় জাভা প্রোগ্রামারদের মধ্যে মনোকষ্টের কমতি ছিল না। ২০০৬ সালে জাভা পাঁচ রিলিজ হওয়ার পর এই ফিচারটি নিয়ে আলোচনা শুরু হলেও এটি খুব একটা আলোর মুখ দেখে নি। অনেকেই বলতে শুরু করে &#8220;<i>Java is the new COBOL</i>”। তবে জাভাকে ওরাকল কিনে নেওয়ার পর এই অবস্থার পরিবর্তন হতে শুরু করে এবং অবশেষে প্রোগ্রামারদের প্রবল মনোবেদনা ঘুচিয়ে ২০১৪ সালে রিলিজ হয় জাভা আট যাতে এই বিশেষ এবং খুবই গুরুত্বপূর্ণ ফিচারটি সংযুক্ত করা হয়।
+  </div>
+  <p>
+    চলুন তাহলে এই বিশেষ প্রোগ্রামিং ফিচার, ল্যামডা এক্সপ্রেশন নিয়ে আলোচনা করা যাক।
+  </p>
+  <p>
+    <b><u> ল্যামডা এক্সপ্রেশনঃ</u></b>
+  </p>
+  <div style="text-align: justify;">
+    ল্যামডা টার্মটি এসেছে ল্যম্বডা ক্যালকুলাস (Lambda Calculus) থেকে। এটি গণিতিক যুক্তি ও কম্পিউটার সাইন্সে ব্যবহৃত এক ধরণের ফর্মাল সিস্টেম যাতে বিভিন্ন ধরণের কম্পিউটিশন বিভিন্ন ভ্যারিয়েবলের মাধ্যমে প্রকাশ করা হয়। তবে এই আমাদের এই আলোচনায় তাত্বিক দিকটি পরিহার করে বরং সাধারণভাবে এর আচরণ ও ব্যবহার নিয়ে কথা বলা যাক।
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+    সহজকরে বলা যেতে পারে যে, ল্যমডা এক্সপ্রেশন হলো একটি ছোট কোড যা কোনো কাজ করে থাকে। উদহারণ-
+  </div>
+  <div>
+    <pre class="lang:java decode:true">(int x) → {return x +1;}</pre>
+  </div>
+  <div style="text-align: justify;">
+    উপরের কোডটি একটি ল্যামডা এক্সপ্রেশনের উদাহরণ। এটি দেখে মনে হচ্ছে একটি মেথড কিন্তু এর কোনো নাম নেই। এতে একটি মেথডে যা কিছু থাকে তার পায় সবই রয়েছে, যেমন – প্যারামিটার, মেথড বডি। তবে এতে রিটার্ন টাইপ দেখা যাচ্ছে না। রিটার্ন টাইপ এক্ষেত্রে কম্পাইলার বুঝে নিতে পারে, কারণ এর রিটার্ন স্ট্যাটমেন্টে দেখা যাচ্ছে যে এটি একটি ইন্টিজার রিটার্ন করছে। তাহলে একে বলতে পারি নাম ছাড়া মেথড বা অ্যানোনিমাস মেথড।
+  </div>
+  <p>
+    <u><br /> </u><b><u> অ্যানোনিমাস ইনার ক্লাস ও ল্যাম্ডা এক্সপ্রেশন</u></b>
+  </p>
+  <div style="text-align: justify;">
+    জাভা অ্যানোনিমাস ইনার ক্লাস তৈরি করতে দেয় এবং এর বিভিন্ন রকম ব্যবহার রয়েছে। এটিও একধরণের ক্লাস তবে এর কোনো নাম নেই। এটি সাধারণত অন্য একটি ক্লাসের মধ্যে তৈরি করা হয় বলে একে অ্যানোনিমাস ইনার ক্লাস বলা হয়। অ্যানোনিমাস ক্লাস দুই ভাবে তৈরি করা যায়- ইন্টারফেস থেকে এবং একটি ক্লাস থেকে।
+  </div>
+  <div>
+    <pre class="lang:java decode:true">public interface Filterable {
+     boolean apply(Object obj);
+}</pre>
+  </div>
+  <p>
+    উপরের ইন্টারফেইসটি থেকে একটি অ্যানোনিমাস ইনার ক্লাস তৈরি করা যেতে পারে।
+  </p>
+  <pre class="lang:java decode:true ">new Filterable() {
+    @Override
+    public boolean apply(Object object) {
+ // other logic 
+        return false;
+    }
+};</pre>
+  <div style="text-align: justify;">
+    এখানে ইন্টারফেস থেকে একটি ইনার ক্লাস তৈরি করা হয়েছে। এখানে লক্ষ করুন, ইন্টারফেসের সঙ্গে একটি নিউ অপারেটর ব্যবহার করা হয়েছে এবং কার্লি ব্রেসের মধ্যে ইন্টারফেইসটির মেথডটি ইম্প্লিেমেন্ট করা হয়েছে। অর্থাৎ অ্যানোনিমাস ইনার ক্লাস তৈরি করতে হলে নিউ অপারেটর ব্যবহার করতে হয়।
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+    একইভাবে ক্লাস থেকেও অ্যানোনিমাস ইনার ক্লাস তৈরি করা যায়। যে ক্লাস থেকে অ্যানোনিমাস ক্লাস তৈরি করা হবে সেই ক্লাসটিকে অ্যানোনিমাস ইনার ক্লাস ইনহেরিট করে। উদাহরণ-
+  </div>
+  <div>
+    <pre class="lang:java decode:true">new Person() {
+    public void doSomething() {
+        System.out.println("doing something");
+    }
+};</pre>
+  </div>
+  <p>
+    এখানে <b>Person</b> ক্লাস ব্যবহার করে একটি অ্যানোনিমাস ক্লাস তৈরি করা হয়েছে। তবে এই পদ্ধতি নিয়ে এই অনুচ্ছেদে এর বেশি আলোচনা হবে না।
+  </p>
+  <p>
+    এবার চলুন এই অ্যানোনিমাস ইনার ক্লাসের সুবিধা নিয়ে আলোচনা করা যাক &#8211;
+  </p>
+  <p>
+    মনে করুন, আপনার কাছে একটি কন্টাক্ট লিস্ট আছে। আপনি এই কন্টাক্ট লিস্ট থেকে নানাভাবে কন্টাক্টগুলোকে ফিল্টার করতে চান।
+  </p>
+  <p>
+    আপনার কন্টাক্ট ক্লাসটি দেখতে এরকম-
+  </p>
+</div>
+<pre class="lang:java decode:true ">public class Contact {
+    enum Sex {
+        MALE, FEMALE
+    }
+
+    private String name;
+    private String emailAddress;
+    private String phoneNumber;
+    private int age;
+    private Sex sex;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getEmailAddress() {
+        return emailAddress;
+    }
+
+    public void setEmailAddress(String emailAddress) {
+        this.emailAddress = emailAddress;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public Sex getSex() {
+        return sex;
+    }
+
+    public void setSex(Sex sex) {
+        this.sex = sex;
+    }
+}</pre>
+<div dir="ltr" style="text-align: left;">
+  <p>
+    এখন আপনি একটি মেথড লিখতে পারেন, যা আপনার লিস্ট থেকে যাদের বয়স ১৮ থেকে ২৫ এর মধ্যে তাদেরকে আলাদা করবে। মেথডটি এভাবে লেখা যেতে পারে &#8211;
+  </p>
+  <pre class="lang:java decode:true ">import java.util.ArrayList;
+import java.util.List;
+
+public class ContactService {
+ 
+    public List&lt;Contact&gt; findContactAgedBetween18And25(List&lt;Contact&gt; contactList) {
+        List&lt;Contact&gt; contacts = new ArrayList&lt;&gt;();
+
+        for (Contact contact : contactList) {
+            if (contact.getAge() &gt;= 18 && contact.getAge() &lt;= 25) {
+                contacts.add(contact);
+            }
+        }
+
+        return contacts;
+    }
+
+}
+</pre>
+  <p>
+    <span style="text-align: justify;">এক্ষেত্রে এই মেথড প্রথমে কন্টাক্ট লিস্ট থেকে একটি ফর লুপ এবং একটি ইফ স্ট্যাটমেন্ট ব্যবহার করে প্রত্যেকটি কন্টাক্ট পরীক্ষা করে দেখছে যে এদের বয়স ১৮ থেকে ২৫ এর মধ্যে কিনা। তারপর মেথডের মধ্যে একটি লোকাল ভ্যারিয়েলে সেগুলো রাখছে এবং লুপ শেষ হয়ে গেলে রিটার্ন করছে।</span>
+  </p>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+    কিছুক্ষণ পর আপনার মনে হলো, আপনি এই বয়সের মধ্য শুধুমাত্র পুরুষগুলোকে আলাদা করতে চান। সেক্ষেত্রে আপনি একটি নতুন মেথড লিখতে পারেন।
+  </div>
+  <div>
+    <pre class="lang:java decode:true ">   public List&lt;Contact&gt; findContactMaleAgedBetween18And25(List&lt;Contact&gt; contactList) {
+        List&lt;Contact&gt; contacts = new ArrayList&lt;&gt;();
+<pre><code>    for (Contact contact : contactList) {
+        if (contact.getAge() &amp;gt;= 18
+                &amp;&amp; contact.getAge() &amp;lt;= 25
+                &amp;&amp; contact.getSex() == Contact.Sex.MALE) {
+            contacts.add(contact);
+        }
+    }
+
+    return contacts;
+}&lt;/pre&gt;
+</code></pre>
+  </div>
+</div>
+<div dir="ltr" style="text-align: left;">
+  <p>
+    এভাবে যদি মহিলাদের আলাদা করতে চান তাহলে &#8211;
+  </p>
+  <pre class="lang:java decode:true">public List&lt;Contact&gt; findContactFemaleAgedBetween18And25(List&lt;Contact&gt; contactList) {
+    List&lt;Contact&gt; contacts = new ArrayList&lt;&gt;();
+
+    for (Contact contact : contactList) {
+        if (contact.getAge() &gt;= 18
+                && contact.getAge() &lt;= 25
+                && contact.getSex() == Contact.Sex.FEMALE) {
+            contacts.add(contact);
+        }
+    }
+
+    return contacts;
+}</pre>
+  <div style="text-align: justify;">
+    এভাবে প্রত্যেকটি নতুন নতুন রিকোয়ারমেন্টের জন্য আপনাকে নতুন একটি করে মেথড লিখতে হচ্ছে। মেথডগুলোতে লক্ষ্য করুন, প্রত্যকটি মেথডের কোডগুলো প্রায় একই শুধুমাত্র ইফ স্ট্যাটমেন্টের ফিল্টার কীভাবে করা হবে সেই অংশটুকু ছাড়া।
+  </div>
+  <p>
+    এভাবে যদি আরও অনেকগুলো রিকোয়ারমেন্টের আসে তাহলে আরও অনেকগুলো মেথড লিখতে হবে। তবে একটু বুদ্ধি করে আমরা অ্যানোনিমাস ইনার ক্লাস ব্যবহার করে এই বার বার একইরকম কোড করার কাজটুকু কমিয়ে ফেলতে পারি। এজন্য প্রথমে আমাদের একটি ইন্টারফেস লিখতে হবে।
+  </p>
+  <pre class="">interface FilterCriteria {
+    boolean match(Contact contact);
+}</pre>
+  <p>
+    এখন আমরা একটি মেথড লিখবো যেখানে এই ইন্টারফেইসটি প্যারামিটার হিসেবে থাকবে।
+  </p>
+</div>
+<pre class="">public List&lt;Contact&gt; findContacts(List&lt;Contact&gt; contactList, FilterCriteria criteria) {
+    List&lt;Contact&gt; contacts = new ArrayList&lt;&gt;();
+
+    for (Contact contact : contactList) {
+        if (criteria.match(contact)) {
+            contacts.add(contact);
+        }
+    }
+
+    return contacts;
+}</pre>
+<div dir="ltr" style="text-align: left;">
+  <p>
+    এই লক্ষ্য করুন , আমরা উপরের মেথডের ইফ স্ট্যাটমেন্টটি সামন্য পরিবর্তন করেছি। এটিতে কোনো নির্দিষ্ট লজিক নেই, বরং এটি আমাদের ইন্টারফেসটির একটি মেথডকে কল করছে যা কিনা বুলিয়ান রিটার্ন করে। এর অর্থ হলো- এই match() মেথডটি যেসব Contact এর ক্ষেত্রে true রিটার্ন করবে শুধুমাত্র সেগুলোকে ভেতরের লিস্টে যুক্ত করবে এবং রিটার্ন করবে। এখন এই মেথডটি ব্যবহার করে দেখা যাক-
+  </p>
+</div>
+<pre class="lang:java decode:true">import java.util.ArrayList;
+import java.util.List;
+
+import static com.bazlur.ContactService.FilterCriteria;
+
+
+public class ContactApp {
+    public static void main(String[] args) {
+
+        List&lt;Contact&gt; contactList = new ArrayList&lt;&gt;(); // lets assume we have that list
+        ContactService contactService = new ContactService();
+
+        List&lt;Contact&gt; contactAged18To25 = contactService.findContacts(contactList, new FilterCriteria() {
+            @Override
+            public boolean match(Contact contact) {
+                return contact.getAge() &gt;= 18 && contact.getAge() &lt;= 25;
+            }
+        });
+    }
+}</pre>
+<div dir="ltr" style="text-align: left;">
+  <p>
+    &nbsp;
+  </p>
+  <div style="text-align: justify;">
+    উপরের মেথডটিতে আর্গুমেন্ট হিসেবে একটি অ্যানোনিমাস ইনার ক্লাস দেওয়া হয়েছে যাতে আমরা match() মেথডের মূল লজিকটুকু লিখেছি। এভাবে আমাদের যদি এখন এই ১৮ থেকে ২৫ বছর বয়সের কন্টাক্টগুলো থেকে শুধুমাত্র মহিলাগুলোকে আলাদা করতে চাই তাহলে কন্টাক্ট সার্ভিসে(<span style="background-color: #f0f0f0; color: #0e84b5; font-weight: bold; text-align: left;">ContactService</span>) নতুন কোনো মেথড যুক্ত করতে হবে না। শুধুমাত্র কল করার সময় আমাদের কোডের বিহেবিয়ারটুকু আর্গুমেন্ট হিসেবে পাস করলেই হয়ে যাচ্ছে।
+  </div>
+</div>
+<div>
+</div>
+<div>
+  <pre class="">List&lt;Contact&gt; contactAged18To25Female = contactService.findContacts(contactList,
+        new FilterCriteria() {
+            @Override
+            public boolean match(Contact contact) {
+<pre><code>            return contact.getAge() &amp;gt;= 18
+                    &amp;&amp; contact.getAge() &amp;lt;= 25
+                    &amp;&amp; contact.getSex() == Contact.Sex.FEMALE;
+        }
+    });&lt;/pre&gt;
+</code></pre>
+</div>
+<div dir="ltr" style="text-align: left;">
+  <div style="text-align: justify;">
+    এভাবে আমরা অ্যানোনিমাস ইনার ক্লাস ব্যবহার করে বিহেবিয়ার প্যারামিটারাইজড করতে পারি। এতে করে অনে কম কোড লিখে অনেক বেশি ফিচার তৈরি করা যাচ্ছে।
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+    তবুও উপরের কোডটিতে খেয়াল করলে দেখা যাবে যে বেশ কিছু কোড বারবার লিখতে হচ্ছে।
+  </div>
+  <p>
+    &nbsp;
+  </p>
+  <table style="margin-left: auto; margin-right: auto; text-align: center;" cellspacing="0" cellpadding="0" align="center">
+    <tr>
+      <td style="text-align: center;">
+        <a style="margin-left: auto; margin-right: auto;" href="http://bazlur.com/wp-content/uploads/2017/04/Lambda-2BExpression.png"><img loading="lazy" title="" src="http://bazlur.com/wp-content/uploads/2017/04/Lambda-2BExpression-300x90.png" alt="" width="400" height="118" border="0" /></a>
+      </td>
+    </tr>
+<pre><code>&lt;tr&gt;
+  &lt;td style=&quot;text-align: center;&quot;&gt;
+    চিত্র: প্রয়োজনীয় কোড লজিক
+  &lt;/td&gt;
+&lt;/tr&gt;
+</code></pre>
+  </table>
+  <p>
+    &nbsp;
+  </p>
+  <div style="text-align: justify;">
+    এই কোডটিতে শুধুমাত্র লাল রঙ্গের অংশটুকু আমাদের প্রয়োজনীয় কোড, বাকিটুকু অর্থাৎ নিউ অপারেটর থেকে শুরু করে, ওভারাইড অ্যানোটেশন, পাবলিক কিওয়ার্ড, রিটার্ন টাইপ, মেথডের নাম ইত্যাদি একই রয়ে গেছে পত্যেকবার কল করার সময়। এই কোডগুলোকে boilerplate কোড বলা হয়।
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+    তবে জাভা ৮ ল্যাম্বডা এক্সপ্রশন আসার সুবাধে এই boilerplate কোডটুকুকেও বাদ দেওয়া যায়। উদাহরণ &#8211;
+  </div>
+  <div>
+    <pre class="lang:java decode:true">List&lt;Contact&gt; contactAged18To25Female = contactService.findContacts(contactList,
+        (Contact contact) -&gt; {
+<pre><code>        return contact.getAge() &amp;gt;= 18
+                &amp;&amp; contact.getAge() &amp;lt;= 25
+                &amp;&amp; contact.getSex() == Contact.Sex.FEMALE;
+    });&lt;/pre&gt;
+
+&lt;p&gt;
+  উপরের কোডটুকু লক্ষ্য করুন, এতে শুধুমাত্র প্রয়োজনীয় কোডটুকু রয়েছে। তাহলে আমাদের প্রথম ল্যাম্বডা এক্সপ্রেশন লেখা হয়ে গেলো।
+&lt;/p&gt;
+</code></pre>
+  </div>
+  <p>
+    এই প্যারামিটাইরাইজড কোডটুকু আলাদা করে লিখলে &#8211;
+  </p>
+</div>
+<pre class="lang:java decode:true">(Contact contact) -&gt; {
+           return contact.getAge() &gt;= 18
+                              && contact.getAge() &lt;= 25
+                              && contact.getSex() == Contact.Sex.FEMALE;
+};</pre>
+<div dir="ltr" style="text-align: left;">
+  <div style="text-align: justify;">
+    যা শুরুতে ল্যাম্বডা নিয়ে কথা বলার সময় যে উদাহরণ দেওয়া হয়েছিল তার সঙ্গে মিলে যায়।
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+    তাহলে দেখা যাচ্ছে যে, অ্যানোনিমাস ক্লাসের পরিবর্তে আমরা ল্যামডা এক্সপ্রেশন ব্যবহার করতে পারি। তবে এখানে একটি শর্ত রয়েছে। যদি কোনো ইন্টারফেইসে একটি মাত্র মেথড থাকে, এবং সেই ইন্টারফেসটি যেখানে অ্যানোনিমাস ক্লাস হিসেবে ব্যবহার করা যায়, তার পরিবর্তে ল্যামডা এক্সপ্রেশন ব্যবহার করা যাবে। একটি মাত্র মেথডযুক্ত ইন্টারফেসেরের একটি নাম রয়েছে। একে ফাংশনাল ইন্টারফেস বলে।
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+    আরও একটি ব্যবাহার দেখা যাক-
+  </div>
+</div>
+<div>
+  <pre class="lang:java decode:true">File root = new File("./");
+File[] files = root.listFiles(new FileFilter() {
+    @Override
+    public boolean accept(File pathname) {
+        return pathname.isFile();
+    }
+});</pre>
+</div>
+<div dir="ltr" style="text-align: left;">
+  <div style="text-align: justify;">
+    অনেক সময় আমাদের ফাইল লিস্টিং করতে হয়, অর্থাৎ একটি ফোল্ডারে যে ফাইলগুলো  রয়েছে তা বিভিন্নভাবে ফিল্টার করে তার লিস্ট করা যায়। এক্ষেত্রে উপরের কোডটি রুট ফোল্ডারে যে ফাইলগুলো ডিরেক্টরী নয় শুধুমাত্র ফাইল(জাভাতে ইউনিক্স সিস্টেম অনুসরণ করে ফাইল এবং ডিরেক্টরী দুটুই একটি ক্লাস java.io.File দিয়ে অ্যাবস্ট্র্যাক্ট করা হয়েছে), সেগুলোকে লিস্ট করবে।
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+    তবে উপরের কোডটুকু সংক্ষিপ্ত করে ল্যামডা এক্সপ্রেশন ব্যবহার করে এভাবে লেখা যায় &#8211;
+  </div>
+</div>
+<div dir="ltr" style="text-align: left;">
+  <pre class="">File[] files = root.listFiles(pathname -&gt; pathname.isFile());</pre>
+  <p>
+    কিংবা আরও সংক্ষেপে &#8211;
+  </p>
+  <pre class="">File[] files = root.listFiles(File::isFile);</pre>
+  <p>
+    এখানে মেথড রেফারেন্স ব্যবহার করা হয়েছে।
+  </p>
+  <p>
+    এই আর্টিক্যাল এ শুধুমাত্র ল্যামডা এক্সপ্রেশনের সাধারণ ব্যবহার দেখানো হলো। পরিবর্তীতে পর্বে এ নিয়ে আরও বিস্তারিত থাকবে।
+  </p>
+</div>
+</main>
+
+
+<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+        this.page.identifier = 'http:\/\/bazlur.com\/posts\/2017-04-14-%E0%A6%B2%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%AE%E0%A6%A1%E0%A6%BE-%E0%A6%8F%E0%A6%95%E0%A7%8D%E0%A6%B8%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A7%87%E0%A6%B6%E0%A6%A8%E0%A6%83-%E0%A6%AA%E0%A6%B0%E0%A7%8D-\/';
+        this.page.title = 'ল্যামডা এক্সপ্রেশনঃ পর্ব এক (Lambda Expression: Part 1)';
+        this.page.url = 'http:\/\/bazlur.com\/posts\/2017-04-14-%E0%A6%B2%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%AE%E0%A6%A1%E0%A6%BE-%E0%A6%8F%E0%A6%95%E0%A7%8D%E0%A6%B8%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A7%87%E0%A6%B6%E0%A6%A8%E0%A6%83-%E0%A6%AA%E0%A6%B0%E0%A7%8D-\/';
+    };
+
+    (function () { 
+        var d = document, s = d.createElement('script');
+        s.src = 'https://bazlur-com.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+    Disqus.</a></noscript>
+
+  <footer>
+  
+
+
+
+
+
+
+
+
+
+
+<div id="tag-cloud" style="padding: 5px 15px">
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/advance-java" style="font-size:1rem">advance-java</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/agile" style="font-size:1rem">agile</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/algorithm" style="font-size:1.5691756217423825rem">algorithm</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/arraylist" style="font-size:1rem">arraylist</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/article" style="font-size:1rem">article</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/bangla-book" style="font-size:2.138351243484765rem">bangla-book</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/becoming-expert" style="font-size:1rem">becoming-expert</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/book" style="font-size:2.32158486704862rem">book</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/book-review" style="font-size:1.5691756217423825rem">book-review</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/calculator" style="font-size:1rem">calculator</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/cloning" style="font-size:1rem">cloning</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/coding" style="font-size:1rem">coding</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/coding-convention" style="font-size:1rem">coding-convention</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/daemon-thread" style="font-size:1rem">daemon-thread</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/data-race" style="font-size:1rem">data-race</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/data-structure" style="font-size:1rem">data-structure</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/deliberate-practice" style="font-size:1rem">deliberate-practice</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/deserialization" style="font-size:1rem">deserialization</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/developers" style="font-size:1rem">developers</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/file-copy" style="font-size:1rem">file-copy</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/future-java-developers" style="font-size:1rem">future-java-developers</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/hash-function" style="font-size:1.5691756217423825rem">hash-function</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/history" style="font-size:1rem">history</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/history-of-java" style="font-size:1rem">history-of-java</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/how-java-performs-better" style="font-size:1rem">how-java-performs-better</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/how-java-works" style="font-size:1rem">how-java-works</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/import" style="font-size:1rem">import</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/inspiration" style="font-size:1rem">inspiration</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java" style="font-size:3.459936110533385rem">java</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java-developers" style="font-size:1rem">java-developers</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java-programming" style="font-size:1rem">java-programming</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java-thread" style="font-size:1rem">java-thread</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java-thread-programming" style="font-size:1.5691756217423825rem">java-thread-programming</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/learning" style="font-size:1rem">learning</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/linkedlist" style="font-size:1rem">linkedlist</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/methodology" style="font-size:1rem">methodology</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/null-pointer-exception" style="font-size:1rem">null-pointer-exception</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/object-cloning" style="font-size:1rem">object-cloning</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/packaging" style="font-size:1rem">packaging</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/pass-by-reference" style="font-size:1rem">pass-by-reference</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/pass-by-value" style="font-size:1rem">pass-by-value</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/programming" style="font-size:1rem">programming</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/review" style="font-size:1rem">review</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/scrum" style="font-size:1rem">scrum</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/serialization" style="font-size:1.5691756217423825rem">serialization</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/simple-calculator" style="font-size:1rem">simple-calculator</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/software-development" style="font-size:1rem">software-development</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/string" style="font-size:1rem">string</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/string-pool" style="font-size:1rem">string-pool</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/swing" style="font-size:1rem">swing</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/thread" style="font-size:2.32158486704862rem">thread</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/volatile" style="font-size:1rem">volatile</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/why-java" style="font-size:1rem">why-java</a>
+  
+</div>
+
+
+<footer>
+  <div>
+    <p>
+    &copy; <a href="https://bazlur.com"> A N M Bazlur Rahman</a> 2012 - 2020 | <a href="https://github.com/rokon12">Github</a>
+    | <a href=" https://twitter.com/bazlur_rahman"> @bazlur_rahman</a>
+    </p>
+  </div>
+</footer>
+  
+  </footer>
+  </body>
+</html>
+

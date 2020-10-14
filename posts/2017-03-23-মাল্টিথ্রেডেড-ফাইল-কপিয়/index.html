@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>মাল্টিথ্রেডেড ফাইল কপিয়ার (Multi-threaded file copier) | My Stream of Thoughts</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/about-me/">About me</a></li>
+      
+      <li><a href="/books/">Books</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+    <h1><span class="title">মাল্টিথ্রেডেড ফাইল কপিয়ার (Multi-threaded file copier)</span></h1>
+    <h2 class="author">A N M Bazlur Rahman</h2>
+    <h2 class="date">2017/03/23</h2>
+</div>
+
+<p class="post-tag">
+    
+ 
+</p>
+
+<main>
+    <div dir="ltr" style="text-align: left;">
+  <div style="text-align: justify;">
+    আগের দুটি আর্টিক্যালে <a href="http://www.bazlur.com/2017/03/file-copying-in-java.html" target="_blank" rel="noopener noreferrer">কীভাবে জাভা দিয়ে ফাইল কপি করা যায়</a> দেখানো হয়েছে ও<a href="http://www.bazlur.com/2017/03/java-threading-part-1.html" target="_blank" rel="noopener noreferrer"> কীভাবে থ্রেড ব্যবহার করতে হয়</a> তার প্রাথমিক ধারণা দেওয়া হয়েছে।&nbsp;
+  </div>
+  <p>
+  </p>
+  <div style="text-align: justify;">
+    এই দুটি ধারণা থেকে আমরা একটি মাল্টি থ্রেডেড ফাইল কপিয়ার তৈরি করতে পারি। চলুন তাহলে লিখে ফেলা যাক-&nbsp;
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+    এক্ষেত্রে আমাদের প্রথমে একটি কপিয়ার লাগবে যা একই নির্দিষ্ট পাথ থেকে ফাইল &nbsp;অন্য একটি পাথে কপি করতে পারে।
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+    এরপর একটি থ্রেড ক্লাস তৈরি করি যা কিনা এই কপি অপারেশন সম্পন্ন করবে।&nbsp;
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+    এই ক্লাসটির রান মেথডে Copier এর একটি ইনস্ট্যান্স তৈরি করা হয়েছে। তারপর এর copy মেথডটিকে কল করা হয়েছে। আমাদের উদ্দ্যেশ্য হচ্ছে, একটি ফাইলের জন্য একটি থ্রেড ব্যবহার করবো। অর্থাৎ আমাদের ডিরেক্টরিতে যদি ৫ টি ফাইল থাকে তাহলে আমরা ৫টি থ্রেড তৈরি করবো এবং এগুলো আলাদা আলাদাভাবে পাশাপাশি কপি করতে থাকবে।&nbsp;
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+    আমাদের এই প্রোগ্রামটি হবে কমান্ডলাইন প্রোগ্রাম। অর্থাৎ আমরা কমান্ড লাইন থেকে ইনপুট নেবো। এক্ষেত্রে আমাদের দুটি ইনপুট নিতে হবে, একটি সোর্স ডিরেক্টরি, অন্যটি ডেস্টিনেশন, অর্থাৎ যে পাথে ফাইলগুলো রাখবো।&nbsp;
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+    এই CopyApp ক্লাসটির মেইন মেথডে প্রথমে এর ইনস্ট্যান্স তৈরি করা হয়েছে। তারপর মেইন মেথডের আর্গুমেন্ট অ্যারে থেকে সোর্স ও ডেস্টিনেশন টি আলাদা করে copyFiles এই মেথডে আর্গুমেন্ট হিেবে পাস করা হয়েছে। এই মেথডটিতে প্রথমে রিকার্সিভলি সবগুলো ফাইল একটি লিস্টে রাখা হয়েছে। এরপর একটি লুপের মধ্যে প্রত্যেকটি ফাইলের জন্য একটি করে থ্রেড তৈরি করে স্টার্ট করা হয়েছে।&nbsp;
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+    এরপর থ্রেডগুলোর রেফারেন্স একটি লিস্টে রাখা হয়েছে এবং একটি লুপরের মাধ্যমে এর join মেথডটি কল করা হয়েছে।&nbsp;
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+    প্রত্যেকটি জাভা প্রোগ্রাম শুরু হয় একটি মেইন থ্রেড থেকে। অর্থাৎ আমরা যদি জাভা প্রোগ্রামে কোনো থ্রেড তৈরি নাও করি, তাহলেও একটি মেইন থ্রেড আমাদের কোডগুলো এক্সিকিউট করে। তাহলে মেইন থ্রেড থেকে আমরা অনেকগুলো থ্রেড তৈরি করেছি এবং মেইন থ্রেড থেকে এগুলোকে রান করতে দিয়েছি। এই থ্রেডগুলো শেষ না হওয়া পর্যন্ত যাতে করে মেইন থ্রেড অপেক্ষা করে এজন্যে এই join মেথডটি কল করা হয়েছে। সবগুলো থ্রেডের কাজ শেষ হয়ে গেলে মেইন থ্রেডে একটি প্রিন্ট করা হয়েছে যে কপি সম্পন্ন হয়েছে।
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+    এবার কমান্ডলাইনে এটিকে রান করতে হলে &#8211;
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <p>
+  </p>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+    <b>বিঃদ্রঃ এই আর্টিক্যালটি শুধুমাত্র তাদের জন্য যারা উপরে উল্লেখিত আর্টিক্যাল দুটি পড়েছে। এখানে যে কোড দেখানো হয়েছে এগুলো জাভা ৮ ব্যবহার করে আরও সংক্ষিপ্ত ও আর ভালোভাবে লেখা যায়। পরবর্তীতে তা দেখানো হবে।</b>
+  </div></p>
+</div>
+</main>
+
+
+<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+        this.page.identifier = 'http:\/\/bazlur.com\/posts\/2017-03-23-%E0%A6%AE%E0%A6%BE%E0%A6%B2%E0%A7%8D%E0%A6%9F%E0%A6%BF%E0%A6%A5%E0%A7%8D%E0%A6%B0%E0%A7%87%E0%A6%A1%E0%A7%87%E0%A6%A1-%E0%A6%AB%E0%A6%BE%E0%A6%87%E0%A6%B2-%E0%A6%95%E0%A6%AA%E0%A6%BF%E0%A6%AF%E0%A6%BC\/';
+        this.page.title = 'মাল্টিথ্রেডেড ফাইল কপিয়ার (Multi-threaded file copier)';
+        this.page.url = 'http:\/\/bazlur.com\/posts\/2017-03-23-%E0%A6%AE%E0%A6%BE%E0%A6%B2%E0%A7%8D%E0%A6%9F%E0%A6%BF%E0%A6%A5%E0%A7%8D%E0%A6%B0%E0%A7%87%E0%A6%A1%E0%A7%87%E0%A6%A1-%E0%A6%AB%E0%A6%BE%E0%A6%87%E0%A6%B2-%E0%A6%95%E0%A6%AA%E0%A6%BF%E0%A6%AF%E0%A6%BC\/';
+    };
+
+    (function () { 
+        var d = document, s = d.createElement('script');
+        s.src = 'https://bazlur-com.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+    Disqus.</a></noscript>
+
+  <footer>
+  
+
+
+
+
+
+
+
+
+
+
+<div id="tag-cloud" style="padding: 5px 15px">
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/advance-java" style="font-size:1rem">advance-java</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/agile" style="font-size:1rem">agile</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/algorithm" style="font-size:1.5691756217423825rem">algorithm</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/arraylist" style="font-size:1rem">arraylist</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/article" style="font-size:1rem">article</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/bangla-book" style="font-size:2.138351243484765rem">bangla-book</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/becoming-expert" style="font-size:1rem">becoming-expert</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/book" style="font-size:2.32158486704862rem">book</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/book-review" style="font-size:1.5691756217423825rem">book-review</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/calculator" style="font-size:1rem">calculator</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/cloning" style="font-size:1rem">cloning</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/coding" style="font-size:1rem">coding</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/coding-convention" style="font-size:1rem">coding-convention</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/daemon-thread" style="font-size:1rem">daemon-thread</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/data-race" style="font-size:1rem">data-race</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/data-structure" style="font-size:1rem">data-structure</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/deliberate-practice" style="font-size:1rem">deliberate-practice</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/deserialization" style="font-size:1rem">deserialization</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/developers" style="font-size:1rem">developers</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/file-copy" style="font-size:1rem">file-copy</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/future-java-developers" style="font-size:1rem">future-java-developers</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/hash-function" style="font-size:1.5691756217423825rem">hash-function</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/history" style="font-size:1rem">history</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/history-of-java" style="font-size:1rem">history-of-java</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/how-java-performs-better" style="font-size:1rem">how-java-performs-better</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/how-java-works" style="font-size:1rem">how-java-works</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/import" style="font-size:1rem">import</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/inspiration" style="font-size:1rem">inspiration</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java" style="font-size:3.459936110533385rem">java</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java-developers" style="font-size:1rem">java-developers</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java-programming" style="font-size:1rem">java-programming</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java-thread" style="font-size:1rem">java-thread</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java-thread-programming" style="font-size:1.5691756217423825rem">java-thread-programming</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/learning" style="font-size:1rem">learning</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/linkedlist" style="font-size:1rem">linkedlist</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/methodology" style="font-size:1rem">methodology</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/null-pointer-exception" style="font-size:1rem">null-pointer-exception</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/object-cloning" style="font-size:1rem">object-cloning</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/packaging" style="font-size:1rem">packaging</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/pass-by-reference" style="font-size:1rem">pass-by-reference</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/pass-by-value" style="font-size:1rem">pass-by-value</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/programming" style="font-size:1rem">programming</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/review" style="font-size:1rem">review</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/scrum" style="font-size:1rem">scrum</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/serialization" style="font-size:1.5691756217423825rem">serialization</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/simple-calculator" style="font-size:1rem">simple-calculator</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/software-development" style="font-size:1rem">software-development</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/string" style="font-size:1rem">string</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/string-pool" style="font-size:1rem">string-pool</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/swing" style="font-size:1rem">swing</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/thread" style="font-size:2.32158486704862rem">thread</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/volatile" style="font-size:1rem">volatile</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/why-java" style="font-size:1rem">why-java</a>
+  
+</div>
+
+
+<footer>
+  <div>
+    <p>
+    &copy; <a href="https://bazlur.com"> A N M Bazlur Rahman</a> 2012 - 2020 | <a href="https://github.com/rokon12">Github</a>
+    | <a href=" https://twitter.com/bazlur_rahman"> @bazlur_rahman</a>
+    </p>
+  </div>
+</footer>
+  
+  </footer>
+  </body>
+</html>
+

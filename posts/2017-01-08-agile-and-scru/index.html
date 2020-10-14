@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Agile and Scrum | My Stream of Thoughts</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/about-me/">About me</a></li>
+      
+      <li><a href="/books/">Books</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+    <h1><span class="title">Agile and Scrum</span></h1>
+    <h2 class="author">A N M Bazlur Rahman</h2>
+    <h2 class="date">2017/01/08</h2>
+</div>
+
+<p class="post-tag">
+    
+ 
+
+ <a class="post-tag" href="http://bazlur.com/tags/agile/">agile</a> <a class="post-tag" href="http://bazlur.com/tags/methodology/">methodology</a> <a class="post-tag" href="http://bazlur.com/tags/scrum/">scrum</a> 
+</p>
+
+<main>
+    <div dir="ltr" style="text-align: left;">
+  <div>
+    <div>
+      <p>
+        আজকের আলোচনার বিষয়বস্তু অ্যাজাইল ও স্ক্রাম। এই শব্দ দুটো সফটওয়্যার ডেভলপার ও ইঞ্জিনিয়াররা প্রায়শই বলে থাকে। চলুন তাহলে এগুলো সম্পর্কে জানা যাক-
+      </p>
+<pre><code>  &lt;p&gt;
+    Agile এর বাংলা অর্থ হতে পারে কর্মদক্ষ কিংবা চটপটে। অর্থাৎ যা খুব সহজে নিজেকে পরিবর্তন করতে পারে প্রয়োজন অনুসারে।
+  &lt;/p&gt;
+  
+  &lt;p&gt;
+    সফটওয়্যার ডেভেলপমেন্টের বেশ কয়েকটি পদ্ধতি বা মেথডোলজি রয়েছে। যেমন- ওয়াটারফল ডেভেলপমেন্ট, প্রোটোটাইপিং, স্পাইরাল, রেপিড সফটওয়্যার ডেভেলপমেন্ট, অ্যাজাইল সফটওয়্যারড ডেভেলপমেন্ট ইত্যাদি। এগুলো বিভিন্ন সফটওয়্যার ইনড্রাস্টিতে ব্যবহার করা হয়। এগুলোর মধ্যে বর্তমানে অ্যাজাইল অনেক বেশি প্রচলিত এবং বলা যায় যে সব সফটওয়্যার ইনড্রাস্ট্রি এই মেথডোলজির দিকে ধাবিত হচ্ছে।
+  &lt;/p&gt;
+  
+  &lt;p&gt;
+    একটা সফটওয়্যার তৈরি করার জন্যে বেশ কতগুলো প্রক্রিয়ার মধ্য দিয়ে যেতে হয়। মনে করুন, আপনি একজন সফটওয়্যার ডেভেলপার। আপনাকে একজন আইডিয়া দিল যে তার একটি ই-কমার্স ওয়েবসাইট লাগবে যা ব্যবহার করে যে কেউ বিভিন্ন পণ্য কিনতে পারবে। এটি একটা আইডিয়া। আপনি এই আইডিয়া নিয়ে বিশ্লেষণ করতে বসে গেলেন। সবকিছু চুলচেড়া বিশ্লেষণ হয়ে গেলে আপনি একটা ডিজাইন করলেন। ডিজাইন সম্পূর্ণ করার পর আপনি তা তৈরি করতে বসে গেলেন। সম্পূর্ণ সফ্টওয়্যার তৈরি করার পর আপনি টেস্ট করলেন ভাল করে। সবকিছু ঠিকঠাক থাকলে আপনার সাইটটি তৈরি হয়ে গেলো।
+  &lt;/p&gt;
+  
+  &lt;p&gt;
+    ওপরের উপায়টিকে ওয়াটারফল মেথডোলজি(waterfall methodology) বলা হয়। তবে এর একটা সমস্যা হলো, আপনার ডেভেলপমেন্ট করার পর আগেই সবকিছু ঠিকঠাক করে ডিজাইন করতে হবে। একটা স্টেজে থেকে আরেকটি স্টেজে যাওয়ার সময় কোনোরকম ভুল করার উপায় নেই। আপনি যখন রিকোয়ারমেন্ট নিয়ে বিশ্লেষণ বা ডিজাইন করছেন তখন কিন্তু মূল প্রোডাক্ট বা সাইটটি তৈরি হয়নি। আপনি যখন পুরোপুরি তৈরি করে ফেললেন তখন আপনার ক্লায়েন্টকে দেখালেন। কিন্তু ক্লায়েন্ট হয়তো সাইটটি দেখে বললো, না আমিতো এভাবে চাইনি। এটি এভাবে করতে হবে। ইতিমধ্যে আপনি পুরো সফটওয়্যার তৈরি করে ফেলেছেন, এখন আর পরিবর্তন করার কোন উপায় নেই। করতে গেলে পুরো প্রক্রিয়ার মধ্যে দিয়ে আবার যেতে হবে যা কষ্টসাধ্য।
+  &lt;/p&gt;
+  
+  &lt;p&gt;
+    এরকম সমস্যা সমাধান করার জন্য অ্যাজাইল মেথডোলজি বলে, না আমরা পুরো সফটওয়্যার সিস্টেমটি একবারে না তৈরি করে একে ছোট ছোট কতগুলো অংশে বিভক্ত করবো। যেমন- যেকোনো সাইটের একটি হোম পেইজ থাকে, ইউজারের রেজিস্ট্রেশন করার জন্য একটি উপায় থাকে। তারপর প্রোডাক্ট লিস্ট করার জন্য একটি ফর্ম থাকে ইত্যাদি। অ্যাজাইলের মতে প্রথমে আমরা একটা ছোট অংশ নিয়ে কাজ শুরু করি, মনে করুন, সেটা হতে পারে ইউজার রেজিস্ট্রেশন সিস্টেম। এটি নিয়ে বিশ্লেষণ, ডিজাইন, ডেভেলপমেন্ট, টেস্ট করে ক্লায়েন্টকে দেখালেন যে এইভাবে সাইটের রেজিস্ট্রেশন সিস্টেম কাজ করবে। ক্লায়েন্ট দেখে ফিডব্যাক দিলো যে তারা কয়েকটি জিনিস পরিবর্তন করতে চায়। অ্যাজাইল সিস্টেম ফিডব্যাক নিয়ে সাথে সাথে সেই পরিবর্তনগুলো করে ফেলবে। তারপর নতুন অংশতে চলে যাবে। এতে সুবিধা হচ্ছে যেকোনো ভুল হলে খুব অল্প সময়ের ব্যবধানে ঠিক করে ফেলা যাচ্ছে। এতে করে রিস্ক কমে যাচ্ছে( পুরো সিস্টেম তৈরি করার পর পুনরায় করতে হচ্ছে না) এবং ক্লায়েন্টকে অল্প সময়েই কিছু ডেলিভার করা যাচ্ছে এবং তারা ব্যবহার করতে পারছে।
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div style=&quot;text-align: justify;&quot;&gt;
+&lt;/div&gt;
+
+&lt;div style=&quot;text-align: justify;&quot;&gt;
+  অ্যাজাইলের ১২ টি ম্যানিফেস্টো রয়েছে।
+&lt;/div&gt;
+</code></pre>
+  </div>
+  <div>
+    <div style="text-align: justify;">
+    </div>
+<pre><code>&lt;div style=&quot;text-align: justify;&quot;&gt;
+  http://agilemanifesto.org/principles.html
+&lt;/div&gt;
+
+&lt;div&gt;
+&lt;/div&gt;
+</code></pre>
+  </div>
+  <div>
+    <div style="text-align: justify;">
+      ওপরের সাইটিতে গেলে সেগুলো দেখা যাবে।
+    </div>
+  </div>
+  <div>
+    <div style="text-align: justify;">
+    </div>
+<pre><code>&lt;div style=&quot;text-align: justify;&quot;&gt;
+  মূল কথা হচ্ছে, অ্যাজাইলে অনেকগুলো আইটারেশন থাকে। একবারে সবগুলো না করে ছোট ছোট অংশে ভেঙ্গে কাজ করা এবং খুব সহজে পরিবর্তনকে বরণ করা।
+&lt;/div&gt;
+
+&lt;div style=&quot;text-align: justify;&quot;&gt;
+  হেরাক্লিটাস নামে এক গ্রিক দার্শনিক বলে গেছেন-
+&lt;/div&gt;
+</code></pre>
+  </div>
+  <div>
+    <div style="text-align: justify;">
+    </div>
+<pre><code>&lt;blockquote&gt;
+  &lt;div style=&quot;text-align: justify;&quot;&gt;
+    The Only Thing That Is Constant Is Change
+  &lt;/div&gt;
+&lt;/blockquote&gt;
+</code></pre>
+  </div>
+  <div>
+    <div>
+    </div>
+<pre><code>&lt;div style=&quot;text-align: justify;&quot;&gt;
+  সুতরাং পরিবর্তন তো থাকবেই।
+&lt;/div&gt;
+</code></pre>
+  </div>
+  <div>
+    <div style="text-align: justify;">
+    </div>
+<pre><code>&lt;blockquote&gt;
+  &lt;div style=&quot;text-align: justify;&quot;&gt;
+    এছাড়াও এটি একটি মানসিকতাও। এতে করে সঠিক কাজটি করা যায়। আপনি একটি ভুল করলে, বুঝতে পারার সঙ্গে সঙ্গে তা শুধরে নেওয়ার মানসিকতা থেকে সঠিকটাকে গ্রহণ করা।
+  &lt;/div&gt;
+&lt;/blockquote&gt;
+</code></pre>
+  </div>
+  <div>
+    <div style="text-align: justify;">
+    </div>
+<pre><code>&lt;blockquote style=&quot;text-align: justify;&quot;&gt;
+  &lt;p&gt;
+    &lt;i&gt;মানুষ হিসেবেও অ্যাজাইল হওয়া জরুরী।&lt;/i&gt;
+  &lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div style=&quot;text-align: justify;&quot;&gt;
+&lt;/div&gt;
+
+&lt;div style=&quot;text-align: justify;&quot;&gt;
+&lt;/div&gt;
+
+&lt;div style=&quot;text-align: justify;&quot;&gt;
+  এই আইডিয়া বেশ কয়েকভাবে ইমপ্লিমেন্ট করা হয়েছে। এগুলো হলো &amp;#8211; স্ক্রাম (Scrum), এক্সট্রিম প্রোগ্রামিং (extreme programming), কানবান(Kanban) ইত্যাদি।
+&lt;/div&gt;
+</code></pre>
+  </div>
+  <div>
+    <div style="text-align: justify;">
+    </div>
+<pre><code>&lt;div style=&quot;text-align: justify;&quot;&gt;
+  এগুলোর মধ্যে স্ক্রাম অনেক বেশি ব্যবহার হয়। বলা যেতে পারে যেসব ইন্ড্রাস্ট্রি অ্যাজাইল ব্যবহার করে তাদের ৮০-৮৫% শতাংশ স্ক্রাম ব্যবহার করে।
+&lt;/div&gt;
+</code></pre>
+  </div>
+  <div>
+    <div style="text-align: justify;">
+    </div>
+  </div>
+  <div>
+    <div style="clear: both; text-align: justify;">
+      <a style="margin-left: 1em; margin-right: 1em;" href="https://4.bp.blogspot.com/-7RjLiwBNTKc/WHK3PtggVhI/AAAAAAAACTA/jHnIg_L69JQTKAEZEr5Se3RY5w0DIbFYACLcB/s1600/agile_scrum_wellington_auckland.jpg"><img loading="lazy" class="aligncenter" src="https://4.bp.blogspot.com/-7RjLiwBNTKc/WHK3PtggVhI/AAAAAAAACTA/jHnIg_L69JQTKAEZEr5Se3RY5w0DIbFYACLcB/s400/agile_scrum_wellington_auckland.jpg" width="400" height="197" border="0" /></a>
+    </div>
+<pre><code>&lt;div style=&quot;text-align: justify;&quot;&gt;
+&lt;/div&gt;
+</code></pre>
+  </div>
+  <div>
+    <div style="text-align: justify;">
+    </div>
+  </div>
+  <div>
+    <div style="text-align: justify;">
+    </div>
+<pre><code>&lt;div style=&quot;text-align: justify;&quot;&gt;
+  &lt;p&gt;
+    স্ক্রাম মূলত একটি ফ্রেমওয়ার্ক যা কতগুলো ভ্যালুজ, প্রিন্সিপালস, এন্ড প্র্যাকটিসেস দিয়ে থাকে যা দিয়ে কোনো অর্গানাইজেশনে ইঞ্জিনিয়ারিং প্রজেক্ট বা সমস্যা সমাধানের মৌলিক ভিত্তি তৈরি করে দেয়।
+  &lt;/p&gt;
+  
+  &lt;p&gt;
+    উপরে বলেছি যে, অ্যাজাইলে একটি প্রজেক্টকে কতগুলো ছোট ছোট অংশে ভাগ করা হয়। এই ছোট অংশগুলোকে আইটারেশন (iteration) বলা হয়। স্ক্রামে এই প্রত্যেকটি আইটারেশনকে স্প্রিন্ট (sprint) বলা হয়।
+  &lt;/p&gt;
+  
+  &lt;p&gt;
+    প্রত্যেকটি স্প্রিন্টের শেষে মূল প্রজেক্টের একটা নিদির্ষ্ট অংশ(end product) তৈরি হয় যা ক্লায়েন্টকে ডেলিভার করা যায়। এটি ক্লায়েন্ট ব্যবহার করে সাথে সাথে ফিডব্যাক দিতে পারে। এতে করে ক্লায়েন্ট-ডেভেলপার সবসময় একটি কনস্ট্যান্ট ফিডব্যক লুপের মধ্যে থাকে এবং এতে ভুল হওয়ার সম্ভবনা কমে যায়। এতে করে ক্লায়েন্টের সম্পূর্ণ ভিজিবিলিটি থাকে। অন্যদিকে ওয়াটারফলে এই ভিজিবিলিটি থাকেই না।
+  &lt;/p&gt;
+  
+  &lt;p&gt;
+    তাহলে প্রশ্ন হতে পারে একটি প্রজেক্টকে কীভাবে ছোট ছোট অংশে ভাগ করা যায়। স্ক্রামে রিকোয়ারমেন্টগুলোকে ইউজার স্টোরি (user story) আকারে লেখা হয়।
+  &lt;/p&gt;
+  
+  &lt;p&gt;
+    ইউজার স্টোরি একটি সংক্ষিপ্ত বর্ণনা যেখানে সফটওয়্যারের একটি ফিচার একজন ইউজারের পার্সপেক্টিভ থেকে লেখা হয়। অনেকটা এমন- একজন ব্যবহারকারী (user) যখন কোনো নির্দিষ্ট ফিচার ব্যবহার করবে সে কী প্রত্যাশা করে। উদাহরণ-
+  &lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+  </div>
+  <div>
+    <p>
+      &nbsp;
+    </p>
+<pre><code>&lt;blockquote&gt;
+  &lt;div style=&quot;text-align: justify;&quot;&gt;
+    As an admin, I want to do &lt; certain things in the site&gt; so that I can do &lt; this things&gt;
+  &lt;/div&gt;
+  
+  &lt;div&gt;
+  &lt;/div&gt;
+  
+  &lt;div style=&quot;text-align: justify;&quot;&gt;
+    As a website user, I need a home button, so that I can return back to the homepage with a single click.
+  &lt;/div&gt;
+&lt;/blockquote&gt;
+</code></pre>
+  </div>
+  <div>
+    <blockquote>
+      <div>
+      </div>
+    </blockquote>
+<pre><code>&lt;div style=&quot;text-align: justify;&quot;&gt;
+  &lt;p&gt;
+     প্রত্যেকটি ইউজার স্টোরিতে তিনটি বিষয় থাকে।
+  &lt;/p&gt;
+  
+  &lt;p&gt;
+    ১. Role বা ক্যারেক্টার অর্থাৎ যে ইউজার স্টোরির নির্দিষ্ট কাজটি করতে যাচ্ছে&lt;br /&gt; ২. feature &amp;#8211; অর্থাৎ ক্যারেক্টারটি আসলে যে কাজটি করতে যাচ্ছে&lt;br /&gt; ৩. benefit &amp;#8211; এই কাজটি করে কী লাভ হবে?
+  &lt;/p&gt;
+  
+  &lt;p&gt;
+    কোনো একটি ইউজার স্টোরিতে যদি এই তিনটি অংশ থাকে, তাহলে এই প্রত্যেকটি স্টোরি হবে একটি অখণ্ড, একটি নির্দিষ্ট ফিচার যা তৈরি করার (কোড লেখার) পর একটি এক্সিকিউটেবলে পরিণত হবে এবং তা ইউজার ব্যবহার করতে পারবে।
+  &lt;/p&gt;
+  
+  &lt;p&gt;
+    এই ইউজার স্টোরিগুলোকে একটি কালেকশনে রাখা হয় যার নাম ব্যাকলগ (backlog)। এই ব্যাকলগ তিন রকম হতে পারে &amp;#8211;&lt;br /&gt; ১. প্রোডাক্ট ব্যাকলগ – এখানে একটি প্রজেক্ট বা প্রোডাক্টের (যে সফটওয়্যারটি তৈরি করা হচ্ছে) সবগুলো ব্যাকলগ থাকে।
+  &lt;/p&gt;
+  
+  &lt;p&gt;
+    ২. স্প্রিন্ট ব্যাকলগ – একটি নির্দিষ্ট স্প্রিন্টের ব্যাকলগ যা কোন নিদির্ষ্ট স্প্রিন্টে যে ইউজার স্টোরিগুলো নিয়ে কাজ করা হচ্ছে সেগুলো।
+  &lt;/p&gt;
+  
+  &lt;p&gt;
+    ৩. রিলিজ ব্যাকলগ – এটি কয়েকটি স্প্রিন্ট মিলে হতে পারে। অনেক সময় স্প্রিন্ট ছোট সময়ে হয়(১ সপ্তাহ বা ২ সপ্তাহ)
+  &lt;/p&gt;
+  
+  &lt;p&gt;
+    এক্ষেত্রে অনেকগুলো স্প্রিন্টের কাজ নিয়ে একটি রিলিজ দেওয়া হয়, যাতে ক্লায়েন্টের কাছে একটা মিনিংফুল কিছু যায়।&lt;br /&gt; এখন যেহেতু আমাদের কাছে অনেকগুলো ইউজার স্টোরি রয়েছে, তাহলে কোনগুলো আগে করা হবে আর কোনগুলো পরে করা হবে তা নিয়ে প্রশ্ন হতে পারে। এক্ষেত্রে অবশ্যই স্টোরিগুলোকে prioritize করতে হবে। এতে করে যে স্টোরিগুলো সবচেয়ে বেশি প্রাসঙ্গিক সেগুলোকে আগে করা যায়।
+  &lt;/p&gt;
+  
+  &lt;p&gt;
+    এই privatization নানাভাবে করা যায়। প্রথমত এই স্টোরিগুলো যেগুলো আগে দরকার সেগুলোকে টপ অর্ডারে সাজানো যেতে পারে। তারপর কোনটি করতে কেমন সময় লাগবে তার একটি হিসাব করা হয়। এই প্রক্রিয়ায় টিমের সবাই অংশ গ্রহণ করতে পারে। এই সময় নির্ধারণ করার জন্য প্রত্যেকটি স্টোরিকে একটি ফিবোনাচি সংখ্যা দেওয়া যেতে পারে। অনেক ছোট স্টোরিকে ১, এর থেকে একটি বেশি বড়কে ২, এভাবে তিন, মাঝারি স্টোরিকে ৫ এবং এর থেকে একটু বড় স্টোরিকে ৮ তারপর ১৩ এভাবে স্টোরি পয়েন্ট দেওয়া যেতে পারে। এরপর টিমের ক্যাপাসিটি দেখা হয়।
+  &lt;/p&gt;
+  
+  &lt;p&gt;
+    ধরা যাক, একটি টিমে দুইজন ডেভেলপার আছে, তারা দুই সপ্তাহে ১৫ পয়েন্ট স্টোরি নিয়ে কাজ করে, তাহলে সেই টিমের ক্যাপাসিটি হচ্ছে ১৫। স্প্রিন্টটি যদি দুই সপ্তাহের হয়, সেক্ষেত্রে একটি স্প্রিন্টে ব্যাকলগ থেকে প্রায়োরিটি অনুযায়ী ১৫ পয়েন্টের স্টোরি বেছে নিয়ে স্প্রিন্ট শুরু করা হয়। এর জন্যে একটি সংক্ষিপ্ত স্প্রিন্ট প্ল্যানিং মিটিং হয়ে থাকে। যেখানে ডেভেলপমেন্ট টিম মেম্বার, প্রোডাক্ট ওনার (product owner) মিলে সিন্ধান্ত নেয়। এই মিটিংয়ের পর ডেভেলপাররা স্টোরিগুলোকে আরও ছোট ছোট টাস্কে বিভক্ত করে এবং এতে টাইম এস্টিমেশন দেয়- একটি ছোট টাস্ক করতে কতক্ষণ লাগতে পারে ইত্যাদি।
+  &lt;/p&gt;
+  
+  &lt;p&gt;
+    এখন স্প্রিন্ট শুরু হয়ে গেল। কিন্তু এখন প্রশ্ন হচ্ছে, কীভাবে কাজের ট্র্যাক রাখা যায়। খুব সংক্ষিপ্ত সময়ের টাইট টামইলাইনে নানাভাবে deviate হওয়ার সম্ভবনা থাকে। এরজন্য স্ক্রামে প্রতিদিন একটা নির্দিষ্ট সময়ে ১৫ মিনিটের একটি সংক্ষিপ্ত মিটিং হয়। একে daily scrum meeting বা daily scrum বলা হয়। এই মিটিং প্রত্যেকটি টিম মেম্বার উপস্থিত থাকে এবং প্রত্যেকেই তিনটি প্রশ্নের উত্তর দিয়ে থাকে &amp;#8211;
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div style=&quot;text-align: justify;&quot;&gt;
+  ১. আপনি গতকাল কী কাজ করেছেন? (status update)&lt;br /&gt; ২. আপনি আজ কী করতে যাচ্ছেন ? (planning update)&lt;br /&gt; ৩. আপনার কাজে কোনো ব্লকার বা কোনো কিছুতে আটকে আছেন কিনা? (obstacle update)এছাড়াও প্রত্যেকটি টিম মেম্বার যে নিদির্ষ্ট স্টোরিতে কাজ করছে, সেগুলোতে কে কতক্ষণ কাজ করেছে তা লগ করে থাকে। এতে করে কোন স্টোরিতে কতক্ষণ কাজ করা হয়েছে বা কতক্ষণ বাকি তা রেকর্ড করা থাকে। এর জন্য একটি স্ক্রাম বোর্ড ব্যবহার করা হয়।&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+  </div>
+  <div>
+    <div style="text-align: justify;">
+    </div>
+<pre><code>&lt;div style=&quot;clear: both; text-align: justify;&quot;&gt;
+  &lt;a style=&quot;margin-left: 1em; margin-right: 1em;&quot; href=&quot;https://2.bp.blogspot.com/-0zs2Bdj8r2Y/WHMqztHaZTI/AAAAAAAACTY/mcipbJYRuT0JUzBE4Sic8d5hOzpXLtT5wCLcB/s1600/Task%2Bboard%2Bin%2Bneed%2Bof%2Brotation.JPG&quot;&gt;&lt;img loading=&quot;lazy&quot; class=&quot;aligncenter&quot; src=&quot;https://2.bp.blogspot.com/-0zs2Bdj8r2Y/WHMqztHaZTI/AAAAAAAACTY/mcipbJYRuT0JUzBE4Sic8d5hOzpXLtT5wCLcB/s400/Task%2Bboard%2Bin%2Bneed%2Bof%2Brotation.JPG&quot; width=&quot;400&quot; height=&quot;247&quot; border=&quot;0&quot; /&gt;&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div style=&quot;text-align: justify;&quot;&gt;
+&lt;/div&gt;
+
+&lt;div style=&quot;text-align: justify;&quot;&gt;
+  &lt;p&gt;
+    এতে করে যেকোনো মুহূর্তে টিমের একটি কমপ্লিট পিকচার পাওয়া যায়। এই বোর্ডের অনলাইন সফটওয়্যার রয়েছে। এগুলোর মধ্যে Trello ও JIRA জনপ্রিয়।
+  &lt;/p&gt;
+  
+  &lt;p&gt;
+    একটি স্ক্রাম টিমে তিনটি ক্যারেক্টার বা এনটিটি থাকে &amp;#8211; স্ক্রাম মাস্টার (Scrum Master) , প্রোডাক্ট ওনার (product owner) এবং ডেভেলপমেন্ট টিম (development team)। স্ক্রাম মাস্টারের কাজ হলো সবকিছু ঠিকঠাক মতো চলছে কিনা তা খেয়াল রাখা। সে অনেকটা কোচ (coach) হিসেবে কাজ করে। তার মূল উদ্দেশ্য থাকে কীভাবে একটি হাই পার্মমেন্স টিম তৈরি করা যায়। টিমে কোনো রকম bottleneck বা সমস্যা থাকলে তা স্ক্রাম মাস্টার সমাধান করার চেষ্টা করে।
+  &lt;/p&gt;
+  
+  &lt;p&gt;
+    সহজ বাংলায়, প্রোডাক্ট ওনার হচ্ছে, একজন ব্যক্তি যে পুরো প্রোডাক্টের মালিক। পুরো টিমের সামগ্রিক কিছুর দায়িত্ব তার । তিনি সবার সাথে যোগাযোগ রাখে। প্রোডাক্ট বা প্রজেক্ট নিয়ে তার একটি ক্লিয়ার ভিশন থাকে যা মূলত স্ক্রাম টিম অ্যাচিভ করতে চেষ্টা করে।
+  &lt;/p&gt;
+  
+  &lt;p&gt;
+    ডেভেলপমেন্ট টিম হলো যারা মূলত সফটওয়্যারটি তৈরি করে- এক্ষেত্রে সফ্টওয়্যার ডেভেলপার, টেস্টার ইত্যাদি।&lt;br /&gt; স্প্রিন্ট শেষে একটি স্প্রিন্ট রিভিও মিটিং হয়। এই মিটিংয়ে মূলত ডেভেলপমেন্ট টিম নির্দিষ্ট স্প্রিন্টে কী কী কাজ হয়েছে তা ডেমোনস্ট্র্যাট করে।
+  &lt;/p&gt;
+  
+  &lt;p&gt;
+    স্প্রিন্ট শেষ হয় আরেকটি মিটিং দিয়ে যার নাম sprint retrospective.
+  &lt;/p&gt;
+  
+  &lt;p&gt;
+    এই মিটিং স্ক্রাম টিমের প্রসেসগুলো নিয়ে আলোচনা করা হয়। এতে কোথাও কোন সমস্যা থাকলে সেগুলো নিয়ে আলেচনা করা হয় এবং কিভাবে সেগুলো থেকে বের হওয়া যায়।
+  &lt;/p&gt;
+  
+  &lt;p&gt;
+    অর্থাৎ একটি স্প্রিন্ট শুরু হয় প্ল্যানিং মিটিং দিয়ে, শেষ হয় স্প্রিন্ট রিভিও ও স্প্রিন্ট রেট্রোসপেকটিভ দিয়ে। এভাবে এই সাইক্যাল চলতে থাকে প্রোডাক্ট বা সফওয়্যারটি সম্পূর্ণ শেষ হওয়ার আগ পর্যন্ত।
+  &lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+  </div>
+</div>
+</main>
+
+
+<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+        this.page.identifier = 'http:\/\/bazlur.com\/posts\/2017-01-08-agile-and-scru\/';
+        this.page.title = 'Agile and Scrum';
+        this.page.url = 'http:\/\/bazlur.com\/posts\/2017-01-08-agile-and-scru\/';
+    };
+
+    (function () { 
+        var d = document, s = d.createElement('script');
+        s.src = 'https://bazlur-com.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+    Disqus.</a></noscript>
+
+  <footer>
+  
+
+
+
+
+
+
+
+
+
+
+<div id="tag-cloud" style="padding: 5px 15px">
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/advance-java" style="font-size:1rem">advance-java</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/agile" style="font-size:1rem">agile</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/algorithm" style="font-size:1.5691756217423825rem">algorithm</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/arraylist" style="font-size:1rem">arraylist</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/article" style="font-size:1rem">article</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/bangla-book" style="font-size:2.138351243484765rem">bangla-book</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/becoming-expert" style="font-size:1rem">becoming-expert</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/book" style="font-size:2.32158486704862rem">book</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/book-review" style="font-size:1.5691756217423825rem">book-review</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/calculator" style="font-size:1rem">calculator</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/cloning" style="font-size:1rem">cloning</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/coding" style="font-size:1rem">coding</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/coding-convention" style="font-size:1rem">coding-convention</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/daemon-thread" style="font-size:1rem">daemon-thread</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/data-race" style="font-size:1rem">data-race</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/data-structure" style="font-size:1rem">data-structure</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/deliberate-practice" style="font-size:1rem">deliberate-practice</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/deserialization" style="font-size:1rem">deserialization</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/developers" style="font-size:1rem">developers</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/file-copy" style="font-size:1rem">file-copy</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/future-java-developers" style="font-size:1rem">future-java-developers</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/hash-function" style="font-size:1.5691756217423825rem">hash-function</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/history" style="font-size:1rem">history</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/history-of-java" style="font-size:1rem">history-of-java</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/how-java-performs-better" style="font-size:1rem">how-java-performs-better</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/how-java-works" style="font-size:1rem">how-java-works</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/import" style="font-size:1rem">import</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/inspiration" style="font-size:1rem">inspiration</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java" style="font-size:3.459936110533385rem">java</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java-developers" style="font-size:1rem">java-developers</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java-programming" style="font-size:1rem">java-programming</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java-thread" style="font-size:1rem">java-thread</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java-thread-programming" style="font-size:1.5691756217423825rem">java-thread-programming</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/learning" style="font-size:1rem">learning</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/linkedlist" style="font-size:1rem">linkedlist</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/methodology" style="font-size:1rem">methodology</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/null-pointer-exception" style="font-size:1rem">null-pointer-exception</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/object-cloning" style="font-size:1rem">object-cloning</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/packaging" style="font-size:1rem">packaging</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/pass-by-reference" style="font-size:1rem">pass-by-reference</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/pass-by-value" style="font-size:1rem">pass-by-value</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/programming" style="font-size:1rem">programming</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/review" style="font-size:1rem">review</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/scrum" style="font-size:1rem">scrum</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/serialization" style="font-size:1.5691756217423825rem">serialization</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/simple-calculator" style="font-size:1rem">simple-calculator</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/software-development" style="font-size:1rem">software-development</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/string" style="font-size:1rem">string</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/string-pool" style="font-size:1rem">string-pool</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/swing" style="font-size:1rem">swing</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/thread" style="font-size:2.32158486704862rem">thread</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/volatile" style="font-size:1rem">volatile</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/why-java" style="font-size:1rem">why-java</a>
+  
+</div>
+
+
+<footer>
+  <div>
+    <p>
+    &copy; <a href="https://bazlur.com"> A N M Bazlur Rahman</a> 2012 - 2020 | <a href="https://github.com/rokon12">Github</a>
+    | <a href=" https://twitter.com/bazlur_rahman"> @bazlur_rahman</a>
+    </p>
+  </div>
+</footer>
+  
+  </footer>
+  </body>
+</html>
+

@@ -9,19 +9,19 @@
     <lastBuildDate>Fri, 07 Apr 2017 20:36:00 +0000</lastBuildDate><atom:link href="http://bazlur.com/categories/object-oriented-concept/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ইনমেমোরী ফাইল সিস্টেম (In memory file system in java)</title>
-      <link>http://bazlur.com/p16/</link>
+      <link>http://bazlur.com/posts/2017-04-07-%E0%A6%87%E0%A6%A8%E0%A6%AE%E0%A7%87%E0%A6%AE%E0%A7%8B%E0%A6%B0%E0%A7%80-%E0%A6%AB%E0%A6%BE%E0%A6%87%E0%A6%B2-%E0%A6%B8%E0%A6%BF%E0%A6%B8%E0%A7%8D%E0%A6%9F%E0%A7%87%E0%A6%AE-in-memory-file-/</link>
       <pubDate>Fri, 07 Apr 2017 20:36:00 +0000</pubDate>
       
-      <guid>http://bazlur.com/p16/</guid>
+      <guid>http://bazlur.com/posts/2017-04-07-%E0%A6%87%E0%A6%A8%E0%A6%AE%E0%A7%87%E0%A6%AE%E0%A7%8B%E0%A6%B0%E0%A7%80-%E0%A6%AB%E0%A6%BE%E0%A6%87%E0%A6%B2-%E0%A6%B8%E0%A6%BF%E0%A6%B8%E0%A7%8D%E0%A6%9F%E0%A7%87%E0%A6%AE-in-memory-file-/</guid>
       <description>ফাইল সিস্টেম হলো এক ধরণের ডেটা স্ট্রাকচার ও পদ্ধতি যার মাধ্যে অপারেটিং সিস্টেম ডিস্কে যে বিভিন্নরকম ফাইল রাখা হয় তার ট্র্যাক রাখে।   অনেক সময়ই বিভিন্ন ইন্টারভিউতে ইন মেমোরী ফাইল সিস্টেম তৈরি করতে বলে। প্রশ্নটি এমন থাকে যে, একই ইন মেমোরী ফাইল সিস্টেম তৈরি রকতে হলে আপনি কীভাবে ডিজাইন করবেন এবং কী কী ডেটা স্ট্রাকচার ব্যবহার করবেন। সম্ভব হলে কিছু কোড লিখে দেখান। (Explain the data structures and algorithm that you would use to design an in-memory file system.</description>
     </item>
     
     <item>
       <title>অ্যবস্ট্রাক্ট ক্লাসের প্রয়োজনীয়তা (why we need abstract class )</title>
-      <link>http://bazlur.com/p32/</link>
+      <link>http://bazlur.com/posts/2017-02-15-%E0%A6%85%E0%A7%8D%E0%A6%AF%E0%A6%AC%E0%A6%B8%E0%A7%8D%E0%A6%9F%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%95%E0%A7%8D%E0%A6%9F-%E0%A6%95%E0%A7%8D%E0%A6%B2%E0%A6%BE%E0%A6%B8%E0%A7%87%E0%A6%B0-%E0%A6%AA/</link>
       <pubDate>Wed, 15 Feb 2017 09:29:00 +0000</pubDate>
       
-      <guid>http://bazlur.com/p32/</guid>
+      <guid>http://bazlur.com/posts/2017-02-15-%E0%A6%85%E0%A7%8D%E0%A6%AF%E0%A6%AC%E0%A6%B8%E0%A7%8D%E0%A6%9F%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%95%E0%A7%8D%E0%A6%9F-%E0%A6%95%E0%A7%8D%E0%A6%B2%E0%A6%BE%E0%A6%B8%E0%A7%87%E0%A6%B0-%E0%A6%AA/</guid>
       <description>পিনাকী ভট্টাচার্যের একটা লেখায় নিচের লাইনগুলো ছিল-    যেমন ফুল যে একটা বিমুর্ত বা এবস্ট্র্যাক্ট ধারণা আমরা অনেকেই হয়ত খেয়াল করিনি। খেয়াল হবে – যদি কাউকে বলি, আমাকে একটা ফুল এনে দেন দেখি। নিশ্চয় সে আনবে জুই, জবা, গন্ধরাজ, দোপাটি, চাঁপা, বোগেনবোলিয়া অথবা রজনীগন্ধা বা আরও কোন দামী কিছু। আমি এক এক করে সব ফিরিয়ে দিব আর বলতে থাকব, ওটা তো জুই, ওটা তো জবা,……..ওটা তো রজনীগন্ধা। আমি শুধু ফুল চাই, কেবল ফুল – যেটা জুইও নয়, জবাও নয়,…… রজনীগন্ধাও নয় – কেবল ফুল চাই আমি।    আমি জানি কেউ আমাকে ফুল এনে দিতে পারবে না, পারে না। কারণ, বাস্তবে really ফুল বলে কিছু নাই; আছে কেবল জুই, জবা, গন্ধরাজ, দোপাটি, চাঁপা, বোগেনবোলিয়া অথবা রজনীগন্ধা বা আরও সব নাম না জানা। কিন্তু তবু ফুল আছে; আছে বিমুর্ততায়, আমাদের ভাবের মধ্যে। “ফুল’ ধরনাটাই একটা এবস্ট্র্যাকশন।   আমি কেনো এই উদ্ধৃতি দিলাম তা এবার বলি,   অবজেক্ট ওরিয়েন্টেড কনসেপ্ট পড়তে গিয়ে অনেকেই ভাবে, অ্যাবস্ট্রাক্ট ক্লাসের প্রয়োজনীয়তা কী?</description>
     </item>
     

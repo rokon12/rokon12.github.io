@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>জাভা থ্রেড প্রোগ্রামিং | My Stream of Thoughts</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/about-me/">About me</a></li>
+      
+      <li><a href="/books/">Books</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+    <h1><span class="title">জাভা থ্রেড প্রোগ্রামিং</span></h1>
+    <h2 class="author">A N M Bazlur Rahman</h2>
+    <h2 class="date">2018/02/16</h2>
+</div>
+
+<p class="post-tag">
+    
+ 
+</p>
+
+<main>
+    <p><span style="font-family: SolaimanLipi;"><span lang="ar-SA"><span lang="bn-BD">আধুনিক কম্পিউটারের প্রোগ্রামগুলো বেশ বুদ্ধিদীপ্ত ও জটিল। এগুলো একই সঙ্গে একাধিক কাজ সম্পাদন করতে পারে। এই প্রোগ্রামগুলো লিখতে হলে আমাদের নিজেদেরও বুদ্ধির পরিচয় দিতে হয়। সাধারণত একটি বড়ো কাজ কতগুলো ছোটো ছোটো কাজের সমষ্টি হয়। এই ছোটো কাজগুলোকে আলাদাভাবে করে</span></span></span>, <span style="font-family: SolaimanLipi;"><span lang="ar-SA"><span lang="bn-BD">এদেরকে জুড়ে দিয়েই সামগ্রিকভাবে বড়ো কাজটি সম্পন্ন করা হয়। এর মধ্যে কিছু কাজ একটি আরেকটির ওপর নির্ভরশীল হয়</span></span></span>, <span style="font-family: SolaimanLipi;"><span lang="ar-SA"><span lang="bn-BD">অন্যগুলো স্বাধীনভাবে সম্পাদন করা যায়। আবার এই ছোটো ছোটো কাজগুলো কম্পিউটার ধারাবাহিকভাবে একটির পর আরেকটি সম্পাদন করতে পারে। তবে যে কাজগুলো স্বাধীন সেগুলোকে যদি একই সঙ্গে করা যায়</span></span></span>, <span style="font-family: SolaimanLipi;"><span lang="ar-SA"><span lang="bn-BD">তাহলে অল্প সময়ে আমরা একাধিক কাজ করে ফেলতে পারি। এই একই সঙ্গে একাধিক কাজ কীভাবে করা যায়</span></span></span>, <span style="font-family: SolaimanLipi;"><span lang="ar-SA"><span lang="bn-BD">তা নির্ভর করে আমাদের প্রোগ্রামটি আমরা কীভাবে লিখছি তার ওপর। জাভা প্রোগ্রামিং ল্যাংগুয়েজ ব্যবহার করে একাধিক ছোটো কাজ খুব সুন্দর ও বুদ্ধিদীপ্তভাবে সাজিয়ে প্রোগ্রাম লেখার উপায় হলো থ্রেডিং। এই সাজানোর প্রক্রিয়াটি শিক্ষানবিশদের কাছে অনেক সময়ই কঠিন মনে হয়। এই কঠিন মনে হওয়াটা যুক্তিসংগত। আমরা মানুষ</span></span></span>, <span style="font-family: SolaimanLipi;"><span lang="ar-SA"><span lang="bn-BD">একই সময়ে একাধিক কাজে মনোযোগ দিতে পারি না। আমাদের চিন্তাভাবনার প্রক্রিয়াও ধারাবাহিক। এই কঠিন বিষয়টি অনুশীলনের মাধ্যমে আয়ত্তে আনতে পারলে কাজের অনেক সুবিধা হয়। প্রোগ্রামিংয়ের ক্ষেত্রেও পরপর ধারবাহিক প্রোগ্রাম লেখা বা চালানো সহজ হলেও একই সময়ে প্রোগ্রামের একাধিক অংশ পাশাপাশি একই সঙ্গে চালানো এবং এদের মধ্য সমন্বয় করা খানিকটা কঠিন। তবে কোনো কাজ কঠিন হলেই কি আর আমরা থেমে থাকি</span></span></span>? <span style="font-family: SolaimanLipi;"><span lang="ar-SA"><span lang="bn-BD">মানুষ চাঁদে গিয়ে ফিরে এসেছে আর এখন প্রস্তুত হচ্ছে মঙ্গলযাত্রায়।</span></span></span></p>
+<p><span style="font-family: SolaimanLipi;"><span lang="ar-SA"><span lang="bn-BD">যেকোনো কঠিন বিষয়কে যদি সহজভাবে উপস্থাপন করা যায়</span></span></span>, <span style="font-family: SolaimanLipi;"><span lang="ar-SA"><span lang="bn-BD">বিশেষ করে যদি মাতৃভাষায় বোঝানো যায়</span></span></span>, <span style="font-family: SolaimanLipi;"><span lang="ar-SA"><span lang="bn-BD">তাহলে যে</span></span></span>–<span style="font-family: SolaimanLipi;"><span lang="ar-SA"><span lang="bn-BD">কেউ তা বিনা ক্লেশেই ধরে ফেলতে পারে। এই সহজ উপস্থাপনের কথা চিন্তা করেই এই বইটি লেখায় প্রয়াস। বইটি লেখার পেছনে আমার গত পাঁচ বছরের পেশাগত অভিজ্ঞতা অনেকভাবে কাজে লেগেছে। এ ছাড়া জাভা ইউজার গ্রুপ বাংলাদেশের </span></span></span>(jugbd.org) <span style="font-family: SolaimanLipi;"><span lang="ar-SA"><span lang="bn-BD">কল্যাণে অসংখ্য শিক্ষানবিশ</span></span></span>, <span style="font-family: SolaimanLipi;"><span lang="ar-SA"><span lang="bn-BD">দেশ ও দেশের বাইরের অনেক সফটওয়্যার নির্মাতা</span></span></span>, <span style="font-family: SolaimanLipi;"><span lang="ar-SA"><span lang="bn-BD">আন্তর্জাতিক খ্যাতিসম্পন্ন বিভিন্ন প্রযুক্তি বিশেষজ্ঞ ও বক্তাদের সঙ্গে বিভিন্ন সময় বিভিন্ন রকম যে আলাপচারিতা হয়েছে এবং এ থেকে যে অভিজ্ঞতা সঞ্চিত হয়েছে</span></span></span>, <span style="font-family: SolaimanLipi;"><span lang="ar-SA"><span lang="bn-BD">তারও খানিকটা এই বইয়ে প্রতিফলিত হয়েছে। আশা করছি এই ছোট্ট বইটি শুধু শিক্ষানবিশদেরই নয়</span></span></span>, <span style="font-family: SolaimanLipi;"><span lang="ar-SA"><span lang="bn-BD">বরং যারা ইতিমধ্যে সফটওয়্যার ইন্ড্রাস্ট্রিতে মাত্র পা রেখেছে</span></span></span>, <span style="font-family: SolaimanLipi;"><span lang="ar-SA"><span lang="bn-BD">তাদের অনেকেরই কাজে আসবে এবং পড়ে উপকৃত হবে। </span></span></span></p>
+<p><span style="font-family: SolaimanLipi;"><span lang="ar-SA"><span lang="bn-BD">বইটিতে অনেকগুলো গুরুত্বপূর্ণ ধারণা বাংলাতে সহজভাবে উপস্থাপন করার চেষ্টা করেছি এবং এগুলোর সঙ্গে প্রচুর উদাহরণ সংযুক্ত করেছি। বইটি শুধু একবার পড়ে গেলে হবে না</span></span></span>, <span style="font-family: SolaimanLipi;"><span lang="ar-SA"><span lang="bn-BD">কয়েকবার পড়তে হবে। এ ছাড়া যে কোডগুলো রয়েছে</span></span></span>, <span style="font-family: SolaimanLipi;"><span lang="ar-SA"><span lang="bn-BD">তার প্রতিটি হাতে আইডিইতে লিখে রান করে পরীক্ষা করে দেখতে হবে। </span></span></span></p>
+<p><span style="font-family: SolaimanLipi;"><span lang="ar-SA"><span lang="bn-BD">বইটিতে জাভা থ্রেডিংয়ের অনেকগুলো গুরুত্বপূর্ণ বিষয় আলোচনা করা হয়েছে। এটিই শেষ নয়। থ্রেডিং বা কনকারেন্সি অনেক বড়ো এবং জটিল বিষয়। শুধু একটি বই পড়ে এ সম্পর্কে বিস্তর ধারণা নেওয়া সম্ভব নয়। তবে প্রাথমিকভাবে এখানে যে বিষয়গুলো আলোচনা করা হয়েছে সেগুলো ভালোভাবে আয়ত্তে আনতে পারলে জাভা থ্রেড প্রোগ্রামিংয়ের যে ভয়টুকু থাকে</span></span></span>, <span style="font-family: SolaimanLipi;"><span lang="ar-SA"><span lang="bn-BD">তা মুছে যাবে বলে আমার বিশ্বাস।</span></span></span></p>
+<p><span style="font-family: SolaimanLipi;"><span lang="ar-SA"><span lang="bn-BD">জাভা ৮</span></span></span>–<span style="font-family: SolaimanLipi;"><span lang="ar-SA"><span lang="bn-BD">এ জাভা থ্রেডিংয়ের বেশ কিছু নতুন সংযোজন রয়েছে</span></span></span>, <span style="font-family: SolaimanLipi;"><span lang="ar-SA"><span lang="bn-BD">যা এই বইয়ে আলোচনা করা হয়নি। এর কারণ জাভা ৮ নিয়ে আমার আরেকটি বইয়ের কাজ চলছে। পরবর্তী বইয়ে ল্যামডা এক্সপ্রেশন ও অন্যান্য বিষয় নিয়ে আলোচনা করব। </span></span></span></p>
+<p><span style="font-family: SolaimanLipi;"><span lang="ar-SA"><span lang="bn-BD">এই বইটি নিয়ে বা এই বইয়ে আলোচিত যেকোনো বিষয় নিয়ে বিভিন্নরকম প্রশ্ন থাকতে পারে। এ ক্ষেত্রে প্রোগ্রামাবাদে </span></span></span>(<a href="http://programabad.com/">http://programabad.com/</a>) <span style="font-family: SolaimanLipi;"><span lang="ar-SA"><span lang="bn-BD">আপনারা প্রশ্নগুলো করতে পারেন। </span></span></span></p>
+<p><span style="font-family: SolaimanLipi;"><span lang="ar-SA"><span lang="bn-BD">বাংলা ভাষায় কনকারেন্সি বা থ্রেডিং নিয়ে একটি বই লেখা হয়েছে শুনে অনেকে হয়তো আঁতকে উঠতে পারে এবং মনে করতে পারে যে</span></span></span>, <span style="font-family: SolaimanLipi;"><span lang="ar-SA"><span lang="bn-BD">এরকম টেকনিক্যাল বই ইংরেজিতেই পড়া উচিত। এমতের সঙ্গে আমার দ্বিমত নেই। ইংরেজিতে যারা সিদ্ধহস্ত</span></span></span>, <span style="font-family: SolaimanLipi;"><span lang="ar-SA"><span lang="bn-BD">তাদের বরং ইংরেজিতেই পড়া উচিত। তবে বাংলা বিশ্বের অন্যতম প্রধান ভাষা </span></span></span>(<span style="font-family: SolaimanLipi;"><span lang="ar-SA"><span lang="bn-BD">সপ্তম</span></span></span>) <span style="font-family: SolaimanLipi;"><span lang="ar-SA"><span lang="bn-BD">হওয়া সত্ত্বেও আমাদের যদি টেকনোলজি বিষয়ে জ্ঞান আহরণের পূর্বশর্ত হিসেবে অন্য একটি ভাষা রপ্ত করতে হয়</span></span></span>, <span style="font-family: SolaimanLipi;"><span lang="ar-SA"><span lang="bn-BD">তাহলে ব্যাপারটি খানিকটা দুঃখজনক তো বটেই</span></span></span>, <span style="font-family: SolaimanLipi;"><span lang="ar-SA"><span lang="bn-BD">বরং ভাষার জন্য আমাদের যে অকৃত্রিম ত্যাগ</span></span></span>, <span style="font-family: SolaimanLipi;"><span lang="ar-SA"><span lang="bn-BD">তা কিছুটা হলেও ম্লান হয়ে যায়। ডিজিটাল বাংলাদেশ বিনির্মাণে ও মাতৃভাষায় প্রযুক্তিচর্চায় এই বই কিছুটা সহায়ক হলেই আমার এ পরিশ্রম সার্থক হয়েছে বলে ধরে নেব।</span></span></span></p>
+<p><span style="font-family: SolaimanLipi;"><span lang="ar-SA"><span lang="bn-BD">বাংলা ভাষার মান রক্ষার্থে বাংলাদেশের মাটির মানুষেরা যে ত্যাগ ও দায়িত্বশীলতার পরিচয় দিয়েছে</span></span></span>, <span style="font-family: SolaimanLipi;"><span lang="ar-SA"><span lang="bn-BD">তা মনে রেখে এই ভাষার মাসে টেকনোলজি বিষয়ে আরেকটি বাংলা বই প্রকাশ করতে পারায় আমি অত্যন্ত আনন্দিত।</span></span></span></p>
+<p><span style="font-family: SolaimanLipi;"><span lang="ar-SA"><span lang="bn-BD">বইয়ের প্রথম সংস্করণে অনিচ্ছাকৃত কিছু ভুল ভ্রান্তি থেকে যায়। যদি চোখে পড়ে</span></span></span>, <span style="font-family: SolaimanLipi;"><span lang="ar-SA"><span lang="bn-BD">পাঠকদের প্রতি অনুরোধ থাকবে তা ধরিয়ে দেওয়ার জন্য</span></span></span>, <span style="font-family: SolaimanLipi;"><span lang="ar-SA"><span lang="bn-BD">যাতে পরবর্তী সংস্করণে সেগুলো ঠিক করে দেওয়া যায়।</span></span></span></p>
+<div class="western">
+  <span lang="bn-BD"><span lang="hi-IN">বইটি পাওয়া যাবে –</span></span>
+</div>
+<div>
+   [spacer height=&#8221;20px&#8221;]
+</div>
+<h2 id="পরপতসথন">প্রাপ্তিস্থান</h2>
+<p>[spacer height=”20px”]</p>
+<div>
+  <strong><a href="https://www.rokomari.com/book/159071/%E0%A6%9C%E0%A6%BE%E0%A6%AD%E0%A6%BE-%E0%A6%A5%E0%A7%8D%E0%A6%B0%E0%A7%87%E0%A6%A1-%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A7%8B%E0%A6%97%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%AE%E0%A6%BF%E0%A6%82" target="_blank" rel="noopener noreferrer">রকমারি ডট কম</a></strong>, ফোন: ১৬২৯৭<br /> <strong>হক লাইব্রেরী</strong>, নীলক্ষেত, ঢাকা, ফোন: ০১৮২০-১৫৭১৮১<br /> <strong>মানিক লাইব্রেরী</strong>, নীলক্ষেত, ঢাকা, ফোন: ০১৭৩৫-৭৪২৯০৮<br /> <strong>রানা বুক পাবলিশার্স</strong>, নীলক্ষেত, ঢাকা, ফোন: ০১৬২৩-০৫৮৪২৮<br /> <strong>অন্যরকম প্রকাশনী</strong>, ঢাকা
+</div>
+<div>
+</div>
+<div>
+</div>
+<div>
+  [spacer height=&#8221;40px&#8221;]
+</div>
+<h2 id="সচপতর">সূচীপত্র</h2>
+<h3 id="লখকর-কথ">লেখকের কথা</h3>
+<h3 id="লখক-পরচত">লেখক পরিচিতি</h3>
+<h3 id="অধযয়-১--থরড-ক">অধ্যায় ১ : থ্রেডিং কী</h3>
+<ul>
+<li>১.১ – থ্রেডিং কী</li>
+<li>১.২ – থ্রেডিংয়ের সুবিধা</li>
+<li>১.৩ – জাভা থ্রেড (Java Thread)</li>
+<li>১.৪ – জাভা মেইন থ্রেড (Java Main Thread)</li>
+</ul>
+<h3 id="অধযয়-২--থরড-তর-ও-বযবহর">অধ্যায় ২ : থ্রেড তৈরি ও ব্যবহার</h3>
+<ul>
+<li>২.১ – থ্রেডের এক্সেপশন হ্যান্ডেলিং (Exception handling from thread)</li>
+<li>২.২ – থ্রেড বন্ধ করা (Terminating a Thread)</li>
+<li>২.৩ – volatile কিওয়ার্ডের ব্যবহার</li>
+<li>২.৪ – থ্রেডের জীবনচক্র (Life Cycle of a Thread)</li>
+<li>২.৫ – jstack and JConsole 51</li>
+<li>২.৬ – থ্রেড স্লিপিং এবং রিজিউমিং (Thread sleeping and resuming)</li>
+<li>২.৭ – থ্রেড সমাপ্তির জন্য অপেক্ষা (Waiting for finalization of a thread )</li>
+</ul>
+<h3 id="অধযয়-৩--থরড-সফট-ও-ডট-সনকরনইজশন">অধ্যায় ৩ : থ্রেড সেফটি ও ডেটা সিনক্রোনাইজেশন</h3>
+<ul>
+<li>৩.১ – থ্রেডের এক্সেপশন হ্যান্ডেলিং (Exception handling from thread)</li>
+<li>৩.২ – থ্রেড লোকাল (ThreadLocal)</li>
+<li>৩.৩ – একাধিক থ্রেডের মধ্যে মেমোরি শেয়ার করা (Memory sharing across<br />
+multiple threads)</li>
+<li>৩.৪ – থ্রেড সেফটি (Thread safety)</li>
+<li>৩.৫ – ইমিউটেবল অবজেক্ট (Immutable Object)</li>
+<li>৩.৬ – রেস কন্ডিশন এবং ক্রিটিক্যাল সেকশন (Race condition and Critical section)</li>
+<li>৩.৭ – লাইভনেস (Liveness)</li>
+<li>৩.৮ – ডেডলক (Deadlock)</li>
+<li>৩.৮ – ডাইনিং ফিলোসফারস সমস্যা (The Dining Philosophers Problem)</li>
+<li>৩.৮ – wait(), notify() এবং notifyAll()</li>
+</ul>
+<h3 id="অধযয়-৪--সনকরনইজড-ও-কনকরনট-কলকশন">অধ্যায় ৪ : সিনক্রোনাইজড ও কনকারেন্ট কালেকশন</h3>
+<ul>
+<li>৪.১ – সিনক্রোনাইজড কালেকশন ও কনকারেন্ট কালেকশন</li>
+</ul>
+<h3 id="অধযয়-৫--বলক-কউ-ও-পরডউসর-কনজউমর-পযটরন">অধ্যায় ৫ : ব্লকিং কিউ ও প্রডিউসার-কনজিউমার প্যাটার্ন</h3>
+<h3 id="অধযয়-৬--একসকউটর-ফরমওয়রক">অধ্যায় ৬ : এক্সিকিউটর ফ্রেমওয়ার্ক</h3>
+<ul>
+<li>৬.১ – এক্সিকিউটর ফ্রেমওয়ার্ক (Executor Framework)</li>
+<li>৬.২ – থ্রেডপুল (Thread Pool)</li>
+<li>৬.৩ – Callable এবং Future</li>
+</ul>
+<h3 id="অধযয়-৭--লকস-এব-লযচস-locks-and-latches">অধ্যায় ৭ : লকস এবং ল্যাচেস (Locks and Latches)</h3>
+<ul>
+<li>৭.১ – লকস (Locks)</li>
+<li>৭.২ – ল্যাচ (Latch)</li>
+</ul>
+<h3 id="অধযয়-৮--কনকরনস-বনম-পযরললজম">অধ্যায় ৮ : কনকারেন্সি বনাম প্যারালালিজম</h3>
+<ul>
+<li>৮.১ – কনকারেন্সি বনাম প্যারালালিজম (Concurrency vs. Parallelism)</li>
+<li>৮.২ – Fork/Join Basics</li>
+</ul>
+<h3 id="অধযয়-৯--পরজকট">অধ্যায় ৯ : প্রজেক্ট</h3>
+<ul>
+<li>৯.১ – মাল্টিথ্রেডেড ফাইল ডাউনলোডার (Multi-Threaded File Downloader)</li>
+</ul>
+<h3 id="পরশষট">পরিশিষ্ট</h3>
+<ul>
+<li>পরিশিষ্ট-১ : অ্যাটোমিক ভ্যারিয়েবলস</li>
+<li>পরিশিষ্ট-২ : ডিমন থ্রেড (DAEMON Thread)</li>
+<li>পরিশিষ্ট-৩ : একটি লাইভলকের উদাহরণ</li>
+<li>পরিশিষ্ট-৪ : অনেক বেশি থ্রেড অ্যাপ্লিকেশনকে ধীর করে</li>
+<li>পরিশিষ্ট-৫ : জাভা মেমোরি মডেল (Java Memory Model – JMM)</li>
+</ul>
+<h2 id="বইয়র-বরণন">বইয়ের বর্ণনা</h2>
+<table>
+  <tr>
+    <td class="proDetailLabel">
+      শিরোনাম
+    </td>
+<pre><code>&lt;td class=&quot;proDetailValue&quot;&gt;
+  জাভা থ্রেড প্রোগ্রামিং
+&lt;/td&gt;
+</code></pre>
+  </tr>
+  <tr>
+    <td class="proDetailLabel">
+      লেখক
+    </td>
+<pre><code>&lt;td class=&quot;proDetailValue&quot;&gt;
+  আ ন ম বজলুর রহমান
+&lt;/td&gt;
+</code></pre>
+  </tr>
+  <tr>
+    <td class="proDetailLabel">
+      ক্যাটেগরি
+    </td>
+<pre><code>&lt;td class=&quot;proDetailValue&quot;&gt;
+  কম্পিউটার প্রোগ্রামিং
+&lt;/td&gt;
+</code></pre>
+  </tr>
+  <tr>
+    <td class="proDetailLabel">
+      ISBN
+    </td>
+<pre><code>&lt;td class=&quot;proDetailValue&quot;&gt;
+  9789843436917
+&lt;/td&gt;
+</code></pre>
+  </tr>
+  <tr>
+    <td class="proDetailLabel">
+      সংস্করন
+    </td>
+<pre><code>&lt;td class=&quot;proDetailValue&quot;&gt;
+  প্রথম প্রকাশ, ফেব্রুয়ারী, ২০১৮
+&lt;/td&gt;
+</code></pre>
+  </tr>
+  <tr>
+    <td class="proDetailLabel">
+      পৃষ্ঠাসংখ্যা
+    </td>
+<pre><code>&lt;td class=&quot;proDetailValue&quot;&gt;
+  ২০০
+&lt;/td&gt;
+</code></pre>
+  </tr>
+</table>
+<p> </p>
+<p><span style="font-family: SolaimanLipi;"><span lang="hi-IN">বইটি সম্পর্কে কয়েকটি রিভিউ</span></span>:</p>
+<p><a href="https://bazlur.com/java-thread-programming-review-1/"><span style="font-family: SolaimanLipi;"><span lang="hi-IN">রিভিউ ১ </span></span></a></p>
+<p><a href="https://bazlur.com/java-thread-programming-review-2/"><span style="font-family: SolaimanLipi;"><span lang="hi-IN">রিভিউ ২</span></span></a></p>
+<p><a href="https://bazlur.com/java-thread-programming-review-3/"><span style="font-family: SolaimanLipi;"><span lang="hi-IN">রিভিউ ৩ </span></span></a></p>
+
+</main>
+
+
+<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+        this.page.identifier = 'http:\/\/bazlur.com\/posts\/2018-02-16-java-thread-programmin\/';
+        this.page.title = 'জাভা থ্রেড প্রোগ্রামিং';
+        this.page.url = 'http:\/\/bazlur.com\/posts\/2018-02-16-java-thread-programmin\/';
+    };
+
+    (function () { 
+        var d = document, s = d.createElement('script');
+        s.src = 'https://bazlur-com.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+    Disqus.</a></noscript>
+
+  <footer>
+  
+
+
+
+
+
+
+
+
+
+
+<div id="tag-cloud" style="padding: 5px 15px">
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/advance-java" style="font-size:1rem">advance-java</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/agile" style="font-size:1rem">agile</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/algorithm" style="font-size:1.5691756217423825rem">algorithm</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/arraylist" style="font-size:1rem">arraylist</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/article" style="font-size:1rem">article</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/bangla-book" style="font-size:2.138351243484765rem">bangla-book</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/becoming-expert" style="font-size:1rem">becoming-expert</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/book" style="font-size:2.32158486704862rem">book</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/book-review" style="font-size:1.5691756217423825rem">book-review</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/calculator" style="font-size:1rem">calculator</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/cloning" style="font-size:1rem">cloning</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/coding" style="font-size:1rem">coding</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/coding-convention" style="font-size:1rem">coding-convention</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/daemon-thread" style="font-size:1rem">daemon-thread</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/data-race" style="font-size:1rem">data-race</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/data-structure" style="font-size:1rem">data-structure</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/deliberate-practice" style="font-size:1rem">deliberate-practice</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/deserialization" style="font-size:1rem">deserialization</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/developers" style="font-size:1rem">developers</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/file-copy" style="font-size:1rem">file-copy</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/future-java-developers" style="font-size:1rem">future-java-developers</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/hash-function" style="font-size:1.5691756217423825rem">hash-function</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/history" style="font-size:1rem">history</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/history-of-java" style="font-size:1rem">history-of-java</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/how-java-performs-better" style="font-size:1rem">how-java-performs-better</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/how-java-works" style="font-size:1rem">how-java-works</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/import" style="font-size:1rem">import</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/inspiration" style="font-size:1rem">inspiration</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java" style="font-size:3.459936110533385rem">java</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java-developers" style="font-size:1rem">java-developers</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java-programming" style="font-size:1rem">java-programming</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java-thread" style="font-size:1rem">java-thread</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java-thread-programming" style="font-size:1.5691756217423825rem">java-thread-programming</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/learning" style="font-size:1rem">learning</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/linkedlist" style="font-size:1rem">linkedlist</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/methodology" style="font-size:1rem">methodology</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/null-pointer-exception" style="font-size:1rem">null-pointer-exception</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/object-cloning" style="font-size:1rem">object-cloning</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/packaging" style="font-size:1rem">packaging</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/pass-by-reference" style="font-size:1rem">pass-by-reference</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/pass-by-value" style="font-size:1rem">pass-by-value</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/programming" style="font-size:1rem">programming</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/review" style="font-size:1rem">review</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/scrum" style="font-size:1rem">scrum</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/serialization" style="font-size:1.5691756217423825rem">serialization</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/simple-calculator" style="font-size:1rem">simple-calculator</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/software-development" style="font-size:1rem">software-development</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/string" style="font-size:1rem">string</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/string-pool" style="font-size:1rem">string-pool</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/swing" style="font-size:1rem">swing</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/thread" style="font-size:2.32158486704862rem">thread</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/volatile" style="font-size:1rem">volatile</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/why-java" style="font-size:1rem">why-java</a>
+  
+</div>
+
+
+<footer>
+  <div>
+    <p>
+    &copy; <a href="https://bazlur.com"> A N M Bazlur Rahman</a> 2012 - 2020 | <a href="https://github.com/rokon12">Github</a>
+    | <a href=" https://twitter.com/bazlur_rahman"> @bazlur_rahman</a>
+    </p>
+  </div>
+</footer>
+  
+  </footer>
+  </body>
+</html>
+

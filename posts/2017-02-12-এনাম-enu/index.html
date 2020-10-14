@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>এনাম (Enum) | My Stream of Thoughts</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/about-me/">About me</a></li>
+      
+      <li><a href="/books/">Books</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+    <h1><span class="title">এনাম (Enum)</span></h1>
+    <h2 class="author">A N M Bazlur Rahman</h2>
+    <h2 class="date">2017/02/12</h2>
+</div>
+
+<p class="post-tag">
+    
+ 
+</p>
+
+<main>
+    <div dir="ltr" style="text-align: left;">
+  <p>
+    জাভাতে এনাম (enum) একটি বিশেষ টাইপ। একটি নির্দিষ্ট সংখ্যক কনস্ট্যান্ট (Constant) তৈরি করতে এটি ব্যবহার করা হয়। যেমন, সপ্তাহের দিনের নাম (days of the week), বছরে মাসের নাম (month in the year), দিক (উত্তর, দক্ষিণ, পূর্ব, পশ্চিম) ইত্যাদি।<br /> উদাহরণ,
+  </p>
+  <pre class="lang:java decode:true ">public enum Day {
+   SATURDAY,
+   SUNDAY,
+   MONDAY,
+   TUESDAY,
+   WEDNESDAY,
+   THURSDAY,
+   FRIDAY
+}</pre>
+  <p>
+    &nbsp;
+  </p>
+  <p>
+    উদাহরণটি Day নামে একটি এনাম তৈরি করা হয়ছে। এতে সাতটি কনস্ট্যান্ট রয়েছে। এনাম তৈরি করতে ক্লাস বা ইন্টারফেসের মতো একটি কিওয়ার্ড enum ব্যবহার করা হয়েছে।<br /> এনাম সরাসরি ডট(&#8216;.&#8217;) অপারেটর ব্যবহার করে অ্যাকসেস করা যায় এবং ভ্যারিয়েবল হিসেবে ব্যবহার করা যায়। উদাহরণ,
+  </p>
+  <p>
+    Day day = Day.SATURDAY;
+  </p>
+  <p>
+    এনাম, if স্টেটমেন্টে ব্যবহার করা যায়। উদাহরণ,
+  </p>
+  <pre class="lang:java decode:true">public class EnumExample {
+   public void displayDay(Day day) {
+      if (day == Day.SATURDAY) {
+         System.out.println("Its saturday! Weekend!");
+      } else if (day == Day.FRIDAY) {
+         System.out.println("It's Friday!! Weekend!");
+      } else {
+         System.out.println("Weekday!");
+      }
+   }
+   public static void main(String[] args) {
+      EnumExample enumExample = new EnumExample();
+      Day day = Day.SATURDAY;
+      enumExample.displayDay(day);
+   }
+}</pre>
+  <p>
+    এনাম সুইচ স্টেটমেন্টে ব্যবহার করা যায়। উদাহরণ,
+  </p>
+  <pre class="lang:java decode:true">public void displayDay(Day day) {
+   switch (day) {
+      case SATURDAY:
+         System.out.println("Its saturday! Weekend!");
+         break;
+      case FRIDAY:
+         System.out.println("It's Friday!! Weekend!");
+         break;
+      default:
+         System.out.println("Weekday!");
+         break;
+   }
+}</pre>
+  <p>
+    জাভা প্রোগ্রামিং ভাষায় এনাম খুব শক্তিশালী একটি ফিচার। কম্পাইল টাইমে জাভা কম্পাইলার এতে বেশ কিছু স্ট্যাটিক মেথড যুক্ত করে। যেমন, values()। এটি একটি অ্যারে রিটার্ন করে যাতে সবগুলো এনামের ভ্যালুগুলো থাকে।<br /> উদাহরণ,
+  </p>
+  <pre class="lang:java decode:true">Day[] values = Day.values();
+for (Day day : values) {
+   System.out.println(day);
+}</pre>
+  <pre name="code"></pre>
+  <p>
+    আউটপুট,
+  </p>
+  <pre class="lang:java decode:true">SATURDAY
+SUNDAY
+MONDAY
+TUESDAY
+WEDNESDAY
+THURSDAY
+FRIDAY</pre>
+  <p>
+    এতে ফিল্ড, মেথড এবং কনস্ট্রাক্টর লেখা যায়। উদাহরণ,
+  </p>
+  <p>
+    &nbsp;
+  </p>
+  <pre class="lang:java decode:true">public enum Level {
+   HIGH(3),
+   MEDIUM(2),
+   LOW(1);
+   private final int levelCode;
+
+   Level(int levelCode) {
+      this.levelCode = levelCode;
+   }
+
+   public int getLevelCode() {
+      return this.levelCode;
+   }
+}</pre>
+  <p>
+    এছাড়াও এনাম সম্পর্কে বেশ কতগুলো তথ্য যা জেনে রাখা বিশেষ প্রয়োজন,<br /> 1. এনাম ডিক্লেয়ারেশন মূলত একটি ক্লাস যা কিনা java.lang.Enum ক্লাসকে এক্সটেন্ড করে। একে এক্সটেন্ড করা যায় না বা অন্য কোনো ক্লাসকে এটি এক্সটেন্ড করতে পারে না। তবে এনাম ইন্টারফেস ইমপ্লিমেন্ট করতে পারে।<br /> 2. এনাম টাইপ সেইফ। অর্থাৎ কোন এনাম ভ্যারিয়েবলে অন্য কোনো ভ্যালু অ্যাসাইন করা সম্ভবন না। উদাহরণ,
+  </p>
+  <pre class="lang:java decode:true">Day day = Day.MONDAY;
+day = 4;</pre>
+  <p>
+    এখানে দ্বিতীয় লাইনটি বৈধ নয়।<br /> 3. এনামকে == অপারেটর ব্যবহার করে এবং equals() মেথড ব্যবহার করে দুই ভাবেই তুলনা করা যায়।<br /> 4. এনামকে নিউ (new) অপারেটর ব্যবহার করে এর ইনস্ট্যান্স তৈরি করা যাবে না।
+  </p>
+</div>
+</main>
+
+
+<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+        this.page.identifier = 'http:\/\/bazlur.com\/posts\/2017-02-12-%E0%A6%8F%E0%A6%A8%E0%A6%BE%E0%A6%AE-enu\/';
+        this.page.title = 'এনাম (Enum)';
+        this.page.url = 'http:\/\/bazlur.com\/posts\/2017-02-12-%E0%A6%8F%E0%A6%A8%E0%A6%BE%E0%A6%AE-enu\/';
+    };
+
+    (function () { 
+        var d = document, s = d.createElement('script');
+        s.src = 'https://bazlur-com.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+    Disqus.</a></noscript>
+
+  <footer>
+  
+
+
+
+
+
+
+
+
+
+
+<div id="tag-cloud" style="padding: 5px 15px">
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/advance-java" style="font-size:1rem">advance-java</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/agile" style="font-size:1rem">agile</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/algorithm" style="font-size:1.5691756217423825rem">algorithm</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/arraylist" style="font-size:1rem">arraylist</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/article" style="font-size:1rem">article</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/bangla-book" style="font-size:2.138351243484765rem">bangla-book</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/becoming-expert" style="font-size:1rem">becoming-expert</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/book" style="font-size:2.32158486704862rem">book</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/book-review" style="font-size:1.5691756217423825rem">book-review</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/calculator" style="font-size:1rem">calculator</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/cloning" style="font-size:1rem">cloning</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/coding" style="font-size:1rem">coding</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/coding-convention" style="font-size:1rem">coding-convention</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/daemon-thread" style="font-size:1rem">daemon-thread</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/data-race" style="font-size:1rem">data-race</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/data-structure" style="font-size:1rem">data-structure</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/deliberate-practice" style="font-size:1rem">deliberate-practice</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/deserialization" style="font-size:1rem">deserialization</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/developers" style="font-size:1rem">developers</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/file-copy" style="font-size:1rem">file-copy</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/future-java-developers" style="font-size:1rem">future-java-developers</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/hash-function" style="font-size:1.5691756217423825rem">hash-function</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/history" style="font-size:1rem">history</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/history-of-java" style="font-size:1rem">history-of-java</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/how-java-performs-better" style="font-size:1rem">how-java-performs-better</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/how-java-works" style="font-size:1rem">how-java-works</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/import" style="font-size:1rem">import</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/inspiration" style="font-size:1rem">inspiration</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java" style="font-size:3.459936110533385rem">java</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java-developers" style="font-size:1rem">java-developers</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java-programming" style="font-size:1rem">java-programming</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java-thread" style="font-size:1rem">java-thread</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java-thread-programming" style="font-size:1.5691756217423825rem">java-thread-programming</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/learning" style="font-size:1rem">learning</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/linkedlist" style="font-size:1rem">linkedlist</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/methodology" style="font-size:1rem">methodology</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/null-pointer-exception" style="font-size:1rem">null-pointer-exception</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/object-cloning" style="font-size:1rem">object-cloning</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/packaging" style="font-size:1rem">packaging</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/pass-by-reference" style="font-size:1rem">pass-by-reference</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/pass-by-value" style="font-size:1rem">pass-by-value</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/programming" style="font-size:1rem">programming</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/review" style="font-size:1rem">review</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/scrum" style="font-size:1rem">scrum</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/serialization" style="font-size:1.5691756217423825rem">serialization</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/simple-calculator" style="font-size:1rem">simple-calculator</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/software-development" style="font-size:1rem">software-development</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/string" style="font-size:1rem">string</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/string-pool" style="font-size:1rem">string-pool</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/swing" style="font-size:1rem">swing</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/thread" style="font-size:2.32158486704862rem">thread</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/volatile" style="font-size:1rem">volatile</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/why-java" style="font-size:1rem">why-java</a>
+  
+</div>
+
+
+<footer>
+  <div>
+    <p>
+    &copy; <a href="https://bazlur.com"> A N M Bazlur Rahman</a> 2012 - 2020 | <a href="https://github.com/rokon12">Github</a>
+    | <a href=" https://twitter.com/bazlur_rahman"> @bazlur_rahman</a>
+    </p>
+  </div>
+</footer>
+  
+  </footer>
+  </body>
+</html>
+

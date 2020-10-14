@@ -9,10 +9,10 @@
     <lastBuildDate>Sat, 17 Mar 2018 22:05:00 +0000</lastBuildDate><atom:link href="http://bazlur.com/tags/swing/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>জাভা সুইয়িং ব্যবহার করে একটি ক্যালকুলেটর</title>
-      <link>http://bazlur.com/p275/</link>
+      <link>http://bazlur.com/posts/2018-03-18-%E0%A6%9C%E0%A6%BE%E0%A6%AD%E0%A6%BE-%E0%A6%B8%E0%A7%81%E0%A6%87%E0%A6%AF%E0%A6%BC%E0%A6%BF%E0%A6%82-%E0%A6%AC%E0%A7%8D%E0%A6%AF%E0%A6%AC%E0%A6%B9%E0%A6%BE%E0%A6%B0-%E0%A6%95%E0%A6%B0%E0%A7%87-/</link>
       <pubDate>Sat, 17 Mar 2018 22:05:00 +0000</pubDate>
       
-      <guid>http://bazlur.com/p275/</guid>
+      <guid>http://bazlur.com/posts/2018-03-18-%E0%A6%9C%E0%A6%BE%E0%A6%AD%E0%A6%BE-%E0%A6%B8%E0%A7%81%E0%A6%87%E0%A6%AF%E0%A6%BC%E0%A6%BF%E0%A6%82-%E0%A6%AC%E0%A7%8D%E0%A6%AF%E0%A6%AC%E0%A6%B9%E0%A6%BE%E0%A6%B0-%E0%A6%95%E0%A6%B0%E0%A7%87-/</guid>
       <description>একদম শুরুতে যখন আমার জাভা প্রোগ্রামিংয়ের হাতে খড়ি বলা যায়, তখন জাভার সুইয়িং ব্যবহার করে একটি ক্যালকুলেটর তৈরি করেছিলাম।
 এটি একটি ফোরামে দিয়েছিলাম। সেখানে অনেকেই পছন্দ করেছিল। হঠাৎ করেই পেয়ে গেলাম প্রায় ৮ বছর আগের একটি কোড।
 আজকের এই পোস্টে এই কোডটি শেয়ার করছি।

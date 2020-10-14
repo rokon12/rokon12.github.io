@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>How to make coffee using Java | My Stream of Thoughts</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/about-me/">About me</a></li>
+      
+      <li><a href="/books/">Books</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+    <h1><span class="title">How to make coffee using Java</span></h1>
+    <h2 class="author">A N M Bazlur Rahman</h2>
+    <h2 class="date">2017/07/15</h2>
+</div>
+
+<p class="post-tag">
+    
+ 
+</p>
+
+<main>
+    <div dir="ltr" style="text-align: left;">
+  <div style="clear: both; text-align: justify;">
+    <a style="margin-left: 1em; margin-right: 1em;" href="http://bazlur.com/wp-content/uploads/2017/07/generate-2B-25284-2529.png"><img loading="lazy" src="http://bazlur.com/wp-content/uploads/2017/07/generate-2B-25284-2529-214x300.png" width="228" height="320" border="0" data-original-height="700" data-original-width="500" /></a>
+  </div>
+  <div style="text-align: justify;">
+    বলা হয়ে থাকে, প্রোগ্রামার হলো একটি মেশিন যা কফিকে কোডে রূপান্তর করতে পারে। এ থেকেই বোঝা যাচ্ছে কফি অত্যন্ত গুরুত্বপূর্ণ একটি পানীয়।
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+    চলুন তাহলে দেখা যাক কীভাবে এই কফি তৈরি করা যায়?
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+    জাভা দিয়ে কফি তৈরির জন্য প্রয়োজন একটি প্যাটার্ন। এর নাম ডেকোরেটর প্যাটার্ন।
+  </div>
+  <div style="text-align: justify;">
+  </div>
+  <div style="text-align: justify;">
+    ডেকোরেটর প্যাটার্নের মূল কথা হলো, ডাইনামিক্যালী একটি অবজেক্টে অতিরিক্ত বৈশিষ্ট্যাবলী যুক্ত করা। যেমন- একটি ছবির ফ্রেম। ছবিটি আমাদের মূল অবজেক্ট। এতে একটি ফ্রেম যুক্ত করে একে ডেকোরেট বা অলঙ্কৃত করা। ডেকোরেটার প্যাটার্নে শুরুতে একটি ইন্টারফেস তৈরি করা হয়। এতে একটি মেথড থাকে যা একটি বৈশিষ্ট্য যুক্ত করতে পারে। একটি কনক্রিট ক্লাস থাকে যা ইন্টারফেসটির ইমপ্লিমেন্টেশন। একটি ডেকোরেটর ক্লাস থাকে যাতে ইন্টারফেসটির একটি রেফারেন্স থাকে এবং এটিও ইন্টারফেসটিকে ইমপ্লিমেন্ট করে। এটি সাধরণত একটি অ্যাবস্ট্রাক্ট ক্লাস হয়। এরপর কতগুলো কনক্রিট অ্যাবস্ট্রাক্ট ক্লাস থাকে। একটি উদাহরণ দেওয়া যাক-
+  </div>
+  <div style="text-align: justify;">
+    <pre class="lang:java decode:true">public interface Coffee {
+    String getIngredient();
+}</pre>
+<pre><code>&lt;p&gt;
+  এর একটি কনক্রিট ক্লাস &amp;#8211;
+&lt;/p&gt;
+</code></pre>
+  </div>
+  <div style="text-align: justify;">
+    <pre class="lang:java decode:true">public class CoffeeBean implements Coffee {
+    @Override
+    public String getIngredient() {
+        return "Coffee bean";
+    }
+}</pre>
+<pre><code>&lt;p&gt;
+  এবার একটি ডেকোরেটর ক্লাস লেখা যাক &amp;#8211;
+&lt;/p&gt;
+</code></pre>
+  </div>
+  <div style="text-align: justify;">
+    <pre class="lang:java decode:true ">public abstract class CoffeeDecorator implements Coffee {
+     private final Coffee coffee;
+<pre><code> public CoffeeDecorator(Coffee coffee) {
+        this.coffee = coffee;
+ }
+
+ @Override
+ public String addIngredient() {
+
+        return coffee.getIngredient();
+  }
+</code></pre>
+<p>}</pre></p>
+  </div>
+  <div style="text-align: justify;">
+    এবার কিছু কনক্রিট ডেকোরেটর লেখা যাক-
+  </div>
+</div>
+<div>
+  <pre class="lang:java decode:true ">public class SaltedCaramelFudge extends CoffeeDecorator {
+    public SaltedCaramelFudge(Coffee coffee) {
+        super(coffee);
+    }
+<pre><code>@Override
+public String getIngredient() {
+    return super.getIngredient() + &quot; + Salted caramel fudge&quot;;
+}
+</code></pre>
+<p>}</pre></p>
+  <pre class="lang:java decode:true ">public class SweetenedMilk extends CoffeeDecorator {
+    public SweetenedMilk(Coffee coffee) {
+        super(coffee);
+    }
+
+    @Override
+    public String getIngredient() {
+        return super.getIngredient() + " + Sweetened Milk";
+    }
+}
+</pre>
+  <pre class="lang:java decode:true ">public class VanillaAlmondExtract extends CoffeeDecorator {
+    public VanillaAlmondExtract(Coffee coffee) {
+        super(coffee);
+    }
+
+    @Override
+    public String getIngredient() {
+        return super.getIngredient() + " + Vanilla/almond extract";
+    }
+}
+</pre>
+  <pre class="lang:java decode:true">public class DarkCookieCrumb extends CoffeeDecorator {
+    public DarkCookieCrumb(Coffee coffee) {
+        super(coffee);
+    }
+
+    @Override
+    public String getIngredient() {
+        return super.getIngredient() + " + Dark Cookie Crumb";
+    }
+}</pre>
+</div>
+<div dir="ltr" style="text-align: left;">
+  <div style="text-align: justify;">
+    এবার এগুলো দিয়ে কফি তৈরি করা যাক &#8211;
+  </div>
+</div>
+<div>
+</div>
+<div>
+  <pre class="lang:java decode:true ">public class CoffeeApp {
+    public static void main(String[] args) {
+<pre><code>    Coffee coffee = new VanillaAlmondExtract(new SaltedCaramelFudge(new SweetenedMilk(new CoffeeBean())));
+    System.out.println(coffee.getIngredient());
+}
+</code></pre>
+<p>}<br />
+</pre></p>
+  <pre class="lang:java decode:true " title="Output:">Coffee bean + Sweetened Milk + Salted caramel fudge + Vanilla/almond extract
+</pre>
+</div>
+<div dir="ltr" style="text-align: left;">
+  <div style="text-align: justify;">
+    একটির কনস্ট্রাক্টরে আরেকটি পাস করে করে এভাবে আমরা ডেকোরেটর প্যাটার্ন ব্যবহার করে ডাইনামিক্যালী কফি তৈরি করতে পারি।
+  </div>
+</div>
+</main>
+
+
+<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+        this.page.identifier = 'http:\/\/bazlur.com\/posts\/2017-07-15-how-to-make-coffee-using-jav\/';
+        this.page.title = 'How to make coffee using Java';
+        this.page.url = 'http:\/\/bazlur.com\/posts\/2017-07-15-how-to-make-coffee-using-jav\/';
+    };
+
+    (function () { 
+        var d = document, s = d.createElement('script');
+        s.src = 'https://bazlur-com.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+    Disqus.</a></noscript>
+
+  <footer>
+  
+
+
+
+
+
+
+
+
+
+
+<div id="tag-cloud" style="padding: 5px 15px">
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/advance-java" style="font-size:1rem">advance-java</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/agile" style="font-size:1rem">agile</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/algorithm" style="font-size:1.5691756217423825rem">algorithm</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/arraylist" style="font-size:1rem">arraylist</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/article" style="font-size:1rem">article</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/bangla-book" style="font-size:2.138351243484765rem">bangla-book</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/becoming-expert" style="font-size:1rem">becoming-expert</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/book" style="font-size:2.32158486704862rem">book</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/book-review" style="font-size:1.5691756217423825rem">book-review</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/calculator" style="font-size:1rem">calculator</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/cloning" style="font-size:1rem">cloning</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/coding" style="font-size:1rem">coding</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/coding-convention" style="font-size:1rem">coding-convention</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/daemon-thread" style="font-size:1rem">daemon-thread</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/data-race" style="font-size:1rem">data-race</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/data-structure" style="font-size:1rem">data-structure</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/deliberate-practice" style="font-size:1rem">deliberate-practice</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/deserialization" style="font-size:1rem">deserialization</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/developers" style="font-size:1rem">developers</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/file-copy" style="font-size:1rem">file-copy</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/future-java-developers" style="font-size:1rem">future-java-developers</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/hash-function" style="font-size:1.5691756217423825rem">hash-function</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/history" style="font-size:1rem">history</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/history-of-java" style="font-size:1rem">history-of-java</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/how-java-performs-better" style="font-size:1rem">how-java-performs-better</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/how-java-works" style="font-size:1rem">how-java-works</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/import" style="font-size:1rem">import</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/inspiration" style="font-size:1rem">inspiration</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java" style="font-size:3.459936110533385rem">java</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java-developers" style="font-size:1rem">java-developers</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java-programming" style="font-size:1rem">java-programming</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java-thread" style="font-size:1rem">java-thread</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java-thread-programming" style="font-size:1.5691756217423825rem">java-thread-programming</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/learning" style="font-size:1rem">learning</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/linkedlist" style="font-size:1rem">linkedlist</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/methodology" style="font-size:1rem">methodology</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/null-pointer-exception" style="font-size:1rem">null-pointer-exception</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/object-cloning" style="font-size:1rem">object-cloning</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/packaging" style="font-size:1rem">packaging</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/pass-by-reference" style="font-size:1rem">pass-by-reference</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/pass-by-value" style="font-size:1rem">pass-by-value</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/programming" style="font-size:1rem">programming</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/review" style="font-size:1rem">review</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/scrum" style="font-size:1rem">scrum</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/serialization" style="font-size:1.5691756217423825rem">serialization</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/simple-calculator" style="font-size:1rem">simple-calculator</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/software-development" style="font-size:1rem">software-development</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/string" style="font-size:1rem">string</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/string-pool" style="font-size:1rem">string-pool</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/swing" style="font-size:1rem">swing</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/thread" style="font-size:2.32158486704862rem">thread</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/volatile" style="font-size:1rem">volatile</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/why-java" style="font-size:1rem">why-java</a>
+  
+</div>
+
+
+<footer>
+  <div>
+    <p>
+    &copy; <a href="https://bazlur.com"> A N M Bazlur Rahman</a> 2012 - 2020 | <a href="https://github.com/rokon12">Github</a>
+    | <a href=" https://twitter.com/bazlur_rahman"> @bazlur_rahman</a>
+    </p>
+  </div>
+</footer>
+  
+  </footer>
+  </body>
+</html>
+

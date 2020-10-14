@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>অ্যাডভান্সড জাভা প্রোগ্রামিং | My Stream of Thoughts</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/about-me/">About me</a></li>
+      
+      <li><a href="/books/">Books</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+    <h1><span class="title">অ্যাডভান্সড জাভা প্রোগ্রামিং</span></h1>
+    <h2 class="author">A N M Bazlur Rahman</h2>
+    <h2 class="date">2019/03/01</h2>
+</div>
+
+<p class="post-tag">
+    
+ 
+
+   <a class="post-tag" href="http://bazlur.com/tags/book/">book</a>
+</p>
+
+<main>
+    <h2 id="পরপতসথন">প্রাপ্তিস্থান</h2>
+<p><strong><em>অনলাইন এবং ফেসবুকে সারাদেশে হোম ডেলিভারি</em></strong><br />
+**দ্বিমিক প্রকাশনী, **ফোন: ০১৭০৭ ৯৬ ০৩ ৭২ (যোগাযোগ ও বিকাশ)</p>
+<p><strong><a href="https://www.rokomari.com/book/177217/programing-exercise">রকমারি ডট কম</a></strong>, ফোন: ১৬২৯৭<br />
+<strong><a href="https://www.daraz.com.bd/dimik-prokashoni/">দারাজ ডট কম ডট বিডি</a></strong>, ফোন: ১৬৪৯২</p>
+<p><strong><em>ঢাকা</em></strong><br />
+<strong>হক লাইব্রেরী</strong>, নীলক্ষেত, ঢাকা, ফোন: ০১৮২০-১৫৭১৮১<br />
+<strong>মানিক লাইব্রেরী</strong>, নীলক্ষেত, ঢাকা, ফোন: ০১৭৩৫-৭৪২৯০৮<br />
+<strong>রানা বুক পাবলিশার্স</strong>, নীলক্ষেত, ঢাকা, ফোন: ০১৬২৩-০৫৮৪২৮<br />
+<strong>বাতিঘর ঢাকা</strong>, বিশ্বসাহিত্যকেন্দ্র, বাংলামটর।</p>
+<p><em><strong>চট্টগ্রাম</strong></em><br />
+<strong>বাতিঘর</strong>, প্রেস ক্লাব ভবন, জামালখান রোড, চট্টগ্রাম।</p>
+<p><em><strong>বরিশাল</strong></em><br />
+<strong>বুক ভিলা</strong>, বিবিরপুকুর পাড়।</p>
+<p><em><strong>রাজশাহী</strong></em><br />
+<strong>বুক পয়েন্ট</strong>, সোনাদীঘির মোড়, রাজশাহী।</p>
+<h2 id="ভমক">ভূমিকা</h2>
+<p>বিশ্বব্যাপী তথ্যপ্রযুক্তির জগতে জাভা একটি শক্তিশালী প্রোগ্রামিং ভাষা হিসেবে সুপ্রতিষ্ঠিত। শিক্ষাপ্রতিষ্ঠান থেকে শুরু করে মোবাইল ফোন, ওয়েব ও এন্টারপ্রাইজ সফটওয়্যার তৈরির জন্য জাভা খুবই জনপ্রিয়। তাই জাভার অগ্রসর বিষয়গুলো নিয়ে একটি নতুন বই বাংলা ভাষায় তথ্যপ্রযুক্তি শিক্ষার প্রসারে একটি অনন্য সংযোজন।<br />
+বাংলাদেশের বেশিরভাগ বিশ্ববিদ্যালয়গুলোতেই জাভা শেখানো হয়। তবে সেখানে মূলত গুরুত্ব দেওয়া হয় অবজেক্ট ওরিয়েন্টেড প্রোগ্রামিং বা ওওপি (OOP)-এর ওপর, যেন শিক্ষার্থীরা ওওপি-এর মূল ধারণা ভালোভাবে আয়ত্ত করতে পারে এবং পরবর্তী সময়ে অন্য প্রোগ্রামিং ভাষায় কাজ করার সময়ও এই ধারণা ব্যবহার করতে পারে। আমি মনে করি, বিশ্ববিদ্যালয়ে কম্পিউটার বিজ্ঞান বিভাগের শিক্ষার্থীদের এর বেশি জাভা জানার প্রয়োজন নেই। জাভা দিয়ে গুই (GUI) তৈরি, মাল্টিথ্রেডিং, নেটওয়ার্ক প্রোগ্রামিং, ডেটাবেজ প্রোগ্রামিং, ওয়েব প্রোগ্রামিং কিংবা মোবাইল ফোনের অ্যাপ্লিকেশন তৈরি – এগুলো জাভা শেখার সময়ে শিখতে যাওয়া মানে সময়ের অপচয় এবং মূল বিষয়ে গুরুত্ব না দেওয়া। বরং নেটওয়ার্কিং কোর্সে জাভা দিয়ে নেটওয়ার্ক প্রোগ্রামিং, ডেটাবেজ কোর্সের প্রজেক্ট করার সময় জাভা (বা অন্য কোনো ভাষা) ব্যবহার করে ডেটাবেজ প্রোগ্রামিং এসব কাজ করা উচিত। তাই এই বইতে লেখক বজলুর রহমান জাভার যেসব বিষয় নিয়ে আলোচনা করেছেন, সেগুলোকে আমি বিশ্ববিদ্যালয় পর্যায়ের শিক্ষার্থীদের জন্য ঐচ্ছিক বলবো, তবে যারা পেশাদার প্রোগ্রামার, সবে মাত্র প্রোগ্রামিং শুরু করেছেন কিংবা বেশ কয়েক বছর ধরে জাভা নিয়ে কাজ করছেন, তাদের জন্য বইটি অবশ্যপাঠ্য।</p>
+<p>প্রোগ্রামিং ক্যারিয়ারে যখনই কেউ মনে করবে যে, সে যথেষ্ট শিখে ফেলেছে, বাকি জীবনে নিজের জানা জিনিসগুলো প্রয়োগ করেই কাজ চলে যাবে, তখনই আসলে তার ক্যারিয়ারের সমাপ্তি। চিকিৎসকদের মতো প্রোগ্রামারদেরও সব সময়ই নিয়মিত কাজের পাশাপাশি পড়ালেখা চালিয়ে যেতে হয়, নিত্যনতুন বিভিন্ন জিনিস নিয়ে ঘাঁটাঘাঁটি করতে হয়, নিজের জ্ঞান ও দক্ষতা বৃদ্ধির লক্ষ্যে কাজ করতে হয়। ল্যামডা এক্সপ্রেশন ও স্ট্রিম এপিআই জাভাতে বেশ নতুন সংযোজন এবং এগুলোর গুরুত্ব ও সুবিধা এতটাই যে, আমার ধারণা, এরই অনেক জাভা প্রোগ্রামার তাঁদের কাজে এগুলো ব্যবহার করা শুরু করে দিয়েছেন। তাই এগুলো না জানলে কিংবা ব্যবহার করতে স্বচ্ছন্দ না হলে প্রোগ্রামাররা পিছিয়ে পড়বেন। আমি তাই বজলুরকে বিশেষভাবে ধন্যবাদ দেব বিষয়গুলো বাংলা ভাষায় সহজভাবে তুলে ধরার জন্য। </p>
+<p>ফাংশনাল প্রোগ্রামিং নতুন কোনো ধারণা নয়, তবে বর্তমানে এটি বেশ জনপ্রিয় হচ্ছে। তাই বিভিন্ন প্রোগ্রামিং ভাষার কারিগররা এই বৈশিষ্ট্যটি তাঁদের ভাষায় যুক্ত করে ফেলেছেন কিংবা ফেলছেন। জাভাতেও ফাংশনাল প্রোগ্রামিং বিষয়টি অপেক্ষাকৃত নতুন। এখন কেউ তার প্রতিদিনকার কাজে ফাংশনাল প্রোগ্রামিং ব্যবহার করুক আর না-ই করুক, ফাংশনাল প্রোগ্রামিংয় সম্পর্কে স্বচ্ছ ধারণা তাদেরকে আরো সমৃদ্ধ করবে। এই বইটি ফাংশনাল প্রোগ্রামিং শেখানোর বই না হলেও জাভার যেই দুটি ফিচার বিশেষভাবে আলোচনা করা হয়েছে, সেগুলো জাভাতে ফাংশনাল প্রোগ্রামিং করার জন্য অত্যন্ত গুরুত্বপূর্ণ।</p>
+<p>আরেকটি বিষয় বলা প্রয়োজন। জাভা দিয়ে প্রোগ্রাম লিখতে কিংবা বিভিন্ন সফটওয়্যার তৈরি করতে গেলে কিন্তু একটি কম্পিউটার জাভায় লেখা প্রোগ্রামকে কীভাবে চালায়, সেটি না জানলেও চলবে। অর্থাৎ জাভা ভার্চুয়াল মেশিন-সম্পর্কিত খুঁটিনাটি না জেনেও দিনের পর দিন জাভা কোড লিখে যাওয়া যায়। কিন্তু বড়ো পরিসরে, বিশেষ করে আন্তর্জাতিক পরিমন্ডলে কাজ করতে হলে বেশ কিছু বিষয়ের গভীরে যাওয়া প্রয়োজন। তাই কেউ যদি একটি ভালো প্রতিষ্ঠানে ইন্টারভিউ দিতে যান এবং তিনি যদি দাবি করেন যে গত পাঁচ বছর ধরে প্রফেশনাল কাজে জাভা ব্যবহার করছেন, তাহলে যিনি ইন্টারভিউ নিচ্ছেন, তিনি আশা করবেন যে প্রার্থী জাভার খুঁটিনাটি বিষয়গুলো জানবেন, বিশেষ করে জেভিএম কীভাবে কাজ করে, গার্বেজ কালেকশন কীভাবে হয় ইত্যাদি। লেখক এই বইতে বিষয়গুলো বিস্তারিত ব্যাখ্যা করেছেন এবং এগুলো অবশ্যই জাভা প্রোগ্রামারদের জানা উচিত।</p>
+<p>পরিশেষে বলতে চাই, লেখক আ ন ম বজলুর রহমানের জাভা নিয়ে লেখা অন্য দুটি বইয়ের মতো এই বইটিও পাঠকপ্রিয় হবে এবং বাংলাদেশের তথ্যপ্রযুক্তির জগতে গুরুত্বপূর্ণ অবদান রাখবে। আর দ্বিমিক থেকে বইটি প্রকাশ করতে পেরে আমরা গর্বিত। আশা করছি, লেখক তাঁর জাভা চর্চা অব্যাহত রাখবেন এবং নিয়মিতই পাঠকদের জন্য প্রয়োজনীয় ও চমৎকার সব বই উপহার দিয়ে যাবেন।</p>
+<p><strong>তামিম শাহ‍্‍‍রিয়ার সুবিন,</strong><br />
+জানুয়ারি ২০১৯,<br />
+সিঙ্গাপুর।</p>
+<h2 id="লখকর-কথ">লেখকের কথা</h2>
+<p>পৃথিবী বদলে যাচ্ছে। আমরাও নতুনের খুঁজে প্রতিনিয়ত নতুন নতুন প্রয়োজনের সম্মুখীন হচ্ছি। এই বইটি ঠিক এই প্রয়োজনের তাগিদেই লেখা। অনেকগুলো নতুন প্রোগ্রামিং ল্যাংগুয়েজের সঙ্গে পাল্লা দিয়ে জাভা প্রোগ্রামিং ল্যাংগুয়েজেও যুক্ত হয়েছে ল্যামডা এক্সপ্রেশন। এর ফলে জাভা প্রোগ্রামিং ল্যাংগুয়েজে এসেছে প্রোগ্রাম লেখার নতুন স্টাইল। এখন আমরা আগের থেকে আরো অনেক সুন্দর ও সংক্ষিপ্ত কোড লিখতে পারি। এই বইতে এই সুন্দর ও সংক্ষিপ্তভাবে প্রোগ্রাম লেখার উপায়গুলোর সঙ্গে জাভা প্রোগ্রামিংয়ের বেশ কতগুলো অ্যাডভান্সড ও গুরুত্বপূর্ণ বিষয় আলোচনা করা হয়েছে। প্যারালাল কম্পিউটিংয়ের জন্য প্রোগ্রাম লেখা এক সময় একটি ভীতিকর কাজ ছিল। জাভা ৮-এ প্যারালাল স্ট্রিম (Parallel streams) ফিচারটি যুক্ত করার ফলে এখন একটি মেথড কলেই এই কাজটি হয়ে যাচ্ছে। </p>
+<p>জাভা ৮ রিলিজ হয়েছে প্রায় ৫ বছর আগে। যদিও এখনো অনেকেই আগের মতো ইম্পারেটিভ পদ্ধতিতে প্রোগ্রামিং করে যাচ্ছে, যা মোটেও সময়পযোগী নয়। সময়ের সঙ্গে সঙ্গে আমরা প্রতিনিয়ত নতুন নতুন সমস্যার সম্মুখীন হচ্ছি। এই নতুন সমস্যাগুলো দশ বছর আগের নয়, বর্তমানের। তাই বর্তমানের সমস্যা অতীতের মতো করে সমাধান করলে হবে না। এর জন্য প্রয়োজন অতীতের অভিজ্ঞতা ও বর্তমানের চাহিদার সঙ্গে অভিযোজন। জাভা বর্তমানের চাহিদার কথা চিন্তা করে পরিবর্তিত হচ্ছে। আমাদেরও উচিত এই পরিবর্তনগুলো দেখা ও শেখা। এতে আমাদের গ্রহণযোগ্যতা যেমন বাড়বে তেমনি সমস্যা সমাধানের দক্ষতাও বাড়বে। </p>
+<p>বইটিতে অনেকগুলো বিষয়ে বিস্তারিত ব্যাখ্যা থাকলেও কিছু কিছু বিষয় সম্পর্কে শুধুমাত্র ধারণা দেওয়া হয়েছে। এই বিষয়গুলো এত গভীর যে, প্রত্যেক বিষয়ই একেকটি নতুন বইয়ের দাবিদার। আগ্রহী পাঠক এগুলো থেকে ধারণা নিয়ে আরো বিস্তারিত পড়াশোনা করার জন্য ইন্টারনেটের গভীর জ্ঞান সমুদ্রে ঝাঁপিয়ে পড়তে পারেন। এক্ষেত্রে এই বইয়ে নির্দেশিত বিষয়গুলো নিশ্চয়ই পাঠককে উপকৃত করবে। </p>
+<p>এই বইটিও আমার আগের জাভা প্রোগ্রামিং ও জাভা থ্রেড প্রোগ্রামিং-এর ধারাবাহিকতার ফসল। এই বইটি আমার আগের বই দুটি যারা পড়েছে বা ইতিমধ্যে জাভা প্রোগ্রামিংয়ে সিদ্ধহস্ত কিন্তু জাভাতে কীভাবে ল্যামডা এক্সপ্রেশন লিখতে হয় কিংবা কীভাবে স্ট্রিম এপিআই ব্যবহার করতে হয় জানতে চান, তাদের জন্য। জাভা প্রোগ্রামিংয়ে একদম নতুনদের জন্য এই বইটি মোটেও উপযোগী হবে না। তাই যারা প্রোগ্রামিংয়ে একদমই নতুন, তারা শুরুতে আমরা জাভা প্রোগ্রামিং বইটি পড়তে পারেন। এই বইটিতে অনেক ছোটো ছোটো উদাহরণ রয়েছে। বইটি পড়ার সঙ্গে সঙ্গে এগুলো আইডিইতে টাইপ করে রান করে ফলাফল দেখাটা জরুরি। প্রোগ্রামিং শেখার জন্য বই পড়া অত্যাবশ্যকীয় হলেও শুধুমাত্র বই পড়ে প্রোগ্রামার হওয়া যায় না। যে-কোনো বিষয়েই দক্ষ হতে হলে প্রয়োজন অনেক বেশি অনুশীলন-এর কোনো বিকল্প নেই। </p>
+<p>সময়ের স্বল্পতা ও বইয়ের পরিসরের জন্য ইচ্ছে থাকলেও অনেকগুলো গুরুত্বপূর্ণ বিষয় এই বইতে যুক্ত করা গেল না। পরবর্তী সংস্করণ বা নতুন কোনো বইতে সেগুলো নিয়ে আলোচনা করার চেষ্টা করবো।</p>
+<p>জাভার ওপর পর পর তিনটি বই লিখেও মনে হচ্ছে, এখনো অনেক কিছু লেখার বাকি। যেমন, জাভা নেটওয়ার্কিং, জাভা ডেটাবেইজ প্রোগ্রামিং, জাভা ওয়েব প্রোগ্রামিং ইত্যাদি। ভবিষ্যতে এগুলো নিয়ে আলাদা বই লেখার ইচ্ছে পোষণ করছি। </p>
+<p>পাঠকের বিশেষ কোনো পরামর্শ থাকলে আমাকে ইমেইল করে জানানোর অনুরোধ রইল। এই বই বা এর বাইরের বিষয়-সম্পর্কিত কোনো প্রশ্ন থাকলে প্রোগ্রামাবাদে (<a href="https://programabad.com/">https://programabad.com/</a>) প্রশ্ন করা যেতে পারে।</p>
+<p>হ্যাপি কোডিং !</p>
+<p>আ ন ম বজলুর রহমান</p>
+<p>Twitter: <a href="https://twitter.com/bazlur_rahman">https://twitter.com/bazlur_rahman</a><br />
+Website: <a href="https://bazlur.com/">https://bazlur.com/</a><br />
+Email: <a href="mailto:bazlur@masterdevskills.com">bazlur@masterdevskills.com</a></p>
+<h2 id="mce_0">সূচীপত্র</h2>
+<ul>
+<li>ভূমিকা</li>
+<li>লেখক পরিচিতি</li>
+<li>লেখকের কথা</li>
+<li>অধ্যায় এক – ল্যামডা এক্সপ্রেশন (Lambda Expression)
+<ul>
+<li>প্রস্তাবনা</li>
+<li>ল্যামডা এক্সপ্রেশন (Lambda Expression)</li>
+<li>অ্যানোনিমাস ইনার ক্লাস (Anonymous Inner Class) ও ল্যামডা এক্সপ্রেশন</li>
+<li>প্রোগ্রামিং প্যারাডাইম (Programming Paradigm)</li>
+<li>মেথড (Method) বনাম ফাংশন (Function)</li>
+<li>ইম্পারেটিভ বনাম ডিক্লারেটিভ বনাম ফাংশনাল প্রোগ্রামিং ভাষা</li>
+</ul>
+</li>
+<li>অধ্যায় দুই – সংজ্ঞা ও সিনট্যাক্স (Definition &amp; Syntax)
+<ul>
+<li>সংজ্ঞা ও সিনট্যাক্স</li>
+<li>ফাংশনাল ইন্টারফেস (Functional Interface)</li>
+<li>টার্গেট টাইপিং (Target Typing)</li>
+<li>টার্গেট টাইপিংয়ের কনটেক্সট (Context of Target Typing)</li>
+<li>ভ্যারিয়েবল ক্যাপচারিং (Variable Capturing)</li>
+<li>ল্যামডা এক্সপ্রেশনের স্কোপ (Scope)</li>
+<li>টাইপ ইনফারেন্স (Type Inference)</li>
+<li>java.util.function প্যাকেজ</li>
+</ul>
+</li>
+<li>অধ্যায় তিন – মেথড রেফারেন্স (Method Reference)
+<ul>
+<li>মেথড রেফারেন্স (Method Reference)</li>
+<li>স্ট্যাটিক মেথড রেফারেন্স (Static Method Reference)</li>
+<li>ইনস্ট্যান্স মেথড রেফারেন্স (Instance Method Reference)</li>
+<li>কনস্ট্রাক্টর রেফারেন্স (Constructor Reference)</li>
+</ul>
+</li>
+<li>অধ্যায় চার – ডিফল্ট মেথড (Default Method)</li>
+<li>অধ্যায় পাঁচ – অপশনাল (Optional)</li>
+<li>অধ্যায় ছয় – ল্যামডা এক্সপ্রেশনের সুবিধা
+<ul>
+<li>ল্যামডা এক্সপ্রেশন ও অ্যানোনিমাস ইনার ক্লাসের মধ্যে পার্থক্য</li>
+<li>ল্যামডা এক্সপ্রেশন কেন দরকার</li>
+<li>ইন্টারনাল বনাম এক্সটারনাল ইটারেশন (Internal vs. External Iteration)</li>
+</ul>
+</li>
+<li>অধ্যায় সাত – ল্যামডা এক্সপ্রেশনের ব্যবহার
+<ul>
+<li>কমান্ড ডিজাইন প্যাটার্ন (Command Design Pattern)</li>
+<li>লাইটওয়েট স্ট্রাটেজি প্যাটার্ন (Light-weight strategy Pattern)</li>
+<li>ডেকোরেটর প্যাটার্ন (Decorator Pattern)</li>
+<li>ফ্লুয়েন্ট প্রোগ্রামিং (Fluent Programming)</li>
+<li>বিল্ডার প্যাটার্ন (Builder Pattern)</li>
+<li>চেইন অব রেসপনসিবিলিটি প্যাটার্ন (Chain of Responsibility Pattern)</li>
+<li>এক্সিকিউট অ্যারাউন্ড মেথড প্যাটার্ন (Execute Around Method Pattern)</li>
+</ul>
+</li>
+<li>অধ্যায় আট – অ্যাডভান্সড জেনেরিক্স (Advanced Generics)
+<ul>
+<li>জেনেরিক টাইপ (Generic Type)</li>
+<li>জেনেরিক্স, ইনহেরিটেন্স ও সাবটাইপিং</li>
+<li>আনবাউন্ডেড জেনেরিক্স (Unbounded Generics)</li>
+<li>আপার বাউন্ডেড ওয়াইল্ডকার্ড (Upper bounded Wildcard)</li>
+<li>লোয়ার বাউন্ডেড ওয়াইল্ডকার্ড (Lower bounded Wildcard)</li>
+</ul>
+</li>
+<li>অধ্যায় নয় – স্ট্রিম (Stream)
+<ul>
+<li>ভূমিকা</li>
+<li>স্ট্রিম কী?</li>
+<li>স্ট্রিম পাইপলাইন</li>
+<li>স্ট্রিম ও কালেকশনের মধ্যে পার্থক্য</li>
+<li>প্যারালালিজম (Parallelism)</li>
+</ul>
+</li>
+<li>অধ্যায় দশ – কালেক্টরস (Collectors)
+<ul>
+<li>কালেক্টরস (Collectors)</li>
+<li>সামারাইজিং (Summerizing)</li>
+<li>স্ট্রিং জয়েনিং (String Joining)</li>
+<li>গ্রুপিং (Grouping)</li>
+<li>মাল্টি-লেভেল গ্রুপিং (Multi-level grouping)</li>
+<li>সাব-গ্রুপিং (sub-grouping)</li>
+<li>পার্টিশনিং (Partioning)</li>
+</ul>
+</li>
+<li>অধ্যায় এগারো – এক্সেপশন হ্যান্ডেলিং (Excepton Handling)</li>
+<li>অধ্যায় বারো – জাভা ভার্চুয়াল মেশিন (Java Virtual Machine)
+<ul>
+<li>জাভা ভার্চুয়াল মেশিন (Java Virtual Machine)</li>
+<li>ক্লাসলোডিং (class loading) ও ক্লাস অবজেক্ট (class object)</li>
+<li>ক্লাস লোডিং (class loading)</li>
+<li>ক্লাস অবজেক্ট (class object)</li>
+<li>বাইটকোড (ByteCode)</li>
+<li>বাইটকোডের স্ট্রাকচার</li>
+<li>বাইটকোড ইনস্ট্রাকশন</li>
+<li>মেথড ইনভোকেশন (Method Invocation)</li>
+<li>জাভা মেমোরি স্ট্রাকচার (Java Memory Structure)</li>
+<li>গার্বেজ কালেক্টর (Garbage Collector)</li>
+</ul>
+</li>
+<li>পরিশিষ্ট
+<ul>
+<li>পরিশিষ্ট ১ – Predicate-এর ব্যবহার</li>
+<li>পরিশিষ্ট ২ – লোকাল টাইপ ইনফারেন্স (Local Type Inference)</li>
+<li>পরিশিষ্ট ৩ – জাভা রিফ্লেকশন এপিআই (Java Reflection API)</li>
+<li>পরিশিষ্ট ৪ – মেথড হ্যান্ডেলস (MethodHandles)</li>
+<li>পরিশিষ্ট ৫ – কালেকশন ফ্যাক্টরি মেথড (Collection Factory Methods)</li>
+</ul>
+</li>
+</ul>
+<h2 id="mce_7">বইয়ের বিবরনী</h2>
+<table class="wp-block-table">
+  <tr>
+    <td>
+      শিরোনাম
+    </td>
+<pre><code>&lt;td&gt;
+  অ্যাডভান্সড জাভা প্রোগ্রামিং
+&lt;/td&gt;
+</code></pre>
+  </tr>
+  <tr>
+    <td>
+      লেখক
+    </td>
+<pre><code>&lt;td&gt;
+  আ ন ম বজলুর রহমান
+&lt;/td&gt;
+</code></pre>
+  </tr>
+  <tr>
+    <td>
+      ক্যাটেগরি
+    </td>
+<pre><code>&lt;td&gt;
+  কম্পিউটার ইঞ্জিনিয়ারিং
+&lt;/td&gt;
+</code></pre>
+  </tr>
+  <tr>
+    <td>
+      ISBN
+    </td>
+<pre><code>&lt;td&gt;
+  978-984-8042-07-6
+&lt;/td&gt;
+</code></pre>
+  </tr>
+  <tr>
+    <td>
+      সংস্করন
+    </td>
+<pre><code>&lt;td&gt;
+  প্রথম প্রকাশ, ফেব্রুয়ারি,&amp;nbsp;২০১৯
+&lt;/td&gt;
+</code></pre>
+  </tr>
+  <tr>
+    <td>
+      পৃষ্ঠাসংখ্যা
+    </td>
+<pre><code>&lt;td&gt;
+  ৩৩৬
+&lt;/td&gt;
+</code></pre>
+  </tr>
+  <tr>
+    <td>
+      কভার মূল্য
+    </td>
+<pre><code>&lt;td&gt;
+  ৪৫০/- টাকা
+&lt;/td&gt;
+</code></pre>
+  </tr>
+</table>
+
+</main>
+
+
+<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+        this.page.identifier = 'http:\/\/bazlur.com\/posts\/2019-03-02-%E0%A6%85%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%A1%E0%A6%AD%E0%A6%BE%E0%A6%A8%E0%A7%8D%E0%A6%B8%E0%A6%A1-%E0%A6%9C%E0%A6%BE%E0%A6%AD%E0%A6%BE-%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A7%8B%E0%A6%97\/';
+        this.page.title = 'অ্যাডভান্সড জাভা প্রোগ্রামিং';
+        this.page.url = 'http:\/\/bazlur.com\/posts\/2019-03-02-%E0%A6%85%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%A1%E0%A6%AD%E0%A6%BE%E0%A6%A8%E0%A7%8D%E0%A6%B8%E0%A6%A1-%E0%A6%9C%E0%A6%BE%E0%A6%AD%E0%A6%BE-%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A7%8B%E0%A6%97\/';
+    };
+
+    (function () { 
+        var d = document, s = d.createElement('script');
+        s.src = 'https://bazlur-com.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+    Disqus.</a></noscript>
+
+  <footer>
+  
+
+
+
+
+
+
+
+
+
+
+<div id="tag-cloud" style="padding: 5px 15px">
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/advance-java" style="font-size:1rem">advance-java</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/agile" style="font-size:1rem">agile</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/algorithm" style="font-size:1.5691756217423825rem">algorithm</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/arraylist" style="font-size:1rem">arraylist</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/article" style="font-size:1rem">article</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/bangla-book" style="font-size:2.138351243484765rem">bangla-book</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/becoming-expert" style="font-size:1rem">becoming-expert</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/book" style="font-size:2.32158486704862rem">book</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/book-review" style="font-size:1.5691756217423825rem">book-review</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/calculator" style="font-size:1rem">calculator</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/cloning" style="font-size:1rem">cloning</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/coding" style="font-size:1rem">coding</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/coding-convention" style="font-size:1rem">coding-convention</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/daemon-thread" style="font-size:1rem">daemon-thread</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/data-race" style="font-size:1rem">data-race</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/data-structure" style="font-size:1rem">data-structure</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/deliberate-practice" style="font-size:1rem">deliberate-practice</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/deserialization" style="font-size:1rem">deserialization</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/developers" style="font-size:1rem">developers</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/file-copy" style="font-size:1rem">file-copy</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/future-java-developers" style="font-size:1rem">future-java-developers</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/hash-function" style="font-size:1.5691756217423825rem">hash-function</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/history" style="font-size:1rem">history</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/history-of-java" style="font-size:1rem">history-of-java</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/how-java-performs-better" style="font-size:1rem">how-java-performs-better</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/how-java-works" style="font-size:1rem">how-java-works</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/import" style="font-size:1rem">import</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/inspiration" style="font-size:1rem">inspiration</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java" style="font-size:3.459936110533385rem">java</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java-developers" style="font-size:1rem">java-developers</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java-programming" style="font-size:1rem">java-programming</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java-thread" style="font-size:1rem">java-thread</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java-thread-programming" style="font-size:1.5691756217423825rem">java-thread-programming</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/learning" style="font-size:1rem">learning</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/linkedlist" style="font-size:1rem">linkedlist</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/methodology" style="font-size:1rem">methodology</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/null-pointer-exception" style="font-size:1rem">null-pointer-exception</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/object-cloning" style="font-size:1rem">object-cloning</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/packaging" style="font-size:1rem">packaging</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/pass-by-reference" style="font-size:1rem">pass-by-reference</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/pass-by-value" style="font-size:1rem">pass-by-value</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/programming" style="font-size:1rem">programming</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/review" style="font-size:1rem">review</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/scrum" style="font-size:1rem">scrum</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/serialization" style="font-size:1.5691756217423825rem">serialization</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/simple-calculator" style="font-size:1rem">simple-calculator</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/software-development" style="font-size:1rem">software-development</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/string" style="font-size:1rem">string</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/string-pool" style="font-size:1rem">string-pool</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/swing" style="font-size:1rem">swing</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/thread" style="font-size:2.32158486704862rem">thread</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/volatile" style="font-size:1rem">volatile</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/why-java" style="font-size:1rem">why-java</a>
+  
+</div>
+
+
+<footer>
+  <div>
+    <p>
+    &copy; <a href="https://bazlur.com"> A N M Bazlur Rahman</a> 2012 - 2020 | <a href="https://github.com/rokon12">Github</a>
+    | <a href=" https://twitter.com/bazlur_rahman"> @bazlur_rahman</a>
+    </p>
+  </div>
+</footer>
+  
+  </footer>
+  </body>
+</html>
+

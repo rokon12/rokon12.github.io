@@ -9,10 +9,10 @@
     <lastBuildDate>Wed, 08 Feb 2017 17:55:00 +0000</lastBuildDate><atom:link href="http://bazlur.com/tags/pass-by-reference/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>জাভা কী পাস-বাই-ভ্যালু (Pass-by-Value)</title>
-      <link>http://bazlur.com/p35/</link>
+      <link>http://bazlur.com/posts/2017-02-08-%E0%A6%9C%E0%A6%BE%E0%A6%AD%E0%A6%BE-%E0%A6%95%E0%A7%80-%E0%A6%AA%E0%A6%BE%E0%A6%B8-%E0%A6%AC%E0%A6%BE%E0%A6%87-%E0%A6%AD%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B2%E0%A7%81-pass-by-valu/</link>
       <pubDate>Wed, 08 Feb 2017 17:55:00 +0000</pubDate>
       
-      <guid>http://bazlur.com/p35/</guid>
+      <guid>http://bazlur.com/posts/2017-02-08-%E0%A6%9C%E0%A6%BE%E0%A6%AD%E0%A6%BE-%E0%A6%95%E0%A7%80-%E0%A6%AA%E0%A6%BE%E0%A6%B8-%E0%A6%AC%E0%A6%BE%E0%A6%87-%E0%A6%AD%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B2%E0%A7%81-pass-by-valu/</guid>
       <description>যখন একটি মেথডে আর্গুমেন্ট হিসেবে একটি অবজেক্ট পাঠানো হয় তখন কী ঘটনা ঘটে? এটি কি পাস-বাই-ভ্যালু (Pass-by-Value) না কি পাস-বাই-রেফারেন্স (Pass-by-Reference)?
 &amp;lt;p&amp;gt; এই প্রশ্ন দুটির উত্তর দিতে হলে আমাদের জানতে হবে অবজেক্টের রেফারেন্স কী। &amp;lt;/p&amp;gt; &amp;lt;p&amp;gt; জাভাতে অবজেক্টগুলো প্রোগ্রাম মেমোরির হিপ অংশে থাকে। এর একটি ঠিকানা বা অ্যাড্রেস আছে। ভ্যারিয়েবল মূলত সেই অবজেক্টের অ্যাড্রেস ধরে রাখে যাকে আমরা বলি অবজেক্টের রেফারেন্স। আমরা যখন কোনো মেথডে আর্গুমেন্ট হিসেবে একটি ভ্যারিয়েবল বা অবজেক্টের রেফারেন্স পাস করি তখন আসলে সেই অবজেক্টের রেফারেন্সটি পাঠাই না বরং সেই রেফারেন্সের একটি কপি পাঠাই। কোনো একটি অবজেক্টের রেফারেন্স ভ্যালু যদি হয়, 66d3c617 তাহলে মেথড আর্গুমেন্ট হিসেবে এই সংখ্যাটির একটি কপি আর্গুমেন্ট হিসেবে যায়। এর মানে দাঁড়ায় আমরা আসলে রেফারেন্সটি পাঠাচ্ছি না বরং সেই রেফারেন্সের কপি পাঠাচ্ছি। &amp;lt;/p&amp;gt;    public class Person { private String name; public Person(String name) { this.</description>
     </item>

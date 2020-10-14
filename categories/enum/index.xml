@@ -9,10 +9,10 @@
     <lastBuildDate>Sun, 12 Feb 2017 18:40:00 +0000</lastBuildDate><atom:link href="http://bazlur.com/categories/enum/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>এনাম (Enum)</title>
-      <link>http://bazlur.com/p33/</link>
+      <link>http://bazlur.com/posts/2017-02-12-%E0%A6%8F%E0%A6%A8%E0%A6%BE%E0%A6%AE-enu/</link>
       <pubDate>Sun, 12 Feb 2017 18:40:00 +0000</pubDate>
       
-      <guid>http://bazlur.com/p33/</guid>
+      <guid>http://bazlur.com/posts/2017-02-12-%E0%A6%8F%E0%A6%A8%E0%A6%BE%E0%A6%AE-enu/</guid>
       <description>জাভাতে এনাম (enum) একটি বিশেষ টাইপ। একটি নির্দিষ্ট সংখ্যক কনস্ট্যান্ট (Constant) তৈরি করতে এটি ব্যবহার করা হয়। যেমন, সপ্তাহের দিনের নাম (days of the week), বছরে মাসের নাম (month in the year), দিক (উত্তর, দক্ষিণ, পূর্ব, পশ্চিম) ইত্যাদি।
 উদাহরণ, public enum Day { SATURDAY, SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY }  &amp;nbsp;  উদাহরণটি Day নামে একটি এনাম তৈরি করা হয়ছে। এতে সাতটি কনস্ট্যান্ট রয়েছে। এনাম তৈরি করতে ক্লাস বা ইন্টারফেসের মতো একটি কিওয়ার্ড enum ব্যবহার করা হয়েছে।</description>
     </item>

@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Java তে String কে immutable বলা হয় কেন? | My Stream of Thoughts</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/about-me/">About me</a></li>
+      
+      <li><a href="/books/">Books</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+    <h1><span class="title">Java তে String কে immutable বলা হয় কেন?</span></h1>
+    <h2 class="author">A N M Bazlur Rahman</h2>
+    <h2 class="date">2017/01/27</h2>
+</div>
+
+<p class="post-tag">
+    
+ 
+</p>
+
+<main>
+    <div dir="ltr" style="text-align: left;">
+  <div style="background-color: #ebffe6; border: medium none; font-family: sans-serif; font-size: 13px; line-height: 18.2px; margin-bottom: 13px; max-width: 700px; padding: 0px;">
+    জাভাতে স্ট্রিং ক্লাস&nbsp;<strong>immutable</strong>, এর মানে হচ্ছে, একবার কোন স্ট্রিং অবজেক্ট তৈরি করলে তাকে আর পরিবর্তন করা যাবে না। আমরা অনেক ক্লাস লিখি, তারপর এর মাঝে বিভিন্ন ভ্যারিয়েবল রাখি, অবজেক্ট তৈরি করার পর সেই অবজেক্টর এর ভেতরের ভ্যারিয়েবল গুলো বিভিন্ন সময় পরিবতর্তন করতে পারি। কিন্তু স্ট্রিং এর ক্ষেত্রে এটি সম্ভব নয়। অর্থাৎ আমরা যদি কোন একটি ভ্যালু দিয়ে একবার একটি স্ট্রিং অবজেক্ট তৈরি করি তাহলে সেটি আর পরিবর্তন করা যাবে না।
+  </div>
+  <div style="background-color: #ebffe6; border: medium none; font-family: sans-serif; font-size: 13px; line-height: 18.2px; margin-bottom: 13px; max-width: 700px; padding: 0px;">
+    কিন্তু আমরা অনেকসময়ই স্ট্রিং কনকেট করি, সেক্ষেত্রে যা হয়, মনে করি-
+  </div>
+  <pre style="background-color: #ffffcc; border: 1px dashed rgb(0, 0, 0); font-family: &quot;Courier New&quot;, Courier, mono; font-size: 12px; margin-bottom: 10px; overflow: auto; padding: 8px; white-space: pre-wrap; width: auto;"><code style="font-family: Consolas, Monaco, &quot;Liberation Mono&quot;, &quot;Lucida Console&quot;, monospace; font-size: 10.8px;">String str = "Hello ";&lt;br />str = str + "world";&lt;br /></code></pre>
+  <div style="background-color: #ebffe6; border: medium none; font-family: sans-serif; font-size: 13px; line-height: 18.2px; margin-bottom: 13px; max-width: 700px; padding: 0px;">
+    এখানে যদিও মনে হচ্ছে আমরা স্ট্রিং এর ভ্যালু পরিবর্তন করে ফেলেছি। কিন্তু আসলে যা হচ্ছে তা হলো, আমরা প্রথমে একটি অবজেক্ট তৈরি করেছি, তারপর সেই অবেজক্টএর ভ্যালু এবং নতুন একটি ভ্যালু নিয়ে নতুন একটি অবজেক্ট তৈরি করেছি, এবং যা&nbsp;<strong>str</strong>&nbsp;এখন নতুন সেই অবজেক্টকে রেফার করছে। আগের অবজেক্টটিকে গার্বেজ কালেক্টর নিয়ে চলে যাবে।
+  </div>
+  <div style="background-color: #ebffe6; border: medium none; font-family: sans-serif; font-size: 13px; line-height: 18.2px; margin-bottom: 13px; max-width: 700px; padding: 0px;">
+    <em>এখন প্রশ্ন হচ্ছে, কেন এই&nbsp;<strong>immutability</strong>&nbsp;দরকার হয়।</em>
+  </div>
+  <div style="background-color: #ebffe6; border: medium none; font-family: sans-serif; font-size: 13px; line-height: 18.2px; margin-bottom: 13px; max-width: 700px; padding: 0px;">
+    স্ট্রিং পুল (Stirng Pool) সম্পর্কে হয়তো অনেকেই জানি। এটি একটি জাভা হিপ এর একটি স্পেশাল এরিয়া । আমাদের যদি নতুন একটি স্ট্রিং তৈরি করতে হয়, সেই স্ট্রিং যদি আগে থেকেই স্ট্রিং পুল এ থেকে থাকে, তাহলে নতুন করে আর তৈরি না করে আগের অবজেক্টটির রেফারেন্স দেওয়া হয়। এতে করে আমাদের মেমরি ফ্রুটপ্রিন্ট অনেক কমে যাচ্ছে।
+  </div>
+  <pre style="background-color: #ffffcc; border: 1px dashed rgb(0, 0, 0); font-family: &quot;Courier New&quot;, Courier, mono; font-size: 12px; margin-bottom: 10px; overflow: auto; padding: 8px; white-space: pre-wrap; width: auto;"><code style="font-family: Consolas, Monaco, &quot;Liberation Mono&quot;, &quot;Lucida Console&quot;, monospace; font-size: 10.8px;">String string1 = "abcd";&lt;br />String string2 = "abcd";&lt;br /></code></pre>
+  <div style="background-color: #ebffe6; border: medium none; font-family: sans-serif; font-size: 13px; line-height: 18.2px; margin-bottom: 13px; max-width: 700px; padding: 0px;">
+    আমরা যদি এই দুটি লাইন লিখি, তাহলে আসলে জাভা হিপ এ একটি স্ট্রিং অবজেক্ট-ই থাকবে, দুটি তৈরি হবে না। যদি স্ট্রিং&nbsp;<strong>immutable</strong>&nbsp;না হয়, তাহলে একটি স্ট্রিং যদি পরিবর্তন করি, তাহলে আসলে অন্যান্য রেফারেন্স গুলোও পরিবর্তন হয়ে যাবে।
+  </div>
+  <div style="background-color: #ebffe6; border: medium none; font-family: sans-serif; font-size: 13px; line-height: 18.2px; margin-bottom: 13px; max-width: 700px; padding: 0px;">
+    এছাড়াও, আমরা জানি যে স্ট্রিং এর&nbsp;<strong>hashcode</strong>&nbsp;খুব বেশি ব্যবহার করা হয়। যেমন&nbsp;<strong>HashMap</strong>। স্ট্রিং&nbsp;<strong>immutable</strong>&nbsp;হওয়ায় এটা গ্যারান্টিড যে, সবসময়<strong>hashcode</strong>&nbsp;এক-ই হবে, সুতরাং আমরা প্রতিবার&nbsp;<strong>hashcode</strong>&nbsp;ক্যালকুলেট না করে নির্ধিদ্বায় ক্যাশিং করতে পারি।
+  </div>
+  <div style="background-color: #ebffe6; border: medium none; font-family: sans-serif; font-size: 13px; line-height: 18.2px; margin-bottom: 13px; max-width: 700px; padding: 0px;">
+    আমরা স্ট্রিং প্যারামিটার হিসেব অনেক বেশি ব্যবহার করে থাকি, যেমন, নেটওয়ার্ক কানেকশান, ফাইল অপেনিং ইত্যাদির ক্ষে্ত্রে। সুতরাং এটি&nbsp;<strong>immutable</strong>&nbsp;না হলে পরিবর্তন করে ফেলা সম্ভব যা কিনা একটি সিরিয়াস রকম সিকিউরিটি থ্রেড হতে পারে। কিন্তু যেহেতু স্ট্রিং&nbsp;<strong>immutable</strong>, সুতরাং সেই সম্ভবনা নেই।
+  </div>
+  <div style="background-color: #ebffe6; border: medium none; font-family: sans-serif; font-size: 13px; line-height: 18.2px; margin-bottom: 13px; max-width: 700px; padding: 0px;">
+    তাছাড়া স্ট্রিং&nbsp;<strong>immutable</strong>&nbsp;হওয়ায় এটি ন্যাচারালি থ্রেড সেইফ, এবং স্বাধীনভাবে যে কেন থ্রেড একসেস করে পারে আমাদেরকে কষ্ট করে এর থ্রেড সেইফটি নিয়ে চিন্তা করতে হয় না।
+  </div>
+</div>
+</main>
+
+
+<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+        this.page.identifier = 'http:\/\/bazlur.com\/posts\/2017-01-27-java-%E0%A6%A4%E0%A7%87-string-%E0%A6%95%E0%A7%87-immutable-%E0%A6%AC%E0%A6%B2%E0%A6%BE-%E0%A6%B9%E0%A6%AF%E0%A6%BC-%E0%A6%95%E0%A7%87\/';
+        this.page.title = 'Java তে String কে immutable বলা হয় কেন?';
+        this.page.url = 'http:\/\/bazlur.com\/posts\/2017-01-27-java-%E0%A6%A4%E0%A7%87-string-%E0%A6%95%E0%A7%87-immutable-%E0%A6%AC%E0%A6%B2%E0%A6%BE-%E0%A6%B9%E0%A6%AF%E0%A6%BC-%E0%A6%95%E0%A7%87\/';
+    };
+
+    (function () { 
+        var d = document, s = d.createElement('script');
+        s.src = 'https://bazlur-com.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+    Disqus.</a></noscript>
+
+  <footer>
+  
+
+
+
+
+
+
+
+
+
+
+<div id="tag-cloud" style="padding: 5px 15px">
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/advance-java" style="font-size:1rem">advance-java</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/agile" style="font-size:1rem">agile</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/algorithm" style="font-size:1.5691756217423825rem">algorithm</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/arraylist" style="font-size:1rem">arraylist</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/article" style="font-size:1rem">article</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/bangla-book" style="font-size:2.138351243484765rem">bangla-book</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/becoming-expert" style="font-size:1rem">becoming-expert</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/book" style="font-size:2.32158486704862rem">book</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/book-review" style="font-size:1.5691756217423825rem">book-review</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/calculator" style="font-size:1rem">calculator</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/cloning" style="font-size:1rem">cloning</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/coding" style="font-size:1rem">coding</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/coding-convention" style="font-size:1rem">coding-convention</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/daemon-thread" style="font-size:1rem">daemon-thread</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/data-race" style="font-size:1rem">data-race</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/data-structure" style="font-size:1rem">data-structure</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/deliberate-practice" style="font-size:1rem">deliberate-practice</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/deserialization" style="font-size:1rem">deserialization</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/developers" style="font-size:1rem">developers</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/file-copy" style="font-size:1rem">file-copy</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/future-java-developers" style="font-size:1rem">future-java-developers</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/hash-function" style="font-size:1.5691756217423825rem">hash-function</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/history" style="font-size:1rem">history</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/history-of-java" style="font-size:1rem">history-of-java</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/how-java-performs-better" style="font-size:1rem">how-java-performs-better</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/how-java-works" style="font-size:1rem">how-java-works</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/import" style="font-size:1rem">import</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/inspiration" style="font-size:1rem">inspiration</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java" style="font-size:3.459936110533385rem">java</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java-developers" style="font-size:1rem">java-developers</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java-programming" style="font-size:1rem">java-programming</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java-thread" style="font-size:1rem">java-thread</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java-thread-programming" style="font-size:1.5691756217423825rem">java-thread-programming</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/learning" style="font-size:1rem">learning</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/linkedlist" style="font-size:1rem">linkedlist</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/methodology" style="font-size:1rem">methodology</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/null-pointer-exception" style="font-size:1rem">null-pointer-exception</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/object-cloning" style="font-size:1rem">object-cloning</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/packaging" style="font-size:1rem">packaging</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/pass-by-reference" style="font-size:1rem">pass-by-reference</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/pass-by-value" style="font-size:1rem">pass-by-value</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/programming" style="font-size:1rem">programming</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/review" style="font-size:1rem">review</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/scrum" style="font-size:1rem">scrum</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/serialization" style="font-size:1.5691756217423825rem">serialization</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/simple-calculator" style="font-size:1rem">simple-calculator</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/software-development" style="font-size:1rem">software-development</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/string" style="font-size:1rem">string</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/string-pool" style="font-size:1rem">string-pool</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/swing" style="font-size:1rem">swing</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/thread" style="font-size:2.32158486704862rem">thread</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/volatile" style="font-size:1rem">volatile</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/why-java" style="font-size:1rem">why-java</a>
+  
+</div>
+
+
+<footer>
+  <div>
+    <p>
+    &copy; <a href="https://bazlur.com"> A N M Bazlur Rahman</a> 2012 - 2020 | <a href="https://github.com/rokon12">Github</a>
+    | <a href=" https://twitter.com/bazlur_rahman"> @bazlur_rahman</a>
+    </p>
+  </div>
+</footer>
+  
+  </footer>
+  </body>
+</html>
+
