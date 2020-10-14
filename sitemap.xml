@@ -38,6 +38,13 @@
   </url>
   
   <url>
+    <loc>http://bazlur.com/2020/10/java-local-type-inference-%E0%A6%9C%E0%A6%BE%E0%A6%AD%E0%A6%BE-%E0%A6%B2%E0%A7%87%E0%A6%BE%E0%A6%95%E0%A6%BE%E0%A6%B2-%E0%A6%9F%E0%A6%BE%E0%A6%87%E0%A6%AA-%E0%A6%87%E0%A6%A8%E0%A6%AB%E0%A6%BE%E0%A6%B0%E0%A7%87%E0%A6%A8%E0%A7%8D%E0%A6%B8/</loc>
+    <lastmod>2020-10-14T15:47:10-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://bazlur.com/tags/local-type-inference/</loc>
     <lastmod>2020-10-14T15:47:10-04:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -60,13 +67,6 @@
   
   <url>
     <loc>http://bazlur.com/categories/%E0%A6%86%E0%A6%B0%E0%A7%8D%E0%A6%9F%E0%A6%BF%E0%A6%95%E0%A7%87%E0%A6%B2/</loc>
-    <lastmod>2020-10-14T15:47:10-04:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://bazlur.com/2020/10/%E0%A6%9C%E0%A6%BE%E0%A6%AD%E0%A6%BE-%E0%A6%B2%E0%A7%87%E0%A6%BE%E0%A6%95%E0%A6%BE%E0%A6%B2-%E0%A6%9F%E0%A6%BE%E0%A6%87%E0%A6%AA-%E0%A6%87%E0%A6%A8%E0%A6%AB%E0%A6%BE%E0%A6%B0%E0%A7%87%E0%A6%A8%E0%A7%8D%E0%A6%B8-java-local-type-inference/</loc>
     <lastmod>2020-10-14T15:47:10-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
