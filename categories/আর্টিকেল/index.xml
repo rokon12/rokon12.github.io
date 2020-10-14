@@ -16,7 +16,7 @@
       <description>একদম শুরুতে যখন আমার জাভা প্রোগ্রামিংয়ের হাতে খড়ি বলা যায়, তখন জাভার সুইয়িং ব্যবহার করে একটি ক্যালকুলেটর তৈরি করেছিলাম।
 এটি একটি ফোরামে দিয়েছিলাম। সেখানে অনেকেই পছন্দ করেছিল। হঠাৎ করেই পেয়ে গেলাম প্রায় ৮ বছর আগের একটি কোড।
 আজকের এই পোস্টে এই কোডটি শেয়ার করছি।
-public class CaculatorLogic { // a method defined for performing addition. it takes two double as 	// parameter and returns addition result 	public double add(double a, double b) { return a + b; } // a method defined for performing subtraction.</description>
+package com.bazlur.calculator; public class BasicMath { /** * This method adds up the arguments * * @param a first value * @param b second value * @return result of addition */ public double add(double a, double b) { return a + b; } /** * This method subtract second value from first value * * @param a first value * @param b second value * @return result of subtraction */ public double minus(double a, double b) { return a - b; } /** * This method perform multiplication * * @param a first value * @param b second value * @return result of multiplication */ public double multiply(double a, double b) { return a * b; } /** * This method performs the Division.</description>
     </item>
     
     <item>

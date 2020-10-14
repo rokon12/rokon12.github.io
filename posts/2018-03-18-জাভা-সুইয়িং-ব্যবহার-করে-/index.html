@@ -56,100 +56,122 @@ if (!doNotTrack) {
     <p>একদম শুরুতে যখন আমার জাভা প্রোগ্রামিংয়ের হাতে খড়ি বলা যায়, তখন জাভার সুইয়িং ব্যবহার করে একটি ক্যালকুলেটর তৈরি করেছিলাম।</p>
 <p>এটি একটি ফোরামে দিয়েছিলাম। সেখানে অনেকেই পছন্দ করেছিল। হঠাৎ করেই পেয়ে গেলাম প্রায় ৮ বছর আগের একটি কোড।</p>
 <p>আজকের এই পোস্টে এই কোডটি শেয়ার করছি।</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CaculatorLogic</span> <span style="color:#f92672">{</span>
-	<span style="color:#75715e">// a method defined for performing addition. it takes two double as
-</span><span style="color:#75715e"></span>	<span style="color:#75715e">// parameter and returns addition result
-</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">double</span> <span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#66d9ef">double</span> a<span style="color:#f92672">,</span> <span style="color:#66d9ef">double</span> b<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> com.bazlur.calculator<span style="color:#f92672">;</span>
+
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">BasicMath</span> <span style="color:#f92672">{</span>
+	<span style="color:#75715e">/**
+</span><span style="color:#75715e">	 * This method adds up the arguments
+</span><span style="color:#75715e">	 *
+</span><span style="color:#75715e">	 * @param a first value
+</span><span style="color:#75715e">	 * @param b second value
+</span><span style="color:#75715e">	 * @return result of addition
+</span><span style="color:#75715e">	 */</span>
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">double</span> <span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#66d9ef">double</span> a<span style="color:#f92672">,</span> <span style="color:#66d9ef">double</span> b<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
 		<span style="color:#66d9ef">return</span> a <span style="color:#f92672">+</span> b<span style="color:#f92672">;</span>
 	<span style="color:#f92672">}</span>
 
-	<span style="color:#75715e">// a method defined for performing subtraction. it takes two double as
-</span><span style="color:#75715e"></span>	<span style="color:#75715e">// parameter and returns their subtraction result
-</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">double</span> <span style="color:#a6e22e">substruct</span><span style="color:#f92672">(</span><span style="color:#66d9ef">double</span> a<span style="color:#f92672">,</span> <span style="color:#66d9ef">double</span> b<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+	<span style="color:#75715e">/**
+</span><span style="color:#75715e">	 * This method subtract second value from first value
+</span><span style="color:#75715e">	 *
+</span><span style="color:#75715e">	 * @param a first value
+</span><span style="color:#75715e">	 * @param b second value
+</span><span style="color:#75715e">	 * @return result of subtraction
+</span><span style="color:#75715e">	 */</span>
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">double</span> <span style="color:#a6e22e">minus</span><span style="color:#f92672">(</span><span style="color:#66d9ef">double</span> a<span style="color:#f92672">,</span> <span style="color:#66d9ef">double</span> b<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
 		<span style="color:#66d9ef">return</span> a <span style="color:#f92672">-</span> b<span style="color:#f92672">;</span>
 	<span style="color:#f92672">}</span>
 
-	<span style="color:#75715e">// a method defined for performing multiplication. it takes two double as
-</span><span style="color:#75715e"></span>	<span style="color:#75715e">// parameter and returns their multiplication result
-</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">double</span> <span style="color:#a6e22e">multiply</span><span style="color:#f92672">(</span><span style="color:#66d9ef">double</span> a<span style="color:#f92672">,</span> <span style="color:#66d9ef">double</span> b<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+	<span style="color:#75715e">/**
+</span><span style="color:#75715e">	 * This method perform multiplication
+</span><span style="color:#75715e">	 *
+</span><span style="color:#75715e">	 * @param a first value
+</span><span style="color:#75715e">	 * @param b second value
+</span><span style="color:#75715e">	 * @return result of multiplication
+</span><span style="color:#75715e">	 */</span>
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">double</span> <span style="color:#a6e22e">multiply</span><span style="color:#f92672">(</span><span style="color:#66d9ef">double</span> a<span style="color:#f92672">,</span> <span style="color:#66d9ef">double</span> b<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
 		<span style="color:#66d9ef">return</span> a <span style="color:#f92672">*</span> b<span style="color:#f92672">;</span>
 	<span style="color:#f92672">}</span>
 
-	<span style="color:#75715e">// a method defined for performing Division. it takes two double as
-</span><span style="color:#75715e"></span>	<span style="color:#75715e">// parameter and returns their division result. if here happen any
-</span><span style="color:#75715e"></span>	<span style="color:#75715e">// situation of division by zero, it will return zero ...here I manually
-</span><span style="color:#75715e"></span>	<span style="color:#75715e">// handle exception instead of Java exception handling..
-</span><span style="color:#75715e"></span>	<span style="color:#75715e">// later on, when you guys learn Exception handling in java, you may use
-</span><span style="color:#75715e"></span>	<span style="color:#75715e">// try/catch block
-</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">double</span> <span style="color:#a6e22e">divide</span><span style="color:#f92672">(</span><span style="color:#66d9ef">double</span> a<span style="color:#f92672">,</span> <span style="color:#66d9ef">double</span> b<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-		<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>b <span style="color:#f92672">==</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-			System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;cant divide by zero&#34;</span><span style="color:#f92672">);</span>
-			<span style="color:#66d9ef">return</span> 0<span style="color:#f92672">;</span>
-		<span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span>
+	<span style="color:#75715e">/**
+</span><span style="color:#75715e">	 * This method performs the Division. It takes two double as arguments and
+</span><span style="color:#75715e">	 * returns their division as a result. If the second argument is zero,
+</span><span style="color:#75715e">	 * usually this could throw an Exception. To handle the exception,
+</span><span style="color:#75715e">	 * we used try/catch block here, if an exception occurs, we return zero.
+</span><span style="color:#75715e">	 *
+</span><span style="color:#75715e">	 * @param a first argument
+</span><span style="color:#75715e">	 * @param b second argument
+</span><span style="color:#75715e">	 * @return result of division
+</span><span style="color:#75715e">	 */</span>
+
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">double</span> <span style="color:#a6e22e">divide</span><span style="color:#f92672">(</span><span style="color:#66d9ef">double</span> a<span style="color:#f92672">,</span> <span style="color:#66d9ef">double</span> b<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+		<span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
 			<span style="color:#66d9ef">return</span> a <span style="color:#f92672">/</span> b<span style="color:#f92672">;</span>
+		<span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>ArithmeticException e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+			System<span style="color:#f92672">.</span><span style="color:#a6e22e">err</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>e<span style="color:#f92672">.</span><span style="color:#a6e22e">getMessage</span><span style="color:#f92672">());</span>
+		<span style="color:#f92672">}</span>
+		<span style="color:#66d9ef">return</span> 0<span style="color:#f92672">.</span><span style="color:#a6e22e">0</span><span style="color:#f92672">;</span>
 	<span style="color:#f92672">}</span>
 
-	<span style="color:#75715e">// this method defined for make string value to double.. its called parsing
-</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">double</span> <span style="color:#a6e22e">stringToDouble</span><span style="color:#f92672">(</span>String a<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+	<span style="color:#75715e">/**
+</span><span style="color:#75715e">	 * This method convert a string value to a double
+</span><span style="color:#75715e">	 *
+</span><span style="color:#75715e">	 * @param a a string value
+</span><span style="color:#75715e">	 * @return double value
+</span><span style="color:#75715e">	 */</span>
+	<span style="color:#75715e">/* this method defined for make string value to double.. its called parsing */</span>
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">double</span> <span style="color:#a6e22e">stringToDouble</span><span style="color:#f92672">(</span>String a<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+
 		<span style="color:#66d9ef">return</span> Double<span style="color:#f92672">.</span><span style="color:#a6e22e">parseDouble</span><span style="color:#f92672">(</span>a<span style="color:#f92672">);</span>
 	<span style="color:#f92672">}</span>
 <span style="color:#f92672">}</span>
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> java.awt.Font<span style="color:#f92672">;</span>
 
-<span style="color:#f92672">import</span> javax.swing.JButton<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> javax.swing.JFrame<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> javax.swing.JOptionPane<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> javax.swing.JPanel<span style="color:#f92672">;</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> com.bazlur.calculator<span style="color:#f92672">;</span>
+
+<span style="color:#f92672">import</span> javax.swing.*<span style="color:#f92672">;</span>
 <span style="color:#f92672">import</span> javax.swing.border.EmptyBorder<span style="color:#f92672">;</span>
-
+<span style="color:#f92672">import</span> java.awt.*<span style="color:#f92672">;</span>
 <span style="color:#f92672">import</span> java.awt.event.ActionEvent<span style="color:#f92672">;</span>
 <span style="color:#f92672">import</span> java.awt.event.ActionListener<span style="color:#f92672">;</span>
 <span style="color:#f92672">import</span> java.awt.event.WindowAdapter<span style="color:#f92672">;</span>
 <span style="color:#f92672">import</span> java.awt.event.WindowEvent<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> javax.swing.JTextField<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> java.awt.GridLayout<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> javax.swing.JLabel<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> java.util.regex.Pattern<span style="color:#f92672">;</span>
 
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CaculatorUI</span> <span style="color:#66d9ef">extends</span> JFrame <span style="color:#66d9ef">implements</span> ActionListener <span style="color:#f92672">{</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CalculatorUI</span> <span style="color:#66d9ef">extends</span> JFrame <span style="color:#66d9ef">implements</span> ActionListener <span style="color:#f92672">{</span>
 
-	<span style="color:#75715e">// Constant
-</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">private</span> <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">static</span> Font BIGGER_FONT <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Font<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;monspaced&#34;</span><span style="color:#f92672">,</span> Font<span style="color:#f92672">.</span><span style="color:#a6e22e">PLAIN</span><span style="color:#f92672">,</span>
-			20<span style="color:#f92672">);</span>
+	<span style="color:#66d9ef">private</span> <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">static</span> Font BIGGER_FONT <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Font<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;monspaced&#34;</span><span style="color:#f92672">,</span> Font<span style="color:#f92672">.</span><span style="color:#a6e22e">PLAIN</span><span style="color:#f92672">,</span>
+					20<span style="color:#f92672">);</span>
 	<span style="color:#66d9ef">private</span> <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">static</span> String buttonOrder <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;789/456*123-0.=+&#34;</span><span style="color:#f92672">;</span>
 
-	<span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">long</span> serialVersionUID <span style="color:#f92672">=</span> 1L<span style="color:#f92672">;</span>
-	<span style="color:#66d9ef">private</span> JPanel contentPane<span style="color:#f92672">;</span>
-	<span style="color:#66d9ef">private</span> JTextField txtDisplay<span style="color:#f92672">;</span>
-	<span style="color:#66d9ef">private</span> JPanel extraKeyPanel<span style="color:#f92672">;</span>
-	<span style="color:#66d9ef">private</span> JButton btnClear<span style="color:#f92672">;</span>
+	<span style="color:#66d9ef">private</span> <span style="color:#66d9ef">final</span> Pattern pattern <span style="color:#f92672">=</span> Pattern<span style="color:#f92672">.</span><span style="color:#a6e22e">compile</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;-?\\d+(\\.\\d+)?&#34;</span><span style="color:#f92672">);</span>
 
-	<span style="color:#75715e">// here is some flag used different purpose
-</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">private</span> <span style="color:#66d9ef">boolean</span> addition <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span> <span style="color:#75715e">// while true program perform addition
-</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">private</span> <span style="color:#66d9ef">boolean</span> substraction <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span> <span style="color:#75715e">// while true program perform
-</span><span style="color:#75715e"></span>											<span style="color:#75715e">// subtraction
-</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">private</span> <span style="color:#66d9ef">boolean</span> multiplication <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span> <span style="color:#75715e">// while true program perform
-</span><span style="color:#75715e"></span>	<span style="color:#75715e">// multiplication
-</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">private</span> <span style="color:#66d9ef">boolean</span> divition <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span> <span style="color:#75715e">// while true program perform division
-</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">private</span> <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">boolean</span> startNumber <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">;</span> <span style="color:#75715e">// decided to use for further
-</span><span style="color:#75715e"></span>	<span style="color:#75715e">// development. here actually no use
-</span><span style="color:#75715e"></span>	<span style="color:#75715e">// it..
-</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">private</span> <span style="color:#66d9ef">boolean</span> dotCheck <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span><span style="color:#75715e">// if it is false we can put dot otherwise
-</span><span style="color:#75715e"></span>	<span style="color:#75715e">// not..
-</span><span style="color:#75715e"></span>
-	<span style="color:#66d9ef">private</span> String firstValue<span style="color:#f92672">,</span> Secondvalue<span style="color:#f92672">;</span> <span style="color:#75715e">// here our all operation between
-</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">private</span> CaculatorLogic calcLogic <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> CaculatorLogic<span style="color:#f92672">();</span>
-	<span style="color:#66d9ef">private</span> JLabel lblCurrentOperation<span style="color:#f92672">;</span>
-	<span style="color:#66d9ef">private</span> JLabel lblOpration<span style="color:#f92672">;</span>
+	<span style="color:#66d9ef">private</span> JTextField txtDisplay<span style="color:#f92672">;</span>
+
+	<span style="color:#66d9ef">private</span> String firstValue<span style="color:#f92672">;</span>
+	<span style="color:#66d9ef">private</span> <span style="color:#66d9ef">final</span> BasicMath math <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> BasicMath<span style="color:#f92672">();</span>
+	<span style="color:#66d9ef">private</span> JLabel lblOperation<span style="color:#f92672">;</span>
+
+	<span style="color:#66d9ef">private</span> String currentOperation <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">;</span>
 
 	<span style="color:#75715e">/**
 </span><span style="color:#75715e">	 * Create the frame.
 </span><span style="color:#75715e">	 */</span>
-	<span style="color:#66d9ef">public</span> <span style="color:#a6e22e">CaculatorUI</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+	<span style="color:#66d9ef">public</span> <span style="color:#a6e22e">CalculatorUI</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+		buildUserInterface<span style="color:#f92672">();</span>
 
+		addWindowListener<span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> WindowAdapter<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+			<span style="color:#a6e22e">@Override</span>
+			<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">windowClosing</span><span style="color:#f92672">(</span>WindowEvent e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+				confirmExit<span style="color:#f92672">();</span>
+			<span style="color:#f92672">}</span>
+		<span style="color:#f92672">});</span>
+	<span style="color:#f92672">}</span>
+
+	<span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">buildUserInterface</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
 		setTitle<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Simple Calculator&#34;</span><span style="color:#f92672">);</span>
+
 		setDefaultCloseOperation<span style="color:#f92672">(</span>JFrame<span style="color:#f92672">.</span><span style="color:#a6e22e">DO_NOTHING_ON_CLOSE</span><span style="color:#f92672">);</span>
 		setBounds<span style="color:#f92672">(</span>100<span style="color:#f92672">,</span> 100<span style="color:#f92672">,</span> 350<span style="color:#f92672">,</span> 300<span style="color:#f92672">);</span>
-		contentPane <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> JPanel<span style="color:#f92672">();</span>
+		JPanel contentPane <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> JPanel<span style="color:#f92672">();</span>
 		contentPane<span style="color:#f92672">.</span><span style="color:#a6e22e">setBorder</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> EmptyBorder<span style="color:#f92672">(</span>5<span style="color:#f92672">,</span> 5<span style="color:#f92672">,</span> 5<span style="color:#f92672">,</span> 5<span style="color:#f92672">));</span>
 		contentPane<span style="color:#f92672">.</span><span style="color:#a6e22e">setLayout</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> BorderLayout<span style="color:#f92672">(</span>0<span style="color:#f92672">,</span> 0<span style="color:#f92672">));</span>
 		setContentPane<span style="color:#f92672">(</span>contentPane<span style="color:#f92672">);</span>
@@ -165,207 +187,159 @@ if (!doNotTrack) {
 		contentPane<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>keyPanel<span style="color:#f92672">,</span> BorderLayout<span style="color:#f92672">.</span><span style="color:#a6e22e">CENTER</span><span style="color:#f92672">);</span>
 		keyPanel<span style="color:#f92672">.</span><span style="color:#a6e22e">setLayout</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> GridLayout<span style="color:#f92672">(</span>0<span style="color:#f92672">,</span> 4<span style="color:#f92672">,</span> 10<span style="color:#f92672">,</span> 10<span style="color:#f92672">));</span>
 
-		extraKeyPanel <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> JPanel<span style="color:#f92672">();</span>
+		JPanel extraKeyPanel <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> JPanel<span style="color:#f92672">();</span>
 		contentPane<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>extraKeyPanel<span style="color:#f92672">,</span> BorderLayout<span style="color:#f92672">.</span><span style="color:#a6e22e">SOUTH</span><span style="color:#f92672">);</span>
 
-		btnClear <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> JButton<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Clear&#34;</span><span style="color:#f92672">);</span>
-		extraKeyPanel<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>btnClear<span style="color:#f92672">);</span>
+		extraKeyPanel<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> JButton<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Clear&#34;</span><span style="color:#f92672">));</span>
 
-		lblCurrentOperation <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> JLabel<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Current Operation: &#34;</span><span style="color:#f92672">);</span>
+		JLabel lblCurrentOperation <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> JLabel<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Current Operation: &#34;</span><span style="color:#f92672">);</span>
 		extraKeyPanel<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>lblCurrentOperation<span style="color:#f92672">);</span>
 
-		lblOpration <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> JLabel<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">);</span>
-		extraKeyPanel<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>lblOpration<span style="color:#f92672">);</span>
-		btnClear<span style="color:#f92672">.</span><span style="color:#a6e22e">addActionListener</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">);</span>
+		<span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">lblOperation</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> JLabel<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">);</span>
+		extraKeyPanel<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>lblOperation<span style="color:#f92672">);</span>
+		<span style="color:#66d9ef">new</span> JButton<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Clear&#34;</span><span style="color:#f92672">).</span><span style="color:#a6e22e">addActionListener</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">);</span>
 
-		<span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&amp;</span>lt<span style="color:#f92672">;</span> buttonOrder<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">();</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+		<span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> buttonOrder<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">();</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
 			String keyName <span style="color:#f92672">=</span> buttonOrder<span style="color:#f92672">.</span><span style="color:#a6e22e">substring</span><span style="color:#f92672">(</span>i<span style="color:#f92672">,</span> i <span style="color:#f92672">+</span> 1<span style="color:#f92672">);</span>
 			JButton key <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> JButton<span style="color:#f92672">(</span>keyName<span style="color:#f92672">);</span>
 			keyPanel<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>key<span style="color:#f92672">);</span>
 			key<span style="color:#f92672">.</span><span style="color:#a6e22e">addActionListener</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">);</span>
 		<span style="color:#f92672">}</span>
-
-		addWindowListener<span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> WindowAdapter<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-			<span style="color:#a6e22e">@Override</span>
-			<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">windowClosing</span><span style="color:#f92672">(</span>WindowEvent e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-				areYouSureAboutClosingWindow<span style="color:#f92672">();</span>
-			<span style="color:#f92672">}</span>
-		<span style="color:#f92672">});</span>
 	<span style="color:#f92672">}</span>
 
 	<span style="color:#75715e">// this method will prompt a dialog box to user to be sure about exit.. ?
-</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">areYouSureAboutClosingWindow</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">confirmExit</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
 		<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>JOptionPane<span style="color:#f92672">.</span><span style="color:#a6e22e">YES_OPTION</span> <span style="color:#f92672">==</span> JOptionPane<span style="color:#f92672">.</span><span style="color:#a6e22e">showConfirmDialog</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">,</span>
-				<span style="color:#e6db74">&#34;Are you sure?&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;Exit ?&#34;</span><span style="color:#f92672">,</span> JOptionPane<span style="color:#f92672">.</span><span style="color:#a6e22e">OK_CANCEL_OPTION</span><span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
-			System<span style="color:#f92672">.</span><span style="color:#a6e22e">exit</span><span style="color:#f92672">(</span>0<span style="color:#f92672">);</span>
+						<span style="color:#e6db74">&#34;Are you sure?&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;Exit ?&#34;</span><span style="color:#f92672">,</span> JOptionPane<span style="color:#f92672">.</span><span style="color:#a6e22e">OK_CANCEL_OPTION</span><span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
+			<span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">dispose</span><span style="color:#f92672">();</span>
 		<span style="color:#f92672">}</span>
 	<span style="color:#f92672">}</span>
 
+	<span style="color:#75715e">/**
+</span><span style="color:#75715e">	 * this method perform operation based on keystroke
+</span><span style="color:#75715e">	 */</span>
 	<span style="color:#a6e22e">@Override</span>
 	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">actionPerformed</span><span style="color:#f92672">(</span>ActionEvent e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-		<span style="color:#75715e">/*
-</span><span style="color:#75715e">		 * here is some if else condition ... if startNumber is true then we can
-</span><span style="color:#75715e">		 * add some value in the txtDisplay to perform our operation
-</span><span style="color:#75715e">		 */</span>
-		<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>e<span style="color:#f92672">.</span><span style="color:#a6e22e">getActionCommand</span><span style="color:#f92672">().</span><span style="color:#a6e22e">endsWith</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;7&#34;</span><span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
-			<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>startNumber<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-				txtDisplay<span style="color:#f92672">.</span><span style="color:#a6e22e">setText</span><span style="color:#f92672">(</span>txtDisplay<span style="color:#f92672">.</span><span style="color:#a6e22e">getText</span><span style="color:#f92672">()</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;7&#34;</span><span style="color:#f92672">);</span>
-			<span style="color:#f92672">}</span>
-		<span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>e<span style="color:#f92672">.</span><span style="color:#a6e22e">getActionCommand</span><span style="color:#f92672">().</span><span style="color:#a6e22e">endsWith</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;8&#34;</span><span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
-			<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>startNumber<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-				txtDisplay<span style="color:#f92672">.</span><span style="color:#a6e22e">setText</span><span style="color:#f92672">(</span>txtDisplay<span style="color:#f92672">.</span><span style="color:#a6e22e">getText</span><span style="color:#f92672">()</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;8&#34;</span><span style="color:#f92672">);</span>
-			<span style="color:#f92672">}</span>
-		<span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>e<span style="color:#f92672">.</span><span style="color:#a6e22e">getActionCommand</span><span style="color:#f92672">().</span><span style="color:#a6e22e">endsWith</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;9&#34;</span><span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
-			<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>startNumber<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-				txtDisplay<span style="color:#f92672">.</span><span style="color:#a6e22e">setText</span><span style="color:#f92672">(</span>txtDisplay<span style="color:#f92672">.</span><span style="color:#a6e22e">getText</span><span style="color:#f92672">()</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;9&#34;</span><span style="color:#f92672">);</span>
-			<span style="color:#f92672">}</span>
-		<span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>e<span style="color:#f92672">.</span><span style="color:#a6e22e">getActionCommand</span><span style="color:#f92672">().</span><span style="color:#a6e22e">endsWith</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;4&#34;</span><span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
-			<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>startNumber<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-				txtDisplay<span style="color:#f92672">.</span><span style="color:#a6e22e">setText</span><span style="color:#f92672">(</span>txtDisplay<span style="color:#f92672">.</span><span style="color:#a6e22e">getText</span><span style="color:#f92672">()</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;4&#34;</span><span style="color:#f92672">);</span>
-			<span style="color:#f92672">}</span>
-		<span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>e<span style="color:#f92672">.</span><span style="color:#a6e22e">getActionCommand</span><span style="color:#f92672">().</span><span style="color:#a6e22e">endsWith</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;5&#34;</span><span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
-			<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>startNumber<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-				txtDisplay<span style="color:#f92672">.</span><span style="color:#a6e22e">setText</span><span style="color:#f92672">(</span>txtDisplay<span style="color:#f92672">.</span><span style="color:#a6e22e">getText</span><span style="color:#f92672">()</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;5&#34;</span><span style="color:#f92672">);</span>
-			<span style="color:#f92672">}</span>
-		<span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>e<span style="color:#f92672">.</span><span style="color:#a6e22e">getActionCommand</span><span style="color:#f92672">().</span><span style="color:#a6e22e">endsWith</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;6&#34;</span><span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
-			<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>startNumber<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-				txtDisplay<span style="color:#f92672">.</span><span style="color:#a6e22e">setText</span><span style="color:#f92672">(</span>txtDisplay<span style="color:#f92672">.</span><span style="color:#a6e22e">getText</span><span style="color:#f92672">()</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;6&#34;</span><span style="color:#f92672">);</span>
-			<span style="color:#f92672">}</span>
-		<span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>e<span style="color:#f92672">.</span><span style="color:#a6e22e">getActionCommand</span><span style="color:#f92672">().</span><span style="color:#a6e22e">endsWith</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;3&#34;</span><span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
-			<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>startNumber<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-				txtDisplay<span style="color:#f92672">.</span><span style="color:#a6e22e">setText</span><span style="color:#f92672">(</span>txtDisplay<span style="color:#f92672">.</span><span style="color:#a6e22e">getText</span><span style="color:#f92672">()</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;3&#34;</span><span style="color:#f92672">);</span>
-			<span style="color:#f92672">}</span>
-		<span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>e<span style="color:#f92672">.</span><span style="color:#a6e22e">getActionCommand</span><span style="color:#f92672">().</span><span style="color:#a6e22e">endsWith</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;2&#34;</span><span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
-			<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>startNumber<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-				txtDisplay<span style="color:#f92672">.</span><span style="color:#a6e22e">setText</span><span style="color:#f92672">(</span>txtDisplay<span style="color:#f92672">.</span><span style="color:#a6e22e">getText</span><span style="color:#f92672">()</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;2&#34;</span><span style="color:#f92672">);</span>
-			<span style="color:#f92672">}</span>
-		<span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>e<span style="color:#f92672">.</span><span style="color:#a6e22e">getActionCommand</span><span style="color:#f92672">().</span><span style="color:#a6e22e">endsWith</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;1&#34;</span><span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
-			<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>startNumber<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-				txtDisplay<span style="color:#f92672">.</span><span style="color:#a6e22e">setText</span><span style="color:#f92672">(</span>txtDisplay<span style="color:#f92672">.</span><span style="color:#a6e22e">getText</span><span style="color:#f92672">()</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;1&#34;</span><span style="color:#f92672">);</span>
-			<span style="color:#f92672">}</span>
-		<span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>e<span style="color:#f92672">.</span><span style="color:#a6e22e">getActionCommand</span><span style="color:#f92672">().</span><span style="color:#a6e22e">endsWith</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;0&#34;</span><span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
-			<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>startNumber<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-				txtDisplay<span style="color:#f92672">.</span><span style="color:#a6e22e">setText</span><span style="color:#f92672">(</span>txtDisplay<span style="color:#f92672">.</span><span style="color:#a6e22e">getText</span><span style="color:#f92672">()</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;0&#34;</span><span style="color:#f92672">);</span>
-			<span style="color:#f92672">}</span>
-		<span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>e<span style="color:#f92672">.</span><span style="color:#a6e22e">getActionCommand</span><span style="color:#f92672">().</span><span style="color:#a6e22e">endsWith</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;.&#34;</span><span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
-			<span style="color:#75715e">/*
-</span><span style="color:#75715e">			 * if dotCheck boolean type is false, then we can add a dot in the
-</span><span style="color:#75715e">			 * displayFiled otherwise not. it is used to avoid multiple dot in
-</span><span style="color:#75715e">			 * the displayFiled
-</span><span style="color:#75715e">			 */</span>
-			<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>dotCheck <span style="color:#f92672">==</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-				dotCheck <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">;</span>
-				txtDisplay<span style="color:#f92672">.</span><span style="color:#a6e22e">setText</span><span style="color:#f92672">(</span>txtDisplay<span style="color:#f92672">.</span><span style="color:#a6e22e">getText</span><span style="color:#f92672">()</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;.&#34;</span><span style="color:#f92672">);</span>
-			<span style="color:#f92672">}</span>
-		<span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>e<span style="color:#f92672">.</span><span style="color:#a6e22e">getActionCommand</span><span style="color:#f92672">().</span><span style="color:#a6e22e">endsWith</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;+&#34;</span><span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
-			changeOperationalFlags<span style="color:#f92672">(</span><span style="color:#66d9ef">true</span><span style="color:#f92672">,</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">,</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">,</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;+&#34;</span><span style="color:#f92672">);</span>
 
-		<span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>e<span style="color:#f92672">.</span><span style="color:#a6e22e">getActionCommand</span><span style="color:#f92672">().</span><span style="color:#a6e22e">endsWith</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;-&#34;</span><span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
-			changeOperationalFlags<span style="color:#f92672">(</span><span style="color:#66d9ef">false</span><span style="color:#f92672">,</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">,</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">,</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;-&#34;</span><span style="color:#f92672">);</span>
-
-		<span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>e<span style="color:#f92672">.</span><span style="color:#a6e22e">getActionCommand</span><span style="color:#f92672">().</span><span style="color:#a6e22e">endsWith</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;*&#34;</span><span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
-			changeOperationalFlags<span style="color:#f92672">(</span><span style="color:#66d9ef">false</span><span style="color:#f92672">,</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">,</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">,</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;*&#34;</span><span style="color:#f92672">);</span>
-
-		<span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>e<span style="color:#f92672">.</span><span style="color:#a6e22e">getActionCommand</span><span style="color:#f92672">().</span><span style="color:#a6e22e">endsWith</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/&#34;</span><span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
-			changeOperationalFlags<span style="color:#f92672">(</span><span style="color:#66d9ef">false</span><span style="color:#f92672">,</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">,</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">,</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;/&#34;</span><span style="color:#f92672">);</span>
-
-		<span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>e<span style="color:#f92672">.</span><span style="color:#a6e22e">getActionCommand</span><span style="color:#f92672">().</span><span style="color:#a6e22e">endsWith</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;=&#34;</span><span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
-			<span style="color:#75715e">/***
-</span><span style="color:#75715e">			 * here we store the second value in the SecondValue String calling
-</span><span style="color:#75715e">			 * the getText() method
-</span><span style="color:#75715e">			 */</span>
-			Secondvalue <span style="color:#f92672">=</span> txtDisplay<span style="color:#f92672">.</span><span style="color:#a6e22e">getText</span><span style="color:#f92672">();</span>
-			lblOpration<span style="color:#f92672">.</span><span style="color:#a6e22e">setText</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;=&#34;</span><span style="color:#f92672">);</span>
-
-			<span style="color:#75715e">/**
-</span><span style="color:#75715e">			 * here I&#39;ve done some complex operation of java if additon flag is
-</span><span style="color:#75715e">			 * true then, we fist call the add() method from the CalculatorLogig
-</span><span style="color:#75715e">			 * class the method takes two variable that is double. but our value
-</span><span style="color:#75715e">			 * is String type. so we need to parse it in double. we call the
-</span><span style="color:#75715e">			 * method stringToDouble() from my CalculatorLogig class. it takes a
-</span><span style="color:#75715e">			 * string parameter and return double so now we get the result of
-</span><span style="color:#75715e">			 * add() method. now we need to display the result in our
-</span><span style="color:#75715e">			 * txtDisplay. our value is in double. so we need to make it String
-</span><span style="color:#75715e">			 * type. So here we called String.valueOf() method which is a static
-</span><span style="color:#75715e">			 * method of String class. it takes double parameter and returns
-</span><span style="color:#75715e">			 * String. lastly we display the result in the display area by
-</span><span style="color:#75715e">			 * calling setText() method from the JTextField class.
-</span><span style="color:#75715e">			 */</span>
-
-			<span style="color:#75715e">/* we have done the same things for the rest of the operation */</span>
-
-			<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>addition<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-				txtDisplay<span style="color:#f92672">.</span><span style="color:#a6e22e">setText</span><span style="color:#f92672">(</span>String<span style="color:#f92672">.</span><span style="color:#a6e22e">valueOf</span><span style="color:#f92672">((</span>calcLogic<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>
-						calcLogic<span style="color:#f92672">.</span><span style="color:#a6e22e">stringToDouble</span><span style="color:#f92672">(</span>firstValue<span style="color:#f92672">),</span>
-						calcLogic<span style="color:#f92672">.</span><span style="color:#a6e22e">stringToDouble</span><span style="color:#f92672">(</span>Secondvalue<span style="color:#f92672">)))));</span>
-			<span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>substraction<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-				txtDisplay<span style="color:#f92672">.</span><span style="color:#a6e22e">setText</span><span style="color:#f92672">(</span>String<span style="color:#f92672">.</span><span style="color:#a6e22e">valueOf</span><span style="color:#f92672">((</span>calcLogic<span style="color:#f92672">.</span><span style="color:#a6e22e">substruct</span><span style="color:#f92672">(</span>
-						calcLogic<span style="color:#f92672">.</span><span style="color:#a6e22e">stringToDouble</span><span style="color:#f92672">(</span>firstValue<span style="color:#f92672">),</span>
-						calcLogic<span style="color:#f92672">.</span><span style="color:#a6e22e">stringToDouble</span><span style="color:#f92672">(</span>Secondvalue<span style="color:#f92672">)))));</span>
-			<span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>divition<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-				txtDisplay<span style="color:#f92672">.</span><span style="color:#a6e22e">setText</span><span style="color:#f92672">(</span>String<span style="color:#f92672">.</span><span style="color:#a6e22e">valueOf</span><span style="color:#f92672">((</span>calcLogic<span style="color:#f92672">.</span><span style="color:#a6e22e">divide</span><span style="color:#f92672">(</span>
-						calcLogic<span style="color:#f92672">.</span><span style="color:#a6e22e">stringToDouble</span><span style="color:#f92672">(</span>firstValue<span style="color:#f92672">),</span>
-						calcLogic<span style="color:#f92672">.</span><span style="color:#a6e22e">stringToDouble</span><span style="color:#f92672">(</span>Secondvalue<span style="color:#f92672">)))));</span>
-			<span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>multiplication<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-				txtDisplay<span style="color:#f92672">.</span><span style="color:#a6e22e">setText</span><span style="color:#f92672">(</span>String<span style="color:#f92672">.</span><span style="color:#a6e22e">valueOf</span><span style="color:#f92672">((</span>calcLogic<span style="color:#f92672">.</span><span style="color:#a6e22e">multiply</span><span style="color:#f92672">(</span>
-						calcLogic<span style="color:#f92672">.</span><span style="color:#a6e22e">stringToDouble</span><span style="color:#f92672">(</span>firstValue<span style="color:#f92672">),</span>
-						calcLogic<span style="color:#f92672">.</span><span style="color:#a6e22e">stringToDouble</span><span style="color:#f92672">(</span>Secondvalue<span style="color:#f92672">)))));</span>
-			<span style="color:#f92672">}</span>
-		<span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>e<span style="color:#f92672">.</span><span style="color:#a6e22e">getActionCommand</span><span style="color:#f92672">().</span><span style="color:#a6e22e">endsWith</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Clear&#34;</span><span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
-			<span style="color:#75715e">// if clear button press, it clears the txtDisplays
-</span><span style="color:#75715e"></span>			txtDisplay<span style="color:#f92672">.</span><span style="color:#a6e22e">setText</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">);</span>
-			lblOpration<span style="color:#f92672">.</span><span style="color:#a6e22e">setText</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">);</span>
+		String command <span style="color:#f92672">=</span> e<span style="color:#f92672">.</span><span style="color:#a6e22e">getActionCommand</span><span style="color:#f92672">();</span>
+		<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>isNumeric<span style="color:#f92672">(</span>command<span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
+			handleNumericNumbers<span style="color:#f92672">(</span>command<span style="color:#f92672">);</span>
+		<span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>command<span style="color:#f92672">.</span><span style="color:#a6e22e">endsWith</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;.&#34;</span><span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
+			handleDotOperator<span style="color:#f92672">();</span>
+		<span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span><span style="color:#e6db74">&#34;+-*/&#34;</span><span style="color:#f92672">.</span><span style="color:#a6e22e">contains</span><span style="color:#f92672">(</span>command<span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
+			handleOps<span style="color:#f92672">(</span>command<span style="color:#f92672">);</span>
+		<span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>command<span style="color:#f92672">.</span><span style="color:#a6e22e">endsWith</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;=&#34;</span><span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
+			performCalculation<span style="color:#f92672">();</span>
+		<span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>command<span style="color:#f92672">.</span><span style="color:#a6e22e">endsWith</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Clear&#34;</span><span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
+			clear<span style="color:#f92672">();</span>
 		<span style="color:#f92672">}</span>
 	<span style="color:#f92672">}</span>
 
-	<span style="color:#75715e">/***
-</span><span style="color:#75715e">	 * here if the actionCommand is equal to &#34;+&#34; then, we need to perform
-</span><span style="color:#75715e">	 * addition . so first we store the first Value to firstValue String calling
-</span><span style="color:#75715e">	 * the getText() method and then clear the display area for next value and
-</span><span style="color:#75715e">	 * make the addition boolean type true so that we can perform addition and
-</span><span style="color:#75715e">	 * make the dotCheck variable false so that second value can contain dot
+
+	<span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">performCalculation</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+		lblOperation<span style="color:#f92672">.</span><span style="color:#a6e22e">setText</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;=&#34;</span><span style="color:#f92672">);</span>
+		txtDisplay<span style="color:#f92672">.</span><span style="color:#a6e22e">setText</span><span style="color:#f92672">(</span>String<span style="color:#f92672">.</span><span style="color:#a6e22e">valueOf</span><span style="color:#f92672">(</span>doPerformCalculation<span style="color:#f92672">()));</span>
+	<span style="color:#f92672">}</span>
+
+	<span style="color:#75715e">/**
+</span><span style="color:#75715e">	 * Here we fetch the second value, and based on the current operation we perform the calculation.
+</span><span style="color:#75715e">	 * If the current operator is +, we invoke the add() method from the BasicMath
+</span><span style="color:#75715e">	 * class. It takes two double variables.
+</span><span style="color:#75715e">	 * Our values are string,  and that&#39;s why we need to convert them into double.
+</span><span style="color:#75715e">	 * For that, we use stringToDouble() from my BasicMath class. It takes a string parameter and returns double.
+</span><span style="color:#75715e">	 * Then we pass those double to the add method and get the result and display in the result panel,
+</span><span style="color:#75715e">	 * which is txtDisplay using the setText method. However, this method takes an only string.
+</span><span style="color:#75715e">	 * And that&#39;s why we have to convert the result into the string again using String.valueOf().
+</span><span style="color:#75715e">	 * It is a static method of String class. it takes a double parameter and returns
+</span><span style="color:#75715e">	 * String.
 </span><span style="color:#75715e">	 */</span>
+	<span style="color:#66d9ef">private</span> <span style="color:#66d9ef">double</span> <span style="color:#a6e22e">doPerformCalculation</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+		<span style="color:#66d9ef">double</span> first <span style="color:#f92672">=</span> math<span style="color:#f92672">.</span><span style="color:#a6e22e">stringToDouble</span><span style="color:#f92672">(</span>firstValue<span style="color:#f92672">);</span>
+		<span style="color:#66d9ef">double</span> second <span style="color:#f92672">=</span> math<span style="color:#f92672">.</span><span style="color:#a6e22e">stringToDouble</span><span style="color:#f92672">(</span>txtDisplay<span style="color:#f92672">.</span><span style="color:#a6e22e">getText</span><span style="color:#f92672">());</span>
+		<span style="color:#66d9ef">double</span> result <span style="color:#f92672">=</span> 0<span style="color:#f92672">.</span><span style="color:#a6e22e">0</span><span style="color:#f92672">;</span>
 
-	<span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">changeOperationalFlags</span><span style="color:#f92672">(</span><span style="color:#66d9ef">boolean</span> addition<span style="color:#f92672">,</span>
-			<span style="color:#66d9ef">boolean</span> subustraction<span style="color:#f92672">,</span> <span style="color:#66d9ef">boolean</span> divition<span style="color:#f92672">,</span> <span style="color:#66d9ef">boolean</span> multiplication<span style="color:#f92672">,</span>
-			String operation<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+		<span style="color:#66d9ef">switch</span> <span style="color:#f92672">(</span>currentOperation<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+			<span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;+&#34;</span><span style="color:#f92672">:</span>
+				result <span style="color:#f92672">=</span> math<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>first<span style="color:#f92672">,</span> second<span style="color:#f92672">);</span>
+				<span style="color:#66d9ef">break</span><span style="color:#f92672">;</span>
+			<span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;-&#34;</span><span style="color:#f92672">:</span>
+				result <span style="color:#f92672">=</span> math<span style="color:#f92672">.</span><span style="color:#a6e22e">minus</span><span style="color:#f92672">(</span>first<span style="color:#f92672">,</span> second<span style="color:#f92672">);</span>
+				<span style="color:#66d9ef">break</span><span style="color:#f92672">;</span>
+			<span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;/&#34;</span><span style="color:#f92672">:</span>
+				result <span style="color:#f92672">=</span> math<span style="color:#f92672">.</span><span style="color:#a6e22e">divide</span><span style="color:#f92672">(</span>first<span style="color:#f92672">,</span> second<span style="color:#f92672">);</span>
+				<span style="color:#66d9ef">break</span><span style="color:#f92672">;</span>
+			<span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;*&#34;</span><span style="color:#f92672">:</span>
+				result <span style="color:#f92672">=</span> math<span style="color:#f92672">.</span><span style="color:#a6e22e">multiply</span><span style="color:#f92672">(</span>first<span style="color:#f92672">,</span> second<span style="color:#f92672">);</span>
+				<span style="color:#66d9ef">break</span><span style="color:#f92672">;</span>
+		<span style="color:#f92672">}</span>
 
+		<span style="color:#66d9ef">return</span> result<span style="color:#f92672">;</span>
+	<span style="color:#f92672">}</span>
+
+	<span style="color:#75715e">/**
+</span><span style="color:#75715e">	 * if clear button press, it clears the txtDisplays
+</span><span style="color:#75715e">	 */</span>
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">clear</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+		txtDisplay<span style="color:#f92672">.</span><span style="color:#a6e22e">setText</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">);</span>
+		lblOperation<span style="color:#f92672">.</span><span style="color:#a6e22e">setText</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">);</span>
+	<span style="color:#f92672">}</span>
+
+	<span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">handleOps</span><span style="color:#f92672">(</span>String command<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+		currentOperation <span style="color:#f92672">=</span> command<span style="color:#f92672">;</span>
 		firstValue <span style="color:#f92672">=</span> txtDisplay<span style="color:#f92672">.</span><span style="color:#a6e22e">getText</span><span style="color:#f92672">();</span>
 		txtDisplay<span style="color:#f92672">.</span><span style="color:#a6e22e">setText</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">);</span>
-		<span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">addition</span> <span style="color:#f92672">=</span> addition<span style="color:#f92672">;</span>
-		<span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">substraction</span> <span style="color:#f92672">=</span> subustraction<span style="color:#f92672">;</span>
-		<span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">divition</span> <span style="color:#f92672">=</span> divition<span style="color:#f92672">;</span>
-		<span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">multiplication</span> <span style="color:#f92672">=</span> multiplication<span style="color:#f92672">;</span>
-		dotCheck <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
-		lblOpration<span style="color:#f92672">.</span><span style="color:#a6e22e">setText</span><span style="color:#f92672">(</span>operation<span style="color:#f92672">);</span>
+		lblOperation<span style="color:#f92672">.</span><span style="color:#a6e22e">setText</span><span style="color:#f92672">(</span>currentOperation<span style="color:#f92672">);</span>
+	<span style="color:#f92672">}</span>
+
+	<span style="color:#75715e">/**
+</span><span style="color:#75715e">	 * if user used dot once already, we are not allowing to sue it again
+</span><span style="color:#75715e">	 */</span>
+	<span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">handleDotOperator</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+		String text <span style="color:#f92672">=</span> txtDisplay<span style="color:#f92672">.</span><span style="color:#a6e22e">getText</span><span style="color:#f92672">();</span>
+		<span style="color:#66d9ef">if</span> <span style="color:#f92672">(!</span>text<span style="color:#f92672">.</span><span style="color:#a6e22e">contains</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;.&#34;</span><span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
+			txtDisplay<span style="color:#f92672">.</span><span style="color:#a6e22e">setText</span><span style="color:#f92672">(</span>text <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;.&#34;</span><span style="color:#f92672">);</span>
+		<span style="color:#f92672">}</span>
+	<span style="color:#f92672">}</span>
+
+	<span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">handleNumericNumbers</span><span style="color:#f92672">(</span>String command<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+
+		txtDisplay<span style="color:#f92672">.</span><span style="color:#a6e22e">setText</span><span style="color:#f92672">(</span>txtDisplay<span style="color:#f92672">.</span><span style="color:#a6e22e">getText</span><span style="color:#f92672">()</span> <span style="color:#f92672">+</span> command<span style="color:#f92672">);</span>
+	<span style="color:#f92672">}</span>
+
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">isNumeric</span><span style="color:#f92672">(</span>String strNum<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+		<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>strNum <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+
+			<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
+		<span style="color:#f92672">}</span>
+		
+		<span style="color:#66d9ef">return</span> pattern<span style="color:#f92672">.</span><span style="color:#a6e22e">matcher</span><span style="color:#f92672">(</span>strNum<span style="color:#f92672">).</span><span style="color:#a6e22e">matches</span><span style="color:#f92672">();</span>
 	<span style="color:#f92672">}</span>
 <span style="color:#f92672">}</span>
+
 </code></pre></div><p> </p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> java.awt.EventQueue<span style="color:#f92672">;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> com.bazlur.calculator<span style="color:#f92672">;</span>
 
-<span style="color:#f92672">import</span> javax.swing.UIManager<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> javax.swing.*<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> java.awt.*<span style="color:#f92672">;</span>
 
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ApplicationLuncher</span> <span style="color:#f92672">{</span>
-
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Application</span> <span style="color:#f92672">{</span>
 	<span style="color:#75715e">/**
 </span><span style="color:#75715e">	 * Launch the application.
 </span><span style="color:#75715e">	 */</span>
 	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-		EventQueue<span style="color:#f92672">.</span><span style="color:#a6e22e">invokeLater</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> Runnable<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-			<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">run</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-				<span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
-					UIManager<span style="color:#f92672">.</span><span style="color:#a6e22e">setLookAndFeel</span><span style="color:#f92672">(</span>UIManager<span style="color:#f92672">.</span><span style="color:#a6e22e">getSystemLookAndFeelClassName</span><span style="color:#f92672">());</span>
-					CaculatorUI frame <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> CaculatorUI<span style="color:#f92672">();</span>
-					frame<span style="color:#f92672">.</span><span style="color:#a6e22e">setVisible</span><span style="color:#f92672">(</span><span style="color:#66d9ef">true</span><span style="color:#f92672">);</span>
-				<span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>Exception e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-					e<span style="color:#f92672">.</span><span style="color:#a6e22e">printStackTrace</span><span style="color:#f92672">();</span>
-				<span style="color:#f92672">}</span>
+		EventQueue<span style="color:#f92672">.</span><span style="color:#a6e22e">invokeLater</span><span style="color:#f92672">(()</span> <span style="color:#f92672">-&gt;</span> <span style="color:#f92672">{</span>
+			<span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
+				UIManager<span style="color:#f92672">.</span><span style="color:#a6e22e">setLookAndFeel</span><span style="color:#f92672">(</span>UIManager<span style="color:#f92672">.</span><span style="color:#a6e22e">getSystemLookAndFeelClassName</span><span style="color:#f92672">());</span>
+				CalculatorUI frame <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> CalculatorUI<span style="color:#f92672">();</span>
+				frame<span style="color:#f92672">.</span><span style="color:#a6e22e">setVisible</span><span style="color:#f92672">(</span><span style="color:#66d9ef">true</span><span style="color:#f92672">);</span>
+			<span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>Exception e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+				System<span style="color:#f92672">.</span><span style="color:#a6e22e">err</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Unable to lunch application deu to &#34;</span> <span style="color:#f92672">+</span> e<span style="color:#f92672">.</span><span style="color:#a6e22e">getMessage</span><span style="color:#f92672">());</span>
 			<span style="color:#f92672">}</span>
 		<span style="color:#f92672">});</span>
 	<span style="color:#f92672">}</span>
 <span style="color:#f92672">}</span>
 </code></pre></div><p>ওপরের কোডগুলো কপি করে রান করুন। তাহলে পেয়ে যাবেন একটি সিম্পল ক্যালকুলেটর।</p>
-<p><img loading="lazy" class="alignnone size-full wp-image-277" src="https://bazlur.com/wp-content/uploads/2018/03/simple-calculator.png" alt="" width="350" height="300" /></p>
+<p><img src="/img/caculator.png" alt="Calculator" /></p>
 
 </main>
 
