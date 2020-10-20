@@ -402,7 +402,14 @@
   </url>
   
   <url>
-    <loc>http://bazlur.com/tags/book-review/</loc>
+    <loc>http://bazlur.com/tags/java-thread-programming/</loc>
+    <lastmod>2018-02-26T14:11:38+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://bazlur.com/tags/review/</loc>
     <lastmod>2018-02-26T14:11:38+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -423,13 +430,6 @@
   </url>
   
   <url>
-    <loc>http://bazlur.com/tags/java-thread-programming/</loc>
-    <lastmod>2018-02-19T20:53:04+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>http://bazlur.com/posts/2018-02-20-java-thread-programming-review-/</loc>
     <lastmod>2018-02-19T20:53:04+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -437,14 +437,7 @@
   </url>
   
   <url>
-    <loc>http://bazlur.com/tags/review/</loc>
-    <lastmod>2018-02-19T20:41:38+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://bazlur.com/posts/2018-02-20-java-thread-programming-review-/</loc>
+    <loc>http://bazlur.com/posts/2018-02-20-java-thread-programming-review-2/</loc>
     <lastmod>2018-02-19T20:41:38+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
