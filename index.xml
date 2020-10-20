@@ -143,7 +143,7 @@ package com.bazlur.calculator; public class BasicMath { /** * This method adds u
       <pubDate>Mon, 26 Feb 2018 14:11:38 +0000</pubDate>
       
       <guid>http://bazlur.com/posts/2018-02-26-java-thread-programming-review-/</guid>
-      <description>#### **জাভা থ্রেড প্রোগ্রামিং বইটি নিয়ে নিচের চমৎকার রিভিউটি লিখেছেন **Ruhul Quddus Shakkhor &amp;gt; This is a great book, but this is not for everyone. If you’re new to Java, then it’s probably better to learn the basics first. However, if you’re an intermediate to the advanced learner, this book will give you a deeper understanding of Java threads. At this moment, I’m not aware of another Bangla book for any programming language that can give you a similar overview of threads.</description>
+      <description>জাভা থ্রেড প্রোগ্রামিং বইটি নিয়ে নিচের চমৎকার রিভিউটি লিখেছেন Ruhul Quddus Shakkhor   This is a great book, but this is not for everyone. If you’re new to Java, then it’s probably better to learn the basics first. However, if you’re an intermediate to the advanced learner, this book will give you a deeper understanding of Java threads. At this moment, I’m not aware of another Bangla book for any programming language that can give you a similar overview of threads.</description>
     </item>
     
     <item>
@@ -161,8 +161,7 @@ package com.bazlur.calculator; public class BasicMath { /** * This method adds u
       <pubDate>Mon, 19 Feb 2018 20:53:04 +0000</pubDate>
       
       <guid>http://bazlur.com/posts/2018-02-20-java-thread-programming-review-/</guid>
-      <description>#### **জাভা থ্রেড প্রোগ্রামিং বইটি নিয়ে একটি চমৎকার রিভিউ লিখেছেন তামিম শাহরিয়ার সুবিন ভাই।**
-রিভিউটি নিচে দেওয়া হলো–
+      <description>জাভা থ্রেড প্রোগ্রামিং বইটি নিয়ে একটি চমৎকার রিভিউ লিখেছেন তামিম শাহরিয়ার সুবিন ভাই। রিভিউটি নিচে দেওয়া হলো–
  গত বছরের মাঝামাঝি সময় আমাদের জাভা প্রোগ্রামিং বইয়ের লেখক – বজলুর আমাকে জানালো যে, সে জাভা প্রোগ্রামিং বইটার দ্বিতীয় খণ্ড লিখছে। লেখার মাঝামাঝি পর্যায়ে সে আমাকে বইটি রিভিউ করার কাজে যুক্ত করলো। আমি কিছুদূর রিভিউ করার পরে বললাম, বই তো অনেক বড় হয়ে আসছে, তুমি যদি বইমেলায় বই প্রকাশ করতে চাও, তাহলে শুধু মাল্টিথ্রেডিং নিয়ে বই লিখে ফেলো। বাকী জিনিসপত্র নিয়ে জাভা প্রোগ্রামিং দ্বিতীয় খণ্ড নামে একটি বই লিখবে। বজলুর রাজি হয়ে গেলো, থ্রেড নিয়ে আরো লিখতে লাগলো। আমিও রিভিউ করে বিভিন্ন ফিডব্যাক দিতে লাগলাম।</description>
     </item>
     
