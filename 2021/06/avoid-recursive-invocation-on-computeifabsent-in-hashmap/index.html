@@ -91,7 +91,7 @@ V v <span style="color:#f92672">=</span> mappingFunction<span style="color:#f926
 <p>So what are the solutions,</p>
 <ul>
 <li>Use the traditional imperative approach, that works fine.</li>
-<li>Use <code>ConcurrentSkipListMap</code>. <code>ConcurrentSkipListMap</code> is a thread-safe map.</li>
+<li>Use <code>ConcurrentSkipListMap</code>. <code>ConcurrentSkipListMap</code> is a thread-safe map and it will not through <code>ConcurrentModificationException</code> in recursive method while using computeIfAbsent().</li>
 </ul>
 <p>References:</p>
 <ol>
