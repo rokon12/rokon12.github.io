@@ -6,11 +6,11 @@
     <description>Recent content in ConcurrentSkipListMap on Bazlur&#39;s Stream of Thoughts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 10 Jun 2021 01:47:10 -0400</lastBuildDate><atom:link href="http://bazlur.com/tags/concurrentskiplistmap/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 09 Jun 2021 13:04:10 -0400</lastBuildDate><atom:link href="http://bazlur.com/tags/concurrentskiplistmap/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Avoid recursive invocation on computeIfAbsent() in HashMap</title>
       <link>http://bazlur.com/2021/06/avoid-recursive-invocation-on-computeifabsent-in-hashmap/</link>
-      <pubDate>Thu, 10 Jun 2021 01:47:10 -0400</pubDate>
+      <pubDate>Wed, 09 Jun 2021 13:04:10 -0400</pubDate>
       
       <guid>http://bazlur.com/2021/06/avoid-recursive-invocation-on-computeifabsent-in-hashmap/</guid>
       <description>If a value doesn&amp;rsquo;t exist in the map, we calculate. We do it imperatively.

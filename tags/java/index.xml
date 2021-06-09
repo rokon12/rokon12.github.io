@@ -6,7 +6,18 @@
     <description>Recent content in java on Bazlur&#39;s Stream of Thoughts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 09 Jun 2021 01:47:10 -0400</lastBuildDate><atom:link href="http://bazlur.com/tags/java/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 09 Jun 2021 13:04:10 -0400</lastBuildDate><atom:link href="http://bazlur.com/tags/java/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Avoid recursive invocation on computeIfAbsent() in HashMap</title>
+      <link>http://bazlur.com/2021/06/avoid-recursive-invocation-on-computeifabsent-in-hashmap/</link>
+      <pubDate>Wed, 09 Jun 2021 13:04:10 -0400</pubDate>
+      
+      <guid>http://bazlur.com/2021/06/avoid-recursive-invocation-on-computeifabsent-in-hashmap/</guid>
+      <description>If a value doesn&amp;rsquo;t exist in the map, we calculate. We do it imperatively.
+We first check if a value exists or not using containsKey() in an &amp;ldquo;if block.&amp;rdquo; If not found, we then calculate as follows-
+static Map&amp;lt;Integer, BigInteger&amp;gt; cache = new HashMap&amp;lt;&amp;gt;( Map.of(0, BigInteger.ZERO, 1, BigInteger.ONE) ); public static BigInteger fibonacci(int n) { if (!cache.containsKey(n)) { var computed = fibonacci(n - 1).add(fibonacci(n - 2)); cache.put(n, computed); } return cache.</description>
+    </item>
+    
     <item>
       <title>Let&#39;s print 100th fibonacci number using java</title>
       <link>http://bazlur.com/2021/06/lets-print-100th-fibonacci-number-using-java/</link>
