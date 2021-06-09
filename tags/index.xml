@@ -6,13 +6,67 @@
     <description>Recent content in Tags on Bazlur&#39;s Stream of Thoughts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 14 Oct 2020 15:47:10 -0400</lastBuildDate><atom:link href="http://bazlur.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 09 Jun 2021 01:47:10 -0400</lastBuildDate><atom:link href="http://bazlur.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>100DaysOfCode</title>
+      <link>http://bazlur.com/tags/100daysofcode/</link>
+      <pubDate>Wed, 09 Jun 2021 01:47:10 -0400</pubDate>
+      
+      <guid>http://bazlur.com/tags/100daysofcode/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>100DaysOfJava</title>
+      <link>http://bazlur.com/tags/100daysofjava/</link>
+      <pubDate>Wed, 09 Jun 2021 01:47:10 -0400</pubDate>
+      
+      <guid>http://bazlur.com/tags/100daysofjava/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>coding</title>
+      <link>http://bazlur.com/tags/coding/</link>
+      <pubDate>Wed, 09 Jun 2021 01:47:10 -0400</pubDate>
+      
+      <guid>http://bazlur.com/tags/coding/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fibonacci</title>
+      <link>http://bazlur.com/tags/fibonacci/</link>
+      <pubDate>Wed, 09 Jun 2021 01:47:10 -0400</pubDate>
+      
+      <guid>http://bazlur.com/tags/fibonacci/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>HashMap</title>
+      <link>http://bazlur.com/tags/hashmap/</link>
+      <pubDate>Wed, 09 Jun 2021 01:47:10 -0400</pubDate>
+      
+      <guid>http://bazlur.com/tags/hashmap/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>java</title>
       <link>http://bazlur.com/tags/java/</link>
-      <pubDate>Wed, 14 Oct 2020 15:47:10 -0400</pubDate>
+      <pubDate>Wed, 09 Jun 2021 01:47:10 -0400</pubDate>
       
       <guid>http://bazlur.com/tags/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Map</title>
+      <link>http://bazlur.com/tags/map/</link>
+      <pubDate>Wed, 09 Jun 2021 01:47:10 -0400</pubDate>
+      
+      <guid>http://bazlur.com/tags/map/</guid>
       <description></description>
     </item>
     
@@ -121,15 +175,6 @@
       <pubDate>Tue, 26 Feb 2019 21:17:33 +0000</pubDate>
       
       <guid>http://bazlur.com/tags/deliberate-practice/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>coding</title>
-      <link>http://bazlur.com/tags/coding/</link>
-      <pubDate>Thu, 21 Jun 2018 05:11:48 +0000</pubDate>
-      
-      <guid>http://bazlur.com/tags/coding/</guid>
       <description></description>
     </item>
     
