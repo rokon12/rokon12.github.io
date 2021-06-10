@@ -6,7 +6,16 @@
     <description>Recent content in 100DaysOfJava on Bazlur&#39;s Stream of Thoughts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 10 Jun 2021 00:04:10 -0400</lastBuildDate><atom:link href="http://bazlur.com/tags/100daysofjava/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 10 Jun 2021 01:38:10 -0400</lastBuildDate><atom:link href="http://bazlur.com/tags/100daysofjava/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to convert multiple images into a single pdf file</title>
+      <link>http://bazlur.com/2021/06/how-to-convert-multiple-images-into-a-single-pdf-file/</link>
+      <pubDate>Thu, 10 Jun 2021 01:38:10 -0400</pubDate>
+      
+      <guid>http://bazlur.com/2021/06/how-to-convert-multiple-images-into-a-single-pdf-file/</guid>
+      <description>I had some images that I needed had to export as pdf. I looked in the app store to find a free tool that makes it possible for me. However, after a quick search, I was not satisfied with the result. The Apps that support such things come at a hefty price tag. Then it hits me. Why not I write a few lines of java code and export pdf with ITextPdf library.</description>
+    </item>
+    
     <item>
       <title>Let&#39;s count the occurrence with groupBy and counting</title>
       <link>http://bazlur.com/2021/06/lets-count-the-occurrence-with-groupby-and-counting/</link>
