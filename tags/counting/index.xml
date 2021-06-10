@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>counting on Bazlur&#39;s Stream of Thoughts</title>
+    <link>http://bazlur.com/tags/counting/</link>
+    <description>Recent content in counting on Bazlur&#39;s Stream of Thoughts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 10 Jun 2021 00:04:10 -0400</lastBuildDate><atom:link href="http://bazlur.com/tags/counting/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Let&#39;s count the occurrence with groupBy and counting</title>
+      <link>http://bazlur.com/2021/06/lets-count-the-occurrence-with-groupby-and-counting/</link>
+      <pubDate>Thu, 10 Jun 2021 00:04:10 -0400</pubDate>
+      
+      <guid>http://bazlur.com/2021/06/lets-count-the-occurrence-with-groupby-and-counting/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
