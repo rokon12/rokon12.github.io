@@ -6,11 +6,11 @@
     <description>Recent content in Tags on Bazlur&#39;s Stream of Thoughts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 10 Jun 2021 01:38:10 -0400</lastBuildDate><atom:link href="http://bazlur.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 11 Jun 2021 13:38:10 -0400</lastBuildDate><atom:link href="http://bazlur.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>100DaysOfCode</title>
       <link>http://bazlur.com/tags/100daysofcode/</link>
-      <pubDate>Thu, 10 Jun 2021 01:38:10 -0400</pubDate>
+      <pubDate>Fri, 11 Jun 2021 13:38:10 -0400</pubDate>
       
       <guid>http://bazlur.com/tags/100daysofcode/</guid>
       <description></description>
@@ -19,7 +19,7 @@
     <item>
       <title>100DaysOfJava</title>
       <link>http://bazlur.com/tags/100daysofjava/</link>
-      <pubDate>Thu, 10 Jun 2021 01:38:10 -0400</pubDate>
+      <pubDate>Fri, 11 Jun 2021 13:38:10 -0400</pubDate>
       
       <guid>http://bazlur.com/tags/100daysofjava/</guid>
       <description></description>
@@ -28,9 +28,27 @@
     <item>
       <title>coding</title>
       <link>http://bazlur.com/tags/coding/</link>
-      <pubDate>Thu, 10 Jun 2021 01:38:10 -0400</pubDate>
+      <pubDate>Fri, 11 Jun 2021 13:38:10 -0400</pubDate>
       
       <guid>http://bazlur.com/tags/coding/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>java</title>
+      <link>http://bazlur.com/tags/java/</link>
+      <pubDate>Fri, 11 Jun 2021 13:38:10 -0400</pubDate>
+      
+      <guid>http://bazlur.com/tags/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>string</title>
+      <link>http://bazlur.com/tags/string/</link>
+      <pubDate>Fri, 11 Jun 2021 13:38:10 -0400</pubDate>
+      
+      <guid>http://bazlur.com/tags/string/</guid>
       <description></description>
     </item>
     
@@ -62,29 +80,11 @@
     </item>
     
     <item>
-      <title>java</title>
-      <link>http://bazlur.com/tags/java/</link>
-      <pubDate>Thu, 10 Jun 2021 01:38:10 -0400</pubDate>
-      
-      <guid>http://bazlur.com/tags/java/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>pdf</title>
       <link>http://bazlur.com/tags/pdf/</link>
       <pubDate>Thu, 10 Jun 2021 01:38:10 -0400</pubDate>
       
       <guid>http://bazlur.com/tags/pdf/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>string</title>
-      <link>http://bazlur.com/tags/string/</link>
-      <pubDate>Thu, 10 Jun 2021 01:38:10 -0400</pubDate>
-      
-      <guid>http://bazlur.com/tags/string/</guid>
       <description></description>
     </item>
     
