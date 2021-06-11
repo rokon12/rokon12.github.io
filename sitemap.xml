@@ -42,6 +42,11 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
+    <loc>http://bazlur.com/2021/06/how-to-convert-multiple-images-into-a-single-pdf-file/</loc>
+    <lastmod>2021-06-10T01:38:10-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>http://bazlur.com/tags/image/</loc>
     <lastmod>2021-06-10T01:38:10-04:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -68,6 +73,11 @@
     <priority>0.5</priority>
   </url><url>
     <loc>http://bazlur.com/posts/</loc>
+    <lastmod>2021-06-10T01:38:10-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://bazlur.com/tags/string/</loc>
     <lastmod>2021-06-10T01:38:10-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -703,11 +713,6 @@
     <priority>0.5</priority>
   </url><url>
     <loc>http://bazlur.com/categories/string/</loc>
-    <lastmod>2017-02-19T00:39:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://bazlur.com/tags/string/</loc>
     <lastmod>2017-02-19T00:39:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

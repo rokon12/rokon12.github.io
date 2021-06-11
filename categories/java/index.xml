@@ -17,6 +17,18 @@
     </item>
     
     <item>
+      <title>How to convert multiple images into a single pdf file</title>
+      <link>http://bazlur.com/2021/06/how-to-convert-multiple-images-into-a-single-pdf-file/</link>
+      <pubDate>Thu, 10 Jun 2021 01:38:10 -0400</pubDate>
+      
+      <guid>http://bazlur.com/2021/06/how-to-convert-multiple-images-into-a-single-pdf-file/</guid>
+      <description>Reading texts from a file has never been this easy.
+You have to call Files.readString(), that&amp;rsquo;s it.
+Let&amp;rsquo;s read a text file, remove all the punctuation from it and then count all the unique words.
+for copy/paste pleasure: https://github.com/rokon12/100DaysOfJava/blob/main/src/main/java/com/bazlur/Day005.java</description>
+    </item>
+    
+    <item>
       <title>Let&#39;s count the occurrence with groupBy and counting</title>
       <link>http://bazlur.com/2021/06/lets-count-the-occurrence-with-groupby-and-counting/</link>
       <pubDate>Thu, 10 Jun 2021 00:04:10 -0400</pubDate>
