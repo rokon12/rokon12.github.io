@@ -19,12 +19,8 @@
 
     
     
-    <meta property="description" content="Reading texts from a file has never been this easy.
-You have to call Files.readString(), that&amp;rsquo;s it.
-Let&amp;rsquo;s read a text file, remove all the punctuation from it and then count all the unique &amp;hellip;">
-    <meta property="og:description" content="Reading texts from a file has never been this easy.
-You have to call Files.readString(), that&amp;rsquo;s it.
-Let&amp;rsquo;s read a text file, remove all the punctuation from it and then count all the unique &amp;hellip;">
+    <meta property="description" content="I had some images that I needed had to export as pdf. I looked in the app store to find a free tool that makes it possible for me. However, after a quick search, I was not satisfied with the result. &amp;hellip;">
+    <meta property="og:description" content="I had some images that I needed had to export as pdf. I looked in the app store to find a free tool that makes it possible for me. However, after a quick search, I was not satisfied with the result. &amp;hellip;">
     
     
 
@@ -84,15 +80,18 @@ if (!doNotTrack) {
 </div>
 
 <p class="post-tag">
-    <div id="tags">Tags:<a class="post-tag" href="/tags/java" rel="tag"> java </a> &nbsp; <a class="post-tag" href="/tags/coding" rel="tag"> coding </a> &nbsp; <a class="post-tag" href="/tags/100daysofjava" rel="tag"> 100DaysOfJava </a> &nbsp; <a class="post-tag" href="/tags/string" rel="tag"> String </a> &nbsp; <a class="post-tag" href="/tags/100daysofcode" rel="tag"> 100DaysOfCode </a></div>
+    <div id="tags">Tags:<a class="post-tag" href="/tags/java" rel="tag"> java </a> &nbsp; <a class="post-tag" href="/tags/coding" rel="tag"> coding </a> &nbsp; <a class="post-tag" href="/tags/100daysofjava" rel="tag"> 100DaysOfJava </a> &nbsp; <a class="post-tag" href="/tags/image" rel="tag"> image </a> &nbsp; <a class="post-tag" href="/tags/export" rel="tag"> export </a> &nbsp; <a class="post-tag" href="/tags/pdf" rel="tag"> pdf </a> &nbsp; <a class="post-tag" href="/tags/itext-pdf" rel="tag"> itext pdf </a> &nbsp; <a class="post-tag" href="/tags/100daysofcode" rel="tag"> 100DaysOfCode </a></div>
 </p>
 
 <main>
-    <p>Reading texts from a file has never been this easy.<br />
-You have to call <code>Files.readString()</code>, that&rsquo;s it.</p>
-<p>Let&rsquo;s read a text file, remove all the punctuation from it and then count all the unique words.</p>
-<p><img src="/img/Day005.png" alt="100DaysOfProgramming_Day004" title="100DaysOfJava" /></p>
-<p>for copy/paste pleasure: <a href="https://github.com/rokon12/100DaysOfJava/blob/main/src/main/java/com/bazlur/Day005.java">https://github.com/rokon12/100DaysOfJava/blob/main/src/main/java/com/bazlur/Day005.java</a></p>
+    <p>I had some images that I needed had to export as pdf. I looked in the app store to find a free tool that makes it possible for me. However, after a quick search, I was not satisfied with the result. The Apps that support such things come at a hefty price tag. Then it hits me. Why not I write a few lines of java code and export pdf with ITextPdf library.</p>
+<p>Well, that&rsquo;s it. Five minutes of working helped me to save quite a few bucks.</p>
+<p>Here is what I have got -</p>
+<p><img src="/img/Day004.png" alt="100DaysOfProgramming_Day004" title="100DaysOfJava" /></p>
+<p>for copy/paste pleasure: <a href="https://gist.github.com/rokon12/85705a4abe04cd572774bebdf76aebb7">https://gist.github.com/rokon12/85705a4abe04cd572774bebdf76aebb7</a><br />
+I have used ITextPdf library for this purpose, and the dependency is-</p>
+<pre><code>implementation group: 'com.itextpdf', name: 'itextpdf', version: '5.5.13.2'
+</code></pre>
 
 </main>
 
