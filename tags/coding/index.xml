@@ -8,11 +8,11 @@
     <language>en-us</language>
     <lastBuildDate>Sat, 12 Jun 2021 16:19:10 -0400</lastBuildDate><atom:link href="http://bazlur.com/tags/coding/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Let&#39;s watch over a directory to</title>
-      <link>http://bazlur.com/2021/06/lets-watch-over-a-directory-to/</link>
+      <title>How to watch a directory to detect changes using java</title>
+      <link>http://bazlur.com/2021/06/how-to-watch-a-directory-to-detect-changes-using-java/</link>
       <pubDate>Sat, 12 Jun 2021 16:19:10 -0400</pubDate>
       
-      <guid>http://bazlur.com/2021/06/lets-watch-over-a-directory-to/</guid>
+      <guid>http://bazlur.com/2021/06/how-to-watch-a-directory-to-detect-changes-using-java/</guid>
       <description>Have you ever noticed, when you open a file into two different editors, and when you made changes in one, the other one informs you that the file has changed and you need to reload? How does it do that?
 Well, the following coding snippet would do the trick. Let&amp;rsquo;s watch a particular directory and listen to the event.
 for copy/paste pleasure: https://github.com/rokon12/100DaysOfJava/blob/main/src/main/java/com/bazlur/Day006.java</description>
