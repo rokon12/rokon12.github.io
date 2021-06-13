@@ -13,8 +13,8 @@
       <pubDate>Sun, 13 Jun 2021 04:38:10 -0400</pubDate>
       
       <guid>http://bazlur.com/2021/06/how-to-run-task-periodically-in-java/</guid>
-      <description>Sometimes you want to run a particular task at a fixed rate periodically. The job could be anything, e.g. you may want to call a rest API to check for an update, or perhaps pull information from a database, do some processing, and then send an email. The following code snippet will allow you to do that sort of task precisely.
-In this code, we are reading stock exchange quote from google to see the bitcoin price in CAD every 5 minutes.</description>
+      <description>Sometimes you want to run a particular task at a fixed rate periodically. The job could be anything, e.g. you may want to call a rest API to check for an update, or perhaps pull information from a database, do some processing, and then send an email.
+Or maybe you want to keep your eye on the stock exchange. The following code snippet will allow you to do that sort of task precisely.</description>
     </item>
     
   </channel>
