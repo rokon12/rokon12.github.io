@@ -6,7 +6,17 @@
     <description>Recent content in Posts on Bazlur&#39;s Stream of Thoughts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 12 Jun 2021 16:19:10 -0400</lastBuildDate><atom:link href="http://bazlur.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 13 Jun 2021 04:38:10 -0400</lastBuildDate><atom:link href="http://bazlur.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to run task periodically in java</title>
+      <link>http://bazlur.com/2021/06/how-to-run-task-periodically-in-java/</link>
+      <pubDate>Sun, 13 Jun 2021 04:38:10 -0400</pubDate>
+      
+      <guid>http://bazlur.com/2021/06/how-to-run-task-periodically-in-java/</guid>
+      <description>Sometimes you want to run a particular task at a fixed rate periodically. The job could be anything, e.g. you may want to call a rest API to check for an update, or perhaps pull information from a database, do some processing, and then send an email. The following code snippet will allow you to do that sort of task precisely.
+In this code, we are reading stock exchange quote from google to see the bitcoin price in CAD every 5 minutes.</description>
+    </item>
+    
     <item>
       <title>How to watch a directory to detect changes using java</title>
       <link>http://bazlur.com/2021/06/how-to-watch-a-directory-to-detect-changes-using-java/</link>
