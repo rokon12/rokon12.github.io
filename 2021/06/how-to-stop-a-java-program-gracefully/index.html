@@ -7,8 +7,8 @@
     <meta property="fb:pages" content="556530934551556" />
 
     
-    <title>java - Bazlur&#39;s Stream of Thoughts</title>
-    <meta property="og:title" content="java - Bazlur&#39;s Stream of Thoughts">
+    <title>How to stop a java program gracefully? - Bazlur&#39;s Stream of Thoughts</title>
+    <meta property="og:title" content="How to stop a java program gracefully? - Bazlur&#39;s Stream of Thoughts">
     
 
     <meta name="twitter:card" content="summary">
@@ -19,6 +19,9 @@
 
     
     
+    <meta property="description" content="Sometimes you may want to stop your java program using SIGINT hitting your CTRL&#43;C. For example, your program may be doing something important, e.g., opening a server socket and waiting on a port or &amp;hellip;">
+    <meta property="og:description" content="Sometimes you may want to stop your java program using SIGINT hitting your CTRL&#43;C. For example, your program may be doing something important, e.g., opening a server socket and waiting on a port or &amp;hellip;">
+    
     
 
     
@@ -26,8 +29,6 @@
 
     
 
-    
-    <link href="/tags/java/index.xml" rel="alternate" type="application/rss+xml" title="Bazlur&#39;s Stream of Thoughts" />
     
 
     <link rel="stylesheet" href="/css/style.css" />
@@ -72,138 +73,167 @@ if (!doNotTrack) {
     </ul>
     <hr/>
     </nav>
+<div class="article-meta">
+    <h1><span class="title">How to stop a java program gracefully?</span></h1>
+    <h2 class="author">A N M Bazlur Rahman</h2>
+    <h2 class="date">2021/06/14</h2>
+</div>
+
+<p class="post-tag">
+    <div id="tags">Tags:<a class="post-tag" href="/tags/java" rel="tag"> java </a> &nbsp; <a class="post-tag" href="/tags/coding" rel="tag"> coding </a> &nbsp; <a class="post-tag" href="/tags/100daysofjava" rel="tag"> 100DaysOfJava </a> &nbsp; <a class="post-tag" href="/tags/executors" rel="tag"> Executors </a> &nbsp; <a class="post-tag" href="/tags/100daysofcode" rel="tag"> 100DaysOfCode </a></div>
+</p>
+
+<main>
+    <p>Sometimes you may want to stop your java program using SIGINT hitting your <code>CTRL+C</code>. For example, your program may be doing something important, e.g., opening a server socket and waiting on a port or doing some background work on a thread pool. You want to stop it gracefully shutting down your socket or the thread pool.<br />
+For such scenarios, what you can do is, add a shutdown hook to the java runtime. The following code demonstrates precisely that.</p>
+<p><img src="/img/Day008.png" alt="100DaysOfProgramming_Day008" title="100DaysOfJava" /></p>
+<p>for <strong>copy/paste</strong> pleasure: <a href="https://github.com/rokon12/100DaysOfJava/blob/main/src/main/java/com/bazlur/Day008.java">https://github.com/rokon12/100DaysOfJava/blob/main/src/main/java/com/bazlur/Day008.java</a></p>
+
+</main>
+
+<p class="post-tag">
+    <div>Categories:<a class="post-tag" href="/categories/java" rel="tag"> java </a> &nbsp; <a class="post-tag" href="/categories/100daysofjava" rel="tag"> 100DaysOfJava </a></div>
+</p>
 
 
-<h1>java</h1>
 
+<style>
+    #share-buttons {
+        display: inline-block;
+        vertical-align: middle;
+    }
 
-<ul>
+    #share-buttons:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+    #share-buttons > div {
+        position: relative;
+        text-align: left;
+        height: 36px;
+        width: 32px;
+        float: left;
+        text-align: center;
+    }
+
+    #share-buttons > div > svg {
+        height: 16px;
+        fill: #d5d5d5;
+        margin-top: 10px;
+    }
+
+    #share-buttons > div:hover {
+        cursor: pointer;
+    }
+
+    #share-buttons > div.facebook:hover > svg {
+        fill: #3B5998;
+    }
+
+    #share-buttons > div.twitter:hover > svg {
+        fill: #55ACEE;
+    }
+
+    #share-buttons > div.linkedin:hover > svg {
+        fill: #0077b5;
+    }
+
+    #share-buttons > div.pinterest:hover > svg {
+        fill: #CB2027;
+    }
+
+    #share-buttons > div.gplus:hover > svg {
+        fill: #dd4b39;
+    }
+
+    #share-buttons > div.mail:hover > svg {
+        fill: #7D7D7D;
+    }
+
+    #share-buttons > div.instagram:hover > svg {
+        fill: #C73B92;
+    }
+
+    #share-buttons > div.facebook > svg {
+        height: 18px;
+        margin-top: 9px;
+    }
+
+    #share-buttons > div.twitter > svg {
+        height: 20px;
+        margin-top: 8px;
+    }
+
+    #share-buttons > div.linkedin > svg {
+        height: 19px;
+        margin-top: 7px;
+    }
+
+    #share-buttons > div.pinterest > svg {
+        height: 20px;
+        margin-top: 9px;
+    }
+
+    #share-buttons > div.gplus > svg {
+        height: 17px;
+        margin-top: 9px;
+        position: relative;
+        left: 1px;
+    }
+
+    #share-buttons > div.mail > svg {
+        height: 14px;
+        margin-top: 11px;
+    }
+</style>
+
+<span style="color: silver;">Share on: </span>
+<div id="share-buttons">
+    <div class="facebook" title="Share this on Facebook"
+         onclick="window.open('http://www.facebook.com/share.php?u=http:\/\/bazlur.com\/2021\/06\/how-to-stop-a-java-program-gracefully\/');">
+        <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1343 12v264h-157q-86 0-116 36t-30 108v189h293l-39 296h-254v759h-306v-759h-255v-296h255v-218q0-186 104-288.5t277-102.5q147 0 228 12z"/>
+        </svg>
+    </div>
+    <div class="twitter" title="Share this on Twitter"
+         onclick="window.open('http://twitter.com/intent/tweet?text=How to stop a java program gracefully?&url=http:\/\/bazlur.com\/2021\/06\/how-to-stop-a-java-program-gracefully\/');">
+        <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1684 408q-67 98-162 167 1 14 1 42 0 130-38 259.5t-115.5 248.5-184.5 210.5-258 146-323 54.5q-271 0-496-145 35 4 78 4 225 0 401-138-105-2-188-64.5t-114-159.5q33 5 61 5 43 0 85-11-112-23-185.5-111.5t-73.5-205.5v-4q68 38 146 41-66-44-105-115t-39-154q0-88 44-163 121 149 294.5 238.5t371.5 99.5q-8-38-8-74 0-134 94.5-228.5t228.5-94.5q140 0 236 102 109-21 205-78-37 115-142 178 93-10 186-50z"/>
+        </svg>
+    </div>
+    <div class="linkedin" title="Share this on Linkedin"
+         onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&url=http:\/\/bazlur.com\/2021\/06\/how-to-stop-a-java-program-gracefully\/&title=&summary=&source=');">
+        <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+            <path d="M477 625v991h-330v-991h330zm21-306q1 73-50.5 122t-135.5 49h-2q-82 0-132-49t-50-122q0-74 51.5-122.5t134.5-48.5 133 48.5 51 122.5zm1166 729v568h-329v-530q0-105-40.5-164.5t-126.5-59.5q-63 0-105.5 34.5t-63.5 85.5q-11 30-11 81v553h-329q2-399 2-647t-1-296l-1-48h329v144h-2q20-32 41-56t56.5-52 87-43.5 114.5-15.5q171 0 275 113.5t104 332.5z"/>
+        </svg>
+    </div>
     
-    <li>
-        <a href="/2021/06/how-to-stop-a-java-program-gracefully/">How to stop a java program gracefully?</a> <i class="fas fa-heart"></i>
-    </li>
-    
-    <li>
-        <a href="/2021/06/how-to-run-a-task-periodically-in-java/">How to run a task periodically in java</a> <i class="fas fa-heart"></i>
-    </li>
-    
-    <li>
-        <a href="/2021/06/how-to-watch-a-directory-to-detect-changes-using-java/">How to watch a directory to detect changes using java</a> <i class="fas fa-heart"></i>
-    </li>
-    
-    <li>
-        <a href="/2021/06/how-to-read-texts-from-a-file-using-java/">How to read texts from a file using java</a> <i class="fas fa-heart"></i>
-    </li>
-    
-    <li>
-        <a href="/2021/06/how-to-convert-multiple-images-into-a-single-pdf-file/">How to convert multiple images into a single pdf file</a> <i class="fas fa-heart"></i>
-    </li>
-    
-    <li>
-        <a href="/2021/06/lets-count-the-occurrence-with-groupby-and-counting/">Let&#39;s count the occurrence with groupBy and counting</a> <i class="fas fa-heart"></i>
-    </li>
-    
-    <li>
-        <a href="/2021/06/avoid-recursive-invocation-on-computeifabsent-in-hashmap/">Avoid recursive invocation on computeIfAbsent() in HashMap</a> <i class="fas fa-heart"></i>
-    </li>
-    
-    <li>
-        <a href="/2021/06/lets-print-100th-fibonacci-number-using-java/">Let&#39;s print 100th fibonacci number using java</a> <i class="fas fa-heart"></i>
-    </li>
-    
-    <li>
-        <a href="/2020/10/java-local-type-inference/">Java Local Type Inference</a> <i class="fas fa-heart"></i>
-    </li>
-    
-    <li>
-        <a href="/posts/2018-06-21-%E0%A6%93%E0%A6%AF%E0%A6%BC%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%B2%E0%A7%8D%E0%A6%A1%E0%A6%95%E0%A6%BE%E0%A6%AA%E0%A7%87%E0%A6%B0-%E0%A6%AB%E0%A6%BE%E0%A6%81%E0%A6%95%E0%A7%87-%E0%A6%8F%E0%A6%95%E0%A6%9F/">ওয়ার্ল্ডকাপের ফাঁকে একটি অত্যন্ত জ্ঞানগর্ভ মূলক দামী পোস্ট </a> <i class="fas fa-heart"></i>
-    </li>
-    
-    <li>
-        <a href="/posts/2018-03-18-%E0%A6%9C%E0%A6%BE%E0%A6%AD%E0%A6%BE-%E0%A6%B8%E0%A7%81%E0%A6%87%E0%A6%AF%E0%A6%BC%E0%A6%BF%E0%A6%82-%E0%A6%AC%E0%A7%8D%E0%A6%AF%E0%A6%AC%E0%A6%B9%E0%A6%BE%E0%A6%B0-%E0%A6%95%E0%A6%B0%E0%A7%87-/">জাভা সুইয়িং ব্যবহার করে একটি ক্যালকুলেটর</a> <i class="fas fa-heart"></i>
-    </li>
-    
-    <li>
-        <a href="/posts/2018-03-13-what-is-serialization-in-jav/">জাভাতে সিরিয়ালাইজেশন কী (What is serialization in java)?</a> <i class="fas fa-heart"></i>
-    </li>
-    
-    <li>
-        <a href="/posts/2018-03-13-what-is-java-object-clonin/">জাভাতে অবজেক্ট ক্লোনিং কী(What is object cloning in java)?</a> <i class="fas fa-heart"></i>
-    </li>
-    
-    <li>
-        <a href="/posts/2018-03-13-what-is-packaging-in-java-how-to-import-package/">জাভাতে প্যাকেজিং কী? কীভাবে প্যাকেজ ইম্পোর্ট করতে হয় ?</a> <i class="fas fa-heart"></i>
-    </li>
-    
-    <li>
-        <a href="/posts/2018-03-13-what-is-null-pointer-exception-in-java-how-to-handle-i/">Java তে Null Pointer Exception কী? কীভাবে একে Handle করা যায়?</a> <i class="fas fa-heart"></i>
-    </li>
-    
-    <li>
-        <a href="/posts/2018-03-07-%E0%A6%9C%E0%A6%BE%E0%A6%AD%E0%A6%BE-%E0%A6%A5%E0%A7%8D%E0%A6%B0%E0%A7%87%E0%A6%A1-%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A7%8B%E0%A6%97%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%AE%E0%A6%BF%E0%A6%82-/">জাভা থ্রেড প্রোগ্রামিংঃ ডেটা রেইস (Java Thread Programming: Data Race)</a> <i class="fas fa-heart"></i>
-    </li>
-    
-    <li>
-        <a href="/posts/2018-02-26-java-thread-programming-review-/">জাভা থ্রেড প্রোগ্রামিংঃ রিভিউ-৪</a> <i class="fas fa-heart"></i>
-    </li>
-    
-    <li>
-        <a href="/posts/2018-02-22-java-thread-programming-review-/">জাভা থ্রেড প্রোগ্রামিংঃ রিভিউ-৩</a> <i class="fas fa-heart"></i>
-    </li>
-    
-    <li>
-        <a href="/posts/2018-02-20-java-thread-programming-review-/">জাভা থ্রেড প্রোগ্রামিংঃ রিভিউ-১</a> <i class="fas fa-heart"></i>
-    </li>
-    
-    <li>
-        <a href="/posts/2018-02-20-java-thread-programming-review-2/">জাভা থ্রেড প্রোগ্রামিংঃ রিভিউ-২</a> <i class="fas fa-heart"></i>
-    </li>
-    
-    <li>
-        <a href="/posts/2018-01-29-%E0%A6%A1%E0%A6%BF%E0%A6%AE%E0%A6%A8-%E0%A6%A5%E0%A7%8D%E0%A6%B0%E0%A7%87%E0%A6%A1-%E0%A6%95%E0%A7%80what-is-daemon-thread-in-jav/">ডিমন থ্রেড কী(What is daemon thread in java)?</a> <i class="fas fa-heart"></i>
-    </li>
-    
-    <li>
-        <a href="/posts/2017-08-18-arraylist-%E0%A6%93-linkedlist-%E0%A6%AE%E0%A6%A7%E0%A7%8D%E0%A6%AF%E0%A7%87-%E0%A6%AA%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A6%95%E0%A7%8D%E0%A6%AF-%E0%A6%95%E0%A7%80-difference-between-arraylis/">ArrayList ও LinkedList মধ্যে পার্থক্য কী? (Difference between ArrayList and LinkedList in Java)</a> <i class="fas fa-heart"></i>
-    </li>
-    
-    <li>
-        <a href="/posts/2017-06-24-%E0%A6%9C%E0%A6%BE%E0%A6%AD%E0%A6%BE-%E0%A6%85%E0%A6%AC%E0%A6%9C%E0%A7%87%E0%A6%95%E0%A7%8D%E0%A6%9F-%E0%A6%B8%E0%A6%BF%E0%A6%B0%E0%A6%BF%E0%A6%AF%E0%A6%BC%E0%A6%BE%E0%A6%B2%E0%A6%BE%E0%A6%87%E0%A6%9C/">জাভা অবজেক্ট সিরিয়ালাইজেশন (Java serialization)</a> <i class="fas fa-heart"></i>
-    </li>
-    
-    <li>
-        <a href="/posts/2017-03-25-%E0%A6%9C%E0%A6%BE%E0%A6%AD%E0%A6%BE-%E0%A6%AE%E0%A7%87%E0%A6%87%E0%A6%A8-%E0%A6%A5%E0%A7%8D%E0%A6%B0%E0%A7%87%E0%A6%A1-java-main-threa/">জাভা মেইন থ্রেড (Java Main Thread)</a> <i class="fas fa-heart"></i>
-    </li>
-    
-    <li>
-        <a href="/posts/2017-03-22-%E0%A6%9C%E0%A6%BE%E0%A6%AD%E0%A6%BE%E0%A6%A4%E0%A7%87-%E0%A6%95%E0%A7%80%E0%A6%AD%E0%A6%BE%E0%A6%AC%E0%A7%87-%E0%A6%AB%E0%A6%BE%E0%A6%87%E0%A6%B2-%E0%A6%95%E0%A6%AA%E0%A6%BF-%E0%A6%95/">জাভাতে কীভাবে ফাইল কপি করা যায়(File Copying in Java)</a> <i class="fas fa-heart"></i>
-    </li>
-    
-    <li>
-        <a href="/posts/2017-02-26-%E0%A6%95%E0%A7%8B%E0%A6%A1%E0%A6%BF%E0%A6%82-%E0%A6%95%E0%A6%A8%E0%A6%AD%E0%A7%87%E0%A6%A8%E0%A6%B6%E0%A6%A8-coding-conventio/">কোডিং কনভেনশন (coding convention)</a> <i class="fas fa-heart"></i>
-    </li>
-    
-    <li>
-        <a href="/posts/2017-02-19-%E0%A6%B8%E0%A7%8D%E0%A6%9F%E0%A7%8D%E0%A6%B0%E0%A6%BF%E0%A6%82-%E0%A6%AA%E0%A7%81%E0%A6%B2-%E0%A6%95%E0%A7%80-what-is-string-poo/">স্ট্রিং পুল কী (What is String Pool)</a> <i class="fas fa-heart"></i>
-    </li>
-    
-    <li>
-        <a href="/posts/2017-02-08-%E0%A6%9C%E0%A6%BE%E0%A6%AD%E0%A6%BE-%E0%A6%95%E0%A7%80-%E0%A6%AA%E0%A6%BE%E0%A6%B8-%E0%A6%AC%E0%A6%BE%E0%A6%87-%E0%A6%AD%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B2%E0%A7%81-pass-by-valu/">জাভা কী পাস-বাই-ভ্যালু (Pass-by-Value)</a> <i class="fas fa-heart"></i>
-    </li>
-    
-    <li>
-        <a href="/posts/2017-01-27-%E0%A6%95%E0%A7%87%E0%A6%A8%E0%A7%8B-%E0%A6%9C%E0%A6%BE%E0%A6%AD%E0%A6%BE-%E0%A6%B6%E0%A7%87%E0%A6%96%E0%A6%BE-%E0%A6%89%E0%A6%9A%E0%A6%BF/">কেনো জাভা শেখা উচিত ?</a> <i class="fas fa-heart"></i>
-    </li>
-    
-    <li>
-        <a href="/posts/2017-01-25-%E0%A6%9C%E0%A6%BE%E0%A6%AD%E0%A6%BE-%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A7%8B%E0%A6%97%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%AE%E0%A6%BF%E0%A6%82-%E0%A6%B2%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%82/">জাভা প্রোগ্রামিং ল্যাংগুয়েজ তৈরির পেছনের গল্প</a> <i class="fas fa-heart"></i>
-    </li>
-    
-    <li>
-        <a href="/posts/2012-03-31-%E0%A6%AD%E0%A6%AC%E0%A6%BF%E0%A6%B7%E0%A7%8D%E0%A6%AF%E0%A7%8E-%E0%A6%9C%E0%A6%BE%E0%A6%AD%E0%A6%BE-%E0%A6%A1%E0%A7%87%E0%A6%AD%E0%A6%B2%E0%A6%AA%E0%A6%BE%E0%A6%B0%E0%A6%A6%E0%A7%87/">ভবিষ্যৎ জাভা ডেভলপারদের স্বাধীনতা</a> <i class="fas fa-heart"></i>
-    </li>
-    
-</ul>
+    <div class="mail" title="Share this through Email" onclick="window.open('mailto:?&body=http:\/\/bazlur.com\/2021\/06\/how-to-stop-a-java-program-gracefully\/');">
+        <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1792 710v794q0 66-47 113t-113 47h-1472q-66 0-113-47t-47-113v-794q44 49 101 87 362 246 497 345 57 42 92.5 65.5t94.5 48 110 24.5h2q51 0 110-24.5t94.5-48 92.5-65.5q170-123 498-345 57-39 100-87zm0-294q0 79-49 151t-122 123q-376 261-468 325-10 7-42.5 30.5t-54 38-52 32.5-57.5 27-50 9h-2q-23 0-50-9t-57.5-27-52-32.5-54-38-42.5-30.5q-91-64-262-182.5t-205-142.5q-62-42-117-115.5t-55-136.5q0-78 41.5-130t118.5-52h1472q65 0 112.5 47t47.5 113z"/>
+        </svg>
+    </div>
+</div>
+
+<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+        this.page.identifier = 'http:\/\/bazlur.com\/2021\/06\/how-to-stop-a-java-program-gracefully\/';
+        this.page.title = 'How to stop a java program gracefully?';
+        this.page.url = 'http:\/\/bazlur.com\/2021\/06\/how-to-stop-a-java-program-gracefully\/';
+    };
+
+    (function () { 
+        var d = document, s = d.createElement('script');
+        s.src = 'https://bazlur-com.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+    Disqus.</a></noscript>
 
   <footer>
   
@@ -858,3 +888,4 @@ if (!doNotTrack) {
   </footer>
   </body>
 </html>
+
