@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>java 11 on Bazlur&#39;s Stream of Thoughts</title>
+    <link>http://bazlur.com/tags/java-11/</link>
+    <description>Recent content in java 11 on Bazlur&#39;s Stream of Thoughts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 20 Nov 2020 00:52:10 -0400</lastBuildDate><atom:link href="http://bazlur.com/tags/java-11/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Reclaim 25% of Java Heap Memory and Lower Your Cloud Bills </title>
+      <link>http://bazlur.com/2020/11/reclaim-25-of-java-heap-memory-and-lower-your-cloud-bills/</link>
+      <pubDate>Fri, 20 Nov 2020 00:52:10 -0400</pubDate>
+      
+      <guid>http://bazlur.com/2020/11/reclaim-25-of-java-heap-memory-and-lower-your-cloud-bills/</guid>
+      <description>Reclaim 25% of Java Heap Memory and Lower Your Cloud Bills You can save up to 25% of heap memory using latest java which means less cloud bills Do you know that you can save up to 25% of your heap memory and your cloud bills without any effort?
+Well, that&amp;rsquo;s true. Many exciting features have been added to the latest Java recently, and I&amp;rsquo;m going to cover one of them in this article, so please bear with me.</description>
+    </item>
+    
+  </channel>
+</rss>

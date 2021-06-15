@@ -217,6 +217,21 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
+    <loc>http://bazlur.com/tags/compact-strings/</loc>
+    <lastmod>2020-11-20T00:52:10-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://bazlur.com/tags/java-11/</loc>
+    <lastmod>2020-11-20T00:52:10-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://bazlur.com/2020/11/reclaim-25-of-java-heap-memory-and-lower-your-cloud-bills/</loc>
+    <lastmod>2020-11-20T00:52:10-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>http://bazlur.com/tags/java-10/</loc>
     <lastmod>2020-10-14T15:47:10-04:00</lastmod>
     <changefreq>weekly</changefreq>
