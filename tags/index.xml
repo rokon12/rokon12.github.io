@@ -521,7 +521,7 @@
     </item>
     
     <item>
-      <title>arraylist</title>
+      <title>ArrayList</title>
       <link>http://bazlur.com/tags/arraylist/</link>
       <pubDate>Fri, 18 Aug 2017 13:17:00 +0000</pubDate>
       
@@ -530,7 +530,7 @@
     </item>
     
     <item>
-      <title>linkedlist</title>
+      <title>LinkedList</title>
       <link>http://bazlur.com/tags/linkedlist/</link>
       <pubDate>Fri, 18 Aug 2017 13:17:00 +0000</pubDate>
       
@@ -724,6 +724,60 @@
       <pubDate>Sat, 31 Mar 2012 00:30:00 +0000</pubDate>
       
       <guid>http://bazlur.com/tags/java-developers/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>access</title>
+      <link>http://bazlur.com/tags/access/</link>
+      <pubDate>Wed, 01 Jun 2011 00:52:10 -0400</pubDate>
+      
+      <guid>http://bazlur.com/tags/access/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Collection Framework</title>
+      <link>http://bazlur.com/tags/collection-framework/</link>
+      <pubDate>Wed, 01 Jun 2011 00:52:10 -0400</pubDate>
+      
+      <guid>http://bazlur.com/tags/collection-framework/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>List</title>
+      <link>http://bazlur.com/tags/list/</link>
+      <pubDate>Wed, 01 Jun 2011 00:52:10 -0400</pubDate>
+      
+      <guid>http://bazlur.com/tags/list/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Performance</title>
+      <link>http://bazlur.com/tags/performance/</link>
+      <pubDate>Wed, 01 Jun 2011 00:52:10 -0400</pubDate>
+      
+      <guid>http://bazlur.com/tags/performance/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Stack</title>
+      <link>http://bazlur.com/tags/stack/</link>
+      <pubDate>Wed, 01 Jun 2011 00:52:10 -0400</pubDate>
+      
+      <guid>http://bazlur.com/tags/stack/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Vector</title>
+      <link>http://bazlur.com/tags/vector/</link>
+      <pubDate>Wed, 01 Jun 2011 00:52:10 -0400</pubDate>
+      
+      <guid>http://bazlur.com/tags/vector/</guid>
       <description></description>
     </item>
     

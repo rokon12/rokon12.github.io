@@ -1014,5 +1014,16 @@ For those who doesn’t know what is JUG, let me brief a little. Java User Group
       <description>আমি লোকটা প্রচুর অলস। তার আগে বলে নেই, আমি একজন প্রোগ্রামার। তবে প্রোগ্রামার বললেই সবার মনে হয়, সি, পাইথন, হাসকেল কিংবা এসেম্বলিতে কোড লিখে, আজিব একটা বস্তু, চোখে বিশাল সাইজ চশমা পরে, অসামাজিক, ইনট্রোভার্ট এবং ফ্যাশনেবলি চ্যালেঞ্জড এবং প্রচণ্ড অলস কাওকে। তবে আমি এরকম না, আমি হচ্ছি অবজেক্ট ওরিয়েন্টেড প্রোগ্রামার। আমি জাভাতে কোড লিখি, এবং প্রত্যেকটা অবজেক্ট ইনট্যনসিয়েট করে করে ডট দিই। আমি আসলে ডট ছাড়া মোটামুটি অচল। সব কিছুর জন্য রেফারেন্স লাগে।</description>
     </item>
     
+    <item>
+      <title>Java Collection Framework : List</title>
+      <link>http://bazlur.com/2011/06/java-collection-framework-list/</link>
+      <pubDate>Wed, 01 Jun 2011 00:52:10 -0400</pubDate>
+      
+      <guid>http://bazlur.com/2011/06/java-collection-framework-list/</guid>
+      <description>Java collection framework is very common to every java programmer, again for the beginner, I’m going to share my ideas about it. It’s beneficial to manage objects easily. The Java collection framework is a more likely array, but the difference is that collections can dynamically change their size. Today I’m going to write only about the List.
+List:
+The java.util.List interface is a subtype of the java.util.Collection interface. It represents an order list of objects.</description>
+    </item>
+    
   </channel>
 </rss>
