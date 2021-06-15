@@ -110,6 +110,20 @@ We all know, Strings are the most used object in any Java application.</descript
     </item>
     
     <item>
+      <title>Temporary Refactoring and Improving Your Code Reading Skills</title>
+      <link>http://bazlur.com/2020/10/temporary-refactoring-and-improving-your-code-reading-skills/</link>
+      <pubDate>Sat, 17 Oct 2020 00:52:10 -0400</pubDate>
+      
+      <guid>http://bazlur.com/2020/10/temporary-refactoring-and-improving-your-code-reading-skills/</guid>
+      <description>I was talking to a friend of mine, Scott, over Slack about reading code! Specifically, how to improve your code reading skills.
+I asked him what he usually does when he reads source code. What he said is interesting:
+He does a temporary refactoring. That’s it.
+He usually takes a long method that can be separated out and then he turns it into a separate method.
+For example- readEmployeeDataFromDatabase()
+This method can be broken into multiple methods, and he does that.</description>
+    </item>
+    
+    <item>
       <title>Java Local Type Inference</title>
       <link>http://bazlur.com/2020/10/java-local-type-inference/</link>
       <pubDate>Wed, 14 Oct 2020 15:47:10 -0400</pubDate>

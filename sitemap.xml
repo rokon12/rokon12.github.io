@@ -232,6 +232,36 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
+    <loc>http://bazlur.com/tags/agile/</loc>
+    <lastmod>2020-10-17T00:52:10-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://bazlur.com/tags/learning-and-development/</loc>
+    <lastmod>2020-10-17T00:52:10-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://bazlur.com/categories/opinion/</loc>
+    <lastmod>2020-10-17T00:52:10-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://bazlur.com/tags/readable-code/</loc>
+    <lastmod>2020-10-17T00:52:10-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://bazlur.com/tags/refactoring/</loc>
+    <lastmod>2020-10-17T00:52:10-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://bazlur.com/2020/10/temporary-refactoring-and-improving-your-code-reading-skills/</loc>
+    <lastmod>2020-10-17T00:52:10-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>http://bazlur.com/tags/java-10/</loc>
     <lastmod>2020-10-14T15:47:10-04:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -253,11 +283,6 @@
     <priority>0.5</priority>
   </url><url>
     <loc>http://bazlur.com/2020/10/7-ways-to-improve-your-code-reading-skills/</loc>
-    <lastmod>2020-10-14T00:57:21-04:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://bazlur.com/tags/agile/</loc>
     <lastmod>2020-10-14T00:57:21-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
