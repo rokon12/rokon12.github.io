@@ -89,8 +89,8 @@ if (!doNotTrack) {
 The java.util.List interface is a subtype of the java.util.Collection interface. It represents an order list of objects. We can access the elements of List in a specific order or by and an integer index. A list allows inserting duplicate elements. Interestingly you can insert a null object even in a list.<br />
 As it is an interface, there, of course, it has implementations. ArrayList, LinkedList, Vector, Stack are the implementation of List. All List types support a basic operation like adding an object, removing objects, accessing objects and iterating through the List.<br />
 There are also List implementation in java.util.concurrent package. Concurrency is the part of parallel programming, immutability, threads, executor frameworks etc. We better discuss this part later.</p>
-<p>How to create a list instance:<br />
-Creating a list instance is too easy.</p>
+<p><strong>How to create a list instance:</strong></p>
+<p>Creating a list instance is too easy.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> org.codexplo.blog.list<span style="color:#f92672">;</span>
 
 <span style="color:#f92672">import</span> java.util.ArrayList<span style="color:#f92672">;</span>
@@ -132,13 +132,10 @@ There are two overload methods in the List.</p>
     System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>list<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>1<span style="color:#f92672">));</span>
   <span style="color:#f92672">}</span>
 <span style="color:#f92672">}</span>
-
 </code></pre></div><p>The first three add() calls add a string instance to the end of the List. The last add() call adds the element at the beginning of the List, and the rest of the elements are shifted.<br />
 You can access elements using the get() method. You need to specify the index of the element.<br />
 Again you can access elements via Iterator.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-
-<span style="color:#f92672">package</span> org.codexplo.blog.list<span style="color:#f92672">;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> org.codexplo.blog.list<span style="color:#f92672">;</span>
 
 <span style="color:#f92672">import</span> java.util.ArrayList<span style="color:#f92672">;</span>
 <span style="color:#f92672">import</span> java.util.Iterator<span style="color:#f92672">;</span>
@@ -169,9 +166,9 @@ Again you can access elements via Iterator.</p>
 
 </code></pre></div><p><strong>Removing Elements</strong></p>
 <p>You can remove element in two ways.</p>
-<p>boolean remove(Object o);<br />
-E remove(int index);</p>
-<p>The first method removes the first occurrence of the specified element from the List. If the List does not contain the element, it is unchanged. More precisely, it removes the element with the lowest index if the element exists. Returns true if the List contains the specified element.<br />
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">remove</span><span style="color:#f92672">(</span>Object o<span style="color:#f92672">);</span>
+E <span style="color:#a6e22e">remove</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> index<span style="color:#f92672">);</span>
+</code></pre></div><p>The first method removes the first occurrence of the specified element from the List. If the List does not contain the element, it is unchanged. More precisely, it removes the element with the lowest index if the element exists. Returns true if the List contains the specified element.<br />
 The second method removes the element at the specified position in the List. It shifts any subsequent elements to the left concurrently and returns the element removed from the List.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> org.codexplo.blog.list<span style="color:#f92672">;</span>
 
