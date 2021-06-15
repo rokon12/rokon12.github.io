@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="fb:pages" content="556530934551556" />
+
+    
+    <title>2021-06-14-100DaysOfJava-Day008.md - Bazlur&#39;s Stream of Thoughts</title>
+    <meta property="og:title" content="2021-06-14-100DaysOfJava-Day008.md - Bazlur&#39;s Stream of Thoughts">
+    
+
+    <meta name="twitter:card" content="summary">
+
+    
+    
+    
+
+    
+    
+    <meta property="description" content="A method is a contract; When we define one, we put our thoughts into it. We specify the parameters, return type and their type. When we invoke a method, we expect it to behave according to the &amp;hellip;">
+    <meta property="og:description" content="A method is a contract; When we define one, we put our thoughts into it. We specify the parameters, return type and their type. When we invoke a method, we expect it to behave according to the &amp;hellip;">
+    
+    
+
+    
+    
+
+    
+
+    
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="stylesheet" href="/css/syntax.css" />
+    
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-180587445-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/about-me/">About me</a></li>
+      
+      <li><a href="/books/">Books</a></li>
+      
+      <li><a href="/categories/">Categories</a></li>
+      
+      <li><a href="/resume/">Resume</a></li>
+      
+      <li><a href="/live">LIVE</a></li>
+      
+      <li><a href="/index.xml">Subscribe</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+<div class="article-meta">
+    <h1><span class="title">2021-06-14-100DaysOfJava-Day008.md</span></h1>
+    <h2 class="author">A N M Bazlur Rahman</h2>
+    <h2 class="date">2021/06/14</h2>
+</div>
+
+<p class="post-tag">
+    <div id="tags">Tags:<a class="post-tag" href="/tags/java" rel="tag"> java </a> &nbsp; <a class="post-tag" href="/tags/coding" rel="tag"> coding </a> &nbsp; <a class="post-tag" href="/tags/100daysofjava" rel="tag"> 100DaysOfJava </a> &nbsp; <a class="post-tag" href="/tags/optional" rel="tag"> Optional </a> &nbsp; <a class="post-tag" href="/tags/functional" rel="tag"> Functional </a> &nbsp; <a class="post-tag" href="/tags/100daysofcode" rel="tag"> 100DaysOfCode </a></div>
+</p>
+
+<main>
+    <p><img src="/img/Day009.png" alt="100DaysOfProgramming_Day008" title="100DaysOfJava" /></p>
+<p>A method is a contract; When we define one, we put our thoughts into it. We specify the parameters, return type and their type.  When we invoke a method, we expect it to behave according to the contract. If it doesn&rsquo;t, it&rsquo;s a violation of the contract.</p>
+<p>We have been dealing with such a violation all the time. We invoke a method with its proper arguments, and we get a return. However, sometimes we end up getting null, which is, in fact, a clear violation. We shouldn&rsquo;t accept such a violation.  If a method cannot return the value of the specified type, it should mention that in the method signature, the method may or may not be returning the value you are expecting. If we know it from the method signature, we then write our code accordingly.</p>
+<p>Now the question is, how do we define such a contract in a method signature? Well, that&rsquo;s where Optional comes into play. Set your return type as Optional. Optional is a mystery box, a wrapping paper; it may or may not contain the value. When we specify that in a method signature, we assume that the box might be empty.  Let&rsquo;s see an example-</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> Optional<span style="color:#f92672">&lt;</span>Book<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">findBookByAuthorName</span><span style="color:#f92672">(</span>String name<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+  <span style="color:#66d9ef">return</span> books<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">()</span>
+          <span style="color:#f92672">.</span><span style="color:#a6e22e">filter</span><span style="color:#f92672">(</span>book <span style="color:#f92672">-&gt;</span> book<span style="color:#f92672">.</span><span style="color:#a6e22e">title</span><span style="color:#f92672">().</span><span style="color:#a6e22e">equalsIgnoreCase</span><span style="color:#f92672">(</span>name<span style="color:#f92672">))</span>
+          <span style="color:#f92672">.</span><span style="color:#a6e22e">findAny</span><span style="color:#f92672">();</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>The method above specified Optional as a return type. It may return the book that I&rsquo;m looking for or may not. I&rsquo;m aware of this, and I can deal with it when I invoke it.  For example-</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">var bookByAuthorName <span style="color:#f92672">=</span> findBookByAuthorName<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Java Programming&#34;</span><span style="color:#f92672">);</span>
+<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>bookByAuthorName<span style="color:#f92672">.</span><span style="color:#a6e22e">isPresent</span><span style="color:#f92672">())</span> <span style="color:#f92672">{</span>
+  var book <span style="color:#f92672">=</span> bookByAuthorName<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">();</span>
+  var releasedYear <span style="color:#f92672">=</span> book<span style="color:#f92672">.</span><span style="color:#a6e22e">releasedYear</span><span style="color:#f92672">();</span>
+  System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Java Programming was published in &#34;</span> <span style="color:#f92672">+</span> releasedYear<span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+  System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Book was not found&#34;</span><span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+
+</code></pre></div><p>Or we can do the same thing with the functional contract, e.g.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+findBookByAuthorName<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Java Programming&#34;</span><span style="color:#f92672">)</span>
+<span style="color:#f92672">.</span><span style="color:#a6e22e">map</span><span style="color:#f92672">(</span>Book<span style="color:#f92672">::</span>releasedYear<span style="color:#f92672">)</span>
+<span style="color:#f92672">.</span><span style="color:#a6e22e">ifPresentOrElse</span><span style="color:#f92672">((</span>releasedYear<span style="color:#f92672">)</span> <span style="color:#f92672">-&gt;</span> System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Java Programming was published in &#34;</span> <span style="color:#f92672">+</span> releasedYear<span style="color:#f92672">),</span>
+<span style="color:#f92672">()</span> <span style="color:#f92672">-&gt;</span> System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Book was not found&#34;</span><span style="color:#f92672">));</span>
+
+</code></pre></div><p>The bottom line is, we should fix our method contract and use optional rather than returning null.</p>
+<p>for <strong>copy/paste</strong> pleasure: <a href="https://github.com/rokon12/100DaysOfJava/blob/main/src/main/java/com/bazlur/Day009.java">https://github.com/rokon12/100DaysOfJava/blob/main/src/main/java/com/bazlur/Day009.java</a></p>
+
+</main>
+
+<p class="post-tag">
+    <div>Categories:<a class="post-tag" href="/categories/java" rel="tag"> java </a> &nbsp; <a class="post-tag" href="/categories/100daysofjava" rel="tag"> 100DaysOfJava </a></div>
+</p>
+
+
+
+<style>
+    #share-buttons {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    #share-buttons:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+    #share-buttons > div {
+        position: relative;
+        text-align: left;
+        height: 36px;
+        width: 32px;
+        float: left;
+        text-align: center;
+    }
+
+    #share-buttons > div > svg {
+        height: 16px;
+        fill: #d5d5d5;
+        margin-top: 10px;
+    }
+
+    #share-buttons > div:hover {
+        cursor: pointer;
+    }
+
+    #share-buttons > div.facebook:hover > svg {
+        fill: #3B5998;
+    }
+
+    #share-buttons > div.twitter:hover > svg {
+        fill: #55ACEE;
+    }
+
+    #share-buttons > div.linkedin:hover > svg {
+        fill: #0077b5;
+    }
+
+    #share-buttons > div.pinterest:hover > svg {
+        fill: #CB2027;
+    }
+
+    #share-buttons > div.gplus:hover > svg {
+        fill: #dd4b39;
+    }
+
+    #share-buttons > div.mail:hover > svg {
+        fill: #7D7D7D;
+    }
+
+    #share-buttons > div.instagram:hover > svg {
+        fill: #C73B92;
+    }
+
+    #share-buttons > div.facebook > svg {
+        height: 18px;
+        margin-top: 9px;
+    }
+
+    #share-buttons > div.twitter > svg {
+        height: 20px;
+        margin-top: 8px;
+    }
+
+    #share-buttons > div.linkedin > svg {
+        height: 19px;
+        margin-top: 7px;
+    }
+
+    #share-buttons > div.pinterest > svg {
+        height: 20px;
+        margin-top: 9px;
+    }
+
+    #share-buttons > div.gplus > svg {
+        height: 17px;
+        margin-top: 9px;
+        position: relative;
+        left: 1px;
+    }
+
+    #share-buttons > div.mail > svg {
+        height: 14px;
+        margin-top: 11px;
+    }
+</style>
+
+<span style="color: silver;">Share on: </span>
+<div id="share-buttons">
+    <div class="facebook" title="Share this on Facebook"
+         onclick="window.open('http://www.facebook.com/share.php?u=http:\/\/bazlur.com\/2021\/06\/2021-06-14-100daysofjava-day008.md\/');">
+        <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1343 12v264h-157q-86 0-116 36t-30 108v189h293l-39 296h-254v759h-306v-759h-255v-296h255v-218q0-186 104-288.5t277-102.5q147 0 228 12z"/>
+        </svg>
+    </div>
+    <div class="twitter" title="Share this on Twitter"
+         onclick="window.open('http://twitter.com/intent/tweet?text=2021-06-14-100DaysOfJava-Day008.md&url=http:\/\/bazlur.com\/2021\/06\/2021-06-14-100daysofjava-day008.md\/');">
+        <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1684 408q-67 98-162 167 1 14 1 42 0 130-38 259.5t-115.5 248.5-184.5 210.5-258 146-323 54.5q-271 0-496-145 35 4 78 4 225 0 401-138-105-2-188-64.5t-114-159.5q33 5 61 5 43 0 85-11-112-23-185.5-111.5t-73.5-205.5v-4q68 38 146 41-66-44-105-115t-39-154q0-88 44-163 121 149 294.5 238.5t371.5 99.5q-8-38-8-74 0-134 94.5-228.5t228.5-94.5q140 0 236 102 109-21 205-78-37 115-142 178 93-10 186-50z"/>
+        </svg>
+    </div>
+    <div class="linkedin" title="Share this on Linkedin"
+         onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&url=http:\/\/bazlur.com\/2021\/06\/2021-06-14-100daysofjava-day008.md\/&title=&summary=&source=');">
+        <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+            <path d="M477 625v991h-330v-991h330zm21-306q1 73-50.5 122t-135.5 49h-2q-82 0-132-49t-50-122q0-74 51.5-122.5t134.5-48.5 133 48.5 51 122.5zm1166 729v568h-329v-530q0-105-40.5-164.5t-126.5-59.5q-63 0-105.5 34.5t-63.5 85.5q-11 30-11 81v553h-329q2-399 2-647t-1-296l-1-48h329v144h-2q20-32 41-56t56.5-52 87-43.5 114.5-15.5q171 0 275 113.5t104 332.5z"/>
+        </svg>
+    </div>
+    
+    <div class="mail" title="Share this through Email" onclick="window.open('mailto:?&body=http:\/\/bazlur.com\/2021\/06\/2021-06-14-100daysofjava-day008.md\/');">
+        <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1792 710v794q0 66-47 113t-113 47h-1472q-66 0-113-47t-47-113v-794q44 49 101 87 362 246 497 345 57 42 92.5 65.5t94.5 48 110 24.5h2q51 0 110-24.5t94.5-48 92.5-65.5q170-123 498-345 57-39 100-87zm0-294q0 79-49 151t-122 123q-376 261-468 325-10 7-42.5 30.5t-54 38-52 32.5-57.5 27-50 9h-2q-23 0-50-9t-57.5-27-52-32.5-54-38-42.5-30.5q-91-64-262-182.5t-205-142.5q-62-42-117-115.5t-55-136.5q0-78 41.5-130t118.5-52h1472q65 0 112.5 47t47.5 113z"/>
+        </svg>
+    </div>
+</div>
+
+<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+        this.page.identifier = 'http:\/\/bazlur.com\/2021\/06\/2021-06-14-100daysofjava-day008.md\/';
+        this.page.title = '2021-06-14-100DaysOfJava-Day008.md';
+        this.page.url = 'http:\/\/bazlur.com\/2021\/06\/2021-06-14-100daysofjava-day008.md\/';
+    };
+
+    (function () { 
+        var d = document, s = d.createElement('script');
+        s.src = 'https://bazlur-com.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+    Disqus.</a></noscript>
+
+  <footer>
+  
+
+
+
+
+
+
+
+
+
+
+<div id="tag-cloud" style="padding: 5px 15px">
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/100daysofcode" style="font-size:2.5710137463671576rem">100daysofcode</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/100daysofjava" style="font-size:2.5710137463671576rem">100daysofjava</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/advance-java" style="font-size:1rem">advance-java</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/agile" style="font-size:1.4955996579264013rem">agile</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/algorithm" style="font-size:1.4955996579264013rem">algorithm</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/arraylist" style="font-size:1rem">arraylist</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/article" style="font-size:1rem">article</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/bangla-book" style="font-size:2.28110653110998rem">bangla-book</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/becoming-expert" style="font-size:1rem">becoming-expert</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/book" style="font-size:2.28110653110998rem">book</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/calculator" style="font-size:1rem">calculator</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/cloning" style="font-size:1rem">cloning</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/code-readability" style="font-size:1rem">code-readability</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/code-review" style="font-size:1rem">code-review</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/coding" style="font-size:2.646346427482279rem">coding</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/coding-convention" style="font-size:1rem">coding-convention</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/concurrentmodificationexception" style="font-size:1rem">concurrentmodificationexception</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/concurrentskiplistmap" style="font-size:1rem">concurrentskiplistmap</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/counting" style="font-size:1rem">counting</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/countingcollections" style="font-size:1rem">countingcollections</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/daemon-thread" style="font-size:1rem">daemon-thread</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/data-race" style="font-size:1rem">data-race</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/data-structure" style="font-size:1rem">data-structure</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/day002" style="font-size:1rem">day002</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/deliberate-practice" style="font-size:1rem">deliberate-practice</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/deserialization" style="font-size:1rem">deserialization</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/developers" style="font-size:1rem">developers</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/executors" style="font-size:1.4955996579264013rem">executors</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/export" style="font-size:1rem">export</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/fibonacci" style="font-size:1.4955996579264013rem">fibonacci</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/file" style="font-size:1.4955996579264013rem">file</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/file-copy" style="font-size:1rem">file-copy</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/functional" style="font-size:1rem">functional</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/future-java-developers" style="font-size:1rem">future-java-developers</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/groupby" style="font-size:1rem">groupby</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/hash-function" style="font-size:1.4955996579264013rem">hash-function</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/hashmap" style="font-size:1.7855068731835786rem">hashmap</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/history" style="font-size:1rem">history</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/history-of-java" style="font-size:1rem">history-of-java</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/how-java-performs-better" style="font-size:1rem">how-java-performs-better</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/how-java-works" style="font-size:1rem">how-java-works</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/image" style="font-size:1rem">image</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/import" style="font-size:1rem">import</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/inspiration" style="font-size:1rem">inspiration</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/itext-pdf" style="font-size:1rem">itext-pdf</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java" style="font-size:3.4779982896320067rem">java</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java-10" style="font-size:1rem">java-10</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java-developers" style="font-size:1rem">java-developers</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java-programming" style="font-size:1rem">java-programming</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java-thread" style="font-size:1rem">java-thread</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java-thread-programming" style="font-size:1.9911993158528025rem">java-thread-programming</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java16" style="font-size:1.4955996579264013rem">java16</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/learning" style="font-size:1rem">learning</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/linkedlist" style="font-size:1rem">linkedlist</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/local-type-inference" style="font-size:1rem">local-type-inference</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/map" style="font-size:1.7855068731835786rem">map</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/methodology" style="font-size:1rem">methodology</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/nio" style="font-size:1rem">nio</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/null-pointer-exception" style="font-size:1rem">null-pointer-exception</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/object-cloning" style="font-size:1rem">object-cloning</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/optional" style="font-size:1rem">optional</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/packaging" style="font-size:1rem">packaging</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/pass-by-reference" style="font-size:1rem">pass-by-reference</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/pass-by-value" style="font-size:1rem">pass-by-value</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/pdf" style="font-size:1rem">pdf</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/programming" style="font-size:1rem">programming</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/record" style="font-size:1rem">record</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/review" style="font-size:1.9911993158528025rem">review</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/scheduler" style="font-size:1rem">scheduler</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/scrum" style="font-size:1rem">scrum</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/serialization" style="font-size:1.4955996579264013rem">serialization</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/simple-calculator" style="font-size:1rem">simple-calculator</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/software-development" style="font-size:1rem">software-development</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/source-code" style="font-size:1rem">source-code</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/string" style="font-size:1.4955996579264013rem">string</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/string-pool" style="font-size:1rem">string-pool</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/swing" style="font-size:1rem">swing</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/thread" style="font-size:2.3913241390497477rem">thread</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/volatile" style="font-size:1rem">volatile</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/why-java" style="font-size:1rem">why-java</a>
+  
+</div>
+
+
+<footer>
+  <div>
+    <p>
+    &copy; <a href="https://bazlur.com"> A N M Bazlur Rahman</a> 2012 - 2020 | <a href="https://github.com/rokon12">Github</a>
+    | <a href=" https://twitter.com/bazlur_rahman"> @bazlur_rahman</a>
+    </p>
+  </div>
+</footer>
+  
+  </footer>
+  </body>
+</html>
+

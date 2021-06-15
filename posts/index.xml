@@ -8,6 +8,16 @@
     <language>en-us</language>
     <lastBuildDate>Mon, 14 Jun 2021 00:04:10 -0400</lastBuildDate><atom:link href="http://bazlur.com/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>2021-06-14-100DaysOfJava-Day008.md</title>
+      <link>http://bazlur.com/2021/06/2021-06-14-100daysofjava-day008.md/</link>
+      <pubDate>Mon, 14 Jun 2021 00:04:10 -0400</pubDate>
+      
+      <guid>http://bazlur.com/2021/06/2021-06-14-100daysofjava-day008.md/</guid>
+      <description>A method is a contract; When we define one, we put our thoughts into it. We specify the parameters, return type and their type. When we invoke a method, we expect it to behave according to the contract. If it doesn&amp;rsquo;t, it&amp;rsquo;s a violation of the contract.
+We have been dealing with such a violation all the time. We invoke a method with its proper arguments, and we get a return.</description>
+    </item>
+    
+    <item>
       <title>How to stop a java program gracefully?</title>
       <link>http://bazlur.com/2021/06/how-to-stop-a-java-program-gracefully/</link>
       <pubDate>Mon, 14 Jun 2021 00:04:10 -0400</pubDate>
