@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>java11 on Bazlur&#39;s Stream of Thoughts</title>
+    <link>http://bazlur.com/tags/java11/</link>
+    <description>Recent content in java11 on Bazlur&#39;s Stream of Thoughts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 17 Jun 2021 00:06:10 -0400</lastBuildDate><atom:link href="http://bazlur.com/tags/java11/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Let&#39;s use the new HTTP Client that java 11 brought</title>
+      <link>http://bazlur.com/2021/06/lets-use-the-new-http-client-that-java-11-brought/</link>
+      <pubDate>Thu, 17 Jun 2021 00:06:10 -0400</pubDate>
+      
+      <guid>http://bazlur.com/2021/06/lets-use-the-new-http-client-that-java-11-brought/</guid>
+      <description>Java 11 brought an inbuilt HTTP client. As a result, we don&amp;rsquo;t need a third-party library anymore to invoke an HTTP request.
+Let&amp;rsquo;s call a chuck Norris api to fetch a random joke.
+package com.bazlur; import java.io.IOException; import java.net.URI; import java.net.URISyntaxException; import java.net.http.HttpClient; import java.net.http.HttpRequest; import java.net.http.HttpResponse; import java.time.Duration; public class Day011 { public static final String CHUCK_NORRIS_RANDOM_JOKES_API = &amp;#34;https://api.chucknorris.io/jokes/random&amp;#34;; public static void main(String[] args) throws URISyntaxException, IOException, InterruptedException { var client = HttpClient.</description>
+    </item>
+    
+  </channel>
+</rss>
