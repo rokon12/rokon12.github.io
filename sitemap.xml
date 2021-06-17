@@ -1361,5 +1361,13 @@
     <lastmod>2011-06-01T00:52:10-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
+  </url><url>
+    <loc>http://bazlur.com/tags/http-client/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://bazlur.com/1/01/lets-use-the-new-http-client-that-java-11-brought/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
 </urlset>

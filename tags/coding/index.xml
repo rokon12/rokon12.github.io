@@ -121,5 +121,16 @@ static Map&amp;lt;Integer, BigInteger&amp;gt; cache = new HashMap&amp;lt;&amp;gt
 গ্রাভিটেশনাল ওয়েবের কথাই চিন্তা করেন, ১৯১৬ সালে আইনস্টাইন এ নিয়ে চিন্তা করেছিলেন। কিন্তু তাঁর কাছে কোনো টুলস ছিল না এটা প্রমাণ করা। এটি প্রমাণ করতে গ্রাভিটেশনাল-ওয়েব ফেসিলিটি লাইগো তৈরি করতে লেগে গেছে ৬২০ মিলিয়ন ডলার এবং সময় লেগে গেল প্রায় ১০০ বছর।</description>
     </item>
     
+    <item>
+      <title>Let&#39;s use the new HTTP Client that java 11 brought</title>
+      <link>http://bazlur.com/1/01/lets-use-the-new-http-client-that-java-11-brought/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/1/01/lets-use-the-new-http-client-that-java-11-brought/</guid>
+      <description>Java 11 brought an inbuilt HTTP client. As a result, we don&amp;rsquo;t need a third-party library anymore to invoke an HTTP request.
+Let&amp;rsquo;s call a chuck Norris api to fetch a random joke.
+package com.bazlur; import java.io.IOException; import java.net.URI; import java.net.URISyntaxException; import java.net.http.HttpClient; import java.net.http.HttpRequest; import java.net.http.HttpResponse; import java.time.Duration; public class Day011 { public static final String CHUCK_NORRIS_RANDOM_JOKES_API = &amp;#34;https://api.chucknorris.io/jokes/random&amp;#34;; public static void main(String[] args) throws URISyntaxException, IOException, InterruptedException { var client = HttpClient.</description>
+    </item>
+    
   </channel>
 </rss>
