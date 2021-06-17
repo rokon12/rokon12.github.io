@@ -6,7 +6,18 @@
     <description>Recent content in java on Bazlur&#39;s Stream of Thoughts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 16 Jun 2021 00:10:10 -0400</lastBuildDate><atom:link href="http://bazlur.com/tags/java/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 17 Jun 2021 00:06:10 -0400</lastBuildDate><atom:link href="http://bazlur.com/tags/java/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Let&#39;s use the new HTTP Client that java 11 brought</title>
+      <link>http://bazlur.com/2021/06/lets-use-the-new-http-client-that-java-11-brought/</link>
+      <pubDate>Thu, 17 Jun 2021 00:06:10 -0400</pubDate>
+      
+      <guid>http://bazlur.com/2021/06/lets-use-the-new-http-client-that-java-11-brought/</guid>
+      <description>Java 11 brought an inbuilt HTTP client. As a result, we don&amp;rsquo;t need a third-party library anymore to invoke an HTTP request.
+Let&amp;rsquo;s call a chuck Norris api to fetch a random joke.
+package com.bazlur; import java.io.IOException; import java.net.URI; import java.net.URISyntaxException; import java.net.http.HttpClient; import java.net.http.HttpRequest; import java.net.http.HttpResponse; import java.time.Duration; public class Day011 { public static final String CHUCK_NORRIS_RANDOM_JOKES_API = &amp;#34;https://api.chucknorris.io/jokes/random&amp;#34;; public static void main(String[] args) throws URISyntaxException, IOException, InterruptedException { var client = HttpClient.</description>
+    </item>
+    
     <item>
       <title>How to calculate date and time involving time zone? doesn&#39;t have to be hard.</title>
       <link>http://bazlur.com/2021/06/how-to-calculate-date-and-time-involving-time-zone-doesnt-have-to-be-hard./</link>
@@ -360,17 +371,6 @@ copy() মেথডটিতে দুটি প্যারামিটার �
       <description>Java collection framework is very common to every java programmer, again for the beginner, I’m going to share my ideas about it. It’s beneficial to manage objects easily. The Java collection framework is a more likely array, but the difference is that collections can dynamically change their size. Today I’m going to write only about the List.
 List:
 The java.util.List interface is a subtype of the java.util.Collection interface. It represents an order list of objects.</description>
-    </item>
-    
-    <item>
-      <title>Let&#39;s use the new HTTP Client that java 11 brought</title>
-      <link>http://bazlur.com/1/01/lets-use-the-new-http-client-that-java-11-brought/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://bazlur.com/1/01/lets-use-the-new-http-client-that-java-11-brought/</guid>
-      <description>Java 11 brought an inbuilt HTTP client. As a result, we don&amp;rsquo;t need a third-party library anymore to invoke an HTTP request.
-Let&amp;rsquo;s call a chuck Norris api to fetch a random joke.
-package com.bazlur; import java.io.IOException; import java.net.URI; import java.net.URISyntaxException; import java.net.http.HttpClient; import java.net.http.HttpRequest; import java.net.http.HttpResponse; import java.time.Duration; public class Day011 { public static final String CHUCK_NORRIS_RANDOM_JOKES_API = &amp;#34;https://api.chucknorris.io/jokes/random&amp;#34;; public static void main(String[] args) throws URISyntaxException, IOException, InterruptedException { var client = HttpClient.</description>
     </item>
     
   </channel>

@@ -6,11 +6,11 @@
     <description>Recent content in Tags on Bazlur&#39;s Stream of Thoughts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 16 Jun 2021 00:10:10 -0400</lastBuildDate><atom:link href="http://bazlur.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 17 Jun 2021 00:06:10 -0400</lastBuildDate><atom:link href="http://bazlur.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>100DaysOfCode</title>
       <link>http://bazlur.com/tags/100daysofcode/</link>
-      <pubDate>Wed, 16 Jun 2021 00:10:10 -0400</pubDate>
+      <pubDate>Thu, 17 Jun 2021 00:06:10 -0400</pubDate>
       
       <guid>http://bazlur.com/tags/100daysofcode/</guid>
       <description></description>
@@ -19,7 +19,7 @@
     <item>
       <title>100DaysOfJava</title>
       <link>http://bazlur.com/tags/100daysofjava/</link>
-      <pubDate>Wed, 16 Jun 2021 00:10:10 -0400</pubDate>
+      <pubDate>Thu, 17 Jun 2021 00:06:10 -0400</pubDate>
       
       <guid>http://bazlur.com/tags/100daysofjava/</guid>
       <description></description>
@@ -28,9 +28,27 @@
     <item>
       <title>coding</title>
       <link>http://bazlur.com/tags/coding/</link>
-      <pubDate>Wed, 16 Jun 2021 00:10:10 -0400</pubDate>
+      <pubDate>Thu, 17 Jun 2021 00:06:10 -0400</pubDate>
       
       <guid>http://bazlur.com/tags/coding/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>HTTP Client</title>
+      <link>http://bazlur.com/tags/http-client/</link>
+      <pubDate>Thu, 17 Jun 2021 00:06:10 -0400</pubDate>
+      
+      <guid>http://bazlur.com/tags/http-client/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>java</title>
+      <link>http://bazlur.com/tags/java/</link>
+      <pubDate>Thu, 17 Jun 2021 00:06:10 -0400</pubDate>
+      
+      <guid>http://bazlur.com/tags/java/</guid>
       <description></description>
     </item>
     
@@ -49,15 +67,6 @@
       <pubDate>Wed, 16 Jun 2021 00:10:10 -0400</pubDate>
       
       <guid>http://bazlur.com/tags/duration/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>java</title>
-      <link>http://bazlur.com/tags/java/</link>
-      <pubDate>Wed, 16 Jun 2021 00:10:10 -0400</pubDate>
-      
-      <guid>http://bazlur.com/tags/java/</guid>
       <description></description>
     </item>
     
@@ -859,15 +868,6 @@
       <pubDate>Wed, 01 Jun 2011 00:52:10 -0400</pubDate>
       
       <guid>http://bazlur.com/tags/vector/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>HTTP Client</title>
-      <link>http://bazlur.com/tags/http-client/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://bazlur.com/tags/http-client/</guid>
       <description></description>
     </item>
     

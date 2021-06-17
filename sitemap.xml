@@ -3,32 +3,62 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://bazlur.com/tags/100daysofcode/</loc>
-    <lastmod>2021-06-16T00:10:10-04:00</lastmod>
+    <lastmod>2021-06-17T00:06:10-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://bazlur.com/tags/100daysofjava/</loc>
-    <lastmod>2021-06-16T00:10:10-04:00</lastmod>
+    <lastmod>2021-06-17T00:06:10-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://bazlur.com/categories/100daysofjava/</loc>
-    <lastmod>2021-06-16T00:10:10-04:00</lastmod>
+    <lastmod>2021-06-17T00:06:10-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://bazlur.com/</loc>
-    <lastmod>2021-06-16T00:10:10-04:00</lastmod>
+    <lastmod>2021-06-17T00:06:10-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://bazlur.com/categories/</loc>
-    <lastmod>2021-06-16T00:10:10-04:00</lastmod>
+    <lastmod>2021-06-17T00:06:10-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://bazlur.com/tags/coding/</loc>
-    <lastmod>2021-06-16T00:10:10-04:00</lastmod>
+    <lastmod>2021-06-17T00:06:10-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://bazlur.com/tags/http-client/</loc>
+    <lastmod>2021-06-17T00:06:10-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://bazlur.com/tags/java/</loc>
+    <lastmod>2021-06-17T00:06:10-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://bazlur.com/categories/java/</loc>
+    <lastmod>2021-06-17T00:06:10-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://bazlur.com/2021/06/lets-use-the-new-http-client-that-java-11-brought/</loc>
+    <lastmod>2021-06-17T00:06:10-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://bazlur.com/posts/</loc>
+    <lastmod>2021-06-17T00:06:10-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://bazlur.com/tags/</loc>
+    <lastmod>2021-06-17T00:06:10-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
@@ -47,27 +77,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://bazlur.com/tags/java/</loc>
-    <lastmod>2021-06-16T00:10:10-04:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://bazlur.com/categories/java/</loc>
-    <lastmod>2021-06-16T00:10:10-04:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>http://bazlur.com/tags/localdatetime/</loc>
-    <lastmod>2021-06-16T00:10:10-04:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://bazlur.com/posts/</loc>
-    <lastmod>2021-06-16T00:10:10-04:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://bazlur.com/tags/</loc>
     <lastmod>2021-06-16T00:10:10-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -1359,14 +1369,6 @@
   </url><url>
     <loc>http://bazlur.com/tags/vector/</loc>
     <lastmod>2011-06-01T00:52:10-04:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://bazlur.com/tags/http-client/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://bazlur.com/1/01/lets-use-the-new-http-client-that-java-11-brought/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
