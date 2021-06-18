@@ -8,11 +8,11 @@
     <language>en-us</language>
     <lastBuildDate>Fri, 18 Jun 2021 00:10:40 -0400</lastBuildDate><atom:link href="http://bazlur.com/categories/100daysofjava/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Let&#39;s create coffee with a decorated pattern with the help of lambda expression</title>
-      <link>http://bazlur.com/2021/06/lets-create-coffee-with-a-decorated-pattern-with-the-help-of-lambda-expression/</link>
+      <title>Let&#39;s create coffee with a decorator pattern with the help of lambda expression</title>
+      <link>http://bazlur.com/2021/06/lets-create-coffee-with-a-decorator-pattern-with-the-help-of-lambda-expression/</link>
       <pubDate>Fri, 18 Jun 2021 00:10:40 -0400</pubDate>
       
-      <guid>http://bazlur.com/2021/06/lets-create-coffee-with-a-decorated-pattern-with-the-help-of-lambda-expression/</guid>
+      <guid>http://bazlur.com/2021/06/lets-create-coffee-with-a-decorator-pattern-with-the-help-of-lambda-expression/</guid>
       <description>java.util.function.Function&amp;lt;T, R&amp;gt; is a functional interface. It takes a type T and returns type R. We mostly use it to transform a type into a different one. But it doesn&amp;rsquo;t end there. We can use this into a lambda expression to change a value as well. For example-
 Function&amp;lt;Integer, Integer&amp;gt; doubleIt = a -&amp;gt; a * 2; Over here, we are receiving and in integer but returning after doubling it. Thus, we can pass this function as an argument of a method as well.</description>
     </item>

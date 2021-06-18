@@ -1,0 +1,1225 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="fb:pages" content="556530934551556" />
+
+    
+    <title>Let&#39;s create coffee with a decorator pattern with the help of lambda expression - Bazlur&#39;s Stream of Thoughts</title>
+    <meta property="og:title" content="Let&#39;s create coffee with a decorator pattern with the help of lambda expression - Bazlur&#39;s Stream of Thoughts">
+    
+
+    <meta name="twitter:card" content="summary">
+
+    
+    
+    
+
+    
+    
+    <meta property="description" content="java.util.function.Function&amp;lt;T, R&amp;gt; is a functional interface. It takes a type T and returns type R. We mostly use it to transform a type into a different one. But it doesn&amp;rsquo;t end there. We &amp;hellip;">
+    <meta property="og:description" content="java.util.function.Function&amp;lt;T, R&amp;gt; is a functional interface. It takes a type T and returns type R. We mostly use it to transform a type into a different one. But it doesn&amp;rsquo;t end there. We &amp;hellip;">
+    
+    
+
+    
+    
+
+    
+
+    
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+
+    <link rel="stylesheet"
+          href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/languages/java.min.js"
+            integrity="sha512-xEnylOTeZvxUCvtK9Lw3FjOgfCwsMEhUbx6Hant1lPgy+PcynqCm8XfqhpRos6XNaTxeMuT4QyrWyo3U1NijHg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+    
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-180587445-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/about-me/">About me</a></li>
+      
+      <li><a href="/books/">Books</a></li>
+      
+      <li><a href="/categories/">Categories</a></li>
+      
+      <li><a href="/resume/">Resume</a></li>
+      
+      <li><a href="/live">LIVE</a></li>
+      
+      <li><a href="/index.xml">Subscribe</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+<div class="article-meta">
+    <h1><span class="title">Let&rsquo;s create coffee with a decorator pattern with the help of lambda expression</span></h1>
+    <h2 class="author">A N M Bazlur Rahman</h2>
+    <h2 class="date">2021/06/18</h2>
+</div>
+
+<p class="post-tag">
+    <div id="tags">Tags:<a class="post-tag" href="/tags/java" rel="tag"> java </a> &nbsp; <a class="post-tag" href="/tags/coding" rel="tag"> coding </a> &nbsp; <a class="post-tag" href="/tags/100daysofjava" rel="tag"> 100DaysOfJava </a> &nbsp; <a class="post-tag" href="/tags/100daysofcode" rel="tag"> 100DaysOfCode </a> &nbsp; <a class="post-tag" href="/tags/java8" rel="tag"> java8 </a> &nbsp; <a class="post-tag" href="/tags/lambda-expression" rel="tag"> Lambda Expression </a></div>
+</p>
+
+<main>
+    <p><code>java.util.function.Function&lt;T, R&gt;</code> is a functional interface. It takes a type <code>T</code> and returns type <code>R</code>. We mostly use it to transform a type into a different one. But it doesn&rsquo;t end there. We can use this into a lambda expression to change a value as well. For example-</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">Function<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">,</span> Integer<span style="color:#f92672">&gt;</span> doubleIt <span style="color:#f92672">=</span> a <span style="color:#f92672">-&gt;</span> a <span style="color:#f92672">*</span> 2<span style="color:#f92672">;</span>
+</code></pre></div><p>Over here, we are receiving and in integer but returning after doubling it. Thus, we can pass this function as an argument of a method as well.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">static</span> Integer <span style="color:#a6e22e">transform</span><span style="color:#f92672">(</span>Integer value<span style="color:#f92672">,</span> Function<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">,</span> Integer<span style="color:#f92672">&gt;</span> func<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    var applied <span style="color:#f92672">=</span> func<span style="color:#f92672">.</span><span style="color:#a6e22e">apply</span><span style="color:#f92672">(</span>value<span style="color:#f92672">);</span>
+    <span style="color:#66d9ef">return</span> applied<span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>and use it as follows-</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">var doubled <span style="color:#f92672">=</span> transform<span style="color:#f92672">(</span>4<span style="color:#f92672">,</span> doubleIt<span style="color:#f92672">);</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;doubled = &#34;</span> <span style="color:#f92672">+</span> doubled<span style="color:#f92672">);</span>
+</code></pre></div><p>It will print 8.</p>
+<p>Similarly, we can pass many other lambda expressions into the transform method.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">Function<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">,</span> Integer<span style="color:#f92672">&gt;</span> squareIt <span style="color:#f92672">=</span> a <span style="color:#f92672">-&gt;</span> a <span style="color:#f92672">*</span> a<span style="color:#f92672">;</span>
+Function<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">,</span> Integer<span style="color:#f92672">&gt;</span> cubeIt <span style="color:#f92672">=</span> a <span style="color:#f92672">-&gt;</span> a <span style="color:#f92672">*</span> a <span style="color:#f92672">*</span> a<span style="color:#f92672">;</span>
+
+var squared <span style="color:#f92672">=</span> transform<span style="color:#f92672">(</span>4<span style="color:#f92672">,</span> squareIt<span style="color:#f92672">);</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;square of 4 = &#34;</span> <span style="color:#f92672">+</span> squared<span style="color:#f92672">);</span>
+var cubed <span style="color:#f92672">=</span> transform<span style="color:#f92672">(</span>5<span style="color:#f92672">,</span> cubeIt<span style="color:#f92672">);</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;cube of 5 = &#34;</span> <span style="color:#f92672">+</span> cubed<span style="color:#f92672">);</span>
+</code></pre></div><p>We may have another requirement, for example, we need to cube a value and then increment it by 1.<br />
+We can do it in two steps.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">Function<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">,</span> Integer<span style="color:#f92672">&gt;</span> cubeIt <span style="color:#f92672">=</span> a <span style="color:#f92672">-&gt;</span> a <span style="color:#f92672">*</span> a <span style="color:#f92672">*</span> a<span style="color:#f92672">;</span>
+Function<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">,</span> Integer<span style="color:#f92672">&gt;</span> incrementByOne <span style="color:#f92672">=</span> a <span style="color:#f92672">-&gt;</span> a <span style="color:#f92672">+</span> 1<span style="color:#f92672">;</span>
+
+var cubedOf5 <span style="color:#f92672">=</span> cubeIt<span style="color:#f92672">.</span><span style="color:#a6e22e">apply</span><span style="color:#f92672">(</span>5<span style="color:#f92672">);</span>
+var cubedAndIncremented <span style="color:#f92672">=</span> incrementByOne<span style="color:#f92672">.</span><span style="color:#a6e22e">apply</span><span style="color:#f92672">(</span>cubedOf5<span style="color:#f92672">);</span>
+</code></pre></div><p>However, the above code doesn&rsquo;t look concise at all.<br />
+We can fix it using the default method of <code>Function</code> interface, which is <code>andThen()</code>, and it takes a function as an argument. Using it, we can chain up multiple functions together. The above code would look like this -</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">transform<span style="color:#f92672">(</span>5<span style="color:#f92672">,</span> cubeIt<span style="color:#f92672">.</span><span style="color:#a6e22e">andThen</span><span style="color:#f92672">(</span>incrementByOne<span style="color:#f92672">));</span>
+</code></pre></div><p>This is a one-liner and looks concise and straightforward.</p>
+<p>We can use this concept to implement the <a href="https://en.wikipedia.org/wiki/Decorator_pattern">decorator pattern</a>. This pattern lets you attach new behaviours to objects at runtime.</p>
+<p>We will make coffee with as many ingredients as we can put into a cup using the decorator pattern. When we&rsquo;d do it, our coffee cup would like this-</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">var ingredients <span style="color:#f92672">=</span> List<span style="color:#f92672">.</span><span style="color:#a6e22e">of</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Tim Horton&#34;</span><span style="color:#f92672">);</span>
+var coffeeCup <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> CoffeeCup<span style="color:#f92672">(</span>ingredients<span style="color:#f92672">);</span>
+
+var coffee <span style="color:#f92672">=</span> getCoffeeWithExtra<span style="color:#f92672">(</span>coffeeCup<span style="color:#f92672">,</span>
+            Coffee<span style="color:#f92672">::</span>withDarkCookieCrumb<span style="color:#f92672">,</span>
+            Coffee<span style="color:#f92672">::</span>withSaltedCaramelFudge<span style="color:#f92672">,</span>
+            Coffee<span style="color:#f92672">::</span>withSweetenedMilk<span style="color:#f92672">,</span>
+            Coffee<span style="color:#f92672">::</span>withVanillaAlmondExtract<span style="color:#f92672">);</span>
+
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Coffee with &#34;</span> <span style="color:#f92672">+</span> String<span style="color:#f92672">.</span><span style="color:#a6e22e">join</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;, &#34;</span><span style="color:#f92672">,</span> coffee<span style="color:#f92672">.</span><span style="color:#a6e22e">ingredients</span><span style="color:#f92672">()));</span>
+
+</code></pre></div><p>We will grab a Tim Horton and then keep adding extra ingredients to it using the <code>getCoffeeWithExtra()</code> method.</p>
+<p>Let&rsquo;s look at the getCoffeeWithExtra() method.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">static</span> Coffee <span style="color:#a6e22e">getCoffeeWithExtra</span><span style="color:#f92672">(</span>Coffee coffee<span style="color:#f92672">,</span> Function<span style="color:#f92672">&lt;</span>Coffee<span style="color:#f92672">,</span> Coffee<span style="color:#f92672">&gt;...</span> ingredients<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    var reduced <span style="color:#f92672">=</span> Stream<span style="color:#f92672">.</span><span style="color:#a6e22e">of</span><span style="color:#f92672">(</span>ingredients<span style="color:#f92672">)</span>
+                <span style="color:#f92672">.</span><span style="color:#a6e22e">reduce</span><span style="color:#f92672">(</span>Function<span style="color:#f92672">.</span><span style="color:#a6e22e">identity</span><span style="color:#f92672">(),</span> Function<span style="color:#f92672">::</span>andThen<span style="color:#f92672">);</span>
+    <span style="color:#66d9ef">return</span> reduced<span style="color:#f92672">.</span><span style="color:#a6e22e">apply</span><span style="color:#f92672">(</span>coffee<span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>This method takes a Coffee and an array of functions that transform the coffee, exactly the way we saw in the transform method.  We have reduced the function array into one using stream and then applied it to the coffee and returned it.<br />
+Let&rsquo;s look into the Coffee interface. It has only one method and a few static methods.</p>
+<p>The stream has this reduce function, which takes an identity function as its first parameter; the second parameter is another functional interface named <code>BinaryOperator</code>.<br />
+The identity function is a function that doesn&rsquo;t do anything; basically, it returns the same value that it gets as a parameter. Without the method reference, it looks like the following-</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    var reduce1 <span style="color:#f92672">=</span> Stream<span style="color:#f92672">.</span><span style="color:#a6e22e">of</span><span style="color:#f92672">(</span>ingredients<span style="color:#f92672">)</span>
+            <span style="color:#f92672">.</span><span style="color:#a6e22e">reduce</span><span style="color:#f92672">(</span>kopi <span style="color:#f92672">-&gt;</span> kopi<span style="color:#f92672">,</span> <span style="color:#f92672">(</span>func1<span style="color:#f92672">,</span> func2<span style="color:#f92672">)</span> <span style="color:#f92672">-&gt;</span> func1<span style="color:#f92672">.</span><span style="color:#a6e22e">andThen</span><span style="color:#f92672">(</span>func2<span style="color:#f92672">));</span>
+</code></pre></div><p><em>Note(From <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/util/stream/Stream.html#reduce(T,java.util.function.BinaryOperator)">javaDoc</a>):  The reduce function performs a reduction on the elements of this stream, using the provided identity value and an associative accumulation function, and returns the reduced value. This is equivalent to:</em></p>
+<pre><code> T result = identity;
+ for (T element : this stream)
+     result = accumulator.apply(result, element)
+ return result;
+</code></pre>
+<p>Let&rsquo;s look at the Coffee interface now.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+ <span style="color:#a6e22e">@FunctionalInterface</span> 
+ <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">Coffee</span> <span style="color:#f92672">{</span>
+    List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">ingredients</span><span style="color:#f92672">();</span>  
+		
+    <span style="color:#66d9ef">static</span> Coffee <span style="color:#a6e22e">withSaltedCaramelFudge</span><span style="color:#f92672">(</span>Coffee coffee<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">return</span> <span style="color:#f92672">()</span> <span style="color:#f92672">-&gt;</span> coffee<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Salted Caramel Fudge&#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#66d9ef">default</span> List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>String item<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;(</span>ingredients<span style="color:#f92672">())</span> <span style="color:#f92672">{{</span>
+                    add<span style="color:#f92672">(</span>item<span style="color:#f92672">);</span>
+            <span style="color:#f92672">}};</span>
+    <span style="color:#f92672">}</span>
+    
+    <span style="color:#66d9ef">static</span> Coffee <span style="color:#a6e22e">withSweetenedMilk</span><span style="color:#f92672">(</span>Coffee coffee<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">return</span> <span style="color:#f92672">()</span> <span style="color:#f92672">-&gt;</span> coffee<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Sweetened Milk&#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#66d9ef">static</span> Coffee <span style="color:#a6e22e">withDarkCookieCrumb</span><span style="color:#f92672">(</span>Coffee coffee<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">return</span> <span style="color:#f92672">()</span> <span style="color:#f92672">-&gt;</span> coffee<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Dark Cookie Crumb&#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#66d9ef">static</span> Coffee <span style="color:#a6e22e">withVanillaAlmondExtract</span><span style="color:#f92672">(</span>Coffee coffee<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">return</span> <span style="color:#f92672">()</span> <span style="color:#f92672">-&gt;</span> coffee<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Vanilla/Almond Extract&#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>These static methods are for convenience. We can keep adding these methods as our ingredient list grows. The benefit is, when we will use them, we will be able to use method references, which will make our code concise.</p>
+<p>Let&rsquo;s put everything together.</p>
+<p>These static methods are for convenience. We can keep adding these methods as our ingredient list grows. The benefit is, when we will use them, we will be able to use method references, which will make our code concise.</p>
+<p>Let&rsquo;s put everything together.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+<span style="color:#f92672">package</span> com.bazlur<span style="color:#f92672">;</span>
+
+<span style="color:#f92672">import</span> java.util.ArrayList<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> java.util.List<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> java.util.function.Function<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> java.util.stream.Stream<span style="color:#f92672">;</span>
+
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Day012</span> <span style="color:#f92672">{</span>
+
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    var ingredients <span style="color:#f92672">=</span> List<span style="color:#f92672">.</span><span style="color:#a6e22e">of</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Tim Horton&#34;</span><span style="color:#f92672">);</span>
+    var coffeeCup <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> CoffeeCup<span style="color:#f92672">(</span>ingredients<span style="color:#f92672">);</span>
+
+    var coffee <span style="color:#f92672">=</span> getCoffeeWithExtra<span style="color:#f92672">(</span>coffeeCup<span style="color:#f92672">,</span>
+            Coffee<span style="color:#f92672">::</span>withDarkCookieCrumb<span style="color:#f92672">,</span>
+            Coffee<span style="color:#f92672">::</span>withSaltedCaramelFudge<span style="color:#f92672">,</span>
+            Coffee<span style="color:#f92672">::</span>withSweetenedMilk<span style="color:#f92672">,</span>
+            Coffee<span style="color:#f92672">::</span>withVanillaAlmondExtract<span style="color:#f92672">);</span>
+
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Coffee with &#34;</span> <span style="color:#f92672">+</span> String<span style="color:#f92672">.</span><span style="color:#a6e22e">join</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;, &#34;</span><span style="color:#f92672">,</span> coffee<span style="color:#f92672">.</span><span style="color:#a6e22e">ingredients</span><span style="color:#f92672">()));</span>
+  <span style="color:#f92672">}</span>
+
+  <span style="color:#a6e22e">@SafeVarargs</span>
+  <span style="color:#66d9ef">static</span> Coffee <span style="color:#a6e22e">getCoffeeWithExtra</span><span style="color:#f92672">(</span>Coffee coffee<span style="color:#f92672">,</span> Function<span style="color:#f92672">&lt;</span>Coffee<span style="color:#f92672">,</span> Coffee<span style="color:#f92672">&gt;...</span> ingredients<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    var reduced <span style="color:#f92672">=</span> Stream<span style="color:#f92672">.</span><span style="color:#a6e22e">of</span><span style="color:#f92672">(</span>ingredients<span style="color:#f92672">)</span>
+            <span style="color:#f92672">.</span><span style="color:#a6e22e">reduce</span><span style="color:#f92672">(</span>Function<span style="color:#f92672">.</span><span style="color:#a6e22e">identity</span><span style="color:#f92672">(),</span> Function<span style="color:#f92672">::</span>andThen<span style="color:#f92672">);</span>
+    <span style="color:#66d9ef">return</span> reduced<span style="color:#f92672">.</span><span style="color:#a6e22e">apply</span><span style="color:#f92672">(</span>coffee<span style="color:#f92672">);</span>
+  <span style="color:#f92672">}</span>
+
+  <span style="color:#a6e22e">@FunctionalInterface</span>
+  <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">Coffee</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">static</span> Coffee <span style="color:#a6e22e">withSaltedCaramelFudge</span><span style="color:#f92672">(</span>Coffee coffee<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+      <span style="color:#66d9ef">return</span> <span style="color:#f92672">()</span> <span style="color:#f92672">-&gt;</span> coffee<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Salted Caramel Fudge&#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#66d9ef">default</span> List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>String item<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+      <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;(</span>ingredients<span style="color:#f92672">())</span> <span style="color:#f92672">{{</span>
+        add<span style="color:#f92672">(</span>item<span style="color:#f92672">);</span>
+      <span style="color:#f92672">}};</span>
+    <span style="color:#f92672">}</span>
+
+    List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">ingredients</span><span style="color:#f92672">();</span>
+
+    <span style="color:#66d9ef">static</span> Coffee <span style="color:#a6e22e">withSweetenedMilk</span><span style="color:#f92672">(</span>Coffee coffee<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+      <span style="color:#66d9ef">return</span> <span style="color:#f92672">()</span> <span style="color:#f92672">-&gt;</span> coffee<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Sweetened Milk&#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#66d9ef">static</span> Coffee <span style="color:#a6e22e">withDarkCookieCrumb</span><span style="color:#f92672">(</span>Coffee coffee<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+      <span style="color:#66d9ef">return</span> <span style="color:#f92672">()</span> <span style="color:#f92672">-&gt;</span> coffee<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Dark Cookie Crumb&#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#66d9ef">static</span> Coffee <span style="color:#a6e22e">withVanillaAlmondExtract</span><span style="color:#f92672">(</span>Coffee coffee<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+      <span style="color:#66d9ef">return</span> <span style="color:#f92672">()</span> <span style="color:#f92672">-&gt;</span> coffee<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Vanilla/Almond Extract&#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+  <span style="color:#f92672">}</span>
+
+  record <span style="color:#a6e22e">CoffeeCup</span><span style="color:#f92672">(</span>List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> initialIngredient<span style="color:#f92672">)</span> <span style="color:#66d9ef">implements</span> Coffee <span style="color:#f92672">{</span>
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">ingredients</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+      <span style="color:#66d9ef">return</span> initialIngredient<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+  <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">%</span> java Day012<span style="color:#f92672">.</span><span style="color:#a6e22e">java</span> 
+Coffee with Tim Horton<span style="color:#f92672">,</span> Dark Cookie Crumb<span style="color:#f92672">,</span> Salted Caramel Fudge<span style="color:#f92672">,</span> Sweetened Milk<span style="color:#f92672">,</span> Vanilla<span style="color:#f92672">/</span>Almond Extract
+</code></pre></div>
+</main>
+
+<p class="post-tag">
+    <div>Categories:<a class="post-tag" href="/categories/java" rel="tag"> java </a> &nbsp; <a class="post-tag" href="/categories/100daysofjava" rel="tag"> 100DaysOfJava </a></div>
+</p>
+
+
+
+<style>
+    #share-buttons {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    #share-buttons:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+    #share-buttons > div {
+        position: relative;
+        text-align: left;
+        height: 36px;
+        width: 32px;
+        float: left;
+        text-align: center;
+    }
+
+    #share-buttons > div > svg {
+        height: 16px;
+        fill: #d5d5d5;
+        margin-top: 10px;
+    }
+
+    #share-buttons > div:hover {
+        cursor: pointer;
+    }
+
+    #share-buttons > div.facebook:hover > svg {
+        fill: #3B5998;
+    }
+
+    #share-buttons > div.twitter:hover > svg {
+        fill: #55ACEE;
+    }
+
+    #share-buttons > div.linkedin:hover > svg {
+        fill: #0077b5;
+    }
+
+    #share-buttons > div.pinterest:hover > svg {
+        fill: #CB2027;
+    }
+
+    #share-buttons > div.gplus:hover > svg {
+        fill: #dd4b39;
+    }
+
+    #share-buttons > div.mail:hover > svg {
+        fill: #7D7D7D;
+    }
+
+    #share-buttons > div.instagram:hover > svg {
+        fill: #C73B92;
+    }
+
+    #share-buttons > div.facebook > svg {
+        height: 18px;
+        margin-top: 9px;
+    }
+
+    #share-buttons > div.twitter > svg {
+        height: 20px;
+        margin-top: 8px;
+    }
+
+    #share-buttons > div.linkedin > svg {
+        height: 19px;
+        margin-top: 7px;
+    }
+
+    #share-buttons > div.pinterest > svg {
+        height: 20px;
+        margin-top: 9px;
+    }
+
+    #share-buttons > div.gplus > svg {
+        height: 17px;
+        margin-top: 9px;
+        position: relative;
+        left: 1px;
+    }
+
+    #share-buttons > div.mail > svg {
+        height: 14px;
+        margin-top: 11px;
+    }
+</style>
+
+<span style="color: silver;">Share on: </span>
+<div id="share-buttons">
+    <div class="facebook" title="Share this on Facebook"
+         onclick="window.open('http://www.facebook.com/share.php?u=http:\/\/bazlur.com\/2021\/06\/lets-create-coffee-with-a-decorator-pattern-with-the-help-of-lambda-expression\/');">
+        <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1343 12v264h-157q-86 0-116 36t-30 108v189h293l-39 296h-254v759h-306v-759h-255v-296h255v-218q0-186 104-288.5t277-102.5q147 0 228 12z"/>
+        </svg>
+    </div>
+    <div class="twitter" title="Share this on Twitter"
+         onclick="window.open('http://twitter.com/intent/tweet?text=Let\u0027s create coffee with a decorator pattern with the help of lambda expression&url=http:\/\/bazlur.com\/2021\/06\/lets-create-coffee-with-a-decorator-pattern-with-the-help-of-lambda-expression\/');">
+        <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1684 408q-67 98-162 167 1 14 1 42 0 130-38 259.5t-115.5 248.5-184.5 210.5-258 146-323 54.5q-271 0-496-145 35 4 78 4 225 0 401-138-105-2-188-64.5t-114-159.5q33 5 61 5 43 0 85-11-112-23-185.5-111.5t-73.5-205.5v-4q68 38 146 41-66-44-105-115t-39-154q0-88 44-163 121 149 294.5 238.5t371.5 99.5q-8-38-8-74 0-134 94.5-228.5t228.5-94.5q140 0 236 102 109-21 205-78-37 115-142 178 93-10 186-50z"/>
+        </svg>
+    </div>
+    <div class="linkedin" title="Share this on Linkedin"
+         onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&url=http:\/\/bazlur.com\/2021\/06\/lets-create-coffee-with-a-decorator-pattern-with-the-help-of-lambda-expression\/&title=&summary=&source=');">
+        <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+            <path d="M477 625v991h-330v-991h330zm21-306q1 73-50.5 122t-135.5 49h-2q-82 0-132-49t-50-122q0-74 51.5-122.5t134.5-48.5 133 48.5 51 122.5zm1166 729v568h-329v-530q0-105-40.5-164.5t-126.5-59.5q-63 0-105.5 34.5t-63.5 85.5q-11 30-11 81v553h-329q2-399 2-647t-1-296l-1-48h329v144h-2q20-32 41-56t56.5-52 87-43.5 114.5-15.5q171 0 275 113.5t104 332.5z"/>
+        </svg>
+    </div>
+    
+    <div class="mail" title="Share this through Email" onclick="window.open('mailto:?&body=http:\/\/bazlur.com\/2021\/06\/lets-create-coffee-with-a-decorator-pattern-with-the-help-of-lambda-expression\/');">
+        <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1792 710v794q0 66-47 113t-113 47h-1472q-66 0-113-47t-47-113v-794q44 49 101 87 362 246 497 345 57 42 92.5 65.5t94.5 48 110 24.5h2q51 0 110-24.5t94.5-48 92.5-65.5q170-123 498-345 57-39 100-87zm0-294q0 79-49 151t-122 123q-376 261-468 325-10 7-42.5 30.5t-54 38-52 32.5-57.5 27-50 9h-2q-23 0-50-9t-57.5-27-52-32.5-54-38-42.5-30.5q-91-64-262-182.5t-205-142.5q-62-42-117-115.5t-55-136.5q0-78 41.5-130t118.5-52h1472q65 0 112.5 47t47.5 113z"/>
+        </svg>
+    </div>
+</div>
+
+<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+        this.page.identifier = 'http:\/\/bazlur.com\/2021\/06\/lets-create-coffee-with-a-decorator-pattern-with-the-help-of-lambda-expression\/';
+        this.page.title = 'Let\u0027s create coffee with a decorator pattern with the help of lambda expression';
+        this.page.url = 'http:\/\/bazlur.com\/2021\/06\/lets-create-coffee-with-a-decorator-pattern-with-the-help-of-lambda-expression\/';
+    };
+
+    (function () { 
+        var d = document, s = d.createElement('script');
+        s.src = 'https://bazlur-com.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+    Disqus.</a></noscript>
+
+  <footer>
+  
+
+
+
+
+
+
+
+
+
+
+<div id="tag-cloud" style="padding: 5px 15px">
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/100daysofcode" style="font-size:2.707799170023585rem">100daysofcode</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/100daysofjava" style="font-size:2.707799170023585rem">100daysofjava</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/access" style="font-size:1rem">access</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/advance-java" style="font-size:1rem">advance-java</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/agile" style="font-size:1.7550421078897178rem">agile</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/algorithm" style="font-size:1.4763785310669335rem">algorithm</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/arraylist" style="font-size:1.4763785310669335rem">arraylist</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/article" style="font-size:1rem">article</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/bangla-book" style="font-size:2.231420638956651rem">bangla-book</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/becoming-expert" style="font-size:1rem">becoming-expert</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/book" style="font-size:2.231420638956651rem">book</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/calculator" style="font-size:1rem">calculator</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/cloning" style="font-size:1rem">cloning</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/code-readability" style="font-size:1rem">code-readability</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/code-review" style="font-size:1rem">code-review</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/coding" style="font-size:2.762810037229791rem">coding</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/coding-convention" style="font-size:1rem">coding-convention</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/collection-framework" style="font-size:1rem">collection-framework</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/compact-strings" style="font-size:1rem">compact-strings</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/concurrentmodificationexception" style="font-size:1rem">concurrentmodificationexception</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/concurrentskiplistmap" style="font-size:1rem">concurrentskiplistmap</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/counting" style="font-size:1rem">counting</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/countingcollections" style="font-size:1rem">countingcollections</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/daemon-thread" style="font-size:1rem">daemon-thread</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/data-race" style="font-size:1rem">data-race</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/data-structure" style="font-size:1rem">data-structure</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/datetime" style="font-size:1rem">datetime</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/day002" style="font-size:1rem">day002</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/deliberate-practice" style="font-size:1rem">deliberate-practice</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/deserialization" style="font-size:1rem">deserialization</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/developers" style="font-size:1rem">developers</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/duration" style="font-size:1rem">duration</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/executors" style="font-size:1.4763785310669335rem">executors</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/export" style="font-size:1rem">export</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/fibonacci" style="font-size:1.4763785310669335rem">fibonacci</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/file" style="font-size:1.4763785310669335rem">file</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/file-copy" style="font-size:1rem">file-copy</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/functional" style="font-size:1rem">functional</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/future-java-developers" style="font-size:1rem">future-java-developers</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/groupby" style="font-size:1rem">groupby</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/hash-function" style="font-size:1.4763785310669335rem">hash-function</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/hashmap" style="font-size:1.7550421078897178rem">hashmap</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/history" style="font-size:1rem">history</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/history-of-java" style="font-size:1rem">history-of-java</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/how-java-performs-better" style="font-size:1rem">how-java-performs-better</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/how-java-works" style="font-size:1rem">how-java-works</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/http-client" style="font-size:1rem">http-client</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/image" style="font-size:1rem">image</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/import" style="font-size:1rem">import</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/inspiration" style="font-size:1rem">inspiration</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/itext-pdf" style="font-size:1rem">itext-pdf</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java" style="font-size:3.481671741980012rem">java</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java-10" style="font-size:1rem">java-10</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java-11" style="font-size:1rem">java-11</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java-developers" style="font-size:1rem">java-developers</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java-programming" style="font-size:1rem">java-programming</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java-thread" style="font-size:1rem">java-thread</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java-thread-programming" style="font-size:1.952757062133867rem">java-thread-programming</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java11" style="font-size:1rem">java11</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java16" style="font-size:1.7550421078897178rem">java16</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java8" style="font-size:1rem">java8</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/lambda-expression" style="font-size:1rem">lambda-expression</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/learning" style="font-size:1rem">learning</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/learning-and-development" style="font-size:1rem">learning-and-development</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/linkedlist" style="font-size:1.4763785310669335rem">linkedlist</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/list" style="font-size:1rem">list</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/local-type-inference" style="font-size:1rem">local-type-inference</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/localdatetime" style="font-size:1rem">localdatetime</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/map" style="font-size:1.7550421078897178rem">map</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/methodology" style="font-size:1rem">methodology</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/nio" style="font-size:1rem">nio</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/null-pointer-exception" style="font-size:1rem">null-pointer-exception</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/object-cloning" style="font-size:1rem">object-cloning</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/optional" style="font-size:1rem">optional</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/packaging" style="font-size:1rem">packaging</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/pass-by-reference" style="font-size:1rem">pass-by-reference</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/pass-by-value" style="font-size:1rem">pass-by-value</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/pdf" style="font-size:1rem">pdf</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/performance" style="font-size:1rem">performance</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/programming" style="font-size:1rem">programming</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/readable-code" style="font-size:1rem">readable-code</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/record" style="font-size:1rem">record</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/refactoring" style="font-size:1rem">refactoring</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/review" style="font-size:1.952757062133867rem">review</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/scheduler" style="font-size:1rem">scheduler</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/scrum" style="font-size:1rem">scrum</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/serialization" style="font-size:1.4763785310669335rem">serialization</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/simple-calculator" style="font-size:1rem">simple-calculator</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/software-development" style="font-size:1rem">software-development</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/source-code" style="font-size:1rem">source-code</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/stack" style="font-size:1rem">stack</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/string" style="font-size:1.7550421078897178rem">string</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/string-pool" style="font-size:1rem">string-pool</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/swing" style="font-size:1rem">swing</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/thread" style="font-size:2.3373636139533267rem">thread</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/vector" style="font-size:1rem">vector</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/volatile" style="font-size:1rem">volatile</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/why-java" style="font-size:1rem">why-java</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/zoneid" style="font-size:1rem">zoneid</a>
+  
+</div>
+
+
+<footer>
+  <div>
+    <p>
+    &copy; <a href="https://bazlur.com"> A N M Bazlur Rahman</a> 2012 - 2021 | <a href="https://github.com/rokon12">Github</a>
+    | <a href=" https://twitter.com/bazlur_rahman"> @bazlur_rahman</a>
+    </p>
+  </div>
+</footer>
+  
+  </footer>
+  </body>
+</html>
+
