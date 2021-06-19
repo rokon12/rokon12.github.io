@@ -3,42 +3,62 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://bazlur.com/tags/100daysofcode/</loc>
-    <lastmod>2021-06-18T00:10:40-04:00</lastmod>
+    <lastmod>2021-06-19T00:10:40-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://bazlur.com/tags/100daysofjava/</loc>
-    <lastmod>2021-06-18T00:10:40-04:00</lastmod>
+    <lastmod>2021-06-19T00:10:40-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://bazlur.com/categories/100daysofjava/</loc>
-    <lastmod>2021-06-18T00:10:40-04:00</lastmod>
+    <lastmod>2021-06-19T00:10:40-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://bazlur.com/</loc>
-    <lastmod>2021-06-18T00:10:40-04:00</lastmod>
+    <lastmod>2021-06-19T00:10:40-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://bazlur.com/categories/</loc>
-    <lastmod>2021-06-18T00:10:40-04:00</lastmod>
+    <lastmod>2021-06-19T00:10:40-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://bazlur.com/tags/coding/</loc>
-    <lastmod>2021-06-18T00:10:40-04:00</lastmod>
+    <lastmod>2021-06-19T00:10:40-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://bazlur.com/tags/java/</loc>
-    <lastmod>2021-06-18T00:10:40-04:00</lastmod>
+    <lastmod>2021-06-19T00:10:40-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://bazlur.com/categories/java/</loc>
-    <lastmod>2021-06-18T00:10:40-04:00</lastmod>
+    <lastmod>2021-06-19T00:10:40-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://bazlur.com/2021/06/lets-find-out-the-most-enormous-known-prime-number-using-java/</loc>
+    <lastmod>2021-06-19T00:10:40-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://bazlur.com/posts/</loc>
+    <lastmod>2021-06-19T00:10:40-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://bazlur.com/tags/prime-number/</loc>
+    <lastmod>2021-06-19T00:10:40-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://bazlur.com/tags/</loc>
+    <lastmod>2021-06-19T00:10:40-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
@@ -53,16 +73,6 @@
     <priority>0.5</priority>
   </url><url>
     <loc>http://bazlur.com/2021/06/lets-create-coffee-with-a-decorator-pattern-with-the-help-of-lambda-expression/</loc>
-    <lastmod>2021-06-18T00:10:40-04:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://bazlur.com/posts/</loc>
-    <lastmod>2021-06-18T00:10:40-04:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://bazlur.com/tags/</loc>
     <lastmod>2021-06-18T00:10:40-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -853,11 +863,6 @@
     <priority>0.5</priority>
   </url><url>
     <loc>http://bazlur.com/posts/2017-03-01-largest-known-prime-numbe/</loc>
-    <lastmod>2017-03-01T16:19:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://bazlur.com/tags/prime-number/</loc>
     <lastmod>2017-03-01T16:19:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
