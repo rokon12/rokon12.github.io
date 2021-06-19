@@ -31,17 +31,11 @@
 
     
 
+    <script src="/js/prism.js"></script>
+
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/fonts.css" />
-
-    <link rel="stylesheet"
-          href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/styles/default.min.css">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/highlight.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/languages/java.min.js"
-            integrity="sha512-xEnylOTeZvxUCvtK9Lw3FjOgfCwsMEhUbx6Hant1lPgy+PcynqCm8XfqhpRos6XNaTxeMuT4QyrWyo3U1NijHg=="
-            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-
+    <link rel="stylesheet" href="/css/prism.css" />
 
     
 
@@ -61,8 +55,9 @@ if (!doNotTrack) {
 
   </head>
 
-  <body>
-    <nav>
+  <body class="line-numbers">
+
+  <nav>
     <ul class="menu">
       
       <li><a href="/">Home</a></li>
@@ -96,187 +91,197 @@ if (!doNotTrack) {
     <p>Lambda expressions are all about how we write code. It’s about how we can write more concise, smaller, and less boilerplate code. However, this aforementioned statement may not seem to be true in the case of exceptions in Java.</p>
 <p>In Java, we can only handle exceptions through the try-catch block, and this hasn’t changed for the lambda expression.</p>
 <p>Let’s say we’re going to develop a simple web crawler. The crawler will take a list of URLs in a string as an argument and save the content of the text file in a text file. Let’s do this.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#f92672">import</span> java.io.InputStream<span style="color:#f92672">;</span>
-    <span style="color:#f92672">import</span> java.net.URL<span style="color:#f92672">;</span>
-    <span style="color:#f92672">import</span> java.nio.file.Files<span style="color:#f92672">;</span>
-    <span style="color:#f92672">import</span> java.nio.file.Paths<span style="color:#f92672">;</span>
-    <span style="color:#f92672">import</span> java.nio.file.StandardCopyOption<span style="color:#f92672">;</span>
-    <span style="color:#f92672">import</span> java.util.List<span style="color:#f92672">;</span>
-    <span style="color:#f92672">import</span> java.util.UUID<span style="color:#f92672">;</span>
+<pre><code class="language-java">    import java.io.InputStream;
+    import java.net.URL;
+    import java.nio.file.Files;
+    import java.nio.file.Paths;
+    import java.nio.file.StandardCopyOption;
+    import java.util.List;
+    import java.util.UUID;
     
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">WebCrawler</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-            List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> urlsToCrawl <span style="color:#f92672">=</span> List<span style="color:#f92672">.</span><span style="color:#a6e22e">of</span><span style="color:#f92672">(</span><span style="color:#960050;background-color:#1e0010">“</span>https<span style="color:#f92672">:</span><span style="color:#75715e">//masterdevskills.com&#34;);
-</span><span style="color:#75715e"></span>    
-            WebCrawler webCrawler <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> WebCrawler<span style="color:#f92672">();</span>
-            webCrawler<span style="color:#f92672">.</span><span style="color:#a6e22e">crawl</span><span style="color:#f92672">(</span>urlsToCrawl<span style="color:#f92672">);</span>
-        <span style="color:#f92672">}</span>
+    public class WebCrawler {
+        public static void main(String[] args) {
+            List&lt;String&gt; urlsToCrawl = List.of(“https://masterdevskills.com&quot;);
     
-        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">crawl</span><span style="color:#f92672">(</span>List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> urlsToCrawl<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-            urlsToCrawl<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">()</span>
-                    <span style="color:#f92672">.</span><span style="color:#a6e22e">map</span><span style="color:#f92672">(</span>urlToCrawl <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">new</span> URL<span style="color:#f92672">(</span>urlToCrawl<span style="color:#f92672">))</span>
-                    <span style="color:#f92672">.</span><span style="color:#a6e22e">forEach</span><span style="color:#f92672">(</span>url <span style="color:#f92672">-&gt;</span> save<span style="color:#f92672">(</span>url<span style="color:#f92672">));</span>
-        <span style="color:#f92672">}</span>
+            WebCrawler webCrawler = new WebCrawler();
+            webCrawler.crawl(urlsToCrawl);
+        }
     
-        <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">save</span><span style="color:#f92672">(</span>URL url<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> IOException <span style="color:#f92672">{</span>
-            String uuid <span style="color:#f92672">=</span> UUID<span style="color:#f92672">.</span><span style="color:#a6e22e">randomUUID</span><span style="color:#f92672">().</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">();</span>
-            InputStream inputStream <span style="color:#f92672">=</span> url<span style="color:#f92672">.</span><span style="color:#a6e22e">openConnection</span><span style="color:#f92672">().</span><span style="color:#a6e22e">getInputStream</span><span style="color:#f92672">();</span>
-            Files<span style="color:#f92672">.</span><span style="color:#a6e22e">copy</span><span style="color:#f92672">(</span>inputStream<span style="color:#f92672">,</span> Paths<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>uuid <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;.txt&#34;</span><span style="color:#f92672">),</span> StandardCopyOption<span style="color:#f92672">.</span><span style="color:#a6e22e">REPLACE_EXISTING</span><span style="color:#f92672">);</span>
-        <span style="color:#f92672">}</span>
-    <span style="color:#f92672">}</span>
-</code></pre></div><p>The above code is simple and intuitive. We used <code>Stream</code> and the first map method converts string URL to java.net.URL object and then passed it to the <code>forEach</code> method, which saves it in a text file. We have used a lambda expression in the crawl method. However, the above code won’t compile. The reason is that we didn’t handle the checked exceptions. The constructor of java.net.URL class throws the <code>MalformedURLException</code> checked exception. And, our private save method also throws checked exceptions, which is the <code>IOException</code>.</p>
+        public void crawl(List&lt;String&gt; urlsToCrawl) {
+            urlsToCrawl.stream()
+                    .map(urlToCrawl -&gt; new URL(urlToCrawl))
+                    .forEach(url -&gt; save(url));
+        }
+    
+        private void save(URL url) throws IOException {
+            String uuid = UUID.randomUUID().toString();
+            InputStream inputStream = url.openConnection().getInputStream();
+            Files.copy(inputStream, Paths.get(uuid + &quot;.txt&quot;), StandardCopyOption.REPLACE_EXISTING);
+        }
+    }
+</code></pre>
+<p>The above code is simple and intuitive. We used <code>Stream</code> and the first map method converts string URL to java.net.URL object and then passed it to the <code>forEach</code> method, which saves it in a text file. We have used a lambda expression in the crawl method. However, the above code won’t compile. The reason is that we didn’t handle the checked exceptions. The constructor of java.net.URL class throws the <code>MalformedURLException</code> checked exception. And, our private save method also throws checked exceptions, which is the <code>IOException</code>.</p>
 <p>Let’s handle the exceptions.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">crawl</span><span style="color:#f92672">(</span>List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> urlsToCrawl<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        urlsToCrawl<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">()</span>
-                <span style="color:#f92672">.</span><span style="color:#a6e22e">map</span><span style="color:#f92672">(</span>urlToCrawl <span style="color:#f92672">-&gt;</span> <span style="color:#f92672">{</span>
-                    <span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
-                        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> URL<span style="color:#f92672">(</span>urlToCrawl<span style="color:#f92672">);</span>
-                    <span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>MalformedURLException e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-                        e<span style="color:#f92672">.</span><span style="color:#a6e22e">printStackTrace</span><span style="color:#f92672">();</span>
-                    <span style="color:#f92672">}</span>
-                    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
-                <span style="color:#f92672">})</span>
-                <span style="color:#f92672">.</span><span style="color:#a6e22e">forEach</span><span style="color:#f92672">(</span>url <span style="color:#f92672">-&gt;</span> <span style="color:#f92672">{</span>
-                    <span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
-                        save<span style="color:#f92672">(</span>url<span style="color:#f92672">);</span>
-                    <span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>IOException e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-                        e<span style="color:#f92672">.</span><span style="color:#a6e22e">printStackTrace</span><span style="color:#f92672">();</span>
-                    <span style="color:#f92672">}</span>
-                <span style="color:#f92672">});</span>
-    <span style="color:#f92672">}</span>
-</code></pre></div><p>Lambda expressions are supposed to be concise, smaller, and crisp, but none of these apply to the aforementioned code. So here, we have a problem.</p>
+<pre><code class="language-java">    public void crawl(List&lt;String&gt; urlsToCrawl) {
+        urlsToCrawl.stream()
+                .map(urlToCrawl -&gt; {
+                    try {
+                        return new URL(urlToCrawl);
+                    } catch (MalformedURLException e) {
+                        e.printStackTrace();
+                    }
+                    return null;
+                })
+                .forEach(url -&gt; {
+                    try {
+                        save(url);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                });
+    }
+</code></pre>
+<p>Lambda expressions are supposed to be concise, smaller, and crisp, but none of these apply to the aforementioned code. So here, we have a problem.</p>
 <p>Let’s rewrite the whole program and make our lambda crisp.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#f92672">import</span> java.io.InputStream<span style="color:#f92672">;</span>
-    <span style="color:#f92672">import</span> java.net.MalformedURLException<span style="color:#f92672">;</span>
-    <span style="color:#f92672">import</span> java.net.URL<span style="color:#f92672">;</span>
-    <span style="color:#f92672">import</span> java.nio.file.Files<span style="color:#f92672">;</span>
-    <span style="color:#f92672">import</span> java.nio.file.Paths<span style="color:#f92672">;</span>
-    <span style="color:#f92672">import</span> java.nio.file.StandardCopyOption<span style="color:#f92672">;</span>
-    <span style="color:#f92672">import</span> java.util.List<span style="color:#f92672">;</span>
-    <span style="color:#f92672">import</span> java.util.Objects<span style="color:#f92672">;</span>
-    <span style="color:#f92672">import</span> java.util.UUID<span style="color:#f92672">;</span>
+<pre><code class="language-java">    import java.io.InputStream;
+    import java.net.MalformedURLException;
+    import java.net.URL;
+    import java.nio.file.Files;
+    import java.nio.file.Paths;
+    import java.nio.file.StandardCopyOption;
+    import java.util.List;
+    import java.util.Objects;
+    import java.util.UUID;
     
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">WebCrawler</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-            List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> urlsToCrawl <span style="color:#f92672">=</span> List<span style="color:#f92672">.</span><span style="color:#a6e22e">of</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;https://masterdevskills.com&#34;</span><span style="color:#f92672">);</span>
-            WebCrawler webCrawler <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> WebCrawler<span style="color:#f92672">();</span>
-            webCrawler<span style="color:#f92672">.</span><span style="color:#a6e22e">crawl</span><span style="color:#f92672">(</span>urlsToCrawl<span style="color:#f92672">);</span>
-        <span style="color:#f92672">}</span>
+    public class WebCrawler {
+        public static void main(String[] args) {
+            List&lt;String&gt; urlsToCrawl = List.of(&quot;https://masterdevskills.com&quot;);
+            WebCrawler webCrawler = new WebCrawler();
+            webCrawler.crawl(urlsToCrawl);
+        }
     
-        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">crawl</span><span style="color:#f92672">(</span>List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> urlsToCrawl<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-            urlsToCrawl<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">()</span>
-                    <span style="color:#f92672">.</span><span style="color:#a6e22e">map</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">::</span>createURL<span style="color:#f92672">)</span>
-                   <span style="color:#f92672">.</span><span style="color:#a6e22e">forEach</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">::</span>save<span style="color:#f92672">);</span>
-        <span style="color:#f92672">}</span>
+        public void crawl(List&lt;String&gt; urlsToCrawl) {
+            urlsToCrawl.stream()
+                    .map(this::createURL)
+                   .forEach(this::save);
+        }
     
-        <span style="color:#66d9ef">private</span> URL <span style="color:#a6e22e">createURL</span><span style="color:#f92672">(</span>String urlToCrawl<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-            <span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
-                <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> URL<span style="color:#f92672">(</span>urlToCrawl<span style="color:#f92672">);</span>
-            <span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>MalformedURLException e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-                e<span style="color:#f92672">.</span><span style="color:#a6e22e">printStackTrace</span><span style="color:#f92672">();</span>
-            <span style="color:#f92672">}</span>
-            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
-        <span style="color:#f92672">}</span>
+        private URL createURL(String urlToCrawl) {
+            try {
+                return new URL(urlToCrawl);
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            }
+            return null;
+        }
     
-        <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">save</span><span style="color:#f92672">(</span>URL url<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-            <span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
-                String uuid <span style="color:#f92672">=</span> UUID<span style="color:#f92672">.</span><span style="color:#a6e22e">randomUUID</span><span style="color:#f92672">().</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">();</span>
-                InputStream inputStream <span style="color:#f92672">=</span> url<span style="color:#f92672">.</span><span style="color:#a6e22e">openConnection</span><span style="color:#f92672">().</span><span style="color:#a6e22e">getInputStream</span><span style="color:#f92672">();</span>
-                Files<span style="color:#f92672">.</span><span style="color:#a6e22e">copy</span><span style="color:#f92672">(</span>inputStream<span style="color:#f92672">,</span> Paths<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>uuid <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;.txt&#34;</span><span style="color:#f92672">),</span> StandardCopyOption<span style="color:#f92672">.</span><span style="color:#a6e22e">REPLACE_EXISTING</span><span style="color:#f92672">);</span>
-            <span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>IOException e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-                e<span style="color:#f92672">.</span><span style="color:#a6e22e">printStackTrace</span><span style="color:#f92672">();</span>
-            <span style="color:#f92672">}</span>
-        <span style="color:#f92672">}</span>
-    <span style="color:#f92672">}</span>
-</code></pre></div><p>Now look carefully at the <code>crawl()</code> method. We replaced the lambda expression with the method reference. It’s now more concise, smaller, and crisp. However, we were not able to solve the problem of handling the exception, we just moved it to a different place.</p>
+        private void save(URL url) {
+            try {
+                String uuid = UUID.randomUUID().toString();
+                InputStream inputStream = url.openConnection().getInputStream();
+                Files.copy(inputStream, Paths.get(uuid + &quot;.txt&quot;), StandardCopyOption.REPLACE_EXISTING);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+</code></pre>
+<p>Now look carefully at the <code>crawl()</code> method. We replaced the lambda expression with the method reference. It’s now more concise, smaller, and crisp. However, we were not able to solve the problem of handling the exception, we just moved it to a different place.</p>
 <p>We have another problem here, we handle the exception in the method with the <code>try-catch</code> block in places but did not delegate the exception up the stack of the method call where we actually called the <code>crawl()</code> method.</p>
 <p>We can solve this problem by re-throwing the checked exception using <code>RuntimeException</code>, which will work since we don’t have to handle runtime exception if we don’t want to and our lambda expression will remain concise.</p>
 <p>Let’s do that:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">crawl</span><span style="color:#f92672">(</span>List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> urlsToCrawl<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-            urlsToCrawl<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">()</span>
-                    <span style="color:#f92672">.</span><span style="color:#a6e22e">map</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">::</span>createURL<span style="color:#f92672">)</span>
-                    <span style="color:#f92672">.</span><span style="color:#a6e22e">forEach</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">::</span>save<span style="color:#f92672">);</span>
-        <span style="color:#f92672">}</span>
+<pre><code class="language-java">    public void crawl(List&lt;String&gt; urlsToCrawl) {
+            urlsToCrawl.stream()
+                    .map(this::createURL)
+                    .forEach(this::save);
+        }
     
-        <span style="color:#66d9ef">private</span> URL <span style="color:#a6e22e">createURL</span><span style="color:#f92672">(</span>String urlToCrawl<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-            <span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
-                <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> URL<span style="color:#f92672">(</span>urlToCrawl<span style="color:#f92672">);</span>
-            <span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>MalformedURLException e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-                <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> RuntimeException<span style="color:#f92672">(</span>e<span style="color:#f92672">);</span>
-            <span style="color:#f92672">}</span>
-        <span style="color:#f92672">}</span>
+        private URL createURL(String urlToCrawl) {
+            try {
+                return new URL(urlToCrawl);
+            } catch (MalformedURLException e) {
+                throw new RuntimeException(e);
+            }
+        }
     
-        <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">save</span><span style="color:#f92672">(</span>URL url<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-            <span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
-                String uuid <span style="color:#f92672">=</span> UUID<span style="color:#f92672">.</span><span style="color:#a6e22e">randomUUID</span><span style="color:#f92672">().</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">();</span>
-                InputStream inputStream <span style="color:#f92672">=</span> url<span style="color:#f92672">.</span><span style="color:#a6e22e">openConnection</span><span style="color:#f92672">().</span><span style="color:#a6e22e">getInputStream</span><span style="color:#f92672">();</span>
-                Files<span style="color:#f92672">.</span><span style="color:#a6e22e">copy</span><span style="color:#f92672">(</span>inputStream<span style="color:#f92672">,</span> Paths<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>uuid <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;.txt&#34;</span><span style="color:#f92672">),</span> StandardCopyOption<span style="color:#f92672">.</span><span style="color:#a6e22e">REPLACE_EXISTING</span><span style="color:#f92672">);</span>
-            <span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>IOException e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-                <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> RuntimeException<span style="color:#f92672">(</span>e<span style="color:#f92672">);</span>
-            <span style="color:#f92672">}</span>
-        <span style="color:#f92672">}</span>
-</code></pre></div><p>The solution seems to work, but the amount of boilerplate code didn’t reduce. Let’s work on that now.</p>
+        private void save(URL url) {
+            try {
+                String uuid = UUID.randomUUID().toString();
+                InputStream inputStream = url.openConnection().getInputStream();
+                Files.copy(inputStream, Paths.get(uuid + &quot;.txt&quot;), StandardCopyOption.REPLACE_EXISTING);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }
+</code></pre>
+<p>The solution seems to work, but the amount of boilerplate code didn’t reduce. Let’s work on that now.</p>
 <p>The <code>map()</code> method of stream takes a functional interface. We can write a similar functional interface, which would use a checked exception. Let’s do that.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#a6e22e">@FunctionalInterface</span>
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">ThrowingFunction</span><span style="color:#f92672">&lt;</span>T<span style="color:#f92672">,</span> R<span style="color:#f92672">,</span> E <span style="color:#66d9ef">extends</span> Throwable<span style="color:#f92672">&gt;</span> <span style="color:#f92672">{</span>
-        R <span style="color:#a6e22e">apply</span><span style="color:#f92672">(</span>T t<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> E<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
-</code></pre></div><p>This functional interface has three generic types, including one that extends a <code>Throwable</code>. Since Java 8, an interface can have static methods, let’s write one here.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#a6e22e">@FunctionalInterface</span>
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">ThrowingFunction</span><span style="color:#f92672">&lt;</span>T<span style="color:#f92672">,</span> R<span style="color:#f92672">,</span> E <span style="color:#66d9ef">extends</span> Throwable<span style="color:#f92672">&gt;</span> <span style="color:#f92672">{</span>
-        R <span style="color:#a6e22e">apply</span><span style="color:#f92672">(</span>T t<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> E<span style="color:#f92672">;</span>
+<pre><code class="language-java">    @FunctionalInterface
+    public interface ThrowingFunction&lt;T, R, E extends Throwable&gt; {
+        R apply(T t) throws E;
+    }
+</code></pre>
+<p>This functional interface has three generic types, including one that extends a <code>Throwable</code>. Since Java 8, an interface can have static methods, let’s write one here.</p>
+<pre><code class="language-java">    @FunctionalInterface
+    public interface ThrowingFunction&lt;T, R, E extends Throwable&gt; {
+        R apply(T t) throws E;
     
-        <span style="color:#66d9ef">static</span> <span style="color:#f92672">&lt;</span>T<span style="color:#f92672">,</span> R<span style="color:#f92672">,</span> E <span style="color:#66d9ef">extends</span> Throwable<span style="color:#f92672">&gt;</span> Function<span style="color:#f92672">&lt;</span>T<span style="color:#f92672">,</span> R<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">unchecked</span><span style="color:#f92672">(</span>ThrowingFunction<span style="color:#f92672">&lt;</span>T<span style="color:#f92672">,</span> R<span style="color:#f92672">,</span> E<span style="color:#f92672">&gt;</span> f<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-            <span style="color:#66d9ef">return</span> t <span style="color:#f92672">-&gt;</span> <span style="color:#f92672">{</span>
-                <span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
-                    <span style="color:#66d9ef">return</span> f<span style="color:#f92672">.</span><span style="color:#a6e22e">apply</span><span style="color:#f92672">(</span>t<span style="color:#f92672">);</span>
-                <span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>Throwable e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-                    <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> RuntimeException<span style="color:#f92672">(</span>e<span style="color:#f92672">);</span>
-                <span style="color:#f92672">}</span>
-            <span style="color:#f92672">};</span>
-        <span style="color:#f92672">}</span>
-    <span style="color:#f92672">}</span>
-</code></pre></div><p>The above, unchecked method takes a <code>ThrowingFunction</code> and handles the exception, which, in turn, throws a <code>RuntimeException</code> and returns a <code>Function</code>.</p>
+        static &lt;T, R, E extends Throwable&gt; Function&lt;T, R&gt; unchecked(ThrowingFunction&lt;T, R, E&gt; f) {
+            return t -&gt; {
+                try {
+                    return f.apply(t);
+                } catch (Throwable e) {
+                    throw new RuntimeException(e);
+                }
+            };
+        }
+    }
+</code></pre>
+<p>The above, unchecked method takes a <code>ThrowingFunction</code> and handles the exception, which, in turn, throws a <code>RuntimeException</code> and returns a <code>Function</code>.</p>
 <p>Let’s use in our lambda expression:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">crawl</span><span style="color:#f92672">(</span>List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> urlsToCrawl<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-            urlsToCrawl<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">()</span>
-                    <span style="color:#f92672">.</span><span style="color:#a6e22e">map</span><span style="color:#f92672">(</span>ThrowingFunction<span style="color:#f92672">.</span><span style="color:#a6e22e">unchecked</span><span style="color:#f92672">(</span>urlToCrawl <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">new</span> URL<span style="color:#f92672">(</span>urlToCrawl<span style="color:#f92672">)))</span>
-                    <span style="color:#f92672">.</span><span style="color:#a6e22e">forEach</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">::</span>save<span style="color:#f92672">);</span>
-    <span style="color:#f92672">}</span>
-</code></pre></div><p>In the map method, the <code>ThrowingFunction.unchecked()</code> handles the exception inside it and returns a <code>Function</code> and <code>map</code>method that uses it. This solves no more boilerplate around, and we can easily reuse this new <code>ThrowingFunction</code> functional interface anywhere we want.</p>
+<pre><code class="language-java">    public void crawl(List&lt;String&gt; urlsToCrawl) {
+            urlsToCrawl.stream()
+                    .map(ThrowingFunction.unchecked(urlToCrawl -&gt; new URL(urlToCrawl)))
+                    .forEach(this::save);
+    }
+</code></pre>
+<p>In the map method, the <code>ThrowingFunction.unchecked()</code> handles the exception inside it and returns a <code>Function</code> and <code>map</code>method that uses it. This solves no more boilerplate around, and we can easily reuse this new <code>ThrowingFunction</code> functional interface anywhere we want.</p>
 <p>Now, let’s take care of the <code>forEach</code> method of the stream API. It takes a <code>Consumer</code>. Here, we can also have a new <code>ThrowingConsumer</code> similar to the previous one.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">ThrowingConsumer</span><span style="color:#f92672">&lt;</span>T<span style="color:#f92672">,</span> E <span style="color:#66d9ef">extends</span> Throwable<span style="color:#f92672">&gt;</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">accept</span><span style="color:#f92672">(</span>T t<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> E<span style="color:#f92672">;</span>
+<pre><code class="language-java">    public interface ThrowingConsumer&lt;T, E extends Throwable&gt; {
+        void accept(T t) throws E;
     
-        <span style="color:#66d9ef">static</span> <span style="color:#f92672">&lt;</span>T<span style="color:#f92672">,</span> E <span style="color:#66d9ef">extends</span> Throwable<span style="color:#f92672">&gt;</span> Consumer<span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">unchecked</span><span style="color:#f92672">(</span>ThrowingConsumer<span style="color:#f92672">&lt;</span>T<span style="color:#f92672">,</span> E<span style="color:#f92672">&gt;</span> consumer<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">return</span> <span style="color:#f92672">(</span>t<span style="color:#f92672">)</span> <span style="color:#f92672">-&gt;</span> <span style="color:#f92672">{</span>
-            <span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
-                consumer<span style="color:#f92672">.</span><span style="color:#a6e22e">accept</span><span style="color:#f92672">(</span>t<span style="color:#f92672">);</span>
-            <span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>Throwable e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-                <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> RuntimeException<span style="color:#f92672">(</span>e<span style="color:#f92672">);</span>
-            <span style="color:#f92672">}</span>
-        <span style="color:#f92672">};</span>
-      <span style="color:#f92672">}</span>
-    <span style="color:#f92672">}</span>
-</code></pre></div><p>Let’s use it.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">crawl</span><span style="color:#f92672">(</span>List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> urlsToCrawl<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-            urlsToCrawl<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">()</span>
-                    <span style="color:#f92672">.</span><span style="color:#a6e22e">map</span><span style="color:#f92672">(</span>ThrowingFunction<span style="color:#f92672">.</span><span style="color:#a6e22e">unchecked</span><span style="color:#f92672">(</span>urlToCrawl <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">new</span> URL<span style="color:#f92672">(</span>urlToCrawl<span style="color:#f92672">)))</span>
-                    <span style="color:#f92672">.</span><span style="color:#a6e22e">forEach</span><span style="color:#f92672">(</span>ThrowingConsumer<span style="color:#f92672">.</span><span style="color:#a6e22e">unchecked</span><span style="color:#f92672">(</span>url <span style="color:#f92672">-&gt;</span> save<span style="color:#f92672">(</span>url<span style="color:#f92672">)));</span>
-    <span style="color:#f92672">}</span>
+        static &lt;T, E extends Throwable&gt; Consumer&lt;T&gt; unchecked(ThrowingConsumer&lt;T, E&gt; consumer) {
+        return (t) -&gt; {
+            try {
+                consumer.accept(t);
+            } catch (Throwable e) {
+                throw new RuntimeException(e);
+            }
+        };
+      }
+    }
+</code></pre>
+<p>Let’s use it.</p>
+<pre><code class="language-java">    public void crawl(List&lt;String&gt; urlsToCrawl) {
+            urlsToCrawl.stream()
+                    .map(ThrowingFunction.unchecked(urlToCrawl -&gt; new URL(urlToCrawl)))
+                    .forEach(ThrowingConsumer.unchecked(url -&gt; save(url)));
+    }
     
-    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">save</span><span style="color:#f92672">(</span>URL url<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> IOException <span style="color:#f92672">{</span>
-            String uuid <span style="color:#f92672">=</span> UUID<span style="color:#f92672">.</span><span style="color:#a6e22e">randomUUID</span><span style="color:#f92672">().</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">();</span>
-            InputStream inputStream <span style="color:#f92672">=</span> url<span style="color:#f92672">.</span><span style="color:#a6e22e">openConnection</span><span style="color:#f92672">().</span><span style="color:#a6e22e">getInputStream</span><span style="color:#f92672">();</span>
-            Files<span style="color:#f92672">.</span><span style="color:#a6e22e">copy</span><span style="color:#f92672">(</span>inputStream<span style="color:#f92672">,</span> Paths<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>uuid <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;.txt&#34;</span><span style="color:#f92672">),</span> StandardCopyOption<span style="color:#f92672">.</span><span style="color:#a6e22e">REPLACE_EXISTING</span><span style="color:#f92672">);</span>
-    <span style="color:#f92672">}</span>
-</code></pre></div><p>Now in our code, there is no try-catch block, no boilerplate code. We can <code>use</code> method reference to make it crisper.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">crawl</span><span style="color:#f92672">(</span>List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> urlsToCrawl<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-            urlsToCrawl<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">()</span>
-                    <span style="color:#f92672">.</span><span style="color:#a6e22e">map</span><span style="color:#f92672">(</span>ThrowingFunction<span style="color:#f92672">.</span><span style="color:#a6e22e">unchecked</span><span style="color:#f92672">(</span>URL<span style="color:#f92672">::</span><span style="color:#66d9ef">new</span><span style="color:#f92672">))</span>
-                    <span style="color:#f92672">.</span><span style="color:#a6e22e">forEach</span><span style="color:#f92672">(</span>ThrowingConsumer<span style="color:#f92672">.</span><span style="color:#a6e22e">unchecked</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">::</span>save<span style="color:#f92672">));</span>
-    <span style="color:#f92672">}</span>
-</code></pre></div><p>In conclusion, it’s still debatable whether or not we need a checked exception. However, plenty of software projects have been delivered without checked exceptions till date. Having said that, the decisions that developers made when the language was being created impact our way of writing code today, which we cannot ignore. Java 8 changed our way of writing code. For that, we can just ignore the debate and use the above techniques when we need to deal with checked exceptions in the lambda expression.</p>
+    private void save(URL url) throws IOException {
+            String uuid = UUID.randomUUID().toString();
+            InputStream inputStream = url.openConnection().getInputStream();
+            Files.copy(inputStream, Paths.get(uuid + &quot;.txt&quot;), StandardCopyOption.REPLACE_EXISTING);
+    }
+</code></pre>
+<p>Now in our code, there is no try-catch block, no boilerplate code. We can <code>use</code> method reference to make it crisper.</p>
+<pre><code class="language-java">    public void crawl(List&lt;String&gt; urlsToCrawl) {
+            urlsToCrawl.stream()
+                    .map(ThrowingFunction.unchecked(URL::new))
+                    .forEach(ThrowingConsumer.unchecked(this::save));
+    }
+</code></pre>
+<p>In conclusion, it’s still debatable whether or not we need a checked exception. However, plenty of software projects have been delivered without checked exceptions till date. Having said that, the decisions that developers made when the language was being created impact our way of writing code today, which we cannot ignore. Java 8 changed our way of writing code. For that, we can just ignore the debate and use the above techniques when we need to deal with checked exceptions in the lambda expression.</p>
 <p>Happy coding!</p>
 <p>This article was published at DZone, <a href="https://dzone.com/articles/how-to-handle-checked-exception-in-lambda-expressi">See the original article here.</a></p>
 

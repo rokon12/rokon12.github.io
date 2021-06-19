@@ -31,17 +31,11 @@
 
     
 
+    <script src="/js/prism.js"></script>
+
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/fonts.css" />
-
-    <link rel="stylesheet"
-          href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/styles/default.min.css">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/highlight.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/languages/java.min.js"
-            integrity="sha512-xEnylOTeZvxUCvtK9Lw3FjOgfCwsMEhUbx6Hant1lPgy+PcynqCm8XfqhpRos6XNaTxeMuT4QyrWyo3U1NijHg=="
-            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-
+    <link rel="stylesheet" href="/css/prism.css" />
 
     
 
@@ -61,8 +55,9 @@ if (!doNotTrack) {
 
   </head>
 
-  <body>
-    <nav>
+  <body class="line-numbers">
+
+  <nav>
     <ul class="menu">
       
       <li><a href="/">Home</a></li>
@@ -94,15 +89,18 @@ if (!doNotTrack) {
 
 <main>
     <p>জাভাতে নাল (null) একটি সংরক্ষিত কিওয়ার্ড। আমরা জানি যে, যেকোনো অবজেক্টের একটি রেফারেন্স থাকে। একটি ক্লাস থেকে প্রথমে একটি অবজেক্ট তৈরি করা হয়। সেই অবজেক্টকে আমরা রেফারেন্স দিয়ে অ্যাকসেস করতে পারি। যেমন,</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">Person person1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Person<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Bazlur&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;Rahman&#34;</span><span style="color:#f92672">);</span>
-</code></pre></div><p>এখানে new অপারেটর দিয়ে একটি Person অবজেক্ট তৈরি করা হয়েছে। person1 হচ্ছে সেই অবজেক্টের রেফারেন্স।</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">Person person2<span style="color:#f92672">;</span>
-</code></pre></div><p>এখানে person2 একটি রেফারেন্স। কিন্তু এটি কোনো অবজেক্টকে রেফার করে না। কারণ person2 এর জন্য কোনো অবজেক্ট তৈরি করা হয় নি। এই রকম কোনো রেফারেন্স যদি কোনো অবজেক্টকে রেফারেন্স না করে, তাহলে আমরা বলি এটি একটি নাল রেফারেন্স (Null Reference)। এই রেফারন্সটি কাউকে রেফার করে না।</p>
+<pre><code class="language-java">Person person1 = new Person(&quot;Bazlur&quot;, &quot;Rahman&quot;);
+</code></pre>
+<p>এখানে new অপারেটর দিয়ে একটি Person অবজেক্ট তৈরি করা হয়েছে। person1 হচ্ছে সেই অবজেক্টের রেফারেন্স।</p>
+<pre><code class="language-java">Person person2;
+</code></pre>
+<p>এখানে person2 একটি রেফারেন্স। কিন্তু এটি কোনো অবজেক্টকে রেফার করে না। কারণ person2 এর জন্য কোনো অবজেক্ট তৈরি করা হয় নি। এই রকম কোনো রেফারেন্স যদি কোনো অবজেক্টকে রেফারেন্স না করে, তাহলে আমরা বলি এটি একটি নাল রেফারেন্স (Null Reference)। এই রেফারন্সটি কাউকে রেফার করে না।</p>
 <p>উপরের person2 একটি নাল (null) বা নাল রেফারেন্স (Null Reference)। এই রেফারেন্স দিয়ে কোনো কাজ করার উপায় নেই। কারণ এর মধ্যে আসলে কিছু নেই। যদি এই রেফারেন্স দিয়ে আমরা কোনো কাজ করতে চাই, তাহলে জাভা ভার্চুয়াল মেশিন NullPointerException থ্রো করবে।</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>person2 <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-      System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>person2<span style="color:#f92672">.</span><span style="color:#a6e22e">getFullName</span><span style="color:#f92672">());</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><p>এই এক্সেপশন থেকে বাঁচতে হলে একটি if স্টেটমেন্ট ব্যবহার করে যাচাই করা যেতে পারে যে, রেফারেন্সটি <code>null</code> কিনা।</p>
+<pre><code class="language-java">if (person2 != null) {
+      System.out.println(person2.getFullName());
+}
+</code></pre>
+<p>এই এক্সেপশন থেকে বাঁচতে হলে একটি if স্টেটমেন্ট ব্যবহার করে যাচাই করা যেতে পারে যে, রেফারেন্সটি <code>null</code> কিনা।</p>
 
 </main>
 

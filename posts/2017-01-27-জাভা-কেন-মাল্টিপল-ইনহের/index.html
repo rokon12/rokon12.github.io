@@ -34,17 +34,11 @@
 
     
 
+    <script src="/js/prism.js"></script>
+
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/fonts.css" />
-
-    <link rel="stylesheet"
-          href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/styles/default.min.css">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/highlight.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/languages/java.min.js"
-            integrity="sha512-xEnylOTeZvxUCvtK9Lw3FjOgfCwsMEhUbx6Hant1lPgy+PcynqCm8XfqhpRos6XNaTxeMuT4QyrWyo3U1NijHg=="
-            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-
+    <link rel="stylesheet" href="/css/prism.css" />
 
     
 
@@ -64,8 +58,9 @@ if (!doNotTrack) {
 
   </head>
 
-  <body>
-    <nav>
+  <body class="line-numbers">
+
+  <nav>
     <ul class="menu">
       
       <li><a href="/">Home</a></li>
@@ -107,7 +102,7 @@ if (!doNotTrack) {
 <p>এই কয়কেটা উদ্দেশ্যের সঙ্গে আরেকটি গুরুত্বপূর্ণ জিনিস হলো, এর ফিচার খুব অল্প হতে হবে যাতে একজন প্রোগ্রামার খুব সহজেই মনে রাখতে পারে। যেসব ফিচার খুব ঝামেলাযুক্ত এবং আসলে তেমন প্রয়োজন নেই খুব একটা সেগুলোকে তারা বাদ দিয়ে ডিজাইন করেছে। যেমন, অপারেটর ওভারলোডিং (Operator Overloading), মাল্টিপল ইনহেরিটেন্স (Multiple Inheritence)। এগুলো সুবিধার চেয়ে প্রোগ্রামারদের অসুবিধার কারণ বেশি তৈরি করে।</p>
 <p>মাল্টিপল ইনহেরিটেন্সের ক্ষেত্রে একটি বড় সমস্যা হলো ডায়মন্ড সমস্যা (Diamond Problem)। একটি উদাহরণ দেওয়া যাক,</p>
 <p>মনে করা যাক, একটি ক্লাস A, একে B ও C এক্সটেন্ড করে। আবার আরেকটি ক্লাস D যা কিনা B ও C কে এক্সটেন্ড করে। এখন যদি A এর কোনো একটি মেথডকে B ও C দুটিই ওভাররাইড করে এবং D থেকে সেই মেথডটি কল করা হয়, তাহলে সেটি কোন ক্লাসের মেথডকে কল করবে? B না C? সমস্যাটি নিশ্চই বোঝা যাচ্ছে।</p>
-<p><a href="https://2.bp.blogspot.com/-0ZNEBoJzkMc/WIuOV5pOQmI/AAAAAAAACWE/rGn_TGO4RFAdE4z6pfJixF_a5FU_snhdgCEw/s1600/diamond%2Bproblem%2B.png"><img src="https://2.bp.blogspot.com/-0ZNEBoJzkMc/WIuOV5pOQmI/AAAAAAAACWE/rGn_TGO4RFAdE4z6pfJixF_a5FU_snhdgCEw/s320/diamond%2Bproblem%2B.png" alt="" /></a></p>
+<p><a href="https://2.bp.blogspot.com/-0ZNEBoJzkMc/WIuOV5pOQmI/AAAAAAAACWE/rGn_TGO4RFAdE4z6pfJixF_a5FU_snhdgCEw/s1600/diamond%2Bproblem%2B.png"><img src="https://2.bp.blogspot.com/-0ZNEBoJzkMc/WIuOV5pOQmI/AAAAAAAACWE/rGn_TGO4RFAdE4z6pfJixF_a5FU_snhdgCEw/s320/diamond%2Bproblem%2B.png" alt=""></a></p>
 <p>জাভা ডিজাইনাররা এরকম সমস্যার মধ্য দিয়ে যেতে চায়নি। তাই জাভাতে মাল্টিপল ইনহেরিটেন্স নেই।</p>
 
 </main>

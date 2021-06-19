@@ -31,17 +31,11 @@
 
     
 
+    <script src="/js/prism.js"></script>
+
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/fonts.css" />
-
-    <link rel="stylesheet"
-          href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/styles/default.min.css">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/highlight.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/languages/java.min.js"
-            integrity="sha512-xEnylOTeZvxUCvtK9Lw3FjOgfCwsMEhUbx6Hant1lPgy+PcynqCm8XfqhpRos6XNaTxeMuT4QyrWyo3U1NijHg=="
-            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-
+    <link rel="stylesheet" href="/css/prism.css" />
 
     
 
@@ -61,8 +55,9 @@ if (!doNotTrack) {
 
   </head>
 
-  <body>
-    <nav>
+  <body class="line-numbers">
+
+  <nav>
     <ul class="menu">
       
       <li><a href="/">Home</a></li>
@@ -106,7 +101,7 @@ if (!doNotTrack) {
 <p><strong>Find the high-level logic</strong> — You may not jump into each detail when you start reading a project. Rather, you should focus on the high-level structure. Start from the entry point. Most projects have a main method, start from there. Besides, if this is a web application, start looking into different packages, like where the business logic is housed, where the UI code is kept, where the controllers are, etc. Basically, skim through the whole project and gain a primary idea, and then ask yourself where you want to focus and which part you want to read first. You may not read the entire code base, rather, just a portion of it may interest you. When you find your spot, you can start by method calling and see where it leads you.</p>
 </li>
 <li>
-<p><strong>Use/ know tools</strong>– There are plenty of tools out there for reading and exploring source code that can help to visualize code. For example, IntelliJIdea has the capability to navigate source code, allowing you to search by words, part of a word, or even an abbreviation. You should learn the keyboard shortcuts as well. Navigating source code with the mouse can be pretty boring and slow where working with the keyboard shortcuts can be faster. You can jump from one part of the source code to another quickly.<br />
+<p><strong>Use/ know tools</strong>– There are plenty of tools out there for reading and exploring source code that can help to visualize code. For example, IntelliJIdea has the capability to navigate source code, allowing you to search by words, part of a word, or even an abbreviation. You should learn the keyboard shortcuts as well. Navigating source code with the mouse can be pretty boring and slow where working with the keyboard shortcuts can be faster. You can jump from one part of the source code to another quickly.
 There is another great software to read code, called Sourcegraph, which was created by two Stanford grads, Quinn Slack and Beyang Liu, who, after spending hours hunting through the poorly documented code, decided to build a tool to help them better reading and understanding the code.</p>
 </li>
 <li>
@@ -116,7 +111,7 @@ There is another great software to read code, called Sourcegraph, which was crea
 <p><strong>Read the best practices/ design patterns</strong>– The code you are reading, or a certain construct of it, may seem obscure or you may not be familiar with it, which is natural. There are plenty of good practices and design patterns that people use to do things correctly and optimally. For example, there is a pattern called Singleton where the constructor is kept private. You may ask, why on earth someone want to keep a constructor private, I have always seen it is as public, otherwise, how would I create an instance out of a class. Well, there is a reason behind it. Singleton patterns prevent you from instantiating a class more than once, which has many practical use cases. If you know the pattern, you would not bang your head against the wall for that. So, having the knowledge of certain patterns, for example, Gang of Four has 23 documented design patterns, can help your code reading skill dramatically.</p>
 </li>
 <li>
-<p><strong>Code Review</strong>– Software development is a very collaborative effort. No one can build a large or a significant software alone. Every software is built by a team. In a team, everyone contributes to shaping a project. At the end of the day, everyone’s contributions get merged and become a good piece of work which has a real value to the customers. Besides doing the actual coding, there is another practice that every team these days does, which is, review each other’s code while making observations, suggestions, and learning from one another. This is a powerful tool for building knowledge of a code base, creating strong bonds in a team, and improving code quality that leads to fewer bugs in the system, and happy customers.<br />
+<p><strong>Code Review</strong>– Software development is a very collaborative effort. No one can build a large or a significant software alone. Every software is built by a team. In a team, everyone contributes to shaping a project. At the end of the day, everyone’s contributions get merged and become a good piece of work which has a real value to the customers. Besides doing the actual coding, there is another practice that every team these days does, which is, review each other’s code while making observations, suggestions, and learning from one another. This is a powerful tool for building knowledge of a code base, creating strong bonds in a team, and improving code quality that leads to fewer bugs in the system, and happy customers.
 Doing code reviews, you are forced to read someone else’s code in your team which ends up improving your code reading skills.</p>
 </li>
 <li>

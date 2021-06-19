@@ -33,17 +33,11 @@
 
     
 
+    <script src="/js/prism.js"></script>
+
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/fonts.css" />
-
-    <link rel="stylesheet"
-          href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/styles/default.min.css">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/highlight.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/languages/java.min.js"
-            integrity="sha512-xEnylOTeZvxUCvtK9Lw3FjOgfCwsMEhUbx6Hant1lPgy+PcynqCm8XfqhpRos6XNaTxeMuT4QyrWyo3U1NijHg=="
-            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-
+    <link rel="stylesheet" href="/css/prism.css" />
 
     
 
@@ -63,8 +57,9 @@ if (!doNotTrack) {
 
   </head>
 
-  <body>
-    <nav>
+  <body class="line-numbers">
+
+  <nav>
     <ul class="menu">
       
       <li><a href="/">Home</a></li>
@@ -107,31 +102,37 @@ if (!doNotTrack) {
 <p>২. <strong>অ্যারো সাইন</strong> – অ্যারো ( -&gt; ) সাইন প্যারামিটার লিস্টকে বডি থেকে আলাদা করে। এটি দুটি ক্যারেক্টার (-) ড্যাশ ও (&gt;) রাইট অ্যাঙ্গেল ব্রাকেট সংযুক্ত করে লেখা হয়।</p>
 <p>৩. <strong>বডি</strong> – যেখানে মূল কোড অংশটুকু থাকে।</p>
 <p>কতগুলো উদাহরণ দেখা যাক –</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">(</span>Contact contact1<span style="color:#f92672">,</span> Contact contact2<span style="color:#f92672">)</span> <span style="color:#f92672">-&gt;</span> <span style="color:#f92672">{</span>
-          <span style="color:#66d9ef">return</span> contact1<span style="color:#f92672">.</span><span style="color:#a6e22e">getName</span><span style="color:#f92672">().</span><span style="color:#a6e22e">compareTo</span><span style="color:#f92672">(</span>contact2<span style="color:#f92672">.</span><span style="color:#a6e22e">getName</span><span style="color:#f92672">());</span>
-<span style="color:#f92672">};</span>
+<pre><code class="language-java">(Contact contact1, Contact contact2) -&gt; {
+          return contact1.getName().compareTo(contact2.getName());
+};
 
-</code></pre></div><p>তবে একে সংক্ষিপ্ত করে এক লাইনেও লেখা যায়-</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">(</span>Contact contact1<span style="color:#f92672">,</span> Contact contact2<span style="color:#f92672">)</span> <span style="color:#f92672">-&gt;</span> contact1<span style="color:#f92672">.</span><span style="color:#a6e22e">getName</span><span style="color:#f92672">().</span><span style="color:#a6e22e">compareTo</span><span style="color:#f92672">(</span>contact2<span style="color:#f92672">.</span><span style="color:#a6e22e">getName</span><span style="color:#f92672">());</span>
-<span style="color:#960050;background-color:#1e0010">```</span>
+</code></pre>
+<p>তবে একে সংক্ষিপ্ত করে এক লাইনেও লেখা যায়-</p>
+<pre><code class="language-java">(Contact contact1, Contact contact2) -&gt; contact1.getName().compareTo(contact2.getName());
+```
 
-এক<span style="color:#960050;background-color:#1e0010">ে</span> ভ্য<span style="color:#960050;background-color:#1e0010">া</span>র<span style="color:#960050;background-color:#1e0010">ি</span>য়<span style="color:#960050;background-color:#1e0010">ে</span>বল<span style="color:#960050;background-color:#1e0010">ে</span> অ্য<span style="color:#960050;background-color:#1e0010">া</span>স<span style="color:#960050;background-color:#1e0010">া</span>ইন কর<span style="color:#960050;background-color:#1e0010">া</span> য<span style="color:#960050;background-color:#1e0010">া</span>য়<span style="color:#f92672">-</span>
+একে ভ্যারিয়েবলে অ্যাসাইন করা যায়-
 
-<span style="color:#960050;background-color:#1e0010">````</span>java
-Comparator contactComparator <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>Contact contact1<span style="color:#f92672">,</span> Contact contact2<span style="color:#f92672">)</span> <span style="color:#f92672">-&gt;</span> contact1<span style="color:#f92672">.</span><span style="color:#a6e22e">getName</span><span style="color:#f92672">().</span><span style="color:#a6e22e">compareTo</span><span style="color:#f92672">(</span>contact2<span style="color:#f92672">.</span><span style="color:#a6e22e">getName</span><span style="color:#f92672">());</span>
-</code></pre></div><p>আরও কয়েকটি উদাহরণ-</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">(</span>String s<span style="color:#f92672">)</span> <span style="color:#f92672">-&gt;</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">return</span> s<span style="color:#f92672">.</span><span style="color:#a6e22e">toUpperCase</span><span style="color:#f92672">();</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><p>তবে একে সংক্ষি্প্ত করে লিখলে –</p>
+````java
+Comparator contactComparator = (Contact contact1, Contact contact2) -&gt; contact1.getName().compareTo(contact2.getName());
+</code></pre>
+<p>আরও কয়েকটি উদাহরণ-</p>
+<pre><code class="language-java">(String s) -&gt; {
+        return s.toUpperCase();
+}
+</code></pre>
+<p>তবে একে সংক্ষি্প্ত করে লিখলে –</p>
 <pre><code>(String s) -&gt; s.toUpperCase()
-</code></pre><p>সুতরাং ল্যামডা এক্ষপ্রেশন দু রকম হতে পারে –</p>
+</code></pre>
+<p>সুতরাং ল্যামডা এক্ষপ্রেশন দু রকম হতে পারে –</p>
 <pre><code>_(parameters) → expression_
 
-</code></pre><p>অথবা</p>
+</code></pre>
+<p>অথবা</p>
 <pre><code>_(parameters) → {statements;}_
 
-</code></pre><p>বডিতে একাধিক স্ট্যাটমেন্ট থাকলে কার্লি ব্রেসের প্রয়োজন হয়।</p>
+</code></pre>
+<p>বডিতে একাধিক স্ট্যাটমেন্ট থাকলে কার্লি ব্রেসের প্রয়োজন হয়।</p>
 
 </main>
 

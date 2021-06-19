@@ -13,8 +13,7 @@
       <pubDate>Fri, 11 Jun 2021 13:38:10 -0400</pubDate>
       
       <guid>http://bazlur.com/2021/06/how-to-read-texts-from-a-file-using-java/</guid>
-      <description>Reading texts from a file has never been this easy.
-You have to call Files.readString(), that&amp;rsquo;s it.
+      <description>Reading texts from a file has never been this easy. You have to call Files.readString(), that&amp;rsquo;s it.
 Let&amp;rsquo;s read a text file, remove all the punctuation from it and then count all the unique words.
 for copy/paste pleasure: https://github.com/rokon12/100DaysOfJava/blob/main/src/main/java/com/bazlur/Day005.java</description>
     </item>

@@ -14,7 +14,7 @@
       
       <guid>http://bazlur.com/posts/2017-08-18-arraylist-%E0%A6%93-linkedlist-%E0%A6%AE%E0%A6%A7%E0%A7%8D%E0%A6%AF%E0%A7%87-%E0%A6%AA%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A6%95%E0%A7%8D%E0%A6%AF-%E0%A6%95%E0%A7%80-difference-between-arraylis/</guid>
       <description>ArrayList ও LinkedList ক্লাস দুটি লিস্ট ইন্টারফেসকে ইমপ্লিমেন্ট করে। যার ফলে এদের মেথড ও ফলাফল একইরকম হলেও ইম্প্লিমেন্টেশনের দিক থেকে এদের মধ্যে বেশ কিছু পার্থক্য রয়েছে। পার্থক্যগুলো নিয়ে আলোচনা করার আগে লিস্ট ইন্টারফেসের প্রধান মেথডগুলো দেখা যাক-
-public interface List{ public E get(int index); public void add(E element); public void add(E element, int index); public void remove(int index); } উপরের এই মেথডগুলোর ইমপ্লিমেন্টেশন অ্যারেলিস্ট ও লিংকডলিস্ট দুটো ক্লাসেই রয়েছে। ব্যবহারের দিক থেকে এই মেথডগুলোর কোনো পার্থক্য নেই। উদাহরণ-</description>
+public interface List{ public E get(int index); public void add(E element); public void add(E element, int index); public void remove(int index); }  উপরের এই মেথডগুলোর ইমপ্লিমেন্টেশন অ্যারেলিস্ট ও লিংকডলিস্ট দুটো ক্লাসেই রয়েছে। ব্যবহারের দিক থেকে এই মেথডগুলোর কোনো পার্থক্য নেই। উদাহরণ-</description>
     </item>
     
     <item>
@@ -24,8 +24,7 @@ public interface List{ public E get(int index); public void add(E element); publ
       
       <guid>http://bazlur.com/2011/06/java-collection-framework-list/</guid>
       <description>Java collection framework is very common to every java programmer, again for the beginner, I’m going to share my ideas about it. It’s beneficial to manage objects easily. The Java collection framework is a more likely array, but the difference is that collections can dynamically change their size. Today I’m going to write only about the List.
-List:
-The java.util.List interface is a subtype of the java.util.Collection interface. It represents an order list of objects.</description>
+List: The java.util.List interface is a subtype of the java.util.Collection interface. It represents an order list of objects.</description>
     </item>
     
   </channel>

@@ -34,17 +34,11 @@
 
     
 
+    <script src="/js/prism.js"></script>
+
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/fonts.css" />
-
-    <link rel="stylesheet"
-          href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/styles/default.min.css">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/highlight.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/languages/java.min.js"
-            integrity="sha512-xEnylOTeZvxUCvtK9Lw3FjOgfCwsMEhUbx6Hant1lPgy+PcynqCm8XfqhpRos6XNaTxeMuT4QyrWyo3U1NijHg=="
-            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-
+    <link rel="stylesheet" href="/css/prism.css" />
 
     
 
@@ -64,8 +58,9 @@ if (!doNotTrack) {
 
   </head>
 
-  <body>
-    <nav>
+  <body class="line-numbers">
+
+  <nav>
     <ul class="menu">
       
       <li><a href="/">Home</a></li>
@@ -107,7 +102,7 @@ if (!doNotTrack) {
 <p>২. প্রিপারেশন (Preparation)</p>
 <p>৩. রেজ্যুলুশন (Resolution)</p>
 <p>ভ্যারিফিকেশন প্রক্রিয়া দেখা হয় কোনো ক্লাসের ফরম্যাট ঠিক আছে কিনা, বা এটি রানটাইমে কোনো প্রকার সমস্যা তৈরি করবে কিনা। ভ্যারিফিকেশনে সবকিছু ঠিকঠাক থাকলে ক্লাসটি ব্যবহারের জন্য তৈরি করা হয়। একটি ক্লাসে অন্য ক্লাসের রেফারেন্স থাকতে পারে। এরপরের ধাপে যে ক্লাসগুলো রেফারেন্স করা হয়েছে সেগুলো জাভা রানটাইমের কাছে পরিচিত কিনা তা দেখা হয়।</p>
-<p>**<br />
+<p>**<br>
 **</p>
 <p><strong>ভ্যারিফিকেশন (<strong>Verification</strong>)</strong></p>
 <p>এটি বেশ জটিল একটি প্রক্রিয়া। এটি বেশকতগুলো ধাপে সংগঠিত হয়।</p>
@@ -118,7 +113,7 @@ if (!doNotTrack) {
 <p><strong>রেজ্যুলুশন (Resolution)</strong></p>
 <p>একটি ক্লাসে একাধিক ক্লাসের রেফারেন্স থাকতে পারে। এধাপে সেই রেফারেন্স ক্লাসগুলো জাভা ভার্চুয়াল মেশিনে রয়েছে কিনা তা দেখা হয়। কোনো ক্লাস যদি লোড করা না হয়ে থাকে তাহলে সেই ক্লাসের জন্য ক্লাস লোডিং প্রক্রিয়া পুনারায় শুরু হয়। কেনাে ক্লাসে স্ট্যাটিক ফিল্ড বা স্ট্যাটিক ব্লক থাকলে এধাপে এগুলো ইনিশিয়ালাইজ ও রান হয়।</p>
 <p>এই ধাপ সম্পন্ন হওয়ার পর একটি ক্লাস ব্যবহারের জন্য তৈরি হয়ে যায়।</p>
-<p><a href="http://bazlur.com/wp-content/uploads/2017/06/linking-2Band-2Bloading.png"><img src="http://bazlur.com/wp-content/uploads/2017/06/linking-2Band-2Bloading-300x137.png" alt="" /></a></p>
+<p><a href="http://bazlur.com/wp-content/uploads/2017/06/linking-2Band-2Bloading.png"><img src="http://bazlur.com/wp-content/uploads/2017/06/linking-2Band-2Bloading-300x137.png" alt=""></a></p>
 <p> </p>
 
 </main>

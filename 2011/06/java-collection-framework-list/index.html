@@ -31,17 +31,11 @@
 
     
 
+    <script src="/js/prism.js"></script>
+
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/fonts.css" />
-
-    <link rel="stylesheet"
-          href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/styles/default.min.css">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/highlight.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/languages/java.min.js"
-            integrity="sha512-xEnylOTeZvxUCvtK9Lw3FjOgfCwsMEhUbx6Hant1lPgy+PcynqCm8XfqhpRos6XNaTxeMuT4QyrWyo3U1NijHg=="
-            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-
+    <link rel="stylesheet" href="/css/prism.css" />
 
     
 
@@ -61,8 +55,9 @@ if (!doNotTrack) {
 
   </head>
 
-  <body>
-    <nav>
+  <body class="line-numbers">
+
+  <nav>
     <ul class="menu">
       
       <li><a href="/">Home</a></li>
@@ -94,111 +89,117 @@ if (!doNotTrack) {
 
 <main>
     <p>Java collection framework is very common to every java programmer, again for the beginner, I’m going to share my ideas about it. It’s beneficial to manage objects easily. The Java collection framework is a more likely array, but the difference is that collections can dynamically change their size. Today I’m going to write only about the List.</p>
-<p><strong>List</strong>:<br />
-The java.util.List interface is a subtype of the java.util.Collection interface. It represents an order list of objects. We can access the elements of List in a specific order or by and an integer index. A list allows inserting duplicate elements. Interestingly you can insert a null object even in a list.<br />
-As it is an interface, there, of course, it has implementations. ArrayList, LinkedList, Vector, Stack are the implementation of List. All List types support a basic operation like adding an object, removing objects, accessing objects and iterating through the List.<br />
+<p><strong>List</strong>:
+The java.util.List interface is a subtype of the java.util.Collection interface. It represents an order list of objects. We can access the elements of List in a specific order or by and an integer index. A list allows inserting duplicate elements. Interestingly you can insert a null object even in a list.
+As it is an interface, there, of course, it has implementations. ArrayList, LinkedList, Vector, Stack are the implementation of List. All List types support a basic operation like adding an object, removing objects, accessing objects and iterating through the List.
 There are also List implementation in java.util.concurrent package. Concurrency is the part of parallel programming, immutability, threads, executor frameworks etc. We better discuss this part later.</p>
 <p><strong>How to create a list instance:</strong></p>
 <p>Creating a list instance is too easy.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> org.codexplo.blog.list<span style="color:#f92672">;</span>
+<pre><code class="language-java">package org.codexplo.blog.list;
 
-<span style="color:#f92672">import</span> java.util.ArrayList<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> java.util.LinkedList<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> java.util.List<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> java.util.Stack<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> java.util.Vector<span style="color:#f92672">;</span>
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Stack;
+import java.util.Vector;
 
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ListInstance</span> <span style="color:#f92672">{</span>
-  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-    List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> listA <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;();</span>
-    List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> listB <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> LinkedList<span style="color:#f92672">();</span>
-    List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> listC <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Vector<span style="color:#f92672">&lt;&gt;();</span>
-    List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> listD <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Stack<span style="color:#f92672">&lt;&gt;();</span>
-  <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><p><strong>Adding and accessing Elements</strong><br />
-To add an element, you need to call its add() methods. This method is inherited from java.util.Collection interface.<br />
+public class ListInstance {
+  public static void main(String[] args) {
+    List&lt;String&gt; listA = new ArrayList&lt;&gt;();
+    List&lt;String&gt; listB = new LinkedList();
+    List&lt;String&gt; listC = new Vector&lt;&gt;();
+    List&lt;String&gt; listD = new Stack&lt;&gt;();
+  }
+}
+</code></pre>
+<p><strong>Adding and accessing Elements</strong>
+To add an element, you need to call its add() methods. This method is inherited from java.util.Collection interface.
 There are two overload methods in the List.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>E e<span style="color:#f92672">);</span>
-<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> index<span style="color:#f92672">,</span> E element<span style="color:#f92672">);</span>
-</code></pre></div><p>The first one adds elements to the end of the List and returns true if the List is changed due to the invocation otherwise false. The second one adds an element at the specified position in the List. If any element is already in that position, it shifts the elements concurrently to the next.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> org.codexplo.blog.list<span style="color:#f92672">;</span>
+<pre><code class="language-java">boolean add(E e);
+void add(int index, E element);
+</code></pre>
+<p>The first one adds elements to the end of the List and returns true if the List is changed due to the invocation otherwise false. The second one adds an element at the specified position in the List. If any element is already in that position, it shifts the elements concurrently to the next.</p>
+<pre><code class="language-java">package org.codexplo.blog.list;
 
-<span style="color:#f92672">import</span> java.util.ArrayList<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> java.util.List<span style="color:#f92672">;</span>
+import java.util.ArrayList;
+import java.util.List;
 
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">AddingAndAccessingList</span> <span style="color:#f92672">{</span>
-  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-    List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> list <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;();</span>
+public class AddingAndAccessingList {
+  public static void main(String[] args) {
+    List&lt;String&gt; list = new ArrayList&lt;&gt;();
     
-    list<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;a&#34;</span><span style="color:#f92672">);</span>
-    list<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;b&#34;</span><span style="color:#f92672">);</span>
-    list<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;c&#34;</span><span style="color:#f92672">);</span>
+    list.add(&quot;a&quot;);
+    list.add(&quot;b&quot;);
+    list.add(&quot;c&quot;);
     
-    list<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>0<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;abcd&#34;</span><span style="color:#f92672">);</span>
+    list.add(0, &quot;abcd&quot;);
     
-    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>list<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>0<span style="color:#f92672">));</span>
-    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>list<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>1<span style="color:#f92672">));</span>
-  <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><p>The first three add() calls add a string instance to the end of the List. The last add() call adds the element at the beginning of the List, and the rest of the elements are shifted.<br />
-You can access elements using the get() method. You need to specify the index of the element.<br />
+    System.out.println(list.get(0));
+    System.out.println(list.get(1));
+  }
+}
+</code></pre>
+<p>The first three add() calls add a string instance to the end of the List. The last add() call adds the element at the beginning of the List, and the rest of the elements are shifted.
+You can access elements using the get() method. You need to specify the index of the element.
 Again you can access elements via Iterator.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> org.codexplo.blog.list<span style="color:#f92672">;</span>
+<pre><code class="language-java">package org.codexplo.blog.list;
 
-<span style="color:#f92672">import</span> java.util.ArrayList<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> java.util.Iterator<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> java.util.List<span style="color:#f92672">;</span>
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">AddingAndAccessingList</span> <span style="color:#f92672">{</span>
-  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-    List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> list <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;();</span>
+public class AddingAndAccessingList {
+  public static void main(String[] args) {
+    List&lt;String&gt; list = new ArrayList&lt;&gt;();
     
-    list<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;a&#34;</span><span style="color:#f92672">);</span>
-    list<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;b&#34;</span><span style="color:#f92672">);</span>
-    list<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;c&#34;</span><span style="color:#f92672">);</span>
+    list.add(&quot;a&quot;);
+    list.add(&quot;b&quot;);
+    list.add(&quot;c&quot;);
     
-    list<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>0<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;abcd&#34;</span><span style="color:#f92672">);</span>
+    list.add(0, &quot;abcd&quot;);
     
-    <span style="color:#75715e">// via get() method
-</span><span style="color:#75715e"></span>    String a <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>String<span style="color:#f92672">)</span> list<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>0<span style="color:#f92672">);</span><span style="color:#75715e">// need to type cast as I used generic
-</span><span style="color:#75715e"></span>    <span style="color:#75715e">// type List
-</span><span style="color:#75715e"></span>    String b <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>String<span style="color:#f92672">)</span> list<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>0<span style="color:#f92672">);</span>
+    // via get() method
+    String a = (String) list.get(0);// need to type cast as I used generic
+    // type List
+    String b = (String) list.get(0);
     
-    <span style="color:#75715e">// via iterator
-</span><span style="color:#75715e"></span>    Iterator<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> iterator <span style="color:#f92672">=</span> list<span style="color:#f92672">.</span><span style="color:#a6e22e">iterator</span><span style="color:#f92672">();</span>
-    <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>list<span style="color:#f92672">.</span><span style="color:#a6e22e">iterator</span><span style="color:#f92672">().</span><span style="color:#a6e22e">hasNext</span><span style="color:#f92672">())</span> <span style="color:#f92672">{</span>
-      String string <span style="color:#f92672">=</span> iterator<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">();</span>
-    <span style="color:#f92672">}</span>
-  <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
+    // via iterator
+    Iterator&lt;String&gt; iterator = list.iterator();
+    while (list.iterator().hasNext()) {
+      String string = iterator.next();
+    }
+  }
+}
 
-</code></pre></div><p><strong>Removing Elements</strong></p>
+</code></pre>
+<p><strong>Removing Elements</strong></p>
 <p>You can remove element in two ways.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">remove</span><span style="color:#f92672">(</span>Object o<span style="color:#f92672">);</span>
-E <span style="color:#a6e22e">remove</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> index<span style="color:#f92672">);</span>
-</code></pre></div><p>The first method removes the first occurrence of the specified element from the List. If the List does not contain the element, it is unchanged. More precisely, it removes the element with the lowest index if the element exists. Returns true if the List contains the specified element.<br />
+<pre><code class="language-java">boolean remove(Object o);
+E remove(int index);
+</code></pre>
+<p>The first method removes the first occurrence of the specified element from the List. If the List does not contain the element, it is unchanged. More precisely, it removes the element with the lowest index if the element exists. Returns true if the List contains the specified element.
 The second method removes the element at the specified position in the List. It shifts any subsequent elements to the left concurrently and returns the element removed from the List.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> org.codexplo.blog.list<span style="color:#f92672">;</span>
+<pre><code class="language-java">package org.codexplo.blog.list;
 
-<span style="color:#f92672">import</span> java.util.*<span style="color:#f92672">;</span>
+import java.util.*;
 
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">RemoveListObject</span> <span style="color:#f92672">{</span>
-  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-    List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> list <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;();</span>
+public class RemoveListObject {
+  public static void main(String[] args) {
+    List&lt;String&gt; list = new ArrayList&lt;&gt;();
     
-    list<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;a&#34;</span><span style="color:#f92672">);</span>
-    list<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;b&#34;</span><span style="color:#f92672">);</span>
-    list<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;c&#34;</span><span style="color:#f92672">);</span>
-    list<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;d&#34;</span><span style="color:#f92672">);</span>
+    list.add(&quot;a&quot;);
+    list.add(&quot;b&quot;);
+    list.add(&quot;c&quot;);
+    list.add(&quot;d&quot;);
     
-    list<span style="color:#f92672">.</span><span style="color:#a6e22e">remove</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;a&#34;</span><span style="color:#f92672">);</span>
+    list.remove(&quot;a&quot;);
     
-    list<span style="color:#f92672">.</span><span style="color:#a6e22e">remove</span><span style="color:#f92672">(</span>2<span style="color:#f92672">);</span>
-  <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
+    list.remove(2);
+  }
+}
 
-</code></pre></div><p>These are the essential operation of the List. But there are some more methods available in List interface. Some of them are given shortly.</p>
+</code></pre>
+<p>These are the essential operation of the List. But there are some more methods available in List interface. Some of them are given shortly.</p>
 <pre><code>int size();
 </code></pre>
 <p>This method returns the number of elements in the List. If the List contains more than Integer.MAX_VALUE elements, it returns Integer.MAX_VALUE, meaning if the List contains more than 2147483642, it will return 2147483647 because we know an int can have 2^31-1.</p>
@@ -225,7 +226,7 @@ The second method removes the element at the specified position in the List. It 
 <p>Returns the index of the last occurrence of the specified element in this List, or -1 if this List does not contain the element.</p>
 <pre><code>List subList(int fromIndex, int toIndex);
 </code></pre>
-<p>Returns a view of the portion of this List between the specified fromIndex, inclusive, and toIndex, exclusive.<br />
+<p>Returns a view of the portion of this List between the specified fromIndex, inclusive, and toIndex, exclusive.
 If you want to remove a subset of elements from the List, you can use the following way.</p>
 <pre><code>list.subList(from, to).clear();
 </code></pre>
@@ -240,7 +241,7 @@ If you want to remove a subset of elements from the List, you can use the follow
 </ol>
 <p>If you want your collection to be thread-safe, then Vector or Stack must be used because both have synchronized methods. ArrayList and LinkedList are not thread-safe. Stack is mean fo LIFO (last in, first out) operation. If thread safety is not your concern, you can use ArrayList or LinkedList. From the performance point of view, the ArrayList gives better performance when accessing and iterating objects. In contrast, LinkedList provides better performance when adding and removing objects.</p>
 <p>The initial size for ArrayList and Vector is 10. ArrayList increases its capacity by approximately half whenever its capacity reaches a maximum(10), but the Vector increases its capacity by double whenever its capacity reaches maximum.</p>
-<p>LinkedList gives good performance when adding elements at the end and beginning, but it is worse when adding objects at the middle because it needs to scan the node whenever it needs to add an object.<br />
+<p>LinkedList gives good performance when adding elements at the end and beginning, but it is worse when adding objects at the middle because it needs to scan the node whenever it needs to add an object.
 Iterating collection using all three types of classes, ArrayList, Vector and LinkedList, gives similar performance.</p>
 <p><strong>Key Points:</strong></p>
 <ol>

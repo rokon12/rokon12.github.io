@@ -73,7 +73,7 @@ package com.bazlur.calculator; public class BasicMath { /** * This method adds u
       
       <guid>http://bazlur.com/posts/2017-08-18-arraylist-%E0%A6%93-linkedlist-%E0%A6%AE%E0%A6%A7%E0%A7%8D%E0%A6%AF%E0%A7%87-%E0%A6%AA%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A6%95%E0%A7%8D%E0%A6%AF-%E0%A6%95%E0%A7%80-difference-between-arraylis/</guid>
       <description>ArrayList ও LinkedList ক্লাস দুটি লিস্ট ইন্টারফেসকে ইমপ্লিমেন্ট করে। যার ফলে এদের মেথড ও ফলাফল একইরকম হলেও ইম্প্লিমেন্টেশনের দিক থেকে এদের মধ্যে বেশ কিছু পার্থক্য রয়েছে। পার্থক্যগুলো নিয়ে আলোচনা করার আগে লিস্ট ইন্টারফেসের প্রধান মেথডগুলো দেখা যাক-
-public interface List{ public E get(int index); public void add(E element); public void add(E element, int index); public void remove(int index); } উপরের এই মেথডগুলোর ইমপ্লিমেন্টেশন অ্যারেলিস্ট ও লিংকডলিস্ট দুটো ক্লাসেই রয়েছে। ব্যবহারের দিক থেকে এই মেথডগুলোর কোনো পার্থক্য নেই। উদাহরণ-</description>
+public interface List{ public E get(int index); public void add(E element); public void add(E element, int index); public void remove(int index); }  উপরের এই মেথডগুলোর ইমপ্লিমেন্টেশন অ্যারেলিস্ট ও লিংকডলিস্ট দুটো ক্লাসেই রয়েছে। ব্যবহারের দিক থেকে এই মেথডগুলোর কোনো পার্থক্য নেই। উদাহরণ-</description>
     </item>
     
     <item>
@@ -121,8 +121,8 @@ public interface List{ public E get(int index); public void add(E element); publ
       <description>জাভাতে toString() এর কাজ কী?
 কোনো জাভা অবজেক্টেকে স্ট্রিংয়ে রূপান্তর করতে চাইলে toString() মেথড কল করা হয়। এটি নানা কাজে বিশেষ করে ডিবাগিং কাজে ব্যবহার করা হয়।
 নিচের ক্লাসটি খেয়াল করুন-
-public class Employee { private String name; private int age; public Employee(String name, int age) { this.name = name; this.age = age; } } এবার একটি অবজেক্ট তৈরি করে toString()মেথড কল করা যাক।
-public static void main(String\[\] args) { Employee employee = new Employee(&amp;#34;Rahim&amp;#34;, 27); System.</description>
+public class Employee { private String name; private int age; public Employee(String name, int age) { this.name = name; this.age = age; } }  এবার একটি অবজেক্ট তৈরি করে toString()মেথড কল করা যাক।
+public static void main(String\[\] args) { Employee employee = new Employee(&amp;quot;Rahim&amp;quot;, 27); System.</description>
     </item>
     
     <item>
@@ -300,8 +300,8 @@ Animal animal; 
       
       <guid>http://bazlur.com/posts/2017-02-20-%E0%A6%A8%E0%A6%BE%E0%A6%B2-null-in-jav/</guid>
       <description>জাভাতে নাল (null) একটি সংরক্ষিত কিওয়ার্ড। আমরা জানি যে, যেকোনো অবজেক্টের একটি রেফারেন্স থাকে। একটি ক্লাস থেকে প্রথমে একটি অবজেক্ট তৈরি করা হয়। সেই অবজেক্টকে আমরা রেফারেন্স দিয়ে অ্যাকসেস করতে পারি। যেমন,
-Person person1 = new Person(&amp;#34;Bazlur&amp;#34;, &amp;#34;Rahman&amp;#34;); এখানে new অপারেটর দিয়ে একটি Person অবজেক্ট তৈরি করা হয়েছে। person1 হচ্ছে সেই অবজেক্টের রেফারেন্স।
-Person person2; এখানে person2 একটি রেফারেন্স। কিন্তু এটি কোনো অবজেক্টকে রেফার করে না। কারণ person2 এর জন্য কোনো অবজেক্ট তৈরি করা হয় নি। এই রকম কোনো রেফারেন্স যদি কোনো অবজেক্টকে রেফারেন্স না করে, তাহলে আমরা বলি এটি একটি নাল রেফারেন্স (Null Reference)। এই রেফারন্সটি কাউকে রেফার করে না।</description>
+Person person1 = new Person(&amp;quot;Bazlur&amp;quot;, &amp;quot;Rahman&amp;quot;);  এখানে new অপারেটর দিয়ে একটি Person অবজেক্ট তৈরি করা হয়েছে। person1 হচ্ছে সেই অবজেক্টের রেফারেন্স।
+Person person2;  এখানে person2 একটি রেফারেন্স। কিন্তু এটি কোনো অবজেক্টকে রেফার করে না। কারণ person2 এর জন্য কোনো অবজেক্ট তৈরি করা হয় নি। এই রকম কোনো রেফারেন্স যদি কোনো অবজেক্টকে রেফারেন্স না করে, তাহলে আমরা বলি এটি একটি নাল রেফারেন্স (Null Reference)। এই রেফারন্সটি কাউকে রেফার করে না।</description>
     </item>
     
     <item>
@@ -353,7 +353,7 @@ Person person2; এখানে person2 একটি রেফারেন্স
       <guid>http://bazlur.com/posts/2017-02-12-%E0%A6%8F%E0%A6%A8%E0%A6%BE%E0%A6%AE-enu/</guid>
       <description>জাভাতে এনাম (enum) একটি বিশেষ টাইপ। একটি নির্দিষ্ট সংখ্যক কনস্ট্যান্ট (Constant) তৈরি করতে এটি ব্যবহার করা হয়। যেমন, সপ্তাহের দিনের নাম (days of the week), বছরে মাসের নাম (month in the year), দিক (উত্তর, দক্ষিণ, পূর্ব, পশ্চিম) ইত্যাদি।
 উদাহরণ,
-public enum Day { SATURDAY, SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY } উদাহরণটি Day নামে একটি এনাম তৈরি করা হয়ছে। এতে সাতটি কনস্ট্যান্ট রয়েছে। এনাম তৈরি করতে ক্লাস বা ইন্টারফেসের মতো একটি কিওয়ার্ড enum ব্যবহার করা হয়েছে।</description>
+public enum Day { SATURDAY, SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY }  উদাহরণটি Day নামে একটি এনাম তৈরি করা হয়ছে। এতে সাতটি কনস্ট্যান্ট রয়েছে। এনাম তৈরি করতে ক্লাস বা ইন্টারফেসের মতো একটি কিওয়ার্ড enum ব্যবহার করা হয়েছে।</description>
     </item>
     
     <item>

@@ -31,17 +31,11 @@
 
     
 
+    <script src="/js/prism.js"></script>
+
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/fonts.css" />
-
-    <link rel="stylesheet"
-          href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/styles/default.min.css">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/highlight.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/languages/java.min.js"
-            integrity="sha512-xEnylOTeZvxUCvtK9Lw3FjOgfCwsMEhUbx6Hant1lPgy+PcynqCm8XfqhpRos6XNaTxeMuT4QyrWyo3U1NijHg=="
-            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-
+    <link rel="stylesheet" href="/css/prism.css" />
 
     
 
@@ -61,8 +55,9 @@ if (!doNotTrack) {
 
   </head>
 
-  <body>
-    <nav>
+  <body class="line-numbers">
+
+  <nav>
     <ul class="menu">
       
       <li><a href="/">Home</a></li>
@@ -105,166 +100,174 @@ if (!doNotTrack) {
 <p>ইত্যাদি ..।</p>
 <p>তাহলে দেখা যাচ্ছে এই ইমেইলার অবজেক্টটি টেক্সট এডিটর, একচুয়াল টেক্সট, স্পেলচেকার এবং অ্যাড্রেসবুকের উপর নির্ভর করে। এগুলো ইমেইলার অবজেক্টের ডিপেডেন্সি।</p>
 <p>উদাহরণের সুবিধার্থে এবং মূল বিষয়টি সংক্ষিপ্তভাবে বোঝার জন্য মনে করুন, আপনার দুটি অবজেক্ট রয়েছে, একটি ইমেইলার অবজেক্ট যাতে একটি সেন্ড মেথড রয়েছে। আপনি ইমেইল সেন্ড করার আগে বানানগুলো ঠিক করে নিতে চান, সে জন্য প্রয়োজন SpellFixer অবজেক্ট। যেমন-</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Emailer</span> <span style="color:#f92672">{</span>
-    <span style="color:#66d9ef">private</span> SpellFixer spellFixer<span style="color:#f92672">;</span>
+<pre><code class="language-java">
+public class Emailer {
+    private SpellFixer spellFixer;
 
-    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Emailer</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">spellFixer</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> SpellFixer<span style="color:#f92672">();</span>
-    <span style="color:#f92672">}</span>
+    public Emailer() {
+        this.spellFixer = new SpellFixer();
+    }
 
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">send</span><span style="color:#f92672">(</span>String text<span style="color:#f92672">,</span> String emailAddress<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        String fixedText <span style="color:#f92672">=</span> spellFixer<span style="color:#f92672">.</span><span style="color:#a6e22e">fixSpelling</span><span style="color:#f92672">(</span>text<span style="color:#f92672">);</span>
+    public void send(String text, String emailAddress) {
+        String fixedText = spellFixer.fixSpelling(text);
 
-        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;sending email to: &#34;</span>
-                <span style="color:#f92672">+</span> emailAddress <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; with following text: &#34;</span> <span style="color:#f92672">+</span> fixedText<span style="color:#f92672">);</span>
-    <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
+        System.out.println(&quot;sending email to: &quot;
+                + emailAddress + &quot; with following text: &quot; + fixedText);
+    }
+}
 
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SpellFixer</span> <span style="color:#f92672">{</span>
-    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">fixSpelling</span><span style="color:#f92672">(</span>String text<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#75715e">//business logic
-</span><span style="color:#75715e"></span>        <span style="color:#75715e">//bla bla
-</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">return</span> text<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
+public class SpellFixer {
+    public String fixSpelling(String text) {
+        //business logic
+        //bla bla
+        return text;
+    }
+}
 
-</code></pre></div><p>এখন আপনি ইমেইলার ক্লাসটির অবজেক্ট তৈরি করে ইমেইল সেন্ড করতে পারবেন।</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-Emailer emailer <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Emailer<span style="color:#f92672">();</span>
-emailer<span style="color:#f92672">.</span><span style="color:#a6e22e">send</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;bla bla bla&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;contact@bazlur.com&#34;</span><span style="color:#f92672">);</span>
+</code></pre>
+<p>এখন আপনি ইমেইলার ক্লাসটির অবজেক্ট তৈরি করে ইমেইল সেন্ড করতে পারবেন।</p>
+<pre><code class="language-java">
+Emailer emailer = new Emailer();
+emailer.send(&quot;bla bla bla&quot;, &quot;contact@bazlur.com&quot;);
 
-</code></pre></div><p>ওপরের এই প্রক্রিয়ায় কোনো সমস্যা নেই। এটি একটি সঠিক উপায়।</p>
-<p>তবে আমরা সব সময় যে ইংরেজিতে ইমেল লিখবো, এমনটি হওয়ার কোনো কারণ নেই। কখনো বাংলা বা অন্য কোনো ভাষাতে লিখতে পারি। সেক্ষেত্রে আমাদের এইওপরের সমাধানটি কাজ করবে না। ধরা যাক আমরা বাংলাতে একটি ইমেইল লিখতে চাই এবং এক্ষেত্রে একটি বাংলা স্পেলফিক্সার তৈরি করতে হবে। এক্ষেত্রে –<br />
+</code></pre>
+<p>ওপরের এই প্রক্রিয়ায় কোনো সমস্যা নেই। এটি একটি সঠিক উপায়।</p>
+<p>তবে আমরা সব সময় যে ইংরেজিতে ইমেল লিখবো, এমনটি হওয়ার কোনো কারণ নেই। কখনো বাংলা বা অন্য কোনো ভাষাতে লিখতে পারি। সেক্ষেত্রে আমাদের এইওপরের সমাধানটি কাজ করবে না। ধরা যাক আমরা বাংলাতে একটি ইমেইল লিখতে চাই এবং এক্ষেত্রে একটি বাংলা স্পেলফিক্সার তৈরি করতে হবে। এক্ষেত্রে –
  </p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">BanglaSpellFixer</span> <span style="color:#f92672">{</span>
-    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">fixSpelling</span><span style="color:#f92672">(</span>String text<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#75715e">//bangla spell fixer
-</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">return</span> text<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
+<pre><code class="language-java">
+public class BanglaSpellFixer {
+    public String fixSpelling(String text) {
+        //bangla spell fixer
+        return text;
+    }
+}
 
-</code></pre></div><p>তবে এটি সরাসরি আমাদের ইমেলারে প্লাগ করার কোনো উপায় নেই। যদিও বা আমরা করতে চাই, সেক্ষেত্রে আমাদের নতুন করে আরেকটি ইমেইলার তৈরি করতে হবে –</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">BanglaEmailer</span> <span style="color:#f92672">{</span>
-    <span style="color:#66d9ef">private</span> BanglaSpellFixer spellFixer<span style="color:#f92672">;</span>
+</code></pre>
+<p>তবে এটি সরাসরি আমাদের ইমেলারে প্লাগ করার কোনো উপায় নেই। যদিও বা আমরা করতে চাই, সেক্ষেত্রে আমাদের নতুন করে আরেকটি ইমেইলার তৈরি করতে হবে –</p>
+<pre><code class="language-java">
+public class BanglaEmailer {
+    private BanglaSpellFixer spellFixer;
 
-    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">BanglaEmailer</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">spellFixer</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> BanglaSpellFixer<span style="color:#f92672">();</span>
-    <span style="color:#f92672">}</span>
+    public BanglaEmailer() {
+        this.spellFixer = new BanglaSpellFixer();
+    }
 
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">send</span><span style="color:#f92672">(</span>String text<span style="color:#f92672">,</span> String emailAddress<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        String fixedText <span style="color:#f92672">=</span> spellFixer<span style="color:#f92672">.</span><span style="color:#a6e22e">fixSpelling</span><span style="color:#f92672">(</span>text<span style="color:#f92672">);</span>
+    public void send(String text, String emailAddress) {
+        String fixedText = spellFixer.fixSpelling(text);
 
-        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;sending email to: &#34;</span> <span style="color:#f92672">+</span> emailAddress <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; with following text: &#34;</span> <span style="color:#f92672">+</span> fixedText<span style="color:#f92672">);</span>
-    <span style="color:#f92672">}</span>
+        System.out.println(&quot;sending email to: &quot; + emailAddress + &quot; with following text: &quot; + fixedText);
+    }
 
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        BanglaEmailer banglaEmailer <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> BanglaEmailer<span style="color:#f92672">();</span>
-        banglaEmailer<span style="color:#f92672">.</span><span style="color:#a6e22e">send</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;bla bla bla&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;contact@bazlur.com&#34;</span><span style="color:#f92672">);</span>
-    <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
+    public static void main(String[] args) {
+        BanglaEmailer banglaEmailer = new BanglaEmailer();
+        banglaEmailer.send(&quot;bla bla bla&quot;, &quot;contact@bazlur.com&quot;);
+    }
+}
 
-</code></pre></div><p>যদিও আমাদের ইমেইলার একইরকম, শুধুমাত্র বানান শুদ্ধ করার পক্রিয়া আলাদা হওয়ায় আমাদের দুটি অবজেক্ট তৈরি করতে হচ্ছে। এভাবে যদি আমাদের আরও অন্যান্য ভাষার জন্য লিখতে হয়, তাহলে পক্রিয়াটি আরও কঠিন হয়ে যায়। এছাড়াও এই সমাধানে বেশ কতগুলো সমস্যা রয়েছে –</p>
+</code></pre>
+<p>যদিও আমাদের ইমেইলার একইরকম, শুধুমাত্র বানান শুদ্ধ করার পক্রিয়া আলাদা হওয়ায় আমাদের দুটি অবজেক্ট তৈরি করতে হচ্ছে। এভাবে যদি আমাদের আরও অন্যান্য ভাষার জন্য লিখতে হয়, তাহলে পক্রিয়াটি আরও কঠিন হয়ে যায়। এছাড়াও এই সমাধানে বেশ কতগুলো সমস্যা রয়েছে –</p>
 <p>১. এতে ইমেলারের সাথে স্পেল চেকার খুব টাইটলি কাপলড। এরা আলাদা আলাদাভাবে কাজ করতে পারে না। বাস্তব জগতের প্রত্যেকটি বস্তুই স্বাধীন। সুতরাং বাস্তব জগতের সঙ্গে সাদৃশ্য রইল না।</p>
 <p>২. আলাদা আলাদা স্পেল ফিক্সারের জন্য আলাদা ইমেইলারের প্রয়োজন হচ্ছে,এবং আলাদাভাবে কোড লিখতে হচ্ছে যাতে কোড ডুপ্লিকেশন হচ্ছে।</p>
 <p>৩. আমরা যদি দুটি অবজেক্টকে আলদা আলাদাভাবে টেস্ট করতে চাই, তা সম্ভব হয়ে উঠছে না। এখানে যদিও স্পেল চেকারকে আলাদা করে টেস্ট করা গেলেও, ইমেইলার টেস্ট করতে হলে স্পেল চেকারের অবজেক্ট প্রয়োজন।</p>
 <p>৪. এখানে দুইজন ডেভেলপার বা প্রোগ্রামার আলাদা আলাদাভাবে দুটি ক্লাস নিয়ে কাজ করতে পারবে না।</p>
 <p>এই ওপরের সমস্যাগুলো সমাধান করার উপায় রয়েছে-</p>
 <p>নিচের কোডগুলো খেয়াল করুন-</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">SpellFixer</span> <span style="color:#f92672">{</span>
-    String <span style="color:#a6e22e">fixSpelling</span><span style="color:#f92672">(</span>String text<span style="color:#f92672">);</span>
-<span style="color:#f92672">}</span>
+<pre><code class="language-java">
+public interface SpellFixer {
+    String fixSpelling(String text);
+}
 
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">EnglishSpellChecker</span> <span style="color:#66d9ef">implements</span> SpellFixer<span style="color:#f92672">{</span>
-    <span style="color:#a6e22e">@Override</span>
-    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">fixSpelling</span><span style="color:#f92672">(</span>String text<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#75715e">// business logic for english spell checker
-</span><span style="color:#75715e"></span>
-        <span style="color:#66d9ef">return</span> text<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
+public class EnglishSpellChecker implements SpellFixer{
+    @Override
+    public String fixSpelling(String text) {
+        // business logic for english spell checker
 
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">BanglaSpellFixer</span> <span style="color:#66d9ef">implements</span> SpellFixer <span style="color:#f92672">{</span>
-    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">fixSpelling</span><span style="color:#f92672">(</span>String text<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-<span style="color:#75715e">// business logic for bangla spell fixer
-</span><span style="color:#75715e"></span>
-        <span style="color:#66d9ef">return</span> text<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
+        return text;
+    }
+}
 
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Emailer</span> <span style="color:#f92672">{</span>
+public class BanglaSpellFixer implements SpellFixer {
+    public String fixSpelling(String text) {
+// business logic for bangla spell fixer
 
-    <span style="color:#66d9ef">private</span> SpellFixer spellFixer<span style="color:#f92672">;</span>
+        return text;
+    }
+}
 
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setSpellFixer</span><span style="color:#f92672">(</span>SpellFixer spellFixer<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">spellFixer</span> <span style="color:#f92672">=</span> spellFixer<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
+public class Emailer {
 
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">send</span><span style="color:#f92672">(</span>String text<span style="color:#f92672">,</span> String emailAddress<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        String fixedText <span style="color:#f92672">=</span> spellFixer<span style="color:#f92672">.</span><span style="color:#a6e22e">fixSpelling</span><span style="color:#f92672">(</span>text<span style="color:#f92672">);</span>
+    private SpellFixer spellFixer;
 
-        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;sending email to: &#34;</span> <span style="color:#f92672">+</span> emailAddress <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; with following text: &#34;</span> <span style="color:#f92672">+</span> fixedText<span style="color:#f92672">);</span>
-    <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
+    public void setSpellFixer(SpellFixer spellFixer) {
+        this.spellFixer = spellFixer;
+    }
 
-</code></pre></div><p>এখানে প্রথমে একটি ইন্টারেফস তৈরি করা হয়ছে। তারপর দুটি আলাদা ইমপ্লিমেন্টেশন লেখা হয়েছে।</p>
+    public void send(String text, String emailAddress) {
+        String fixedText = spellFixer.fixSpelling(text);
+
+        System.out.println(&quot;sending email to: &quot; + emailAddress + &quot; with following text: &quot; + fixedText);
+    }
+}
+
+</code></pre>
+<p>এখানে প্রথমে একটি ইন্টারেফস তৈরি করা হয়ছে। তারপর দুটি আলাদা ইমপ্লিমেন্টেশন লেখা হয়েছে।</p>
 <p>পরবর্তীতে ইমেলার ক্লাসটিতে একটি সেটার মেথড দিয়ে স্পেল চেকারটি ইনজেক্ট করা হয়েছে। অর্থাৎ আমরা কোন স্পেল ফিক্সারটি ব্যবহার করবো তা নির্ভর করছে ইমেলার ইনস্ট্যানসিয়েট করার পর।</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">        Emailer emailer <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Emailer<span style="color:#f92672">();</span>
+<pre><code class="language-java">        Emailer emailer = new Emailer();
         
-        SpellFixer spellFixer <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> EnglishSpellChecker<span style="color:#f92672">();</span>
-        emailer<span style="color:#f92672">.</span><span style="color:#a6e22e">setSpellFixer</span><span style="color:#f92672">(</span>spellFixer<span style="color:#f92672">);</span>
-        emailer<span style="color:#f92672">.</span><span style="color:#a6e22e">send</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;bla bla bla&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;contact@bazlur.com&#34;</span><span style="color:#f92672">);</span>
+        SpellFixer spellFixer = new EnglishSpellChecker();
+        emailer.setSpellFixer(spellFixer);
+        emailer.send(&quot;bla bla bla&quot;, &quot;contact@bazlur.com&quot;);
         
-        BanglaSpellFixer banglaSpellFixer <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> BanglaSpellFixer<span style="color:#f92672">();</span>
-        emailer<span style="color:#f92672">.</span><span style="color:#a6e22e">setSpellFixer</span><span style="color:#f92672">(</span>banglaSpellFixer<span style="color:#f92672">);</span>
-        emailer<span style="color:#f92672">.</span><span style="color:#a6e22e">send</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;আমি বাংলার গান গাই&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;contact@bazlur.com&#34;</span><span style="color:#f92672">);</span>
+        BanglaSpellFixer banglaSpellFixer = new BanglaSpellFixer();
+        emailer.setSpellFixer(banglaSpellFixer);
+        emailer.send(&quot;আমি বাংলার গান গাই&quot;, &quot;contact@bazlur.com&quot;);
 
-</code></pre></div><p>এতে করে অনেকগুলো সুবিধা হলো –</p>
-<p> <br />
+</code></pre>
+<p>এতে করে অনেকগুলো সুবিধা হলো –</p>
+<p> 
 ১. স্পেল ফিক্সার একাধিক থাকলেও ইমেইলারে অবজেক্ট একই থাকছে।</p>
 <p>২. এখানে কোনো কোড ডুপ্লিকেশন নেই।</p>
 <p>৩. আমি যখন ইমেইলার টেস্ট করবো তখন যদি কোনো স্পেল চেকার না থাকে,তাহলে একটি মক (Mock) স্পেল চেকার দিয়ে আমার কাজ করে নিতে পারবো। এতে টেস্টিং প্রক্রিয়া অনেক সহজ হয়ে যায়।</p>
 <p>৪. আলদা আলদাভাবে স্পেল চেকার ও ইমেলার তৈরি করা সম্ভব হয়ে যাচ্ছে।</p>
 <p> </p>
 <p>নিচে একটি টেস্টকোড দেওয়া হলো –</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">EmailerTest</span> <span style="color:#f92672">{</span>
-    <span style="color:#a6e22e">@Test</span>
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">testSend</span><span style="color:#f92672">()</span> <span style="color:#66d9ef">throws</span> Exception <span style="color:#f92672">{</span>
-        SpellFixer spellFixer <span style="color:#f92672">=</span> Mockito<span style="color:#f92672">.</span><span style="color:#a6e22e">mock</span><span style="color:#f92672">(</span>SpellFixer<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">);</span>
+<pre><code class="language-java">
+public class EmailerTest {
+    @Test
+    public void testSend() throws Exception {
+        SpellFixer spellFixer = Mockito.mock(SpellFixer.class);
 
-        String text <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;hello world&#34;</span><span style="color:#f92672">;</span>
+        String text = &quot;hello world&quot;;
 
-        when<span style="color:#f92672">(</span>spellFixer<span style="color:#f92672">.</span><span style="color:#a6e22e">fixSpelling</span><span style="color:#f92672">(</span>text<span style="color:#f92672">))</span>
-                <span style="color:#f92672">.</span><span style="color:#a6e22e">thenReturn</span><span style="color:#f92672">(</span>text<span style="color:#f92672">);</span>
+        when(spellFixer.fixSpelling(text))
+                .thenReturn(text);
 
-        Emailer emailer <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Emailer<span style="color:#f92672">();</span>
-        emailer<span style="color:#f92672">.</span><span style="color:#a6e22e">setSpellFixer</span><span style="color:#f92672">(</span>spellFixer<span style="color:#f92672">);</span>
+        Emailer emailer = new Emailer();
+        emailer.setSpellFixer(spellFixer);
 
-        emailer<span style="color:#f92672">.</span><span style="color:#a6e22e">send</span><span style="color:#f92672">(</span>text<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;contact@bazlur.com&#34;</span><span style="color:#f92672">);</span>
-    <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
+        emailer.send(text, &quot;contact@bazlur.com&quot;);
+    }
+}
 
-</code></pre></div><p>এখানে টেস্টিং ফ্রেমওয়ার্ক JUnit ও Mockito ব্যবহার করা হয়েছে। ওপরের টেস্ট কোডটি যদিও কোনো অর্থপূর্ণ টেস্ট করে না, কিন্তু বোঝার জন্য দেওয়া হয়েছে। এখানে SpellFixer ইন্টারফেস ব্যবহার না করে বরং একে মক কর হয়েছে। অর্থাৎ এই পদ্ধতি ব্যবহার করলে যেকোনো ক্লাসকে স্বাধীনভাবে টেস্ট করা যায় এবং টেস্টেবল কোড লেখা যায়।</p>
+</code></pre>
+<p>এখানে টেস্টিং ফ্রেমওয়ার্ক JUnit ও Mockito ব্যবহার করা হয়েছে। ওপরের টেস্ট কোডটি যদিও কোনো অর্থপূর্ণ টেস্ট করে না, কিন্তু বোঝার জন্য দেওয়া হয়েছে। এখানে SpellFixer ইন্টারফেস ব্যবহার না করে বরং একে মক কর হয়েছে। অর্থাৎ এই পদ্ধতি ব্যবহার করলে যেকোনো ক্লাসকে স্বাধীনভাবে টেস্ট করা যায় এবং টেস্টেবল কোড লেখা যায়।</p>
 <p> </p>
 <p>ওপরের কোডটিতে সেটার ব্যবহার করে অবজেক্ট ইনজেক্ট করা হয়েছে। তবে যদি আমরা কোনো বিশেষ কন্টেইনার যেমন- Spring, Google Guice, picoContainer ইত্যাদি ব্যবহার করে প্রক্রিয়াটি আরও সহজ করে ফেলা যায়।</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Emailer</span> <span style="color:#f92672">{</span>
+<pre><code class="language-java">
+public class Emailer {
 
-    <span style="color:#a6e22e">@Autowired</span>
-    <span style="color:#66d9ef">private</span> SpellFixer spellFixer<span style="color:#f92672">;</span>
+    @Autowired
+    private SpellFixer spellFixer;
 
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">send</span><span style="color:#f92672">(</span>String text<span style="color:#f92672">,</span> String emailAddress<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        String fixedText <span style="color:#f92672">=</span> spellFixer<span style="color:#f92672">.</span><span style="color:#a6e22e">fixSpelling</span><span style="color:#f92672">(</span>text<span style="color:#f92672">);</span>
+    public void send(String text, String emailAddress) {
+        String fixedText = spellFixer.fixSpelling(text);
 
-        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;sending email to: &#34;</span> <span style="color:#f92672">+</span> emailAddress <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; with following text: &#34;</span> <span style="color:#f92672">+</span> fixedText<span style="color:#f92672">);</span>
-    <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
+        System.out.println(&quot;sending email to: &quot; + emailAddress + &quot; with following text: &quot; + fixedText);
+    }
+}
 
-</code></pre></div><p>ওপরের কোডটিতে শুধু একটি অ্যানোটেশন ব্যবহার করা হয়েছে। এই ইমেইলার ব্যবহার করতে হলে SpellFixer এর ইমপ্লিমেন্টেশনের কোনো ইনস্ট্যান্স নিউ অপারেটর ব্যবহার করে তৈরি করার প্রয়োজন নেই। এখানে স্প্রিং কন্টেইনারের ইনস্ট্যান্স তৈরি করে ইনজেক্ট করে দেয় যখন প্রয়োজন হয়। এতে করে কোডটি আগের থেকে অনেক সংক্ষিপ্ত হয়।</p>
+</code></pre>
+<p>ওপরের কোডটিতে শুধু একটি অ্যানোটেশন ব্যবহার করা হয়েছে। এই ইমেইলার ব্যবহার করতে হলে SpellFixer এর ইমপ্লিমেন্টেশনের কোনো ইনস্ট্যান্স নিউ অপারেটর ব্যবহার করে তৈরি করার প্রয়োজন নেই। এখানে স্প্রিং কন্টেইনারের ইনস্ট্যান্স তৈরি করে ইনজেক্ট করে দেয় যখন প্রয়োজন হয়। এতে করে কোডটি আগের থেকে অনেক সংক্ষিপ্ত হয়।</p>
 <p> </p>
 <p>এই প্রক্রিয়াকে ইনভার্শন অব কন্ট্রোল(Inversion of Control) বলা হয়। অর্থাৎ এটি ব্যবহার করে অবজেক্ট ইনজেক্ট করার কন্ট্রোলটি আমরা একটি কন্টেইনারক দিয়ে দেওয়া হয়।</p>
 <p> </p>

@@ -20,9 +20,9 @@
     
     
     <meta property="description" content="জাভাতে কোনো ভ্যারিয়েবল ডিক্লেয়ার করতে হলে দুইবার টাইপ লিখতে হয়। যেমন-
-[&amp;hellip;] ArrayList&amp;lt;String&amp;gt; list = new ArrayList&amp;lt;&amp;gt;(); ওপরের এই লাইনে দুইবার ArrayList লিখতে হয়েছে। এটি অনেক সশয় &amp;hellip;">
+ArrayList&amp;lt;String&amp;gt; list = new ArrayList&amp;lt;&amp;gt;();  ওপরের এই লাইনে দুইবার ArrayList লিখতে হয়েছে। এটি অনেক সশয় &amp;hellip;">
     <meta property="og:description" content="জাভাতে কোনো ভ্যারিয়েবল ডিক্লেয়ার করতে হলে দুইবার টাইপ লিখতে হয়। যেমন-
-[&amp;hellip;] ArrayList&amp;lt;String&amp;gt; list = new ArrayList&amp;lt;&amp;gt;(); ওপরের এই লাইনে দুইবার ArrayList লিখতে হয়েছে। এটি অনেক সশয় &amp;hellip;">
+ArrayList&amp;lt;String&amp;gt; list = new ArrayList&amp;lt;&amp;gt;();  ওপরের এই লাইনে দুইবার ArrayList লিখতে হয়েছে। এটি অনেক সশয় &amp;hellip;">
     
     
 
@@ -32,18 +32,12 @@
     
 
     
+
+    <script src="/js/prism.js"></script>
 
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/fonts.css" />
-
-    <link rel="stylesheet"
-          href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/styles/default.min.css">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/highlight.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/languages/java.min.js"
-            integrity="sha512-xEnylOTeZvxUCvtK9Lw3FjOgfCwsMEhUbx6Hant1lPgy+PcynqCm8XfqhpRos6XNaTxeMuT4QyrWyo3U1NijHg=="
-            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-
+    <link rel="stylesheet" href="/css/prism.css" />
 
     
 
@@ -63,8 +57,9 @@ if (!doNotTrack) {
 
   </head>
 
-  <body>
-    <nav>
+  <body class="line-numbers">
+
+  <nav>
     <ul class="menu">
       
       <li><a href="/">Home</a></li>
@@ -97,50 +92,61 @@ if (!doNotTrack) {
 <main>
     <h1 id="জভ-লকল-টইপ-ইনফরনস">জাভা লোকাল টাইপ ইনফারেন্স</h1>
 <p>জাভাতে কোনো ভ্যারিয়েবল ডিক্লেয়ার করতে হলে দুইবার টাইপ লিখতে হয়। যেমন-</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">ArrayList<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> list <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;();</span> 
-</code></pre></div><p>ওপরের এই লাইনে দুইবার ArrayList লিখতে হয়েছে। এটি অনেক সশয় প্রয়োজনাতিরিক্ত ব্যবহার মনে হতে পারে। একপাশে টাইপ ইনফরমেশন থাকলেই আধুনিক কম্পাইলারের তা বুঝে ফেলা উচিৎ। জাভা ১০-এ জাভা কম্পাইলারের এই টাইপ বুঝে ফেলার ফিচারটি সংযুক্ত করা হয়। এর ফলে ভ্যারিয়েবল ডিক্লেয়ার করার সময় বা পাশে var কিওয়ার্ড ব্যবহার করা যায়। উদাহরণ-</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">var list <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;();</span> 
-</code></pre></div><p>ওপরের এই কোডে বা পাশের list যে একটি অ্যারেলিস্টের ভ্যারিয়েবল তা জাভা কম্পাইলার বুঝতে পারে। এভাবে কম্পাইলারের ভ্যারিয়েবলের টাইপ অটোম্যাটিক্যালি বুঝে ফেলার ক্ষমতাকে টাইপ ইনফারেন্স বলে।</p>
+<pre><code class="language-java">ArrayList&lt;String&gt; list = new ArrayList&lt;&gt;(); 
+</code></pre>
+<p>ওপরের এই লাইনে দুইবার ArrayList লিখতে হয়েছে। এটি অনেক সশয় প্রয়োজনাতিরিক্ত ব্যবহার মনে হতে পারে। একপাশে টাইপ ইনফরমেশন থাকলেই আধুনিক কম্পাইলারের তা বুঝে ফেলা উচিৎ। জাভা ১০-এ জাভা কম্পাইলারের এই টাইপ বুঝে ফেলার ফিচারটি সংযুক্ত করা হয়। এর ফলে ভ্যারিয়েবল ডিক্লেয়ার করার সময় বা পাশে var কিওয়ার্ড ব্যবহার করা যায়। উদাহরণ-</p>
+<pre><code class="language-java">var list = new ArrayList&lt;String&gt;(); 
+</code></pre>
+<p>ওপরের এই কোডে বা পাশের list যে একটি অ্যারেলিস্টের ভ্যারিয়েবল তা জাভা কম্পাইলার বুঝতে পারে। এভাবে কম্পাইলারের ভ্যারিয়েবলের টাইপ অটোম্যাটিক্যালি বুঝে ফেলার ক্ষমতাকে টাইপ ইনফারেন্স বলে।</p>
 <p>তবে জাভাতে এই ফিচারটির একটি সীমাবদ্ধতা রয়েছে। এটি শুধুমাত্র লোকাল ভ্যারিয়েবলের ক্ষেত্রে ব্যবহার করা যায়। এটি ফিল্ড বা মেথডের প্যারামিটার হিসেবে ব্যবহার করা যায় না।</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">doSomething</span><span style="color:#f92672">(</span>var x<span style="color:#f92672">){</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><p>ওপরের এই মেথডটি বৈধ নয়।</p>
+<pre><code class="language-java">public void doSomething(var x){
+}
+</code></pre>
+<p>ওপরের এই মেথডটি বৈধ নয়।</p>
 <p>এটি যেহেতু শুধুমাত্র লোকাল ভ্যারিয়েবলের ক্ষেত্রে ব্যবহার করা যায়, তাই এই ফিচারটির নাম লোকাল টাইপ ইনফারেন্স। এটি ব্যবহারের ফলে কোড আরও সুন্দর ও গোছানো দেখায়।  উদাহরণ -</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">var path <span style="color:#f92672">=</span> Paths<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>fileName<span style="color:#f92672">);</span>
-var bytes <span style="color:#f92672">=</span> Files<span style="color:#f92672">.</span><span style="color:#a6e22e">readAllBytes</span><span style="color:#f92672">(</span>path<span style="color:#f92672">);</span>
+<pre><code class="language-java">var path = Paths.get(fileName);
+var bytes = Files.readAllBytes(path);
 
-var list <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;();</span> 
-var stream <span style="color:#f92672">=</span> list<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">();</span>
-</code></pre></div><p>এছাড়া মেথড কল করে ভ্যারিয়েবলে অ্যাসাইন করার সময়ও var ব্যবহার করা যায়।</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#66d9ef">private</span> Map<span style="color:#f92672">&lt;</span>BookGenres<span style="color:#f92672">,</span> Map<span style="color:#f92672">&lt;</span>Rating<span style="color:#f92672">,</span> List<span style="color:#f92672">&lt;</span>Book<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#a6e22e">getBookGenresMap</span><span style="color:#f92672">(</span>List<span style="color:#f92672">&lt;</span>Book<span style="color:#f92672">&gt;</span> books<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+var list = new ArrayList&lt;String&gt;(); 
+var stream = list.stream();
+</code></pre>
+<p>এছাড়া মেথড কল করে ভ্যারিয়েবলে অ্যাসাইন করার সময়ও var ব্যবহার করা যায়।</p>
+<pre><code class="language-java">    private Map&lt;BookGenres, Map&lt;Rating, List&lt;Book&gt;&gt;&gt; getBookGenresMap(List&lt;Book&gt; books) {
 
-        <span style="color:#66d9ef">return</span> books<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">()</span>
-                <span style="color:#f92672">.</span><span style="color:#a6e22e">collect</span><span style="color:#f92672">(</span>groupingBy<span style="color:#f92672">(</span>Book<span style="color:#f92672">::</span>getBookGenres<span style="color:#f92672">,</span>
-                        groupingBy<span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">::</span>getRating<span style="color:#f92672">)));</span>
-    <span style="color:#f92672">}</span>
+        return books.stream()
+                .collect(groupingBy(Book::getBookGenres,
+                        groupingBy(this::getRating)));
+    }
 
-</code></pre></div><p>ওপরের মেথডটি কল করে ভ্যারিয়েবলে অ্যাসাইন করতে হলে নিচের মতো লিখতে হবে-</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">Map<span style="color:#f92672">&lt;</span>BookGenres<span style="color:#f92672">,</span> Map<span style="color:#f92672">&lt;</span>Rating<span style="color:#f92672">,</span> List<span style="color:#f92672">&lt;</span>Book<span style="color:#f92672">&gt;&gt;&gt;</span> groupByRatingAndGenres <span style="color:#f92672">=</span>
- 			getBookGenresMap<span style="color:#f92672">(</span>books<span style="color:#f92672">);</span>
-</code></pre></div><p>ওপরের অ্যাসাইনমেন্টটি বেশ বড়। একে var ব্যবহার করে সংক্ষিপ্ত করা যায়—</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">var groupByRatingAndGenres <span style="color:#f92672">=</span> getBookGenresMap<span style="color:#f92672">(</span>books<span style="color:#f92672">);</span>
+</code></pre>
+<p>ওপরের মেথডটি কল করে ভ্যারিয়েবলে অ্যাসাইন করতে হলে নিচের মতো লিখতে হবে-</p>
+<pre><code class="language-java">Map&lt;BookGenres, Map&lt;Rating, List&lt;Book&gt;&gt;&gt; groupByRatingAndGenres =
+ 			getBookGenresMap(books);
+</code></pre>
+<p>ওপরের অ্যাসাইনমেন্টটি বেশ বড়। একে var ব্যবহার করে সংক্ষিপ্ত করা যায়—</p>
+<pre><code class="language-java">var groupByRatingAndGenres = getBookGenresMap(books);
 
-</code></pre></div><p>এছাড়া ফর লুপ ও এনহ্যান্সড ফর লুপেও var ব্যবহার করা যায়। উদাহরণ-</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">List<span style="color:#f92672">&lt;</span>Book<span style="color:#f92672">&gt;</span> books <span style="color:#f92672">=</span> createBooks<span style="color:#f92672">();</span>
+</code></pre>
+<p>এছাড়া ফর লুপ ও এনহ্যান্সড ফর লুপেও var ব্যবহার করা যায়। উদাহরণ-</p>
+<pre><code class="language-java">List&lt;Book&gt; books = createBooks();
 
-<span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span>var book <span style="color:#f92672">:</span> books<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>            
-<span style="color:#f92672">}</span>
+for (var book : books) {            
+}
 
-<span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span>var i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> books<span style="color:#f92672">.</span><span style="color:#a6e22e">size</span><span style="color:#f92672">();</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>            
-<span style="color:#f92672">}</span>
-</code></pre></div><p>এখানে লক্ষ্যণীয় যে, লোকাল টাইপ ইনফারেন্স ডানপাশের টাইপের ওপর নির্ভর করে বা পাশের ভ্যারিয়েবলের টাইপ নির্ধারণ করে। এ জন্য নিচের এই স্টেটমেন্টটি বৈধ নয়।</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">var name <span style="color:#f92672">;</span>
-</code></pre></div><p>var ব্যবহারের জন্য ভ্যারিয়েবলকে অবশ্যই ইনিশিয়ালাইজ করতে হবে। যেমন-</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">var name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Bazlur&#34;</span><span style="color:#f92672">;</span>
-var num <span style="color:#f92672">=</span> 1<span style="color:#f92672">;</span>
-</code></pre></div><p>একই কারণে ল্যামডা এক্সপ্রেশনকে ভ্যারিয়েবলে অ্যাসাইন করতে var ব্যবহার করা যায় না। কারণ একই ল্যামডা এক্সপ্রেশনের একাধিক টার্গেট টাইপ থাকতে পারে। ল্যামডা এক্সপ্রেশনের ভ্যারিয়েবলে var ব্যবহার করলে কম্পাইলার এর টার্গেট টাইপ নির্ধারণ করতে পারে না।</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">var startsWith <span style="color:#f92672">=</span> value <span style="color:#f92672">-&gt;</span> value<span style="color:#f92672">.</span><span style="color:#a6e22e">startsWith</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;A&#34;</span><span style="color:#f92672">);</span>
-</code></pre></div><p>ওপরের লাইনটি বৈধ নয়।</p>
+for (var i = 0; i &lt; books.size(); i++) {            
+}
+</code></pre>
+<p>এখানে লক্ষ্যণীয় যে, লোকাল টাইপ ইনফারেন্স ডানপাশের টাইপের ওপর নির্ভর করে বা পাশের ভ্যারিয়েবলের টাইপ নির্ধারণ করে। এ জন্য নিচের এই স্টেটমেন্টটি বৈধ নয়।</p>
+<pre><code class="language-java">var name ;
+</code></pre>
+<p>var ব্যবহারের জন্য ভ্যারিয়েবলকে অবশ্যই ইনিশিয়ালাইজ করতে হবে। যেমন-</p>
+<pre><code class="language-java">var name = &quot;Bazlur&quot;;
+var num = 1;
+</code></pre>
+<p>একই কারণে ল্যামডা এক্সপ্রেশনকে ভ্যারিয়েবলে অ্যাসাইন করতে var ব্যবহার করা যায় না। কারণ একই ল্যামডা এক্সপ্রেশনের একাধিক টার্গেট টাইপ থাকতে পারে। ল্যামডা এক্সপ্রেশনের ভ্যারিয়েবলে var ব্যবহার করলে কম্পাইলার এর টার্গেট টাইপ নির্ধারণ করতে পারে না।</p>
+<pre><code class="language-java">var startsWith = value -&gt; value.startsWith(&quot;A&quot;);
+</code></pre>
+<p>ওপরের লাইনটি বৈধ নয়।</p>
 <p>লোকাল টাইপ ইনফারেন্স জাভা কোডকে সংক্ষিপ্ত করলে এ নিয়ে কিছুটা বিতর্কও রয়েছে। অনেকেই এই ফিচারটিকে স্বাগত জানালেও অনেকে মনে করছে যেহেতু var ব্যবহারের  ফলে ভ্যারিয়েবলের বা-পাশে টাইপ ইনফরমেশন থাকছে না তাই এটি কোডের পাঠযোগ্যতা কিছুটা কমিয়ে দিচ্ছে। দুই দলই এখানে সঠিক। ভ্যারিয়েলের দুই পাশেই  টাইপ ইনফরমেশন না রেখে এক পাশে রাখলে কোড সংক্ষিপ্ত হয় ও সুন্দর হয়। এতে কোড আরও বেশি পাঠযোগ্য করা যায়। তবে এর বিপরিত ঘটনাটিও সম্ভব। ভ্যারিয়েবলের সঙ্গে টাইপ ইনফরেশন না থাকার ফলে কোড পড়ার সময় বুঝতে অসুবিধা হতে পারে।</p>
 <p>এই বিষয়ে আরও বিস্তারিত পড়তে হলে, আমার <a href="https://www.rokomari.com/book/179965/advanced-java-programing">অ্যাডভান্স জাভা প্রোগ্রামিং</a> বইটি সংগ্রহ করতে পারেন।</p>
 

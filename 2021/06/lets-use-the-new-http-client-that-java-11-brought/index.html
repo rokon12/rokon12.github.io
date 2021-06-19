@@ -21,10 +21,10 @@
     
     <meta property="description" content="Java 11 brought an inbuilt HTTP client. As a result, we don&amp;rsquo;t need a third-party library anymore to invoke an HTTP request.
 Let&amp;rsquo;s call a chuck Norris api to fetch a random joke.
-[&amp;hellip;] &amp;hellip;">
+package &amp;hellip;">
     <meta property="og:description" content="Java 11 brought an inbuilt HTTP client. As a result, we don&amp;rsquo;t need a third-party library anymore to invoke an HTTP request.
 Let&amp;rsquo;s call a chuck Norris api to fetch a random joke.
-[&amp;hellip;] &amp;hellip;">
+package &amp;hellip;">
     
     
 
@@ -34,18 +34,12 @@ Let&amp;rsquo;s call a chuck Norris api to fetch a random joke.
     
 
     
+
+    <script src="/js/prism.js"></script>
 
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/fonts.css" />
-
-    <link rel="stylesheet"
-          href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/styles/default.min.css">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/highlight.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/languages/java.min.js"
-            integrity="sha512-xEnylOTeZvxUCvtK9Lw3FjOgfCwsMEhUbx6Hant1lPgy+PcynqCm8XfqhpRos6XNaTxeMuT4QyrWyo3U1NijHg=="
-            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-
+    <link rel="stylesheet" href="/css/prism.css" />
 
     
 
@@ -65,8 +59,9 @@ if (!doNotTrack) {
 
   </head>
 
-  <body>
-    <nav>
+  <body class="line-numbers">
+
+  <nav>
     <ul class="menu">
       
       <li><a href="/">Home</a></li>
@@ -97,159 +92,165 @@ if (!doNotTrack) {
 </p>
 
 <main>
-    <p><img src="/img/Day011.png" alt="100DaysOfProgramming_Day011" title="100DaysOfJava" /></p>
+    <p><img src="/img/Day011.png" alt="100DaysOfProgramming_Day011" title="100DaysOfJava"></p>
 <p>Java 11 brought an inbuilt HTTP client. As a result, we don&rsquo;t need a third-party library anymore to invoke an HTTP request.</p>
 <p>Let&rsquo;s call a chuck Norris api to fetch a random joke.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> com.bazlur<span style="color:#f92672">;</span>
+<pre><code class="language-java">package com.bazlur;
 
-<span style="color:#f92672">import</span> java.io.IOException<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> java.net.URI<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> java.net.URISyntaxException<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> java.net.http.HttpClient<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> java.net.http.HttpRequest<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> java.net.http.HttpResponse<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> java.time.Duration<span style="color:#f92672">;</span>
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
+import java.time.Duration;
 
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Day011</span> <span style="color:#f92672">{</span>
-  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">final</span> String CHUCK_NORRIS_RANDOM_JOKES_API <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://api.chucknorris.io/jokes/random&#34;</span><span style="color:#f92672">;</span>
+public class Day011 {
+  public static final String CHUCK_NORRIS_RANDOM_JOKES_API = &quot;https://api.chucknorris.io/jokes/random&quot;;
 
-  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> URISyntaxException<span style="color:#f92672">,</span> IOException<span style="color:#f92672">,</span> InterruptedException <span style="color:#f92672">{</span>
-    var client <span style="color:#f92672">=</span> HttpClient<span style="color:#f92672">.</span><span style="color:#a6e22e">newBuilder</span><span style="color:#f92672">()</span>
-            <span style="color:#f92672">.</span><span style="color:#a6e22e">version</span><span style="color:#f92672">(</span>HttpClient<span style="color:#f92672">.</span><span style="color:#a6e22e">Version</span><span style="color:#f92672">.</span><span style="color:#a6e22e">HTTP_2</span><span style="color:#f92672">)</span>
-            <span style="color:#f92672">.</span><span style="color:#a6e22e">connectTimeout</span><span style="color:#f92672">(</span>Duration<span style="color:#f92672">.</span><span style="color:#a6e22e">ofSeconds</span><span style="color:#f92672">(</span>20<span style="color:#f92672">))</span>
-            <span style="color:#f92672">.</span><span style="color:#a6e22e">build</span><span style="color:#f92672">();</span>
+  public static void main(String[] args) throws URISyntaxException, IOException, InterruptedException {
+    var client = HttpClient.newBuilder()
+            .version(HttpClient.Version.HTTP_2)
+            .connectTimeout(Duration.ofSeconds(20))
+            .build();
 
-    var request <span style="color:#f92672">=</span> HttpRequest<span style="color:#f92672">.</span><span style="color:#a6e22e">newBuilder</span><span style="color:#f92672">()</span>
-            <span style="color:#f92672">.</span><span style="color:#a6e22e">uri</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> URI<span style="color:#f92672">(</span>CHUCK_NORRIS_RANDOM_JOKES_API<span style="color:#f92672">))</span>
-            <span style="color:#f92672">.</span><span style="color:#a6e22e">header</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Accept&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;application/json&#34;</span><span style="color:#f92672">)</span>
-            <span style="color:#f92672">.</span><span style="color:#a6e22e">GET</span><span style="color:#f92672">()</span>
-            <span style="color:#f92672">.</span><span style="color:#a6e22e">build</span><span style="color:#f92672">();</span>
+    var request = HttpRequest.newBuilder()
+            .uri(new URI(CHUCK_NORRIS_RANDOM_JOKES_API))
+            .header(&quot;Accept&quot;, &quot;application/json&quot;)
+            .GET()
+            .build();
 
-    var response <span style="color:#f92672">=</span> client<span style="color:#f92672">.</span><span style="color:#a6e22e">send</span><span style="color:#f92672">(</span>request<span style="color:#f92672">,</span> HttpResponse<span style="color:#f92672">.</span><span style="color:#a6e22e">BodyHandlers</span><span style="color:#f92672">.</span><span style="color:#a6e22e">ofString</span><span style="color:#f92672">());</span>
-    var body <span style="color:#f92672">=</span> response<span style="color:#f92672">.</span><span style="color:#a6e22e">body</span><span style="color:#f92672">();</span>
-    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;body = &#34;</span> <span style="color:#f92672">+</span> body<span style="color:#f92672">);</span>
-  <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><p>We can even fetch it asynchronously; we just have to change  the method <code>send()</code> to <code>sendAsync()</code></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"> var completableFuture <span style="color:#f92672">=</span> client<span style="color:#f92672">.</span><span style="color:#a6e22e">sendAsync</span><span style="color:#f92672">(</span>request<span style="color:#f92672">,</span> HttpResponse<span style="color:#f92672">.</span><span style="color:#a6e22e">BodyHandlers</span><span style="color:#f92672">.</span><span style="color:#a6e22e">ofString</span><span style="color:#f92672">())</span>
-            <span style="color:#f92672">.</span><span style="color:#a6e22e">thenApply</span><span style="color:#f92672">(</span>HttpResponse<span style="color:#f92672">::</span>body<span style="color:#f92672">);</span>
-</code></pre></div><p>It will return a <code>CompletableFuture</code>.</p>
+    var response = client.send(request, HttpResponse.BodyHandlers.ofString());
+    var body = response.body();
+    System.out.println(&quot;body = &quot; + body);
+  }
+}
+</code></pre>
+<p>We can even fetch it asynchronously; we just have to change  the method <code>send()</code> to <code>sendAsync()</code></p>
+<pre><code class="language-java"> var completableFuture = client.sendAsync(request, HttpResponse.BodyHandlers.ofString())
+            .thenApply(HttpResponse::body);
+</code></pre>
+<p>It will return a <code>CompletableFuture</code>.</p>
 <p>We can certainly go further to tie any serializer to serialize the JSON body into an object. However, Jackson is my favourite JSON library that I use in all my projects.</p>
 <p>Let&rsquo;s add its <a href="https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind/2.12.3">dependency</a>:</p>
 <pre><code>implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.12.3'
 </code></pre>
 <p>I will use the sendAsync() method so that I can use the lambda chain. The readValue()  of ObjectMapper&rsquo;s method throws a checked exception that I don&rsquo;t want to put into my lambda expression. It makes code ugly.  Thus I will extend ObjectMapper&rsquo;s behaviour a little to accommodate my need.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">  <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">UncheckedObjectMapper</span> <span style="color:#66d9ef">extends</span> ObjectMapper <span style="color:#f92672">{</span>
-    Joke <span style="color:#a6e22e">readValue</span><span style="color:#f92672">(</span>String content<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-      <span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">readValue</span><span style="color:#f92672">(</span>content<span style="color:#f92672">,</span> <span style="color:#66d9ef">new</span> TypeReference<span style="color:#f92672">&lt;&gt;()</span> <span style="color:#f92672">{</span>
-        <span style="color:#f92672">});</span>
-      <span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>JsonProcessingException e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> CompletionException<span style="color:#f92672">(</span>e<span style="color:#f92672">);</span>
-      <span style="color:#f92672">}</span>
-    <span style="color:#f92672">}</span>
-  <span style="color:#f92672">}</span>
-</code></pre></div><p>I wouldn&rsquo;t recommend this sort of the change in your production code unless you are willing to maintain it. So careful!</p>
+<pre><code class="language-java">  static class UncheckedObjectMapper extends ObjectMapper {
+    Joke readValue(String content) {
+      try {
+        return this.readValue(content, new TypeReference&lt;&gt;() {
+        });
+      } catch (JsonProcessingException e) {
+        throw new CompletionException(e);
+      }
+    }
+  }
+</code></pre>
+<p>I wouldn&rsquo;t recommend this sort of the change in your production code unless you are willing to maintain it. So careful!</p>
 <p>We usually get this JSON response from the api-</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
-  <span style="color:#f92672">&#34;categories&#34;</span>: [],
-  <span style="color:#f92672">&#34;created_at&#34;</span>: <span style="color:#e6db74">&#34;2020-01-05 13:42:28.420821&#34;</span>,
-  <span style="color:#f92672">&#34;icon_url&#34;</span>: <span style="color:#e6db74">&#34;https://assets.chucknorris.host/img/avatar/chuck-norris.png&#34;</span>,
-  <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#e6db74">&#34;Kqck_igkQNCw6Y0ADR2iyA&#34;</span>,
-  <span style="color:#f92672">&#34;updated_at&#34;</span>: <span style="color:#e6db74">&#34;2020-01-05 13:42:28.420821&#34;</span>,
-  <span style="color:#f92672">&#34;url&#34;</span>: <span style="color:#e6db74">&#34;https://api.chucknorris.io/jokes/Kqck_igkQNCw6Y0ADR2iyA&#34;</span>,
-  <span style="color:#f92672">&#34;value&#34;</span>: <span style="color:#e6db74">&#34;The Terminator wears a Chuck Norris tee shirt. .&#34;</span>
+<pre><code class="language-json">{
+  &quot;categories&quot;: [],
+  &quot;created_at&quot;: &quot;2020-01-05 13:42:28.420821&quot;,
+  &quot;icon_url&quot;: &quot;https://assets.chucknorris.host/img/avatar/chuck-norris.png&quot;,
+  &quot;id&quot;: &quot;Kqck_igkQNCw6Y0ADR2iyA&quot;,
+  &quot;updated_at&quot;: &quot;2020-01-05 13:42:28.420821&quot;,
+  &quot;url&quot;: &quot;https://api.chucknorris.io/jokes/Kqck_igkQNCw6Y0ADR2iyA&quot;,
+  &quot;value&quot;: &quot;The Terminator wears a Chuck Norris tee shirt. .&quot;
 }
-</code></pre></div><p>Let&rsquo;s create a POJO for this. I will use <code>record</code> for this.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-  <span style="color:#a6e22e">@JsonIgnoreProperties</span><span style="color:#f92672">(</span>ignoreUnknown <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">)</span>
-  record <span style="color:#a6e22e">Joke</span><span style="color:#f92672">(</span>
-          <span style="color:#a6e22e">@JsonProperty</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;created_at&#34;</span><span style="color:#f92672">)</span>
-          String createdAt<span style="color:#f92672">,</span>
-          <span style="color:#a6e22e">@JsonProperty</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;icon_url&#34;</span><span style="color:#f92672">)</span>
-          String iconUrl<span style="color:#f92672">,</span>
-          <span style="color:#a6e22e">@JsonProperty</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;id&#34;</span><span style="color:#f92672">)</span>
-          String id<span style="color:#f92672">,</span>
-          <span style="color:#a6e22e">@JsonProperty</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;updated_at&#34;</span><span style="color:#f92672">)</span>
-          String updatedAt<span style="color:#f92672">,</span>
-          <span style="color:#a6e22e">@JsonProperty</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;url&#34;</span><span style="color:#f92672">)</span>
-          String url<span style="color:#f92672">,</span>
-          <span style="color:#a6e22e">@JsonProperty</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;value&#34;</span><span style="color:#f92672">)</span>
+</code></pre>
+<p>Let&rsquo;s create a POJO for this. I will use <code>record</code> for this.</p>
+<pre><code class="language-java">
+  @JsonIgnoreProperties(ignoreUnknown = true)
+  record Joke(
+          @JsonProperty(&quot;created_at&quot;)
+          String createdAt,
+          @JsonProperty(&quot;icon_url&quot;)
+          String iconUrl,
+          @JsonProperty(&quot;id&quot;)
+          String id,
+          @JsonProperty(&quot;updated_at&quot;)
+          String updatedAt,
+          @JsonProperty(&quot;url&quot;)
+          String url,
+          @JsonProperty(&quot;value&quot;)
           String value
-  <span style="color:#f92672">)</span> <span style="color:#f92672">{</span> <span style="color:#f92672">}</span>
-</code></pre></div><p>Let&rsquo;s put everything together.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> com.bazlur<span style="color:#f92672">;</span>
+  ) { }
+</code></pre>
+<p>Let&rsquo;s put everything together.</p>
+<pre><code class="language-java">package com.bazlur;
 
-<span style="color:#f92672">import</span> com.fasterxml.jackson.annotation.JsonIgnoreProperties<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> com.fasterxml.jackson.annotation.JsonProperty<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> com.fasterxml.jackson.core.JsonProcessingException<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> com.fasterxml.jackson.core.type.TypeReference<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> com.fasterxml.jackson.databind.DeserializationFeature<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> com.fasterxml.jackson.databind.ObjectMapper<span style="color:#f92672">;</span>
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.DeserializationFeature;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
-<span style="color:#f92672">import</span> java.io.IOException<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> java.net.URI<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> java.net.URISyntaxException<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> java.net.http.HttpClient<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> java.net.http.HttpRequest<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> java.net.http.HttpResponse<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> java.net.http.HttpResponse.BodyHandlers<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> java.util.concurrent.CompletionException<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> java.util.concurrent.ExecutionException<span style="color:#f92672">;</span>
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
+import java.net.http.HttpResponse.BodyHandlers;
+import java.util.concurrent.CompletionException;
+import java.util.concurrent.ExecutionException;
 
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Day011_1</span> <span style="color:#f92672">{</span>
+public class Day011_1 {
 
-  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">final</span> String CHUCKNORRIS_RANDOM_JOKES_API <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://api.chucknorris.io/jokes/random&#34;</span><span style="color:#f92672">;</span>
+  public static final String CHUCKNORRIS_RANDOM_JOKES_API = &quot;https://api.chucknorris.io/jokes/random&quot;;
 
-  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> URISyntaxException<span style="color:#f92672">,</span> IOException<span style="color:#f92672">,</span> InterruptedException<span style="color:#f92672">,</span> ExecutionException <span style="color:#f92672">{</span>
+  public static void main(String[] args) throws URISyntaxException, IOException, InterruptedException, ExecutionException {
 
-    var objectMapper <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> UncheckedObjectMapper<span style="color:#f92672">();</span>
-    objectMapper<span style="color:#f92672">.</span><span style="color:#a6e22e">enable</span><span style="color:#f92672">(</span>DeserializationFeature<span style="color:#f92672">.</span><span style="color:#a6e22e">ACCEPT_EMPTY_ARRAY_AS_NULL_OBJECT</span><span style="color:#f92672">);</span>
+    var objectMapper = new UncheckedObjectMapper();
+    objectMapper.enable(DeserializationFeature.ACCEPT_EMPTY_ARRAY_AS_NULL_OBJECT);
 
-    var httpClient <span style="color:#f92672">=</span> HttpClient<span style="color:#f92672">.</span><span style="color:#a6e22e">newHttpClient</span><span style="color:#f92672">();</span>
-    var request <span style="color:#f92672">=</span> HttpRequest<span style="color:#f92672">.</span><span style="color:#a6e22e">newBuilder</span><span style="color:#f92672">()</span>
-            <span style="color:#f92672">.</span><span style="color:#a6e22e">uri</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> URI<span style="color:#f92672">(</span>CHUCKNORRIS_RANDOM_JOKES_API<span style="color:#f92672">))</span>
-            <span style="color:#f92672">.</span><span style="color:#a6e22e">header</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Accept&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;application/json&#34;</span><span style="color:#f92672">)</span>
-            <span style="color:#f92672">.</span><span style="color:#a6e22e">GET</span><span style="color:#f92672">()</span>
-            <span style="color:#f92672">.</span><span style="color:#a6e22e">build</span><span style="color:#f92672">();</span>
+    var httpClient = HttpClient.newHttpClient();
+    var request = HttpRequest.newBuilder()
+            .uri(new URI(CHUCKNORRIS_RANDOM_JOKES_API))
+            .header(&quot;Accept&quot;, &quot;application/json&quot;)
+            .GET()
+            .build();
 
-    var joke <span style="color:#f92672">=</span> httpClient<span style="color:#f92672">.</span><span style="color:#a6e22e">sendAsync</span><span style="color:#f92672">(</span>request<span style="color:#f92672">,</span> BodyHandlers<span style="color:#f92672">.</span><span style="color:#a6e22e">ofString</span><span style="color:#f92672">())</span>
-            <span style="color:#f92672">.</span><span style="color:#a6e22e">thenApply</span><span style="color:#f92672">(</span>HttpResponse<span style="color:#f92672">::</span>body<span style="color:#f92672">)</span>
-            <span style="color:#f92672">.</span><span style="color:#a6e22e">thenApply</span><span style="color:#f92672">(</span>objectMapper<span style="color:#f92672">::</span>readValue<span style="color:#f92672">)</span>
-            <span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">();</span>
-    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;joke = &#34;</span> <span style="color:#f92672">+</span> joke<span style="color:#f92672">.</span><span style="color:#a6e22e">value</span><span style="color:#f92672">());</span>
-  <span style="color:#f92672">}</span>
+    var joke = httpClient.sendAsync(request, BodyHandlers.ofString())
+            .thenApply(HttpResponse::body)
+            .thenApply(objectMapper::readValue)
+            .get();
+    System.out.println(&quot;joke = &quot; + joke.value());
+  }
 
 
-  <span style="color:#a6e22e">@JsonIgnoreProperties</span><span style="color:#f92672">(</span>ignoreUnknown <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">)</span>
-  record <span style="color:#a6e22e">Joke</span><span style="color:#f92672">(</span>
-          <span style="color:#a6e22e">@JsonProperty</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;created_at&#34;</span><span style="color:#f92672">)</span>
-          String createdAt<span style="color:#f92672">,</span>
-          <span style="color:#a6e22e">@JsonProperty</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;icon_url&#34;</span><span style="color:#f92672">)</span>
-          String iconUrl<span style="color:#f92672">,</span>
-          <span style="color:#a6e22e">@JsonProperty</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;id&#34;</span><span style="color:#f92672">)</span>
-          String id<span style="color:#f92672">,</span>
-          <span style="color:#a6e22e">@JsonProperty</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;updated_at&#34;</span><span style="color:#f92672">)</span>
-          String updatedAt<span style="color:#f92672">,</span>
-          <span style="color:#a6e22e">@JsonProperty</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;url&#34;</span><span style="color:#f92672">)</span>
-          String url<span style="color:#f92672">,</span>
-          <span style="color:#a6e22e">@JsonProperty</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;value&#34;</span><span style="color:#f92672">)</span>
+  @JsonIgnoreProperties(ignoreUnknown = true)
+  record Joke(
+          @JsonProperty(&quot;created_at&quot;)
+          String createdAt,
+          @JsonProperty(&quot;icon_url&quot;)
+          String iconUrl,
+          @JsonProperty(&quot;id&quot;)
+          String id,
+          @JsonProperty(&quot;updated_at&quot;)
+          String updatedAt,
+          @JsonProperty(&quot;url&quot;)
+          String url,
+          @JsonProperty(&quot;value&quot;)
           String value
-  <span style="color:#f92672">)</span> <span style="color:#f92672">{</span> <span style="color:#f92672">}</span>
+  ) { }
 
-  <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">UncheckedObjectMapper</span> <span style="color:#66d9ef">extends</span> ObjectMapper <span style="color:#f92672">{</span>
-    Joke <span style="color:#a6e22e">readValue</span><span style="color:#f92672">(</span>String content<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-      <span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">readValue</span><span style="color:#f92672">(</span>content<span style="color:#f92672">,</span> <span style="color:#66d9ef">new</span> TypeReference<span style="color:#f92672">&lt;&gt;()</span> <span style="color:#f92672">{</span>
-        <span style="color:#f92672">});</span>
-      <span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>JsonProcessingException e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> CompletionException<span style="color:#f92672">(</span>e<span style="color:#f92672">);</span>
-      <span style="color:#f92672">}</span>
-    <span style="color:#f92672">}</span>
-  <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
+  static class UncheckedObjectMapper extends ObjectMapper {
+    Joke readValue(String content) {
+      try {
+        return this.readValue(content, new TypeReference&lt;&gt;() {
+        });
+      } catch (JsonProcessingException e) {
+        throw new CompletionException(e);
+      }
+    }
+  }
+}
 
-</code></pre></div><p>for <strong>copy/paste</strong> pleasure: <a href="https://github.com/rokon12/100DaysOfJava/blob/main/src/main/java/com/bazlur/Day011.java">https://github.com/rokon12/100DaysOfJava/blob/main/src/main/java/com/bazlur/Day011.java</a></p>
+</code></pre>
+<p>for <strong>copy/paste</strong> pleasure: <a href="https://github.com/rokon12/100DaysOfJava/blob/main/src/main/java/com/bazlur/Day011.java">https://github.com/rokon12/100DaysOfJava/blob/main/src/main/java/com/bazlur/Day011.java</a></p>
 
 </main>
 

@@ -26,7 +26,7 @@ It doesn&amp;rsquo;t take much time to calculate the number, but writing on file
       
       <guid>http://bazlur.com/2021/06/lets-create-coffee-with-a-decorator-pattern-with-the-help-of-lambda-expression/</guid>
       <description>java.util.function.Function&amp;lt;T, R&amp;gt; is a functional interface. It takes a type T and returns type R. We mostly use it to transform a type into a different one. But it doesn&amp;rsquo;t end there. We can use this into a lambda expression to change a value as well. For example-
-Function&amp;lt;Integer, Integer&amp;gt; doubleIt = a -&amp;gt; a * 2; Over here, we are receiving and in integer but returning after doubling it. Thus, we can pass this function as an argument of a method as well.</description>
+Function&amp;lt;Integer, Integer&amp;gt; doubleIt = a -&amp;gt; a * 2;  Over here, we are receiving and in integer but returning after doubling it.</description>
     </item>
     
     <item>
@@ -37,7 +37,7 @@ Function&amp;lt;Integer, Integer&amp;gt; doubleIt = a -&amp;gt; a * 2; Over here
       <guid>http://bazlur.com/2021/06/lets-use-the-new-http-client-that-java-11-brought/</guid>
       <description>Java 11 brought an inbuilt HTTP client. As a result, we don&amp;rsquo;t need a third-party library anymore to invoke an HTTP request.
 Let&amp;rsquo;s call a chuck Norris api to fetch a random joke.
-package com.bazlur; import java.io.IOException; import java.net.URI; import java.net.URISyntaxException; import java.net.http.HttpClient; import java.net.http.HttpRequest; import java.net.http.HttpResponse; import java.time.Duration; public class Day011 { public static final String CHUCK_NORRIS_RANDOM_JOKES_API = &amp;#34;https://api.chucknorris.io/jokes/random&amp;#34;; public static void main(String[] args) throws URISyntaxException, IOException, InterruptedException { var client = HttpClient.</description>
+package com.bazlur; import java.io.IOException; import java.net.URI; import java.net.URISyntaxException; import java.net.http.HttpClient; import java.net.http.HttpRequest; import java.net.http.HttpResponse; import java.time.Duration; public class Day011 { public static final String CHUCK_NORRIS_RANDOM_JOKES_API = &amp;quot;https://api.chucknorris.io/jokes/random&amp;quot;; public static void main(String[] args) throws URISyntaxException, IOException, InterruptedException { var client = HttpClient.</description>
     </item>
     
     <item>
@@ -47,8 +47,7 @@ package com.bazlur; import java.io.IOException; import java.net.URI; import java
       
       <guid>http://bazlur.com/2021/06/how-to-calculate-date-and-time-involving-time-zone-doesnt-have-to-be-hard./</guid>
       <description>Calculating time with a zone was never this easy. Using the date-time API, you can calculate with timezone pretty much effortlessly.
-Let&amp;rsquo;s assume we have a flight from Toronto (YYZ) to Dubai (DXB) today. The flight takes off at 21:45. The total duration of the flight is 12 hours and 45 minutes.
-What would be the local time when the plane lands?
+Let&amp;rsquo;s assume we have a flight from Toronto (YYZ) to Dubai (DXB) today. The flight takes off at 21:45. The total duration of the flight is 12 hours and 45 minutes. What would be the local time when the plane lands?
 The following code will allow you to calculate that easily-</description>
     </item>
     
@@ -68,8 +67,7 @@ We have been dealing with such a violation all the time. We invoke a method with
       <pubDate>Mon, 14 Jun 2021 00:04:10 -0400</pubDate>
       
       <guid>http://bazlur.com/2021/06/how-to-stop-a-java-program-gracefully/</guid>
-      <description>Sometimes you may want to stop your java program using SIGINT hitting your CTRL+C. For example, your program may be doing something important, e.g., opening a server socket and waiting on a port or doing some background work on a thread pool. You want to stop it gracefully shutting down your socket or the thread pool.
-For such scenarios, what you can do is, add a shutdown hook to the java runtime.</description>
+      <description>Sometimes you may want to stop your java program using SIGINT hitting your CTRL+C. For example, your program may be doing something important, e.g., opening a server socket and waiting on a port or doing some background work on a thread pool. You want to stop it gracefully shutting down your socket or the thread pool. For such scenarios, what you can do is, add a shutdown hook to the java runtime.</description>
     </item>
     
     <item>
@@ -78,8 +76,7 @@ For such scenarios, what you can do is, add a shutdown hook to the java runtime.
       <pubDate>Sun, 13 Jun 2021 04:38:10 -0400</pubDate>
       
       <guid>http://bazlur.com/2021/06/how-to-run-a-task-periodically-in-java/</guid>
-      <description>Sometimes you want to run a particular task at a fixed rate periodically. The job could be anything, e.g. you may want to call a rest API to check for an update, or perhaps pull information from a database, do some processing, and then send an email.
-Or maybe you want to keep your eyes on the stock exchange. The following code snippet will allow you to do that sort of task precisely.</description>
+      <description>Sometimes you want to run a particular task at a fixed rate periodically. The job could be anything, e.g. you may want to call a rest API to check for an update, or perhaps pull information from a database, do some processing, and then send an email. Or maybe you want to keep your eyes on the stock exchange. The following code snippet will allow you to do that sort of task precisely.</description>
     </item>
     
     <item>
@@ -99,8 +96,7 @@ for copy/paste pleasure: https://github.com/rokon12/100DaysOfJava/blob/main/src/
       <pubDate>Fri, 11 Jun 2021 13:38:10 -0400</pubDate>
       
       <guid>http://bazlur.com/2021/06/how-to-read-texts-from-a-file-using-java/</guid>
-      <description>Reading texts from a file has never been this easy.
-You have to call Files.readString(), that&amp;rsquo;s it.
+      <description>Reading texts from a file has never been this easy. You have to call Files.readString(), that&amp;rsquo;s it.
 Let&amp;rsquo;s read a text file, remove all the punctuation from it and then count all the unique words.
 for copy/paste pleasure: https://github.com/rokon12/100DaysOfJava/blob/main/src/main/java/com/bazlur/Day005.java</description>
     </item>
@@ -161,7 +157,7 @@ We all know, Strings are the most used object in any Java application.</descript
       
       <guid>http://bazlur.com/2020/10/java-local-type-inference/</guid>
       <description>জাভা লোকাল টাইপ ইনফারেন্স জাভাতে কোনো ভ্যারিয়েবল ডিক্লেয়ার করতে হলে দুইবার টাইপ লিখতে হয়। যেমন-
-ArrayList&amp;lt;String&amp;gt; list = new ArrayList&amp;lt;&amp;gt;(); ওপরের এই লাইনে দুইবার ArrayList লিখতে হয়েছে। এটি অনেক সশয় প্রয়োজনাতিরিক্ত ব্যবহার মনে হতে পারে। একপাশে টাইপ ইনফরমেশন থাকলেই আধুনিক কম্পাইলারের তা বুঝে ফেলা উচিৎ। জাভা ১০-এ জাভা কম্পাইলারের এই টাইপ বুঝে ফেলার ফিচারটি সংযুক্ত করা হয়। এর ফলে ভ্যারিয়েবল ডিক্লেয়ার করার সময় বা পাশে var কিওয়ার্ড ব্যবহার করা যায়। উদাহরণ-</description>
+ArrayList&amp;lt;String&amp;gt; list = new ArrayList&amp;lt;&amp;gt;();  ওপরের এই লাইনে দুইবার ArrayList লিখতে হয়েছে। এটি অনেক সশয় প্রয়োজনাতিরিক্ত ব্যবহার মনে হতে পারে। একপাশে টাইপ ইনফরমেশন থাকলেই আধুনিক কম্পাইলারের তা বুঝে ফেলা উচিৎ। জাভা ১০-এ জাভা কম্পাইলারের এই টাইপ বুঝে ফেলার ফিচারটি সংযুক্ত করা হয়। এর ফলে ভ্যারিয়েবল ডিক্লেয়ার করার সময় বা পাশে var কিওয়ার্ড ব্যবহার করা যায়। উদাহরণ-</description>
     </item>
     
     <item>
@@ -341,7 +337,7 @@ package com.bazlur.calculator; public class BasicMath { /** * This method adds u
       
       <guid>http://bazlur.com/posts/2017-08-18-arraylist-%E0%A6%93-linkedlist-%E0%A6%AE%E0%A6%A7%E0%A7%8D%E0%A6%AF%E0%A7%87-%E0%A6%AA%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A6%95%E0%A7%8D%E0%A6%AF-%E0%A6%95%E0%A7%80-difference-between-arraylis/</guid>
       <description>ArrayList ও LinkedList ক্লাস দুটি লিস্ট ইন্টারফেসকে ইমপ্লিমেন্ট করে। যার ফলে এদের মেথড ও ফলাফল একইরকম হলেও ইম্প্লিমেন্টেশনের দিক থেকে এদের মধ্যে বেশ কিছু পার্থক্য রয়েছে। পার্থক্যগুলো নিয়ে আলোচনা করার আগে লিস্ট ইন্টারফেসের প্রধান মেথডগুলো দেখা যাক-
-public interface List{ public E get(int index); public void add(E element); public void add(E element, int index); public void remove(int index); } উপরের এই মেথডগুলোর ইমপ্লিমেন্টেশন অ্যারেলিস্ট ও লিংকডলিস্ট দুটো ক্লাসেই রয়েছে। ব্যবহারের দিক থেকে এই মেথডগুলোর কোনো পার্থক্য নেই। উদাহরণ-</description>
+public interface List{ public E get(int index); public void add(E element); public void add(E element, int index); public void remove(int index); }  উপরের এই মেথডগুলোর ইমপ্লিমেন্টেশন অ্যারেলিস্ট ও লিংকডলিস্ট দুটো ক্লাসেই রয়েছে। ব্যবহারের দিক থেকে এই মেথডগুলোর কোনো পার্থক্য নেই। উদাহরণ-</description>
     </item>
     
     <item>
@@ -367,8 +363,8 @@ public interface List{ public E get(int index); public void add(E element); publ
       <description>জাভাতে toString() এর কাজ কী?
 কোনো জাভা অবজেক্টেকে স্ট্রিংয়ে রূপান্তর করতে চাইলে toString() মেথড কল করা হয়। এটি নানা কাজে বিশেষ করে ডিবাগিং কাজে ব্যবহার করা হয়।
 নিচের ক্লাসটি খেয়াল করুন-
-public class Employee { private String name; private int age; public Employee(String name, int age) { this.name = name; this.age = age; } } এবার একটি অবজেক্ট তৈরি করে toString()মেথড কল করা যাক।
-public static void main(String\[\] args) { Employee employee = new Employee(&amp;#34;Rahim&amp;#34;, 27); System.</description>
+public class Employee { private String name; private int age; public Employee(String name, int age) { this.name = name; this.age = age; } }  এবার একটি অবজেক্ট তৈরি করে toString()মেথড কল করা যাক।
+public static void main(String\[\] args) { Employee employee = new Employee(&amp;quot;Rahim&amp;quot;, 27); System.</description>
     </item>
     
     <item>
@@ -678,8 +674,7 @@ For those who doesn’t know what is JUG, let me brief a little. Java User Group
       
       <guid>http://bazlur.com/2011/06/java-collection-framework-list/</guid>
       <description>Java collection framework is very common to every java programmer, again for the beginner, I’m going to share my ideas about it. It’s beneficial to manage objects easily. The Java collection framework is a more likely array, but the difference is that collections can dynamically change their size. Today I’m going to write only about the List.
-List:
-The java.util.List interface is a subtype of the java.util.Collection interface. It represents an order list of objects.</description>
+List: The java.util.List interface is a subtype of the java.util.Collection interface. It represents an order list of objects.</description>
     </item>
     
   </channel>

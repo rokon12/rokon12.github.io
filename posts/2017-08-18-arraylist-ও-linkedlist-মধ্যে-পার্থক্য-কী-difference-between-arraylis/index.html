@@ -31,17 +31,11 @@
 
     
 
+    <script src="/js/prism.js"></script>
+
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/fonts.css" />
-
-    <link rel="stylesheet"
-          href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/styles/default.min.css">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/highlight.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/languages/java.min.js"
-            integrity="sha512-xEnylOTeZvxUCvtK9Lw3FjOgfCwsMEhUbx6Hant1lPgy+PcynqCm8XfqhpRos6XNaTxeMuT4QyrWyo3U1NijHg=="
-            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-
+    <link rel="stylesheet" href="/css/prism.css" />
 
     
 
@@ -61,8 +55,9 @@ if (!doNotTrack) {
 
   </head>
 
-  <body>
-    <nav>
+  <body class="line-numbers">
+
+  <nav>
     <ul class="menu">
       
       <li><a href="/">Home</a></li>
@@ -94,84 +89,86 @@ if (!doNotTrack) {
 
 <main>
     <p><a href="https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html">ArrayList</a> ও <a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedList.html">LinkedList</a> ক্লাস দুটি লিস্ট ইন্টারফেসকে ইমপ্লিমেন্ট করে। যার ফলে এদের মেথড ও ফলাফল একইরকম হলেও ইম্প্লিমেন্টেশনের দিক থেকে এদের মধ্যে বেশ কিছু পার্থক্য রয়েছে। পার্থক্যগুলো নিয়ে আলোচনা করার আগে লিস্ট ইন্টারফেসের প্রধান মেথডগুলো দেখা যাক-</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">List</span><span style="color:#f92672">{</span>
-      <span style="color:#66d9ef">public</span> E <span style="color:#a6e22e">get</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> index<span style="color:#f92672">);</span>
-      <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>E element<span style="color:#f92672">);</span>
-      <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>E element<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> index<span style="color:#f92672">);</span>
-      <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">remove</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> index<span style="color:#f92672">);</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><p>উপরের এই মেথডগুলোর ইমপ্লিমেন্টেশন অ্যারেলিস্ট ও লিংকডলিস্ট দুটো ক্লাসেই রয়েছে। ব্যবহারের দিক থেকে এই মেথডগুলোর কোনো পার্থক্য নেই। উদাহরণ-</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> java.util.ArrayList<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> java.util.LinkedList<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> java.util.List<span style="color:#f92672">;</span>
+<pre><code class="language-java">public interface List{
+      public E get(int index);
+      public void add(E element);
+      public void add(E element, int index);
+      public void remove(int index);
+}
+</code></pre>
+<p>উপরের এই মেথডগুলোর ইমপ্লিমেন্টেশন অ্যারেলিস্ট ও লিংকডলিস্ট দুটো ক্লাসেই রয়েছে। ব্যবহারের দিক থেকে এই মেথডগুলোর কোনো পার্থক্য নেই। উদাহরণ-</p>
+<pre><code class="language-java">import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
 
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TemplateService</span> <span style="color:#f92672">{</span>
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-<span style="color:#75715e">//using LinkedList
-</span><span style="color:#75715e"></span>        List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> countries <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;();</span>
-<span style="color:#75715e">//adding elements to the ArrayList
-</span><span style="color:#75715e"></span>        countries<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Bangladesh&#34;</span><span style="color:#f92672">);</span>
-        countries<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;India&#34;</span><span style="color:#f92672">);</span>
-        countries<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Bhutan&#34;</span><span style="color:#f92672">);</span>
-        countries<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Pakistan&#34;</span><span style="color:#f92672">);</span>
+public class TemplateService {
+    public static void main(String[] args) {
+//using LinkedList
+        List&lt;String&gt; countries = new ArrayList&lt;&gt;();
+//adding elements to the ArrayList
+        countries.add(&quot;Bangladesh&quot;);
+        countries.add(&quot;India&quot;);
+        countries.add(&quot;Bhutan&quot;);
+        countries.add(&quot;Pakistan&quot;);
 
-<span style="color:#75715e">// searching element by index
-</span><span style="color:#75715e"></span>        String bangladesh <span style="color:#f92672">=</span> countries<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>0<span style="color:#f92672">);</span>
+// searching element by index
+        String bangladesh = countries.get(0);
 
-<span style="color:#75715e">//adding element by index
-</span><span style="color:#75715e"></span>        countries<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>2<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;Indonesia&#34;</span><span style="color:#f92672">);</span>
+//adding element by index
+        countries.add(2, &quot;Indonesia&quot;);
 
-<span style="color:#75715e">//removing element
-</span><span style="color:#75715e"></span>        countries<span style="color:#f92672">.</span><span style="color:#a6e22e">remove</span><span style="color:#f92672">(</span>4<span style="color:#f92672">);</span>
+//removing element
+        countries.remove(4);
 
-<span style="color:#75715e">//using LinkedList
-</span><span style="color:#75715e"></span>        List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> cities <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> LinkedList<span style="color:#f92672">&lt;&gt;();</span>
-<span style="color:#75715e">//adding elements to the LinkedList
-</span><span style="color:#75715e"></span>        cities<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Dhaka&#34;</span><span style="color:#f92672">);</span>
-        cities<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;London&#34;</span><span style="color:#f92672">);</span>
-        cities<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Beijing&#34;</span><span style="color:#f92672">);</span>
+//using LinkedList
+        List&lt;String&gt; cities = new LinkedList&lt;&gt;();
+//adding elements to the LinkedList
+        cities.add(&quot;Dhaka&quot;);
+        cities.add(&quot;London&quot;);
+        cities.add(&quot;Beijing&quot;);
 
-<span style="color:#75715e">// searching element by index
-</span><span style="color:#75715e"></span>        String dhaka <span style="color:#f92672">=</span> cities<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>0<span style="color:#f92672">);</span>
+// searching element by index
+        String dhaka = cities.get(0);
 
-<span style="color:#75715e">//adding element by index
-</span><span style="color:#75715e"></span>        cities<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>3<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;Islamabad&#34;</span><span style="color:#f92672">);</span>
+//adding element by index
+        cities.add(3, &quot;Islamabad&quot;);
 
-<span style="color:#75715e">//removing element
-</span><span style="color:#75715e"></span>        cities<span style="color:#f92672">.</span><span style="color:#a6e22e">remove</span><span style="color:#f92672">(</span>3<span style="color:#f92672">);</span>
-    <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
+//removing element
+        cities.remove(3);
+    }
+}
 
-</code></pre></div><p>ইমপ্লিমেন্টেশনের দিক থেকে ArrayList উপাদানগুলো রাখার জন্য একটি অ্যারে ব্যবহার করে এবং অ্যারের সাইজ প্রয়োজন অনুযায়ী বড় করতে পারে। অন্যদিকে LinkedList ডাবলি-লিকংডলিস্ট ডেটা স্ট্রাকচার ব্যবহার করে ইমপ্লিমেন্ট করা হয়ছে।</p>
+</code></pre>
+<p>ইমপ্লিমেন্টেশনের দিক থেকে ArrayList উপাদানগুলো রাখার জন্য একটি অ্যারে ব্যবহার করে এবং অ্যারের সাইজ প্রয়োজন অনুযায়ী বড় করতে পারে। অন্যদিকে LinkedList ডাবলি-লিকংডলিস্ট ডেটা স্ট্রাকচার ব্যবহার করে ইমপ্লিমেন্ট করা হয়ছে।</p>
 <p>এবার উপরের মেথডগুলোর টাইম কমপ্লেক্সিটি দেখা যাক –</p>
 <table>
 <thead>
 <tr>
-<th align="right">মেথডের নাম</th>
-<th align="right"><strong>অ্যারেলিস্ট</strong></th>
-<th align="right"><strong>লিংকডলিস্ট</strong></th>
+<th style="text-align:right">মেথডের নাম</th>
+<th style="text-align:right"><strong>অ্যারেলিস্ট</strong></th>
+<th style="text-align:right"><strong>লিংকডলিস্ট</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="right">E get(int index)</td>
-<td align="right"><em>O(1)</em></td>
-<td align="right"><em>O</em>(n)</td>
+<td style="text-align:right">E get(int index)</td>
+<td style="text-align:right"><em>O(1)</em></td>
+<td style="text-align:right"><em>O</em>(n)</td>
 </tr>
 <tr>
-<td align="right">void add(E element)</td>
-<td align="right"><em>O(1)</em> amortized</td>
-<td align="right"><em>O(1)</em></td>
+<td style="text-align:right">void add(E element)</td>
+<td style="text-align:right"><em>O(1)</em> amortized</td>
+<td style="text-align:right"><em>O(1)</em></td>
 </tr>
 <tr>
-<td align="right">void add(E element, int index)</td>
-<td align="right"><em>O(n)</em></td>
-<td align="right"><em>O</em>(1)</td>
+<td style="text-align:right">void add(E element, int index)</td>
+<td style="text-align:right"><em>O(n)</em></td>
+<td style="text-align:right"><em>O</em>(1)</td>
 </tr>
 <tr>
-<td align="right">void remove(int index)</td>
-<td align="right"><em>O(n)</em></td>
-<td align="right"><em>O</em>(1)</td>
+<td style="text-align:right">void remove(int index)</td>
+<td style="text-align:right"><em>O(n)</em></td>
+<td style="text-align:right"><em>O</em>(1)</td>
 </tr>
 </tbody>
 </table>

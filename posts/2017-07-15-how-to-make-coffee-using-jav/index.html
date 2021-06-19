@@ -40,17 +40,11 @@
 
     
 
+    <script src="/js/prism.js"></script>
+
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/fonts.css" />
-
-    <link rel="stylesheet"
-          href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/styles/default.min.css">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/highlight.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/languages/java.min.js"
-            integrity="sha512-xEnylOTeZvxUCvtK9Lw3FjOgfCwsMEhUbx6Hant1lPgy+PcynqCm8XfqhpRos6XNaTxeMuT4QyrWyo3U1NijHg=="
-            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-
+    <link rel="stylesheet" href="/css/prism.css" />
 
     
 
@@ -70,8 +64,9 @@ if (!doNotTrack) {
 
   </head>
 
-  <body>
-    <nav>
+  <body class="line-numbers">
+
+  <nav>
     <ul class="menu">
       
       <li><a href="/">Home</a></li>
@@ -102,90 +97,96 @@ if (!doNotTrack) {
 </p>
 
 <main>
-    <p><a href="http://bazlur.com/wp-content/uploads/2017/07/generate-2B-25284-2529.png"><img src="http://bazlur.com/wp-content/uploads/2017/07/generate-2B-25284-2529-214x300.png" alt="" /></a></p>
+    <p><a href="http://bazlur.com/wp-content/uploads/2017/07/generate-2B-25284-2529.png"><img src="http://bazlur.com/wp-content/uploads/2017/07/generate-2B-25284-2529-214x300.png" alt=""></a></p>
 <p>বলা হয়ে থাকে, প্রোগ্রামার হলো একটি মেশিন যা কফিকে কোডে রূপান্তর করতে পারে। এ থেকেই বোঝা যাচ্ছে কফি অত্যন্ত গুরুত্বপূর্ণ একটি পানীয়।</p>
 <p>চলুন তাহলে দেখা যাক কীভাবে এই কফি তৈরি করা যায়?</p>
 <p>জাভা দিয়ে কফি তৈরির জন্য প্রয়োজন একটি প্যাটার্ন। এর নাম ডেকোরেটর প্যাটার্ন।</p>
 <p>ডেকোরেটর প্যাটার্নের মূল কথা হলো, ডাইনামিক্যালী একটি অবজেক্টে অতিরিক্ত বৈশিষ্ট্যাবলী যুক্ত করা। যেমন- একটি ছবির ফ্রেম। ছবিটি আমাদের মূল অবজেক্ট। এতে একটি ফ্রেম যুক্ত করে একে ডেকোরেট বা অলঙ্কৃত করা। ডেকোরেটার প্যাটার্নে শুরুতে একটি ইন্টারফেস তৈরি করা হয়। এতে একটি মেথড থাকে যা একটি বৈশিষ্ট্য যুক্ত করতে পারে। একটি কনক্রিট ক্লাস থাকে যা ইন্টারফেসটির ইমপ্লিমেন্টেশন। একটি ডেকোরেটর ক্লাস থাকে যাতে ইন্টারফেসটির একটি রেফারেন্স থাকে এবং এটিও ইন্টারফেসটিকে ইমপ্লিমেন্ট করে। এটি সাধরণত একটি অ্যাবস্ট্রাক্ট ক্লাস হয়। এরপর কতগুলো কনক্রিট অ্যাবস্ট্রাক্ট ক্লাস থাকে। একটি উদাহরণ দেওয়া যাক-</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">Coffee</span> <span style="color:#f92672">{</span>
-    String <span style="color:#a6e22e">getIngredient</span><span style="color:#f92672">();</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><p>এর একটি কনক্রিট ক্লাস –</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CoffeeBean</span> <span style="color:#66d9ef">implements</span> Coffee <span style="color:#f92672">{</span>
-    <span style="color:#a6e22e">@Override</span>
-    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getIngredient</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Coffee bean&#34;</span><span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><p>এবার একটি ডেকোরেটর ক্লাস লেখা যাক –</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">abstract</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CoffeeDecorator</span> <span style="color:#66d9ef">implements</span> Coffee <span style="color:#f92672">{</span>
-     <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">final</span> Coffee coffee<span style="color:#f92672">;</span>
+<pre><code class="language-java">public interface Coffee {
+    String getIngredient();
+}
+</code></pre>
+<p>এর একটি কনক্রিট ক্লাস –</p>
+<pre><code class="language-java">public class CoffeeBean implements Coffee {
+    @Override
+    public String getIngredient() {
+        return &quot;Coffee bean&quot;;
+    }
+}
+</code></pre>
+<p>এবার একটি ডেকোরেটর ক্লাস লেখা যাক –</p>
+<pre><code class="language-java">public abstract class CoffeeDecorator implements Coffee {
+     private final Coffee coffee;
 
-     <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">CoffeeDecorator</span><span style="color:#f92672">(</span>Coffee coffee<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-            <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">coffee</span> <span style="color:#f92672">=</span> coffee<span style="color:#f92672">;</span>
-     <span style="color:#f92672">}</span>
+     public CoffeeDecorator(Coffee coffee) {
+            this.coffee = coffee;
+     }
  
-     <span style="color:#a6e22e">@Override</span>
-     <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">addIngredient</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+     @Override
+     public String addIngredient() {
 
-            <span style="color:#66d9ef">return</span> coffee<span style="color:#f92672">.</span><span style="color:#a6e22e">getIngredient</span><span style="color:#f92672">();</span>
-      <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><p>এবার কিছু কনক্রিট ডেকোরেটর লেখা যাক-</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SaltedCaramelFudge</span> <span style="color:#66d9ef">extends</span> CoffeeDecorator <span style="color:#f92672">{</span>
-    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">SaltedCaramelFudge</span><span style="color:#f92672">(</span>Coffee coffee<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">super</span><span style="color:#f92672">(</span>coffee<span style="color:#f92672">);</span>
-    <span style="color:#f92672">}</span>
+            return coffee.getIngredient();
+      }
+}
+</code></pre>
+<p>এবার কিছু কনক্রিট ডেকোরেটর লেখা যাক-</p>
+<pre><code class="language-java">public class SaltedCaramelFudge extends CoffeeDecorator {
+    public SaltedCaramelFudge(Coffee coffee) {
+        super(coffee);
+    }
 
-    <span style="color:#a6e22e">@Override</span>
-    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getIngredient</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">super</span><span style="color:#f92672">.</span><span style="color:#a6e22e">getIngredient</span><span style="color:#f92672">()</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; + Salted caramel fudge&#34;</span><span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
+    @Override
+    public String getIngredient() {
+        return super.getIngredient() + &quot; + Salted caramel fudge&quot;;
+    }
+}
 
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SweetenedMilk</span> <span style="color:#66d9ef">extends</span> CoffeeDecorator <span style="color:#f92672">{</span>
-    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">SweetenedMilk</span><span style="color:#f92672">(</span>Coffee coffee<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">super</span><span style="color:#f92672">(</span>coffee<span style="color:#f92672">);</span>
-    <span style="color:#f92672">}</span>
+public class SweetenedMilk extends CoffeeDecorator {
+    public SweetenedMilk(Coffee coffee) {
+        super(coffee);
+    }
 
-    <span style="color:#a6e22e">@Override</span>
-    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getIngredient</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">super</span><span style="color:#f92672">.</span><span style="color:#a6e22e">getIngredient</span><span style="color:#f92672">()</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; + Sweetened Milk&#34;</span><span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
+    @Override
+    public String getIngredient() {
+        return super.getIngredient() + &quot; + Sweetened Milk&quot;;
+    }
+}
 
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">VanillaAlmondExtract</span> <span style="color:#66d9ef">extends</span> CoffeeDecorator <span style="color:#f92672">{</span>
-    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">VanillaAlmondExtract</span><span style="color:#f92672">(</span>Coffee coffee<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">super</span><span style="color:#f92672">(</span>coffee<span style="color:#f92672">);</span>
-    <span style="color:#f92672">}</span>
+public class VanillaAlmondExtract extends CoffeeDecorator {
+    public VanillaAlmondExtract(Coffee coffee) {
+        super(coffee);
+    }
 
-    <span style="color:#a6e22e">@Override</span>
-    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getIngredient</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">super</span><span style="color:#f92672">.</span><span style="color:#a6e22e">getIngredient</span><span style="color:#f92672">()</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; + Vanilla/almond extract&#34;</span><span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
+    @Override
+    public String getIngredient() {
+        return super.getIngredient() + &quot; + Vanilla/almond extract&quot;;
+    }
+}
 
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DarkCookieCrumb</span> <span style="color:#66d9ef">extends</span> CoffeeDecorator <span style="color:#f92672">{</span>
-    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">DarkCookieCrumb</span><span style="color:#f92672">(</span>Coffee coffee<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">super</span><span style="color:#f92672">(</span>coffee<span style="color:#f92672">);</span>
-    <span style="color:#f92672">}</span>
+public class DarkCookieCrumb extends CoffeeDecorator {
+    public DarkCookieCrumb(Coffee coffee) {
+        super(coffee);
+    }
 
-    <span style="color:#a6e22e">@Override</span>
-    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getIngredient</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">super</span><span style="color:#f92672">.</span><span style="color:#a6e22e">getIngredient</span><span style="color:#f92672">()</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; + Dark Cookie Crumb&#34;</span><span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
+    @Override
+    public String getIngredient() {
+        return super.getIngredient() + &quot; + Dark Cookie Crumb&quot;;
+    }
+}
 
-</code></pre></div><p>এবার এগুলো দিয়ে কফি তৈরি করা যাক –</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CoffeeApp</span> <span style="color:#f92672">{</span>
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#960050;background-color:#1e0010">\</span><span style="color:#f92672">[</span><span style="color:#960050;background-color:#1e0010">\</span><span style="color:#f92672">]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</code></pre>
+<p>এবার এগুলো দিয়ে কফি তৈরি করা যাক –</p>
+<pre><code class="language-java">public class CoffeeApp {
+    public static void main(String\[\] args) {
 
-        Coffee coffee <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> VanillaAlmondExtract<span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> SaltedCaramelFudge<span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> SweetenedMilk<span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> CoffeeBean<span style="color:#f92672">())));</span>
-        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>coffee<span style="color:#f92672">.</span><span style="color:#a6e22e">getIngredient</span><span style="color:#f92672">());</span>
-    <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><pre><code>Coffee bean + Sweetened Milk + Salted caramel fudge + Vanilla/almond extract
-</code></pre><p>একটির কনস্ট্রাক্টরে আরেকটি পাস করে করে এভাবে আমরা ডেকোরেটর প্যাটার্ন ব্যবহার করে ডাইনামিক্যালী কফি তৈরি করতে পারি।</p>
+        Coffee coffee = new VanillaAlmondExtract(new SaltedCaramelFudge(new SweetenedMilk(new CoffeeBean())));
+        System.out.println(coffee.getIngredient());
+    }
+}
+</code></pre>
+<pre><code>Coffee bean + Sweetened Milk + Salted caramel fudge + Vanilla/almond extract
+</code></pre>
+<p>একটির কনস্ট্রাক্টরে আরেকটি পাস করে করে এভাবে আমরা ডেকোরেটর প্যাটার্ন ব্যবহার করে ডাইনামিক্যালী কফি তৈরি করতে পারি।</p>
 
 </main>
 

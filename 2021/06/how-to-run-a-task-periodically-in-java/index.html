@@ -31,17 +31,11 @@
 
     
 
+    <script src="/js/prism.js"></script>
+
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/fonts.css" />
-
-    <link rel="stylesheet"
-          href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/styles/default.min.css">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/highlight.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/languages/java.min.js"
-            integrity="sha512-xEnylOTeZvxUCvtK9Lw3FjOgfCwsMEhUbx6Hant1lPgy+PcynqCm8XfqhpRos6XNaTxeMuT4QyrWyo3U1NijHg=="
-            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-
+    <link rel="stylesheet" href="/css/prism.css" />
 
     
 
@@ -61,8 +55,9 @@ if (!doNotTrack) {
 
   </head>
 
-  <body>
-    <nav>
+  <body class="line-numbers">
+
+  <nav>
     <ul class="menu">
       
       <li><a href="/">Home</a></li>
@@ -93,9 +88,9 @@ if (!doNotTrack) {
 </p>
 
 <main>
-    <p>Sometimes you want to run a particular task at a fixed rate periodically. The job could be anything, e.g. you may want to call a rest API to check for an update, or perhaps pull information from a database, do some processing, and then send an email.<br />
+    <p>Sometimes you want to run a particular task at a fixed rate periodically. The job could be anything, e.g. you may want to call a rest API to check for an update, or perhaps pull information from a database, do some processing, and then send an email.
 Or maybe you want to keep your eyes on the stock exchange. The following code snippet will allow you to do that sort of task precisely.</p>
-<p><img src="/img/Day007.png" alt="100DaysOfProgramming_Day004" title="100DaysOfJava" /></p>
+<p><img src="/img/Day007.png" alt="100DaysOfProgramming_Day004" title="100DaysOfJava"></p>
 <p>In this code, we are reading stock exchange quote from google to see the bitcoin price in CAD every 5 minutes.</p>
 <p>for <strong>copy/paste</strong> pleasure: <a href="https://github.com/rokon12/100DaysOfJava/blob/main/src/main/java/com/bazlur/Day007.java">https://github.com/rokon12/100DaysOfJava/blob/main/src/main/java/com/bazlur/Day007.java</a></p>
 

@@ -14,8 +14,7 @@
       
       <guid>http://bazlur.com/2021/06/how-to-calculate-date-and-time-involving-time-zone-doesnt-have-to-be-hard./</guid>
       <description>Calculating time with a zone was never this easy. Using the date-time API, you can calculate with timezone pretty much effortlessly.
-Let&amp;rsquo;s assume we have a flight from Toronto (YYZ) to Dubai (DXB) today. The flight takes off at 21:45. The total duration of the flight is 12 hours and 45 minutes.
-What would be the local time when the plane lands?
+Let&amp;rsquo;s assume we have a flight from Toronto (YYZ) to Dubai (DXB) today. The flight takes off at 21:45. The total duration of the flight is 12 hours and 45 minutes. What would be the local time when the plane lands?
 The following code will allow you to calculate that easily-</description>
     </item>
     

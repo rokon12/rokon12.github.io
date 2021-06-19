@@ -31,17 +31,11 @@
 
     
 
+    <script src="/js/prism.js"></script>
+
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/fonts.css" />
-
-    <link rel="stylesheet"
-          href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/styles/default.min.css">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/highlight.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/languages/java.min.js"
-            integrity="sha512-xEnylOTeZvxUCvtK9Lw3FjOgfCwsMEhUbx6Hant1lPgy+PcynqCm8XfqhpRos6XNaTxeMuT4QyrWyo3U1NijHg=="
-            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-
+    <link rel="stylesheet" href="/css/prism.css" />
 
     
 
@@ -61,8 +55,9 @@ if (!doNotTrack) {
 
   </head>
 
-  <body>
-    <nav>
+  <body class="line-numbers">
+
+  <nav>
     <ul class="menu">
       
       <li><a href="/">Home</a></li>
@@ -98,8 +93,9 @@ if (!doNotTrack) {
 <p>উপরের মেথডটিতে close() মেথডটি finally ব্লকের মধ্যে কল করা হয়েছে। এর কারণ প্রোগ্রামটির কাজ শেষ হলেই আমরা রিসোর্স ক্লোজ করতে পারি। এই কোড ব্লক দেখেই মনে হচ্ছে কাজটুকু খুবই বিরক্তিকর। একটি ছোট কাজের জন্য অনেক কোড লিখতে হচ্ছে। এই বিরক্তি দূর করতে জাভা 7 এ নতুন একটি ফিচার সংযুক্ত করা হয়েছে যাকে বলে try-with-resource স্টেটমেন্ট। উপরের মেথডটিকে try-with-resource স্টেটমেন্ট ব্যবহার করে লিখলে দাঁড়ায়,</p>
 <p>দুটি কোড মেথড যদিও একই কাজ করে, কিন্তু নিচের মেথডটিকে কম সংখ্যক লাইন কোড রয়েছে উপরের মেথডটি থেকে এবং এতে close() মেথডটি কল করা হয়নি।</p>
 <p>এবার নিচের লাইনটি ভালো করে লক্ষ করা যাক,</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">try</span> <span style="color:#f92672">(</span>FileInputStream fis <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> FileInputStream<span style="color:#f92672">(</span><span style="color:#960050;background-color:#1e0010">“</span>file<span style="color:#f92672">.</span><span style="color:#a6e22e">txt</span><span style="color:#960050;background-color:#1e0010">”</span><span style="color:#f92672">))</span>
-</code></pre></div><p>এটি একটি try-with-resource স্টেটমেন্ট। FileInputStream এর ভ্যারিয়েবলটি try কিওয়ার্ডের ভেতরে ডিক্লেয়ার করা হয়েছ এবং ইনস্ট্যানসিয়েট করা হয়েছে। এখানে যখন এই try ব্লক শেষ হয়ে যাবে তখন FileInputStream রিসোর্সটি নিজে থেকেই ক্লোজ হয়ে যাবে। এটি সম্ভব হবে কারণ FileInputStream ক্লাসটি AutoCloseable ইন্টারফেসকে ইমপ্লিমেন্ট করে। যে সব ক্লাসগুলো এই ইন্টারফেসকে ইমপ্লিমেন্ট করে, তাদের প্রত্যেকের ক্ষেত্রে এই try-with-resource স্টেটমেন্ট ব্যবহার করা যাবে।</p>
+<pre><code class="language-java">try (FileInputStream fis = new FileInputStream(“file.txt”))
+</code></pre>
+<p>এটি একটি try-with-resource স্টেটমেন্ট। FileInputStream এর ভ্যারিয়েবলটি try কিওয়ার্ডের ভেতরে ডিক্লেয়ার করা হয়েছ এবং ইনস্ট্যানসিয়েট করা হয়েছে। এখানে যখন এই try ব্লক শেষ হয়ে যাবে তখন FileInputStream রিসোর্সটি নিজে থেকেই ক্লোজ হয়ে যাবে। এটি সম্ভব হবে কারণ FileInputStream ক্লাসটি AutoCloseable ইন্টারফেসকে ইমপ্লিমেন্ট করে। যে সব ক্লাসগুলো এই ইন্টারফেসকে ইমপ্লিমেন্ট করে, তাদের প্রত্যেকের ক্ষেত্রে এই try-with-resource স্টেটমেন্ট ব্যবহার করা যাবে।</p>
 <p>একাধিক রিসোর্সের ক্ষেত্রেও এই try-with-resource স্টেটমেন্ট ব্যবহার করা যায়। যেমন,</p>
 <p>এক্ষেত্রে FileInputStream এবং BufferInputStream দুটি ক্লাসই try ব্লক শেষ হওয়ার সঙ্গে সঙ্গেই ক্লোজ হয়ে যাবে।</p>
 

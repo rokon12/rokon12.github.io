@@ -31,17 +31,11 @@
 
     
 
+    <script src="/js/prism.js"></script>
+
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/fonts.css" />
-
-    <link rel="stylesheet"
-          href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/styles/default.min.css">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/highlight.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/languages/java.min.js"
-            integrity="sha512-xEnylOTeZvxUCvtK9Lw3FjOgfCwsMEhUbx6Hant1lPgy+PcynqCm8XfqhpRos6XNaTxeMuT4QyrWyo3U1NijHg=="
-            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-
+    <link rel="stylesheet" href="/css/prism.css" />
 
     
 
@@ -61,8 +55,9 @@ if (!doNotTrack) {
 
   </head>
 
-  <body>
-    <nav>
+  <body class="line-numbers">
+
+  <nav>
     <ul class="menu">
       
       <li><a href="/">Home</a></li>
@@ -94,22 +89,23 @@ if (!doNotTrack) {
 
 <main>
     <p>কোনো ভেরিয়েবল যদি কোনো অবজেক্টের রেফারেন্স না রাখে,তাহলে সেই ভেরিয়েবল মূলত একটি নাল রেফারেন্স বা শূণ্য রেফারেন্স ধরে রাখে। সেই ভেরিয়েবল নিয়ে কোনো কাজ করতে চাই, তাহলে জাভা ভার্চুয়াল মেশিন এই এক্সেপশন থ্রো করে। বেশ কয়েকটি জায়গায় এই এক্সেপশন থ্রো হতে পারে। যেমন-</p>
-<p>১. একটি ক্লাসের অবজেক্ট তৈরি না করেই সেই ক্লাসের কোনো মেথড করলে। তবে সেই ক্লাসের স্ট্যাটিক মেথড কল করা হলে NullPointerException (NPE) থ্রো হবে না।<br />
-২. কোনো ভেরিয়েবলের টাইপ যদি ক্লাস হয় এবং এটি যদি নাল(null) হয়, তাহলে সেই ভেরিয়েবলের কোনো ফ্লিল্ড পরিবর্তন না অ্যাকসেস করতে গেলে NPE থ্রো হবে।<br />
-৩. কোনো অ্যারেকে ইনিশিয়ালাইজ না করেই এর লেন্থ কল করা হলে NPE থ্রো হবে।<br />
+<p>১. একটি ক্লাসের অবজেক্ট তৈরি না করেই সেই ক্লাসের কোনো মেথড করলে। তবে সেই ক্লাসের স্ট্যাটিক মেথড কল করা হলে NullPointerException (NPE) থ্রো হবে না।<br>
+২. কোনো ভেরিয়েবলের টাইপ যদি ক্লাস হয় এবং এটি যদি নাল(null) হয়, তাহলে সেই ভেরিয়েবলের কোনো ফ্লিল্ড পরিবর্তন না অ্যাকসেস করতে গেলে NPE থ্রো হবে।<br>
+৩. কোনো অ্যারেকে ইনিশিয়ালাইজ না করেই এর লেন্থ কল করা হলে NPE থ্রো হবে।<br>
 ৪. কোনো এক্সেপশন থ্রো করার সময় throw কিওয়ার্ডের পর new দিয়ে সেই এক্সেপশনের ইনস্ট্যান্স তৈরি করা হয়। যেমন-</p>
-<pre class="lang:java decode:true ">throw new MyException();</pre>
+<!-- raw HTML omitted -->
 <p>তবে throw এর পরে null বসালে অর্থাৎ নিচের স্টেটমেন্টটি NPE থ্রো করবে।</p>
-<pre class="lang:java decode:true ">throw null;</pre>
+<!-- raw HTML omitted -->
 <p>জাভাতে নাল (null) একটি সংরক্ষিত কিওয়ার্ড। একটি ক্লাস থেকে প্রথমে একটি অবজেক্ট তৈরি করা হয়। সেই অবজেক্টকে আমরা রেফারেন্স দিয়ে অ্যাকসেস করতে পারি। যেমন-</p>
-<pre class="lang:java decode:true ">Person person1 = new Person("Tamim", "Shahriar");</pre>
+<!-- raw HTML omitted -->
 <p>এখানে new অপারেটর দিয়ে একটি Person অবজেক্ট তৈরি করা হয়েছে। person1 হচ্ছে সেই অবজেক্টের রেফারেন্স।</p>
-<pre class="lang:java decode:true ">Person person2;</pre>
+<!-- raw HTML omitted -->
 <p>এখানে person2 একটি রেফারেন্স। কিন্তু এটি কোনো অবজেক্টকে রেফার করে না।</p>
 <p>উপরের person2 একটি নাল (null) বা নাল রেফারেন্স (Null Reference)। এই রেফারেন্স দিয়ে কোনো কাজ করার উপায় নেই। কারণ এর মধ্যে আসলে কিছু নেই। যদি এই রেফারেন্স দিয়ে আমরা কোনো কাজ করতে চাই, তাহলে জাভা ভার্চুয়াল মেশিন NullPointerException থ্রো করবে।</p>
 <p>এই এক্সেপশন থেকে বাঁচতে হলে একটি if স্টেটমেন্ট ব্যবহার করে যাচাই করা যেতে পারে যে, রেফারেন্সটি null কিনা।</p>
-<pre class="lang:java decode:true ">if (person2 != null) {
-System.out.println(person2.getFullName());</pre><blockquote>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<blockquote>
 </blockquote>
 
 </main>

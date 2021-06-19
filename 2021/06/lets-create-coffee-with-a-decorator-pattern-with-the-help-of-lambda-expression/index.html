@@ -31,17 +31,11 @@
 
     
 
+    <script src="/js/prism.js"></script>
+
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/fonts.css" />
-
-    <link rel="stylesheet"
-          href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/styles/default.min.css">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/highlight.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/languages/java.min.js"
-            integrity="sha512-xEnylOTeZvxUCvtK9Lw3FjOgfCwsMEhUbx6Hant1lPgy+PcynqCm8XfqhpRos6XNaTxeMuT4QyrWyo3U1NijHg=="
-            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-
+    <link rel="stylesheet" href="/css/prism.css" />
 
     
 
@@ -61,8 +55,9 @@ if (!doNotTrack) {
 
   </head>
 
-  <body>
-    <nav>
+  <body class="line-numbers">
+
+  <nav>
     <ul class="menu">
       
       <li><a href="/">Home</a></li>
@@ -94,167 +89,179 @@ if (!doNotTrack) {
 
 <main>
     <p><code>java.util.function.Function&lt;T, R&gt;</code> is a functional interface. It takes a type <code>T</code> and returns type <code>R</code>. We mostly use it to transform a type into a different one. But it doesn&rsquo;t end there. We can use this into a lambda expression to change a value as well. For example-</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">Function<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">,</span> Integer<span style="color:#f92672">&gt;</span> doubleIt <span style="color:#f92672">=</span> a <span style="color:#f92672">-&gt;</span> a <span style="color:#f92672">*</span> 2<span style="color:#f92672">;</span>
-</code></pre></div><p>Over here, we are receiving and in integer but returning after doubling it. Thus, we can pass this function as an argument of a method as well.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">static</span> Integer <span style="color:#a6e22e">transform</span><span style="color:#f92672">(</span>Integer value<span style="color:#f92672">,</span> Function<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">,</span> Integer<span style="color:#f92672">&gt;</span> func<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-    var applied <span style="color:#f92672">=</span> func<span style="color:#f92672">.</span><span style="color:#a6e22e">apply</span><span style="color:#f92672">(</span>value<span style="color:#f92672">);</span>
-    <span style="color:#66d9ef">return</span> applied<span style="color:#f92672">;</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><p>and use it as follows-</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">var doubled <span style="color:#f92672">=</span> transform<span style="color:#f92672">(</span>4<span style="color:#f92672">,</span> doubleIt<span style="color:#f92672">);</span>
-System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;doubled = &#34;</span> <span style="color:#f92672">+</span> doubled<span style="color:#f92672">);</span>
-</code></pre></div><p>It will print 8.</p>
+<pre><code class="language-java">Function&lt;Integer, Integer&gt; doubleIt = a -&gt; a * 2;
+</code></pre>
+<p>Over here, we are receiving and in integer but returning after doubling it. Thus, we can pass this function as an argument of a method as well.</p>
+<pre><code class="language-java">static Integer transform(Integer value, Function&lt;Integer, Integer&gt; func) {
+    var applied = func.apply(value);
+    return applied;
+}
+</code></pre>
+<p>and use it as follows-</p>
+<pre><code class="language-java">var doubled = transform(4, doubleIt);
+System.out.println(&quot;doubled = &quot; + doubled);
+</code></pre>
+<p>It will print 8.</p>
 <p>Similarly, we can pass many other lambda expressions into the transform method.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">Function<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">,</span> Integer<span style="color:#f92672">&gt;</span> squareIt <span style="color:#f92672">=</span> a <span style="color:#f92672">-&gt;</span> a <span style="color:#f92672">*</span> a<span style="color:#f92672">;</span>
-Function<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">,</span> Integer<span style="color:#f92672">&gt;</span> cubeIt <span style="color:#f92672">=</span> a <span style="color:#f92672">-&gt;</span> a <span style="color:#f92672">*</span> a <span style="color:#f92672">*</span> a<span style="color:#f92672">;</span>
+<pre><code class="language-java">Function&lt;Integer, Integer&gt; squareIt = a -&gt; a * a;
+Function&lt;Integer, Integer&gt; cubeIt = a -&gt; a * a * a;
 
-var squared <span style="color:#f92672">=</span> transform<span style="color:#f92672">(</span>4<span style="color:#f92672">,</span> squareIt<span style="color:#f92672">);</span>
-System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;square of 4 = &#34;</span> <span style="color:#f92672">+</span> squared<span style="color:#f92672">);</span>
-var cubed <span style="color:#f92672">=</span> transform<span style="color:#f92672">(</span>5<span style="color:#f92672">,</span> cubeIt<span style="color:#f92672">);</span>
-System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;cube of 5 = &#34;</span> <span style="color:#f92672">+</span> cubed<span style="color:#f92672">);</span>
-</code></pre></div><p>We may have another requirement, for example, we need to cube a value and then increment it by 1.<br />
+var squared = transform(4, squareIt);
+System.out.println(&quot;square of 4 = &quot; + squared);
+var cubed = transform(5, cubeIt);
+System.out.println(&quot;cube of 5 = &quot; + cubed);
+</code></pre>
+<p>We may have another requirement, for example, we need to cube a value and then increment it by 1.
 We can do it in two steps.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">Function<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">,</span> Integer<span style="color:#f92672">&gt;</span> cubeIt <span style="color:#f92672">=</span> a <span style="color:#f92672">-&gt;</span> a <span style="color:#f92672">*</span> a <span style="color:#f92672">*</span> a<span style="color:#f92672">;</span>
-Function<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">,</span> Integer<span style="color:#f92672">&gt;</span> incrementByOne <span style="color:#f92672">=</span> a <span style="color:#f92672">-&gt;</span> a <span style="color:#f92672">+</span> 1<span style="color:#f92672">;</span>
+<pre><code class="language-java">Function&lt;Integer, Integer&gt; cubeIt = a -&gt; a * a * a;
+Function&lt;Integer, Integer&gt; incrementByOne = a -&gt; a + 1;
 
-var cubedOf5 <span style="color:#f92672">=</span> cubeIt<span style="color:#f92672">.</span><span style="color:#a6e22e">apply</span><span style="color:#f92672">(</span>5<span style="color:#f92672">);</span>
-var cubedAndIncremented <span style="color:#f92672">=</span> incrementByOne<span style="color:#f92672">.</span><span style="color:#a6e22e">apply</span><span style="color:#f92672">(</span>cubedOf5<span style="color:#f92672">);</span>
-</code></pre></div><p>However, the above code doesn&rsquo;t look concise at all.<br />
+var cubedOf5 = cubeIt.apply(5);
+var cubedAndIncremented = incrementByOne.apply(cubedOf5);
+</code></pre>
+<p>However, the above code doesn&rsquo;t look concise at all.
 We can fix it using the default method of <code>Function</code> interface, which is <code>andThen()</code>, and it takes a function as an argument. Using it, we can chain up multiple functions together. The above code would look like this -</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">transform<span style="color:#f92672">(</span>5<span style="color:#f92672">,</span> cubeIt<span style="color:#f92672">.</span><span style="color:#a6e22e">andThen</span><span style="color:#f92672">(</span>incrementByOne<span style="color:#f92672">));</span>
-</code></pre></div><p>This is a one-liner and looks concise and straightforward.</p>
+<pre><code class="language-java">transform(5, cubeIt.andThen(incrementByOne));
+</code></pre>
+<p>This is a one-liner and looks concise and straightforward.</p>
 <p>We can use this concept to implement the <a href="https://en.wikipedia.org/wiki/Decorator_pattern">decorator pattern</a>. This pattern lets you attach new behaviours to objects at runtime.</p>
 <p>We will make coffee with as many ingredients as we can put into a cup using the decorator pattern. When we&rsquo;d do it, our coffee cup would like this-</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">var ingredients <span style="color:#f92672">=</span> List<span style="color:#f92672">.</span><span style="color:#a6e22e">of</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Tim Horton&#34;</span><span style="color:#f92672">);</span>
-var coffeeCup <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> CoffeeCup<span style="color:#f92672">(</span>ingredients<span style="color:#f92672">);</span>
+<pre><code class="language-java">var ingredients = List.of(&quot;Tim Horton&quot;);
+var coffeeCup = new CoffeeCup(ingredients);
 
-var coffee <span style="color:#f92672">=</span> getCoffeeWithExtra<span style="color:#f92672">(</span>coffeeCup<span style="color:#f92672">,</span>
-            Coffee<span style="color:#f92672">::</span>withDarkCookieCrumb<span style="color:#f92672">,</span>
-            Coffee<span style="color:#f92672">::</span>withSaltedCaramelFudge<span style="color:#f92672">,</span>
-            Coffee<span style="color:#f92672">::</span>withSweetenedMilk<span style="color:#f92672">,</span>
-            Coffee<span style="color:#f92672">::</span>withVanillaAlmondExtract<span style="color:#f92672">);</span>
+var coffee = getCoffeeWithExtra(coffeeCup,
+            Coffee::withDarkCookieCrumb,
+            Coffee::withSaltedCaramelFudge,
+            Coffee::withSweetenedMilk,
+            Coffee::withVanillaAlmondExtract);
 
-System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Coffee with &#34;</span> <span style="color:#f92672">+</span> String<span style="color:#f92672">.</span><span style="color:#a6e22e">join</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;, &#34;</span><span style="color:#f92672">,</span> coffee<span style="color:#f92672">.</span><span style="color:#a6e22e">ingredients</span><span style="color:#f92672">()));</span>
+System.out.println(&quot;Coffee with &quot; + String.join(&quot;, &quot;, coffee.ingredients()));
 
-</code></pre></div><p>We will grab a Tim Horton and then keep adding extra ingredients to it using the <code>getCoffeeWithExtra()</code> method.</p>
+</code></pre>
+<p>We will grab a Tim Horton and then keep adding extra ingredients to it using the <code>getCoffeeWithExtra()</code> method.</p>
 <p>Let&rsquo;s look at the getCoffeeWithExtra() method.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">static</span> Coffee <span style="color:#a6e22e">getCoffeeWithExtra</span><span style="color:#f92672">(</span>Coffee coffee<span style="color:#f92672">,</span> Function<span style="color:#f92672">&lt;</span>Coffee<span style="color:#f92672">,</span> Coffee<span style="color:#f92672">&gt;...</span> ingredients<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-    var reduced <span style="color:#f92672">=</span> Stream<span style="color:#f92672">.</span><span style="color:#a6e22e">of</span><span style="color:#f92672">(</span>ingredients<span style="color:#f92672">)</span>
-                <span style="color:#f92672">.</span><span style="color:#a6e22e">reduce</span><span style="color:#f92672">(</span>Function<span style="color:#f92672">.</span><span style="color:#a6e22e">identity</span><span style="color:#f92672">(),</span> Function<span style="color:#f92672">::</span>andThen<span style="color:#f92672">);</span>
-    <span style="color:#66d9ef">return</span> reduced<span style="color:#f92672">.</span><span style="color:#a6e22e">apply</span><span style="color:#f92672">(</span>coffee<span style="color:#f92672">);</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><p>This method takes a Coffee and an array of functions that transform the coffee, exactly the way we saw in the transform method.  We have reduced the function array into one using stream and then applied it to the coffee and returned it.<br />
+<pre><code class="language-java">static Coffee getCoffeeWithExtra(Coffee coffee, Function&lt;Coffee, Coffee&gt;... ingredients) {
+    var reduced = Stream.of(ingredients)
+                .reduce(Function.identity(), Function::andThen);
+    return reduced.apply(coffee);
+}
+</code></pre>
+<p>This method takes a Coffee and an array of functions that transform the coffee, exactly the way we saw in the transform method.  We have reduced the function array into one using stream and then applied it to the coffee and returned it.
 Let&rsquo;s look into the Coffee interface. It has only one method and a few static methods.</p>
-<p>The stream has this reduce function, which takes an identity function as its first parameter; the second parameter is another functional interface named <code>BinaryOperator</code>.<br />
+<p>The stream has this reduce function, which takes an identity function as its first parameter; the second parameter is another functional interface named <code>BinaryOperator</code>.
 The identity function is a function that doesn&rsquo;t do anything; basically, it returns the same value that it gets as a parameter. Without the method reference, it looks like the following-</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    var reduce1 <span style="color:#f92672">=</span> Stream<span style="color:#f92672">.</span><span style="color:#a6e22e">of</span><span style="color:#f92672">(</span>ingredients<span style="color:#f92672">)</span>
-            <span style="color:#f92672">.</span><span style="color:#a6e22e">reduce</span><span style="color:#f92672">(</span>kopi <span style="color:#f92672">-&gt;</span> kopi<span style="color:#f92672">,</span> <span style="color:#f92672">(</span>func1<span style="color:#f92672">,</span> func2<span style="color:#f92672">)</span> <span style="color:#f92672">-&gt;</span> func1<span style="color:#f92672">.</span><span style="color:#a6e22e">andThen</span><span style="color:#f92672">(</span>func2<span style="color:#f92672">));</span>
-</code></pre></div><p><em>Note(From <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/util/stream/Stream.html#reduce(T,java.util.function.BinaryOperator)">javaDoc</a>):  The reduce function performs a reduction on the elements of this stream, using the provided identity value and an associative accumulation function, and returns the reduced value. This is equivalent to:</em></p>
+<pre><code class="language-java">    var reduce1 = Stream.of(ingredients)
+            .reduce(kopi -&gt; kopi, (func1, func2) -&gt; func1.andThen(func2));
+</code></pre>
+<p><em>Note(From <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/util/stream/Stream.html#reduce(T,java.util.function.BinaryOperator)">javaDoc</a>):  The reduce function performs a reduction on the elements of this stream, using the provided identity value and an associative accumulation function, and returns the reduced value. This is equivalent to:</em></p>
 <pre><code> T result = identity;
  for (T element : this stream)
      result = accumulator.apply(result, element)
  return result;
 </code></pre>
 <p>Let&rsquo;s look at the Coffee interface now.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
- <span style="color:#a6e22e">@FunctionalInterface</span> 
- <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">Coffee</span> <span style="color:#f92672">{</span>
-    List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">ingredients</span><span style="color:#f92672">();</span>  
+<pre><code class="language-java">
+ @FunctionalInterface 
+ interface Coffee {
+    List&lt;String&gt; ingredients();  
 		
-    <span style="color:#66d9ef">static</span> Coffee <span style="color:#a6e22e">withSaltedCaramelFudge</span><span style="color:#f92672">(</span>Coffee coffee<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-            <span style="color:#66d9ef">return</span> <span style="color:#f92672">()</span> <span style="color:#f92672">-&gt;</span> coffee<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Salted Caramel Fudge&#34;</span><span style="color:#f92672">);</span>
-    <span style="color:#f92672">}</span>
+    static Coffee withSaltedCaramelFudge(Coffee coffee) {
+            return () -&gt; coffee.add(&quot;Salted Caramel Fudge&quot;);
+    }
 
-    <span style="color:#66d9ef">default</span> List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>String item<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;(</span>ingredients<span style="color:#f92672">())</span> <span style="color:#f92672">{{</span>
-                    add<span style="color:#f92672">(</span>item<span style="color:#f92672">);</span>
-            <span style="color:#f92672">}};</span>
-    <span style="color:#f92672">}</span>
+    default List&lt;String&gt; add(String item) {
+            return new ArrayList&lt;&gt;(ingredients()) {{
+                    add(item);
+            }};
+    }
     
-    <span style="color:#66d9ef">static</span> Coffee <span style="color:#a6e22e">withSweetenedMilk</span><span style="color:#f92672">(</span>Coffee coffee<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-            <span style="color:#66d9ef">return</span> <span style="color:#f92672">()</span> <span style="color:#f92672">-&gt;</span> coffee<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Sweetened Milk&#34;</span><span style="color:#f92672">);</span>
-    <span style="color:#f92672">}</span>
+    static Coffee withSweetenedMilk(Coffee coffee) {
+            return () -&gt; coffee.add(&quot;Sweetened Milk&quot;);
+    }
 
-    <span style="color:#66d9ef">static</span> Coffee <span style="color:#a6e22e">withDarkCookieCrumb</span><span style="color:#f92672">(</span>Coffee coffee<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-            <span style="color:#66d9ef">return</span> <span style="color:#f92672">()</span> <span style="color:#f92672">-&gt;</span> coffee<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Dark Cookie Crumb&#34;</span><span style="color:#f92672">);</span>
-    <span style="color:#f92672">}</span>
+    static Coffee withDarkCookieCrumb(Coffee coffee) {
+            return () -&gt; coffee.add(&quot;Dark Cookie Crumb&quot;);
+    }
 
-    <span style="color:#66d9ef">static</span> Coffee <span style="color:#a6e22e">withVanillaAlmondExtract</span><span style="color:#f92672">(</span>Coffee coffee<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-            <span style="color:#66d9ef">return</span> <span style="color:#f92672">()</span> <span style="color:#f92672">-&gt;</span> coffee<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Vanilla/Almond Extract&#34;</span><span style="color:#f92672">);</span>
-    <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><p>These static methods are for convenience. We can keep adding these methods as our ingredient list grows. The benefit is, when we will use them, we will be able to use method references, which will make our code concise.</p>
+    static Coffee withVanillaAlmondExtract(Coffee coffee) {
+            return () -&gt; coffee.add(&quot;Vanilla/Almond Extract&quot;);
+    }
+}
+</code></pre>
+<p>These static methods are for convenience. We can keep adding these methods as our ingredient list grows. The benefit is, when we will use them, we will be able to use method references, which will make our code concise.</p>
 <p>Let&rsquo;s put everything together.</p>
 <p>These static methods are for convenience. We can keep adding these methods as our ingredient list grows. The benefit is, when we will use them, we will be able to use method references, which will make our code concise.</p>
 <p>Let&rsquo;s put everything together.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-<span style="color:#f92672">package</span> com.bazlur<span style="color:#f92672">;</span>
+<pre><code class="language-java">
+package com.bazlur;
 
-<span style="color:#f92672">import</span> java.util.ArrayList<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> java.util.List<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> java.util.function.Function<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> java.util.stream.Stream<span style="color:#f92672">;</span>
+import java.util.ArrayList;
+import java.util.List;
+import java.util.function.Function;
+import java.util.stream.Stream;
 
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Day012</span> <span style="color:#f92672">{</span>
+public class Day012 {
 
-  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-    var ingredients <span style="color:#f92672">=</span> List<span style="color:#f92672">.</span><span style="color:#a6e22e">of</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Tim Horton&#34;</span><span style="color:#f92672">);</span>
-    var coffeeCup <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> CoffeeCup<span style="color:#f92672">(</span>ingredients<span style="color:#f92672">);</span>
+  public static void main(String[] args) {
+    var ingredients = List.of(&quot;Tim Horton&quot;);
+    var coffeeCup = new CoffeeCup(ingredients);
 
-    var coffee <span style="color:#f92672">=</span> getCoffeeWithExtra<span style="color:#f92672">(</span>coffeeCup<span style="color:#f92672">,</span>
-            Coffee<span style="color:#f92672">::</span>withDarkCookieCrumb<span style="color:#f92672">,</span>
-            Coffee<span style="color:#f92672">::</span>withSaltedCaramelFudge<span style="color:#f92672">,</span>
-            Coffee<span style="color:#f92672">::</span>withSweetenedMilk<span style="color:#f92672">,</span>
-            Coffee<span style="color:#f92672">::</span>withVanillaAlmondExtract<span style="color:#f92672">);</span>
+    var coffee = getCoffeeWithExtra(coffeeCup,
+            Coffee::withDarkCookieCrumb,
+            Coffee::withSaltedCaramelFudge,
+            Coffee::withSweetenedMilk,
+            Coffee::withVanillaAlmondExtract);
 
-    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Coffee with &#34;</span> <span style="color:#f92672">+</span> String<span style="color:#f92672">.</span><span style="color:#a6e22e">join</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;, &#34;</span><span style="color:#f92672">,</span> coffee<span style="color:#f92672">.</span><span style="color:#a6e22e">ingredients</span><span style="color:#f92672">()));</span>
-  <span style="color:#f92672">}</span>
+    System.out.println(&quot;Coffee with &quot; + String.join(&quot;, &quot;, coffee.ingredients()));
+  }
 
-  <span style="color:#a6e22e">@SafeVarargs</span>
-  <span style="color:#66d9ef">static</span> Coffee <span style="color:#a6e22e">getCoffeeWithExtra</span><span style="color:#f92672">(</span>Coffee coffee<span style="color:#f92672">,</span> Function<span style="color:#f92672">&lt;</span>Coffee<span style="color:#f92672">,</span> Coffee<span style="color:#f92672">&gt;...</span> ingredients<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-    var reduced <span style="color:#f92672">=</span> Stream<span style="color:#f92672">.</span><span style="color:#a6e22e">of</span><span style="color:#f92672">(</span>ingredients<span style="color:#f92672">)</span>
-            <span style="color:#f92672">.</span><span style="color:#a6e22e">reduce</span><span style="color:#f92672">(</span>Function<span style="color:#f92672">.</span><span style="color:#a6e22e">identity</span><span style="color:#f92672">(),</span> Function<span style="color:#f92672">::</span>andThen<span style="color:#f92672">);</span>
-    <span style="color:#66d9ef">return</span> reduced<span style="color:#f92672">.</span><span style="color:#a6e22e">apply</span><span style="color:#f92672">(</span>coffee<span style="color:#f92672">);</span>
-  <span style="color:#f92672">}</span>
+  @SafeVarargs
+  static Coffee getCoffeeWithExtra(Coffee coffee, Function&lt;Coffee, Coffee&gt;... ingredients) {
+    var reduced = Stream.of(ingredients)
+            .reduce(Function.identity(), Function::andThen);
+    return reduced.apply(coffee);
+  }
 
-  <span style="color:#a6e22e">@FunctionalInterface</span>
-  <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">Coffee</span> <span style="color:#f92672">{</span>
-    <span style="color:#66d9ef">static</span> Coffee <span style="color:#a6e22e">withSaltedCaramelFudge</span><span style="color:#f92672">(</span>Coffee coffee<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-      <span style="color:#66d9ef">return</span> <span style="color:#f92672">()</span> <span style="color:#f92672">-&gt;</span> coffee<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Salted Caramel Fudge&#34;</span><span style="color:#f92672">);</span>
-    <span style="color:#f92672">}</span>
+  @FunctionalInterface
+  interface Coffee {
+    static Coffee withSaltedCaramelFudge(Coffee coffee) {
+      return () -&gt; coffee.add(&quot;Salted Caramel Fudge&quot;);
+    }
 
-    <span style="color:#66d9ef">default</span> List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>String item<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-      <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;(</span>ingredients<span style="color:#f92672">())</span> <span style="color:#f92672">{{</span>
-        add<span style="color:#f92672">(</span>item<span style="color:#f92672">);</span>
-      <span style="color:#f92672">}};</span>
-    <span style="color:#f92672">}</span>
+    default List&lt;String&gt; add(String item) {
+      return new ArrayList&lt;&gt;(ingredients()) {{
+        add(item);
+      }};
+    }
 
-    List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">ingredients</span><span style="color:#f92672">();</span>
+    List&lt;String&gt; ingredients();
 
-    <span style="color:#66d9ef">static</span> Coffee <span style="color:#a6e22e">withSweetenedMilk</span><span style="color:#f92672">(</span>Coffee coffee<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-      <span style="color:#66d9ef">return</span> <span style="color:#f92672">()</span> <span style="color:#f92672">-&gt;</span> coffee<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Sweetened Milk&#34;</span><span style="color:#f92672">);</span>
-    <span style="color:#f92672">}</span>
+    static Coffee withSweetenedMilk(Coffee coffee) {
+      return () -&gt; coffee.add(&quot;Sweetened Milk&quot;);
+    }
 
-    <span style="color:#66d9ef">static</span> Coffee <span style="color:#a6e22e">withDarkCookieCrumb</span><span style="color:#f92672">(</span>Coffee coffee<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-      <span style="color:#66d9ef">return</span> <span style="color:#f92672">()</span> <span style="color:#f92672">-&gt;</span> coffee<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Dark Cookie Crumb&#34;</span><span style="color:#f92672">);</span>
-    <span style="color:#f92672">}</span>
+    static Coffee withDarkCookieCrumb(Coffee coffee) {
+      return () -&gt; coffee.add(&quot;Dark Cookie Crumb&quot;);
+    }
 
-    <span style="color:#66d9ef">static</span> Coffee <span style="color:#a6e22e">withVanillaAlmondExtract</span><span style="color:#f92672">(</span>Coffee coffee<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-      <span style="color:#66d9ef">return</span> <span style="color:#f92672">()</span> <span style="color:#f92672">-&gt;</span> coffee<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Vanilla/Almond Extract&#34;</span><span style="color:#f92672">);</span>
-    <span style="color:#f92672">}</span>
-  <span style="color:#f92672">}</span>
+    static Coffee withVanillaAlmondExtract(Coffee coffee) {
+      return () -&gt; coffee.add(&quot;Vanilla/Almond Extract&quot;);
+    }
+  }
 
-  record <span style="color:#a6e22e">CoffeeCup</span><span style="color:#f92672">(</span>List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> initialIngredient<span style="color:#f92672">)</span> <span style="color:#66d9ef">implements</span> Coffee <span style="color:#f92672">{</span>
-    <span style="color:#a6e22e">@Override</span>
-    <span style="color:#66d9ef">public</span> List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">ingredients</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-      <span style="color:#66d9ef">return</span> initialIngredient<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
-  <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
+  record CoffeeCup(List&lt;String&gt; initialIngredient) implements Coffee {
+    @Override
+    public List&lt;String&gt; ingredients() {
+      return initialIngredient;
+    }
+  }
+}
 
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">%</span> java Day012<span style="color:#f92672">.</span><span style="color:#a6e22e">java</span> 
-Coffee with Tim Horton<span style="color:#f92672">,</span> Dark Cookie Crumb<span style="color:#f92672">,</span> Salted Caramel Fudge<span style="color:#f92672">,</span> Sweetened Milk<span style="color:#f92672">,</span> Vanilla<span style="color:#f92672">/</span>Almond Extract
-</code></pre></div>
+</code></pre>
+<pre><code class="language-java">% java Day012.java 
+Coffee with Tim Horton, Dark Cookie Crumb, Salted Caramel Fudge, Sweetened Milk, Vanilla/Almond Extract
+</code></pre>
+
 </main>
 
 <p class="post-tag">

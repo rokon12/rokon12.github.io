@@ -35,17 +35,11 @@ In Java, string objects are &amp;hellip;">
 
     
 
+    <script src="/js/prism.js"></script>
+
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/fonts.css" />
-
-    <link rel="stylesheet"
-          href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/styles/default.min.css">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/highlight.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/languages/java.min.js"
-            integrity="sha512-xEnylOTeZvxUCvtK9Lw3FjOgfCwsMEhUbx6Hant1lPgy+PcynqCm8XfqhpRos6XNaTxeMuT4QyrWyo3U1NijHg=="
-            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-
+    <link rel="stylesheet" href="/css/prism.css" />
 
     
 
@@ -65,8 +59,9 @@ if (!doNotTrack) {
 
   </head>
 
-  <body>
-    <nav>
+  <body class="line-numbers">
+
+  <nav>
     <ul class="menu">
       
       <li><a href="/">Home</a></li>
@@ -100,69 +95,72 @@ if (!doNotTrack) {
     <p>String concatenation has always been a well-discussed topic among Java developers. It&rsquo;s been costly.</p>
 <p>Let&rsquo;s first dig into the issue of why it&rsquo;s costly.</p>
 <p>In Java, string objects are immutable, which means once it is created, you cannot change it. So when we concatenate one string with another, a new string is created, and the older one is marked for the garbage collector.</p>
-<p><img src="/img/string-immutable.png" alt="string object an immutable" title="string object an immutable" /></p>
+<p><img src="/img/string-immutable.png" alt="string object an immutable" title="string object an immutable"></p>
 <p>Let&rsquo;s say we need to concatenate a million strings. Then, we are creating 1 million extra strings which will eventually be garbage collected.</p>
 <p>In string concatenation, under the hood, several operations occur. Using the dot operator to concatenate string is equivalent to using the <code>String#concat(String)</code> method.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">concat</span><span style="color:#f92672">(</span>String str<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">int</span> otherLen <span style="color:#f92672">=</span> str<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">();</span>
-        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>otherLen <span style="color:#f92672">==</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">;</span>
-        <span style="color:#f92672">}</span>
+<pre><code class="language-java">    public String concat(String str) {
+        int otherLen = str.length();
+        if (otherLen == 0) {
+            return this;
+        }
     
-        <span style="color:#66d9ef">int</span> len <span style="color:#f92672">=</span> value<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span>
-        <span style="color:#66d9ef">char</span> buf<span style="color:#f92672">[]</span> <span style="color:#f92672">=</span> Arrays<span style="color:#f92672">.</span><span style="color:#a6e22e">copyOf</span><span style="color:#f92672">(</span>value<span style="color:#f92672">,</span> len <span style="color:#f92672">+</span> otherLen<span style="color:#f92672">);</span>
-        str<span style="color:#f92672">.</span><span style="color:#a6e22e">getChars</span><span style="color:#f92672">(</span>buf<span style="color:#f92672">,</span> len<span style="color:#f92672">);</span>
+        int len = value.length;
+        char buf[] = Arrays.copyOf(value, len + otherLen);
+        str.getChars(buf, len);
     
-        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> String<span style="color:#f92672">(</span>buf<span style="color:#f92672">,</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">);</span>
-    <span style="color:#f92672">}</span>
+        return new String(buf, true);
+    }
 
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">char</span><span style="color:#f92672">[]</span> <span style="color:#a6e22e">copyOf</span><span style="color:#f92672">(</span><span style="color:#66d9ef">char</span><span style="color:#f92672">[]</span> original<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> newLength<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">char</span><span style="color:#f92672">[]</span> copy <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">char</span><span style="color:#f92672">[</span>newLength<span style="color:#f92672">];</span>
-        System<span style="color:#f92672">.</span><span style="color:#a6e22e">arraycopy</span><span style="color:#f92672">(</span>original<span style="color:#f92672">,</span> 0<span style="color:#f92672">,</span> copy<span style="color:#f92672">,</span> 0<span style="color:#f92672">,</span>
-                         Math<span style="color:#f92672">.</span><span style="color:#a6e22e">min</span><span style="color:#f92672">(</span>original<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">,</span> newLength<span style="color:#f92672">));</span>
-        <span style="color:#66d9ef">return</span> copy<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
+    public static char[] copyOf(char[] original, int newLength) {
+        char[] copy = new char[newLength];
+        System.arraycopy(original, 0, copy, 0,
+                         Math.min(original.length, newLength));
+        return copy;
+    }
 
-    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">getChars</span><span style="color:#f92672">(</span><span style="color:#66d9ef">char</span> dst<span style="color:#f92672">[],</span> <span style="color:#66d9ef">int</span> dstBegin<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        System<span style="color:#f92672">.</span><span style="color:#a6e22e">arraycopy</span><span style="color:#f92672">(</span>value<span style="color:#f92672">,</span> 0<span style="color:#f92672">,</span> dst<span style="color:#f92672">,</span> dstBegin<span style="color:#f92672">,</span> value<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">);</span>
-    <span style="color:#f92672">}</span>
-</code></pre></div><p>As you can see, a new array of characters is created with a size of the length of the existing value plus the size of value that is appended. Then, their value is copied to the new array instance. Finally, a new String object is created from the array and returned.</p>
+    void getChars(char dst[], int dstBegin) {
+        System.arraycopy(value, 0, dst, dstBegin, value.length);
+    }
+</code></pre>
+<p>As you can see, a new array of characters is created with a size of the length of the existing value plus the size of value that is appended. Then, their value is copied to the new array instance. Finally, a new String object is created from the array and returned.</p>
 <p>So it&rsquo;s a lot of operations, which ends up being O(n^2) complexity — if you really want to calculate this issue out.</p>
 <p>To solve this problem, the StringBuilder class is used. It works like a mutable String object. The append method helps to avoid all the copying required in string concatenation. It has O(n) complexity, which is better than O(n^2).</p>
 <p>However, Java does this string concatenation using StringBuilder by default for the simple cases..</p>
 <p>From the Java <a href="https://docs.oracle.com/javase/specs/jls/se8/html/jls-15.html#jls-15.18.1">specifications</a>:</p>
 <p><em>To increase the performance of repeated string concatenation, a Java compiler may use the StringBuffer class or a similar technique to reduce the number of intermediate String objects that are created by evaluation of an expression.</em></p>
 <p>Well, the Java compiler does that.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">StringConcatenateDemo</span> <span style="color:#f92672">{</span>
-      <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-         String str <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Hello &#34;</span><span style="color:#f92672">;</span>
-         str <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#34;world&#34;</span><span style="color:#f92672">;</span>
-       <span style="color:#f92672">}</span>
-    <span style="color:#f92672">}</span>
-</code></pre></div><p>The above code will produce the following bytecode:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">StringConcatenateDemo</span> <span style="color:#f92672">{</span>
-      <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">StringConcatenateDemo</span><span style="color:#f92672">();</span>
-        Code<span style="color:#f92672">:</span>
-           0<span style="color:#f92672">:</span> aload_0
-           1<span style="color:#f92672">:</span> invokespecial <span style="color:#960050;background-color:#1e0010">#</span>1                  <span style="color:#75715e">// Method java/lang/Object.&#34;&lt;init&gt;&#34;:()V
-</span><span style="color:#75715e"></span>           4<span style="color:#f92672">:</span> <span style="color:#66d9ef">return</span>
+<pre><code class="language-java">    public class StringConcatenateDemo {
+      public static void main(String[] args) {
+         String str = &quot;Hello &quot;;
+         str += &quot;world&quot;;
+       }
+    }
+</code></pre>
+<p>The above code will produce the following bytecode:</p>
+<pre><code class="language-java">    public class StringConcatenateDemo {
+      public StringConcatenateDemo();
+        Code:
+           0: aload_0
+           1: invokespecial #1                  // Method java/lang/Object.&quot;&lt;init&gt;&quot;:()V
+           4: return
     
-      <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>java<span style="color:#f92672">.</span><span style="color:#a6e22e">lang</span><span style="color:#f92672">.</span><span style="color:#a6e22e">String</span><span style="color:#f92672">[]);</span>
-        Code<span style="color:#f92672">:</span>
-           0<span style="color:#f92672">:</span> ldc           <span style="color:#960050;background-color:#1e0010">#</span>2                  <span style="color:#75715e">// String Hello
-</span><span style="color:#75715e"></span>           2<span style="color:#f92672">:</span> astore_1
-           3<span style="color:#f92672">:</span> <span style="color:#66d9ef">new</span>           <span style="color:#960050;background-color:#1e0010">#</span>3                  <span style="color:#75715e">// class java/lang/StringBuilder
-</span><span style="color:#75715e"></span>           6<span style="color:#f92672">:</span> dup
-           7<span style="color:#f92672">:</span> invokespecial <span style="color:#960050;background-color:#1e0010">#</span>4                  <span style="color:#75715e">// Method java/lang/StringBuilder.&#34;&lt;init&gt;&#34;:()V
-</span><span style="color:#75715e"></span>          10<span style="color:#f92672">:</span> aload_1
-          11<span style="color:#f92672">:</span> invokevirtual <span style="color:#960050;background-color:#1e0010">#</span>5                  <span style="color:#75715e">// Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
-</span><span style="color:#75715e"></span>          14<span style="color:#f92672">:</span> ldc           <span style="color:#960050;background-color:#1e0010">#</span>6                  <span style="color:#75715e">// String world
-</span><span style="color:#75715e"></span>          16<span style="color:#f92672">:</span> invokevirtual <span style="color:#960050;background-color:#1e0010">#</span>5                  <span style="color:#75715e">// Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
-</span><span style="color:#75715e"></span>          19<span style="color:#f92672">:</span> invokevirtual <span style="color:#960050;background-color:#1e0010">#</span>7                  <span style="color:#75715e">// Method java/lang/StringBuilder.toString:()Ljava/lang/String;
-</span><span style="color:#75715e"></span>          22<span style="color:#f92672">:</span> astore_1
-          23<span style="color:#f92672">:</span> <span style="color:#66d9ef">return</span>
-    <span style="color:#f92672">}</span>
-</code></pre></div><p>As you can see in the bytecode, StringBuilder is used. So we don&rsquo;t need to use StringBuilder anymore in Java.</p>
+      public static void main(java.lang.String[]);
+        Code:
+           0: ldc           #2                  // String Hello
+           2: astore_1
+           3: new           #3                  // class java/lang/StringBuilder
+           6: dup
+           7: invokespecial #4                  // Method java/lang/StringBuilder.&quot;&lt;init&gt;&quot;:()V
+          10: aload_1
+          11: invokevirtual #5                  // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+          14: ldc           #6                  // String world
+          16: invokevirtual #5                  // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+          19: invokevirtual #7                  // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+          22: astore_1
+          23: return
+    }
+</code></pre>
+<p>As you can see in the bytecode, StringBuilder is used. So we don&rsquo;t need to use StringBuilder anymore in Java.</p>
 <p>However, This is true for the simple cases. If you need to concatenate inside the loop, it is always suggested to use StringBuilder.</p>
 <p><strong>TL; DR</strong></p>
 <p>For simple string concatenation, you need not use <code>StringBuilder</code>, java compiler will do the trick for you. However, if you need to concatenate inside a loop,  you need to manually apply <code>StringBuilder.</code></p>

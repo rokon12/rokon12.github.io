@@ -31,17 +31,11 @@
 
     
 
+    <script src="/js/prism.js"></script>
+
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/fonts.css" />
-
-    <link rel="stylesheet"
-          href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/styles/default.min.css">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/highlight.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/languages/java.min.js"
-            integrity="sha512-xEnylOTeZvxUCvtK9Lw3FjOgfCwsMEhUbx6Hant1lPgy+PcynqCm8XfqhpRos6XNaTxeMuT4QyrWyo3U1NijHg=="
-            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-
+    <link rel="stylesheet" href="/css/prism.css" />
 
     
 
@@ -61,8 +55,9 @@ if (!doNotTrack) {
 
   </head>
 
-  <body>
-    <nav>
+  <body class="line-numbers">
+
+  <nav>
     <ul class="menu">
       
       <li><a href="/">Home</a></li>
@@ -93,39 +88,40 @@ if (!doNotTrack) {
 </p>
 
 <main>
-    <p>জাভা ভাচুয়াল মেশিন চালু হওয়ার পর কতগুলাে থ্রেড তৈরি হয়। এর মধ্যে মেইন থ্রেড আমাদের কোডগুলো এক্সিকিউট করে। মেইন থ্রেড থেকে আমরা আরও একাধিক থ্রেড তৈরি করতে পারি। যতক্ষণ পর্যন্ত এই থ্রেডগুলো চলতে থাকে, ততক্ষন পর্যন্ত জাভা ভার্চুয়াল মেশিন চলতে থাকে। তবে অনেক সময় কোনো প্রোগ্রামের একটি প্রধান থ্রেডের সঙ্গে আরও কতগুলো থ্রেড তৈরি করতে হয়, যেগুলো বিভিন্ন সহায়ক কাজ করতে থাকে, কিন্তু প্রধান থ্রেডটি বন্ধ হয়ে গেলে এই সহায়ক থ্রেডগুলো প্রয়োজন নেই। এই সহায়ক থ্রেডগুলোকে ডিমন থ্রেড হিসেবে তৈরি করা যায়। জাভা দুই ধরণের থ্রেড তৈরি করা যায়। ১. সাধারণ থ্রেড ২. ডিমন থ্রেড জাভা ভার্চুয়াল মেশিনে কোনো সাধারণ থ্রেড না থাকলে এটি বন্ধ হয়ে যায়। অর্থাৎ একটি সাধারণ থ্রেড চলতে থাকলেও জাভা ভার্চুয়ার মেশিন চলতে থাকবে। ডিমন থ্রেড তৈরি করার জন্য আলাদা কোনো নিয়ম নেই। এটি সাধারণ থ্রেডের মতো করেই তৈরি করা যায়। তবে এতে শুধুমাত্র একটি ফ্ল্যাগ পরিবর্তন করতে হয়। এটি হলো – `Thread thread = new Thread();<br />
+    <p>জাভা ভাচুয়াল মেশিন চালু হওয়ার পর কতগুলাে থ্রেড তৈরি হয়। এর মধ্যে মেইন থ্রেড আমাদের কোডগুলো এক্সিকিউট করে। মেইন থ্রেড থেকে আমরা আরও একাধিক থ্রেড তৈরি করতে পারি। যতক্ষণ পর্যন্ত এই থ্রেডগুলো চলতে থাকে, ততক্ষন পর্যন্ত জাভা ভার্চুয়াল মেশিন চলতে থাকে। তবে অনেক সময় কোনো প্রোগ্রামের একটি প্রধান থ্রেডের সঙ্গে আরও কতগুলো থ্রেড তৈরি করতে হয়, যেগুলো বিভিন্ন সহায়ক কাজ করতে থাকে, কিন্তু প্রধান থ্রেডটি বন্ধ হয়ে গেলে এই সহায়ক থ্রেডগুলো প্রয়োজন নেই। এই সহায়ক থ্রেডগুলোকে ডিমন থ্রেড হিসেবে তৈরি করা যায়। জাভা দুই ধরণের থ্রেড তৈরি করা যায়। ১. সাধারণ থ্রেড ২. ডিমন থ্রেড জাভা ভার্চুয়াল মেশিনে কোনো সাধারণ থ্রেড না থাকলে এটি বন্ধ হয়ে যায়। অর্থাৎ একটি সাধারণ থ্রেড চলতে থাকলেও জাভা ভার্চুয়ার মেশিন চলতে থাকবে। ডিমন থ্রেড তৈরি করার জন্য আলাদা কোনো নিয়ম নেই। এটি সাধারণ থ্রেডের মতো করেই তৈরি করা যায়। তবে এতে শুধুমাত্র একটি ফ্ল্যাগ পরিবর্তন করতে হয়। এটি হলো – `Thread thread = new Thread();<br>
 thread.setDaemon(true);` এই setDaemon() মেথডটি কল করে এতে অার্গুমেন্ট হিসেবে true দিলেই থ্রেডটি ডিমন থ্রেড হিসেবে গণ্য হবে। তবে এই মেথডটি অবশ্যই থ্রেড শুরু করার আগে কল করতে হবে।</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> java.util.concurrent.TimeUnit<span style="color:#f92672">;</span>
+<pre><code class="language-java">import java.util.concurrent.TimeUnit;
 
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DemonThreadExample</span> <span style="color:#f92672">{</span>
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#960050;background-color:#1e0010">\</span><span style="color:#f92672">[</span><span style="color:#960050;background-color:#1e0010">\</span><span style="color:#f92672">]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        Thread t1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Thread<span style="color:#f92672">(()</span> <span style="color:#f92672">-&gt;</span> <span style="color:#f92672">{</span>
-            <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">true</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-                System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;I&#39;m a demon thread and I&#39;m running!&#34;</span><span style="color:#f92672">);</span>
-                <span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
-                    TimeUnit<span style="color:#f92672">.</span><span style="color:#a6e22e">SECONDS</span><span style="color:#f92672">.</span><span style="color:#a6e22e">sleep</span><span style="color:#f92672">(</span>5<span style="color:#f92672">);</span>
-                <span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>InterruptedException e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-                    Thread<span style="color:#f92672">.</span><span style="color:#a6e22e">currentThread</span><span style="color:#f92672">().</span><span style="color:#a6e22e">interrupt</span><span style="color:#f92672">();</span>
-                    <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> AssertionError<span style="color:#f92672">(</span>e<span style="color:#f92672">);</span>                    
-                <span style="color:#f92672">}</span>
-            <span style="color:#f92672">}</span>
-        <span style="color:#f92672">});</span>
-        t1<span style="color:#f92672">.</span><span style="color:#a6e22e">setDaemon</span><span style="color:#f92672">(</span><span style="color:#66d9ef">true</span><span style="color:#f92672">);</span>
-        t1<span style="color:#f92672">.</span><span style="color:#a6e22e">start</span><span style="color:#f92672">();</span>
+public class DemonThreadExample {
+    public static void main(String\[\] args) {
+        Thread t1 = new Thread(() -&gt; {
+            while (true) {
+                System.out.println(&quot;I'm a demon thread and I'm running!&quot;);
+                try {
+                    TimeUnit.SECONDS.sleep(5);
+                } catch (InterruptedException e) {
+                    Thread.currentThread().interrupt();
+                    throw new AssertionError(e);                    
+                }
+            }
+        });
+        t1.setDaemon(true);
+        t1.start();
 
-        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Main Thread! is running!&#34;</span><span style="color:#f92672">);</span>
+        System.out.println(&quot;Main Thread! is running!&quot;);
 
-        <span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
-            TimeUnit<span style="color:#f92672">.</span><span style="color:#a6e22e">MINUTES</span><span style="color:#f92672">.</span><span style="color:#a6e22e">sleep</span><span style="color:#f92672">(</span>1<span style="color:#f92672">);</span>
-        <span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>InterruptedException e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-                Thread<span style="color:#f92672">.</span><span style="color:#a6e22e">currentThread</span><span style="color:#f92672">().</span><span style="color:#a6e22e">interrupt</span><span style="color:#f92672">();</span>
-                <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> AssertionError<span style="color:#f92672">(</span>e<span style="color:#f92672">);</span>                    
-        <span style="color:#f92672">}</span>
-        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Main thread! still running!&#34;</span><span style="color:#f92672">);</span>
-        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Main Thread is going to stop now!&#34;</span><span style="color:#f92672">);</span>
-    <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><p>  এই প্রোগ্রামটিতে প্রথমে আমরা একটি থ্রেড তৈরি করেছি। একে ডিমন থ্রেড হিসেবে চিহ্নিত করেছি। এর পর মেইন থ্রেডকে ১ মিনিটের জন্য বন্ধ করে রেখেছি। এই সময় ডিমন থ্রেডটি চলতে থাকবে। মেইন থ্রেডের কাজ শেষ হওয়ার সঙ্গে সঙ্গে ডিমন থ্রেডটিও বন্ধ হয়ে যাবে। এখানে একটি বিষয় লক্ষ্য রাখতে হবে যে, কেনো ডিমন থ্রেড থেকে আরেকটি নতুন ডিমন থ্রেড চালু করলে সেটিও একটি ডিমন থ্রেড হবে। অর্থাৎ প্যারেন্ট থ্রেড যদি ডিমন হয়, চাইল্ড থ্রেডও ডিমন হবে। এক্ষেত্রে যেহেতু মেইন থ্রেড একটি সাধারণ থ্রেড, তাই মেইন থ্রেড থেকে যে থ্রেডগুলো তৈরি করা হয় সবগুলোই সাধারণ থ্রেড যদি না আলাদাভাবে ডিমন হিসেবে তৈরি করা হয়।</p>
+        try {
+            TimeUnit.MINUTES.sleep(1);
+        } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+                throw new AssertionError(e);                    
+        }
+        System.out.println(&quot;Main thread! still running!&quot;);
+        System.out.println(&quot;Main Thread is going to stop now!&quot;);
+    }
+}
+</code></pre>
+<p>  এই প্রোগ্রামটিতে প্রথমে আমরা একটি থ্রেড তৈরি করেছি। একে ডিমন থ্রেড হিসেবে চিহ্নিত করেছি। এর পর মেইন থ্রেডকে ১ মিনিটের জন্য বন্ধ করে রেখেছি। এই সময় ডিমন থ্রেডটি চলতে থাকবে। মেইন থ্রেডের কাজ শেষ হওয়ার সঙ্গে সঙ্গে ডিমন থ্রেডটিও বন্ধ হয়ে যাবে। এখানে একটি বিষয় লক্ষ্য রাখতে হবে যে, কেনো ডিমন থ্রেড থেকে আরেকটি নতুন ডিমন থ্রেড চালু করলে সেটিও একটি ডিমন থ্রেড হবে। অর্থাৎ প্যারেন্ট থ্রেড যদি ডিমন হয়, চাইল্ড থ্রেডও ডিমন হবে। এক্ষেত্রে যেহেতু মেইন থ্রেড একটি সাধারণ থ্রেড, তাই মেইন থ্রেড থেকে যে থ্রেডগুলো তৈরি করা হয় সবগুলোই সাধারণ থ্রেড যদি না আলাদাভাবে ডিমন হিসেবে তৈরি করা হয়।</p>
 
 </main>
 

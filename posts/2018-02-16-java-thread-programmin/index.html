@@ -31,17 +31,11 @@
 
     
 
+    <script src="/js/prism.js"></script>
+
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/fonts.css" />
-
-    <link rel="stylesheet"
-          href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/styles/default.min.css">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/highlight.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/languages/java.min.js"
-            integrity="sha512-xEnylOTeZvxUCvtK9Lw3FjOgfCwsMEhUbx6Hant1lPgy+PcynqCm8XfqhpRos6XNaTxeMuT4QyrWyo3U1NijHg=="
-            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-
+    <link rel="stylesheet" href="/css/prism.css" />
 
     
 
@@ -61,8 +55,9 @@ if (!doNotTrack) {
 
   </head>
 
-  <body>
-    <nav>
+  <body class="line-numbers">
+
+  <nav>
     <ul class="menu">
       
       <li><a href="/">Home</a></li>
@@ -97,10 +92,10 @@ if (!doNotTrack) {
 <p>বইটি পাওয়া যাবে –</p>
 <p> [spacer height=”20px”]</p>
 <p>## প্রাপ্তিস্থান [spacer height=”20px”]</p>
-<p><strong><a href="https://www.rokomari.com/book/159071/%E0%A6%9C%E0%A6%BE%E0%A6%AD%E0%A6%BE-%E0%A6%A5%E0%A7%8D%E0%A6%B0%E0%A7%87%E0%A6%A1-%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A7%8B%E0%A6%97%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%AE%E0%A6%BF%E0%A6%82">রকমারি ডট কম</a></strong>, ফোন: ১৬২৯৭<br />
-<strong>হক লাইব্রেরী</strong>, নীলক্ষেত, ঢাকা, ফোন: ০১৮২০-১৫৭১৮১<br />
-<strong>মানিক লাইব্রেরী</strong>, নীলক্ষেত, ঢাকা, ফোন: ০১৭৩৫-৭৪২৯০৮<br />
-<strong>রানা বুক পাবলিশার্স</strong>, নীলক্ষেত, ঢাকা, ফোন: ০১৬২৩-০৫৮৪২৮<br />
+<p><strong><a href="https://www.rokomari.com/book/159071/%E0%A6%9C%E0%A6%BE%E0%A6%AD%E0%A6%BE-%E0%A6%A5%E0%A7%8D%E0%A6%B0%E0%A7%87%E0%A6%A1-%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A7%8B%E0%A6%97%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%AE%E0%A6%BF%E0%A6%82">রকমারি ডট কম</a></strong>, ফোন: ১৬২৯৭<br>
+<strong>হক লাইব্রেরী</strong>, নীলক্ষেত, ঢাকা, ফোন: ০১৮২০-১৫৭১৮১<br>
+<strong>মানিক লাইব্রেরী</strong>, নীলক্ষেত, ঢাকা, ফোন: ০১৭৩৫-৭৪২৯০৮<br>
+<strong>রানা বুক পাবলিশার্স</strong>, নীলক্ষেত, ঢাকা, ফোন: ০১৬২৩-০৫৮৪২৮<br>
 <strong>অন্যরকম প্রকাশনী</strong>, ঢাকা</p>
 <p>[spacer height=”40px”]</p>
 <p>## সূচীপত্র ### লেখকের কথা ### লেখক পরিচিতি ### অধ্যায় ১ : থ্রেডিং কী * ১.১ – থ্রেডিং কী * ১.২ – থ্রেডিংয়ের সুবিধা * ১.৩ – জাভা থ্রেড (Java Thread) * ১.৪ – জাভা মেইন থ্রেড (Java Main Thread) ### অধ্যায় ২ : থ্রেড তৈরি ও ব্যবহার * ২.১ – থ্রেডের এক্সেপশন হ্যান্ডেলিং (Exception handling from thread) * ২.২ – থ্রেড বন্ধ করা (Terminating a Thread) * ২.৩ – volatile কিওয়ার্ডের ব্যবহার * ২.৪ – থ্রেডের জীবনচক্র (Life Cycle of a Thread) * ২.৫ – jstack and JConsole 51 * ২.৬ – থ্রেড স্লিপিং এবং রিজিউমিং (Thread sleeping and resuming) * ২.৭ – থ্রেড সমাপ্তির জন্য অপেক্ষা (Waiting for finalization of a thread ) ### অধ্যায় ৩ : থ্রেড সেফটি ও ডেটা সিনক্রোনাইজেশন * ৩.১ – থ্রেডের এক্সেপশন হ্যান্ডেলিং (Exception handling from thread) * ৩.২ – থ্রেড লোকাল (ThreadLocal) * ৩.৩ – একাধিক থ্রেডের মধ্যে মেমোরি শেয়ার করা (Memory sharing across multiple threads) * ৩.৪ – থ্রেড সেফটি (Thread safety) * ৩.৫ – ইমিউটেবল অবজেক্ট (Immutable Object) * ৩.৬ – রেস কন্ডিশন এবং ক্রিটিক্যাল সেকশন (Race condition and Critical section) * ৩.৭ – লাইভনেস (Liveness) * ৩.৮ – ডেডলক (Deadlock) * ৩.৮ – ডাইনিং ফিলোসফারস সমস্যা (The Dining Philosophers Problem) * ৩.৮ – wait(), notify() এবং notifyAll() ### অধ্যায় ৪ : সিনক্রোনাইজড ও কনকারেন্ট কালেকশন * ৪.১ – সিনক্রোনাইজড কালেকশন ও কনকারেন্ট কালেকশন ### অধ্যায় ৫ : ব্লকিং কিউ ও প্রডিউসার-কনজিউমার প্যাটার্ন ### অধ্যায় ৬ : এক্সিকিউটর ফ্রেমওয়ার্ক * ৬.১ – এক্সিকিউটর ফ্রেমওয়ার্ক (Executor Framework) * ৬.২ – থ্রেডপুল (Thread Pool) * ৬.৩ – Callable এবং Future ### অধ্যায় ৭ : লকস এবং ল্যাচেস (Locks and Latches) * ৭.১ – লকস (Locks) * ৭.২ – ল্যাচ (Latch) ### অধ্যায় ৮ : কনকারেন্সি বনাম প্যারালালিজম * ৮.১ – কনকারেন্সি বনাম প্যারালালিজম (Concurrency vs. Parallelism) * ৮.২ – Fork/Join Basics ### অধ্যায় ৯ : প্রজেক্ট * ৯.১ – মাল্টিথ্রেডেড ফাইল ডাউনলোডার (Multi-Threaded File Downloader) ### পরিশিষ্ট * পরিশিষ্ট-১ : অ্যাটোমিক ভ্যারিয়েবলস * পরিশিষ্ট-২ : ডিমন থ্রেড (DAEMON Thread) * পরিশিষ্ট-৩ : একটি লাইভলকের উদাহরণ * পরিশিষ্ট-৪ : অনেক বেশি থ্রেড অ্যাপ্লিকেশনকে ধীর করে * পরিশিষ্ট-৫ : জাভা মেমোরি মডেল (Java Memory Model – JMM) ## বইয়ের বর্ণনা</p>

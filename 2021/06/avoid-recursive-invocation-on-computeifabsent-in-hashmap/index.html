@@ -33,17 +33,11 @@ We first check if a value exists or not using containsKey() in an &amp;ldquo;if 
 
     
 
+    <script src="/js/prism.js"></script>
+
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/fonts.css" />
-
-    <link rel="stylesheet"
-          href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/styles/default.min.css">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/highlight.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/languages/java.min.js"
-            integrity="sha512-xEnylOTeZvxUCvtK9Lw3FjOgfCwsMEhUbx6Hant1lPgy+PcynqCm8XfqhpRos6XNaTxeMuT4QyrWyo3U1NijHg=="
-            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-
+    <link rel="stylesheet" href="/css/prism.css" />
 
     
 
@@ -63,8 +57,9 @@ if (!doNotTrack) {
 
   </head>
 
-  <body>
-    <nav>
+  <body class="line-numbers">
+
+  <nav>
     <ul class="menu">
       
       <li><a href="/">Home</a></li>
@@ -95,33 +90,36 @@ if (!doNotTrack) {
 </p>
 
 <main>
-    <p><img src="/img/Day002.png" alt="100DaysOfProgramming_Day002" title="100DaysOfJava" /></p>
+    <p><img src="/img/Day002.png" alt="100DaysOfProgramming_Day002" title="100DaysOfJava"></p>
 <p>If a value doesn&rsquo;t exist in the map, we calculate. We do it imperatively.</p>
 <p>We first check if a value exists or not using containsKey() in an &ldquo;if block.&rdquo; If not found, we then calculate as follows-</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">  <span style="color:#66d9ef">static</span> Map<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">,</span> BigInteger<span style="color:#f92672">&gt;</span> cache <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashMap<span style="color:#f92672">&lt;&gt;(</span>
-          Map<span style="color:#f92672">.</span><span style="color:#a6e22e">of</span><span style="color:#f92672">(</span>0<span style="color:#f92672">,</span> BigInteger<span style="color:#f92672">.</span><span style="color:#a6e22e">ZERO</span><span style="color:#f92672">,</span> 1<span style="color:#f92672">,</span> BigInteger<span style="color:#f92672">.</span><span style="color:#a6e22e">ONE</span><span style="color:#f92672">)</span>
-  <span style="color:#f92672">);</span>
+<pre><code class="language-java">  static Map&lt;Integer, BigInteger&gt; cache = new HashMap&lt;&gt;(
+          Map.of(0, BigInteger.ZERO, 1, BigInteger.ONE)
+  );
 
-  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> BigInteger <span style="color:#a6e22e">fibonacci</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> n<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(!</span>cache<span style="color:#f92672">.</span><span style="color:#a6e22e">containsKey</span><span style="color:#f92672">(</span>n<span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
-      var computed <span style="color:#f92672">=</span> fibonacci<span style="color:#f92672">(</span>n <span style="color:#f92672">-</span> 1<span style="color:#f92672">).</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>fibonacci<span style="color:#f92672">(</span>n <span style="color:#f92672">-</span> 2<span style="color:#f92672">));</span>
-      cache<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span>n<span style="color:#f92672">,</span> computed<span style="color:#f92672">);</span>
-    <span style="color:#f92672">}</span>
+  public static BigInteger fibonacci(int n) {
+    if (!cache.containsKey(n)) {
+      var computed = fibonacci(n - 1).add(fibonacci(n - 2));
+      cache.put(n, computed);
+    }
 
-    <span style="color:#66d9ef">return</span> cache<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>n<span style="color:#f92672">);</span>
-  <span style="color:#f92672">}</span>
-</code></pre></div><p>However, this above code can be done in one line with a declarative approach using-computeIfAbsent method. For example -</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> BigInteger <span style="color:#a6e22e">fibonacci</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> n<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-    <span style="color:#66d9ef">return</span> cache<span style="color:#f92672">.</span><span style="color:#a6e22e">computeIfAbsent</span><span style="color:#f92672">(</span>n<span style="color:#f92672">,</span>
-            key <span style="color:#f92672">-&gt;</span> fibonacci<span style="color:#f92672">(</span>key <span style="color:#f92672">-</span> 1<span style="color:#f92672">).</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>fibonacci<span style="color:#f92672">(</span>key <span style="color:#f92672">-</span> 2<span style="color:#f92672">)));</span>
-  <span style="color:#f92672">}</span>
-</code></pre></div><p>Although the above code is intuitive and functional, it doesn&rsquo;t go along with the recursive invocation.</p>
+    return cache.get(n);
+  }
+</code></pre>
+<p>However, this above code can be done in one line with a declarative approach using-computeIfAbsent method. For example -</p>
+<pre><code class="language-java">  public static BigInteger fibonacci(int n) {
+    return cache.computeIfAbsent(n,
+            key -&gt; fibonacci(key - 1).add(fibonacci(key - 2)));
+  }
+</code></pre>
+<p>Although the above code is intuitive and functional, it doesn&rsquo;t go along with the recursive invocation.</p>
 <p>If we do the above, we will end up getting a ConcurrentModificationException exception. Because of fibonacci()&rsquo;s invocation, we are attempting to modify values mapped to keys (key-1) and (key -2).</p>
 <p>There is a modification count checking in the computeIfAbsent() method -</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">int</span> mc <span style="color:#f92672">=</span> modCount<span style="color:#f92672">;</span>
-V v <span style="color:#f92672">=</span> mappingFunction<span style="color:#f92672">.</span><span style="color:#a6e22e">apply</span><span style="color:#f92672">(</span>key<span style="color:#f92672">);</span>
-<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>mc <span style="color:#f92672">!=</span> modCount<span style="color:#f92672">)</span> <span style="color:#f92672">{</span> <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> ConcurrentModificationException<span style="color:#f92672">();</span> <span style="color:#f92672">}</span>
-</code></pre></div><p>The expectation is, the mapping function should not modify this map during computation, which we are doing in the recursion.</p>
+<pre><code class="language-java">int mc = modCount;
+V v = mappingFunction.apply(key);
+if (mc != modCount) { throw new ConcurrentModificationException(); }
+</code></pre>
+<p>The expectation is, the mapping function should not modify this map during computation, which we are doing in the recursion.</p>
 <p>Why does it throw <code>ConcurrentModificationException</code>? The idea is, it is not permissible for one thread to modify a Map while another thread is iterating on Collection-views of the HashMap. It will create inconsistencies and non-deterministic behaviour at an undetermined time. Fail fast approach is taken into consideration over here.</p>
 <p>But in the above, we didn&rsquo;t use this code in the different thread, right? Well, it&rsquo;s more of a contract. If the contract is violated the exception is thrown, even if the code runs in a single thread.</p>
 <p>So what are the solutions,</p>

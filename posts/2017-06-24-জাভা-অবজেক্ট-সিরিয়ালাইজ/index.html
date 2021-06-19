@@ -33,17 +33,11 @@
 
     
 
+    <script src="/js/prism.js"></script>
+
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/fonts.css" />
-
-    <link rel="stylesheet"
-          href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/styles/default.min.css">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/highlight.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/languages/java.min.js"
-            integrity="sha512-xEnylOTeZvxUCvtK9Lw3FjOgfCwsMEhUbx6Hant1lPgy+PcynqCm8XfqhpRos6XNaTxeMuT4QyrWyo3U1NijHg=="
-            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-
+    <link rel="stylesheet" href="/css/prism.css" />
 
     
 
@@ -63,8 +57,9 @@ if (!doNotTrack) {
 
   </head>
 
-  <body>
-    <nav>
+  <body class="line-numbers">
+
+  <nav>
     <ul class="menu">
       
       <li><a href="/">Home</a></li>
@@ -103,255 +98,263 @@ if (!doNotTrack) {
 <p>২. একটি অজবেক্টেকে একটি কম্পিউটার থেকে অন্য কম্পিউটারে পাঠোনোর প্রয়োজন হতে পারে।</p>
 <p>এবার তাহলে দেখা যাক কীভাবে অবজেক্টকে সিরিয়ালাইজ করা যায়।</p>
 <p>সব অবজেক্টকেই সিরিয়ালাইজ করা যায় না। কোনো অবজেক্টকে সিরিয়ালাইজ করতে হলে, সেই অবজেক্টের ক্লাসকে অবশ্যই java.io.Serializable ইন্টারফেসকে ইমপ্লিমেন্ট করতে হবে। এই ইন্টারফেসটিতে কোনো মেথড নেই। এটি মূলত একটি মার্কার ইন্টারফেইস।</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> java.io.Serializable<span style="color:#f92672">;</span>
+<pre><code class="language-java">import java.io.Serializable;
 
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Person</span> <span style="color:#66d9ef">implements</span> Serializable <span style="color:#f92672">{</span>
-      <span style="color:#66d9ef">private</span> String name<span style="color:#f92672">;</span>
-      <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">int</span> age<span style="color:#f92672">;</span>
-      <span style="color:#75715e">// more properties &amp; methods 
-</span><span style="color:#75715e"></span><span style="color:#f92672">}</span> 
-</code></pre></div><p>উপরের Person ক্লাসটি Serializable ইন্টরফেসটিকে ইমপ্লিমেন্ট করে। এর অর্থ হলো, এই ক্লাসের যেকোনো অবজেক্টকে সিরিয়ালাইজ করা যাবে।</p>
+public class Person implements Serializable {
+      private String name;
+      private int age;
+      // more properties &amp; methods 
+} 
+</code></pre>
+<p>উপরের Person ক্লাসটি Serializable ইন্টরফেসটিকে ইমপ্লিমেন্ট করে। এর অর্থ হলো, এই ক্লাসের যেকোনো অবজেক্টকে সিরিয়ালাইজ করা যাবে।</p>
 <p>তবে যদি কোনো ক্লাস যদি এই ইন্টারফেসকে ইমপ্লিমেন্ট না করে, এবং সেই ক্লাসের অবজেক্টকে সিরিয়ালাইজ করার চেষ্টা করা হয়, তাহলে জাভা রানটাইম NotSerializableException থ্রু করবে।</p>
 <p><strong><strong>সিরিয়ালাইজেশন প্রক্রিয়া:</strong></strong></p>
 <p>প্রথমে আমাদের একটি অবজেক্ট তৈরি করতে হবে। আমরা অবজেক্টের বাইনারি ফরমেটটি একটি ফাইলে সংরক্ষণ করতে চাই। এজন্য আমাদের একটি আউটপুট স্ট্রিম লাগবে- সেক্ষেত্রে যা FileOutputStream । একে একটি ObjectOutputStream দিয়ে wrap করে এর writeObject() মেথডটি কল করলেই অবজেক্টটি সিরিয়ালাইজ হয়ে আউটপুট স্ট্রিমে রাইট হবে।</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">serializeToDisk</span><span style="color:#f92672">(</span>String fileName<span style="color:#f92672">,</span> List<span style="color:#f92672">&lt;</span>OrderLine<span style="color:#f92672">&gt;</span> orders<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        File file <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> File<span style="color:#f92672">(</span>fileName<span style="color:#f92672">);</span>
-        <span style="color:#66d9ef">try</span> <span style="color:#f92672">(</span>ObjectOutputStream outputStream <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ObjectOutputStream<span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> FileOutputStream<span style="color:#f92672">(</span>file<span style="color:#f92672">)))</span> <span style="color:#f92672">{</span>
-            outputStream<span style="color:#f92672">.</span><span style="color:#a6e22e">writeObject</span><span style="color:#f92672">(</span>orders<span style="color:#f92672">);</span>
-        <span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>IOException e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-            e<span style="color:#f92672">.</span><span style="color:#a6e22e">printStackTrace</span><span style="color:#f92672">();</span>
-        <span style="color:#f92672">}</span>
-    <span style="color:#f92672">}</span>
-</code></pre></div><p>উপরের মেথডটি একটি অর্ডার লিস্টকে একটি নির্দিষ্ট ফাইলে সংরক্ষণ করে। এখানে আর্গুমেন্ট থেকে প্রাপ্ত ফাইলের নাম দিয়ে একটি ফাইল তৈরি করা হয়েছে। তারপর <a href="http://www.bazlur.com/2017/03/try-with-resource-statement-in-java.html">ট্রাই-রিসোর্স</a> ব্যবহার করে আউটপুট স্ট্রিম তৈরি করা হয়েছে। এবং ট্রাই ব্লকের ভেতরে অর্ডার লিস্টকে writeObject() মেথড দিয়ে সিরিয়ালাইজ করা হয়েছে।</p>
+<pre><code class="language-java">    public static void serializeToDisk(String fileName, List&lt;OrderLine&gt; orders) {
+        File file = new File(fileName);
+        try (ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream(file))) {
+            outputStream.writeObject(orders);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+</code></pre>
+<p>উপরের মেথডটি একটি অর্ডার লিস্টকে একটি নির্দিষ্ট ফাইলে সংরক্ষণ করে। এখানে আর্গুমেন্ট থেকে প্রাপ্ত ফাইলের নাম দিয়ে একটি ফাইল তৈরি করা হয়েছে। তারপর <a href="http://www.bazlur.com/2017/03/try-with-resource-statement-in-java.html">ট্রাই-রিসোর্স</a> ব্যবহার করে আউটপুট স্ট্রিম তৈরি করা হয়েছে। এবং ট্রাই ব্লকের ভেতরে অর্ডার লিস্টকে writeObject() মেথড দিয়ে সিরিয়ালাইজ করা হয়েছে।</p>
 <p><strong><strong>ডিসিরিয়ালাইজেশন প্রক্রিয়া</strong></strong></p>
 <p>সিরিয়ালেশনের মূল উদ্দেশ্য হচ্ছে সিরিয়ালাইজ কৃত অবজেক্টিকে আবার পুনর্গঠিন করে ব্যবহার করা। এই প্রক্রিয়াটি উপরের প্রক্রিয়াটির মতোই সহজ। এক্ষেত্রে একটি ইনপুট স্ট্রিমের প্রয়োজন হয়।</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> List<span style="color:#f92672">&lt;</span>OrderLine<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">deserializeFromDisk</span><span style="color:#f92672">(</span>String fileName<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        File file <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> File<span style="color:#f92672">(</span>fileName<span style="color:#f92672">);</span>
-        <span style="color:#66d9ef">try</span> <span style="color:#f92672">(</span>ObjectInputStream inputStream <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ObjectInputStream<span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> FileInputStream<span style="color:#f92672">(</span>file<span style="color:#f92672">)))</span> <span style="color:#f92672">{</span>
+<pre><code class="language-java">    public static List&lt;OrderLine&gt; deserializeFromDisk(String fileName) {
+        File file = new File(fileName);
+        try (ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream(file))) {
 
-            <span style="color:#66d9ef">return</span> <span style="color:#f92672">(</span>List<span style="color:#f92672">&lt;</span>OrderLine<span style="color:#f92672">&gt;)</span> inputStream<span style="color:#f92672">.</span><span style="color:#a6e22e">readObject</span><span style="color:#f92672">();</span>
+            return (List&lt;OrderLine&gt;) inputStream.readObject();
 
-        <span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>IOException <span style="color:#f92672">|</span> ClassNotFoundException e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-            e<span style="color:#f92672">.</span><span style="color:#a6e22e">printStackTrace</span><span style="color:#f92672">();</span>
-        <span style="color:#f92672">}</span>
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
 
-        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
-</code></pre></div><p>উপরের মেথডে আর্গুমেন্ট থেকে প্রাপ্ত থেকে ফাইলের নাম থেকে একটি ফাইল তৈরি করা হয়েছে। এরপর <a href="http://www.bazlur.com/2017/03/try-with-resource-statement-in-java.html">ট্রাই-রিসোর্স</a> স্টেটমেন্ট ব্যবহার করে ইনপুট স্ট্রিম তৈরি করা হয়েছে। ট্রাই ব্লকের মধ্যে ইনপুট স্ট্রিমে মেথড readObject() ব্যবহার করে সিরিয়ালাইজকৃত অবজেক্টটি পুনর্গঠন করা হয়েছে।</p>
+        return null;
+    }
+</code></pre>
+<p>উপরের মেথডে আর্গুমেন্ট থেকে প্রাপ্ত থেকে ফাইলের নাম থেকে একটি ফাইল তৈরি করা হয়েছে। এরপর <a href="http://www.bazlur.com/2017/03/try-with-resource-statement-in-java.html">ট্রাই-রিসোর্স</a> স্টেটমেন্ট ব্যবহার করে ইনপুট স্ট্রিম তৈরি করা হয়েছে। ট্রাই ব্লকের মধ্যে ইনপুট স্ট্রিমে মেথড readObject() ব্যবহার করে সিরিয়ালাইজকৃত অবজেক্টটি পুনর্গঠন করা হয়েছে।</p>
 <p><strong>সম্পূর্ণ সোর্সকোড:</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> article.serialization<span style="color:#f92672">;</span>
+<pre><code class="language-java">package article.serialization;
 
 
-<span style="color:#f92672">import</span> java.io.*<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> java.util.Arrays<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> java.util.List<span style="color:#f92672">;</span>
+import java.io.*;
+import java.util.Arrays;
+import java.util.List;
 
-<span style="color:#f92672">import static</span> article.serialization.Price.*<span style="color:#f92672">;</span>
-<span style="color:#f92672">import static</span> article.serialization.Weight.*<span style="color:#f92672">;</span>
-
-
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Store</span> <span style="color:#f92672">{</span>
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        Product toothPaste <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Product<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Tooth Paste&#34;</span><span style="color:#f92672">,</span> price<span style="color:#f92672">(</span>1<span style="color:#f92672">.</span><span style="color:#a6e22e">5</span><span style="color:#f92672">),</span> weight<span style="color:#f92672">(</span>0<span style="color:#f92672">.</span><span style="color:#a6e22e">5</span><span style="color:#f92672">));</span>
-        Product toothBrush <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Product<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Tooth Brush&#34;</span><span style="color:#f92672">,</span> price<span style="color:#f92672">(</span>3<span style="color:#f92672">.</span><span style="color:#a6e22e">5</span><span style="color:#f92672">),</span> weight<span style="color:#f92672">(</span>0<span style="color:#f92672">.</span><span style="color:#a6e22e">3</span><span style="color:#f92672">));</span>
-
-        List<span style="color:#f92672">&lt;</span>OrderLine<span style="color:#f92672">&gt;</span> orders <span style="color:#f92672">=</span>
-                Arrays<span style="color:#f92672">.</span><span style="color:#a6e22e">asList</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> OrderLine<span style="color:#f92672">(</span>toothPaste<span style="color:#f92672">,</span> 2<span style="color:#f92672">),</span>
-                        <span style="color:#66d9ef">new</span> OrderLine<span style="color:#f92672">(</span>toothBrush<span style="color:#f92672">,</span> 3<span style="color:#f92672">));</span>
-
-        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Before serialization: &#34;</span><span style="color:#f92672">);</span>
-        printOrder<span style="color:#f92672">(</span>orders<span style="color:#f92672">);</span>
-
-        String fileName <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;orders.ser&#34;</span><span style="color:#f92672">;</span>
-        serializeToDisk<span style="color:#f92672">(</span>fileName<span style="color:#f92672">,</span> orders<span style="color:#f92672">);</span>
-
-        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">();</span>
-        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;After serialization: &#34;</span><span style="color:#f92672">);</span>
-        List<span style="color:#f92672">&lt;</span>OrderLine<span style="color:#f92672">&gt;</span> deserializeOrders <span style="color:#f92672">=</span> deserializeFromDisk<span style="color:#f92672">(</span>fileName<span style="color:#f92672">);</span>
-        printOrder<span style="color:#f92672">(</span>deserializeOrders<span style="color:#f92672">);</span>
-
-        <span style="color:#75715e">/*
-</span><span style="color:#75715e">        Output:
-</span><span style="color:#75715e">        Before serialization:
-</span><span style="color:#75715e">        Total Price: 13.5
-</span><span style="color:#75715e">        Total Weight: 1.9
-</span><span style="color:#75715e">
-</span><span style="color:#75715e">        After serialization:
-</span><span style="color:#75715e">        Total Price: 13.5
-</span><span style="color:#75715e">        Total Weight: 1.9
-</span><span style="color:#75715e">        */</span>
-    <span style="color:#f92672">}</span>
-
-    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">printOrder</span><span style="color:#f92672">(</span>List<span style="color:#f92672">&lt;</span>OrderLine<span style="color:#f92672">&gt;</span> orders<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        orders<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">()</span>
-                <span style="color:#f92672">.</span><span style="color:#a6e22e">map</span><span style="color:#f92672">(</span>OrderLine<span style="color:#f92672">::</span>getAmount<span style="color:#f92672">)</span>
-                <span style="color:#f92672">.</span><span style="color:#a6e22e">reduce</span><span style="color:#f92672">(</span>Price<span style="color:#f92672">::</span>add<span style="color:#f92672">)</span>
-                <span style="color:#f92672">.</span><span style="color:#a6e22e">ifPresent</span><span style="color:#f92672">(</span>price <span style="color:#f92672">-&gt;</span>
-                        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>String<span style="color:#f92672">.</span><span style="color:#a6e22e">format</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Total Price: %s&#34;</span><span style="color:#f92672">,</span> price<span style="color:#f92672">)));</span>
-
-        orders<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">()</span>
-                <span style="color:#f92672">.</span><span style="color:#a6e22e">map</span><span style="color:#f92672">(</span>OrderLine<span style="color:#f92672">::</span>getWeight<span style="color:#f92672">)</span>
-                <span style="color:#f92672">.</span><span style="color:#a6e22e">reduce</span><span style="color:#f92672">(</span>Weight<span style="color:#f92672">::</span>add<span style="color:#f92672">)</span>
-                <span style="color:#f92672">.</span><span style="color:#a6e22e">ifPresent</span><span style="color:#f92672">(</span>weight <span style="color:#f92672">-&gt;</span>
-                        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>String<span style="color:#f92672">.</span><span style="color:#a6e22e">format</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Total Weight: %s&#34;</span><span style="color:#f92672">,</span> weight<span style="color:#f92672">)));</span>
-    <span style="color:#f92672">}</span>
-
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">serializeToDisk</span><span style="color:#f92672">(</span>String fileName<span style="color:#f92672">,</span> List<span style="color:#f92672">&lt;</span>OrderLine<span style="color:#f92672">&gt;</span> orders<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        File file <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> File<span style="color:#f92672">(</span>fileName<span style="color:#f92672">);</span>
-
-        <span style="color:#66d9ef">try</span> <span style="color:#f92672">(</span>ObjectOutputStream outputStream <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ObjectOutputStream<span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> FileOutputStream<span style="color:#f92672">(</span>file<span style="color:#f92672">)))</span> <span style="color:#f92672">{</span>
-            outputStream<span style="color:#f92672">.</span><span style="color:#a6e22e">writeObject</span><span style="color:#f92672">(</span>orders<span style="color:#f92672">);</span>
-        <span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>IOException e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-            e<span style="color:#f92672">.</span><span style="color:#a6e22e">printStackTrace</span><span style="color:#f92672">();</span>
-        <span style="color:#f92672">}</span>
-    <span style="color:#f92672">}</span>
-
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> List<span style="color:#f92672">&lt;</span>OrderLine<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">deserializeFromDisk</span><span style="color:#f92672">(</span>String fileName<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        File file <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> File<span style="color:#f92672">(</span>fileName<span style="color:#f92672">);</span>
-
-        <span style="color:#66d9ef">try</span> <span style="color:#f92672">(</span>ObjectInputStream inputStream <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ObjectInputStream<span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> FileInputStream<span style="color:#f92672">(</span>file<span style="color:#f92672">)))</span> <span style="color:#f92672">{</span>
-
-            <span style="color:#66d9ef">return</span> <span style="color:#f92672">(</span>List<span style="color:#f92672">&lt;</span>OrderLine<span style="color:#f92672">&gt;)</span> inputStream<span style="color:#f92672">.</span><span style="color:#a6e22e">readObject</span><span style="color:#f92672">();</span>
-
-        <span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>IOException <span style="color:#f92672">|</span> ClassNotFoundException e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-            e<span style="color:#f92672">.</span><span style="color:#a6e22e">printStackTrace</span><span style="color:#f92672">();</span>
-        <span style="color:#f92672">}</span>
-
-        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> article.serialization<span style="color:#f92672">;</span>
-
-<span style="color:#f92672">import</span> java.io.Serializable<span style="color:#f92672">;</span>
+import static article.serialization.Price.*;
+import static article.serialization.Weight.*;
 
 
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">OrderLine</span> <span style="color:#66d9ef">implements</span> Serializable <span style="color:#f92672">{</span>
-    <span style="color:#66d9ef">private</span> Product product<span style="color:#f92672">;</span>
-    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">int</span> count<span style="color:#f92672">;</span>
+public class Store {
+    public static void main(String[] args) {
+        Product toothPaste = new Product(&quot;Tooth Paste&quot;, price(1.5), weight(0.5));
+        Product toothBrush = new Product(&quot;Tooth Brush&quot;, price(3.5), weight(0.3));
 
-    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">OrderLine</span><span style="color:#f92672">(</span>Product product<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> count<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">product</span> <span style="color:#f92672">=</span> product<span style="color:#f92672">;</span>
-        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">count</span> <span style="color:#f92672">=</span> count<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
+        List&lt;OrderLine&gt; orders =
+                Arrays.asList(new OrderLine(toothPaste, 2),
+                        new OrderLine(toothBrush, 3));
 
-    <span style="color:#66d9ef">public</span> Product <span style="color:#a6e22e">getProduct</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">return</span> product<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
+        System.out.println(&quot;Before serialization: &quot;);
+        printOrder(orders);
 
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setProduct</span><span style="color:#f92672">(</span>Product product<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">product</span> <span style="color:#f92672">=</span> product<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
+        String fileName = &quot;orders.ser&quot;;
+        serializeToDisk(fileName, orders);
 
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">getCount</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">return</span> count<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
+        System.out.println();
+        System.out.println(&quot;After serialization: &quot;);
+        List&lt;OrderLine&gt; deserializeOrders = deserializeFromDisk(fileName);
+        printOrder(deserializeOrders);
 
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setCount</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> count<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">count</span> <span style="color:#f92672">=</span> count<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
+        /*
+        Output:
+        Before serialization:
+        Total Price: 13.5
+        Total Weight: 1.9
 
-    <span style="color:#66d9ef">public</span> Weight <span style="color:#a6e22e">getWeight</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">product</span><span style="color:#f92672">.</span><span style="color:#a6e22e">getWeight</span><span style="color:#f92672">().</span><span style="color:#a6e22e">mult</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">count</span><span style="color:#f92672">);</span>
-    <span style="color:#f92672">}</span>
+        After serialization:
+        Total Price: 13.5
+        Total Weight: 1.9
+        */
+    }
 
-    <span style="color:#66d9ef">public</span> Price <span style="color:#a6e22e">getAmount</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">product</span><span style="color:#f92672">.</span><span style="color:#a6e22e">getPrice</span><span style="color:#f92672">().</span><span style="color:#a6e22e">mult</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">count</span><span style="color:#f92672">);</span>
-    <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> article.serialization<span style="color:#f92672">;</span>
+    private static void printOrder(List&lt;OrderLine&gt; orders) {
+        orders.stream()
+                .map(OrderLine::getAmount)
+                .reduce(Price::add)
+                .ifPresent(price -&gt;
+                        System.out.println(String.format(&quot;Total Price: %s&quot;, price)));
 
-<span style="color:#f92672">import</span> java.io.Serializable<span style="color:#f92672">;</span>
+        orders.stream()
+                .map(OrderLine::getWeight)
+                .reduce(Weight::add)
+                .ifPresent(weight -&gt;
+                        System.out.println(String.format(&quot;Total Weight: %s&quot;, weight)));
+    }
 
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Price</span> <span style="color:#66d9ef">implements</span> Serializable <span style="color:#f92672">{</span>
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">double</span> value<span style="color:#f92672">;</span>
+    public static void serializeToDisk(String fileName, List&lt;OrderLine&gt; orders) {
+        File file = new File(fileName);
 
-    <span style="color:#66d9ef">private</span> <span style="color:#a6e22e">Price</span><span style="color:#f92672">(</span><span style="color:#66d9ef">double</span> value<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> value<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
+        try (ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream(file))) {
+            outputStream.writeObject(orders);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> Price <span style="color:#a6e22e">price</span><span style="color:#f92672">(</span><span style="color:#66d9ef">double</span> value<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>value <span style="color:#f92672">&lt;=</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-            <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> IllegalArgumentException<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Price must be greater than 0&#34;</span><span style="color:#f92672">);</span>
-        <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
-            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> Price<span style="color:#f92672">(</span>value<span style="color:#f92672">);</span>
-        <span style="color:#f92672">}</span>
-    <span style="color:#f92672">}</span>
+    public static List&lt;OrderLine&gt; deserializeFromDisk(String fileName) {
+        File file = new File(fileName);
 
+        try (ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream(file))) {
 
-    <span style="color:#66d9ef">public</span> Price <span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>Price price<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> Price<span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">value</span> <span style="color:#f92672">+</span> price<span style="color:#f92672">.</span><span style="color:#a6e22e">value</span><span style="color:#f92672">);</span>
-    <span style="color:#f92672">}</span>
+            return (List&lt;OrderLine&gt;) inputStream.readObject();
 
-    <span style="color:#66d9ef">public</span> Price <span style="color:#a6e22e">mult</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> count<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> Price<span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">value</span> count<span style="color:#f92672">);</span>
-    <span style="color:#f92672">}</span>
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
 
-    <span style="color:#a6e22e">@Override</span>
-    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">toString</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">return</span> Double<span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">value</span><span style="color:#f92672">);</span>
-    <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> article.serialization<span style="color:#f92672">;</span>
+        return null;
+    }
+}
+</code></pre>
+<pre><code class="language-java">package article.serialization;
 
-<span style="color:#f92672">import</span> java.io.Serializable<span style="color:#f92672">;</span>
-
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Product</span> <span style="color:#66d9ef">implements</span> Serializable<span style="color:#f92672">{</span>
-    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">final</span> String name<span style="color:#f92672">;</span>
-    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">final</span> Price price<span style="color:#f92672">;</span>
-    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">final</span> Weight weight<span style="color:#f92672">;</span>
-
-    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Product</span><span style="color:#f92672">(</span>String name<span style="color:#f92672">,</span> Price price<span style="color:#f92672">,</span> Weight weight<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> name<span style="color:#f92672">;</span>
-        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">price</span> <span style="color:#f92672">=</span> price<span style="color:#f92672">;</span>
-        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">weight</span> <span style="color:#f92672">=</span> weight<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
-
-    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getName</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">return</span> name<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
-
-    <span style="color:#66d9ef">public</span> Price <span style="color:#a6e22e">getPrice</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">return</span> price<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
-
-    <span style="color:#66d9ef">public</span> Weight <span style="color:#a6e22e">getWeight</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">return</span> weight<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> article.serialization<span style="color:#f92672">;</span>
-
-<span style="color:#f92672">import</span> java.io.Serializable<span style="color:#f92672">;</span>
+import java.io.Serializable;
 
 
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Weight</span> <span style="color:#66d9ef">implements</span> Serializable <span style="color:#f92672">{</span>
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">double</span> value<span style="color:#f92672">;</span>
+public class OrderLine implements Serializable {
+    private Product product;
+    private int count;
 
-    <span style="color:#66d9ef">private</span> <span style="color:#a6e22e">Weight</span><span style="color:#f92672">(</span><span style="color:#66d9ef">double</span> value<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> value<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
+    public OrderLine(Product product, int count) {
+        this.product = product;
+        this.count = count;
+    }
 
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> Weight <span style="color:#a6e22e">weight</span><span style="color:#f92672">(</span><span style="color:#66d9ef">double</span> value<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>value <span style="color:#f92672">&lt;=</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-            <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> IllegalArgumentException<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Weight must be greater than 0&#34;</span><span style="color:#f92672">);</span>
-        <span style="color:#f92672">}</span>
+    public Product getProduct() {
+        return product;
+    }
 
-        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> Weight<span style="color:#f92672">(</span>value<span style="color:#f92672">);</span>
-    <span style="color:#f92672">}</span>
+    public void setProduct(Product product) {
+        this.product = product;
+    }
 
-    <span style="color:#66d9ef">public</span> Weight <span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>Weight weight<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> Weight<span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">value</span> <span style="color:#f92672">+</span> weight<span style="color:#f92672">.</span><span style="color:#a6e22e">value</span><span style="color:#f92672">);</span>
-    <span style="color:#f92672">}</span>
+    public int getCount() {
+        return count;
+    }
 
-    <span style="color:#66d9ef">public</span> Weight <span style="color:#a6e22e">mult</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> count<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> Weight<span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">value</span> count<span style="color:#f92672">);</span>
-    <span style="color:#f92672">}</span>
+    public void setCount(int count) {
+        this.count = count;
+    }
 
-    <span style="color:#a6e22e">@Override</span>
-    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">toString</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">return</span> Double<span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">value</span><span style="color:#f92672">);</span>
-    <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
-</code></pre></div>
+    public Weight getWeight() {
+        return this.product.getWeight().mult(this.count);
+    }
+
+    public Price getAmount() {
+        return this.product.getPrice().mult(this.count);
+    }
+}
+</code></pre>
+<pre><code class="language-java">package article.serialization;
+
+import java.io.Serializable;
+
+public class Price implements Serializable {
+    public final double value;
+
+    private Price(double value) {
+        this.value = value;
+    }
+
+    public static Price price(double value) {
+        if (value &lt;= 0) {
+            throw new IllegalArgumentException(&quot;Price must be greater than 0&quot;);
+        } else {
+            return new Price(value);
+        }
+    }
+
+
+    public Price add(Price price) {
+        return new Price(this.value + price.value);
+    }
+
+    public Price mult(int count) {
+        return new Price(this.value count);
+    }
+
+    @Override
+    public String toString() {
+        return Double.toString(this.value);
+    }
+}
+</code></pre>
+<pre><code class="language-java">package article.serialization;
+
+import java.io.Serializable;
+
+public class Product implements Serializable{
+    private final String name;
+    private final Price price;
+    private final Weight weight;
+
+    public Product(String name, Price price, Weight weight) {
+        this.name = name;
+        this.price = price;
+        this.weight = weight;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public Price getPrice() {
+        return price;
+    }
+
+    public Weight getWeight() {
+        return weight;
+    }
+}
+</code></pre>
+<pre><code class="language-java">package article.serialization;
+
+import java.io.Serializable;
+
+
+public class Weight implements Serializable {
+    public final double value;
+
+    private Weight(double value) {
+        this.value = value;
+    }
+
+    public static Weight weight(double value) {
+        if (value &lt;= 0) {
+            throw new IllegalArgumentException(&quot;Weight must be greater than 0&quot;);
+        }
+
+        return new Weight(value);
+    }
+
+    public Weight add(Weight weight) {
+        return new Weight(this.value + weight.value);
+    }
+
+    public Weight mult(int count) {
+        return new Weight(this.value count);
+    }
+
+    @Override
+    public String toString() {
+        return Double.toString(this.value);
+    }
+}
+</code></pre>
+
 </main>
 
 <p class="post-tag">

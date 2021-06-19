@@ -31,17 +31,11 @@
 
     
 
+    <script src="/js/prism.js"></script>
+
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/fonts.css" />
-
-    <link rel="stylesheet"
-          href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/styles/default.min.css">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/highlight.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/languages/java.min.js"
-            integrity="sha512-xEnylOTeZvxUCvtK9Lw3FjOgfCwsMEhUbx6Hant1lPgy+PcynqCm8XfqhpRos6XNaTxeMuT4QyrWyo3U1NijHg=="
-            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-
+    <link rel="stylesheet" href="/css/prism.css" />
 
     
 
@@ -61,8 +55,9 @@ if (!doNotTrack) {
 
   </head>
 
-  <body>
-    <nav>
+  <body class="line-numbers">
+
+  <nav>
     <ul class="menu">
       
       <li><a href="/">Home</a></li>
@@ -95,14 +90,16 @@ if (!doNotTrack) {
 <main>
     <p>জাভাতে স্ট্রিং ক্লাস <strong>immutable</strong>, এর মানে হচ্ছে, একবার কোন স্ট্রিং অবজেক্ট তৈরি করলে তাকে আর পরিবর্তন করা যাবে না। আমরা অনেক ক্লাস লিখি, তারপর এর মাঝে বিভিন্ন ভ্যারিয়েবল রাখি, অবজেক্ট তৈরি করার পর সেই অবজেক্টর এর ভেতরের ভ্যারিয়েবল গুলো বিভিন্ন সময় পরিবতর্তন করতে পারি। কিন্তু স্ট্রিং এর ক্ষেত্রে এটি সম্ভব নয়। অর্থাৎ আমরা যদি কোন একটি ভ্যালু দিয়ে একবার একটি স্ট্রিং অবজেক্ট তৈরি করি তাহলে সেটি আর পরিবর্তন করা যাবে না।</p>
 <p>কিন্তু আমরা অনেকসময়ই স্ট্রিং কনকেট করি, সেক্ষেত্রে যা হয়, মনে করি-</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    String str <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Hello &#34;</span><span style="color:#f92672">;</span>
-    str <span style="color:#f92672">=</span> str <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;world&#34;</span><span style="color:#f92672">;</span>
-</code></pre></div><p>এখানে যদিও মনে হচ্ছে আমরা স্ট্রিং এর ভ্যালু পরিবর্তন করে ফেলেছি। কিন্তু আসলে যা হচ্ছে তা হলো, আমরা প্রথমে একটি অবজেক্ট তৈরি করেছি, তারপর সেই অবেজক্টএর ভ্যালু এবং নতুন একটি ভ্যালু নিয়ে নতুন একটি অবজেক্ট তৈরি করেছি, এবং যা <strong>str</strong> এখন নতুন সেই অবজেক্টকে রেফার করছে। আগের অবজেক্টটিকে গার্বেজ কালেক্টর নিয়ে চলে যাবে।</p>
+<pre><code class="language-java">    String str = &quot;Hello &quot;;
+    str = str + &quot;world&quot;;
+</code></pre>
+<p>এখানে যদিও মনে হচ্ছে আমরা স্ট্রিং এর ভ্যালু পরিবর্তন করে ফেলেছি। কিন্তু আসলে যা হচ্ছে তা হলো, আমরা প্রথমে একটি অবজেক্ট তৈরি করেছি, তারপর সেই অবেজক্টএর ভ্যালু এবং নতুন একটি ভ্যালু নিয়ে নতুন একটি অবজেক্ট তৈরি করেছি, এবং যা <strong>str</strong> এখন নতুন সেই অবজেক্টকে রেফার করছে। আগের অবজেক্টটিকে গার্বেজ কালেক্টর নিয়ে চলে যাবে।</p>
 <p><em>এখন প্রশ্ন হচ্ছে, কেন এই <strong>immutability</strong> দরকার হয়।</em></p>
 <p>স্ট্রিং পুল (Stirng Pool) সম্পর্কে হয়তো অনেকেই জানি। এটি একটি জাভা হিপ এর একটি স্পেশাল এরিয়া । আমাদের যদি নতুন একটি স্ট্রিং তৈরি করতে হয়, সেই স্ট্রিং যদি আগে থেকেই স্ট্রিং পুল এ থেকে থাকে, তাহলে নতুন করে আর তৈরি না করে আগের অবজেক্টটির রেফারেন্স দেওয়া হয়। এতে করে আমাদের মেমরি ফ্রুটপ্রিন্ট অনেক কমে যাচ্ছে।</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    String string1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;abcd&#34;</span><span style="color:#f92672">;</span>
-    String string2 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;abcd&#34;</span><span style="color:#f92672">;</span>
-</code></pre></div><p>আমরা যদি এই দুটি লাইন লিখি, তাহলে আসলে জাভা হিপ এ একটি স্ট্রিং অবজেক্ট-ই থাকবে, দুটি তৈরি হবে না। যদি স্ট্রিং <strong>immutable</strong> না হয়, তাহলে একটি স্ট্রিং যদি পরিবর্তন করি, তাহলে আসলে অন্যান্য রেফারেন্স গুলোও পরিবর্তন হয়ে যাবে।</p>
+<pre><code class="language-java">    String string1 = &quot;abcd&quot;;
+    String string2 = &quot;abcd&quot;;
+</code></pre>
+<p>আমরা যদি এই দুটি লাইন লিখি, তাহলে আসলে জাভা হিপ এ একটি স্ট্রিং অবজেক্ট-ই থাকবে, দুটি তৈরি হবে না। যদি স্ট্রিং <strong>immutable</strong> না হয়, তাহলে একটি স্ট্রিং যদি পরিবর্তন করি, তাহলে আসলে অন্যান্য রেফারেন্স গুলোও পরিবর্তন হয়ে যাবে।</p>
 <p>এছাড়াও, আমরা জানি যে স্ট্রিং এর <strong>hashcode</strong> খুব বেশি ব্যবহার করা হয়। যেমন <strong>HashMap</strong>। স্ট্রিং <strong>immutable</strong> হওয়ায় এটা গ্যারান্টিড যে, সবসময়<strong>hashcode</strong> এক-ই হবে, সুতরাং আমরা প্রতিবার <strong>hashcode</strong> ক্যালকুলেট না করে নির্ধিদ্বায় ক্যাশিং করতে পারি।</p>
 <p>আমরা স্ট্রিং প্যারামিটার হিসেব অনেক বেশি ব্যবহার করে থাকি, যেমন, নেটওয়ার্ক কানেকশান, ফাইল অপেনিং ইত্যাদির ক্ষে্ত্রে। সুতরাং এটি <strong>immutable</strong> না হলে পরিবর্তন করে ফেলা সম্ভব যা কিনা একটি সিরিয়াস রকম সিকিউরিটি থ্রেড হতে পারে। কিন্তু যেহেতু স্ট্রিং <strong>immutable</strong>, সুতরাং সেই সম্ভবনা নেই।</p>
 <p>তাছাড়া স্ট্রিং <strong>immutable</strong> হওয়ায় এটি ন্যাচারালি থ্রেড সেইফ, এবং স্বাধীনভাবে যে কেন থ্রেড একসেস করে পারে আমাদেরকে কষ্ট করে এর থ্রেড সেইফটি নিয়ে চিন্তা করতে হয় না।</p>

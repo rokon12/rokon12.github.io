@@ -14,8 +14,7 @@
       
       <guid>http://bazlur.com/2011/06/java-collection-framework-list/</guid>
       <description>Java collection framework is very common to every java programmer, again for the beginner, I’m going to share my ideas about it. It’s beneficial to manage objects easily. The Java collection framework is a more likely array, but the difference is that collections can dynamically change their size. Today I’m going to write only about the List.
-List:
-The java.util.List interface is a subtype of the java.util.Collection interface. It represents an order list of objects.</description>
+List: The java.util.List interface is a subtype of the java.util.Collection interface. It represents an order list of objects.</description>
     </item>
     
   </channel>

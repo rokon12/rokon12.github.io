@@ -34,17 +34,11 @@
 
     
 
+    <script src="/js/prism.js"></script>
+
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/fonts.css" />
-
-    <link rel="stylesheet"
-          href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/styles/default.min.css">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/highlight.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/languages/java.min.js"
-            integrity="sha512-xEnylOTeZvxUCvtK9Lw3FjOgfCwsMEhUbx6Hant1lPgy+PcynqCm8XfqhpRos6XNaTxeMuT4QyrWyo3U1NijHg=="
-            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-
+    <link rel="stylesheet" href="/css/prism.css" />
 
     
 
@@ -64,8 +58,9 @@ if (!doNotTrack) {
 
   </head>
 
-  <body>
-    <nav>
+  <body class="line-numbers">
+
+  <nav>
     <ul class="menu">
       
       <li><a href="/">Home</a></li>
@@ -101,218 +96,235 @@ if (!doNotTrack) {
 <p><strong>ল্যামডা এক্সপ্রেশনঃ</strong></p>
 <p>ল্যামডা টার্মটি এসেছে ল্যম্বডা ক্যালকুলাস (Lambda Calculus) থেকে। এটি গণিতিক যুক্তি ও কম্পিউটার সাইন্সে ব্যবহৃত এক ধরণের ফর্মাল সিস্টেম যাতে বিভিন্ন ধরণের কম্পিউটিশন বিভিন্ন ভ্যারিয়েবলের মাধ্যমে প্রকাশ করা হয়। তবে এই আমাদের এই আলোচনায় তাত্বিক দিকটি পরিহার করে বরং সাধারণভাবে এর আচরণ ও ব্যবহার নিয়ে কথা বলা যাক।</p>
 <p>সহজকরে বলা যেতে পারে যে, ল্যমডা এক্সপ্রেশন হলো একটি ছোট কোড যা কোনো কাজ করে থাকে। উদহারণ-</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> x<span style="color:#f92672">)</span> <span style="color:#960050;background-color:#1e0010">→</span> <span style="color:#f92672">{</span><span style="color:#66d9ef">return</span> x <span style="color:#f92672">+</span>1<span style="color:#f92672">;}</span>
-</code></pre></div><p>উপরের কোডটি একটি ল্যামডা এক্সপ্রেশনের উদাহরণ। এটি দেখে মনে হচ্ছে একটি মেথড কিন্তু এর কোনো নাম নেই। এতে একটি মেথডে যা কিছু থাকে তার পায় সবই রয়েছে, যেমন – প্যারামিটার, মেথড বডি। তবে এতে রিটার্ন টাইপ দেখা যাচ্ছে না। রিটার্ন টাইপ এক্ষেত্রে কম্পাইলার বুঝে নিতে পারে, কারণ এর রিটার্ন স্ট্যাটমেন্টে দেখা যাচ্ছে যে এটি একটি ইন্টিজার রিটার্ন করছে। তাহলে একে বলতে পারি নাম ছাড়া মেথড বা অ্যানোনিমাস মেথড।</p>
+<pre><code class="language-java">(int x) → {return x +1;}
+</code></pre>
+<p>উপরের কোডটি একটি ল্যামডা এক্সপ্রেশনের উদাহরণ। এটি দেখে মনে হচ্ছে একটি মেথড কিন্তু এর কোনো নাম নেই। এতে একটি মেথডে যা কিছু থাকে তার পায় সবই রয়েছে, যেমন – প্যারামিটার, মেথড বডি। তবে এতে রিটার্ন টাইপ দেখা যাচ্ছে না। রিটার্ন টাইপ এক্ষেত্রে কম্পাইলার বুঝে নিতে পারে, কারণ এর রিটার্ন স্ট্যাটমেন্টে দেখা যাচ্ছে যে এটি একটি ইন্টিজার রিটার্ন করছে। তাহলে একে বলতে পারি নাম ছাড়া মেথড বা অ্যানোনিমাস মেথড।</p>
 <p><strong>অ্যানোনিমাস ইনার ক্লাস ও ল্যাম্ডা এক্সপ্রেশন</strong></p>
 <p>জাভা অ্যানোনিমাস ইনার ক্লাস তৈরি করতে দেয় এবং এর বিভিন্ন রকম ব্যবহার রয়েছে। এটিও একধরণের ক্লাস তবে এর কোনো নাম নেই। এটি সাধারণত অন্য একটি ক্লাসের মধ্যে তৈরি করা হয় বলে একে অ্যানোনিমাস ইনার ক্লাস বলা হয়। অ্যানোনিমাস ক্লাস দুই ভাবে তৈরি করা যায়- ইন্টারফেস থেকে এবং একটি ক্লাস থেকে।</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">Filterable</span> <span style="color:#f92672">{</span>
-     <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">apply</span><span style="color:#f92672">(</span>Object obj<span style="color:#f92672">);</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><p>উপরের ইন্টারফেইসটি থেকে একটি অ্যানোনিমাস ইনার ক্লাস তৈরি করা যেতে পারে।</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">new</span> Filterable<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-    <span style="color:#a6e22e">@Override</span>
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">apply</span><span style="color:#f92672">(</span>Object object<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
- <span style="color:#75715e">// other logic 
-</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
-<span style="color:#f92672">};</span>
-</code></pre></div><p>এখানে ইন্টারফেস থেকে একটি ইনার ক্লাস তৈরি করা হয়েছে। এখানে লক্ষ করুন, ইন্টারফেসের সঙ্গে একটি নিউ অপারেটর ব্যবহার করা হয়েছে এবং কার্লি ব্রেসের মধ্যে ইন্টারফেইসটির মেথডটি ইম্প্লিেমেন্ট করা হয়েছে। অর্থাৎ অ্যানোনিমাস ইনার ক্লাস তৈরি করতে হলে নিউ অপারেটর ব্যবহার করতে হয়।</p>
+<pre><code class="language-java">
+public interface Filterable {
+     boolean apply(Object obj);
+}
+</code></pre>
+<p>উপরের ইন্টারফেইসটি থেকে একটি অ্যানোনিমাস ইনার ক্লাস তৈরি করা যেতে পারে।</p>
+<pre><code class="language-java">new Filterable() {
+    @Override
+    public boolean apply(Object object) {
+ // other logic 
+        return false;
+    }
+};
+</code></pre>
+<p>এখানে ইন্টারফেস থেকে একটি ইনার ক্লাস তৈরি করা হয়েছে। এখানে লক্ষ করুন, ইন্টারফেসের সঙ্গে একটি নিউ অপারেটর ব্যবহার করা হয়েছে এবং কার্লি ব্রেসের মধ্যে ইন্টারফেইসটির মেথডটি ইম্প্লিেমেন্ট করা হয়েছে। অর্থাৎ অ্যানোনিমাস ইনার ক্লাস তৈরি করতে হলে নিউ অপারেটর ব্যবহার করতে হয়।</p>
 <p>একইভাবে ক্লাস থেকেও অ্যানোনিমাস ইনার ক্লাস তৈরি করা যায়। যে ক্লাস থেকে অ্যানোনিমাস ক্লাস তৈরি করা হবে সেই ক্লাসটিকে অ্যানোনিমাস ইনার ক্লাস ইনহেরিট করে। উদাহরণ-</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">new</span> Person<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">doSomething</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;doing something&#34;</span><span style="color:#f92672">);</span>
-    <span style="color:#f92672">}</span>
-<span style="color:#f92672">};</span>
-</code></pre></div><p>এখানে <strong>Person</strong> ক্লাস ব্যবহার করে একটি অ্যানোনিমাস ক্লাস তৈরি করা হয়েছে। তবে এই পদ্ধতি নিয়ে এই অনুচ্ছেদে এর বেশি আলোচনা হবে না।</p>
+<pre><code class="language-java">new Person() {
+    public void doSomething() {
+        System.out.println(&quot;doing something&quot;);
+    }
+};
+</code></pre>
+<p>এখানে <strong>Person</strong> ক্লাস ব্যবহার করে একটি অ্যানোনিমাস ক্লাস তৈরি করা হয়েছে। তবে এই পদ্ধতি নিয়ে এই অনুচ্ছেদে এর বেশি আলোচনা হবে না।</p>
 <p>এবার চলুন এই অ্যানোনিমাস ইনার ক্লাসের সুবিধা নিয়ে আলোচনা করা যাক –</p>
 <p>মনে করুন, আপনার কাছে একটি কন্টাক্ট লিস্ট আছে। আপনি এই কন্টাক্ট লিস্ট থেকে নানাভাবে কন্টাক্টগুলোকে ফিল্টার করতে চান।</p>
 <p>আপনার কন্টাক্ট ক্লাসটি দেখতে এরকম-</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Contact</span> <span style="color:#f92672">{</span>
-    <span style="color:#66d9ef">enum</span> Sex <span style="color:#f92672">{</span>
-        MALE<span style="color:#f92672">,</span> FEMALE
-    <span style="color:#f92672">}</span>
+<pre><code class="language-java">public class Contact {
+    enum Sex {
+        MALE, FEMALE
+    }
 
-    <span style="color:#66d9ef">private</span> String name<span style="color:#f92672">;</span>
-    <span style="color:#66d9ef">private</span> String emailAddress<span style="color:#f92672">;</span>
-    <span style="color:#66d9ef">private</span> String phoneNumber<span style="color:#f92672">;</span>
-    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">int</span> age<span style="color:#f92672">;</span>
-    <span style="color:#66d9ef">private</span> Sex sex<span style="color:#f92672">;</span>
+    private String name;
+    private String emailAddress;
+    private String phoneNumber;
+    private int age;
+    private Sex sex;
 
-    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getName</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">return</span> name<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
+    public String getName() {
+        return name;
+    }
 
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setName</span><span style="color:#f92672">(</span>String name<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> name<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
+    public void setName(String name) {
+        this.name = name;
+    }
 
-    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getEmailAddress</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">return</span> emailAddress<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
+    public String getEmailAddress() {
+        return emailAddress;
+    }
 
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setEmailAddress</span><span style="color:#f92672">(</span>String emailAddress<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">emailAddress</span> <span style="color:#f92672">=</span> emailAddress<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
+    public void setEmailAddress(String emailAddress) {
+        this.emailAddress = emailAddress;
+    }
 
-    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getPhoneNumber</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">return</span> phoneNumber<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
 
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setPhoneNumber</span><span style="color:#f92672">(</span>String phoneNumber<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">phoneNumber</span> <span style="color:#f92672">=</span> phoneNumber<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
 
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">getAge</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">return</span> age<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
+    public int getAge() {
+        return age;
+    }
 
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setAge</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> age<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">age</span> <span style="color:#f92672">=</span> age<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
+    public void setAge(int age) {
+        this.age = age;
+    }
 
-    <span style="color:#66d9ef">public</span> Sex <span style="color:#a6e22e">getSex</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">return</span> sex<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
+    public Sex getSex() {
+        return sex;
+    }
 
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setSex</span><span style="color:#f92672">(</span>Sex sex<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">sex</span> <span style="color:#f92672">=</span> sex<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><p>এখন আপনি একটি মেথড লিখতে পারেন, যা আপনার লিস্ট থেকে যাদের বয়স ১৮ থেকে ২৫ এর মধ্যে তাদেরকে আলাদা করবে। মেথডটি এভাবে লেখা যেতে পারে –</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> java.util.ArrayList<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> java.util.List<span style="color:#f92672">;</span>
+    public void setSex(Sex sex) {
+        this.sex = sex;
+    }
+}
+</code></pre>
+<p>এখন আপনি একটি মেথড লিখতে পারেন, যা আপনার লিস্ট থেকে যাদের বয়স ১৮ থেকে ২৫ এর মধ্যে তাদেরকে আলাদা করবে। মেথডটি এভাবে লেখা যেতে পারে –</p>
+<pre><code class="language-java">import java.util.ArrayList;
+import java.util.List;
 
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ContactService</span> <span style="color:#f92672">{</span>
+public class ContactService {
  
-    <span style="color:#66d9ef">public</span> List<span style="color:#f92672">&lt;</span>Contact<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">findContactAgedBetween18And25</span><span style="color:#f92672">(</span>List<span style="color:#f92672">&lt;</span>Contact<span style="color:#f92672">&gt;</span> contactList<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        List<span style="color:#f92672">&lt;</span>Contact<span style="color:#f92672">&gt;</span> contacts <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;();</span>
+    public List&lt;Contact&gt; findContactAgedBetween18And25(List&lt;Contact&gt; contactList) {
+        List&lt;Contact&gt; contacts = new ArrayList&lt;&gt;();
 
-        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span>Contact contact <span style="color:#f92672">:</span> contactList<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>contact<span style="color:#f92672">.</span><span style="color:#a6e22e">getAge</span><span style="color:#f92672">()</span> <span style="color:#f92672">&gt;=</span> 18 <span style="color:#f92672">&amp;&amp;</span> contact<span style="color:#f92672">.</span><span style="color:#a6e22e">getAge</span><span style="color:#f92672">()</span> <span style="color:#f92672">&lt;=</span> 25<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-                contacts<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>contact<span style="color:#f92672">);</span>
-            <span style="color:#f92672">}</span>
-        <span style="color:#f92672">}</span>
+        for (Contact contact : contactList) {
+            if (contact.getAge() &gt;= 18 &amp;&amp; contact.getAge() &lt;= 25) {
+                contacts.add(contact);
+            }
+        }
 
-        <span style="color:#66d9ef">return</span> contacts<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
+        return contacts;
+    }
 
-<span style="color:#f92672">}</span>
-</code></pre></div><p>এক্ষেত্রে এই মেথড প্রথমে কন্টাক্ট লিস্ট থেকে একটি ফর লুপ এবং একটি ইফ স্ট্যাটমেন্ট ব্যবহার করে প্রত্যেকটি কন্টাক্ট পরীক্ষা করে দেখছে যে এদের বয়স ১৮ থেকে ২৫ এর মধ্যে কিনা। তারপর মেথডের মধ্যে একটি লোকাল ভ্যারিয়েলে সেগুলো রাখছে এবং লুপ শেষ হয়ে গেলে রিটার্ন করছে।</p>
+}
+</code></pre>
+<p>এক্ষেত্রে এই মেথড প্রথমে কন্টাক্ট লিস্ট থেকে একটি ফর লুপ এবং একটি ইফ স্ট্যাটমেন্ট ব্যবহার করে প্রত্যেকটি কন্টাক্ট পরীক্ষা করে দেখছে যে এদের বয়স ১৮ থেকে ২৫ এর মধ্যে কিনা। তারপর মেথডের মধ্যে একটি লোকাল ভ্যারিয়েলে সেগুলো রাখছে এবং লুপ শেষ হয়ে গেলে রিটার্ন করছে।</p>
 <p>কিছুক্ষণ পর আপনার মনে হলো, আপনি এই বয়সের মধ্য শুধুমাত্র পুরুষগুলোকে আলাদা করতে চান। সেক্ষেত্রে আপনি একটি নতুন মেথড লিখতে পারেন।</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">   <span style="color:#66d9ef">public</span> List<span style="color:#f92672">&lt;</span>Contact<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">findContactMaleAgedBetween18And25</span><span style="color:#f92672">(</span>List<span style="color:#f92672">&lt;</span>Contact<span style="color:#f92672">&gt;</span> contactList<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        List<span style="color:#f92672">&lt;</span>Contact<span style="color:#f92672">&gt;</span> contacts <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;();</span>
+<pre><code class="language-java">   public List&lt;Contact&gt; findContactMaleAgedBetween18And25(List&lt;Contact&gt; contactList) {
+        List&lt;Contact&gt; contacts = new ArrayList&lt;&gt;();
 
-        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span>Contact contact <span style="color:#f92672">:</span> contactList<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>contact<span style="color:#f92672">.</span><span style="color:#a6e22e">getAge</span><span style="color:#f92672">()</span> <span style="color:#f92672">&gt;=</span> 18
-                    <span style="color:#f92672">&amp;&amp;</span> contact<span style="color:#f92672">.</span><span style="color:#a6e22e">getAge</span><span style="color:#f92672">()</span> <span style="color:#f92672">&lt;=</span> 25
-                    <span style="color:#f92672">&amp;&amp;</span> contact<span style="color:#f92672">.</span><span style="color:#a6e22e">getSex</span><span style="color:#f92672">()</span> <span style="color:#f92672">==</span> Contact<span style="color:#f92672">.</span><span style="color:#a6e22e">Sex</span><span style="color:#f92672">.</span><span style="color:#a6e22e">MALE</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-                contacts<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>contact<span style="color:#f92672">);</span>
-            <span style="color:#f92672">}</span>
-        <span style="color:#f92672">}</span>
+        for (Contact contact : contactList) {
+            if (contact.getAge() &gt;= 18
+                    &amp;&amp; contact.getAge() &lt;= 25
+                    &amp;&amp; contact.getSex() == Contact.Sex.MALE) {
+                contacts.add(contact);
+            }
+        }
 
-        <span style="color:#66d9ef">return</span> contacts<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
-</code></pre></div><p>এভাবে যদি মহিলাদের আলাদা করতে চান তাহলে –</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> List<span style="color:#f92672">&lt;</span>Contact<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">findContactFemaleAgedBetween18And25</span><span style="color:#f92672">(</span>List<span style="color:#f92672">&lt;</span>Contact<span style="color:#f92672">&gt;</span> contactList<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-    List<span style="color:#f92672">&lt;</span>Contact<span style="color:#f92672">&gt;</span> contacts <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;();</span>
+        return contacts;
+    }
+</code></pre>
+<p>এভাবে যদি মহিলাদের আলাদা করতে চান তাহলে –</p>
+<pre><code class="language-java">public List&lt;Contact&gt; findContactFemaleAgedBetween18And25(List&lt;Contact&gt; contactList) {
+    List&lt;Contact&gt; contacts = new ArrayList&lt;&gt;();
 
-    <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span>Contact contact <span style="color:#f92672">:</span> contactList<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>contact<span style="color:#f92672">.</span><span style="color:#a6e22e">getAge</span><span style="color:#f92672">()</span> <span style="color:#f92672">&gt;=</span> 18
-                <span style="color:#f92672">&amp;&amp;</span> contact<span style="color:#f92672">.</span><span style="color:#a6e22e">getAge</span><span style="color:#f92672">()</span> <span style="color:#f92672">&lt;=</span> 25
-                <span style="color:#f92672">&amp;&amp;</span> contact<span style="color:#f92672">.</span><span style="color:#a6e22e">getSex</span><span style="color:#f92672">()</span> <span style="color:#f92672">==</span> Contact<span style="color:#f92672">.</span><span style="color:#a6e22e">Sex</span><span style="color:#f92672">.</span><span style="color:#a6e22e">FEMALE</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-            contacts<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>contact<span style="color:#f92672">);</span>
-        <span style="color:#f92672">}</span>
-    <span style="color:#f92672">}</span>
+    for (Contact contact : contactList) {
+        if (contact.getAge() &gt;= 18
+                &amp;&amp; contact.getAge() &lt;= 25
+                &amp;&amp; contact.getSex() == Contact.Sex.FEMALE) {
+            contacts.add(contact);
+        }
+    }
 
-    <span style="color:#66d9ef">return</span> contacts<span style="color:#f92672">;</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><p>এভাবে প্রত্যেকটি নতুন নতুন রিকোয়ারমেন্টের জন্য আপনাকে নতুন একটি করে মেথড লিখতে হচ্ছে। মেথডগুলোতে লক্ষ্য করুন, প্রত্যকটি মেথডের কোডগুলো প্রায় একই শুধুমাত্র ইফ স্ট্যাটমেন্টের ফিল্টার কীভাবে করা হবে সেই অংশটুকু ছাড়া।</p>
+    return contacts;
+}
+</code></pre>
+<p>এভাবে প্রত্যেকটি নতুন নতুন রিকোয়ারমেন্টের জন্য আপনাকে নতুন একটি করে মেথড লিখতে হচ্ছে। মেথডগুলোতে লক্ষ্য করুন, প্রত্যকটি মেথডের কোডগুলো প্রায় একই শুধুমাত্র ইফ স্ট্যাটমেন্টের ফিল্টার কীভাবে করা হবে সেই অংশটুকু ছাড়া।</p>
 <p>এভাবে যদি আরও অনেকগুলো রিকোয়ারমেন্টের আসে তাহলে আরও অনেকগুলো মেথড লিখতে হবে। তবে একটু বুদ্ধি করে আমরা অ্যানোনিমাস ইনার ক্লাস ব্যবহার করে এই বার বার একইরকম কোড করার কাজটুকু কমিয়ে ফেলতে পারি। এজন্য প্রথমে আমাদের একটি ইন্টারফেস লিখতে হবে।</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">FilterCriteria</span> <span style="color:#f92672">{</span>
-    <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">match</span><span style="color:#f92672">(</span>Contact contact<span style="color:#f92672">);</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><p>এখন আমরা একটি মেথড লিখবো যেখানে এই ইন্টারফেইসটি প্যারামিটার হিসেবে থাকবে।</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> List<span style="color:#f92672">&lt;</span>Contact<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">findContacts</span><span style="color:#f92672">(</span>List<span style="color:#f92672">&lt;</span>Contact<span style="color:#f92672">&gt;</span> contactList<span style="color:#f92672">,</span> FilterCriteria criteria<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-    List<span style="color:#f92672">&lt;</span>Contact<span style="color:#f92672">&gt;</span> contacts <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;();</span>
+<pre><code class="language-java">interface FilterCriteria {
+    boolean match(Contact contact);
+}
+</code></pre>
+<p>এখন আমরা একটি মেথড লিখবো যেখানে এই ইন্টারফেইসটি প্যারামিটার হিসেবে থাকবে।</p>
+<pre><code class="language-java">public List&lt;Contact&gt; findContacts(List&lt;Contact&gt; contactList, FilterCriteria criteria) {
+    List&lt;Contact&gt; contacts = new ArrayList&lt;&gt;();
 
-    <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span>Contact contact <span style="color:#f92672">:</span> contactList<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>criteria<span style="color:#f92672">.</span><span style="color:#a6e22e">match</span><span style="color:#f92672">(</span>contact<span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
-            contacts<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>contact<span style="color:#f92672">);</span>
-        <span style="color:#f92672">}</span>
-    <span style="color:#f92672">}</span>
+    for (Contact contact : contactList) {
+        if (criteria.match(contact)) {
+            contacts.add(contact);
+        }
+    }
 
-    <span style="color:#66d9ef">return</span> contacts<span style="color:#f92672">;</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><p>এই লক্ষ্য করুন , আমরা উপরের মেথডের ইফ স্ট্যাটমেন্টটি সামন্য পরিবর্তন করেছি। এটিতে কোনো নির্দিষ্ট লজিক নেই, বরং এটি আমাদের ইন্টারফেসটির একটি মেথডকে কল করছে যা কিনা বুলিয়ান রিটার্ন করে। এর অর্থ হলো- এই match() মেথডটি যেসব Contact এর ক্ষেত্রে true রিটার্ন করবে শুধুমাত্র সেগুলোকে ভেতরের লিস্টে যুক্ত করবে এবং রিটার্ন করবে। এখন এই মেথডটি ব্যবহার করে দেখা যাক-</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> java.util.ArrayList<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> java.util.List<span style="color:#f92672">;</span>
+    return contacts;
+}
+</code></pre>
+<p>এই লক্ষ্য করুন , আমরা উপরের মেথডের ইফ স্ট্যাটমেন্টটি সামন্য পরিবর্তন করেছি। এটিতে কোনো নির্দিষ্ট লজিক নেই, বরং এটি আমাদের ইন্টারফেসটির একটি মেথডকে কল করছে যা কিনা বুলিয়ান রিটার্ন করে। এর অর্থ হলো- এই match() মেথডটি যেসব Contact এর ক্ষেত্রে true রিটার্ন করবে শুধুমাত্র সেগুলোকে ভেতরের লিস্টে যুক্ত করবে এবং রিটার্ন করবে। এখন এই মেথডটি ব্যবহার করে দেখা যাক-</p>
+<pre><code class="language-java">import java.util.ArrayList;
+import java.util.List;
 
-<span style="color:#f92672">import static</span> com.bazlur.ContactService.FilterCriteria<span style="color:#f92672">;</span>
+import static com.bazlur.ContactService.FilterCriteria;
 
 
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ContactApp</span> <span style="color:#f92672">{</span>
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#960050;background-color:#1e0010">\</span><span style="color:#f92672">[</span><span style="color:#960050;background-color:#1e0010">\</span><span style="color:#f92672">]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+public class ContactApp {
+    public static void main(String\[\] args) {
 
-        List<span style="color:#f92672">&lt;</span>Contact<span style="color:#f92672">&gt;</span> contactList <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;();</span> <span style="color:#75715e">// lets assume we have that list
-</span><span style="color:#75715e"></span>        ContactService contactService <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ContactService<span style="color:#f92672">();</span>
+        List&lt;Contact&gt; contactList = new ArrayList&lt;&gt;(); // lets assume we have that list
+        ContactService contactService = new ContactService();
 
-        List<span style="color:#f92672">&lt;</span>Contact<span style="color:#f92672">&gt;</span> contactAged18To25 <span style="color:#f92672">=</span> contactService<span style="color:#f92672">.</span><span style="color:#a6e22e">findContacts</span><span style="color:#f92672">(</span>contactList<span style="color:#f92672">,</span> <span style="color:#66d9ef">new</span> FilterCriteria<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-            <span style="color:#a6e22e">@Override</span>
-            <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">match</span><span style="color:#f92672">(</span>Contact contact<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-                <span style="color:#66d9ef">return</span> contact<span style="color:#f92672">.</span><span style="color:#a6e22e">getAge</span><span style="color:#f92672">()</span> <span style="color:#f92672">&gt;=</span> 18 <span style="color:#f92672">&amp;&amp;</span> contact<span style="color:#f92672">.</span><span style="color:#a6e22e">getAge</span><span style="color:#f92672">()</span> <span style="color:#f92672">&lt;=</span> 25<span style="color:#f92672">;</span>
-            <span style="color:#f92672">}</span>
-        <span style="color:#f92672">});</span>
-    <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
+        List&lt;Contact&gt; contactAged18To25 = contactService.findContacts(contactList, new FilterCriteria() {
+            @Override
+            public boolean match(Contact contact) {
+                return contact.getAge() &gt;= 18 &amp;&amp; contact.getAge() &lt;= 25;
+            }
+        });
+    }
+}
 
-</code></pre></div><p>উপরের মেথডটিতে আর্গুমেন্ট হিসেবে একটি অ্যানোনিমাস ইনার ক্লাস দেওয়া হয়েছে যাতে আমরা match() মেথডের মূল লজিকটুকু লিখেছি। এভাবে আমাদের যদি এখন এই ১৮ থেকে ২৫ বছর বয়সের কন্টাক্টগুলো থেকে শুধুমাত্র মহিলাগুলোকে আলাদা করতে চাই তাহলে কন্টাক্ট সার্ভিসে(ContactService) নতুন কোনো মেথড যুক্ত করতে হবে না। শুধুমাত্র কল করার সময় আমাদের কোডের বিহেবিয়ারটুকু আর্গুমেন্ট হিসেবে পাস করলেই হয়ে যাচ্ছে।</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">List<span style="color:#f92672">&lt;</span>Contact<span style="color:#f92672">&gt;</span> contactAged18To25Female <span style="color:#f92672">=</span> contactService<span style="color:#f92672">.</span><span style="color:#a6e22e">findContacts</span><span style="color:#f92672">(</span>contactList<span style="color:#f92672">,</span>
-        <span style="color:#66d9ef">new</span> FilterCriteria<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-            <span style="color:#a6e22e">@Override</span>
-            <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">match</span><span style="color:#f92672">(</span>Contact contact<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</code></pre>
+<p>উপরের মেথডটিতে আর্গুমেন্ট হিসেবে একটি অ্যানোনিমাস ইনার ক্লাস দেওয়া হয়েছে যাতে আমরা match() মেথডের মূল লজিকটুকু লিখেছি। এভাবে আমাদের যদি এখন এই ১৮ থেকে ২৫ বছর বয়সের কন্টাক্টগুলো থেকে শুধুমাত্র মহিলাগুলোকে আলাদা করতে চাই তাহলে কন্টাক্ট সার্ভিসে(ContactService) নতুন কোনো মেথড যুক্ত করতে হবে না। শুধুমাত্র কল করার সময় আমাদের কোডের বিহেবিয়ারটুকু আর্গুমেন্ট হিসেবে পাস করলেই হয়ে যাচ্ছে।</p>
+<pre><code class="language-java">List&lt;Contact&gt; contactAged18To25Female = contactService.findContacts(contactList,
+        new FilterCriteria() {
+            @Override
+            public boolean match(Contact contact) {
 
-                <span style="color:#66d9ef">return</span> contact<span style="color:#f92672">.</span><span style="color:#a6e22e">getAge</span><span style="color:#f92672">()</span> <span style="color:#f92672">&gt;=</span> 18
-                        <span style="color:#f92672">&amp;&amp;</span> contact<span style="color:#f92672">.</span><span style="color:#a6e22e">getAge</span><span style="color:#f92672">()</span> <span style="color:#f92672">&lt;=</span> 25
-                        <span style="color:#f92672">&amp;&amp;</span> contact<span style="color:#f92672">.</span><span style="color:#a6e22e">getSex</span><span style="color:#f92672">()</span> <span style="color:#f92672">==</span> Contact<span style="color:#f92672">.</span><span style="color:#a6e22e">Sex</span><span style="color:#f92672">.</span><span style="color:#a6e22e">FEMALE</span><span style="color:#f92672">;</span>
-            <span style="color:#f92672">}</span>
-        <span style="color:#f92672">});</span>
-</code></pre></div><p>এভাবে আমরা অ্যানোনিমাস ইনার ক্লাস ব্যবহার করে বিহেবিয়ার প্যারামিটারাইজড করতে পারি। এতে করে অনে কম কোড লিখে অনেক বেশি ফিচার তৈরি করা যাচ্ছে।</p>
+                return contact.getAge() &gt;= 18
+                        &amp;&amp; contact.getAge() &lt;= 25
+                        &amp;&amp; contact.getSex() == Contact.Sex.FEMALE;
+            }
+        });
+</code></pre>
+<p>এভাবে আমরা অ্যানোনিমাস ইনার ক্লাস ব্যবহার করে বিহেবিয়ার প্যারামিটারাইজড করতে পারি। এতে করে অনে কম কোড লিখে অনেক বেশি ফিচার তৈরি করা যাচ্ছে।</p>
 <p>তবুও উপরের কোডটিতে খেয়াল করলে দেখা যাবে যে বেশ কিছু কোড বারবার লিখতে হচ্ছে।</p>
-<p><a href="http://bazlur.com/wp-content/uploads/2017/04/Lambda-2BExpression.png"><img src="http://bazlur.com/wp-content/uploads/2017/04/Lambda-2BExpression-300x90.png" alt="" /></a></p>
+<p><a href="http://bazlur.com/wp-content/uploads/2017/04/Lambda-2BExpression.png"><img src="http://bazlur.com/wp-content/uploads/2017/04/Lambda-2BExpression-300x90.png" alt=""></a></p>
 <p>চিত্র: প্রয়োজনীয় কোড লজিক</p>
 <p>এই কোডটিতে শুধুমাত্র লাল রঙ্গের অংশটুকু আমাদের প্রয়োজনীয় কোড, বাকিটুকু অর্থাৎ নিউ অপারেটর থেকে শুরু করে, ওভারাইড অ্যানোটেশন, পাবলিক কিওয়ার্ড, রিটার্ন টাইপ, মেথডের নাম ইত্যাদি একই রয়ে গেছে পত্যেকবার কল করার সময়। এই কোডগুলোকে boilerplate কোড বলা হয়।</p>
 <p>তবে জাভা ৮ ল্যাম্বডা এক্সপ্রশন আসার সুবাধে এই boilerplate কোডটুকুকেও বাদ দেওয়া যায়। উদাহরণ –</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">List<span style="color:#f92672">&lt;</span>Contact<span style="color:#f92672">&gt;</span> contactAged18To25Female <span style="color:#f92672">=</span> contactService<span style="color:#f92672">.</span><span style="color:#a6e22e">findContacts</span><span style="color:#f92672">(</span>contactList<span style="color:#f92672">,</span>
-        <span style="color:#f92672">(</span>Contact contact<span style="color:#f92672">)</span> <span style="color:#f92672">-&gt;</span> <span style="color:#f92672">{</span>
+<pre><code class="language-java">List&lt;Contact&gt; contactAged18To25Female = contactService.findContacts(contactList,
+        (Contact contact) -&gt; {
 
-            <span style="color:#66d9ef">return</span> contact<span style="color:#f92672">.</span><span style="color:#a6e22e">getAge</span><span style="color:#f92672">()</span> <span style="color:#f92672">&gt;=</span> 18
-                    <span style="color:#f92672">&amp;&amp;</span> contact<span style="color:#f92672">.</span><span style="color:#a6e22e">getAge</span><span style="color:#f92672">()</span> <span style="color:#f92672">&lt;=</span> 25
-                    <span style="color:#f92672">&amp;&amp;</span> contact<span style="color:#f92672">.</span><span style="color:#a6e22e">getSex</span><span style="color:#f92672">()</span> <span style="color:#f92672">==</span> Contact<span style="color:#f92672">.</span><span style="color:#a6e22e">Sex</span><span style="color:#f92672">.</span><span style="color:#a6e22e">FEMALE</span><span style="color:#f92672">;</span>
-        <span style="color:#f92672">});</span>
-</code></pre></div><p>উপরের কোডটুকু লক্ষ্য করুন, এতে শুধুমাত্র প্রয়োজনীয় কোডটুকু রয়েছে। তাহলে আমাদের প্রথম ল্যাম্বডা এক্সপ্রেশন লেখা হয়ে গেলো।</p>
+            return contact.getAge() &gt;= 18
+                    &amp;&amp; contact.getAge() &lt;= 25
+                    &amp;&amp; contact.getSex() == Contact.Sex.FEMALE;
+        });
+</code></pre>
+<p>উপরের কোডটুকু লক্ষ্য করুন, এতে শুধুমাত্র প্রয়োজনীয় কোডটুকু রয়েছে। তাহলে আমাদের প্রথম ল্যাম্বডা এক্সপ্রেশন লেখা হয়ে গেলো।</p>
 <p>এই প্যারামিটাইরাইজড কোডটুকু আলাদা করে লিখলে –</p>
 <pre><code>(Contact contact) -&gt; {
            return contact.getAge() &gt;= 18
                               &amp;&amp; contact.getAge() &lt;= 25
                               &amp;&amp; contact.getSex() == Contact.Sex.FEMALE;
 };
-</code></pre><p>যা শুরুতে ল্যাম্বডা নিয়ে কথা বলার সময় যে উদাহরণ দেওয়া হয়েছিল তার সঙ্গে মিলে যায়।</p>
+</code></pre>
+<p>যা শুরুতে ল্যাম্বডা নিয়ে কথা বলার সময় যে উদাহরণ দেওয়া হয়েছিল তার সঙ্গে মিলে যায়।</p>
 <p>তাহলে দেখা যাচ্ছে যে, অ্যানোনিমাস ক্লাসের পরিবর্তে আমরা ল্যামডা এক্সপ্রেশন ব্যবহার করতে পারি। তবে এখানে একটি শর্ত রয়েছে। যদি কোনো ইন্টারফেইসে একটি মাত্র মেথড থাকে, এবং সেই ইন্টারফেসটি যেখানে অ্যানোনিমাস ক্লাস হিসেবে ব্যবহার করা যায়, তার পরিবর্তে ল্যামডা এক্সপ্রেশন ব্যবহার করা যাবে। একটি মাত্র মেথডযুক্ত ইন্টারফেসেরের একটি নাম রয়েছে। একে ফাংশনাল ইন্টারফেস বলে।</p>
 <p>আরও একটি ব্যবাহার দেখা যাক-</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">File root <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> File<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;./&#34;</span><span style="color:#f92672">);</span>
-File<span style="color:#f92672">[]</span> files <span style="color:#f92672">=</span> root<span style="color:#f92672">.</span><span style="color:#a6e22e">listFiles</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> FileFilter<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-    <span style="color:#a6e22e">@Override</span>
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">accept</span><span style="color:#f92672">(</span>File pathname<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">return</span> pathname<span style="color:#f92672">.</span><span style="color:#a6e22e">isFile</span><span style="color:#f92672">();</span>
-    <span style="color:#f92672">}</span>
-<span style="color:#f92672">});</span>
-</code></pre></div><p>অনেক সময় আমাদের ফাইল লিস্টিং করতে হয়, অর্থাৎ একটি ফোল্ডারে যে ফাইলগুলো  রয়েছে তা বিভিন্নভাবে ফিল্টার করে তার লিস্ট করা যায়। এক্ষেত্রে উপরের কোডটি রুট ফোল্ডারে যে ফাইলগুলো ডিরেক্টরী নয় শুধুমাত্র ফাইল(জাভাতে ইউনিক্স সিস্টেম অনুসরণ করে ফাইল এবং ডিরেক্টরী দুটুই একটি ক্লাস java.io.File দিয়ে অ্যাবস্ট্র্যাক্ট করা হয়েছে), সেগুলোকে লিস্ট করবে।</p>
+<pre><code class="language-java">File root = new File(&quot;./&quot;);
+File[] files = root.listFiles(new FileFilter() {
+    @Override
+    public boolean accept(File pathname) {
+        return pathname.isFile();
+    }
+});
+</code></pre>
+<p>অনেক সময় আমাদের ফাইল লিস্টিং করতে হয়, অর্থাৎ একটি ফোল্ডারে যে ফাইলগুলো  রয়েছে তা বিভিন্নভাবে ফিল্টার করে তার লিস্ট করা যায়। এক্ষেত্রে উপরের কোডটি রুট ফোল্ডারে যে ফাইলগুলো ডিরেক্টরী নয় শুধুমাত্র ফাইল(জাভাতে ইউনিক্স সিস্টেম অনুসরণ করে ফাইল এবং ডিরেক্টরী দুটুই একটি ক্লাস java.io.File দিয়ে অ্যাবস্ট্র্যাক্ট করা হয়েছে), সেগুলোকে লিস্ট করবে।</p>
 <p>তবে উপরের কোডটুকু সংক্ষিপ্ত করে ল্যামডা এক্সপ্রেশন ব্যবহার করে এভাবে লেখা যায় –</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">File<span style="color:#f92672">[]</span> files <span style="color:#f92672">=</span> root<span style="color:#f92672">.</span><span style="color:#a6e22e">listFiles</span><span style="color:#f92672">(</span>pathname <span style="color:#f92672">-&gt;</span> pathname<span style="color:#f92672">.</span><span style="color:#a6e22e">isFile</span><span style="color:#f92672">());</span>
-</code></pre></div><p>কিংবা আরও সংক্ষেপে –</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">File<span style="color:#f92672">[]</span> files <span style="color:#f92672">=</span> root<span style="color:#f92672">.</span><span style="color:#a6e22e">listFiles</span><span style="color:#f92672">(</span>File<span style="color:#f92672">::</span>isFile<span style="color:#f92672">);</span>
-</code></pre></div><p>এখানে মেথড রেফারেন্স ব্যবহার করা হয়েছে।</p>
+<pre><code class="language-java">File[] files = root.listFiles(pathname -&gt; pathname.isFile());
+</code></pre>
+<p>কিংবা আরও সংক্ষেপে –</p>
+<pre><code class="language-java">File[] files = root.listFiles(File::isFile);
+</code></pre>
+<p>এখানে মেথড রেফারেন্স ব্যবহার করা হয়েছে।</p>
 <p>এই আর্টিক্যাল এ শুধুমাত্র ল্যামডা এক্সপ্রেশনের সাধারণ ব্যবহার দেখানো হলো। পরিবর্তীতে পর্বে এ নিয়ে আরও বিস্তারিত থাকবে।</p>
 
 </main>

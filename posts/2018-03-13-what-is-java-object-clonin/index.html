@@ -31,17 +31,11 @@
 
     
 
+    <script src="/js/prism.js"></script>
+
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/fonts.css" />
-
-    <link rel="stylesheet"
-          href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/styles/default.min.css">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/highlight.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/languages/java.min.js"
-            integrity="sha512-xEnylOTeZvxUCvtK9Lw3FjOgfCwsMEhUbx6Hant1lPgy+PcynqCm8XfqhpRos6XNaTxeMuT4QyrWyo3U1NijHg=="
-            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-
+    <link rel="stylesheet" href="/css/prism.css" />
 
     
 
@@ -61,8 +55,9 @@ if (!doNotTrack) {
 
   </head>
 
-  <body>
-    <nav>
+  <body class="line-numbers">
+
+  <nav>
     <ul class="menu">
       
       <li><a href="/">Home</a></li>
@@ -94,87 +89,91 @@ if (!doNotTrack) {
 
 <main>
     <p>ক্লােন শব্দের অর্থ হুবহু কপি করা। অবজেক্ট ক্লাোনিংয়ের অর্থ একই রকম আরেকটি অবজেক্ট তৈরি করা। আমরা জানি যে ক্লাস থেকে অবজেক্ট তৈরি করা হয়। একটি ক্লাস থেকে একাধিক অবজেক্ট তৈরি করা যায়। প্রত্যেকটি অবেজেক্টের আলাদা আলদা স্টেট থাকে। অর্থাৎ অবজেক্টগুলো সম্পূর্ণ ভিন্ন হয়। তবে কখনো কখনো একটি অবজেক্টের স্টেটগুলো নিয়ে আরেকটি সম্পূর্ণ একইরকম অবজেক্ট তৈরি করার প্রয়োজন হয়। একইরকম অবজেক্ট তৈরির এই প্রক্রিয়াকে অবজেক্ট ক্লোনিং বলা হয়। উদাহরণসরূপ নিজের উদাহরণটি দেখা যাক –</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Person</span> <span style="color:#f92672">{</span>
+<pre><code class="language-java">public class Person {
 
-    <span style="color:#66d9ef">private</span> String firstName<span style="color:#f92672">;</span>
-    <span style="color:#66d9ef">private</span> String lastName<span style="color:#f92672">;</span>
-    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">int</span> age<span style="color:#f92672">;</span>
+    private String firstName;
+    private String lastName;
+    private int age;
 
-    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Person</span><span style="color:#f92672">(</span>String firstName<span style="color:#f92672">,</span> String lastName<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> age<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">firstName</span> <span style="color:#f92672">=</span> firstName<span style="color:#f92672">;</span>
-        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">lastName</span> <span style="color:#f92672">=</span> lastName<span style="color:#f92672">;</span>
-        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">age</span> <span style="color:#f92672">=</span> age<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
+    public Person(String firstName, String lastName, int age) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+    }
 
-    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getFirstName</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">return</span> firstName<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
+    public String getFirstName() {
+        return firstName;
+    }
 
-    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getLastName</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">return</span> lastName<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
+    public String getLastName() {
+        return lastName;
+    }
 
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">getAge</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">return</span> age<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><p>এই ক্লাসটির অবজেক্ট তৈরি করতে হলে –</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">PersonDemo</span> <span style="color:#f92672">{</span>
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#960050;background-color:#1e0010">\</span><span style="color:#f92672">[</span><span style="color:#960050;background-color:#1e0010">\</span><span style="color:#f92672">]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        Person person1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Person<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Mashrafe&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;Mortaza&#34;</span><span style="color:#f92672">,</span> 33<span style="color:#f92672">);</span>
-        Person person2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Person<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Tamim&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;Iqbal&#34;</span><span style="color:#f92672">,</span> 28<span style="color:#f92672">);</span>
-        Person person3 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Person<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Mustafizur&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;Rahman&#34;</span><span style="color:#f92672">,</span> 21<span style="color:#f92672">);</span>
-    <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><p>ওপরের উদাহরণটিতে তিনটি আলাদা আলাদা অবজেক্ট তৈরি করা হয়েছে। এই অবজেক্টগুলো প্রতিটি আলাদা আলদা। প্রথমটির সঙ্গে দ্বিতীয়টি বা তৃতিয়টির স্টেট (ফিল্ডগুলোর ভ্যালুর) কোনো মিল নেই। এখন কাজের প্রয়োজনে প্রথম অবজেক্টটির একটি কপি তৈরি করার প্রয়োজন হতে পারে যার স্টেট বা ফিল্ডগুলোর ভ্যালু একই থাকবে। জাভাতে প্রত্যেকটি ক্লাস Object ক্লাসকে ইনহেরিট করে। এই ক্লাসে clone() মেথড রয়েছে। তাই প্রতিটি অবেজেক্টেই এই মেথডটি পাওয়া যায়। তবে এই মেথডটি থাকলেও একে ব্যবহার করা যায় না। এই মেথডটি ব্যবহার উপযোগী করতে হলে দুটি কাজ করতে হয় – ১. ক্লাসটিকে Cloneable ইন্টারফেইসটি ইমপ্লিমেন্ট করতে হয়। ২. এবং ক্লাসটিতে Object এর clone() মেথডকে ওভাররাইড করতে হয়। এবং ক্লাসটিতে Object এর clone() মেথডকে ওভাররাইড করতে হয়। এটি না করলে এক্সেপশন থ্রুু হবে অর্থাৎ ক্লোন করা যাবে না। তাহলে উপরের Person ক্লাসের অবজেক্ট কে ক্লোন করার জন্য উপযোগী করতে হলে –</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Person</span> <span style="color:#66d9ef">implements</span> Cloneable<span style="color:#f92672">{</span>
+    public int getAge() {
+        return age;
+    }
+}
+</code></pre>
+<p>এই ক্লাসটির অবজেক্ট তৈরি করতে হলে –</p>
+<pre><code class="language-java">public class PersonDemo {
+    public static void main(String\[\] args) {
+        Person person1 = new Person(&quot;Mashrafe&quot;, &quot;Mortaza&quot;, 33);
+        Person person2 = new Person(&quot;Tamim&quot;, &quot;Iqbal&quot;, 28);
+        Person person3 = new Person(&quot;Mustafizur&quot;, &quot;Rahman&quot;, 21);
+    }
+}
+</code></pre>
+<p>ওপরের উদাহরণটিতে তিনটি আলাদা আলাদা অবজেক্ট তৈরি করা হয়েছে। এই অবজেক্টগুলো প্রতিটি আলাদা আলদা। প্রথমটির সঙ্গে দ্বিতীয়টি বা তৃতিয়টির স্টেট (ফিল্ডগুলোর ভ্যালুর) কোনো মিল নেই। এখন কাজের প্রয়োজনে প্রথম অবজেক্টটির একটি কপি তৈরি করার প্রয়োজন হতে পারে যার স্টেট বা ফিল্ডগুলোর ভ্যালু একই থাকবে। জাভাতে প্রত্যেকটি ক্লাস Object ক্লাসকে ইনহেরিট করে। এই ক্লাসে clone() মেথড রয়েছে। তাই প্রতিটি অবেজেক্টেই এই মেথডটি পাওয়া যায়। তবে এই মেথডটি থাকলেও একে ব্যবহার করা যায় না। এই মেথডটি ব্যবহার উপযোগী করতে হলে দুটি কাজ করতে হয় – ১. ক্লাসটিকে Cloneable ইন্টারফেইসটি ইমপ্লিমেন্ট করতে হয়। ২. এবং ক্লাসটিতে Object এর clone() মেথডকে ওভাররাইড করতে হয়। এবং ক্লাসটিতে Object এর clone() মেথডকে ওভাররাইড করতে হয়। এটি না করলে এক্সেপশন থ্রুু হবে অর্থাৎ ক্লোন করা যাবে না। তাহলে উপরের Person ক্লাসের অবজেক্ট কে ক্লোন করার জন্য উপযোগী করতে হলে –</p>
+<pre><code class="language-java">public class Person implements Cloneable{
 
-    <span style="color:#66d9ef">private</span> String firstName<span style="color:#f92672">;</span>
-    <span style="color:#66d9ef">private</span> String lastName<span style="color:#f92672">;</span>
-    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">int</span> age<span style="color:#f92672">;</span>
+    private String firstName;
+    private String lastName;
+    private int age;
 
-    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Person</span><span style="color:#f92672">(</span>String firstName<span style="color:#f92672">,</span> String lastName<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> age<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">firstName</span> <span style="color:#f92672">=</span> firstName<span style="color:#f92672">;</span>
-        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">lastName</span> <span style="color:#f92672">=</span> lastName<span style="color:#f92672">;</span>
-        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">age</span> <span style="color:#f92672">=</span> age<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
+    public Person(String firstName, String lastName, int age) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+    }
 
-    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getFirstName</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">return</span> firstName<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
+    public String getFirstName() {
+        return firstName;
+    }
 
-    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getLastName</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">return</span> lastName<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
+    public String getLastName() {
+        return lastName;
+    }
 
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">getAge</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">return</span> age<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
+    public int getAge() {
+        return age;
+    }
 
-    <span style="color:#a6e22e">@Override</span>
-    <span style="color:#66d9ef">protected</span> Object <span style="color:#a6e22e">clone</span><span style="color:#f92672">()</span> <span style="color:#66d9ef">throws</span> CloneNotSupportedException <span style="color:#f92672">{</span>
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
 
-        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">super</span><span style="color:#f92672">.</span><span style="color:#a6e22e">clone</span><span style="color:#f92672">();</span>
-    <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><p>এখন ক্লোন করার উদাহরণ দেখা যাক-</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">PersonDemo</span> <span style="color:#f92672">{</span>
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#960050;background-color:#1e0010">\</span><span style="color:#f92672">[</span><span style="color:#960050;background-color:#1e0010">\</span><span style="color:#f92672">]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        Person person1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Person<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Mashrafe&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;Mortaza&#34;</span><span style="color:#f92672">,</span> 33<span style="color:#f92672">);</span>
+        return super.clone();
+    }
+}
+</code></pre>
+<p>এখন ক্লোন করার উদাহরণ দেখা যাক-</p>
+<pre><code class="language-java">public class PersonDemo {
+    public static void main(String\[\] args) {
+        Person person1 = new Person(&quot;Mashrafe&quot;, &quot;Mortaza&quot;, 33);
 
-        <span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
-            Person clone <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>Person<span style="color:#f92672">)</span> person1<span style="color:#f92672">.</span><span style="color:#a6e22e">clone</span><span style="color:#f92672">();</span>
-            String firstName <span style="color:#f92672">=</span> clone<span style="color:#f92672">.</span><span style="color:#a6e22e">getFirstName</span><span style="color:#f92672">();</span>
-            String lastName <span style="color:#f92672">=</span> clone<span style="color:#f92672">.</span><span style="color:#a6e22e">getLastName</span><span style="color:#f92672">();</span>
-            <span style="color:#66d9ef">int</span> age <span style="color:#f92672">=</span> clone<span style="color:#f92672">.</span><span style="color:#a6e22e">getAge</span><span style="color:#f92672">();</span>
-            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;name: &#34;</span> <span style="color:#f92672">+</span> firstName <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; &#34;</span> <span style="color:#f92672">+</span> lastName <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; and age: &#34;</span> <span style="color:#f92672">+</span> age<span style="color:#f92672">);</span>
+        try {
+            Person clone = (Person) person1.clone();
+            String firstName = clone.getFirstName();
+            String lastName = clone.getLastName();
+            int age = clone.getAge();
+            System.out.println(&quot;name: &quot; + firstName + &quot; &quot; + lastName + &quot; and age: &quot; + age);
 
-        <span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>CloneNotSupportedException e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-            e<span style="color:#f92672">.</span><span style="color:#a6e22e">printStackTrace</span><span style="color:#f92672">();</span>
-        <span style="color:#f92672">}</span>
-    <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><p>clone মেথড একটি চেকড এক্সসেপশন CloneNotSupportedException থ্রু করে। সুতরাং এটি ব্যবহার করতে হলে try-catch ব্যবহার করতে হয়। ক্লোন করার উপরের এই পদ্ধতিকে শ্যালো ক্লোনিং (Shallow cloning) বলা হয়। একটি ক্লাসের ফিল্ডগুলো রেফারেন্স টাইপ বা প্রিমিটিভ টাইপ দু-রকমই হতে পারে। শ্যালো ক্লোনিংয়ে রেফারেন্স অবজেকটগুলোর জন্য নতুন অবজেক্ট তৈরি হয় না, বরং এদের রেফারেন্স কপি হয়। অন্যদিকে প্রিমিটিভ টাইপের ক্ষেত্রে সম্পূর্ণ নতুন ভ্যালু তৈরি হয় । এছাড়াও কপি কনস্ট্রাক্টর ও ডিপ ক্লোনিং নামে দুটি ক্লোনিংয়ের পদ্ধতি রয়েছে।</p>
+        } catch (CloneNotSupportedException e) {
+            e.printStackTrace();
+        }
+    }
+}
+</code></pre>
+<p>clone মেথড একটি চেকড এক্সসেপশন CloneNotSupportedException থ্রু করে। সুতরাং এটি ব্যবহার করতে হলে try-catch ব্যবহার করতে হয়। ক্লোন করার উপরের এই পদ্ধতিকে শ্যালো ক্লোনিং (Shallow cloning) বলা হয়। একটি ক্লাসের ফিল্ডগুলো রেফারেন্স টাইপ বা প্রিমিটিভ টাইপ দু-রকমই হতে পারে। শ্যালো ক্লোনিংয়ে রেফারেন্স অবজেকটগুলোর জন্য নতুন অবজেক্ট তৈরি হয় না, বরং এদের রেফারেন্স কপি হয়। অন্যদিকে প্রিমিটিভ টাইপের ক্ষেত্রে সম্পূর্ণ নতুন ভ্যালু তৈরি হয় । এছাড়াও কপি কনস্ট্রাক্টর ও ডিপ ক্লোনিং নামে দুটি ক্লোনিংয়ের পদ্ধতি রয়েছে।</p>
 
 </main>
 

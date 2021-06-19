@@ -26,7 +26,7 @@ It doesn&amp;rsquo;t take much time to calculate the number, but writing on file
       
       <guid>http://bazlur.com/2021/06/lets-create-coffee-with-a-decorator-pattern-with-the-help-of-lambda-expression/</guid>
       <description>java.util.function.Function&amp;lt;T, R&amp;gt; is a functional interface. It takes a type T and returns type R. We mostly use it to transform a type into a different one. But it doesn&amp;rsquo;t end there. We can use this into a lambda expression to change a value as well. For example-
-Function&amp;lt;Integer, Integer&amp;gt; doubleIt = a -&amp;gt; a * 2; Over here, we are receiving and in integer but returning after doubling it. Thus, we can pass this function as an argument of a method as well.</description>
+Function&amp;lt;Integer, Integer&amp;gt; doubleIt = a -&amp;gt; a * 2;  Over here, we are receiving and in integer but returning after doubling it.</description>
     </item>
     
     <item>
@@ -37,7 +37,7 @@ Function&amp;lt;Integer, Integer&amp;gt; doubleIt = a -&amp;gt; a * 2; Over here
       <guid>http://bazlur.com/2021/06/lets-use-the-new-http-client-that-java-11-brought/</guid>
       <description>Java 11 brought an inbuilt HTTP client. As a result, we don&amp;rsquo;t need a third-party library anymore to invoke an HTTP request.
 Let&amp;rsquo;s call a chuck Norris api to fetch a random joke.
-package com.bazlur; import java.io.IOException; import java.net.URI; import java.net.URISyntaxException; import java.net.http.HttpClient; import java.net.http.HttpRequest; import java.net.http.HttpResponse; import java.time.Duration; public class Day011 { public static final String CHUCK_NORRIS_RANDOM_JOKES_API = &amp;#34;https://api.chucknorris.io/jokes/random&amp;#34;; public static void main(String[] args) throws URISyntaxException, IOException, InterruptedException { var client = HttpClient.</description>
+package com.bazlur; import java.io.IOException; import java.net.URI; import java.net.URISyntaxException; import java.net.http.HttpClient; import java.net.http.HttpRequest; import java.net.http.HttpResponse; import java.time.Duration; public class Day011 { public static final String CHUCK_NORRIS_RANDOM_JOKES_API = &amp;quot;https://api.chucknorris.io/jokes/random&amp;quot;; public static void main(String[] args) throws URISyntaxException, IOException, InterruptedException { var client = HttpClient.</description>
     </item>
     
     <item>
@@ -47,8 +47,7 @@ package com.bazlur; import java.io.IOException; import java.net.URI; import java
       
       <guid>http://bazlur.com/2021/06/how-to-calculate-date-and-time-involving-time-zone-doesnt-have-to-be-hard./</guid>
       <description>Calculating time with a zone was never this easy. Using the date-time API, you can calculate with timezone pretty much effortlessly.
-Let&amp;rsquo;s assume we have a flight from Toronto (YYZ) to Dubai (DXB) today. The flight takes off at 21:45. The total duration of the flight is 12 hours and 45 minutes.
-What would be the local time when the plane lands?
+Let&amp;rsquo;s assume we have a flight from Toronto (YYZ) to Dubai (DXB) today. The flight takes off at 21:45. The total duration of the flight is 12 hours and 45 minutes. What would be the local time when the plane lands?
 The following code will allow you to calculate that easily-</description>
     </item>
     
@@ -68,8 +67,7 @@ We have been dealing with such a violation all the time. We invoke a method with
       <pubDate>Mon, 14 Jun 2021 00:04:10 -0400</pubDate>
       
       <guid>http://bazlur.com/2021/06/how-to-stop-a-java-program-gracefully/</guid>
-      <description>Sometimes you may want to stop your java program using SIGINT hitting your CTRL+C. For example, your program may be doing something important, e.g., opening a server socket and waiting on a port or doing some background work on a thread pool. You want to stop it gracefully shutting down your socket or the thread pool.
-For such scenarios, what you can do is, add a shutdown hook to the java runtime.</description>
+      <description>Sometimes you may want to stop your java program using SIGINT hitting your CTRL+C. For example, your program may be doing something important, e.g., opening a server socket and waiting on a port or doing some background work on a thread pool. You want to stop it gracefully shutting down your socket or the thread pool. For such scenarios, what you can do is, add a shutdown hook to the java runtime.</description>
     </item>
     
     <item>
@@ -78,8 +76,7 @@ For such scenarios, what you can do is, add a shutdown hook to the java runtime.
       <pubDate>Sun, 13 Jun 2021 04:38:10 -0400</pubDate>
       
       <guid>http://bazlur.com/2021/06/how-to-run-a-task-periodically-in-java/</guid>
-      <description>Sometimes you want to run a particular task at a fixed rate periodically. The job could be anything, e.g. you may want to call a rest API to check for an update, or perhaps pull information from a database, do some processing, and then send an email.
-Or maybe you want to keep your eyes on the stock exchange. The following code snippet will allow you to do that sort of task precisely.</description>
+      <description>Sometimes you want to run a particular task at a fixed rate periodically. The job could be anything, e.g. you may want to call a rest API to check for an update, or perhaps pull information from a database, do some processing, and then send an email. Or maybe you want to keep your eyes on the stock exchange. The following code snippet will allow you to do that sort of task precisely.</description>
     </item>
     
     <item>
@@ -99,8 +96,7 @@ for copy/paste pleasure: https://github.com/rokon12/100DaysOfJava/blob/main/src/
       <pubDate>Fri, 11 Jun 2021 13:38:10 -0400</pubDate>
       
       <guid>http://bazlur.com/2021/06/how-to-read-texts-from-a-file-using-java/</guid>
-      <description>Reading texts from a file has never been this easy.
-You have to call Files.readString(), that&amp;rsquo;s it.
+      <description>Reading texts from a file has never been this easy. You have to call Files.readString(), that&amp;rsquo;s it.
 Let&amp;rsquo;s read a text file, remove all the punctuation from it and then count all the unique words.
 for copy/paste pleasure: https://github.com/rokon12/100DaysOfJava/blob/main/src/main/java/com/bazlur/Day005.java</description>
     </item>

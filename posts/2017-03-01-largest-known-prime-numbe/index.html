@@ -37,17 +37,11 @@
 
     
 
+    <script src="/js/prism.js"></script>
+
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/fonts.css" />
-
-    <link rel="stylesheet"
-          href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/styles/default.min.css">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/highlight.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/languages/java.min.js"
-            integrity="sha512-xEnylOTeZvxUCvtK9Lw3FjOgfCwsMEhUbx6Hant1lPgy+PcynqCm8XfqhpRos6XNaTxeMuT4QyrWyo3U1NijHg=="
-            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-
+    <link rel="stylesheet" href="/css/prism.css" />
 
     
 
@@ -67,8 +61,9 @@ if (!doNotTrack) {
 
   </head>
 
-  <body>
-    <nav>
+  <body class="line-numbers">
+
+  <nav>
     <ul class="menu">
       
       <li><a href="/">Home</a></li>
@@ -103,25 +98,27 @@ if (!doNotTrack) {
 <p>এখন পর্যন্ত খুঁজে পাওয়া সবচেয়ে বড় মৌলিক সংখ্যাটি হলো – <code>2^57,885,161 -1</code>।</p>
 <p><a href="https://www.sciencedaily.com/releases/2013/02/130213225424.htm">এই লিংকে</a> এ সম্পর্কে আরও বিস্তারিত জানা যাবে।</p>
 <p>এতে 17,425,170 টি সংখ্যা রয়েছে। এই সংখ্যাটি দেখতে চাইলে ঝটপট একটি জাভা প্রোগ্রাম লিখে ফেলা যায়। এর জন্য জাভার <code>BigInteger</code> ক্লাসটি প্রয়োজন হবে।</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> java.math.BigInteger<span style="color:#f92672">;</span>
+<pre><code class="language-java">import java.math.BigInteger;
 
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">LargestPrimeNumber</span> <span style="color:#f92672">{</span>
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        BigInteger two <span style="color:#f92672">=</span> BigInteger<span style="color:#f92672">.</span><span style="color:#a6e22e">valueOf</span><span style="color:#f92672">(</span>2<span style="color:#f92672">);</span>
-        BigInteger largest <span style="color:#f92672">=</span> two<span style="color:#f92672">.</span><span style="color:#a6e22e">pow</span><span style="color:#f92672">(</span>57_885_161<span style="color:#f92672">);</span>
-        BigInteger largestPrimeNumber <span style="color:#f92672">=</span> largest<span style="color:#f92672">.</span><span style="color:#a6e22e">subtract</span><span style="color:#f92672">(</span>BigInteger<span style="color:#f92672">.</span><span style="color:#a6e22e">ONE</span><span style="color:#f92672">);</span>
-        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>largestPrimeNumber<span style="color:#f92672">);</span>
-    <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><p>এটি প্রিন্ট হতে বেশ খানিকটা সময় নেবে।</p>
-<p><img src="/img/largest_prime_number.png" alt="Largest Prime Number" /></p>
+public class LargestPrimeNumber {
+    public static void main(String[] args) {
+        BigInteger two = BigInteger.valueOf(2);
+        BigInteger largest = two.pow(57_885_161);
+        BigInteger largestPrimeNumber = largest.subtract(BigInteger.ONE);
+        System.out.println(largestPrimeNumber);
+    }
+}
+</code></pre>
+<p>এটি প্রিন্ট হতে বেশ খানিকটা সময় নেবে।</p>
+<p><img src="/img/largest_prime_number.png" alt="Largest Prime Number"></p>
 <p>ফাইলে স্টোর করতে চাইলে নিচের কোড অংশটুকু যুক্ত করুন-</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
-    Files<span style="color:#f92672">.</span><span style="color:#a6e22e">write</span><span style="color:#f92672">(</span>Paths<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;prime.txt&#34;</span><span style="color:#f92672">),</span> largestPrimeNumber<span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">().</span><span style="color:#a6e22e">getBytes</span><span style="color:#f92672">());</span>
-<span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>IOException e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-    e<span style="color:#f92672">.</span><span style="color:#a6e22e">printStackTrace</span><span style="color:#f92672">();</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><p> </p>
+<pre><code class="language-java">try {
+    Files.write(Paths.get(&quot;prime.txt&quot;), largestPrimeNumber.toString().getBytes());
+} catch (IOException e) {
+    e.printStackTrace();
+}
+</code></pre>
+<p> </p>
 
 </main>
 
