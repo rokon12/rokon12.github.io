@@ -18,11 +18,11 @@ Function&amp;lt;Integer, Integer&amp;gt; doubleIt = a -&amp;gt; a * 2; Over here
     </item>
     
     <item>
-      <title>ArrayList ও LinkedList মধ্যে পার্থক্য কী? (Difference between ArrayList and LinkedList in Java)</title>
-      <link>http://bazlur.com/2018/07/arraylist-%E0%A6%93-linkedlist-%E0%A6%AE%E0%A6%A7%E0%A7%8D%E0%A6%AF%E0%A7%87-%E0%A6%AA%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A6%95%E0%A7%8D%E0%A6%AF-%E0%A6%95%E0%A7%80-difference-between-arraylist-and-linkedlist-in-java/</link>
+      <title>How to Handle Checked Exceptions With Lambda Expression</title>
+      <link>http://bazlur.com/2018/07/how-to-handle-checked-exceptions-with-lambda-expression/</link>
       <pubDate>Wed, 18 Jul 2018 13:17:00 +0000</pubDate>
       
-      <guid>http://bazlur.com/2018/07/arraylist-%E0%A6%93-linkedlist-%E0%A6%AE%E0%A6%A7%E0%A7%8D%E0%A6%AF%E0%A7%87-%E0%A6%AA%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A6%95%E0%A7%8D%E0%A6%AF-%E0%A6%95%E0%A7%80-difference-between-arraylist-and-linkedlist-in-java/</guid>
+      <guid>http://bazlur.com/2018/07/how-to-handle-checked-exceptions-with-lambda-expression/</guid>
       <description>Lambda expressions are all about how we write code. It’s about how we can write more concise, smaller, and less boilerplate code. However, this aforementioned statement may not seem to be true in the case of exceptions in Java.
 In Java, we can only handle exceptions through the try-catch block, and this hasn’t changed for the lambda expression.
 Let’s say we’re going to develop a simple web crawler. The crawler will take a list of URLs in a string as an argument and save the content of the text file in a text file.</description>
