@@ -1112,6 +1112,26 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
+    <loc>http://bazlur.com/tags/concatenation/</loc>
+    <lastmod>2016-12-22T19:06:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://bazlur.com/tags/java-performance/</loc>
+    <lastmod>2016-12-22T19:06:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://bazlur.com/tags/stringbuilder/</loc>
+    <lastmod>2016-12-22T19:06:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://bazlur.com/2016/12/we-dont-need-stringbuilder-for-simple-concatenation/</loc>
+    <lastmod>2016-12-22T19:06:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>http://bazlur.com/tags/algorithm/</loc>
     <lastmod>2016-11-21T17:20:00+00:00</lastmod>
     <changefreq>weekly</changefreq>

@@ -597,6 +597,18 @@ import java.math.BigInteger; public class LargestPrimeNumber { public static voi
     </item>
     
     <item>
+      <title>We Don&#39;t Need StringBuilder for Simple Concatenation</title>
+      <link>http://bazlur.com/2016/12/we-dont-need-stringbuilder-for-simple-concatenation/</link>
+      <pubDate>Thu, 22 Dec 2016 19:06:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/2016/12/we-dont-need-stringbuilder-for-simple-concatenation/</guid>
+      <description>String concatenation has always been a well-discussed topic among Java developers. It&amp;rsquo;s been costly.
+Let&amp;rsquo;s first dig into the issue of why it&amp;rsquo;s costly.
+In Java, string objects are immutable, which means once it is created, you cannot change it. So when we concatenate one string with another, a new string is created, and the older one is marked for the garbage collector.
+Let&amp;rsquo;s say we need to concatenate a million strings.</description>
+    </item>
+    
+    <item>
       <title>জাভা ইন্টারফেস এর ক্ষেত্রে multiple inheritance সাপোর্ট করলেও ক্লাসের ক্ষেত্রে কেনো করে না ?</title>
       <link>http://bazlur.com/posts/2016-11-02-%E0%A6%9C%E0%A6%BE%E0%A6%AD%E0%A6%BE-%E0%A6%87%E0%A6%A8%E0%A7%8D%E0%A6%9F%E0%A6%BE%E0%A6%B0%E0%A6%AB%E0%A7%87%E0%A6%B8-%E0%A6%8F%E0%A6%B0-%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A7%87%E0%A6%A4/</link>
       <pubDate>Wed, 02 Nov 2016 18:09:00 +0000</pubDate>

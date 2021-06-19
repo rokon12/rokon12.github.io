@@ -375,6 +375,18 @@ copy() মেথডটিতে দুটি প্যারামিটার �
     </item>
     
     <item>
+      <title>We Don&#39;t Need StringBuilder for Simple Concatenation</title>
+      <link>http://bazlur.com/2016/12/we-dont-need-stringbuilder-for-simple-concatenation/</link>
+      <pubDate>Thu, 22 Dec 2016 19:06:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/2016/12/we-dont-need-stringbuilder-for-simple-concatenation/</guid>
+      <description>String concatenation has always been a well-discussed topic among Java developers. It&amp;rsquo;s been costly.
+Let&amp;rsquo;s first dig into the issue of why it&amp;rsquo;s costly.
+In Java, string objects are immutable, which means once it is created, you cannot change it. So when we concatenate one string with another, a new string is created, and the older one is marked for the garbage collector.
+Let&amp;rsquo;s say we need to concatenate a million strings.</description>
+    </item>
+    
+    <item>
       <title>ভবিষ্যৎ জাভা ডেভলপারদের স্বাধীনতা</title>
       <link>http://bazlur.com/posts/2012-03-31-%E0%A6%AD%E0%A6%AC%E0%A6%BF%E0%A6%B7%E0%A7%8D%E0%A6%AF%E0%A7%8E-%E0%A6%9C%E0%A6%BE%E0%A6%AD%E0%A6%BE-%E0%A6%A1%E0%A7%87%E0%A6%AD%E0%A6%B2%E0%A6%AA%E0%A6%BE%E0%A6%B0%E0%A6%A6%E0%A7%87/</link>
       <pubDate>Sat, 31 Mar 2012 00:30:00 +0000</pubDate>
