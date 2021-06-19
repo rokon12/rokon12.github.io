@@ -470,7 +470,7 @@ Animal animal; 
 এখন পর্যন্ত খুঁজে পাওয়া সবচেয়ে বড় মৌলিক সংখ্যাটি হলো – 2^57,885,161 -1।
 এই লিংকে এ সম্পর্কে আরও বিস্তারিত জানা যাবে।
 এতে 17,425,170 টি সংখ্যা রয়েছে। এই সংখ্যাটি দেখতে চাইলে ঝটপট একটি জাভা প্রোগ্রাম লিখে ফেলা যায়। এর জন্য জাভার BigInteger ক্লাসটি প্রয়োজন হবে।
-import java.math.BigInteger; public class LargestPrimeNumber { public static void main(String\[\] args) { BigInteger two = BigInteger.valueOf(2); BigInteger largest = two.pow(57\_885\_161); BigInteger largestPrimeNumber = largest.</description>
+import java.math.BigInteger; public class LargestPrimeNumber { public static void main(String[] args) { BigInteger two = BigInteger.valueOf(2); BigInteger largest = two.pow(57_885_161); BigInteger largestPrimeNumber = largest.</description>
     </item>
     
     <item>

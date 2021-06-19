@@ -31,9 +31,6 @@
     
 
     
-                           
-    <meta name="twitter:image" content="https://4.bp.blogspot.com/-tsU9x9Qi2bA/WLbzv2r_TJI/AAAAAAAACis/E5CuFxRpqzMbSjfUNdVq2JYLJCpe8vfkwCLcB/s400/largest_prime_number.png">
-    
     
 
     
@@ -98,26 +95,26 @@ if (!doNotTrack) {
 </div>
 
 <p class="post-tag">
-    <div id="tags"></div>
+    <div id="tags">Tags:<a class="post-tag" href="/tags/java" rel="tag"> java </a> &nbsp; <a class="post-tag" href="/tags/biginteger" rel="tag"> BigInteger </a> &nbsp; <a class="post-tag" href="/tags/prime-number" rel="tag"> Prime Number </a></div>
 </p>
 
 <main>
     <p>সবচেয়ে বড় মৌলিক সংখ্যাটি কতো ?</p>
-<p>এখন পর্যন্ত খুঁজে পাওয়া সবচেয়ে বড় মৌলিক সংখ্যাটি হলো – 2^57,885,161 -1।</p>
+<p>এখন পর্যন্ত খুঁজে পাওয়া সবচেয়ে বড় মৌলিক সংখ্যাটি হলো – <code>2^57,885,161 -1</code>।</p>
 <p><a href="https://www.sciencedaily.com/releases/2013/02/130213225424.htm">এই লিংকে</a> এ সম্পর্কে আরও বিস্তারিত জানা যাবে।</p>
-<p>এতে 17,425,170 টি সংখ্যা রয়েছে। এই সংখ্যাটি দেখতে চাইলে ঝটপট একটি জাভা প্রোগ্রাম লিখে ফেলা যায়। এর জন্য জাভার BigInteger ক্লাসটি প্রয়োজন হবে।</p>
+<p>এতে 17,425,170 টি সংখ্যা রয়েছে। এই সংখ্যাটি দেখতে চাইলে ঝটপট একটি জাভা প্রোগ্রাম লিখে ফেলা যায়। এর জন্য জাভার <code>BigInteger</code> ক্লাসটি প্রয়োজন হবে।</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> java.math.BigInteger<span style="color:#f92672">;</span>
 
 <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">LargestPrimeNumber</span> <span style="color:#f92672">{</span>
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#960050;background-color:#1e0010">\</span><span style="color:#f92672">[</span><span style="color:#960050;background-color:#1e0010">\</span><span style="color:#f92672">]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
         BigInteger two <span style="color:#f92672">=</span> BigInteger<span style="color:#f92672">.</span><span style="color:#a6e22e">valueOf</span><span style="color:#f92672">(</span>2<span style="color:#f92672">);</span>
-        BigInteger largest <span style="color:#f92672">=</span> two<span style="color:#f92672">.</span><span style="color:#a6e22e">pow</span><span style="color:#f92672">(</span>57<span style="color:#960050;background-color:#1e0010">\</span>_885<span style="color:#960050;background-color:#1e0010">\</span>_161<span style="color:#f92672">);</span>
+        BigInteger largest <span style="color:#f92672">=</span> two<span style="color:#f92672">.</span><span style="color:#a6e22e">pow</span><span style="color:#f92672">(</span>57_885_161<span style="color:#f92672">);</span>
         BigInteger largestPrimeNumber <span style="color:#f92672">=</span> largest<span style="color:#f92672">.</span><span style="color:#a6e22e">subtract</span><span style="color:#f92672">(</span>BigInteger<span style="color:#f92672">.</span><span style="color:#a6e22e">ONE</span><span style="color:#f92672">);</span>
         System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>largestPrimeNumber<span style="color:#f92672">);</span>
     <span style="color:#f92672">}</span>
 <span style="color:#f92672">}</span>
 </code></pre></div><p>এটি প্রিন্ট হতে বেশ খানিকটা সময় নেবে।</p>
-<p><a href="https://4.bp.blogspot.com/-tsU9x9Qi2bA/WLbzv2r_TJI/AAAAAAAACis/E5CuFxRpqzMbSjfUNdVq2JYLJCpe8vfkwCLcB/s1600/largest_prime_number.png"><img src="https://4.bp.blogspot.com/-tsU9x9Qi2bA/WLbzv2r_TJI/AAAAAAAACis/E5CuFxRpqzMbSjfUNdVq2JYLJCpe8vfkwCLcB/s400/largest_prime_number.png" alt="" /></a></p>
+<p>[<img src="/img/largest_prime_number.png" alt="Largest Prime Number" /></p>
 <p>ফাইলে স্টোর করতে চাইলে নিচের কোড অংশটুকু যুক্ত করুন-</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
     Files<span style="color:#f92672">.</span><span style="color:#a6e22e">write</span><span style="color:#f92672">(</span>Paths<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;prime.txt&#34;</span><span style="color:#f92672">),</span> largestPrimeNumber<span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">().</span><span style="color:#a6e22e">getBytes</span><span style="color:#f92672">());</span>
@@ -292,7 +289,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/100daysofcode" style="font-size:2.684052488498077rem">100daysofcode</a>
+  <a href="/tags/100daysofcode" style="font-size:2.67285473740199rem">100daysofcode</a>
   
   
   
@@ -300,7 +297,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/100daysofjava" style="font-size:2.684052488498077rem">100daysofjava</a>
+  <a href="/tags/100daysofjava" style="font-size:2.67285473740199rem">100daysofjava</a>
   
   
   
@@ -324,7 +321,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/agile" style="font-size:1.7445433649525386rem">agile</a>
+  <a href="/tags/agile" style="font-size:1.7395926812072733rem">agile</a>
   
   
   
@@ -332,7 +329,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/algorithm" style="font-size:1.469754561772769rem">algorithm</a>
+  <a href="/tags/algorithm" style="font-size:1.4666310280973585rem">algorithm</a>
   
   
   
@@ -340,7 +337,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/arraylist" style="font-size:1.469754561772769rem">arraylist</a>
+  <a href="/tags/arraylist" style="font-size:1.4666310280973585rem">arraylist</a>
   
   
   
@@ -356,7 +353,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/bangla-book" style="font-size:2.2142979267253073rem">bangla-book</a>
+  <a href="/tags/bangla-book" style="font-size:2.2062237093046315rem">bangla-book</a>
   
   
   
@@ -372,7 +369,15 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/book" style="font-size:2.2142979267253073rem">book</a>
+  <a href="/tags/biginteger" style="font-size:1rem">biginteger</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/book" style="font-size:2.2062237093046315rem">book</a>
   
   
   
@@ -428,7 +433,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/coding" style="font-size:2.7382984381619173rem">coding</a>
+  <a href="/tags/coding" style="font-size:2.7267399900884772rem">coding</a>
   
   
   
@@ -572,7 +577,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/executors" style="font-size:1.469754561772769rem">executors</a>
+  <a href="/tags/executors" style="font-size:1.4666310280973585rem">executors</a>
   
   
   
@@ -588,7 +593,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/fibonacci" style="font-size:1.469754561772769rem">fibonacci</a>
+  <a href="/tags/fibonacci" style="font-size:1.4666310280973585rem">fibonacci</a>
   
   
   
@@ -596,7 +601,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/file" style="font-size:1.469754561772769rem">file</a>
+  <a href="/tags/file" style="font-size:1.4666310280973585rem">file</a>
   
   
   
@@ -636,7 +641,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/hash-function" style="font-size:1.469754561772769rem">hash-function</a>
+  <a href="/tags/hash-function" style="font-size:1.4666310280973585rem">hash-function</a>
   
   
   
@@ -644,7 +649,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/hashmap" style="font-size:1.7445433649525386rem">hashmap</a>
+  <a href="/tags/hashmap" style="font-size:1.7395926812072733rem">hashmap</a>
   
   
   
@@ -724,7 +729,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/java" style="font-size:3.4828418031144563rem">java</a>
+  <a href="/tags/java" style="font-size:3.483376778377506rem">java</a>
   
   
   
@@ -788,7 +793,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/java-thread-programming" style="font-size:1.939509123545538rem">java-thread-programming</a>
+  <a href="/tags/java-thread-programming" style="font-size:1.933262056194717rem">java-thread-programming</a>
   
   
   
@@ -804,7 +809,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/java16" style="font-size:1.7445433649525386rem">java16</a>
+  <a href="/tags/java16" style="font-size:1.7395926812072733rem">java16</a>
   
   
   
@@ -812,7 +817,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/java8" style="font-size:1.469754561772769rem">java8</a>
+  <a href="/tags/java8" style="font-size:1.4666310280973585rem">java8</a>
   
   
   
@@ -820,7 +825,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/lambda-expression" style="font-size:1.469754561772769rem">lambda-expression</a>
+  <a href="/tags/lambda-expression" style="font-size:1.4666310280973585rem">lambda-expression</a>
   
   
   
@@ -844,7 +849,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/linkedlist" style="font-size:1.469754561772769rem">linkedlist</a>
+  <a href="/tags/linkedlist" style="font-size:1.4666310280973585rem">linkedlist</a>
   
   
   
@@ -876,7 +881,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/map" style="font-size:1.7445433649525386rem">map</a>
+  <a href="/tags/map" style="font-size:1.7395926812072733rem">map</a>
   
   
   
@@ -964,6 +969,14 @@ if (!doNotTrack) {
   
   
   
+  <a href="/tags/prime-number" style="font-size:1rem">prime-number</a>
+  
+  
+  
+  
+  
+  
+  
   <a href="/tags/programming" style="font-size:1rem">programming</a>
   
   
@@ -996,7 +1009,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/review" style="font-size:1.939509123545538rem">review</a>
+  <a href="/tags/review" style="font-size:1.933262056194717rem">review</a>
   
   
   
@@ -1020,7 +1033,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/serialization" style="font-size:1.469754561772769rem">serialization</a>
+  <a href="/tags/serialization" style="font-size:1.4666310280973585rem">serialization</a>
   
   
   
@@ -1060,7 +1073,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/string" style="font-size:1.7445433649525386rem">string</a>
+  <a href="/tags/string" style="font-size:1.7395926812072733rem">string</a>
   
   
   
@@ -1092,7 +1105,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/thread" style="font-size:2.3187677811517955rem">thread</a>
+  <a href="/tags/thread" style="font-size:2.309998913513919rem">thread</a>
   
   
   

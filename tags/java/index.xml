@@ -324,6 +324,19 @@ copy() মেথডটিতে দুটি প্যারামিটার �
     </item>
     
     <item>
+      <title>Largest known prime number</title>
+      <link>http://bazlur.com/posts/2017-03-01-largest-known-prime-numbe/</link>
+      <pubDate>Wed, 01 Mar 2017 16:19:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/posts/2017-03-01-largest-known-prime-numbe/</guid>
+      <description>সবচেয়ে বড় মৌলিক সংখ্যাটি কতো ?
+এখন পর্যন্ত খুঁজে পাওয়া সবচেয়ে বড় মৌলিক সংখ্যাটি হলো – 2^57,885,161 -1।
+এই লিংকে এ সম্পর্কে আরও বিস্তারিত জানা যাবে।
+এতে 17,425,170 টি সংখ্যা রয়েছে। এই সংখ্যাটি দেখতে চাইলে ঝটপট একটি জাভা প্রোগ্রাম লিখে ফেলা যায়। এর জন্য জাভার BigInteger ক্লাসটি প্রয়োজন হবে।
+import java.math.BigInteger; public class LargestPrimeNumber { public static void main(String[] args) { BigInteger two = BigInteger.valueOf(2); BigInteger largest = two.pow(57_885_161); BigInteger largestPrimeNumber = largest.</description>
+    </item>
+    
+    <item>
       <title>কোডিং কনভেনশন (coding convention)</title>
       <link>http://bazlur.com/posts/2017-02-26-%E0%A6%95%E0%A7%8B%E0%A6%A1%E0%A6%BF%E0%A6%82-%E0%A6%95%E0%A6%A8%E0%A6%AD%E0%A7%87%E0%A6%A8%E0%A6%B6%E0%A6%A8-coding-conventio/</link>
       <pubDate>Sun, 26 Feb 2017 00:27:00 +0000</pubDate>

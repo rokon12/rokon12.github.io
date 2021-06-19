@@ -847,7 +847,17 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
+    <loc>http://bazlur.com/tags/biginteger/</loc>
+    <lastmod>2017-03-01T16:19:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>http://bazlur.com/posts/2017-03-01-largest-known-prime-numbe/</loc>
+    <lastmod>2017-03-01T16:19:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://bazlur.com/tags/prime-number/</loc>
     <lastmod>2017-03-01T16:19:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
