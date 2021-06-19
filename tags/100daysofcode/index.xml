@@ -14,9 +14,9 @@
       
       <guid>http://bazlur.com/2021/06/lets-find-out-the-most-enormous-known-prime-number-using-java/</guid>
       <description>According to Wikipedia, the biggest known prime number (as of December 2020) is 2^82,589,933 − 1, which has 24,862,048 digits when printed in base 10.
-The number itself unfathomable. Let&amp;rsquo;s write a java program that calculates this number and writes it in a text file.
-It doesn&amp;rsquo;t take much time to calculate the number, but writing on file or flushing on Standard output would take quite a significant time.
-The file is quite large: 24.</description>
+The number itself is unfathomable.
+Let&amp;rsquo;s write a java program that calculates this number and writes it in a text file.
+It doesn&amp;rsquo;t take much time to calculate the number, but writing on file or flushing on Standard output would take quite a significant time.</description>
     </item>
     
     <item>
