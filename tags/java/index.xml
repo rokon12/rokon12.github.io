@@ -153,6 +153,17 @@ ArrayList&amp;lt;String&amp;gt; list = new ArrayList&amp;lt;&amp;gt;(); ওপ�
     </item>
     
     <item>
+      <title>ArrayList ও LinkedList মধ্যে পার্থক্য কী? (Difference between ArrayList and LinkedList in Java)</title>
+      <link>http://bazlur.com/2018/07/arraylist-%E0%A6%93-linkedlist-%E0%A6%AE%E0%A6%A7%E0%A7%8D%E0%A6%AF%E0%A7%87-%E0%A6%AA%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A6%95%E0%A7%8D%E0%A6%AF-%E0%A6%95%E0%A7%80-difference-between-arraylist-and-linkedlist-in-java/</link>
+      <pubDate>Wed, 18 Jul 2018 13:17:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/2018/07/arraylist-%E0%A6%93-linkedlist-%E0%A6%AE%E0%A6%A7%E0%A7%8D%E0%A6%AF%E0%A7%87-%E0%A6%AA%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A6%95%E0%A7%8D%E0%A6%AF-%E0%A6%95%E0%A7%80-difference-between-arraylist-and-linkedlist-in-java/</guid>
+      <description>Lambda expressions are all about how we write code. It’s about how we can write more concise, smaller, and less boilerplate code. However, this aforementioned statement may not seem to be true in the case of exceptions in Java.
+In Java, we can only handle exceptions through the try-catch block, and this hasn’t changed for the lambda expression.
+Let’s say we’re going to develop a simple web crawler. The crawler will take a list of URLs in a string as an argument and save the content of the text file in a text file.</description>
+    </item>
+    
+    <item>
       <title>ওয়ার্ল্ডকাপের ফাঁকে একটি অত্যন্ত জ্ঞানগর্ভ মূলক দামী পোস্ট </title>
       <link>http://bazlur.com/posts/2018-06-21-%E0%A6%93%E0%A6%AF%E0%A6%BC%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%B2%E0%A7%8D%E0%A6%A1%E0%A6%95%E0%A6%BE%E0%A6%AA%E0%A7%87%E0%A6%B0-%E0%A6%AB%E0%A6%BE%E0%A6%81%E0%A6%95%E0%A7%87-%E0%A6%8F%E0%A6%95%E0%A6%9F/</link>
       <pubDate>Thu, 21 Jun 2018 05:11:48 +0000</pubDate>

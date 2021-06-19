@@ -1,0 +1,1290 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="fb:pages" content="556530934551556" />
+
+    
+    <title>ArrayList ও LinkedList মধ্যে পার্থক্য কী? (Difference between ArrayList and LinkedList in Java) - Bazlur&#39;s Stream of Thoughts</title>
+    <meta property="og:title" content="ArrayList ও LinkedList মধ্যে পার্থক্য কী? (Difference between ArrayList and LinkedList in Java) - Bazlur&#39;s Stream of Thoughts">
+    
+
+    <meta name="twitter:card" content="summary">
+
+    
+    
+    
+
+    
+    
+    <meta property="description" content="Lambda expressions are all about how we write code. It’s about how we can write more concise, smaller, and less boilerplate code. However, this aforementioned statement may not seem to be true in the &amp;hellip;">
+    <meta property="og:description" content="Lambda expressions are all about how we write code. It’s about how we can write more concise, smaller, and less boilerplate code. However, this aforementioned statement may not seem to be true in the &amp;hellip;">
+    
+    
+
+    
+    
+
+    
+
+    
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+
+    <link rel="stylesheet"
+          href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/languages/java.min.js"
+            integrity="sha512-xEnylOTeZvxUCvtK9Lw3FjOgfCwsMEhUbx6Hant1lPgy+PcynqCm8XfqhpRos6XNaTxeMuT4QyrWyo3U1NijHg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+    
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-180587445-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/about-me/">About me</a></li>
+      
+      <li><a href="/books/">Books</a></li>
+      
+      <li><a href="/categories/">Categories</a></li>
+      
+      <li><a href="/resume/">Resume</a></li>
+      
+      <li><a href="/live">LIVE</a></li>
+      
+      <li><a href="/index.xml">Subscribe</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+<div class="article-meta">
+    <h1><span class="title">ArrayList ও LinkedList মধ্যে পার্থক্য কী? (Difference between ArrayList and LinkedList in Java)</span></h1>
+    <h2 class="author">A N M Bazlur Rahman</h2>
+    <h2 class="date">2018/07/18</h2>
+</div>
+
+<p class="post-tag">
+    <div id="tags">Tags:<a class="post-tag" href="/tags/checked-exceptions" rel="tag"> Checked Exceptions </a> &nbsp; <a class="post-tag" href="/tags/lambda-expression" rel="tag"> Lambda Expression </a> &nbsp; <a class="post-tag" href="/tags/java8" rel="tag"> Java8 </a> &nbsp; <a class="post-tag" href="/tags/java-8" rel="tag"> Java 8 </a> &nbsp; <a class="post-tag" href="/tags/java" rel="tag"> Java </a> &nbsp; <a class="post-tag" href="/tags/tutorial" rel="tag"> Tutorial </a> &nbsp; <a class="post-tag" href="/tags/checked" rel="tag"> Checked </a> &nbsp; <a class="post-tag" href="/tags/unchecked" rel="tag"> Unchecked </a></div>
+</p>
+
+<main>
+    <p>Lambda expressions are all about how we write code. It’s about how we can write more concise, smaller, and less boilerplate code. However, this aforementioned statement may not seem to be true in the case of exceptions in Java.</p>
+<p>In Java, we can only handle exceptions through the try-catch block, and this hasn’t changed for the lambda expression.</p>
+<p>Let’s say we’re going to develop a simple web crawler. The crawler will take a list of URLs in a string as an argument and save the content of the text file in a text file. Let’s do this.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#f92672">import</span> java.io.InputStream<span style="color:#f92672">;</span>
+    <span style="color:#f92672">import</span> java.net.URL<span style="color:#f92672">;</span>
+    <span style="color:#f92672">import</span> java.nio.file.Files<span style="color:#f92672">;</span>
+    <span style="color:#f92672">import</span> java.nio.file.Paths<span style="color:#f92672">;</span>
+    <span style="color:#f92672">import</span> java.nio.file.StandardCopyOption<span style="color:#f92672">;</span>
+    <span style="color:#f92672">import</span> java.util.List<span style="color:#f92672">;</span>
+    <span style="color:#f92672">import</span> java.util.UUID<span style="color:#f92672">;</span>
+    
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">WebCrawler</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> urlsToCrawl <span style="color:#f92672">=</span> List<span style="color:#f92672">.</span><span style="color:#a6e22e">of</span><span style="color:#f92672">(</span><span style="color:#960050;background-color:#1e0010">“</span>https<span style="color:#f92672">:</span><span style="color:#75715e">//masterdevskills.com&#34;);
+</span><span style="color:#75715e"></span>    
+            WebCrawler webCrawler <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> WebCrawler<span style="color:#f92672">();</span>
+            webCrawler<span style="color:#f92672">.</span><span style="color:#a6e22e">crawl</span><span style="color:#f92672">(</span>urlsToCrawl<span style="color:#f92672">);</span>
+        <span style="color:#f92672">}</span>
+    
+        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">crawl</span><span style="color:#f92672">(</span>List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> urlsToCrawl<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            urlsToCrawl<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">()</span>
+                    <span style="color:#f92672">.</span><span style="color:#a6e22e">map</span><span style="color:#f92672">(</span>urlToCrawl <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">new</span> URL<span style="color:#f92672">(</span>urlToCrawl<span style="color:#f92672">))</span>
+                    <span style="color:#f92672">.</span><span style="color:#a6e22e">forEach</span><span style="color:#f92672">(</span>url <span style="color:#f92672">-&gt;</span> save<span style="color:#f92672">(</span>url<span style="color:#f92672">));</span>
+        <span style="color:#f92672">}</span>
+    
+        <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">save</span><span style="color:#f92672">(</span>URL url<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> IOException <span style="color:#f92672">{</span>
+            String uuid <span style="color:#f92672">=</span> UUID<span style="color:#f92672">.</span><span style="color:#a6e22e">randomUUID</span><span style="color:#f92672">().</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">();</span>
+            InputStream inputStream <span style="color:#f92672">=</span> url<span style="color:#f92672">.</span><span style="color:#a6e22e">openConnection</span><span style="color:#f92672">().</span><span style="color:#a6e22e">getInputStream</span><span style="color:#f92672">();</span>
+            Files<span style="color:#f92672">.</span><span style="color:#a6e22e">copy</span><span style="color:#f92672">(</span>inputStream<span style="color:#f92672">,</span> Paths<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>uuid <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;.txt&#34;</span><span style="color:#f92672">),</span> StandardCopyOption<span style="color:#f92672">.</span><span style="color:#a6e22e">REPLACE_EXISTING</span><span style="color:#f92672">);</span>
+        <span style="color:#f92672">}</span>
+    <span style="color:#f92672">}</span>
+</code></pre></div><p>The above code is simple and intuitive. We used <code>Stream</code> and the first map method converts string URL to java.net.URL object and then passed it to the <code>forEach</code> method, which saves it in a text file. We have used a lambda expression in the crawl method. However, the above code won’t compile. The reason is that we didn’t handle the checked exceptions. The constructor of java.net.URL class throws the <code>MalformedURLException</code> checked exception. And, our private save method also throws checked exceptions, which is the <code>IOException</code>.</p>
+<p>Let’s handle the exceptions.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">crawl</span><span style="color:#f92672">(</span>List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> urlsToCrawl<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        urlsToCrawl<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">()</span>
+                <span style="color:#f92672">.</span><span style="color:#a6e22e">map</span><span style="color:#f92672">(</span>urlToCrawl <span style="color:#f92672">-&gt;</span> <span style="color:#f92672">{</span>
+                    <span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
+                        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> URL<span style="color:#f92672">(</span>urlToCrawl<span style="color:#f92672">);</span>
+                    <span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>MalformedURLException e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                        e<span style="color:#f92672">.</span><span style="color:#a6e22e">printStackTrace</span><span style="color:#f92672">();</span>
+                    <span style="color:#f92672">}</span>
+                    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+                <span style="color:#f92672">})</span>
+                <span style="color:#f92672">.</span><span style="color:#a6e22e">forEach</span><span style="color:#f92672">(</span>url <span style="color:#f92672">-&gt;</span> <span style="color:#f92672">{</span>
+                    <span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
+                        save<span style="color:#f92672">(</span>url<span style="color:#f92672">);</span>
+                    <span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>IOException e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                        e<span style="color:#f92672">.</span><span style="color:#a6e22e">printStackTrace</span><span style="color:#f92672">();</span>
+                    <span style="color:#f92672">}</span>
+                <span style="color:#f92672">});</span>
+    <span style="color:#f92672">}</span>
+</code></pre></div><p>Lambda expressions are supposed to be concise, smaller, and crisp, but none of these apply to the aforementioned code. So here, we have a problem.</p>
+<p>Let’s rewrite the whole program and make our lambda crisp.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#f92672">import</span> java.io.InputStream<span style="color:#f92672">;</span>
+    <span style="color:#f92672">import</span> java.net.MalformedURLException<span style="color:#f92672">;</span>
+    <span style="color:#f92672">import</span> java.net.URL<span style="color:#f92672">;</span>
+    <span style="color:#f92672">import</span> java.nio.file.Files<span style="color:#f92672">;</span>
+    <span style="color:#f92672">import</span> java.nio.file.Paths<span style="color:#f92672">;</span>
+    <span style="color:#f92672">import</span> java.nio.file.StandardCopyOption<span style="color:#f92672">;</span>
+    <span style="color:#f92672">import</span> java.util.List<span style="color:#f92672">;</span>
+    <span style="color:#f92672">import</span> java.util.Objects<span style="color:#f92672">;</span>
+    <span style="color:#f92672">import</span> java.util.UUID<span style="color:#f92672">;</span>
+    
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">WebCrawler</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> urlsToCrawl <span style="color:#f92672">=</span> List<span style="color:#f92672">.</span><span style="color:#a6e22e">of</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;https://masterdevskills.com&#34;</span><span style="color:#f92672">);</span>
+            WebCrawler webCrawler <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> WebCrawler<span style="color:#f92672">();</span>
+            webCrawler<span style="color:#f92672">.</span><span style="color:#a6e22e">crawl</span><span style="color:#f92672">(</span>urlsToCrawl<span style="color:#f92672">);</span>
+        <span style="color:#f92672">}</span>
+    
+        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">crawl</span><span style="color:#f92672">(</span>List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> urlsToCrawl<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            urlsToCrawl<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">()</span>
+                    <span style="color:#f92672">.</span><span style="color:#a6e22e">map</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">::</span>createURL<span style="color:#f92672">)</span>
+                   <span style="color:#f92672">.</span><span style="color:#a6e22e">forEach</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">::</span>save<span style="color:#f92672">);</span>
+        <span style="color:#f92672">}</span>
+    
+        <span style="color:#66d9ef">private</span> URL <span style="color:#a6e22e">createURL</span><span style="color:#f92672">(</span>String urlToCrawl<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
+                <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> URL<span style="color:#f92672">(</span>urlToCrawl<span style="color:#f92672">);</span>
+            <span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>MalformedURLException e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                e<span style="color:#f92672">.</span><span style="color:#a6e22e">printStackTrace</span><span style="color:#f92672">();</span>
+            <span style="color:#f92672">}</span>
+            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+    
+        <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">save</span><span style="color:#f92672">(</span>URL url<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
+                String uuid <span style="color:#f92672">=</span> UUID<span style="color:#f92672">.</span><span style="color:#a6e22e">randomUUID</span><span style="color:#f92672">().</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">();</span>
+                InputStream inputStream <span style="color:#f92672">=</span> url<span style="color:#f92672">.</span><span style="color:#a6e22e">openConnection</span><span style="color:#f92672">().</span><span style="color:#a6e22e">getInputStream</span><span style="color:#f92672">();</span>
+                Files<span style="color:#f92672">.</span><span style="color:#a6e22e">copy</span><span style="color:#f92672">(</span>inputStream<span style="color:#f92672">,</span> Paths<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>uuid <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;.txt&#34;</span><span style="color:#f92672">),</span> StandardCopyOption<span style="color:#f92672">.</span><span style="color:#a6e22e">REPLACE_EXISTING</span><span style="color:#f92672">);</span>
+            <span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>IOException e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                e<span style="color:#f92672">.</span><span style="color:#a6e22e">printStackTrace</span><span style="color:#f92672">();</span>
+            <span style="color:#f92672">}</span>
+        <span style="color:#f92672">}</span>
+    <span style="color:#f92672">}</span>
+</code></pre></div><p>Now look carefully at the <code>crawl()</code> method. We replaced the lambda expression with the method reference. It’s now more concise, smaller, and crisp. However, we were not able to solve the problem of handling the exception, we just moved it to a different place.</p>
+<p>We have another problem here, we handle the exception in the method with the <code>try-catch</code> block in places but did not delegate the exception up the stack of the method call where we actually called the <code>crawl()</code> method.</p>
+<p>We can solve this problem by re-throwing the checked exception using <code>RuntimeException</code>, which will work since we don’t have to handle runtime exception if we don’t want to and our lambda expression will remain concise.</p>
+<p>Let’s do that:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">crawl</span><span style="color:#f92672">(</span>List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> urlsToCrawl<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            urlsToCrawl<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">()</span>
+                    <span style="color:#f92672">.</span><span style="color:#a6e22e">map</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">::</span>createURL<span style="color:#f92672">)</span>
+                    <span style="color:#f92672">.</span><span style="color:#a6e22e">forEach</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">::</span>save<span style="color:#f92672">);</span>
+        <span style="color:#f92672">}</span>
+    
+        <span style="color:#66d9ef">private</span> URL <span style="color:#a6e22e">createURL</span><span style="color:#f92672">(</span>String urlToCrawl<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
+                <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> URL<span style="color:#f92672">(</span>urlToCrawl<span style="color:#f92672">);</span>
+            <span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>MalformedURLException e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> RuntimeException<span style="color:#f92672">(</span>e<span style="color:#f92672">);</span>
+            <span style="color:#f92672">}</span>
+        <span style="color:#f92672">}</span>
+    
+        <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">save</span><span style="color:#f92672">(</span>URL url<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
+                String uuid <span style="color:#f92672">=</span> UUID<span style="color:#f92672">.</span><span style="color:#a6e22e">randomUUID</span><span style="color:#f92672">().</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">();</span>
+                InputStream inputStream <span style="color:#f92672">=</span> url<span style="color:#f92672">.</span><span style="color:#a6e22e">openConnection</span><span style="color:#f92672">().</span><span style="color:#a6e22e">getInputStream</span><span style="color:#f92672">();</span>
+                Files<span style="color:#f92672">.</span><span style="color:#a6e22e">copy</span><span style="color:#f92672">(</span>inputStream<span style="color:#f92672">,</span> Paths<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>uuid <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;.txt&#34;</span><span style="color:#f92672">),</span> StandardCopyOption<span style="color:#f92672">.</span><span style="color:#a6e22e">REPLACE_EXISTING</span><span style="color:#f92672">);</span>
+            <span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>IOException e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> RuntimeException<span style="color:#f92672">(</span>e<span style="color:#f92672">);</span>
+            <span style="color:#f92672">}</span>
+        <span style="color:#f92672">}</span>
+</code></pre></div><p>The solution seems to work, but the amount of boilerplate code didn’t reduce. Let’s work on that now.</p>
+<p>The <code>map()</code> method of stream takes a functional interface. We can write a similar functional interface, which would use a checked exception. Let’s do that.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#a6e22e">@FunctionalInterface</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">ThrowingFunction</span><span style="color:#f92672">&lt;</span>T<span style="color:#f92672">,</span> R<span style="color:#f92672">,</span> E <span style="color:#66d9ef">extends</span> Throwable<span style="color:#f92672">&gt;</span> <span style="color:#f92672">{</span>
+        R <span style="color:#a6e22e">apply</span><span style="color:#f92672">(</span>T t<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> E<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+</code></pre></div><p>This functional interface has three generic types, including one that extends a <code>Throwable</code>. Since Java 8, an interface can have static methods, let’s write one here.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#a6e22e">@FunctionalInterface</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">ThrowingFunction</span><span style="color:#f92672">&lt;</span>T<span style="color:#f92672">,</span> R<span style="color:#f92672">,</span> E <span style="color:#66d9ef">extends</span> Throwable<span style="color:#f92672">&gt;</span> <span style="color:#f92672">{</span>
+        R <span style="color:#a6e22e">apply</span><span style="color:#f92672">(</span>T t<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> E<span style="color:#f92672">;</span>
+    
+        <span style="color:#66d9ef">static</span> <span style="color:#f92672">&lt;</span>T<span style="color:#f92672">,</span> R<span style="color:#f92672">,</span> E <span style="color:#66d9ef">extends</span> Throwable<span style="color:#f92672">&gt;</span> Function<span style="color:#f92672">&lt;</span>T<span style="color:#f92672">,</span> R<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">unchecked</span><span style="color:#f92672">(</span>ThrowingFunction<span style="color:#f92672">&lt;</span>T<span style="color:#f92672">,</span> R<span style="color:#f92672">,</span> E<span style="color:#f92672">&gt;</span> f<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">return</span> t <span style="color:#f92672">-&gt;</span> <span style="color:#f92672">{</span>
+                <span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
+                    <span style="color:#66d9ef">return</span> f<span style="color:#f92672">.</span><span style="color:#a6e22e">apply</span><span style="color:#f92672">(</span>t<span style="color:#f92672">);</span>
+                <span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>Throwable e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                    <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> RuntimeException<span style="color:#f92672">(</span>e<span style="color:#f92672">);</span>
+                <span style="color:#f92672">}</span>
+            <span style="color:#f92672">};</span>
+        <span style="color:#f92672">}</span>
+    <span style="color:#f92672">}</span>
+</code></pre></div><p>The above, unchecked method takes a <code>ThrowingFunction</code> and handles the exception, which, in turn, throws a <code>RuntimeException</code> and returns a <code>Function</code>.</p>
+<p>Let’s use in our lambda expression:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">crawl</span><span style="color:#f92672">(</span>List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> urlsToCrawl<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            urlsToCrawl<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">()</span>
+                    <span style="color:#f92672">.</span><span style="color:#a6e22e">map</span><span style="color:#f92672">(</span>ThrowingFunction<span style="color:#f92672">.</span><span style="color:#a6e22e">unchecked</span><span style="color:#f92672">(</span>urlToCrawl <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">new</span> URL<span style="color:#f92672">(</span>urlToCrawl<span style="color:#f92672">)))</span>
+                    <span style="color:#f92672">.</span><span style="color:#a6e22e">forEach</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">::</span>save<span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+</code></pre></div><p>In the map method, the <code>ThrowingFunction.unchecked()</code> handles the exception inside it and returns a <code>Function</code> and <code>map</code>method that uses it. This solves no more boilerplate around, and we can easily reuse this new <code>ThrowingFunction</code> functional interface anywhere we want.</p>
+<p>Now, let’s take care of the <code>forEach</code> method of the stream API. It takes a <code>Consumer</code>. Here, we can also have a new <code>ThrowingConsumer</code> similar to the previous one.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">ThrowingConsumer</span><span style="color:#f92672">&lt;</span>T<span style="color:#f92672">,</span> E <span style="color:#66d9ef">extends</span> Throwable<span style="color:#f92672">&gt;</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">accept</span><span style="color:#f92672">(</span>T t<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> E<span style="color:#f92672">;</span>
+    
+        <span style="color:#66d9ef">static</span> <span style="color:#f92672">&lt;</span>T<span style="color:#f92672">,</span> E <span style="color:#66d9ef">extends</span> Throwable<span style="color:#f92672">&gt;</span> Consumer<span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">unchecked</span><span style="color:#f92672">(</span>ThrowingConsumer<span style="color:#f92672">&lt;</span>T<span style="color:#f92672">,</span> E<span style="color:#f92672">&gt;</span> consumer<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> <span style="color:#f92672">(</span>t<span style="color:#f92672">)</span> <span style="color:#f92672">-&gt;</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
+                consumer<span style="color:#f92672">.</span><span style="color:#a6e22e">accept</span><span style="color:#f92672">(</span>t<span style="color:#f92672">);</span>
+            <span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>Throwable e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> RuntimeException<span style="color:#f92672">(</span>e<span style="color:#f92672">);</span>
+            <span style="color:#f92672">}</span>
+        <span style="color:#f92672">};</span>
+      <span style="color:#f92672">}</span>
+    <span style="color:#f92672">}</span>
+</code></pre></div><p>Let’s use it.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">crawl</span><span style="color:#f92672">(</span>List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> urlsToCrawl<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            urlsToCrawl<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">()</span>
+                    <span style="color:#f92672">.</span><span style="color:#a6e22e">map</span><span style="color:#f92672">(</span>ThrowingFunction<span style="color:#f92672">.</span><span style="color:#a6e22e">unchecked</span><span style="color:#f92672">(</span>urlToCrawl <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">new</span> URL<span style="color:#f92672">(</span>urlToCrawl<span style="color:#f92672">)))</span>
+                    <span style="color:#f92672">.</span><span style="color:#a6e22e">forEach</span><span style="color:#f92672">(</span>ThrowingConsumer<span style="color:#f92672">.</span><span style="color:#a6e22e">unchecked</span><span style="color:#f92672">(</span>url <span style="color:#f92672">-&gt;</span> save<span style="color:#f92672">(</span>url<span style="color:#f92672">)));</span>
+    <span style="color:#f92672">}</span>
+    
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">save</span><span style="color:#f92672">(</span>URL url<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> IOException <span style="color:#f92672">{</span>
+            String uuid <span style="color:#f92672">=</span> UUID<span style="color:#f92672">.</span><span style="color:#a6e22e">randomUUID</span><span style="color:#f92672">().</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">();</span>
+            InputStream inputStream <span style="color:#f92672">=</span> url<span style="color:#f92672">.</span><span style="color:#a6e22e">openConnection</span><span style="color:#f92672">().</span><span style="color:#a6e22e">getInputStream</span><span style="color:#f92672">();</span>
+            Files<span style="color:#f92672">.</span><span style="color:#a6e22e">copy</span><span style="color:#f92672">(</span>inputStream<span style="color:#f92672">,</span> Paths<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>uuid <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;.txt&#34;</span><span style="color:#f92672">),</span> StandardCopyOption<span style="color:#f92672">.</span><span style="color:#a6e22e">REPLACE_EXISTING</span><span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+</code></pre></div><p>Now in our code, there is no try-catch block, no boilerplate code. We can <code>use</code> method reference to make it crisper.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">crawl</span><span style="color:#f92672">(</span>List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> urlsToCrawl<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            urlsToCrawl<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">()</span>
+                    <span style="color:#f92672">.</span><span style="color:#a6e22e">map</span><span style="color:#f92672">(</span>ThrowingFunction<span style="color:#f92672">.</span><span style="color:#a6e22e">unchecked</span><span style="color:#f92672">(</span>URL<span style="color:#f92672">::</span><span style="color:#66d9ef">new</span><span style="color:#f92672">))</span>
+                    <span style="color:#f92672">.</span><span style="color:#a6e22e">forEach</span><span style="color:#f92672">(</span>ThrowingConsumer<span style="color:#f92672">.</span><span style="color:#a6e22e">unchecked</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">::</span>save<span style="color:#f92672">));</span>
+    <span style="color:#f92672">}</span>
+</code></pre></div><p>In conclusion, it’s still debatable whether or not we need a checked exception. However, plenty of software projects have been delivered without checked exceptions till date. Having said that, the decisions that developers made when the language was being created impact our way of writing code today, which we cannot ignore. Java 8 changed our way of writing code. For that, we can just ignore the debate and use the above techniques when we need to deal with checked exceptions in the lambda expression.</p>
+<p>Happy coding!</p>
+<p>This article was published at DZone, <a href="https://masterdevskills.com/how-to-handle-checked-exception-in-lambda-expression-part-1/">See the original article here.</a></p>
+
+</main>
+
+<p class="post-tag">
+    <div>Categories:<a class="post-tag" href="/categories/tutorial" rel="tag"> Tutorial </a> &nbsp; <a class="post-tag" href="/categories/java" rel="tag"> Java </a></div>
+</p>
+
+
+
+<style>
+    #share-buttons {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    #share-buttons:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+    #share-buttons > div {
+        position: relative;
+        text-align: left;
+        height: 36px;
+        width: 32px;
+        float: left;
+        text-align: center;
+    }
+
+    #share-buttons > div > svg {
+        height: 16px;
+        fill: #d5d5d5;
+        margin-top: 10px;
+    }
+
+    #share-buttons > div:hover {
+        cursor: pointer;
+    }
+
+    #share-buttons > div.facebook:hover > svg {
+        fill: #3B5998;
+    }
+
+    #share-buttons > div.twitter:hover > svg {
+        fill: #55ACEE;
+    }
+
+    #share-buttons > div.linkedin:hover > svg {
+        fill: #0077b5;
+    }
+
+    #share-buttons > div.pinterest:hover > svg {
+        fill: #CB2027;
+    }
+
+    #share-buttons > div.gplus:hover > svg {
+        fill: #dd4b39;
+    }
+
+    #share-buttons > div.mail:hover > svg {
+        fill: #7D7D7D;
+    }
+
+    #share-buttons > div.instagram:hover > svg {
+        fill: #C73B92;
+    }
+
+    #share-buttons > div.facebook > svg {
+        height: 18px;
+        margin-top: 9px;
+    }
+
+    #share-buttons > div.twitter > svg {
+        height: 20px;
+        margin-top: 8px;
+    }
+
+    #share-buttons > div.linkedin > svg {
+        height: 19px;
+        margin-top: 7px;
+    }
+
+    #share-buttons > div.pinterest > svg {
+        height: 20px;
+        margin-top: 9px;
+    }
+
+    #share-buttons > div.gplus > svg {
+        height: 17px;
+        margin-top: 9px;
+        position: relative;
+        left: 1px;
+    }
+
+    #share-buttons > div.mail > svg {
+        height: 14px;
+        margin-top: 11px;
+    }
+</style>
+
+<span style="color: silver;">Share on: </span>
+<div id="share-buttons">
+    <div class="facebook" title="Share this on Facebook"
+         onclick="window.open('http://www.facebook.com/share.php?u=http:\/\/bazlur.com\/2018\/07\/arraylist-%E0%A6%93-linkedlist-%E0%A6%AE%E0%A6%A7%E0%A7%8D%E0%A6%AF%E0%A7%87-%E0%A6%AA%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A6%95%E0%A7%8D%E0%A6%AF-%E0%A6%95%E0%A7%80-difference-between-arraylist-and-linkedlist-in-java\/');">
+        <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1343 12v264h-157q-86 0-116 36t-30 108v189h293l-39 296h-254v759h-306v-759h-255v-296h255v-218q0-186 104-288.5t277-102.5q147 0 228 12z"/>
+        </svg>
+    </div>
+    <div class="twitter" title="Share this on Twitter"
+         onclick="window.open('http://twitter.com/intent/tweet?text=ArrayList ও LinkedList মধ্যে পার্থক্য কী? (Difference between ArrayList and LinkedList in Java)&url=http:\/\/bazlur.com\/2018\/07\/arraylist-%E0%A6%93-linkedlist-%E0%A6%AE%E0%A6%A7%E0%A7%8D%E0%A6%AF%E0%A7%87-%E0%A6%AA%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A6%95%E0%A7%8D%E0%A6%AF-%E0%A6%95%E0%A7%80-difference-between-arraylist-and-linkedlist-in-java\/');">
+        <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1684 408q-67 98-162 167 1 14 1 42 0 130-38 259.5t-115.5 248.5-184.5 210.5-258 146-323 54.5q-271 0-496-145 35 4 78 4 225 0 401-138-105-2-188-64.5t-114-159.5q33 5 61 5 43 0 85-11-112-23-185.5-111.5t-73.5-205.5v-4q68 38 146 41-66-44-105-115t-39-154q0-88 44-163 121 149 294.5 238.5t371.5 99.5q-8-38-8-74 0-134 94.5-228.5t228.5-94.5q140 0 236 102 109-21 205-78-37 115-142 178 93-10 186-50z"/>
+        </svg>
+    </div>
+    <div class="linkedin" title="Share this on Linkedin"
+         onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&url=http:\/\/bazlur.com\/2018\/07\/arraylist-%E0%A6%93-linkedlist-%E0%A6%AE%E0%A6%A7%E0%A7%8D%E0%A6%AF%E0%A7%87-%E0%A6%AA%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A6%95%E0%A7%8D%E0%A6%AF-%E0%A6%95%E0%A7%80-difference-between-arraylist-and-linkedlist-in-java\/&title=&summary=&source=');">
+        <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+            <path d="M477 625v991h-330v-991h330zm21-306q1 73-50.5 122t-135.5 49h-2q-82 0-132-49t-50-122q0-74 51.5-122.5t134.5-48.5 133 48.5 51 122.5zm1166 729v568h-329v-530q0-105-40.5-164.5t-126.5-59.5q-63 0-105.5 34.5t-63.5 85.5q-11 30-11 81v553h-329q2-399 2-647t-1-296l-1-48h329v144h-2q20-32 41-56t56.5-52 87-43.5 114.5-15.5q171 0 275 113.5t104 332.5z"/>
+        </svg>
+    </div>
+    
+    <div class="mail" title="Share this through Email" onclick="window.open('mailto:?&body=http:\/\/bazlur.com\/2018\/07\/arraylist-%E0%A6%93-linkedlist-%E0%A6%AE%E0%A6%A7%E0%A7%8D%E0%A6%AF%E0%A7%87-%E0%A6%AA%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A6%95%E0%A7%8D%E0%A6%AF-%E0%A6%95%E0%A7%80-difference-between-arraylist-and-linkedlist-in-java\/');">
+        <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1792 710v794q0 66-47 113t-113 47h-1472q-66 0-113-47t-47-113v-794q44 49 101 87 362 246 497 345 57 42 92.5 65.5t94.5 48 110 24.5h2q51 0 110-24.5t94.5-48 92.5-65.5q170-123 498-345 57-39 100-87zm0-294q0 79-49 151t-122 123q-376 261-468 325-10 7-42.5 30.5t-54 38-52 32.5-57.5 27-50 9h-2q-23 0-50-9t-57.5-27-52-32.5-54-38-42.5-30.5q-91-64-262-182.5t-205-142.5q-62-42-117-115.5t-55-136.5q0-78 41.5-130t118.5-52h1472q65 0 112.5 47t47.5 113z"/>
+        </svg>
+    </div>
+</div>
+
+<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+        this.page.identifier = 'http:\/\/bazlur.com\/2018\/07\/arraylist-%E0%A6%93-linkedlist-%E0%A6%AE%E0%A6%A7%E0%A7%8D%E0%A6%AF%E0%A7%87-%E0%A6%AA%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A6%95%E0%A7%8D%E0%A6%AF-%E0%A6%95%E0%A7%80-difference-between-arraylist-and-linkedlist-in-java\/';
+        this.page.title = 'ArrayList ও LinkedList মধ্যে পার্থক্য কী? (Difference between ArrayList and LinkedList in Java)';
+        this.page.url = 'http:\/\/bazlur.com\/2018\/07\/arraylist-%E0%A6%93-linkedlist-%E0%A6%AE%E0%A6%A7%E0%A7%8D%E0%A6%AF%E0%A7%87-%E0%A6%AA%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A6%95%E0%A7%8D%E0%A6%AF-%E0%A6%95%E0%A7%80-difference-between-arraylist-and-linkedlist-in-java\/';
+    };
+
+    (function () { 
+        var d = document, s = d.createElement('script');
+        s.src = 'https://bazlur-com.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+    Disqus.</a></noscript>
+
+  <footer>
+  
+
+
+
+
+
+
+
+
+
+
+<div id="tag-cloud" style="padding: 5px 15px">
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/100daysofcode" style="font-size:2.6956904849773506rem">100daysofcode</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/100daysofjava" style="font-size:2.6956904849773506rem">100daysofjava</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/access" style="font-size:1rem">access</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/advance-java" style="font-size:1rem">advance-java</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/agile" style="font-size:1.7496886873930002rem">agile</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/algorithm" style="font-size:1.4730008987921752rem">algorithm</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/arraylist" style="font-size:1.4730008987921752rem">arraylist</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/article" style="font-size:1rem">article</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/bangla-book" style="font-size:2.2226895861851754rem">bangla-book</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/becoming-expert" style="font-size:1rem">becoming-expert</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/book" style="font-size:2.2226895861851754rem">book</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/calculator" style="font-size:1rem">calculator</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/checked" style="font-size:1rem">checked</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/checked-exceptions" style="font-size:1rem">checked-exceptions</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/cloning" style="font-size:1rem">cloning</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/code-readability" style="font-size:1rem">code-readability</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/code-review" style="font-size:1rem">code-review</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/coding" style="font-size:2.750311312607rem">coding</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/coding-convention" style="font-size:1rem">coding-convention</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/collection-framework" style="font-size:1rem">collection-framework</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/compact-strings" style="font-size:1rem">compact-strings</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/concurrentmodificationexception" style="font-size:1rem">concurrentmodificationexception</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/concurrentskiplistmap" style="font-size:1rem">concurrentskiplistmap</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/counting" style="font-size:1rem">counting</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/countingcollections" style="font-size:1rem">countingcollections</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/daemon-thread" style="font-size:1rem">daemon-thread</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/data-race" style="font-size:1rem">data-race</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/data-structure" style="font-size:1rem">data-structure</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/datetime" style="font-size:1rem">datetime</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/day002" style="font-size:1rem">day002</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/deliberate-practice" style="font-size:1rem">deliberate-practice</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/deserialization" style="font-size:1rem">deserialization</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/developers" style="font-size:1rem">developers</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/duration" style="font-size:1rem">duration</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/executors" style="font-size:1.4730008987921752rem">executors</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/export" style="font-size:1rem">export</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/fibonacci" style="font-size:1.4730008987921752rem">fibonacci</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/file" style="font-size:1.4730008987921752rem">file</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/file-copy" style="font-size:1rem">file-copy</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/functional" style="font-size:1rem">functional</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/future-java-developers" style="font-size:1rem">future-java-developers</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/groupby" style="font-size:1rem">groupby</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/hash-function" style="font-size:1.4730008987921752rem">hash-function</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/hashmap" style="font-size:1.7496886873930002rem">hashmap</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/history" style="font-size:1rem">history</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/history-of-java" style="font-size:1rem">history-of-java</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/how-java-performs-better" style="font-size:1rem">how-java-performs-better</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/how-java-works" style="font-size:1rem">how-java-works</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/http-client" style="font-size:1rem">http-client</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/image" style="font-size:1rem">image</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/import" style="font-size:1rem">import</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/inspiration" style="font-size:1rem">inspiration</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/itext-pdf" style="font-size:1rem">itext-pdf</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java" style="font-size:3.4822744306550004rem">java</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java-10" style="font-size:1rem">java-10</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java-11" style="font-size:1rem">java-11</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java-8" style="font-size:1rem">java-8</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java-developers" style="font-size:1rem">java-developers</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java-programming" style="font-size:1rem">java-programming</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java-thread" style="font-size:1rem">java-thread</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java-thread-programming" style="font-size:1.9460017975843502rem">java-thread-programming</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java11" style="font-size:1rem">java11</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java16" style="font-size:1.7496886873930002rem">java16</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/java8" style="font-size:1.4730008987921752rem">java8</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/lambda-expression" style="font-size:1.4730008987921752rem">lambda-expression</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/learning" style="font-size:1rem">learning</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/learning-and-development" style="font-size:1rem">learning-and-development</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/linkedlist" style="font-size:1.4730008987921752rem">linkedlist</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/list" style="font-size:1rem">list</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/local-type-inference" style="font-size:1rem">local-type-inference</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/localdatetime" style="font-size:1rem">localdatetime</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/map" style="font-size:1.7496886873930002rem">map</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/methodology" style="font-size:1rem">methodology</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/nio" style="font-size:1rem">nio</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/null-pointer-exception" style="font-size:1rem">null-pointer-exception</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/object-cloning" style="font-size:1rem">object-cloning</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/optional" style="font-size:1rem">optional</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/packaging" style="font-size:1rem">packaging</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/pass-by-reference" style="font-size:1rem">pass-by-reference</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/pass-by-value" style="font-size:1rem">pass-by-value</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/pdf" style="font-size:1rem">pdf</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/performance" style="font-size:1rem">performance</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/programming" style="font-size:1rem">programming</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/readable-code" style="font-size:1rem">readable-code</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/record" style="font-size:1rem">record</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/refactoring" style="font-size:1rem">refactoring</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/review" style="font-size:1.9460017975843502rem">review</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/scheduler" style="font-size:1rem">scheduler</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/scrum" style="font-size:1rem">scrum</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/serialization" style="font-size:1.4730008987921752rem">serialization</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/simple-calculator" style="font-size:1rem">simple-calculator</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/software-development" style="font-size:1rem">software-development</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/source-code" style="font-size:1rem">source-code</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/stack" style="font-size:1rem">stack</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/string" style="font-size:1.7496886873930002rem">string</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/string-pool" style="font-size:1rem">string-pool</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/swing" style="font-size:1rem">swing</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/thread" style="font-size:2.3278814013618834rem">thread</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/tutorial" style="font-size:1rem">tutorial</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/unchecked" style="font-size:1rem">unchecked</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/vector" style="font-size:1rem">vector</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/volatile" style="font-size:1rem">volatile</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/why-java" style="font-size:1rem">why-java</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/tags/zoneid" style="font-size:1rem">zoneid</a>
+  
+</div>
+
+
+<footer>
+  <div>
+    <p>
+    &copy; <a href="https://bazlur.com"> A N M Bazlur Rahman</a> 2012 - 2021 | <a href="https://github.com/rokon12">Github</a>
+    | <a href=" https://twitter.com/bazlur_rahman"> @bazlur_rahman</a>
+    </p>
+  </div>
+</footer>
+  
+  </footer>
+  </body>
+</html>
+

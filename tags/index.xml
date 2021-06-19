@@ -44,7 +44,7 @@
     </item>
     
     <item>
-      <title>java8</title>
+      <title>Java8</title>
       <link>http://bazlur.com/tags/java8/</link>
       <pubDate>Fri, 18 Jun 2021 00:10:40 -0400</pubDate>
       
@@ -463,6 +463,51 @@
       <pubDate>Tue, 26 Feb 2019 21:17:33 +0000</pubDate>
       
       <guid>http://bazlur.com/tags/deliberate-practice/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Checked</title>
+      <link>http://bazlur.com/tags/checked/</link>
+      <pubDate>Wed, 18 Jul 2018 13:17:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/tags/checked/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Checked Exceptions</title>
+      <link>http://bazlur.com/tags/checked-exceptions/</link>
+      <pubDate>Wed, 18 Jul 2018 13:17:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/tags/checked-exceptions/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Java 8</title>
+      <link>http://bazlur.com/tags/java-8/</link>
+      <pubDate>Wed, 18 Jul 2018 13:17:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/tags/java-8/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tutorial</title>
+      <link>http://bazlur.com/tags/tutorial/</link>
+      <pubDate>Wed, 18 Jul 2018 13:17:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/tags/tutorial/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Unchecked</title>
+      <link>http://bazlur.com/tags/unchecked/</link>
+      <pubDate>Wed, 18 Jul 2018 13:17:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/tags/unchecked/</guid>
       <description></description>
     </item>
     
