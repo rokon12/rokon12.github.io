@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Java 9 on Bazlur&#39;s Stream of Thoughts</title>
+    <link>http://bazlur.com/tags/java-9/</link>
+    <description>Recent content in Java 9 on Bazlur&#39;s Stream of Thoughts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 29 Nov 2016 18:22:00 +0000</lastBuildDate><atom:link href="http://bazlur.com/tags/java-9/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Turbocharging Java With Parallel Array Sorting</title>
+      <link>http://bazlur.com/2016/11/turbocharging-java-with-parallel-array-sorting/</link>
+      <pubDate>Tue, 29 Nov 2016 18:22:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/2016/11/turbocharging-java-with-parallel-array-sorting/</guid>
+      <description>Sorting arrays in parallel is a JDK enhancement, which is part of the Java 9 release, which should yield significant performance improvements. JDK enhancement proposal 103 brings a new way of array sorting which uses the Fork/Join parallelism technique to provide sorting of arrays in parallel. This new feature has been added in the Java 8 release.
+Currently, we have two sorting implementations, one sorts arrays and another sorts collections. These two implementations perform sort in a single thread.</description>
+    </item>
+    
+  </channel>
+</rss>

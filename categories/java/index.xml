@@ -617,6 +617,16 @@ Let&amp;rsquo;s say we need to concatenate a million strings.</description>
     </item>
     
     <item>
+      <title>Turbocharging Java With Parallel Array Sorting</title>
+      <link>http://bazlur.com/2016/11/turbocharging-java-with-parallel-array-sorting/</link>
+      <pubDate>Tue, 29 Nov 2016 18:22:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/2016/11/turbocharging-java-with-parallel-array-sorting/</guid>
+      <description>Sorting arrays in parallel is a JDK enhancement, which is part of the Java 9 release, which should yield significant performance improvements. JDK enhancement proposal 103 brings a new way of array sorting which uses the Fork/Join parallelism technique to provide sorting of arrays in parallel. This new feature has been added in the Java 8 release.
+Currently, we have two sorting implementations, one sorts arrays and another sorts collections. These two implementations perform sort in a single thread.</description>
+    </item>
+    
+    <item>
       <title>জাভা ইন্টারফেস এর ক্ষেত্রে multiple inheritance সাপোর্ট করলেও ক্লাসের ক্ষেত্রে কেনো করে না ?</title>
       <link>http://bazlur.com/posts/2016-11-02-%E0%A6%9C%E0%A6%BE%E0%A6%AD%E0%A6%BE-%E0%A6%87%E0%A6%A8%E0%A7%8D%E0%A6%9F%E0%A6%BE%E0%A6%B0%E0%A6%AB%E0%A7%87%E0%A6%B8-%E0%A6%8F%E0%A6%B0-%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A7%87%E0%A6%A4/</link>
       <pubDate>Wed, 02 Nov 2016 18:09:00 +0000</pubDate>
