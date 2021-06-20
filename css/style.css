@@ -204,3 +204,60 @@ div.pagination-item > a:hover {
 .box {
   border-bottom: 1px solid #eef2f8
 }
+nav#article-skip {
+  align-items: flex-start;
+  border-top: 1px solid #dee5e9;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  font-family: "Fira Sans", Helvetica, Arial, sans-serif;
+  font-size: smaller;
+  justify-content: space-around;
+  line-height: 1em;
+  margin: 5em 0 0 0;
+  padding: 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.next,
+.prev,
+.top {
+  flex: 0 1 auto;
+  margin: 0;
+  padding: 0.5em;
+  width: 100%;
+}
+
+.next {
+  text-align: left;
+}
+
+.prev {
+  text-align: right;
+}
+
+.top {
+  border-left: 1px solid #dee5e9;
+  border-right: 1px solid #dee5e9;
+}
+
+div.next > p,
+div.prev > p {
+  margin: 0;
+  padding: 0;
+}
+
+div.next > a,
+div.prev > a,
+div.top > a {
+  color: #00416a;
+  text-decoration: none;
+}
+
+div.next > a:hover,
+div.prev > a:hover,
+div.top > a:hover {
+  background-color: #00416a;
+  color: #dee5e9;
+}
