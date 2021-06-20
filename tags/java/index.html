@@ -11,7 +11,8 @@
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta property="fb:pages" content="556530934551556" />
@@ -77,27 +78,31 @@ if (!doNotTrack) {
   </head>
 
   <body class="line-numbers">
+  <div class="container">
+    <div class="header clearfix">
+      <nav>
+        <ul class="menu">
+          
+          <li><a href="/">Home</a></li>
+          
+          <li><a href="/archives">Archives</a></li>
+          
+          <li><a href="/about-me/">About me</a></li>
+          
+          <li><a href="/books/">Books</a></li>
+          
+          <li><a href="/categories/">Categories</a></li>
+          
+          <li><a href="/resume/">Resume</a></li>
+          
+          <li><a href="/index.xml">Subscribe</a></li>
+          
+        </ul>
 
-  <nav>
-    <ul class="menu">
-      
-      <li><a href="/">Home</a></li>
-      
-      <li><a href="/archives">Archives</a></li>
-      
-      <li><a href="/about-me/">About me</a></li>
-      
-      <li><a href="/books/">Books</a></li>
-      
-      <li><a href="/categories/">Categories</a></li>
-      
-      <li><a href="/resume/">Resume</a></li>
-      
-      <li><a href="/index.xml">Subscribe</a></li>
-      
-    </ul>
-    <hr/>
-    </nav>
+        <hr/>
+        <h2 class="text-muted">Bazlur's Stream of Thought</h2>
+      </nav>
+    </div>
 
 
 <h1>java</h1>
@@ -109,6 +114,27 @@ if (!doNotTrack) {
 </h2>
 
 <div id="content">
+    
+        <article>
+      <header>
+        
+        <h2 class="list-title"><a href="http://bazlur.com/2021/06/completablefuture-made-life-easy-running-things-asynchronous/">CompletableFuture made life easy, running things asynchronous</a></h2>
+        
+        <p class="list-post-date">
+          <time datetime="2021-06-20T00:10:40-04:00">
+            20 June, 2021 at 00:10 EDT
+          </time>
+        </p>
+      </header>
+      <div>
+        Let&rsquo;s assume you have to invoke two REST APIs and then combine the result. You can run them one by one and then accumulate the result. It looks easy. However, if each call takes up some time, the total time would be pretty significant.
+However, we can reduce the time if we can run these two asynchronously, making them parallel. That&rsquo;s where CompletableFuture comes into play.
+Let&rsquo;s see a code-
+      </div>
+      
+      <p><a class="read-more" href="http://bazlur.com/2021/06/completablefuture-made-life-easy-running-things-asynchronous/">Read more &rarr;</a></p>
+      
+    </article>
     
         <article>
       <header>

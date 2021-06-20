@@ -6,10 +6,87 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright © 2021, A N M Bazlur Rahman</copyright>
-    <lastBuildDate>Sat, 19 Jun 2021 00:10:40 -0400</lastBuildDate>
+    <lastBuildDate>Sun, 20 Jun 2021 00:10:40 -0400</lastBuildDate>
     
         <atom:link href="http://bazlur.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>CompletableFuture made life easy, running things asynchronous</title>
+      <link>http://bazlur.com/2021/06/completablefuture-made-life-easy-running-things-asynchronous/</link>
+      <pubDate>Sun, 20 Jun 2021 00:10:40 -0400</pubDate>
+      
+      <guid>http://bazlur.com/2021/06/completablefuture-made-life-easy-running-things-asynchronous/</guid>
+      <description>&lt;p&gt;Let&amp;rsquo;s assume you have to invoke two REST APIs and then combine the result.  You can run them one by one and then accumulate the result. It looks easy. However, if each call takes up some time, the total time would be pretty significant.&lt;/p&gt;
+&lt;p&gt;However, we can reduce the time if we can run these two asynchronously, making them parallel.  That&amp;rsquo;s where &lt;code&gt;CompletableFuture&lt;/code&gt; comes into play.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s see a code-&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;
+package com.bazlur;
+
+import java.util.Optional;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutionException;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+public class Day014 {
+  public static void main(String[] args) throws ExecutionException, InterruptedException {
+    var stockExchangeService = new StockExchangeService();
+    var futureCAD = CompletableFuture.supplyAsync(stockExchangeService::getBitcoinValueInCAD);
+    var futureUSD = CompletableFuture.supplyAsync(stockExchangeService::getBitcoinValueInUSD);
+
+    var combined = futureCAD.thenCombine(futureUSD, (cad, usd) -&amp;gt; Stream.of(cad, usd)
+            .flatMap(Optional::stream)
+            .collect(Collectors.joining(&amp;quot;, &amp;quot;)));
+
+    System.out.println(&amp;quot;combined = &amp;quot; + combined.get());
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The stockExchange Service:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;package com.bazlur;
+
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Element;
+
+import java.io.IOException;
+import java.util.Optional;
+
+public class StockExchangeService {
+
+  public static final String GOOGLE_FINANCE_QUOTE_BTC_CAD = &amp;quot;https://www.google.com/finance/quote/BTC-CAD&amp;quot;;
+  public static final String GOOGLE_FINANCE_QUOTE_BTC_USD = &amp;quot;https://www.google.com/finance/quote/BTC-USD&amp;quot;;
+  public static final String CAD_TEXT = &amp;quot;Bitcoin to Canadian dollar&amp;quot;;
+  public static final String USD_TEXT = &amp;quot;Bitcoin to United States Dollar&amp;quot;;
+
+  public Optional&amp;lt;String&amp;gt; getBitcoinValueInCAD() {
+    return getBitConValue(GOOGLE_FINANCE_QUOTE_BTC_CAD, CAD_TEXT);
+  }
+
+  public Optional&amp;lt;String&amp;gt; getBitcoinValueInUSD() {
+    return getBitConValue(GOOGLE_FINANCE_QUOTE_BTC_USD, USD_TEXT);
+  }
+
+  private Optional&amp;lt;String&amp;gt; getBitConValue(String url, String textToFind) {
+    var connect = Jsoup.connect(url);
+    try {
+      var document = connect.get();
+      var select = document.select(&amp;quot;h2&amp;quot;);
+      return select.stream()
+              .filter(element -&amp;gt; element.text().contains(textToFind))
+              .map(Element::parent)
+              .map(Element::text)
+              .findFirst();
+    } catch (IOException e) {
+      return Optional.empty();
+    }
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;I have used &lt;a href=&#34;https://jsoup.org/&#34;&gt;JSoup&lt;/a&gt; to parse the text and exact the desired value from it.&lt;/p&gt;
+&lt;p&gt;for &lt;strong&gt;copy/paste&lt;/strong&gt; pleasure: &lt;a href=&#34;https://github.com/rokon12/100DaysOfJava/blob/main/src/main/java/com/bazlur/Day014_2.java&#34;&gt;https://github.com/rokon12/100DaysOfJava/blob/main/src/main/java/com/bazlur/Day014_2.java&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Let&#39;s find out the most enormous known prime number using java</title>

@@ -13,7 +13,8 @@
 <html lang="en-US">
   <head>
 	<meta name="generator" content="Hugo 0.83.1" />
-    <meta charset="utf-8">
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="description" content="This blog is meant to be a vehicle for the airing my interest, feelings, thoughts, and opinion " />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta property="fb:pages" content="556530934551556" />
@@ -80,30 +81,55 @@ if (!doNotTrack) {
   </head>
 
   <body class="line-numbers">
+  <div class="container">
+    <div class="header clearfix">
+      <nav>
+        <ul class="menu">
+          
+          <li><a href="/">Home</a></li>
+          
+          <li><a href="/archives">Archives</a></li>
+          
+          <li><a href="/about-me/">About me</a></li>
+          
+          <li><a href="/books/">Books</a></li>
+          
+          <li><a href="/categories/">Categories</a></li>
+          
+          <li><a href="/resume/">Resume</a></li>
+          
+          <li><a href="/index.xml">Subscribe</a></li>
+          
+        </ul>
 
-  <nav>
-    <ul class="menu">
-      
-      <li><a href="/">Home</a></li>
-      
-      <li><a href="/archives">Archives</a></li>
-      
-      <li><a href="/about-me/">About me</a></li>
-      
-      <li><a href="/books/">Books</a></li>
-      
-      <li><a href="/categories/">Categories</a></li>
-      
-      <li><a href="/resume/">Resume</a></li>
-      
-      <li><a href="/index.xml">Subscribe</a></li>
-      
-    </ul>
-    <hr/>
-    </nav>
+        <hr/>
+        <h2 class="text-muted">Bazlur's Stream of Thought</h2>
+      </nav>
+    </div>
 
 
 <div id="content">
+
+
+    <article>
+      <header>
+        
+        <h2 class="list-title"><a href="http://bazlur.com/posts/2017-01-27-%E0%A6%9C%E0%A6%BE%E0%A6%AD%E0%A6%BE-%E0%A6%95%E0%A7%87%E0%A6%A8-%E0%A6%AE%E0%A6%BE%E0%A6%B2%E0%A7%8D%E0%A6%9F%E0%A6%BF%E0%A6%AA%E0%A6%B2-%E0%A6%87%E0%A6%A8%E0%A6%B9%E0%A7%87%E0%A6%B0/">জাভা কেন মাল্টিপল ইনহেরিটেন্স (Multiple Inheritance) সাপোর্ট করে না?</a></h2>
+        
+        <p class="list-post-date">
+          <time datetime="2017-01-27T18:18:00Z">
+            27 January, 2017 at 18:18 &#43;0000
+          </time>
+        </p>
+      </header>
+      <div>
+        এর উত্তর এভাবে দেওয়া যায়। জাভা প্রোগ্রামিং ভাষার ডিজাইনাররা কয়েকটি গুরুত্বপূর্ণ বিষয় মাথায় রেখে এই ভাষাকে ডিজাইন করে। এগুলো হলো,  এটি হতে হবে খুবই সরল, অবজেক্ট ওরিয়েন্টেড এবং পরিচিত, অর্থাৎ যারা তখন সি বা সি++ জানতো তারা যাতে করে সহজেই বুঝতে পারে।  এটিকে অবশ্যই অনেক শক্তসমর্থ এবং নিরাপদ (robust and secure) হতে হবে।  এটি যেকোনো অপারেটিং সিস্টেমে চলবে।  এর পারফরমেন্স অনেক ভালো হতে হবে।  এটি ইন্টারপ্রেটেড (Interpreted), থ্রেডেড (Threaded) এবং ডায়নামিক (Dynamic) হতে হবে। (এখানে বলে রাখি, জাভা যদিও কম্পাইল্ড ভাষা, কিন্তু জাভা ভার্চুয়াল মেশিন মূলত বাইটকোড ইন্টারপ্রেট করে আর জেভিএম একটা ডায়নামিক মেশিন)।   এই কয়কেটা উদ্দেশ্যের সঙ্গে আরেকটি গুরুত্বপূর্ণ জিনিস হলো, এর ফিচার খুব অল্প হতে হবে যাতে একজন প্রোগ্রামার খুব সহজেই মনে রাখতে পারে। যেসব ফিচার খুব ঝামেলাযুক্ত এবং আসলে তেমন প্রয়োজন নেই খুব একটা সেগুলোকে তারা বাদ দিয়ে ডিজাইন করেছে। যেমন, অপারেটর ওভারলোডিং (Operator Overloading), মাল্টিপল ইনহেরিটেন্স (Multiple Inheritence)। এগুলো সুবিধার চেয়ে প্রোগ্রামারদের অসুবিধার কারণ বেশি তৈরি করে।
+      </div>
+      
+      <p><a class="read-more" href="http://bazlur.com/posts/2017-01-27-%E0%A6%9C%E0%A6%BE%E0%A6%AD%E0%A6%BE-%E0%A6%95%E0%A7%87%E0%A6%A8-%E0%A6%AE%E0%A6%BE%E0%A6%B2%E0%A7%8D%E0%A6%9F%E0%A6%BF%E0%A6%AA%E0%A6%B2-%E0%A6%87%E0%A6%A8%E0%A6%B9%E0%A7%87%E0%A6%B0/">Read more &rarr;</a></p>
+      
+    </article>
+
 
 
     <article>
@@ -186,28 +212,6 @@ if (!doNotTrack) {
 
 চিত্র: প্যারামিটার ও আর্গুমেন্ট
       </div>
-      
-    </article>
-
-
-
-    <article>
-      <header>
-        
-        <h2 class="list-title"><a href="http://bazlur.com/posts/2017-01-25-%E0%A6%9C%E0%A6%BE%E0%A6%AD%E0%A6%BE-%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A7%8B%E0%A6%97%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%AE%E0%A6%BF%E0%A6%82-%E0%A6%B2%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%82/">জাভা প্রোগ্রামিং ল্যাংগুয়েজ তৈরির পেছনের গল্প</a></h2>
-        
-        <p class="list-post-date">
-          <time datetime="2017-01-25T15:25:00Z">
-            25 January, 2017 at 15:25 &#43;0000
-          </time>
-        </p>
-      </header>
-      <div>
-        ১৯৯৫ সালের ২৩ মে। ঝলমলে চমৎকার একটি দিন1। জন গেইজ (John Gage – ডিরেক্টর অব সান-মাইক্রোসিস্টেম) ও মার্ক অ্যান্ডারসেন (Marc Andreesen – নেটস্কেপের ভাইস প্রেসিডেন্ট ও সহপ্রতিষ্ঠাতা) ঘোষণা দেন যে, জাভা টেকনোলজি মোটেই কোনো উপকথা নয়, বরং এটিই বাস্তবতা এবং এটি নেটস্কেপ নেভিগেটর (Netscape Navigator) এর সঙ্গে সংযুক্ত হতে যাচ্ছে।
-সে সময় জাভাতে কাজ করে এমন লোকের সংখ্যা ত্রিশেরও কম। তারা কখনোই চিন্তা করেনি তাদের এই টিম ভবিষ্যৎ পৃথিবীর প্রধানতম টেকনোলজি নির্ধারণ করতে যাচ্ছে। ২০০৪ সালের ৩ জানুয়ারি মার্স এক্সপ্লোরেশন রোভার (Mars Exploration Rover)2 মঙ্গল গ্রহের মাটিতে পা রাখে যার কন্ট্রোল সিস্টেম থেকে শুরু করে পৃথিবীর অধিকাংশ কনজুমার ইলেকট্রনিক্স, যেমন– কেবল সেট-টপ বক্স (STB), ভিসিআর (VCR), টোস্টার (Toaster), পিডিএ (PDA), স্মার্টফোনসহ প্রায় ১৫ বিলিয়ন ডিভাইস3, ১০০% ব্লু-রে ডিস্ক প্লেয়ার জাভা রান করে।
-      </div>
-      
-      <p><a class="read-more" href="http://bazlur.com/posts/2017-01-25-%E0%A6%9C%E0%A6%BE%E0%A6%AD%E0%A6%BE-%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A7%8B%E0%A6%97%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%AE%E0%A6%BF%E0%A6%82-%E0%A6%B2%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%82/">Read more &rarr;</a></p>
       
     </article>
 

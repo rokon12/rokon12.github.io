@@ -13,7 +13,8 @@
 <html lang="en-US">
   <head>
 	<meta name="generator" content="Hugo 0.83.1" />
-    <meta charset="utf-8">
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="description" content="This blog is meant to be a vehicle for the airing my interest, feelings, thoughts, and opinion " />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta property="fb:pages" content="556530934551556" />
@@ -80,30 +81,55 @@ if (!doNotTrack) {
   </head>
 
   <body class="line-numbers">
+  <div class="container">
+    <div class="header clearfix">
+      <nav>
+        <ul class="menu">
+          
+          <li><a href="/">Home</a></li>
+          
+          <li><a href="/archives">Archives</a></li>
+          
+          <li><a href="/about-me/">About me</a></li>
+          
+          <li><a href="/books/">Books</a></li>
+          
+          <li><a href="/categories/">Categories</a></li>
+          
+          <li><a href="/resume/">Resume</a></li>
+          
+          <li><a href="/index.xml">Subscribe</a></li>
+          
+        </ul>
 
-  <nav>
-    <ul class="menu">
-      
-      <li><a href="/">Home</a></li>
-      
-      <li><a href="/archives">Archives</a></li>
-      
-      <li><a href="/about-me/">About me</a></li>
-      
-      <li><a href="/books/">Books</a></li>
-      
-      <li><a href="/categories/">Categories</a></li>
-      
-      <li><a href="/resume/">Resume</a></li>
-      
-      <li><a href="/index.xml">Subscribe</a></li>
-      
-    </ul>
-    <hr/>
-    </nav>
+        <hr/>
+        <h2 class="text-muted">Bazlur's Stream of Thought</h2>
+      </nav>
+    </div>
 
 
 <div id="content">
+
+
+    <article>
+      <header>
+        
+        <h2 class="list-title"><a href="http://bazlur.com/posts/2018-02-22-java-thread-programming-review-/">জাভা থ্রেড প্রোগ্রামিংঃ রিভিউ-৩</a></h2>
+        
+        <p class="list-post-date">
+          <time datetime="2018-02-22T17:47:41Z">
+            22 February, 2018 at 17:47 &#43;0000
+          </time>
+        </p>
+      </header>
+      <div>
+        জাভা থ্রেড প্রোগ্রামিং বইটি নিয়ে নিচের চমৎকার রিভিউটি লিখেছেন অরণ্য আব্দুলাহ আল মামুন ভাই।  জাভা বেসড এপ্লিকেশন ডেভেলপমেন্টের একটা গুরুত্বপূর্ন বিষয় হলো থ্রেডিং। সেইটা সার্ভার-সাইড ডেভেলপমেন্ট-ই হোক আর ক্লায়েন্ট সাইড ডেভেলপমেন্ট। সার্ভার-সাইড ডেভেলপমেন্ট এ বিভিন্ন প্রসেসকে একধিক কাজে ভাগ করে faster response করা কিংবা ক্লায়েন্ট সাইড ডেভেলপমেন্ট এ GUI এর পাশাপাশি Network request বা IO Request সঠিক ভাবে handle করা – এগুলা খুবই গুরুত্বপূর্ন বিষয়। থ্রেডিং এর concept ভালো না থাকলে ভালো মানের application develop করা এক কথায় অসম্ভব।
+      </div>
+      
+      <p><a class="read-more" href="http://bazlur.com/posts/2018-02-22-java-thread-programming-review-/">Read more &rarr;</a></p>
+      
+    </article>
+
 
 
     <article>
@@ -190,27 +216,6 @@ if (!doNotTrack) {
       </div>
       
       <p><a class="read-more" href="http://bazlur.com/posts/2018-02-16-java-thread-programmin/">Read more &rarr;</a></p>
-      
-    </article>
-
-
-
-    <article>
-      <header>
-        
-        <h2 class="list-title"><a href="http://bazlur.com/posts/2018-01-29-%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%B6%E0%A7%8D%E0%A6%A8-checked-exception-%E0%A6%8F%E0%A6%AC%E0%A6%82-unchecked-exception-%E0%A6%8F%E0%A6%B0-%E0%A6%AE%E0%A6%A7%E0%A7%8D%E0%A6%AF%E0%A7%87-/">প্রশ্ন: Checked Exception এবং Unchecked Exception এর মধ্যে পার্থক্য কী?</a></h2>
-        
-        <p class="list-post-date">
-          <time datetime="2018-01-29T00:01:22Z">
-            29 January, 2018 at 00:01 &#43;0000
-          </time>
-        </p>
-      </header>
-      <div>
-        প্রোগ্রাম লিখতে গেলে নানা রকম সমস্যা হয়। কিছু সমস্যা সিস্টেম থেকে হতে পারে, আবার কিছু সসমস্যা প্রোগ্রাম লেখার সময় ভুলের জন্য হতে পারে। যেমন- আমরা যদি ডেটাবেজই সম্পর্কিত কোনো কোড লিখি, কোনো কারণে ইন্টারনেট কানেকাশন বন্ধ হয়ে যেতে পারে, এবং আমরা ডেটাবেইজে কানেক্ট করতে না পারি। আবার কোনো সিকুয়েল কোডে যে বিশেষ আর্গুমেন্টটি পাস করার কথা ছিল সেটি না করলে সিকুয়েলটি ঠিকমতো এক্সিকিউট হবে না এমন হতে পারে। এরকম পরিস্থিতিতে আমাদের অ্যাপ্লিকেশন কোড একধরেণের এক্সেপশন থ্রু করে জানান দেয় যে কোনো রকম সমস্যা হয়েছে।
-      </div>
-      
-      <p><a class="read-more" href="http://bazlur.com/posts/2018-01-29-%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%B6%E0%A7%8D%E0%A6%A8-checked-exception-%E0%A6%8F%E0%A6%AC%E0%A6%82-unchecked-exception-%E0%A6%8F%E0%A6%B0-%E0%A6%AE%E0%A6%A7%E0%A7%8D%E0%A6%AF%E0%A7%87-/">Read more &rarr;</a></p>
       
     </article>
 

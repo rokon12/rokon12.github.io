@@ -7,11 +7,11 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright © 2021, A N M Bazlur Rahman</copyright>
-    <lastBuildDate>Sat, 19 Jun 2021 00:10:40 -0400</lastBuildDate><atom:link href="http://bazlur.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 20 Jun 2021 00:10:40 -0400</lastBuildDate><atom:link href="http://bazlur.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>100DaysOfCode</title>
       <link>http://bazlur.com/tags/100daysofcode/</link>
-      <pubDate>Sat, 19 Jun 2021 00:10:40 -0400</pubDate>
+      <pubDate>Sun, 20 Jun 2021 00:10:40 -0400</pubDate>
       
       <guid>http://bazlur.com/tags/100daysofcode/</guid>
       <description></description>
@@ -20,7 +20,7 @@
     <item>
       <title>100DaysOfJava</title>
       <link>http://bazlur.com/tags/100daysofjava/</link>
-      <pubDate>Sat, 19 Jun 2021 00:10:40 -0400</pubDate>
+      <pubDate>Sun, 20 Jun 2021 00:10:40 -0400</pubDate>
       
       <guid>http://bazlur.com/tags/100daysofjava/</guid>
       <description></description>
@@ -29,16 +29,25 @@
     <item>
       <title>coding</title>
       <link>http://bazlur.com/tags/coding/</link>
-      <pubDate>Sat, 19 Jun 2021 00:10:40 -0400</pubDate>
+      <pubDate>Sun, 20 Jun 2021 00:10:40 -0400</pubDate>
       
       <guid>http://bazlur.com/tags/coding/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>CompletableFuture</title>
+      <link>http://bazlur.com/tags/completablefuture/</link>
+      <pubDate>Sun, 20 Jun 2021 00:10:40 -0400</pubDate>
+      
+      <guid>http://bazlur.com/tags/completablefuture/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>java</title>
       <link>http://bazlur.com/tags/java/</link>
-      <pubDate>Sat, 19 Jun 2021 00:10:40 -0400</pubDate>
+      <pubDate>Sun, 20 Jun 2021 00:10:40 -0400</pubDate>
       
       <guid>http://bazlur.com/tags/java/</guid>
       <description></description>

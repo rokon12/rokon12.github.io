@@ -13,7 +13,8 @@
 <html lang="en-US">
   <head>
 	<meta name="generator" content="Hugo 0.83.1" />
-    <meta charset="utf-8">
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="description" content="This blog is meant to be a vehicle for the airing my interest, feelings, thoughts, and opinion " />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta property="fb:pages" content="556530934551556" />
@@ -80,30 +81,55 @@ if (!doNotTrack) {
   </head>
 
   <body class="line-numbers">
+  <div class="container">
+    <div class="header clearfix">
+      <nav>
+        <ul class="menu">
+          
+          <li><a href="/">Home</a></li>
+          
+          <li><a href="/archives">Archives</a></li>
+          
+          <li><a href="/about-me/">About me</a></li>
+          
+          <li><a href="/books/">Books</a></li>
+          
+          <li><a href="/categories/">Categories</a></li>
+          
+          <li><a href="/resume/">Resume</a></li>
+          
+          <li><a href="/index.xml">Subscribe</a></li>
+          
+        </ul>
 
-  <nav>
-    <ul class="menu">
-      
-      <li><a href="/">Home</a></li>
-      
-      <li><a href="/archives">Archives</a></li>
-      
-      <li><a href="/about-me/">About me</a></li>
-      
-      <li><a href="/books/">Books</a></li>
-      
-      <li><a href="/categories/">Categories</a></li>
-      
-      <li><a href="/resume/">Resume</a></li>
-      
-      <li><a href="/index.xml">Subscribe</a></li>
-      
-    </ul>
-    <hr/>
-    </nav>
+        <hr/>
+        <h2 class="text-muted">Bazlur's Stream of Thought</h2>
+      </nav>
+    </div>
 
 
 <div id="content">
+
+
+    <article>
+      <header>
+        
+        <h2 class="list-title"><a href="http://bazlur.com/posts/2018-01-29-%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%B6%E0%A7%8D%E0%A6%A8-checked-exception-%E0%A6%8F%E0%A6%AC%E0%A6%82-unchecked-exception-%E0%A6%8F%E0%A6%B0-%E0%A6%AE%E0%A6%A7%E0%A7%8D%E0%A6%AF%E0%A7%87-/">প্রশ্ন: Checked Exception এবং Unchecked Exception এর মধ্যে পার্থক্য কী?</a></h2>
+        
+        <p class="list-post-date">
+          <time datetime="2018-01-29T00:01:22Z">
+            29 January, 2018 at 00:01 &#43;0000
+          </time>
+        </p>
+      </header>
+      <div>
+        প্রোগ্রাম লিখতে গেলে নানা রকম সমস্যা হয়। কিছু সমস্যা সিস্টেম থেকে হতে পারে, আবার কিছু সসমস্যা প্রোগ্রাম লেখার সময় ভুলের জন্য হতে পারে। যেমন- আমরা যদি ডেটাবেজই সম্পর্কিত কোনো কোড লিখি, কোনো কারণে ইন্টারনেট কানেকাশন বন্ধ হয়ে যেতে পারে, এবং আমরা ডেটাবেইজে কানেক্ট করতে না পারি। আবার কোনো সিকুয়েল কোডে যে বিশেষ আর্গুমেন্টটি পাস করার কথা ছিল সেটি না করলে সিকুয়েলটি ঠিকমতো এক্সিকিউট হবে না এমন হতে পারে। এরকম পরিস্থিতিতে আমাদের অ্যাপ্লিকেশন কোড একধরেণের এক্সেপশন থ্রু করে জানান দেয় যে কোনো রকম সমস্যা হয়েছে।
+      </div>
+      
+      <p><a class="read-more" href="http://bazlur.com/posts/2018-01-29-%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%B6%E0%A7%8D%E0%A6%A8-checked-exception-%E0%A6%8F%E0%A6%AC%E0%A6%82-unchecked-exception-%E0%A6%8F%E0%A6%B0-%E0%A6%AE%E0%A6%A7%E0%A7%8D%E0%A6%AF%E0%A7%87-/">Read more &rarr;</a></p>
+      
+    </article>
+
 
 
     <article>
@@ -192,30 +218,6 @@ public interface List{ public E get(int index); public void add(E element); publ
       </div>
       
       <p><a class="read-more" href="http://bazlur.com/posts/2017-07-28-%E0%A6%87%E0%A6%A8%E0%A6%AD%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%B6%E0%A6%A8-%E0%A6%85%E0%A6%AC-%E0%A6%95%E0%A6%A8%E0%A7%8D%E0%A6%9F%E0%A7%8D%E0%A6%B0%E0%A7%8B%E0%A6%B2-%E0%A6%95%E0%A7%80-what-/">Read more &rarr;</a></p>
-      
-    </article>
-
-
-
-    <article>
-      <header>
-        
-        <h2 class="list-title"><a href="http://bazlur.com/posts/2017-07-15-how-to-make-coffee-using-jav/">How to make coffee using Java</a></h2>
-        
-        <p class="list-post-date">
-          <time datetime="2017-07-15T15:18:00Z">
-            15 July, 2017 at 15:18 &#43;0000
-          </time>
-        </p>
-      </header>
-      <div>
-        বলা হয়ে থাকে, প্রোগ্রামার হলো একটি মেশিন যা কফিকে কোডে রূপান্তর করতে পারে। এ থেকেই বোঝা যাচ্ছে কফি অত্যন্ত গুরুত্বপূর্ণ একটি পানীয়।
-চলুন তাহলে দেখা যাক কীভাবে এই কফি তৈরি করা যায়?
-জাভা দিয়ে কফি তৈরির জন্য প্রয়োজন একটি প্যাটার্ন। এর নাম ডেকোরেটর প্যাটার্ন।
-ডেকোরেটর প্যাটার্নের মূল কথা হলো, ডাইনামিক্যালী একটি অবজেক্টে অতিরিক্ত বৈশিষ্ট্যাবলী যুক্ত করা। যেমন- একটি ছবির ফ্রেম। ছবিটি আমাদের মূল অবজেক্ট। এতে একটি ফ্রেম যুক্ত করে একে ডেকোরেট বা অলঙ্কৃত করা। ডেকোরেটার প্যাটার্নে শুরুতে একটি ইন্টারফেস তৈরি করা হয়। এতে একটি মেথড থাকে যা একটি বৈশিষ্ট্য যুক্ত করতে পারে। একটি কনক্রিট ক্লাস থাকে যা ইন্টারফেসটির ইমপ্লিমেন্টেশন। একটি ডেকোরেটর ক্লাস থাকে যাতে ইন্টারফেসটির একটি রেফারেন্স থাকে এবং এটিও ইন্টারফেসটিকে ইমপ্লিমেন্ট করে। এটি সাধরণত একটি অ্যাবস্ট্রাক্ট ক্লাস হয়। এরপর কতগুলো কনক্রিট অ্যাবস্ট্রাক্ট ক্লাস থাকে। একটি উদাহরণ দেওয়া যাক-
-      </div>
-      
-      <p><a class="read-more" href="http://bazlur.com/posts/2017-07-15-how-to-make-coffee-using-jav/">Read more &rarr;</a></p>
       
     </article>
 
