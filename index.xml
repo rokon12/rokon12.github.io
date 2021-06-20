@@ -17,7 +17,8 @@
       <pubDate>Sun, 20 Jun 2021 00:10:40 -0400</pubDate>
       
       <guid>http://bazlur.com/2021/06/completablefuture-made-life-easy-running-things-asynchronous/</guid>
-      <description>&lt;p&gt;Let&amp;rsquo;s assume you have to invoke two REST APIs and then combine the result.  You can run them one by one and then accumulate the result. It looks easy. However, if each call takes up some time, the total time would be pretty significant.&lt;/p&gt;
+      <description>&lt;p&gt;&lt;img src=&#34;http://bazlur.com/img/Day014.png&#34; alt=&#34;100DaysOfProgramming_Day014&#34; title=&#34;100DaysOfJava&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s assume you have to invoke two REST APIs and then combine the result.  You can run them one by one and then accumulate the result. It looks easy. However, if each call takes up some time, the total time would be pretty significant.&lt;/p&gt;
 &lt;p&gt;However, we can reduce the time if we can run these two asynchronously, making them parallel.  That&amp;rsquo;s where &lt;code&gt;CompletableFuture&lt;/code&gt; comes into play.&lt;/p&gt;
 &lt;p&gt;Let&amp;rsquo;s see a code-&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;

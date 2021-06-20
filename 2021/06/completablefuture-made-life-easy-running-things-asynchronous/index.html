@@ -128,7 +128,8 @@ if (!doNotTrack) {
 </p>
 
 <main>
-    <p>Let&rsquo;s assume you have to invoke two REST APIs and then combine the result.  You can run them one by one and then accumulate the result. It looks easy. However, if each call takes up some time, the total time would be pretty significant.</p>
+    <p><img src="/img/Day014.png" alt="100DaysOfProgramming_Day014" title="100DaysOfJava"></p>
+<p>Let&rsquo;s assume you have to invoke two REST APIs and then combine the result.  You can run them one by one and then accumulate the result. It looks easy. However, if each call takes up some time, the total time would be pretty significant.</p>
 <p>However, we can reduce the time if we can run these two asynchronously, making them parallel.  That&rsquo;s where <code>CompletableFuture</code> comes into play.</p>
 <p>Let&rsquo;s see a code-</p>
 <pre><code class="language-java">
