@@ -113,39 +113,16 @@ if (!doNotTrack) {
       <article>
       <header>
         
-        <h2 class="list-title"><a href="http://bazlur.com/2021/06/how-to-run-a-task-periodically-in-java/">How to run a task periodically in java</a></h2>
+        <h2 class="list-title"><a href="http://bazlur.com/2021/06/lets-count-the-occurrence-with-groupby-and-counting/">Let&#39;s count the occurrence with groupBy and counting</a></h2>
         
         <p class="list-post-date">
-          <time datetime="2021-06-13T04:38:10-04:00">
-            13 June, 2021 at 04:38 EDT
+          <time datetime="2021-06-10T00:04:10-04:00">
+            10 June, 2021 at 00:04 EDT
           </time>
         </p>
       </header>
       <div>
-        Sometimes you want to run a particular task at a fixed rate periodically. The job could be anything, e.g. you may want to call a rest API to check for an update, or perhaps pull information from a database, do some processing, and then send an email. Or maybe you want to keep your eyes on the stock exchange. The following code snippet will allow you to do that sort of task precisely.
-      </div>
-      
-      <p><a class="read-more" href="http://bazlur.com/2021/06/how-to-run-a-task-periodically-in-java/">Read more &rarr;</a></p>
-      
-    </article>
-  
-  
-  
-      <article>
-      <header>
         
-        <h2 class="list-title"><a href="http://bazlur.com/2021/06/how-to-watch-a-directory-to-detect-changes-using-java/">How to watch a directory to detect changes using java</a></h2>
-        
-        <p class="list-post-date">
-          <time datetime="2021-06-12T16:19:10-04:00">
-            12 June, 2021 at 16:19 EDT
-          </time>
-        </p>
-      </header>
-      <div>
-        Have you ever noticed, when you open a file into two different editors, and when you made changes in one, the other one informs you that the file has changed and you need to reload? How does it do that?
-Well, the following coding snippet would do the trick. Let&rsquo;s watch a particular directory and listen to the event.
-for copy/paste pleasure: https://github.com/rokon12/100DaysOfJava/blob/main/src/main/java/com/bazlur/Day006.java
       </div>
       
     </article>
@@ -155,19 +132,89 @@ for copy/paste pleasure: https://github.com/rokon12/100DaysOfJava/blob/main/src/
       <article>
       <header>
         
-        <h2 class="list-title"><a href="http://bazlur.com/2021/06/how-to-read-texts-from-a-file-using-java/">How to read texts from a file using java</a></h2>
+        <h2 class="list-title"><a href="http://bazlur.com/2021/06/avoid-recursive-invocation-on-computeifabsent-in-hashmap/">Avoid recursive invocation on computeIfAbsent() in HashMap</a></h2>
         
         <p class="list-post-date">
-          <time datetime="2021-06-11T13:38:10-04:00">
-            11 June, 2021 at 13:38 EDT
+          <time datetime="2021-06-09T13:04:10-04:00">
+            9 June, 2021 at 13:04 EDT
           </time>
         </p>
       </header>
       <div>
-        Reading texts from a file has never been this easy. You have to call Files.readString(), that&rsquo;s it.
-Let&rsquo;s read a text file, remove all the punctuation from it and then count all the unique words.
-for copy/paste pleasure: https://github.com/rokon12/100DaysOfJava/blob/main/src/main/java/com/bazlur/Day005.java
+        If a value doesn&rsquo;t exist in the map, we calculate. We do it imperatively.
+We first check if a value exists or not using containsKey() in an &ldquo;if block.&rdquo; If not found, we then calculate as follows-
+static Map&lt;Integer, BigInteger&gt; cache = new HashMap&lt;&gt;( Map.of(0, BigInteger.ZERO, 1, BigInteger.ONE) ); public static BigInteger fibonacci(int n) { if (!cache.containsKey(n)) { var computed = fibonacci(n - 1).add(fibonacci(n - 2)); cache.put(n, computed); } return cache.
       </div>
+      
+      <p><a class="read-more" href="http://bazlur.com/2021/06/avoid-recursive-invocation-on-computeifabsent-in-hashmap/">Read more &rarr;</a></p>
+      
+    </article>
+  
+  
+  
+      <article>
+      <header>
+        
+        <h2 class="list-title"><a href="http://bazlur.com/2021/06/lets-print-100th-fibonacci-number-using-java/">Let&#39;s print 100th fibonacci number using java</a></h2>
+        
+        <p class="list-post-date">
+          <time datetime="2021-06-09T01:47:10-04:00">
+            9 June, 2021 at 01:47 EDT
+          </time>
+        </p>
+      </header>
+      <div>
+        
+      </div>
+      
+    </article>
+  
+  
+  
+      <article>
+      <header>
+        
+        <h2 class="list-title"><a href="http://bazlur.com/2020/11/reclaim-25-of-java-heap-memory-and-lower-your-cloud-bills/">Reclaim 25% of Java Heap Memory and Lower Your Cloud Bills </a></h2>
+        
+        <p class="list-post-date">
+          <time datetime="2020-11-20T00:52:10-04:00">
+            20 November, 2020 at 00:52 -0400
+          </time>
+        </p>
+      </header>
+      <div>
+        You can save up to 25% of heap memory using latest java which means less cloud bills Do you know that you can save up to 25% of your heap memory and your cloud bills without any effort?
+Well, that&rsquo;s true. Many exciting features have been added to the latest Java recently, and I&rsquo;m going to cover one of them in this article, so please bear with me.
+We all know, Strings are the most used object in any Java application.
+      </div>
+      
+      <p><a class="read-more" href="http://bazlur.com/2020/11/reclaim-25-of-java-heap-memory-and-lower-your-cloud-bills/">Read more &rarr;</a></p>
+      
+    </article>
+  
+  
+  
+      <article>
+      <header>
+        
+        <h2 class="list-title"><a href="http://bazlur.com/2020/10/temporary-refactoring-and-improving-your-code-reading-skills/">Temporary Refactoring and Improving Your Code Reading Skills</a></h2>
+        
+        <p class="list-post-date">
+          <time datetime="2020-10-17T00:52:10-04:00">
+            17 October, 2020 at 00:52 EDT
+          </time>
+        </p>
+      </header>
+      <div>
+        I was talking to a friend of mine, Scott, over Slack about reading code! Specifically, how to improve your code reading skills.
+I asked him what he usually does when he reads source code. What he said is interesting:
+He does a temporary refactoring. That’s it.
+He usually takes a long method that can be separated out and then he turns it into a separate method.
+For example- readEmployeeDataFromDatabase()
+This method can be broken into multiple methods, and he does that.
+      </div>
+      
+      <p><a class="read-more" href="http://bazlur.com/2020/10/temporary-refactoring-and-improving-your-code-reading-skills/">Read more &rarr;</a></p>
       
     </article>
   

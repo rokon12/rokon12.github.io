@@ -111,19 +111,23 @@ if (!doNotTrack) {
     <article>
       <header>
         
-        <h2 class="list-title"><a href="http://bazlur.com/posts/2018-03-07-%E0%A6%9C%E0%A6%BE%E0%A6%AD%E0%A6%BE-%E0%A6%A5%E0%A7%8D%E0%A6%B0%E0%A7%87%E0%A6%A1-%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A7%8B%E0%A6%97%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%AE%E0%A6%BF%E0%A6%82-/">জাভা থ্রেড প্রোগ্রামিংঃ ডেটা রেইস (Java Thread Programming: Data Race)</a></h2>
+        <h2 class="list-title"><a href="http://bazlur.com/posts/2017-04-18-%E0%A6%B2%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%AE%E0%A6%A1%E0%A6%BE-%E0%A6%8F%E0%A6%95%E0%A7%8D%E0%A6%B8%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A7%87%E0%A6%B6%E0%A6%A8%E0%A6%83-%E0%A6%AA%E0%A6%B0%E0%A7%8D-/">ল্যামডা এক্সপ্রেশনঃ পর্ব দুই (Lambda Expression: Part 2)</a></h2>
         
         <p class="list-post-date">
-          <time datetime="2018-03-07T14:24:28Z">
-            7 March, 2018 at 14:24 &#43;0000
+          <time datetime="2017-04-18T18:57:00Z">
+            18 April, 2017 at 18:57 &#43;0000
           </time>
         </p>
       </header>
       <div>
-        আমরা যখনি একাধিক থ্রেডের জন্য কোড লিখব তখনি আমাদের চিন্তা করতে হবে যে, এই কোডটি থ্রেড সেফ কি না। থ্রেইড সেইফের সহজ সংজ্ঞা আমরা জানি। এর অর্থ হলো, কোড সঠিকভাবে কাজ করবে। আমরা যখন একটি প্রোগ্রাম লিখি, সেই ক্লাসের একটি স্পেসিফিকেশন থাকে। আমরা সাধারণত প্রোগ্রাম লেখার সময় এর ফরমাল কোনো স্পেসিফিকেশন লিখি না, তবে এই ক্লাসের উদ্দেশ্য সম্পর্কে আমাদের ধারণা থাকে। প্রোগ্রামটিকে রান করা হলে এর ফলাফল সম্পর্কে আমাদের একটি পরিষ্কার ধারণা থাকে। এই প্রোগ্রামটি হয়তো একটি থ্রেড দিয়ে রান করলে যে ফলাফল দেয় সেই সম্পর্কে আমাদের আস্থা থাকে। একই প্রোগ্রামটি যদি একাধিক থ্রেডে রান করা হয়, তাহলে যদি আগের মতো একই রকম আস্থা আমাদের থাকে, তাহলে সেই প্রোগ্রামটিকে আমরা থ্রেড সেফ বলতে পারি। একটি প্রোগ্রামকে থ্রেড সেফ নিশ্চিত করতে হলে প্রোগ্রামটির ডেটাগুলো ঠিকমতো সময়ের সমন্বয় করতে হয় (Synchronize) করতে হয় (এখানে synchronized কিওয়ার্ডের কথা বলা হচ্ছে না)। একটি থ্রেড যে ডেটাগুলো পড়তে পারে বা পরিবর্তন করতে পারে, সেগুলোকে published ডেটা বলা হয়। ডেটা পাবলিশ করার সময় আমাদের সতর্কতা অবলম্বন করা জরুরি। আমরা জানি যে আধুনিক সিপিইউ ডেটা ক্যাশ ব্যবহার করে এবং আধুনিক কম্পিউটারে একাধিক সিপিইউ থাকে। কোনো একটি থ্রেড কোনো সিপিইউতে কোনো ডেটা পরিবর্তন করলে, অন্য সিপিইউতে যে থ্রেডটি চলতে তা সঙ্গে সঙ্গে নাও দেখতে পারে। তবে ভ্যালু যদি পরিবর্তন না হয়, সে ক্ষেত্রে দুশ্চিন্তার কোনো কারণ নেই। সে ক্ষেত্রে ইমমিউটেবল (immutable) ডেটা ব্যবহার করা যায়। আমরা যদি কোনো থ্রেডে ডেটা পরিবর্তন করি, তাহলে আমাদের নিশ্চিত হতে হবে যে, এই পরিবর্তন অন্য থ্রেড যদি এই ডেটা পড়ে তাহলে যেন সঠিক ডেটা (এ ক্ষেত্রে সর্বশেষ সংস্করণ) পড়তে পারে। কোনো কারণে যদি এর ব্যত্যয় ঘটে, তাহলে প্রোগ্রামটিতে ডেটা সিনক্রোনাইজেশনের সমস্যা রয়েছে এবং প্রোগ্রামটি থ্রেড সেফ নয়। একটি জাভা প্রোগ্রাম দেখা যাক- public class HiHello { static boolean s = false; public static void main(String\[\] args) { Thread t1 = new Thread(() -&gt; { while (!
+        আগে পর্বে জাভাতে ল্যামডা এক্সপ্রেশন কী এবং কীভাবে ব্যবহার করা হয় তার একটি প্রস্তাবনা দেওয়া হয়েছে। এবার আরও ভেতরে প্রবেশ করা যাক-
+খুব সহজে করে সংজ্ঞায়িত করা যায় এভাবে – ল্যামডা এক্সপ্রেশন হলো অ্যানোনিমাস ফাংশন যা অন্য মেথডে আর্গুমেন্ট হিসেবে পাস করা যায় বা ভ্যারিয়েবলে অ্যাসাইন করা যায়।
+আমরা সংজ্ঞা থেকে এর তিনটি বৈশিষ্ট্যকে আলাদা করতে পারি –
+১. অ্যানোনিমাস– এদের নাম নেই।
+২. ফাংশন– এটিতে মেথডের মতো প্যারামিটার লিস্ট থাকে, রিটার্ন টাইপ থাকে এবং এক্সেপশন লিস্ট থাকতে পারে। তবে যেহেতু এগুলো কোনো ক্লাসের সাথে সংযুক্ত নয় তাই এগুলোকে ফাংশন বলা হয়।
       </div>
       
-      <p><a class="read-more" href="http://bazlur.com/posts/2018-03-07-%E0%A6%9C%E0%A6%BE%E0%A6%AD%E0%A6%BE-%E0%A6%A5%E0%A7%8D%E0%A6%B0%E0%A7%87%E0%A6%A1-%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A7%8B%E0%A6%97%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%AE%E0%A6%BF%E0%A6%82-/">Read more &rarr;</a></p>
+      <p><a class="read-more" href="http://bazlur.com/posts/2017-04-18-%E0%A6%B2%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%AE%E0%A6%A1%E0%A6%BE-%E0%A6%8F%E0%A6%95%E0%A7%8D%E0%A6%B8%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A7%87%E0%A6%B6%E0%A6%A8%E0%A6%83-%E0%A6%AA%E0%A6%B0%E0%A7%8D-/">Read more &rarr;</a></p>
       
     </article>
 
@@ -132,19 +136,19 @@ if (!doNotTrack) {
     <article>
       <header>
         
-        <h2 class="list-title"><a href="http://bazlur.com/posts/2018-02-26-java-thread-programming-review-/">জাভা থ্রেড প্রোগ্রামিংঃ রিভিউ-৪</a></h2>
+        <h2 class="list-title"><a href="http://bazlur.com/posts/2017-04-14-%E0%A6%B2%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%AE%E0%A6%A1%E0%A6%BE-%E0%A6%8F%E0%A6%95%E0%A7%8D%E0%A6%B8%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A7%87%E0%A6%B6%E0%A6%A8%E0%A6%83-%E0%A6%AA%E0%A6%B0%E0%A7%8D-/">ল্যামডা এক্সপ্রেশনঃ পর্ব এক (Lambda Expression: Part 1)</a></h2>
         
         <p class="list-post-date">
-          <time datetime="2018-02-26T14:11:38Z">
-            26 February, 2018 at 14:11 &#43;0000
+          <time datetime="2017-04-14T22:59:00Z">
+            14 April, 2017 at 22:59 &#43;0000
           </time>
         </p>
       </header>
       <div>
-        জাভা থ্রেড প্রোগ্রামিং বইটি নিয়ে নিচের চমৎকার রিভিউটি লিখেছেন Ruhul Quddus Shakkhor   This is a great book, but this is not for everyone. If you’re new to Java, then it’s probably better to learn the basics first. However, if you’re an intermediate to the advanced learner, this book will give you a deeper understanding of Java threads. At this moment, I’m not aware of another Bangla book for any programming language that can give you a similar overview of threads.
+        অনেকগুলো জনপ্রিয় প্রোগ্রামিং ল্যাংগুয়েজেই ল্যামডা এক্সপ্রেশন রয়েছে। যেমন- জাভাস্ক্রিপ্ট, পাইথন, গ্রুভি, স্ক্যালা, সি শার্প, সি++ ইত্যাদি। জাভাতে এই বিশেষ ফিচারটি অনেকদিন অনুপস্থিত থাকায় জাভা প্রোগ্রামারদের মধ্যে মনোকষ্টের কমতি ছিল না। ২০০৬ সালে জাভা পাঁচ রিলিজ হওয়ার পর এই ফিচারটি নিয়ে আলোচনা শুরু হলেও এটি খুব একটা আলোর মুখ দেখে নি। অনেকেই বলতে শুরু করে “Java is the new COBOL”। তবে জাভাকে ওরাকল কিনে নেওয়ার পর এই অবস্থার পরিবর্তন হতে শুরু করে এবং অবশেষে প্রোগ্রামারদের প্রবল মনোবেদনা ঘুচিয়ে ২০১৪ সালে রিলিজ হয় জাভা আট যাতে এই বিশেষ এবং খুবই গুরুত্বপূর্ণ ফিচারটি সংযুক্ত করা হয়।
       </div>
       
-      <p><a class="read-more" href="http://bazlur.com/posts/2018-02-26-java-thread-programming-review-/">Read more &rarr;</a></p>
+      <p><a class="read-more" href="http://bazlur.com/posts/2017-04-14-%E0%A6%B2%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%AE%E0%A6%A1%E0%A6%BE-%E0%A6%8F%E0%A6%95%E0%A7%8D%E0%A6%B8%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A7%87%E0%A6%B6%E0%A6%A8%E0%A6%83-%E0%A6%AA%E0%A6%B0%E0%A7%8D-/">Read more &rarr;</a></p>
       
     </article>
 
@@ -153,19 +157,65 @@ if (!doNotTrack) {
     <article>
       <header>
         
-        <h2 class="list-title"><a href="http://bazlur.com/posts/2018-02-22-java-thread-programming-review-/">জাভা থ্রেড প্রোগ্রামিংঃ রিভিউ-৩</a></h2>
+        <h2 class="list-title"><a href="http://bazlur.com/posts/2017-04-07-%E0%A6%87%E0%A6%A8%E0%A6%AE%E0%A7%87%E0%A6%AE%E0%A7%8B%E0%A6%B0%E0%A7%80-%E0%A6%AB%E0%A6%BE%E0%A6%87%E0%A6%B2-%E0%A6%B8%E0%A6%BF%E0%A6%B8%E0%A7%8D%E0%A6%9F%E0%A7%87%E0%A6%AE-in-memory-file-/">ইনমেমোরী ফাইল সিস্টেম (In memory file system in java)</a></h2>
         
         <p class="list-post-date">
-          <time datetime="2018-02-22T17:47:41Z">
-            22 February, 2018 at 17:47 &#43;0000
+          <time datetime="2017-04-07T20:36:00Z">
+            7 April, 2017 at 20:36 &#43;0000
           </time>
         </p>
       </header>
       <div>
-        জাভা থ্রেড প্রোগ্রামিং বইটি নিয়ে নিচের চমৎকার রিভিউটি লিখেছেন অরণ্য আব্দুলাহ আল মামুন ভাই।  জাভা বেসড এপ্লিকেশন ডেভেলপমেন্টের একটা গুরুত্বপূর্ন বিষয় হলো থ্রেডিং। সেইটা সার্ভার-সাইড ডেভেলপমেন্ট-ই হোক আর ক্লায়েন্ট সাইড ডেভেলপমেন্ট। সার্ভার-সাইড ডেভেলপমেন্ট এ বিভিন্ন প্রসেসকে একধিক কাজে ভাগ করে faster response করা কিংবা ক্লায়েন্ট সাইড ডেভেলপমেন্ট এ GUI এর পাশাপাশি Network request বা IO Request সঠিক ভাবে handle করা – এগুলা খুবই গুরুত্বপূর্ন বিষয়। থ্রেডিং এর concept ভালো না থাকলে ভালো মানের application develop করা এক কথায় অসম্ভব।
+        ফাইল সিস্টেম হলো এক ধরণের ডেটা স্ট্রাকচার ও পদ্ধতি যার মাধ্যে অপারেটিং সিস্টেম ডিস্কে যে বিভিন্নরকম ফাইল রাখা হয় তার ট্র্যাক রাখে।
+অনেক সময়ই বিভিন্ন ইন্টারভিউতে ইন মেমোরী ফাইল সিস্টেম তৈরি করতে বলে। প্রশ্নটি এমন থাকে যে, একই ইন মেমোরী ফাইল সিস্টেম তৈরি রকতে হলে আপনি কীভাবে ডিজাইন করবেন এবং কী কী ডেটা স্ট্রাকচার ব্যবহার করবেন। সম্ভব হলে কিছু কোড লিখে দেখান। (Explain the data structures and algorithm that you would use to design an in-memory file system.
       </div>
       
-      <p><a class="read-more" href="http://bazlur.com/posts/2018-02-22-java-thread-programming-review-/">Read more &rarr;</a></p>
+      <p><a class="read-more" href="http://bazlur.com/posts/2017-04-07-%E0%A6%87%E0%A6%A8%E0%A6%AE%E0%A7%87%E0%A6%AE%E0%A7%8B%E0%A6%B0%E0%A7%80-%E0%A6%AB%E0%A6%BE%E0%A6%87%E0%A6%B2-%E0%A6%B8%E0%A6%BF%E0%A6%B8%E0%A7%8D%E0%A6%9F%E0%A7%87%E0%A6%AE-in-memory-file-/">Read more &rarr;</a></p>
+      
+    </article>
+
+
+
+    <article>
+      <header>
+        
+        <h2 class="list-title"><a href="http://bazlur.com/posts/2017-03-25-%E0%A6%9C%E0%A6%BE%E0%A6%AD%E0%A6%BE-%E0%A6%AE%E0%A7%87%E0%A6%87%E0%A6%A8-%E0%A6%A5%E0%A7%8D%E0%A6%B0%E0%A7%87%E0%A6%A1-java-main-threa/">জাভা মেইন থ্রেড (Java Main Thread)</a></h2>
+        
+        <p class="list-post-date">
+          <time datetime="2017-03-25T02:13:00Z">
+            25 March, 2017 at 02:13 &#43;0000
+          </time>
+        </p>
+      </header>
+      <div>
+        জাভা ভার্চুয়াল মেশিন যখন চলা শুরু করে, তখন এটি একটি থ্রেড তৈরি করে। একে মেইন থ্রেড বলা হয়। আমরা জাভাতে যে কোডগুলো করি সেগুলোকে মেইন থ্রেড রান করে। আমরা জানি যে প্রত্যেকটি জাভা প্রোগ্রামের একটি এন্ট্রি পয়েন্ট থাকে আর সেটি হলো মেইন মেথড (static void main(String[] args))। এই মেইন থ্রেড শুরুতেই এই মেইন মেথডটি খুঁজে। এই মেইন মেথড থেকেই প্রোগ্রাম চলা শুরু করে। উদাহরণ-
+public class MainThreadDemo { public static void main(String\[\] args) { Thread thread = Thread.
+      </div>
+      
+      <p><a class="read-more" href="http://bazlur.com/posts/2017-03-25-%E0%A6%9C%E0%A6%BE%E0%A6%AD%E0%A6%BE-%E0%A6%AE%E0%A7%87%E0%A6%87%E0%A6%A8-%E0%A6%A5%E0%A7%8D%E0%A6%B0%E0%A7%87%E0%A6%A1-java-main-threa/">Read more &rarr;</a></p>
+      
+    </article>
+
+
+
+    <article>
+      <header>
+        
+        <h2 class="list-title"><a href="http://bazlur.com/posts/2017-03-25-try-with-resource-statement-in-jav/">Try-with-resource statement in java</a></h2>
+        
+        <p class="list-post-date">
+          <time datetime="2017-03-25T01:00:00Z">
+            25 March, 2017 at 01:00 &#43;0000
+          </time>
+        </p>
+      </header>
+      <div>
+        প্রোগ্রামের কাজ শেষ হয়ে গেলে যে অবজেক্টগুলোকে ক্লোজ করে দেওয়া অত্যাবশ্যক সেগুলোকে রিসোর্স (Resource) বলা হয়। যেমন, FileOutputStream, BufferRedear। এই ক্লাসগুলো java.io.Cloasble ই্ন্টারফেসকে ইমপ্লিমেন্ট করে।
+উপরের ইন্টারফেসটিতে দেখা যাচ্ছে যে close() মেথডটি IOException থ্রো করে যা একটি চেকড এক্সেপশন। চেকড এক্সেপশন সবসময় হ্যান্ডেল করতে হয়। এর অর্থ হচ্ছে, এই মেথডটি কল করতে গেলে অবশ্যই try-catch ব্লকের ভেতরে তা কল করতে হবে। উদাহরণ হিসেবে নিচের মেথডটি খেয়াল করা যাক,
+উপরের মেথডটিতে close() মেথডটি finally ব্লকের মধ্যে কল করা হয়েছে। এর কারণ প্রোগ্রামটির কাজ শেষ হলেই আমরা রিসোর্স ক্লোজ করতে পারি। এই কোড ব্লক দেখেই মনে হচ্ছে কাজটুকু খুবই বিরক্তিকর। একটি ছোট কাজের জন্য অনেক কোড লিখতে হচ্ছে। এই বিরক্তি দূর করতে জাভা 7 এ নতুন একটি ফিচার সংযুক্ত করা হয়েছে যাকে বলে try-with-resource স্টেটমেন্ট। উপরের মেথডটিকে try-with-resource স্টেটমেন্ট ব্যবহার করে লিখলে দাঁড়ায়,
+      </div>
+      
+      <p><a class="read-more" href="http://bazlur.com/posts/2017-03-25-try-with-resource-statement-in-jav/">Read more &rarr;</a></p>
       
     </article>
 
@@ -178,7 +228,7 @@ if (!doNotTrack) {
             </div>
         
         <div class="pagination-item-spacer">
-            Page 10 of 35
+            Page 10 of 21
         </div>
         
             <div class="pagination-item">

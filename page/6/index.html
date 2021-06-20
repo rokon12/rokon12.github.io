@@ -111,20 +111,19 @@ if (!doNotTrack) {
     <article>
       <header>
         
-        <h2 class="list-title"><a href="http://bazlur.com/2020/10/java-local-type-inference/">Java Local Type Inference</a></h2>
+        <h2 class="list-title"><a href="http://bazlur.com/posts/2018-03-13-what-is-packaging-in-java-how-to-import-package/">জাভাতে প্যাকেজিং কী? কীভাবে প্যাকেজ ইম্পোর্ট করতে হয় ?</a></h2>
         
         <p class="list-post-date">
-          <time datetime="2020-10-14T15:47:10-04:00">
-            14 October, 2020 at 15:47 EDT
+          <time datetime="2018-03-12T22:08:47Z">
+            12 March, 2018 at 22:08 &#43;0000
           </time>
         </p>
       </header>
       <div>
-        জাভা লোকাল টাইপ ইনফারেন্স জাভাতে কোনো ভ্যারিয়েবল ডিক্লেয়ার করতে হলে দুইবার টাইপ লিখতে হয়। যেমন-
-ArrayList&lt;String&gt; list = new ArrayList&lt;&gt;();  ওপরের এই লাইনে দুইবার ArrayList লিখতে হয়েছে। এটি অনেক সশয় প্রয়োজনাতিরিক্ত ব্যবহার মনে হতে পারে। একপাশে টাইপ ইনফরমেশন থাকলেই আধুনিক কম্পাইলারের তা বুঝে ফেলা উচিৎ। জাভা ১০-এ জাভা কম্পাইলারের এই টাইপ বুঝে ফেলার ফিচারটি সংযুক্ত করা হয়। এর ফলে ভ্যারিয়েবল ডিক্লেয়ার করার সময় বা পাশে var কিওয়ার্ড ব্যবহার করা যায়। উদাহরণ-
+        আমরা কম্পিউটারে নানা ধরনের ফাইল বিভিন্ন ফোল্ডারে সাজিয়ে রাখি। যেমন- মুভি ফোল্ডারে হয়তো আমরা শুধুই মুভি রাখি, সেখানে অন্য কোনো ফাইল রাখি না। আবার মুভি ফোল্ডারে এর মধ্যে সাব-ফোল্ডার তৈরি করি আরও আলাদা করার জন্য, যেমন – বাংলা মুভি, ইংরেজি মুভি ইত্যাদি। জাভাতে প্যাকেজ বলতে এই ধারণাটিকেই বোঝায়। একটি জাভা প্রোগ্রামিং ভাষায় লেখা সফ্টওয়্যারে শত শত বা হাজার হাজার পৃথক ক্লাস থাকতে পারে। এজন্য প্যাকেজ ডিক্লেয়ারেশনের মাধ্যমে একই রকম ক্লাসগুলো একাধিক প্যাকেজের মধ্যে আলাদা করে রাখা হয়। এছাড়াও অনেক সময় একই নামের একাধিক ক্লাস লেখার প্রয়োজন হতে পারে যা পরম্পরবিরোধী। এক্ষেত্রে একই নামের ক্লাস বিভিন্ন প্যাকেজে রাখা যেতে পারে।
       </div>
       
-      <p><a class="read-more" href="http://bazlur.com/2020/10/java-local-type-inference/">Read more &rarr;</a></p>
+      <p><a class="read-more" href="http://bazlur.com/posts/2018-03-13-what-is-packaging-in-java-how-to-import-package/">Read more &rarr;</a></p>
       
     </article>
 
@@ -133,19 +132,21 @@ ArrayList&lt;String&gt; list = new ArrayList&lt;&gt;();  ওপরের এই 
     <article>
       <header>
         
-        <h2 class="list-title"><a href="http://bazlur.com/2020/10/7-ways-to-improve-your-code-reading-skills/">7 Ways to Improve Your Code Reading Skills</a></h2>
+        <h2 class="list-title"><a href="http://bazlur.com/posts/2018-03-13-what-is-null-pointer-exception-in-java-how-to-handle-i/">Java তে Null Pointer Exception কী? কীভাবে একে Handle করা যায়?</a></h2>
         
         <p class="list-post-date">
-          <time datetime="2020-10-14T00:57:21-04:00">
-            14 October, 2020 at 00:57 EDT
+          <time datetime="2018-03-12T22:01:13Z">
+            12 March, 2018 at 22:01 &#43;0000
           </time>
         </p>
       </header>
       <div>
-        Reading source code is in the job description of a software developer. However, this experience is not always pleasant. Not everyone would like to read someone else’s code because they find it boring, sometimes frustrating. There are cases when you start reading someone else’s code but end up getting a bitter feeling because you are not being able to understand it or the code is not well written. Most developers want to focus on writing code rather reading it, not realizing that reading code is also an important skill to have.
+        কোনো ভেরিয়েবল যদি কোনো অবজেক্টের রেফারেন্স না রাখে,তাহলে সেই ভেরিয়েবল মূলত একটি নাল রেফারেন্স বা শূণ্য রেফারেন্স ধরে রাখে। সেই ভেরিয়েবল নিয়ে কোনো কাজ করতে চাই, তাহলে জাভা ভার্চুয়াল মেশিন এই এক্সেপশন থ্রো করে। বেশ কয়েকটি জায়গায় এই এক্সেপশন থ্রো হতে পারে। যেমন-
+১. একটি ক্লাসের অবজেক্ট তৈরি না করেই সেই ক্লাসের কোনো মেথড করলে। তবে সেই ক্লাসের স্ট্যাটিক মেথড কল করা হলে NullPointerException (NPE) থ্রো হবে না।
+২. কোনো ভেরিয়েবলের টাইপ যদি ক্লাস হয় এবং এটি যদি নাল(null) হয়, তাহলে সেই ভেরিয়েবলের কোনো ফ্লিল্ড পরিবর্তন না অ্যাকসেস করতে গেলে NPE থ্রো হবে।
       </div>
       
-      <p><a class="read-more" href="http://bazlur.com/2020/10/7-ways-to-improve-your-code-reading-skills/">Read more &rarr;</a></p>
+      <p><a class="read-more" href="http://bazlur.com/posts/2018-03-13-what-is-null-pointer-exception-in-java-how-to-handle-i/">Read more &rarr;</a></p>
       
     </article>
 
@@ -154,19 +155,61 @@ ArrayList&lt;String&gt; list = new ArrayList&lt;&gt;();  ওপরের এই 
     <article>
       <header>
         
-        <h2 class="list-title"><a href="http://bazlur.com/posts/2020-03-06-%E0%A6%9C%E0%A6%BE%E0%A6%AD%E0%A6%BE-%E0%A6%93%E0%A6%AF%E0%A6%BC%E0%A7%87%E0%A6%AC-%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A7%8B%E0%A6%97%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%AE%E0%A6%BF/">জাভা ওয়েব প্রোগ্রামিং</a></h2>
+        <h2 class="list-title"><a href="http://bazlur.com/posts/2018-03-07-%E0%A6%9C%E0%A6%BE%E0%A6%AD%E0%A6%BE-%E0%A6%A5%E0%A7%8D%E0%A6%B0%E0%A7%87%E0%A6%A1-%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A7%8B%E0%A6%97%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%AE%E0%A6%BF%E0%A6%82-/">জাভা থ্রেড প্রোগ্রামিংঃ ডেটা রেইস (Java Thread Programming: Data Race)</a></h2>
         
         <p class="list-post-date">
-          <time datetime="2020-03-06T00:19:33Z">
-            6 March, 2020 at 00:19 &#43;0000
+          <time datetime="2018-03-07T14:24:28Z">
+            7 March, 2018 at 14:24 &#43;0000
           </time>
         </p>
       </header>
       <div>
-        ভূমিকা প্রায় ১৪ বছর আগে যখন বিশ্ববিদ্যালয়ে প্রোগ্রামিংয়ের সঙ্গে যুক্ত হয়েছিলাম, তখন থেকেই লক্ষ করেছি জাভা সবচেয়ে জনপ্রিয় এবং বহুল ব্যবহৃত প্রোগ্রামিং ভাষা। তখন সফটওয়্যার অ্যাপ্লিকেশন বলতে শুধু ডেস্কটপ অ্যাপ্লিকেশনই বুঝতাম।কিন্তু একটি বিষয় মাথায় ঢুকত না যে নিত্যদিনের ব্যবহার করা বেশিরভাগ ডেস্কটপ অ্যাপ্লিকেশন জাভায় ডেভেলপ করা না হলেও জাভা কীভাবে এত জনপ্রিয় হয়? এমন তো নয় যে, এটিই একমাত্র ওপেনসোর্স ও পুরনো ভাষা। জাভার কাছাকাছি জনপ্রিয় অন্যান্য ভাষা, যেমন : পাইথন, রুবি, পিএইচপি – এগুলো জাভার আগে বা কাছাকাছি সময়েই রিলিজ হয়েছে। তাহলে জাভা কেন বা কীভাবে এতো বহুল ব্যবহৃত এবং জনপ্রিয় হলো?
+        আমরা যখনি একাধিক থ্রেডের জন্য কোড লিখব তখনি আমাদের চিন্তা করতে হবে যে, এই কোডটি থ্রেড সেফ কি না। থ্রেইড সেইফের সহজ সংজ্ঞা আমরা জানি। এর অর্থ হলো, কোড সঠিকভাবে কাজ করবে। আমরা যখন একটি প্রোগ্রাম লিখি, সেই ক্লাসের একটি স্পেসিফিকেশন থাকে। আমরা সাধারণত প্রোগ্রাম লেখার সময় এর ফরমাল কোনো স্পেসিফিকেশন লিখি না, তবে এই ক্লাসের উদ্দেশ্য সম্পর্কে আমাদের ধারণা থাকে। প্রোগ্রামটিকে রান করা হলে এর ফলাফল সম্পর্কে আমাদের একটি পরিষ্কার ধারণা থাকে। এই প্রোগ্রামটি হয়তো একটি থ্রেড দিয়ে রান করলে যে ফলাফল দেয় সেই সম্পর্কে আমাদের আস্থা থাকে। একই প্রোগ্রামটি যদি একাধিক থ্রেডে রান করা হয়, তাহলে যদি আগের মতো একই রকম আস্থা আমাদের থাকে, তাহলে সেই প্রোগ্রামটিকে আমরা থ্রেড সেফ বলতে পারি। একটি প্রোগ্রামকে থ্রেড সেফ নিশ্চিত করতে হলে প্রোগ্রামটির ডেটাগুলো ঠিকমতো সময়ের সমন্বয় করতে হয় (Synchronize) করতে হয় (এখানে synchronized কিওয়ার্ডের কথা বলা হচ্ছে না)। একটি থ্রেড যে ডেটাগুলো পড়তে পারে বা পরিবর্তন করতে পারে, সেগুলোকে published ডেটা বলা হয়। ডেটা পাবলিশ করার সময় আমাদের সতর্কতা অবলম্বন করা জরুরি। আমরা জানি যে আধুনিক সিপিইউ ডেটা ক্যাশ ব্যবহার করে এবং আধুনিক কম্পিউটারে একাধিক সিপিইউ থাকে। কোনো একটি থ্রেড কোনো সিপিইউতে কোনো ডেটা পরিবর্তন করলে, অন্য সিপিইউতে যে থ্রেডটি চলতে তা সঙ্গে সঙ্গে নাও দেখতে পারে। তবে ভ্যালু যদি পরিবর্তন না হয়, সে ক্ষেত্রে দুশ্চিন্তার কোনো কারণ নেই। সে ক্ষেত্রে ইমমিউটেবল (immutable) ডেটা ব্যবহার করা যায়। আমরা যদি কোনো থ্রেডে ডেটা পরিবর্তন করি, তাহলে আমাদের নিশ্চিত হতে হবে যে, এই পরিবর্তন অন্য থ্রেড যদি এই ডেটা পড়ে তাহলে যেন সঠিক ডেটা (এ ক্ষেত্রে সর্বশেষ সংস্করণ) পড়তে পারে। কোনো কারণে যদি এর ব্যত্যয় ঘটে, তাহলে প্রোগ্রামটিতে ডেটা সিনক্রোনাইজেশনের সমস্যা রয়েছে এবং প্রোগ্রামটি থ্রেড সেফ নয়। একটি জাভা প্রোগ্রাম দেখা যাক- public class HiHello { static boolean s = false; public static void main(String\[\] args) { Thread t1 = new Thread(() -&gt; { while (!
       </div>
       
-      <p><a class="read-more" href="http://bazlur.com/posts/2020-03-06-%E0%A6%9C%E0%A6%BE%E0%A6%AD%E0%A6%BE-%E0%A6%93%E0%A6%AF%E0%A6%BC%E0%A7%87%E0%A6%AC-%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A7%8B%E0%A6%97%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%AE%E0%A6%BF/">Read more &rarr;</a></p>
+      <p><a class="read-more" href="http://bazlur.com/posts/2018-03-07-%E0%A6%9C%E0%A6%BE%E0%A6%AD%E0%A6%BE-%E0%A6%A5%E0%A7%8D%E0%A6%B0%E0%A7%87%E0%A6%A1-%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A7%8B%E0%A6%97%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%AE%E0%A6%BF%E0%A6%82-/">Read more &rarr;</a></p>
+      
+    </article>
+
+
+
+    <article>
+      <header>
+        
+        <h2 class="list-title"><a href="http://bazlur.com/posts/2018-02-26-java-thread-programming-review-/">জাভা থ্রেড প্রোগ্রামিংঃ রিভিউ-৪</a></h2>
+        
+        <p class="list-post-date">
+          <time datetime="2018-02-26T14:11:38Z">
+            26 February, 2018 at 14:11 &#43;0000
+          </time>
+        </p>
+      </header>
+      <div>
+        জাভা থ্রেড প্রোগ্রামিং বইটি নিয়ে নিচের চমৎকার রিভিউটি লিখেছেন Ruhul Quddus Shakkhor   This is a great book, but this is not for everyone. If you’re new to Java, then it’s probably better to learn the basics first. However, if you’re an intermediate to the advanced learner, this book will give you a deeper understanding of Java threads. At this moment, I’m not aware of another Bangla book for any programming language that can give you a similar overview of threads.
+      </div>
+      
+      <p><a class="read-more" href="http://bazlur.com/posts/2018-02-26-java-thread-programming-review-/">Read more &rarr;</a></p>
+      
+    </article>
+
+
+
+    <article>
+      <header>
+        
+        <h2 class="list-title"><a href="http://bazlur.com/posts/2018-02-22-java-thread-programming-review-/">জাভা থ্রেড প্রোগ্রামিংঃ রিভিউ-৩</a></h2>
+        
+        <p class="list-post-date">
+          <time datetime="2018-02-22T17:47:41Z">
+            22 February, 2018 at 17:47 &#43;0000
+          </time>
+        </p>
+      </header>
+      <div>
+        জাভা থ্রেড প্রোগ্রামিং বইটি নিয়ে নিচের চমৎকার রিভিউটি লিখেছেন অরণ্য আব্দুলাহ আল মামুন ভাই।  জাভা বেসড এপ্লিকেশন ডেভেলপমেন্টের একটা গুরুত্বপূর্ন বিষয় হলো থ্রেডিং। সেইটা সার্ভার-সাইড ডেভেলপমেন্ট-ই হোক আর ক্লায়েন্ট সাইড ডেভেলপমেন্ট। সার্ভার-সাইড ডেভেলপমেন্ট এ বিভিন্ন প্রসেসকে একধিক কাজে ভাগ করে faster response করা কিংবা ক্লায়েন্ট সাইড ডেভেলপমেন্ট এ GUI এর পাশাপাশি Network request বা IO Request সঠিক ভাবে handle করা – এগুলা খুবই গুরুত্বপূর্ন বিষয়। থ্রেডিং এর concept ভালো না থাকলে ভালো মানের application develop করা এক কথায় অসম্ভব।
+      </div>
+      
+      <p><a class="read-more" href="http://bazlur.com/posts/2018-02-22-java-thread-programming-review-/">Read more &rarr;</a></p>
       
     </article>
 
@@ -179,7 +222,7 @@ ArrayList&lt;String&gt; list = new ArrayList&lt;&gt;();  ওপরের এই 
             </div>
         
         <div class="pagination-item-spacer">
-            Page 6 of 35
+            Page 6 of 21
         </div>
         
             <div class="pagination-item">
