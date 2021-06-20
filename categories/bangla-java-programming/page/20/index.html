@@ -1,0 +1,190 @@
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="fb:pages" content="556530934551556" />
+
+    
+    <title>bangla java programming - Bazlur&#39;s Stream of Thoughts</title>
+    <meta property="og:title" content="bangla java programming - Bazlur&#39;s Stream of Thoughts">
+    
+
+    <meta name="twitter:card" content="summary">
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+
+    
+
+    
+    <link href="/categories/bangla-java-programming/index.xml" rel="alternate" type="application/rss+xml" title="Bazlur&#39;s Stream of Thoughts" />
+    
+
+    <script src="/js/prism.js"></script>
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="stylesheet" href="/css/prism.css" />
+
+    <link rel="stylesheet"
+          href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/languages/java.min.js"
+            integrity="sha512-xEnylOTeZvxUCvtK9Lw3FjOgfCwsMEhUbx6Hant1lPgy+PcynqCm8XfqhpRos6XNaTxeMuT4QyrWyo3U1NijHg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+    
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-180587445-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+  </head>
+
+  <body class="line-numbers">
+
+  <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/about-me/">About me</a></li>
+      
+      <li><a href="/books/">Books</a></li>
+      
+      <li><a href="/categories/">Categories</a></li>
+      
+      <li><a href="/resume/">Resume</a></li>
+      
+      <li><a href="/live">LIVE</a></li>
+      
+      <li><a href="/index.xml">Subscribe</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<h1>bangla java programming</h1>
+
+
+
+
+<h2>bangla java programming</h2>
+<div id="content">
+  
+  
+      <article>
+      <header>
+        
+        <h2 class="list-title"><a href="http://bazlur.com/posts/2017-02-26-%E0%A6%95%E0%A7%8B%E0%A6%A1%E0%A6%BF%E0%A6%82-%E0%A6%95%E0%A6%A8%E0%A6%AD%E0%A7%87%E0%A6%A8%E0%A6%B6%E0%A6%A8-coding-conventio/">কোডিং কনভেনশন (coding convention)</a></h2>
+        
+        <p class="list-post-date">
+          <time datetime="2017-02-26T00:27:00Z">
+            26 February, 2017 at 00:27 &#43;0000
+          </time>
+        </p>
+      </header>
+      <div>
+        আমরা যে কোডগুলো লিখি সেগুলো সাধারণত হাইলেভেল(high-level) প্রোগ্রামিং ভাষায় (যেমন- জাভা)। এর প্রধাণ কারণ, হাইলেভেল প্রোগ্রামিং ভাষাগুলো মানুষের ভাষার কাছাকাছি। এতে করে আমাদের বোঝার সুবিধা হয়। একজন আরেকজনের সহজে কোড পড়তে ও বুঝতে পারে। এইকোডগুলো এজন্যই এভাবে লেখা হয়। কম্পিউটার কিন্তু আমাদের এই হাইলেভেল কোডগুলো বুঝতে পারেনা, এজন্য কম্পাইলারের দরকার হয়। আমাদের কোডগুলো কম্পাইল করার পর মেশিন যাতে বুঝতে পারে এমন কোডে রূপান্তরিত করা হয়।
+সুতরাং দেখা যাচ্ছে, কম্পিউটার মূলত মেশিন কোড পড়ে। আমাদের পক্ষে মেশিনকোড পড়া কষ্টদায়ক বা আমরা তা পারি না। একটি সফটওয়্যার তৈরি করা শেষ হয়ে গেলে একে অনেকদিন মেইনটেইন করতে হয়। এর অর্থ হচ্ছে এই যে, এই সফটওয়্যারটি যতদিন মানুষ ব্যবহার করবে ততদিন এর কোডগুলো নিয়ে কাজ করতে হয়, নতুন নতুন সমস্যার সমাধান যুক্ত করতে হয়, কোনো বাগ বা ত্রুটি থাকলে সেগুলোকে সমাধান করতে হয়। একেই মেইনটেনেনিং (maintaining) বলা হয়। এর বাংলা হতে পারে রক্ষা বা প্রতিপালন করা। একটি সফটওয়্যারের পেছনে শতকরা ৮০ ভাগ খরচ চলে যায় এই মেইনটেনেন্সে। বর্তমানে অনেক জটিল ও বড় মাপের সফটওয়্যারগুলো সবসময় টিম নিয়ে তৈরি করা হয়। একার পক্ষে কখনো বড় কোনো সফটওয়্যারের কোড লেখা বা মেনইটেইন করা সম্ভব হয় না। তাছাড়া কোনো একটি সফটওয়্যার প্রজেক্টের মূল প্রোগ্রামার বা ডেভেলপার সারা জীবন ধরে একই সফটওয়্যার মেইনটেইন করে না। নতুন ডেভেলপারকে পুরোনো কোডগুলো পড়ে বুঝতে হয়। কোডগুলো পড়ে বুঝতে হলে কোডগুলোকে এমনভাবে লিখতে হবে যাতে সহজে পড়ে বোঝা যায়। এখন একেকজন যদি একেকভাবে কোড লিখে, তাহলে এই বোঝার প্রক্রিয়াটি অনেক কষ্টকর ও সময়সাপেক্ষ হয়ে যায়।
+      </div>
+      
+      <p><a class="read-more" href="http://bazlur.com/posts/2017-02-26-%E0%A6%95%E0%A7%8B%E0%A6%A1%E0%A6%BF%E0%A6%82-%E0%A6%95%E0%A6%A8%E0%A6%AD%E0%A7%87%E0%A6%A8%E0%A6%B6%E0%A6%A8-coding-conventio/">Read more &rarr;</a></p>
+      
+    </article>
+  
+  
+  
+      <article>
+      <header>
+        
+        <h2 class="list-title"><a href="http://bazlur.com/posts/2017-02-21-%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A7%8B%E0%A6%97%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%AE%E0%A6%BF%E0%A6%82-%E0%A6%86%E0%A6%A1%E0%A7%8D%E0%A6%A1%E0%A6%BE-%E0%A6%9C%E0%A6%BE%E0%A6%AD%E0%A6%BE-/">প্রোগ্রামিং আড্ডা: জাভা প্রোগ্রামিং ও অ্যান্ড্রয়েড: দশটি প্রশ্নের উত্তর</a></h2>
+        
+        <p class="list-post-date">
+          <time datetime="2017-02-21T20:59:00Z">
+            21 February, 2017 at 20:59 &#43;0000
+          </time>
+        </p>
+      </header>
+      <div>
+        দ্বিমিক কম্পিউটিং আয়োজিত ভাষা দিবসে মাতৃভাষায় প্রোগ্রামিং শেখা নিয়ে একটি বিশেষ আড্ডায় অনেক প্রশ্ন এসেছে। তবে সময় স্বল্পতার জন্য অনেকগুলো প্রশ্নের উত্তর দেওয়া সম্ভব হয়নি। নিচে এমন ১০ টি গুরুত্বপূর্ণ প্রশ্নের উত্তর দেওয়া হলো।
+ আড্ডাটির ইউটিউব ভিডিও লিংকটিও নিচে দেওয়া হলোঃ
+প্রশ্নঃ বাংলাদেশে তো জাভাতে কাজ করে এমন সফটওয়্যার ফার্মের সংখ্যা কম, সুতরাং জাভা শিখে কী লাভ আছে ?
+উত্তরঃ বাংলাদেশে মোটেও জাভাতে কাজ করে এমন সফটওয়্যার ফার্মের সংখ্যা কম নয়। জাগবিডিতে একটা সার্ভে করা হয়েছিল তাতে যে সংখ্যা পাওয়া যায়, তার সংখ্যা মোটেও কম নয়। তাছাড়া সামগ্রিকভাবে বাংলাদেশের সফটওয়ার ইন্ডাস্ট্রি এতো বড় নয়। সার্ভেটির লিংক এখানে পাওয়া যাবে- https://goo.
+      </div>
+      
+      <p><a class="read-more" href="http://bazlur.com/posts/2017-02-21-%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A7%8B%E0%A6%97%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%AE%E0%A6%BF%E0%A6%82-%E0%A6%86%E0%A6%A1%E0%A7%8D%E0%A6%A1%E0%A6%BE-%E0%A6%9C%E0%A6%BE%E0%A6%AD%E0%A6%BE-/">Read more &rarr;</a></p>
+      
+    </article>
+  
+  
+  
+      <article>
+      <header>
+        
+        <h2 class="list-title"><a href="http://bazlur.com/posts/2017-02-20-%E0%A6%A8%E0%A6%BE%E0%A6%B2-null-in-jav/">নাল (null in Java)</a></h2>
+        
+        <p class="list-post-date">
+          <time datetime="2017-02-20T09:32:00Z">
+            20 February, 2017 at 09:32 &#43;0000
+          </time>
+        </p>
+      </header>
+      <div>
+        জাভাতে নাল (null) একটি সংরক্ষিত কিওয়ার্ড। আমরা জানি যে, যেকোনো অবজেক্টের একটি রেফারেন্স থাকে। একটি ক্লাস থেকে প্রথমে একটি অবজেক্ট তৈরি করা হয়। সেই অবজেক্টকে আমরা রেফারেন্স দিয়ে অ্যাকসেস করতে পারি। যেমন,
+Person person1 = new Person(&quot;Bazlur&quot;, &quot;Rahman&quot;);  এখানে new অপারেটর দিয়ে একটি Person অবজেক্ট তৈরি করা হয়েছে। person1 হচ্ছে সেই অবজেক্টের রেফারেন্স।
+Person person2;  এখানে person2 একটি রেফারেন্স। কিন্তু এটি কোনো অবজেক্টকে রেফার করে না। কারণ person2 এর জন্য কোনো অবজেক্ট তৈরি করা হয় নি। এই রকম কোনো রেফারেন্স যদি কোনো অবজেক্টকে রেফারেন্স না করে, তাহলে আমরা বলি এটি একটি নাল রেফারেন্স (Null Reference)। এই রেফারন্সটি কাউকে রেফার করে না।
+      </div>
+      
+      <p><a class="read-more" href="http://bazlur.com/posts/2017-02-20-%E0%A6%A8%E0%A6%BE%E0%A6%B2-null-in-jav/">Read more &rarr;</a></p>
+      
+    </article>
+  
+</div>
+
+  <footer>
+  <footer>
+  <div>
+    <p>
+    &copy; <a href="https://bazlur.com"> A N M Bazlur Rahman</a> 2012 - 2021 | <a href="https://github.com/rokon12">Github</a>
+    | <a href=" https://twitter.com/bazlur_rahman"> @bazlur_rahman</a>
+    </p>
+  </div>
+</footer>
+  
+  </footer>
+  </body>
+</html>
+

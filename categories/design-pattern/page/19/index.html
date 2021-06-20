@@ -1,0 +1,190 @@
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="fb:pages" content="556530934551556" />
+
+    
+    <title>design pattern - Bazlur&#39;s Stream of Thoughts</title>
+    <meta property="og:title" content="design pattern - Bazlur&#39;s Stream of Thoughts">
+    
+
+    <meta name="twitter:card" content="summary">
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+
+    
+
+    
+    <link href="/categories/design-pattern/index.xml" rel="alternate" type="application/rss+xml" title="Bazlur&#39;s Stream of Thoughts" />
+    
+
+    <script src="/js/prism.js"></script>
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="stylesheet" href="/css/prism.css" />
+
+    <link rel="stylesheet"
+          href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/languages/java.min.js"
+            integrity="sha512-xEnylOTeZvxUCvtK9Lw3FjOgfCwsMEhUbx6Hant1lPgy+PcynqCm8XfqhpRos6XNaTxeMuT4QyrWyo3U1NijHg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+    
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-180587445-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+  </head>
+
+  <body class="line-numbers">
+
+  <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/about-me/">About me</a></li>
+      
+      <li><a href="/books/">Books</a></li>
+      
+      <li><a href="/categories/">Categories</a></li>
+      
+      <li><a href="/resume/">Resume</a></li>
+      
+      <li><a href="/live">LIVE</a></li>
+      
+      <li><a href="/index.xml">Subscribe</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<h1>design pattern</h1>
+
+
+
+
+<h2>design pattern</h2>
+<div id="content">
+  
+  
+      <article>
+      <header>
+        
+        <h2 class="list-title"><a href="http://bazlur.com/posts/2017-03-07-%E0%A6%9C%E0%A6%BE%E0%A6%AD%E0%A6%BE%E0%A6%A4%E0%A7%87-%E0%A6%95%E0%A6%BE%E0%A6%B2%E0%A7%87%E0%A6%95%E0%A6%B6%E0%A6%A8-%E0%A6%AB%E0%A7%8D%E0%A6%B0%E0%A7%87%E0%A6%AE%E0%A6%93%E0%A6%AF%E0%A6%BC%E0%A6%BE/">জাভাতে কালেকশন ফ্রেমওয়ার্ক কী এবং এর প্রয়োজনীয়তা কী?</a></h2>
+        
+        <p class="list-post-date">
+          <time datetime="2017-03-07T13:21:00Z">
+            7 March, 2017 at 13:21 &#43;0000
+          </time>
+        </p>
+      </header>
+      <div>
+        আমরা অনেক বড় একটি প্রোগ্রামকে ভাঙতে ভাঙতে কতগুলো ছোট ছোট টুকরো প্রোগ্রামে বিভ্ক্ত করি যেগুলো একে অন্যের সঙ্গে যোগাযোগ করতে পারে। এরপর সেই ছোট প্রোগ্রাম গুলোকে আরও ভাংগতে থাকি ততক্ষণ পর্যন্ত, যতক্ষণ না আমরা আরও ছোট অংশ পাই যেটি সহজে বোঝা ও ইম্প্লিমেন্ট করা যায় ঠিক যেভাবে ভাবে আমরা নানা রকম ইনফরমেশন সিস্টেম তৈরি করি। যেমন- বিটস থেকে বাইট, বাইট থেকে ক্যারেক্টার, তারপর নাম্বার, স্ট্রিং ইত্যাদি। আমরা জানি কীভাবে অবজেক্ট তৈরি করতে হয়। একটি রিয়েল লাইফ এনটিটিকে অবজেক্টে অ্যাবস্ট্রাক্ট করতে পারি। এভাবে অনেকগুলো অবজেক্ট দিয়ে অনেক বড়ো স্ট্রাকচার তৈরি করতে পারি।
+      </div>
+      
+      <p><a class="read-more" href="http://bazlur.com/posts/2017-03-07-%E0%A6%9C%E0%A6%BE%E0%A6%AD%E0%A6%BE%E0%A6%A4%E0%A7%87-%E0%A6%95%E0%A6%BE%E0%A6%B2%E0%A7%87%E0%A6%95%E0%A6%B6%E0%A6%A8-%E0%A6%AB%E0%A7%8D%E0%A6%B0%E0%A7%87%E0%A6%AE%E0%A6%93%E0%A6%AF%E0%A6%BC%E0%A6%BE/">Read more &rarr;</a></p>
+      
+    </article>
+  
+  
+  
+      <article>
+      <header>
+        
+        <h2 class="list-title"><a href="http://bazlur.com/posts/2017-03-07-%E0%A6%9C%E0%A6%BE%E0%A6%AD%E0%A6%BE%E0%A6%A4%E0%A7%87-declare-type-%E0%A6%8F%E0%A6%AC%E0%A6%82-actual-type-%E0%A6%95/">জাভাতে Declare type এবং Actual type কী?</a></h2>
+        
+        <p class="list-post-date">
+          <time datetime="2017-03-07T13:18:00Z">
+            7 March, 2017 at 13:18 &#43;0000
+          </time>
+        </p>
+      </header>
+      <div>
+        জাভাতে প্রত্যেক ভেরিয়েবলের একটি টাইপ থাকে। ক্লাস একটি টাইপ। একটি ইন্টারফেস একটি টাইপ। একটি প্রিমিটিভ ডেটা টাইপও একটি টাইপ। অ্যারেও একটি টাইপ। এই টাইপগুলোকে আমরা দুই ভাগে ভাগ করে থাকি। একটি হলো- প্রিমিটিভ টাইপ যা শুধুমাত্র প্রিমিটিভ ভ্যালু রাখতে পারে। অন্যটি হলো- রেফারেন্স টাইপ। রেফারেন্স একটি অবজেক্টের রেফারেন্স রাখে।
+Animal animal; 
+এখানে animal একটি ভেরিয়েবল। যার টাইপ হচ্ছে Animal। এখন new কিওযার্ড ব্যবহার করে এতে একটি অবজেক্ট তৈরি করে এই ভেরিয়েবলে অ্যাসাইন করতে পারি।
+      </div>
+      
+      <p><a class="read-more" href="http://bazlur.com/posts/2017-03-07-%E0%A6%9C%E0%A6%BE%E0%A6%AD%E0%A6%BE%E0%A6%A4%E0%A7%87-declare-type-%E0%A6%8F%E0%A6%AC%E0%A6%82-actual-type-%E0%A6%95/">Read more &rarr;</a></p>
+      
+    </article>
+  
+  
+  
+      <article>
+      <header>
+        
+        <h2 class="list-title"><a href="http://bazlur.com/posts/2017-03-01-largest-known-prime-numbe/">Largest known prime number</a></h2>
+        
+        <p class="list-post-date">
+          <time datetime="2017-03-01T16:19:00Z">
+            1 March, 2017 at 16:19 &#43;0000
+          </time>
+        </p>
+      </header>
+      <div>
+        সবচেয়ে বড় মৌলিক সংখ্যাটি কতো ?
+এখন পর্যন্ত খুঁজে পাওয়া সবচেয়ে বড় মৌলিক সংখ্যাটি হলো – 2^57,885,161 -1।
+এই লিংকে এ সম্পর্কে আরও বিস্তারিত জানা যাবে।
+এতে 17,425,170 টি সংখ্যা রয়েছে। এই সংখ্যাটি দেখতে চাইলে ঝটপট একটি জাভা প্রোগ্রাম লিখে ফেলা যায়। এর জন্য জাভার BigInteger ক্লাসটি প্রয়োজন হবে।
+import java.math.BigInteger; public class LargestPrimeNumber { public static void main(String[] args) { BigInteger two = BigInteger.valueOf(2); BigInteger largest = two.pow(57_885_161); BigInteger largestPrimeNumber = largest.
+      </div>
+      
+      <p><a class="read-more" href="http://bazlur.com/posts/2017-03-01-largest-known-prime-numbe/">Read more &rarr;</a></p>
+      
+    </article>
+  
+</div>
+
+  <footer>
+  <footer>
+  <div>
+    <p>
+    &copy; <a href="https://bazlur.com"> A N M Bazlur Rahman</a> 2012 - 2021 | <a href="https://github.com/rokon12">Github</a>
+    | <a href=" https://twitter.com/bazlur_rahman"> @bazlur_rahman</a>
+    </p>
+  </div>
+</footer>
+  
+  </footer>
+  </body>
+</html>
+

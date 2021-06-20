@@ -1,0 +1,184 @@
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="fb:pages" content="556530934551556" />
+
+    
+    <title>java - Bazlur&#39;s Stream of Thoughts</title>
+    <meta property="og:title" content="java - Bazlur&#39;s Stream of Thoughts">
+    
+
+    <meta name="twitter:card" content="summary">
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+
+    
+
+    
+    <link href="/categories/java/index.xml" rel="alternate" type="application/rss+xml" title="Bazlur&#39;s Stream of Thoughts" />
+    
+
+    <script src="/js/prism.js"></script>
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="stylesheet" href="/css/prism.css" />
+
+    <link rel="stylesheet"
+          href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/languages/java.min.js"
+            integrity="sha512-xEnylOTeZvxUCvtK9Lw3FjOgfCwsMEhUbx6Hant1lPgy+PcynqCm8XfqhpRos6XNaTxeMuT4QyrWyo3U1NijHg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+    
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-180587445-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+  </head>
+
+  <body class="line-numbers">
+
+  <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/about-me/">About me</a></li>
+      
+      <li><a href="/books/">Books</a></li>
+      
+      <li><a href="/categories/">Categories</a></li>
+      
+      <li><a href="/resume/">Resume</a></li>
+      
+      <li><a href="/live">LIVE</a></li>
+      
+      <li><a href="/index.xml">Subscribe</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<h1>java</h1>
+
+
+
+
+<h2>java</h2>
+<div id="content">
+  
+  
+      <article>
+      <header>
+        
+        <h2 class="list-title"><a href="http://bazlur.com/posts/2018-02-16-java-thread-programmin/">জাভা থ্রেড প্রোগ্রামিং</a></h2>
+        
+        <p class="list-post-date">
+          <time datetime="2018-02-16T14:53:57Z">
+            16 February, 2018 at 14:53 &#43;0000
+          </time>
+        </p>
+      </header>
+      <div>
+        আধুনিক কম্পিউটারের প্রোগ্রামগুলো বেশ বুদ্ধিদীপ্ত ও জটিল। এগুলো একই সঙ্গে একাধিক কাজ সম্পাদন করতে পারে। এই প্রোগ্রামগুলো লিখতে হলে আমাদের নিজেদেরও বুদ্ধির পরিচয় দিতে হয়। সাধারণত একটি বড়ো কাজ কতগুলো ছোটো ছোটো কাজের সমষ্টি হয়। এই ছোটো কাজগুলোকে আলাদাভাবে করে, এদেরকে জুড়ে দিয়েই সামগ্রিকভাবে বড়ো কাজটি সম্পন্ন করা হয়। এর মধ্যে কিছু কাজ একটি আরেকটির ওপর নির্ভরশীল হয়, অন্যগুলো স্বাধীনভাবে সম্পাদন করা যায়। আবার এই ছোটো ছোটো কাজগুলো কম্পিউটার ধারাবাহিকভাবে একটির পর আরেকটি সম্পাদন করতে পারে। তবে যে কাজগুলো স্বাধীন সেগুলোকে যদি একই সঙ্গে করা যায়, তাহলে অল্প সময়ে আমরা একাধিক কাজ করে ফেলতে পারি। এই একই সঙ্গে একাধিক কাজ কীভাবে করা যায়, তা নির্ভর করে আমাদের প্রোগ্রামটি আমরা কীভাবে লিখছি তার ওপর। জাভা প্রোগ্রামিং ল্যাংগুয়েজ ব্যবহার করে একাধিক ছোটো কাজ খুব সুন্দর ও বুদ্ধিদীপ্তভাবে সাজিয়ে প্রোগ্রাম লেখার উপায় হলো থ্রেডিং। এই সাজানোর প্রক্রিয়াটি শিক্ষানবিশদের কাছে অনেক সময়ই কঠিন মনে হয়। এই কঠিন মনে হওয়াটা যুক্তিসংগত। আমরা মানুষ, একই সময়ে একাধিক কাজে মনোযোগ দিতে পারি না। আমাদের চিন্তাভাবনার প্রক্রিয়াও ধারাবাহিক। এই কঠিন বিষয়টি অনুশীলনের মাধ্যমে আয়ত্তে আনতে পারলে কাজের অনেক সুবিধা হয়। প্রোগ্রামিংয়ের ক্ষেত্রেও পরপর ধারবাহিক প্রোগ্রাম লেখা বা চালানো সহজ হলেও একই সময়ে প্রোগ্রামের একাধিক অংশ পাশাপাশি একই সঙ্গে চালানো এবং এদের মধ্য সমন্বয় করা খানিকটা কঠিন। তবে কোনো কাজ কঠিন হলেই কি আর আমরা থেমে থাকি?
+      </div>
+      
+      <p><a class="read-more" href="http://bazlur.com/posts/2018-02-16-java-thread-programmin/">Read more &rarr;</a></p>
+      
+    </article>
+  
+  
+  
+      <article>
+      <header>
+        
+        <h2 class="list-title"><a href="http://bazlur.com/posts/2018-01-29-%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%B6%E0%A7%8D%E0%A6%A8-checked-exception-%E0%A6%8F%E0%A6%AC%E0%A6%82-unchecked-exception-%E0%A6%8F%E0%A6%B0-%E0%A6%AE%E0%A6%A7%E0%A7%8D%E0%A6%AF%E0%A7%87-/">প্রশ্ন: Checked Exception এবং Unchecked Exception এর মধ্যে পার্থক্য কী?</a></h2>
+        
+        <p class="list-post-date">
+          <time datetime="2018-01-29T00:01:22Z">
+            29 January, 2018 at 00:01 &#43;0000
+          </time>
+        </p>
+      </header>
+      <div>
+        প্রোগ্রাম লিখতে গেলে নানা রকম সমস্যা হয়। কিছু সমস্যা সিস্টেম থেকে হতে পারে, আবার কিছু সসমস্যা প্রোগ্রাম লেখার সময় ভুলের জন্য হতে পারে। যেমন- আমরা যদি ডেটাবেজই সম্পর্কিত কোনো কোড লিখি, কোনো কারণে ইন্টারনেট কানেকাশন বন্ধ হয়ে যেতে পারে, এবং আমরা ডেটাবেইজে কানেক্ট করতে না পারি। আবার কোনো সিকুয়েল কোডে যে বিশেষ আর্গুমেন্টটি পাস করার কথা ছিল সেটি না করলে সিকুয়েলটি ঠিকমতো এক্সিকিউট হবে না এমন হতে পারে। এরকম পরিস্থিতিতে আমাদের অ্যাপ্লিকেশন কোড একধরেণের এক্সেপশন থ্রু করে জানান দেয় যে কোনো রকম সমস্যা হয়েছে।
+      </div>
+      
+      <p><a class="read-more" href="http://bazlur.com/posts/2018-01-29-%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%B6%E0%A7%8D%E0%A6%A8-checked-exception-%E0%A6%8F%E0%A6%AC%E0%A6%82-unchecked-exception-%E0%A6%8F%E0%A6%B0-%E0%A6%AE%E0%A6%A7%E0%A7%8D%E0%A6%AF%E0%A7%87-/">Read more &rarr;</a></p>
+      
+    </article>
+  
+  
+  
+      <article>
+      <header>
+        
+        <h2 class="list-title"><a href="http://bazlur.com/posts/2018-01-29-%E0%A6%A1%E0%A6%BF%E0%A6%AE%E0%A6%A8-%E0%A6%A5%E0%A7%8D%E0%A6%B0%E0%A7%87%E0%A6%A1-%E0%A6%95%E0%A7%80what-is-daemon-thread-in-jav/">ডিমন থ্রেড কী(What is daemon thread in java)?</a></h2>
+        
+        <p class="list-post-date">
+          <time datetime="2018-01-28T22:10:54Z">
+            28 January, 2018 at 22:10 &#43;0000
+          </time>
+        </p>
+      </header>
+      <div>
+        জাভা ভাচুয়াল মেশিন চালু হওয়ার পর কতগুলাে থ্রেড তৈরি হয়। এর মধ্যে মেইন থ্রেড আমাদের কোডগুলো এক্সিকিউট করে। মেইন থ্রেড থেকে আমরা আরও একাধিক থ্রেড তৈরি করতে পারি। যতক্ষণ পর্যন্ত এই থ্রেডগুলো চলতে থাকে, ততক্ষন পর্যন্ত জাভা ভার্চুয়াল মেশিন চলতে থাকে। তবে অনেক সময় কোনো প্রোগ্রামের একটি প্রধান থ্রেডের সঙ্গে আরও কতগুলো থ্রেড তৈরি করতে হয়, যেগুলো বিভিন্ন সহায়ক কাজ করতে থাকে, কিন্তু প্রধান থ্রেডটি বন্ধ হয়ে গেলে এই সহায়ক থ্রেডগুলো প্রয়োজন নেই। এই সহায়ক থ্রেডগুলোকে ডিমন থ্রেড হিসেবে তৈরি করা যায়। জাভা দুই ধরণের থ্রেড তৈরি করা যায়। ১.
+      </div>
+      
+      <p><a class="read-more" href="http://bazlur.com/posts/2018-01-29-%E0%A6%A1%E0%A6%BF%E0%A6%AE%E0%A6%A8-%E0%A6%A5%E0%A7%8D%E0%A6%B0%E0%A7%87%E0%A6%A1-%E0%A6%95%E0%A7%80what-is-daemon-thread-in-jav/">Read more &rarr;</a></p>
+      
+    </article>
+  
+</div>
+
+  <footer>
+  <footer>
+  <div>
+    <p>
+    &copy; <a href="https://bazlur.com"> A N M Bazlur Rahman</a> 2012 - 2021 | <a href="https://github.com/rokon12">Github</a>
+    | <a href=" https://twitter.com/bazlur_rahman"> @bazlur_rahman</a>
+    </p>
+  </div>
+</footer>
+  
+  </footer>
+  </body>
+</html>
+

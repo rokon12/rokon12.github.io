@@ -1,0 +1,185 @@
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="fb:pages" content="556530934551556" />
+
+    
+    <title>100DaysOfJava - Bazlur&#39;s Stream of Thoughts</title>
+    <meta property="og:title" content="100DaysOfJava - Bazlur&#39;s Stream of Thoughts">
+    
+
+    <meta name="twitter:card" content="summary">
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+
+    
+
+    
+    <link href="/categories/100daysofjava/index.xml" rel="alternate" type="application/rss+xml" title="Bazlur&#39;s Stream of Thoughts" />
+    
+
+    <script src="/js/prism.js"></script>
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="stylesheet" href="/css/prism.css" />
+
+    <link rel="stylesheet"
+          href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/languages/java.min.js"
+            integrity="sha512-xEnylOTeZvxUCvtK9Lw3FjOgfCwsMEhUbx6Hant1lPgy+PcynqCm8XfqhpRos6XNaTxeMuT4QyrWyo3U1NijHg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+    
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-180587445-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+  </head>
+
+  <body class="line-numbers">
+
+  <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/about-me/">About me</a></li>
+      
+      <li><a href="/books/">Books</a></li>
+      
+      <li><a href="/categories/">Categories</a></li>
+      
+      <li><a href="/resume/">Resume</a></li>
+      
+      <li><a href="/live">LIVE</a></li>
+      
+      <li><a href="/index.xml">Subscribe</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<h1>100DaysOfJava</h1>
+
+
+
+
+<h2>100DaysOfJava</h2>
+<div id="content">
+  
+  
+      <article>
+      <header>
+        
+        <h2 class="list-title"><a href="http://bazlur.com/posts/2014-09-22-%E0%A6%9C%E0%A6%BE%E0%A6%AD%E0%A6%BE-%E0%A6%95%E0%A7%80%E0%A6%AD%E0%A6%BE%E0%A6%AC%E0%A7%87-%E0%A6%95%E0%A6%BE%E0%A6%9C-%E0%A6%95%E0%A6%B0%E0%A7%87-%E0%A6%8F%E0%A6%AC%E0%A6%82-%E0%A6%95/">জাভা কীভাবে কাজ করে এবং কীভাবে ভাল পারফর্ম করে</a></h2>
+        
+        <p class="list-post-date">
+          <time datetime="2014-09-22T17:09:00Z">
+            22 September, 2014 at 17:09 &#43;0000
+          </time>
+        </p>
+      </header>
+      <div>
+        জাভা কোড প্রথমে বাইটকোডে কম্পাইলড হয়, তারপর সেটিকে জাভা ভার্চুয়াল মেশিন এক্সিকিউট করে। বাইটকোড হচ্ছে এক ধরনের ইন্টারমিডিয়েড ল্যাংগুয়েজ যা কিনা ঠিক মানুষের পাঠ উপযোগী নয়, আবার মেশিনের জন্য ও নয়। এটি শুধুমাত্র জাভা ভার্চুয়াল মেশিন (JVM)পড়তে পারে। বাইটকোডকে এক্সিকিউট করার জন্য জাভা ভার্চুয়াল মেশিন জাস্ট ইন টাইম (JIT) কম্পাইলার ব্যবহার হরে। JIT বাইটকোড কে সরাসরি ইন্টারপ্রেট করে। এটি রানটাইম-এ বাইটকোড কে ইন্টারপ্রেট করে মেশিন কোড-এ রূপান্তরিত করে যা কিনা সিপিইউ রান করে। এখানে একটি ইন্টারেস্টিং প্রশ্ন হতে পারে, জাভা কি তাহলে ইন্টারেপ্রেটেট ল্যাংগুয়েজ নাকি কম্পাইল্ড ল্যাংগুয়েজ?
+      </div>
+      
+      <p><a class="read-more" href="http://bazlur.com/posts/2014-09-22-%E0%A6%9C%E0%A6%BE%E0%A6%AD%E0%A6%BE-%E0%A6%95%E0%A7%80%E0%A6%AD%E0%A6%BE%E0%A6%AC%E0%A7%87-%E0%A6%95%E0%A6%BE%E0%A6%9C-%E0%A6%95%E0%A6%B0%E0%A7%87-%E0%A6%8F%E0%A6%AC%E0%A6%82-%E0%A6%95/">Read more &rarr;</a></p>
+      
+    </article>
+  
+  
+  
+      <article>
+      <header>
+        
+        <h2 class="list-title"><a href="http://bazlur.com/posts/2014-03-25-%E0%A6%B8%E0%A7%8D%E0%A6%AC%E0%A6%BE%E0%A6%A7%E0%A7%80%E0%A6%A8%E0%A6%A4%E0%A6%BE-%E0%A6%A6%E0%A6%BF%E0%A6%AC%E0%A6%B8%E0%A7%87%E0%A6%B0-%E0%A6%B6%E0%A7%81%E0%A6%AD%E0%A7%87%E0%A6%9A%E0%A7%8D/">স্বাধীনতা দিবসের শুভেচ্ছা</a></h2>
+        
+        <p class="list-post-date">
+          <time datetime="2014-03-25T18:45:00Z">
+            25 March, 2014 at 18:45 &#43;0000
+          </time>
+        </p>
+      </header>
+      <div>
+        যারা জন্ম থেকেই স্বাধীন তাদের কাছে স্বাধীনতার গুরুত্ব খুব সহজ একটা ব্যাপার। সেটা খুব বেশি করে উপলব্ধি করার মতো অবস্থা মনে হয় স্বাধীনতা উত্তর অর্থাৎ আমাদের প্রজন্মের খুব বেশি হয় নি। কারণ পরিবেশ, সময়ের ব্যাপ্তিতে একটা খুব গুরুত্বপূর্ণ ব্যাপারও হালকা হয়ে আসে যদি সেটা নিয়ে অনুশীলনের ঘাটতি থাকে। আমাদের অনুশীলনের যে ঘাটতি রয়ে গেছে সেটা বোধহয় কাউকে আঙ্গুল দিয়ে দেখিয়ে দেওয়ার কিছু নেই। সবাই বুঝতে পারে। আমরা যারা নিজেদের স্বাধীন এবং আধুনিক মানুষ মনে করি, তাদের অনুশীলন গুলো যে দায়িত্বপূর্ণ হবে সেটাই স্বাভাবিক হওয়ার কথা ছিল। দেশ ব্যাপারটি উপলব্ধির ব্যাপার। আমরা যেমন প্রতিদিন নিয়মিত গোসল করে নিজেদের পরিষ্কার রাখি, এই পরিষ্কার রাখার প্রক্রিয়াটা কিন্তু একটা কাজ, সেটা নিজের জন্যে করি, আলস্য কিংবা অন্য কোন অজুহাত এসে বাধা দেয় না। ঠিক তেমনি দেশকে নিজের অংশ মনে করে নিলে মনে হয় অজুহাত দেওয়ার অংশগুলো কমে যাবে। দেশ আমাদের পরিচর্যা (Serve) করবে না, বরং আমরা দেশকে পরিচর্যা করবো, এমনটাই হওয়ার কথা। কিন্তু তারপরেও আমরা প্রতিনিয়ত নানা রকম অজুহাত বা যুক্তি তৈরি করে গালা গালি করি, এই দেশ আমাদের কি দিয়েছে বা দেয়নি তার হিসেব-নিকেষে বসে যাই, তুচ্ছ তাচ্ছিল্য করে থাকি। হিসেবটা বোধহয় উল্টাটা হওয়াই উচিৎ ছিল।
+      </div>
+      
+      <p><a class="read-more" href="http://bazlur.com/posts/2014-03-25-%E0%A6%B8%E0%A7%8D%E0%A6%AC%E0%A6%BE%E0%A6%A7%E0%A7%80%E0%A6%A8%E0%A6%A4%E0%A6%BE-%E0%A6%A6%E0%A6%BF%E0%A6%AC%E0%A6%B8%E0%A7%87%E0%A6%B0-%E0%A6%B6%E0%A7%81%E0%A6%AD%E0%A7%87%E0%A6%9A%E0%A7%8D/">Read more &rarr;</a></p>
+      
+    </article>
+  
+  
+  
+      <article>
+      <header>
+        
+        <h2 class="list-title"><a href="http://bazlur.com/posts/2013-12-09-a-great-place-to-learn-and-mingl/">A great place to learn and mingle</a></h2>
+        
+        <p class="list-post-date">
+          <time datetime="2013-12-09T03:30:00Z">
+            9 December, 2013 at 03:30 &#43;0000
+          </time>
+        </p>
+      </header>
+      <div>
+        The Java User Group Bangladesh (JUGBD) is now formed and successfully finished its 2nd meetup in last week. We are doing great, it’s not an exaggeration.
+For those who doesn’t know what is JUG, let me brief a little. Java User Groups (JUGs) are basically a group of enthusiastic people who loves java and develop product and service using Java related technology and love to share their knowledge with others.
+      </div>
+      
+      <p><a class="read-more" href="http://bazlur.com/posts/2013-12-09-a-great-place-to-learn-and-mingl/">Read more &rarr;</a></p>
+      
+    </article>
+  
+</div>
+
+  <footer>
+  <footer>
+  <div>
+    <p>
+    &copy; <a href="https://bazlur.com"> A N M Bazlur Rahman</a> 2012 - 2021 | <a href="https://github.com/rokon12">Github</a>
+    | <a href=" https://twitter.com/bazlur_rahman"> @bazlur_rahman</a>
+    </p>
+  </div>
+</footer>
+  
+  </footer>
+  </body>
+</html>
+

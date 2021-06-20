@@ -1,0 +1,188 @@
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="fb:pages" content="556530934551556" />
+
+    
+    <title>Bangladesh - Bazlur&#39;s Stream of Thoughts</title>
+    <meta property="og:title" content="Bangladesh - Bazlur&#39;s Stream of Thoughts">
+    
+
+    <meta name="twitter:card" content="summary">
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+
+    
+
+    
+    <link href="/categories/bangladesh/index.xml" rel="alternate" type="application/rss+xml" title="Bazlur&#39;s Stream of Thoughts" />
+    
+
+    <script src="/js/prism.js"></script>
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="stylesheet" href="/css/prism.css" />
+
+    <link rel="stylesheet"
+          href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/languages/java.min.js"
+            integrity="sha512-xEnylOTeZvxUCvtK9Lw3FjOgfCwsMEhUbx6Hant1lPgy+PcynqCm8XfqhpRos6XNaTxeMuT4QyrWyo3U1NijHg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+    
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-180587445-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+  </head>
+
+  <body class="line-numbers">
+
+  <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/about-me/">About me</a></li>
+      
+      <li><a href="/books/">Books</a></li>
+      
+      <li><a href="/categories/">Categories</a></li>
+      
+      <li><a href="/resume/">Resume</a></li>
+      
+      <li><a href="/live">LIVE</a></li>
+      
+      <li><a href="/index.xml">Subscribe</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<h1>Bangladesh</h1>
+
+
+
+
+<h2>Bangladesh</h2>
+<div id="content">
+  
+  
+      <article>
+      <header>
+        
+        <h2 class="list-title"><a href="http://bazlur.com/posts/2017-03-23-%E0%A6%9C%E0%A6%BE%E0%A6%AD%E0%A6%BE-%E0%A6%A5%E0%A7%8D%E0%A6%B0%E0%A7%87%E0%A6%A1-%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A7%8B%E0%A6%97%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%AE%E0%A6%BF%E0%A6%82/">জাভা থ্রেড প্রোগ্রামিংঃ পর্ব- এক (Java threading: part -1 )</a></h2>
+        
+        <p class="list-post-date">
+          <time datetime="2017-03-23T14:22:00Z">
+            23 March, 2017 at 14:22 &#43;0000
+          </time>
+        </p>
+      </header>
+      <div>
+        বর্তমানে সব ধরণের কম্পিউটারই একই সঙ্গে একাধিক কাজ করে থাকে অর্থাৎ অনেকগুলো প্রোগ্রাম রান করে। প্রত্যেকটি আলাদা আলাদা প্রোগ্রামের জন্য অপারেটিং সিস্টেম একটি করে প্রসেস রান করে। প্রসেসগুলো একে অপরের থেকে স্বাধীন এবং ভিন্ন হয়। এগুলোর নিজস্ব এক্সিকিউশন এনভাইরনমেন্ট ও মেমোরি স্পেস থাকে। প্রসেসগুলো একইসঙ্গে পাশাপাশি চলতে থাকে। উদাহরণসরূপ- আমরা একইসঙ্গে ইউটিউবে গান শুনতে পারি ও ওয়ার্ড প্রসেসরে ডকুমেন্ট টাইপ করতে পারি।
+তবে কখনো কখনো কোনো একটি প্রোগ্রামের বিভিন্ন অংশ পাশাপাশি চলার প্রয়োজন হতে পারে। সহজভাবে বোঝার জন্য ধরা ওয়ার্ডপ্রসেসরের দুটি ফাংশনালিটি কথা চিন্তা করা যাক- ইউজার যখন কিবোর্ড টাইপ করে সেগুলো ইনপুট হিসেবে নেওয়া ও বানান দেখা। এটি একটি নির্দিষ্ট প্রোগ্রামের দুটি অংশ। এগুলো পাশাপাশি চলে। অর্থাৎ আমরা যখন টাইপ করি, সঙ্গে সঙ্গে এগুলোর বানান ঠিক আছে কিনা তা দেখার প্রক্রিয়াটিও চলতে থাকে। একই প্রোগ্রামের একাধিক কাজ পাশাপাশি করার জন্য থ্রেড প্রয়োজন হয়। থ্রেডকে অনেকসময় লাইটওয়েট প্রসেসও বলা হয়। অর্থাৎ এগুলো একটি প্রসেসের মধ্যে ছোট ছোট প্রসেস যাদের নিজস্ব এক্সিকিউশন এনভাইরনমেন্ট থাকে। এক্সিকিউশন এনভাইরনমেন্ট অর্থ হলো যেখানে নির্দিষ্ট কোড এক্সিকিউট হয়। একটি প্রোগ্রামে অনেকগুলো থ্রেড কাজ করলে তাকে মাল্টিথ্রেডেড প্রোগ্রাম বলা হয়।
+      </div>
+      
+      <p><a class="read-more" href="http://bazlur.com/posts/2017-03-23-%E0%A6%9C%E0%A6%BE%E0%A6%AD%E0%A6%BE-%E0%A6%A5%E0%A7%8D%E0%A6%B0%E0%A7%87%E0%A6%A1-%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A7%8B%E0%A6%97%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%AE%E0%A6%BF%E0%A6%82/">Read more &rarr;</a></p>
+      
+    </article>
+  
+  
+  
+      <article>
+      <header>
+        
+        <h2 class="list-title"><a href="http://bazlur.com/posts/2017-03-22-%E0%A6%9C%E0%A6%BE%E0%A6%AD%E0%A6%BE%E0%A6%A4%E0%A7%87-%E0%A6%95%E0%A7%80%E0%A6%AD%E0%A6%BE%E0%A6%AC%E0%A7%87-%E0%A6%AB%E0%A6%BE%E0%A6%87%E0%A6%B2-%E0%A6%95%E0%A6%AA%E0%A6%BF-%E0%A6%95/">জাভাতে কীভাবে ফাইল কপি করা যায়(File Copying in Java)</a></h2>
+        
+        <p class="list-post-date">
+          <time datetime="2017-03-22T14:08:00Z">
+            22 March, 2017 at 14:08 &#43;0000
+          </time>
+        </p>
+      </header>
+      <div>
+        জাভাতে বিভিন্নভাবে ফাইল কপি করা যায়।
+প্রথমে ইনপুট স্ট্রিম ব্যবহার করে ফাইল কপি করতে পারি।
+copy() মেথডটিতে দুটি প্যারামিটার রয়েছে। প্রথমটিতে ফাইলের সোর্সটি স্ট্রিং আকারে দিতে হবে, অর্থাৎ যে ফাইলটি কপি করা হবে তার পাথ। দ্বিতীয়টি যেখানে ফাইলটি কপি করা হবে। এটি ডেস্টিনেশন ফাইল। এই ফাইলটি সিস্টেমে না থাকলে নতুন করে তৈরি হবে। আর যদি ফাইলটি আগে থেকেই তৈরি করা থাকে, তাহলে এর কন্টেন্ট রিপ্লেস হবে।
+এতে প্রথমে একটি ইনপুট স্ট্রিম ব্যবহার করা হয়েছে যা দিয়ে ফাইল থেকে ডেটা পড়া হয়, এবং একটি আউটপুট স্ট্রিম ব্যবহার করা হয়েছে যা দিয়ে ডেস্টিনেশন ফাইলে রাইট করা হয়।
+      </div>
+      
+      <p><a class="read-more" href="http://bazlur.com/posts/2017-03-22-%E0%A6%9C%E0%A6%BE%E0%A6%AD%E0%A6%BE%E0%A6%A4%E0%A7%87-%E0%A6%95%E0%A7%80%E0%A6%AD%E0%A6%BE%E0%A6%AC%E0%A7%87-%E0%A6%AB%E0%A6%BE%E0%A6%87%E0%A6%B2-%E0%A6%95%E0%A6%AA%E0%A6%BF-%E0%A6%95/">Read more &rarr;</a></p>
+      
+    </article>
+  
+  
+  
+      <article>
+      <header>
+        
+        <h2 class="list-title"><a href="http://bazlur.com/posts/2017-03-16-%E0%A6%B8%E0%A6%AB%E0%A6%9F%E0%A6%93%E0%A6%AF%E0%A6%BC%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B0-%E0%A6%A1%E0%A7%87%E0%A6%AD%E0%A7%87%E0%A6%B2%E0%A6%AA%E0%A6%BE%E0%A6%B0-%E0%A6%8F%E0%A6%AC/">সফটওয়্যার ডেভেলপার এবং সফটওয়্যার ইঞ্জিনিয়ারের মধ্যে পার্থক্য কী (What is the difference between software developer and software engineer)</a></h2>
+        
+        <p class="list-post-date">
+          <time datetime="2017-03-16T20:58:00Z">
+            16 March, 2017 at 20:58 &#43;0000
+          </time>
+        </p>
+      </header>
+      <div>
+        ইঞ্জিনিয়ারিংয়ের সঙ্গে অনেকগুলো প্রিন্সিপাল ও ডিসিপ্লিন জড়িত। এটি যেকোনো ইঞ্জিনিয়ারিংয়ের ক্ষেত্রেই প্রযোজ্য। একজন ইঞ্জিনিয়ারের কোনো বিষয়ের উপর তাত্ত্বিক ও ব্যবহারিক জ্ঞান থাকে, যা ব্যবহার করো কেনো বিশেষ জিনিস তৈরি করে থাকে। একজন সিভিল ইঞ্জিনিয়ারিংয়ের ক্ষেত্রে ব্রিজ তৈরি একটি উদাহরণ হতে পারে। ইঞ্জিনিয়ার যখন কোনো একটি প্রোডাক্ট তৈরি করে, সে তার প্রিন্সিপাল ও ডিসিপ্লিনগুলো মেনেই প্রোডাক্টটি তৈরি করে যাতে করে এটি টেস্টেবল হয়(ব্রিজের ক্ষেত্রে এর স্টিল, কনক্রিটকে টেস্ট করা যাবে, টেস্টের ফলাফল সবসময় একই হবে), মেইনটেবেল হয়( ব্রিজটি অবশ্যই একটি নির্দিষ্ট সময় ধরে চলবে, তা ১০০ বছর হতে পারে। হঠাৎ করে ভেঙ্গে পড়ে যাবে না। একে সহজেই পরিচর্চা করা যাবে, এবং ব্রিজের সঙ্গে যাতে করে পরবর্তীতে নতুন কিছু যুক্ত করা যায় সেই সুযোগ রাখতে হবে), ইন্টারনাল ও এক্সটারনাল ইন্টিগ্রিটি রক্ষা হবে (ব্রিজটি হঠাৎ করে মাঝ বরাবর ভেঙ্গে পরবে না, বা এর প্রত্যেকটি আলাদা আলাদা উপাদানগুলো একটার সংঙ্গে অন্যটি সঠিকভাবে লেগে থাকবে ইত্যাদি)। একজন ইঞ্জিনিয়ারের অবশ্যই ইথিকস থাকবে। কেও এসে বললেই একটা ব্রিজ তৈরি করবে না যা কিনা হঠাৎ করে ভেঙ্গে গিয়ে মানুষের মৃত্যুর কারণ হয়ে দাড়াবে। অর্থাৎ একজন ইঞ্জিনিয়ার পুরো পক্রিয়াটিকে তার তাত্ত্বিক ও ব্যবহারিক জ্ঞান ব্যবহার করে সঠিকভাবে কোনো কিছু তৈরি করবে। এই তৈরির প্রক্রিয়ার সঙ্গে অনেক ধরণের মানুষ যুক্ত থাকতে পারে, তাদের সঙ্গে কীভাবে যোগাযোগ করতে হবে এবং পুরো প্রক্রিয়াটি সুন্দরভাবে পরিচালনা করার দক্ষতাও থাকবে একজন ইঞ্জিনিয়ারের যাতে প্রয়োজনের অতিরক্ত রিসোর্স ব্যবহার না হয়, প্রক্রিয়াটি কস্ট ইফেক্টিভ হয় এবং এন্ড প্রডাক্ট ব্যবহারযোগ্য হয়।
+      </div>
+      
+      <p><a class="read-more" href="http://bazlur.com/posts/2017-03-16-%E0%A6%B8%E0%A6%AB%E0%A6%9F%E0%A6%93%E0%A6%AF%E0%A6%BC%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B0-%E0%A6%A1%E0%A7%87%E0%A6%AD%E0%A7%87%E0%A6%B2%E0%A6%AA%E0%A6%BE%E0%A6%B0-%E0%A6%8F%E0%A6%AC/">Read more &rarr;</a></p>
+      
+    </article>
+  
+</div>
+
+  <footer>
+  <footer>
+  <div>
+    <p>
+    &copy; <a href="https://bazlur.com"> A N M Bazlur Rahman</a> 2012 - 2021 | <a href="https://github.com/rokon12">Github</a>
+    | <a href=" https://twitter.com/bazlur_rahman"> @bazlur_rahman</a>
+    </p>
+  </div>
+</footer>
+  
+  </footer>
+  </body>
+</html>
+

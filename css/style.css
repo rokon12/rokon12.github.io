@@ -70,3 +70,137 @@ a.post-tag:hover {
   background-color: #7b9cb0;
   color: #fff;
 }
+
+aside#social {
+  border-top: 2px solid #3f3f3f;
+  display: flex;
+  height: 48px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+div#social-icons {
+  align-items: center;
+  display: flex;
+  flex-basis: 414px;
+  flex-wrap: wrap;
+  height: 24px;
+  justify-content: space-between;
+  margin-top: 20px;
+  max-width: 414px;
+  min-width: 288px;
+}
+
+.icon-24x24 {
+  height: 24px;
+  width: 24px;
+}
+
+.nav {
+  list-style-type: none;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+div#page-nav,
+#pagination {
+  font-family: "Fira Sans", Helvetica, Arial, sans-serif;
+  font-size: smaller;
+  line-height: 1em;
+  margin: 1.5em 0 2.5em 0;
+  padding: 0;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+#page-nav {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
+
+div.page-nav-item,
+div.page-nav-spacer {
+  flex: 1 1 auto;
+  margin: 0;
+  padding: 0;
+}
+
+div.page-nav-item > a {
+  color: #00416a;
+  display: block;
+  text-decoration: none;
+  width: 100%;
+}
+
+div.page-nav-item > a:hover {
+  background-color: #00416a;
+  color: #dee5e9;
+}
+
+div#pagination {
+  display: inline-block;
+  margin: 3.5em 0;
+}
+
+div.pagination-item:hover {
+  background-color: #00416a;
+}
+
+div.pagination-item,
+div.pagination-item-spacer {
+  display: inline-block;
+  float: left;
+  margin: 0;
+  padding: 0;
+  width: 20%;
+}
+
+div.pagination-item > a {
+  color: #00416a;
+  display: block;
+  text-decoration: none;
+}
+
+div.pagination-item > a:hover {
+  color: #dee5e9;
+}
+
+.archive-result {
+  display: none
+}
+
+.archive .archive-title {
+  color: #5d686f
+}
+
+.archive .archive-posts {
+  list-style: none
+}
+
+.archive .archive-posts .archive-post .archive-post-title {
+  margin-left: 10px;
+  color: #5d686f
+}
+
+.archive .archive-posts .archive-post .archive-post-date {
+  color: #9eabb3
+}
+
+.archive .archive-posts .archive-post::before {
+  font-family: FontAwesome;
+  content: '\f0da';
+  font-size: 1.3rem
+}
+
+.boxes, .boxes .box:nth-child(n+2) {
+  margin-top: 20px
+}
+
+.box {
+  border-bottom: 1px solid #eef2f8
+}
