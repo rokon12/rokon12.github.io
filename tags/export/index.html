@@ -44,6 +44,7 @@
     <script src="/js/prism.js"></script>
 
     <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/icofont.min.css" />
     <link rel="stylesheet" href="/css/fonts.css" />
     <link rel="stylesheet" href="/css/prism.css" />
 
@@ -79,26 +80,36 @@ if (!doNotTrack) {
 
   <body class="line-numbers">
 
-  <nav>
-    <ul class="menu">
-      
-      <li><a href="/">Home</a></li>
-      
-      <li><a href="/archives">Archives</a></li>
-      
-      <li><a href="/about-me/">About me</a></li>
-      
-      <li><a href="/books/">Books</a></li>
-      
-      <li><a href="/categories/">Categories</a></li>
-      
-      <li><a href="/resume/">Resume</a></li>
-      
-      <li><a href="/index.xml">Subscribe</a></li>
-      
-    </ul>
-    <hr/>
-    </nav>
+  <div id="head">
+    <div class="container">
+      <header class="masthead clearfix">
+        <a href="/"></a>
+        <div class="site-info">
+          <h1 class="site-name"> <a href="/"> Bazlur&#39;s Stream of Thoughts</a></h1>
+          <p class="site-description">This blog is meant to be a vehicle for airing my interest, feelings, thoughts, and opinion. </p>
+        </div>
+      </header>
+    </div>
+  </div>
+  <div id="header-menu" class="">
+    <div class="menu">
+      <ul style="margin: 0">
+        
+        <li> <a href="/">Home</a></li>
+        
+        <li> <a href="/archives">Archives</a></li>
+        
+        <li> <a href="/books/">Books</a></li>
+        
+        <li> <a href="/categories/">Categories</a></li>
+        
+        <li> <a href="/resume/">Resume</a></li>
+        
+        <li> <a href="/index.xml">Subscribe</a></li>
+        
+      </ul>
+    </div>
+  </div>
 
 
 <h1>export</h1>
@@ -111,31 +122,36 @@ if (!doNotTrack) {
 
 <div id="content">
     
-        <article>
-      <header>
+    
+
+
+
+
+<article class="post">
+    <div class="post-title">
         
         <h2 class="list-title"><a href="http://bazlur.com/2021/06/how-to-convert-multiple-images-into-a-single-pdf-file/">How to convert multiple images into a single pdf file</a></h2>
         
-        <p class="list-post-date">
-          <time datetime="2021-06-10T01:38:10-04:00">
-            10 June, 2021 at 01:38 EDT
-          </time>
-        </p>
-      </header>
-      <div>
-        I had some images that I needed had to export as pdf. I looked in the app store to find a free tool that makes it possible for me. However, after a quick search, I was not satisfied with the result. The Apps that support such things come at a hefty price tag. Then it hits me. Why not I write a few lines of java code and export pdf with ITextPdf library.
-      </div>
-      
-      <p><a class="read-more" href="http://bazlur.com/2021/06/how-to-convert-multiple-images-into-a-single-pdf-file/">Read more &rarr;</a></p>
-      
-    </article>
+        <span class="list-post-date post-info">
+             by <a href="/about-me/" class="p-author h-card"
+                                   rel="author">A N M Bazlur Rahman</a>
+            <time datetime=" 2021-06-10">
+             on 10 June, 2021 at 01:38 EDT
+            </time>
+
+        </span>
+        <span>
+            <div id="tags"><a class="post-tag tag-small" href="/tags/java" rel="tag"> java </a> &nbsp; <a class="post-tag tag-small" href="/tags/coding" rel="tag"> coding </a> &nbsp; <a class="post-tag tag-small" href="/tags/100daysofjava" rel="tag"> 100DaysOfJava </a> &nbsp; <a class="post-tag tag-small" href="/tags/image" rel="tag"> image </a> &nbsp; <a class="post-tag tag-small" href="/tags/export" rel="tag"> export </a> &nbsp; <a class="post-tag tag-small" href="/tags/pdf" rel="tag"> pdf </a> &nbsp; <a class="post-tag tag-small" href="/tags/itext-pdf" rel="tag"> itext pdf </a> &nbsp; <a class="post-tag tag-small" href="/tags/100daysofcode" rel="tag"> 100DaysOfCode </a></div>
+        </span>
+    </div>
+</article>
     
 </div>
   <footer>
   <footer>
-  <div>
+  <div  class="wrapper-footer">
     <p>
-    &copy; <a href="https://bazlur.com"> A N M Bazlur Rahman</a> 2012 - 2021 | <a href="https://github.com/rokon12">Github</a>
+      &copy; <a href="https://bazlur.com"> A N M Bazlur Rahman</a> <span id="footer-copyright">2012 - 2021 </span>  | <a href="https://github.com/rokon12">Github</a>
     | <a href=" https://twitter.com/bazlur_rahman"> @bazlur_rahman</a>
     </p>
   </div>

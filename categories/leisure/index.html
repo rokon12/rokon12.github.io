@@ -44,6 +44,7 @@
     <script src="/js/prism.js"></script>
 
     <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/icofont.min.css" />
     <link rel="stylesheet" href="/css/fonts.css" />
     <link rel="stylesheet" href="/css/prism.css" />
 
@@ -79,26 +80,36 @@ if (!doNotTrack) {
 
   <body class="line-numbers">
 
-  <nav>
-    <ul class="menu">
-      
-      <li><a href="/">Home</a></li>
-      
-      <li><a href="/archives">Archives</a></li>
-      
-      <li><a href="/about-me/">About me</a></li>
-      
-      <li><a href="/books/">Books</a></li>
-      
-      <li><a href="/categories/">Categories</a></li>
-      
-      <li><a href="/resume/">Resume</a></li>
-      
-      <li><a href="/index.xml">Subscribe</a></li>
-      
-    </ul>
-    <hr/>
-    </nav>
+  <div id="head">
+    <div class="container">
+      <header class="masthead clearfix">
+        <a href="/"></a>
+        <div class="site-info">
+          <h1 class="site-name"> <a href="/"> Bazlur&#39;s Stream of Thoughts</a></h1>
+          <p class="site-description">This blog is meant to be a vehicle for airing my interest, feelings, thoughts, and opinion. </p>
+        </div>
+      </header>
+    </div>
+  </div>
+  <div id="header-menu" class="">
+    <div class="menu">
+      <ul style="margin: 0">
+        
+        <li> <a href="/">Home</a></li>
+        
+        <li> <a href="/archives">Archives</a></li>
+        
+        <li> <a href="/books/">Books</a></li>
+        
+        <li> <a href="/categories/">Categories</a></li>
+        
+        <li> <a href="/resume/">Resume</a></li>
+        
+        <li> <a href="/index.xml">Subscribe</a></li>
+        
+      </ul>
+    </div>
+  </div>
 <h2>
   <span class="list-heading-type">categories:</span>
   <span class="list-heading-tag">Leisure</span>
@@ -106,32 +117,36 @@ if (!doNotTrack) {
 
 <div id="content">
   
-      <article>
-      <header>
+  
+
+
+
+
+<article class="post">
+    <div class="post-title">
         
         <h2 class="list-title"><a href="http://bazlur.com/posts/2015-10-18-%E0%A6%85%E0%A6%AC%E0%A6%B8%E0%A6%B0-%E0%A6%A8%E0%A6%BF%E0%A6%AF%E0%A6%BC%E0%A7%87-%E0%A6%AD%E0%A6%BE%E0%A6%AC%E0%A6%AC%E0%A6%BE%E0%A6%B0-%E0%A6%AE%E0%A6%A4%E0%A7%8B-%E0%A6%85%E0%A6%AC/">অবসর নিয়ে ভাববার মতো অবসর কোথায়</a></h2>
         
-        <p class="list-post-date">
-          <time datetime="2015-10-18T14:26:00Z">
-            18 October, 2015 at 14:26 &#43;0000
-          </time>
-        </p>
-      </header>
-      <div>
-        একটা সময় ছিল যখন আমি চাইলেই কবিতা লিখতে পারতাম। কবিতা নিয়ে ভাবতাম। পুরো মাথায় রাজ্যের কল্পনা ভর করে থাকতো। মনে মনে নানারকম গল্প তৈরি করতাম। সেই সময়টাকে খুব মিস করি এখন।
-বড় হয়ে যাওয়ার মাঝে অসুবিধে ছাড়া সুবিধে খুব একটা দেখিনে আজকাল। বড় হয়ে যাওয়া মানেই কল্পনার সেই অলিক পৃথিবীকে ছুড়ে ফেলে বাস্তবকে বেশি করে উপলদ্ধি করা। রূপকথা থেকে ইতিহাস কিংবা চলমান ঘটনা প্রবাহ বেশি প্রায়োরিটি পায়। ইদানিং গল্পের বই পড়া হয় না। বই পড়লে ইতিহাস, প্রবন্ধ, দর্শনের বই বেশি পড়া হয়। টিভি দেখি না। দেখলে খবর ছাড়া আর কিছু দেখা হয় না।
-      </div>
-      
-      <p><a class="read-more" href="http://bazlur.com/posts/2015-10-18-%E0%A6%85%E0%A6%AC%E0%A6%B8%E0%A6%B0-%E0%A6%A8%E0%A6%BF%E0%A6%AF%E0%A6%BC%E0%A7%87-%E0%A6%AD%E0%A6%BE%E0%A6%AC%E0%A6%AC%E0%A6%BE%E0%A6%B0-%E0%A6%AE%E0%A6%A4%E0%A7%8B-%E0%A6%85%E0%A6%AC/">Read more &rarr;</a></p>
-      
-    </article>
+        <span class="list-post-date post-info">
+             by <a href="/about-me/" class="p-author h-card"
+                                   rel="author">A N M Bazlur Rahman</a>
+            <time datetime=" 2015-10-18">
+             on 18 October, 2015 at 14:26 &#43;0000
+            </time>
+
+        </span>
+        <span>
+            <div id="tags"></div>
+        </span>
+    </div>
+</article>
   
 </div>
   <footer>
   <footer>
-  <div>
+  <div  class="wrapper-footer">
     <p>
-    &copy; <a href="https://bazlur.com"> A N M Bazlur Rahman</a> 2012 - 2021 | <a href="https://github.com/rokon12">Github</a>
+      &copy; <a href="https://bazlur.com"> A N M Bazlur Rahman</a> <span id="footer-copyright">2012 - 2021 </span>  | <a href="https://github.com/rokon12">Github</a>
     | <a href=" https://twitter.com/bazlur_rahman"> @bazlur_rahman</a>
     </p>
   </div>

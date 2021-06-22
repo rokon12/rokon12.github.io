@@ -44,6 +44,7 @@
     <script src="/js/prism.js"></script>
 
     <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/icofont.min.css" />
     <link rel="stylesheet" href="/css/fonts.css" />
     <link rel="stylesheet" href="/css/prism.css" />
 
@@ -79,26 +80,36 @@ if (!doNotTrack) {
 
   <body class="line-numbers">
 
-  <nav>
-    <ul class="menu">
-      
-      <li><a href="/">Home</a></li>
-      
-      <li><a href="/archives">Archives</a></li>
-      
-      <li><a href="/about-me/">About me</a></li>
-      
-      <li><a href="/books/">Books</a></li>
-      
-      <li><a href="/categories/">Categories</a></li>
-      
-      <li><a href="/resume/">Resume</a></li>
-      
-      <li><a href="/index.xml">Subscribe</a></li>
-      
-    </ul>
-    <hr/>
-    </nav>
+  <div id="head">
+    <div class="container">
+      <header class="masthead clearfix">
+        <a href="/"></a>
+        <div class="site-info">
+          <h1 class="site-name"> <a href="/"> Bazlur&#39;s Stream of Thoughts</a></h1>
+          <p class="site-description">This blog is meant to be a vehicle for airing my interest, feelings, thoughts, and opinion. </p>
+        </div>
+      </header>
+    </div>
+  </div>
+  <div id="header-menu" class="">
+    <div class="menu">
+      <ul style="margin: 0">
+        
+        <li> <a href="/">Home</a></li>
+        
+        <li> <a href="/archives">Archives</a></li>
+        
+        <li> <a href="/books/">Books</a></li>
+        
+        <li> <a href="/categories/">Categories</a></li>
+        
+        <li> <a href="/resume/">Resume</a></li>
+        
+        <li> <a href="/index.xml">Subscribe</a></li>
+        
+      </ul>
+    </div>
+  </div>
 
 
 <h1>HTTP Client</h1>
@@ -111,33 +122,36 @@ if (!doNotTrack) {
 
 <div id="content">
     
-        <article>
-      <header>
+    
+
+
+
+
+<article class="post">
+    <div class="post-title">
         
         <h2 class="list-title"><a href="http://bazlur.com/2021/06/lets-use-the-new-http-client-that-java-11-brought/">Let&#39;s use the new HTTP Client that java 11 brought</a></h2>
         
-        <p class="list-post-date">
-          <time datetime="2021-06-17T00:06:10-04:00">
-            17 June, 2021 at 00:06 EDT
-          </time>
-        </p>
-      </header>
-      <div>
-        Java 11 brought an inbuilt HTTP client. As a result, we don&rsquo;t need a third-party library anymore to invoke an HTTP request.
-Let&rsquo;s call a chuck Norris api to fetch a random joke.
-package com.bazlur; import java.io.IOException; import java.net.URI; import java.net.URISyntaxException; import java.net.http.HttpClient; import java.net.http.HttpRequest; import java.net.http.HttpResponse; import java.time.Duration; public class Day011 { public static final String CHUCK_NORRIS_RANDOM_JOKES_API = &quot;https://api.chucknorris.io/jokes/random&quot;; public static void main(String[] args) throws URISyntaxException, IOException, InterruptedException { var client = HttpClient.
-      </div>
-      
-      <p><a class="read-more" href="http://bazlur.com/2021/06/lets-use-the-new-http-client-that-java-11-brought/">Read more &rarr;</a></p>
-      
-    </article>
+        <span class="list-post-date post-info">
+             by <a href="/about-me/" class="p-author h-card"
+                                   rel="author">A N M Bazlur Rahman</a>
+            <time datetime=" 2021-06-17">
+             on 17 June, 2021 at 00:06 EDT
+            </time>
+
+        </span>
+        <span>
+            <div id="tags"><a class="post-tag tag-small" href="/tags/java" rel="tag"> java </a> &nbsp; <a class="post-tag tag-small" href="/tags/coding" rel="tag"> coding </a> &nbsp; <a class="post-tag tag-small" href="/tags/100daysofjava" rel="tag"> 100DaysOfJava </a> &nbsp; <a class="post-tag tag-small" href="/tags/http-client" rel="tag"> HTTP Client </a> &nbsp; <a class="post-tag tag-small" href="/tags/100daysofcode" rel="tag"> 100DaysOfCode </a> &nbsp; <a class="post-tag tag-small" href="/tags/java16" rel="tag"> java16 </a> &nbsp; <a class="post-tag tag-small" href="/tags/java11" rel="tag"> java11 </a></div>
+        </span>
+    </div>
+</article>
     
 </div>
   <footer>
   <footer>
-  <div>
+  <div  class="wrapper-footer">
     <p>
-    &copy; <a href="https://bazlur.com"> A N M Bazlur Rahman</a> 2012 - 2021 | <a href="https://github.com/rokon12">Github</a>
+      &copy; <a href="https://bazlur.com"> A N M Bazlur Rahman</a> <span id="footer-copyright">2012 - 2021 </span>  | <a href="https://github.com/rokon12">Github</a>
     | <a href=" https://twitter.com/bazlur_rahman"> @bazlur_rahman</a>
     </p>
   </div>

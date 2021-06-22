@@ -44,6 +44,7 @@
     <script src="/js/prism.js"></script>
 
     <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/icofont.min.css" />
     <link rel="stylesheet" href="/css/fonts.css" />
     <link rel="stylesheet" href="/css/prism.css" />
 
@@ -79,26 +80,36 @@ if (!doNotTrack) {
 
   <body class="line-numbers">
 
-  <nav>
-    <ul class="menu">
-      
-      <li><a href="/">Home</a></li>
-      
-      <li><a href="/archives">Archives</a></li>
-      
-      <li><a href="/about-me/">About me</a></li>
-      
-      <li><a href="/books/">Books</a></li>
-      
-      <li><a href="/categories/">Categories</a></li>
-      
-      <li><a href="/resume/">Resume</a></li>
-      
-      <li><a href="/index.xml">Subscribe</a></li>
-      
-    </ul>
-    <hr/>
-    </nav>
+  <div id="head">
+    <div class="container">
+      <header class="masthead clearfix">
+        <a href="/"></a>
+        <div class="site-info">
+          <h1 class="site-name"> <a href="/"> Bazlur&#39;s Stream of Thoughts</a></h1>
+          <p class="site-description">This blog is meant to be a vehicle for airing my interest, feelings, thoughts, and opinion. </p>
+        </div>
+      </header>
+    </div>
+  </div>
+  <div id="header-menu" class="">
+    <div class="menu">
+      <ul style="margin: 0">
+        
+        <li> <a href="/">Home</a></li>
+        
+        <li> <a href="/archives">Archives</a></li>
+        
+        <li> <a href="/books/">Books</a></li>
+        
+        <li> <a href="/categories/">Categories</a></li>
+        
+        <li> <a href="/resume/">Resume</a></li>
+        
+        <li> <a href="/index.xml">Subscribe</a></li>
+        
+      </ul>
+    </div>
+  </div>
 
 
 <h1>java 11</h1>
@@ -111,33 +122,36 @@ if (!doNotTrack) {
 
 <div id="content">
     
-        <article>
-      <header>
+    
+
+
+
+
+<article class="post">
+    <div class="post-title">
         
         <h2 class="list-title"><a href="http://bazlur.com/2020/11/reclaim-25-of-java-heap-memory-and-lower-your-cloud-bills/">Reclaim 25% of Java Heap Memory and Lower Your Cloud Bills </a></h2>
         
-        <p class="list-post-date">
-          <time datetime="2020-11-20T00:52:10-04:00">
-            20 November, 2020 at 00:52 -0400
-          </time>
-        </p>
-      </header>
-      <div>
-        You can save up to 25% of heap memory using latest java which means less cloud bills Do you know that you can save up to 25% of your heap memory and your cloud bills without any effort?
-Well, that&rsquo;s true. Many exciting features have been added to the latest Java recently, and I&rsquo;m going to cover one of them in this article, so please bear with me.
-We all know, Strings are the most used object in any Java application.
-      </div>
-      
-      <p><a class="read-more" href="http://bazlur.com/2020/11/reclaim-25-of-java-heap-memory-and-lower-your-cloud-bills/">Read more &rarr;</a></p>
-      
-    </article>
+        <span class="list-post-date post-info">
+             by <a href="/about-me/" class="p-author h-card"
+                                   rel="author">A N M Bazlur Rahman</a>
+            <time datetime=" 2020-11-20">
+             on 20 November, 2020 at 00:52 -0400
+            </time>
+
+        </span>
+        <span>
+            <div id="tags"><a class="post-tag tag-small" href="/tags/java" rel="tag"> java </a> &nbsp; <a class="post-tag tag-small" href="/tags/compact-strings" rel="tag"> compact strings </a> &nbsp; <a class="post-tag tag-small" href="/tags/java-11" rel="tag"> java 11 </a> &nbsp; <a class="post-tag tag-small" href="/tags/string" rel="tag"> string </a></div>
+        </span>
+    </div>
+</article>
     
 </div>
   <footer>
   <footer>
-  <div>
+  <div  class="wrapper-footer">
     <p>
-    &copy; <a href="https://bazlur.com"> A N M Bazlur Rahman</a> 2012 - 2021 | <a href="https://github.com/rokon12">Github</a>
+      &copy; <a href="https://bazlur.com"> A N M Bazlur Rahman</a> <span id="footer-copyright">2012 - 2021 </span>  | <a href="https://github.com/rokon12">Github</a>
     | <a href=" https://twitter.com/bazlur_rahman"> @bazlur_rahman</a>
     </p>
   </div>

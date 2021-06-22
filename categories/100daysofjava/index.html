@@ -44,6 +44,7 @@
     <script src="/js/prism.js"></script>
 
     <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/icofont.min.css" />
     <link rel="stylesheet" href="/css/fonts.css" />
     <link rel="stylesheet" href="/css/prism.css" />
 
@@ -79,26 +80,36 @@ if (!doNotTrack) {
 
   <body class="line-numbers">
 
-  <nav>
-    <ul class="menu">
-      
-      <li><a href="/">Home</a></li>
-      
-      <li><a href="/archives">Archives</a></li>
-      
-      <li><a href="/about-me/">About me</a></li>
-      
-      <li><a href="/books/">Books</a></li>
-      
-      <li><a href="/categories/">Categories</a></li>
-      
-      <li><a href="/resume/">Resume</a></li>
-      
-      <li><a href="/index.xml">Subscribe</a></li>
-      
-    </ul>
-    <hr/>
-    </nav>
+  <div id="head">
+    <div class="container">
+      <header class="masthead clearfix">
+        <a href="/"></a>
+        <div class="site-info">
+          <h1 class="site-name"> <a href="/"> Bazlur&#39;s Stream of Thoughts</a></h1>
+          <p class="site-description">This blog is meant to be a vehicle for airing my interest, feelings, thoughts, and opinion. </p>
+        </div>
+      </header>
+    </div>
+  </div>
+  <div id="header-menu" class="">
+    <div class="menu">
+      <ul style="margin: 0">
+        
+        <li> <a href="/">Home</a></li>
+        
+        <li> <a href="/archives">Archives</a></li>
+        
+        <li> <a href="/books/">Books</a></li>
+        
+        <li> <a href="/categories/">Categories</a></li>
+        
+        <li> <a href="/resume/">Resume</a></li>
+        
+        <li> <a href="/index.xml">Subscribe</a></li>
+        
+      </ul>
+    </div>
+  </div>
 <h2>
   <span class="list-heading-type">categories:</span>
   <span class="list-heading-tag">100DaysOfJava</span>
@@ -106,287 +117,348 @@ if (!doNotTrack) {
 
 <div id="content">
   
-      <article>
-      <header>
+  
+
+
+
+
+<article class="post">
+    <div class="post-title">
         
         <h2 class="list-title"><a href="http://bazlur.com/2021/06/completablefuture-made-life-easy-running-things-asynchronous/">CompletableFuture made life easy, running things asynchronous</a></h2>
         
-        <p class="list-post-date">
-          <time datetime="2021-06-20T00:10:40-04:00">
-            20 June, 2021 at 00:10 EDT
-          </time>
-        </p>
-      </header>
-      <div>
-        Let&rsquo;s assume you have to invoke two REST APIs and then combine the result. You can run them one by one and then accumulate the result. It looks easy. However, if each call takes up some time, the total time would be pretty significant.
-However, we can reduce the time if we can run these two asynchronously, making them parallel. That&rsquo;s where CompletableFuture comes into play.
-Let&rsquo;s see a code-
-      </div>
-      
-      <p><a class="read-more" href="http://bazlur.com/2021/06/completablefuture-made-life-easy-running-things-asynchronous/">Read more &rarr;</a></p>
-      
-    </article>
+        <span class="list-post-date post-info">
+             by <a href="/about-me/" class="p-author h-card"
+                                   rel="author">A N M Bazlur Rahman</a>
+            <time datetime=" 2021-06-20">
+             on 20 June, 2021 at 00:10 EDT
+            </time>
+
+        </span>
+        <span>
+            <div id="tags"><a class="post-tag tag-small" href="/tags/java" rel="tag"> java </a> &nbsp; <a class="post-tag tag-small" href="/tags/coding" rel="tag"> coding </a> &nbsp; <a class="post-tag tag-small" href="/tags/100daysofjava" rel="tag"> 100DaysOfJava </a> &nbsp; <a class="post-tag tag-small" href="/tags/100daysofcode" rel="tag"> 100DaysOfCode </a> &nbsp; <a class="post-tag tag-small" href="/tags/completablefuture" rel="tag"> CompletableFuture </a></div>
+        </span>
+    </div>
+</article>
   
-      <article>
-      <header>
+  
+
+
+
+
+<article class="post">
+    <div class="post-title">
         
         <h2 class="list-title"><a href="http://bazlur.com/2021/06/lets-find-out-the-most-enormous-known-prime-number-using-java/">Let&#39;s find out the most enormous known prime number using java</a></h2>
         
-        <p class="list-post-date">
-          <time datetime="2021-06-19T00:10:40-04:00">
-            19 June, 2021 at 00:10 EDT
-          </time>
-        </p>
-      </header>
-      <div>
-        According to Wikipedia, the biggest known prime number (as of December 2020) is 2^82,589,933 − 1, which has 24,862,048 digits when printed in base 10.
-The number itself is unfathomable.
-Let&rsquo;s write a java program that calculates this number and writes it in a text file.
-It doesn&rsquo;t take much time to calculate the number, but writing on file or flushing on Standard output would take quite a significant time.
-      </div>
-      
-      <p><a class="read-more" href="http://bazlur.com/2021/06/lets-find-out-the-most-enormous-known-prime-number-using-java/">Read more &rarr;</a></p>
-      
-    </article>
+        <span class="list-post-date post-info">
+             by <a href="/about-me/" class="p-author h-card"
+                                   rel="author">A N M Bazlur Rahman</a>
+            <time datetime=" 2021-06-19">
+             on 19 June, 2021 at 00:10 EDT
+            </time>
+
+        </span>
+        <span>
+            <div id="tags"><a class="post-tag tag-small" href="/tags/java" rel="tag"> java </a> &nbsp; <a class="post-tag tag-small" href="/tags/coding" rel="tag"> coding </a> &nbsp; <a class="post-tag tag-small" href="/tags/100daysofjava" rel="tag"> 100DaysOfJava </a> &nbsp; <a class="post-tag tag-small" href="/tags/100daysofcode" rel="tag"> 100DaysOfCode </a> &nbsp; <a class="post-tag tag-small" href="/tags/prime-number" rel="tag"> Prime Number </a></div>
+        </span>
+    </div>
+</article>
   
-      <article>
-      <header>
+  
+
+
+
+
+<article class="post">
+    <div class="post-title">
         
         <h2 class="list-title"><a href="http://bazlur.com/2021/06/lets-create-coffee-with-a-decorator-pattern-with-the-help-of-lambda-expression/">Let&#39;s create coffee with a decorator pattern with the help of lambda expression</a></h2>
         
-        <p class="list-post-date">
-          <time datetime="2021-06-18T00:10:40-04:00">
-            18 June, 2021 at 00:10 EDT
-          </time>
-        </p>
-      </header>
-      <div>
-        java.util.function.Function&lt;T, R&gt; is a functional interface. It takes a type T and returns type R. We mostly use it to transform a type into a different one. But it doesn&rsquo;t end there. We can use this into a lambda expression to change a value as well. For example-
-Function&lt;Integer, Integer&gt; doubleIt = a -&gt; a * 2;  Over here, we are receiving and in integer but returning after doubling it.
-      </div>
-      
-      <p><a class="read-more" href="http://bazlur.com/2021/06/lets-create-coffee-with-a-decorator-pattern-with-the-help-of-lambda-expression/">Read more &rarr;</a></p>
-      
-    </article>
+        <span class="list-post-date post-info">
+             by <a href="/about-me/" class="p-author h-card"
+                                   rel="author">A N M Bazlur Rahman</a>
+            <time datetime=" 2021-06-18">
+             on 18 June, 2021 at 00:10 EDT
+            </time>
+
+        </span>
+        <span>
+            <div id="tags"><a class="post-tag tag-small" href="/tags/java" rel="tag"> java </a> &nbsp; <a class="post-tag tag-small" href="/tags/coding" rel="tag"> coding </a> &nbsp; <a class="post-tag tag-small" href="/tags/100daysofjava" rel="tag"> 100DaysOfJava </a> &nbsp; <a class="post-tag tag-small" href="/tags/100daysofcode" rel="tag"> 100DaysOfCode </a> &nbsp; <a class="post-tag tag-small" href="/tags/java8" rel="tag"> java8 </a> &nbsp; <a class="post-tag tag-small" href="/tags/lambda-expression" rel="tag"> Lambda Expression </a></div>
+        </span>
+    </div>
+</article>
   
-      <article>
-      <header>
+  
+
+
+
+
+<article class="post">
+    <div class="post-title">
         
         <h2 class="list-title"><a href="http://bazlur.com/2021/06/lets-use-the-new-http-client-that-java-11-brought/">Let&#39;s use the new HTTP Client that java 11 brought</a></h2>
         
-        <p class="list-post-date">
-          <time datetime="2021-06-17T00:06:10-04:00">
-            17 June, 2021 at 00:06 EDT
-          </time>
-        </p>
-      </header>
-      <div>
-        Java 11 brought an inbuilt HTTP client. As a result, we don&rsquo;t need a third-party library anymore to invoke an HTTP request.
-Let&rsquo;s call a chuck Norris api to fetch a random joke.
-package com.bazlur; import java.io.IOException; import java.net.URI; import java.net.URISyntaxException; import java.net.http.HttpClient; import java.net.http.HttpRequest; import java.net.http.HttpResponse; import java.time.Duration; public class Day011 { public static final String CHUCK_NORRIS_RANDOM_JOKES_API = &quot;https://api.chucknorris.io/jokes/random&quot;; public static void main(String[] args) throws URISyntaxException, IOException, InterruptedException { var client = HttpClient.
-      </div>
-      
-      <p><a class="read-more" href="http://bazlur.com/2021/06/lets-use-the-new-http-client-that-java-11-brought/">Read more &rarr;</a></p>
-      
-    </article>
+        <span class="list-post-date post-info">
+             by <a href="/about-me/" class="p-author h-card"
+                                   rel="author">A N M Bazlur Rahman</a>
+            <time datetime=" 2021-06-17">
+             on 17 June, 2021 at 00:06 EDT
+            </time>
+
+        </span>
+        <span>
+            <div id="tags"><a class="post-tag tag-small" href="/tags/java" rel="tag"> java </a> &nbsp; <a class="post-tag tag-small" href="/tags/coding" rel="tag"> coding </a> &nbsp; <a class="post-tag tag-small" href="/tags/100daysofjava" rel="tag"> 100DaysOfJava </a> &nbsp; <a class="post-tag tag-small" href="/tags/http-client" rel="tag"> HTTP Client </a> &nbsp; <a class="post-tag tag-small" href="/tags/100daysofcode" rel="tag"> 100DaysOfCode </a> &nbsp; <a class="post-tag tag-small" href="/tags/java16" rel="tag"> java16 </a> &nbsp; <a class="post-tag tag-small" href="/tags/java11" rel="tag"> java11 </a></div>
+        </span>
+    </div>
+</article>
   
-      <article>
-      <header>
+  
+
+
+
+
+<article class="post">
+    <div class="post-title">
         
         <h2 class="list-title"><a href="http://bazlur.com/2021/06/how-to-calculate-date-and-time-involving-time-zone-doesnt-have-to-be-hard./">How to calculate date and time involving time zone? doesn&#39;t have to be hard.</a></h2>
         
-        <p class="list-post-date">
-          <time datetime="2021-06-16T00:10:10-04:00">
-            16 June, 2021 at 00:10 EDT
-          </time>
-        </p>
-      </header>
-      <div>
-        Calculating time with a zone was never this easy. Using the date-time API, you can calculate with timezone pretty much effortlessly.
-Let&rsquo;s assume we have a flight from Toronto (YYZ) to Dubai (DXB) today. The flight takes off at 21:45. The total duration of the flight is 12 hours and 45 minutes. What would be the local time when the plane lands?
-The following code will allow you to calculate that easily-
-      </div>
-      
-      <p><a class="read-more" href="http://bazlur.com/2021/06/how-to-calculate-date-and-time-involving-time-zone-doesnt-have-to-be-hard./">Read more &rarr;</a></p>
-      
-    </article>
+        <span class="list-post-date post-info">
+             by <a href="/about-me/" class="p-author h-card"
+                                   rel="author">A N M Bazlur Rahman</a>
+            <time datetime=" 2021-06-16">
+             on 16 June, 2021 at 00:10 EDT
+            </time>
+
+        </span>
+        <span>
+            <div id="tags"><a class="post-tag tag-small" href="/tags/java" rel="tag"> java </a> &nbsp; <a class="post-tag tag-small" href="/tags/coding" rel="tag"> coding </a> &nbsp; <a class="post-tag tag-small" href="/tags/100daysofjava" rel="tag"> 100DaysOfJava </a> &nbsp; <a class="post-tag tag-small" href="/tags/localdatetime" rel="tag"> LocalDateTime </a> &nbsp; <a class="post-tag tag-small" href="/tags/zoneid" rel="tag"> ZoneId </a> &nbsp; <a class="post-tag tag-small" href="/tags/duration" rel="tag"> Duration </a> &nbsp; <a class="post-tag tag-small" href="/tags/datetime" rel="tag"> DateTime </a> &nbsp; <a class="post-tag tag-small" href="/tags/100daysofcode" rel="tag"> 100DaysOfCode </a></div>
+        </span>
+    </div>
+</article>
   
-      <article>
-      <header>
+  
+
+
+
+
+<article class="post">
+    <div class="post-title">
         
         <h2 class="list-title"><a href="http://bazlur.com/2021/06/lets-use-optional-to-fix-our-method-contract./">Let&#39;s use Optional to fix our method contract.</a></h2>
         
-        <p class="list-post-date">
-          <time datetime="2021-06-15T00:52:10-04:00">
-            15 June, 2021 at 00:52 EDT
-          </time>
-        </p>
-      </header>
-      <div>
-        A method is a contract; when we define one, we put our thoughts into it. We specify the parameters with their type and also a return type. When we invoke a method, we expect it to behave according to the contract. If it doesn&rsquo;t, it&rsquo;s a violation of the contract.
-We have been dealing with such a violation all the time. We invoke a method with its proper arguments, and we get a return.
-      </div>
-      
-      <p><a class="read-more" href="http://bazlur.com/2021/06/lets-use-optional-to-fix-our-method-contract./">Read more &rarr;</a></p>
-      
-    </article>
+        <span class="list-post-date post-info">
+             by <a href="/about-me/" class="p-author h-card"
+                                   rel="author">A N M Bazlur Rahman</a>
+            <time datetime=" 2021-06-15">
+             on 15 June, 2021 at 00:52 EDT
+            </time>
+
+        </span>
+        <span>
+            <div id="tags"><a class="post-tag tag-small" href="/tags/java" rel="tag"> java </a> &nbsp; <a class="post-tag tag-small" href="/tags/coding" rel="tag"> coding </a> &nbsp; <a class="post-tag tag-small" href="/tags/100daysofjava" rel="tag"> 100DaysOfJava </a> &nbsp; <a class="post-tag tag-small" href="/tags/optional" rel="tag"> Optional </a> &nbsp; <a class="post-tag tag-small" href="/tags/functional" rel="tag"> Functional </a> &nbsp; <a class="post-tag tag-small" href="/tags/100daysofcode" rel="tag"> 100DaysOfCode </a></div>
+        </span>
+    </div>
+</article>
   
-      <article>
-      <header>
+  
+
+
+
+
+<article class="post">
+    <div class="post-title">
         
         <h2 class="list-title"><a href="http://bazlur.com/2021/06/how-to-stop-a-java-program-gracefully/">How to stop a java program gracefully?</a></h2>
         
-        <p class="list-post-date">
-          <time datetime="2021-06-14T00:04:10-04:00">
-            14 June, 2021 at 00:04 EDT
-          </time>
-        </p>
-      </header>
-      <div>
-        Sometimes you may want to stop your java program using SIGINT hitting your CTRL+C. For example, your program may be doing something important, e.g., opening a server socket and waiting on a port or doing some background work on a thread pool. You want to stop it gracefully shutting down your socket or the thread pool. For such scenarios, what you can do is, add a shutdown hook to the java runtime.
-      </div>
-      
-      <p><a class="read-more" href="http://bazlur.com/2021/06/how-to-stop-a-java-program-gracefully/">Read more &rarr;</a></p>
-      
-    </article>
+        <span class="list-post-date post-info">
+             by <a href="/about-me/" class="p-author h-card"
+                                   rel="author">A N M Bazlur Rahman</a>
+            <time datetime=" 2021-06-14">
+             on 14 June, 2021 at 00:04 EDT
+            </time>
+
+        </span>
+        <span>
+            <div id="tags"><a class="post-tag tag-small" href="/tags/java" rel="tag"> java </a> &nbsp; <a class="post-tag tag-small" href="/tags/coding" rel="tag"> coding </a> &nbsp; <a class="post-tag tag-small" href="/tags/100daysofjava" rel="tag"> 100DaysOfJava </a> &nbsp; <a class="post-tag tag-small" href="/tags/executors" rel="tag"> Executors </a> &nbsp; <a class="post-tag tag-small" href="/tags/100daysofcode" rel="tag"> 100DaysOfCode </a></div>
+        </span>
+    </div>
+</article>
   
-      <article>
-      <header>
+  
+
+
+
+
+<article class="post">
+    <div class="post-title">
         
         <h2 class="list-title"><a href="http://bazlur.com/2021/06/how-to-run-a-task-periodically-in-java/">How to run a task periodically in java</a></h2>
         
-        <p class="list-post-date">
-          <time datetime="2021-06-13T04:38:10-04:00">
-            13 June, 2021 at 04:38 EDT
-          </time>
-        </p>
-      </header>
-      <div>
-        Sometimes you want to run a particular task at a fixed rate periodically. The job could be anything, e.g. you may want to call a rest API to check for an update, or perhaps pull information from a database, do some processing, and then send an email. Or maybe you want to keep your eyes on the stock exchange. The following code snippet will allow you to do that sort of task precisely.
-      </div>
-      
-      <p><a class="read-more" href="http://bazlur.com/2021/06/how-to-run-a-task-periodically-in-java/">Read more &rarr;</a></p>
-      
-    </article>
+        <span class="list-post-date post-info">
+             by <a href="/about-me/" class="p-author h-card"
+                                   rel="author">A N M Bazlur Rahman</a>
+            <time datetime=" 2021-06-13">
+             on 13 June, 2021 at 04:38 EDT
+            </time>
+
+        </span>
+        <span>
+            <div id="tags"><a class="post-tag tag-small" href="/tags/java" rel="tag"> java </a> &nbsp; <a class="post-tag tag-small" href="/tags/coding" rel="tag"> coding </a> &nbsp; <a class="post-tag tag-small" href="/tags/100daysofjava" rel="tag"> 100DaysOfJava </a> &nbsp; <a class="post-tag tag-small" href="/tags/file" rel="tag"> File </a> &nbsp; <a class="post-tag tag-small" href="/tags/executors" rel="tag"> Executors </a> &nbsp; <a class="post-tag tag-small" href="/tags/scheduler" rel="tag"> Scheduler </a> &nbsp; <a class="post-tag tag-small" href="/tags/100daysofcode" rel="tag"> 100DaysOfCode </a></div>
+        </span>
+    </div>
+</article>
   
-      <article>
-      <header>
+  
+
+
+
+
+<article class="post">
+    <div class="post-title">
         
         <h2 class="list-title"><a href="http://bazlur.com/2021/06/how-to-watch-a-directory-to-detect-changes-using-java/">How to watch a directory to detect changes using java</a></h2>
         
-        <p class="list-post-date">
-          <time datetime="2021-06-12T16:19:10-04:00">
-            12 June, 2021 at 16:19 EDT
-          </time>
-        </p>
-      </header>
-      <div>
-        Have you ever noticed, when you open a file into two different editors, and when you made changes in one, the other one informs you that the file has changed and you need to reload? How does it do that?
-Well, the following coding snippet would do the trick. Let&rsquo;s watch a particular directory and listen to the event.
-for copy/paste pleasure: https://github.com/rokon12/100DaysOfJava/blob/main/src/main/java/com/bazlur/Day006.java
-      </div>
-      
-    </article>
+        <span class="list-post-date post-info">
+             by <a href="/about-me/" class="p-author h-card"
+                                   rel="author">A N M Bazlur Rahman</a>
+            <time datetime=" 2021-06-12">
+             on 12 June, 2021 at 16:19 EDT
+            </time>
+
+        </span>
+        <span>
+            <div id="tags"><a class="post-tag tag-small" href="/tags/java" rel="tag"> java </a> &nbsp; <a class="post-tag tag-small" href="/tags/coding" rel="tag"> coding </a> &nbsp; <a class="post-tag tag-small" href="/tags/100daysofjava" rel="tag"> 100DaysOfJava </a> &nbsp; <a class="post-tag tag-small" href="/tags/file" rel="tag"> File </a> &nbsp; <a class="post-tag tag-small" href="/tags/nio" rel="tag"> NIO </a> &nbsp; <a class="post-tag tag-small" href="/tags/100daysofcode" rel="tag"> 100DaysOfCode </a></div>
+        </span>
+    </div>
+</article>
   
-      <article>
-      <header>
+  
+
+
+
+
+<article class="post">
+    <div class="post-title">
         
         <h2 class="list-title"><a href="http://bazlur.com/2021/06/how-to-read-texts-from-a-file-using-java/">How to read texts from a file using java</a></h2>
         
-        <p class="list-post-date">
-          <time datetime="2021-06-11T13:38:10-04:00">
-            11 June, 2021 at 13:38 EDT
-          </time>
-        </p>
-      </header>
-      <div>
-        Reading texts from a file has never been this easy. You have to call Files.readString(), that&rsquo;s it.
-Let&rsquo;s read a text file, remove all the punctuation from it and then count all the unique words.
-for copy/paste pleasure: https://github.com/rokon12/100DaysOfJava/blob/main/src/main/java/com/bazlur/Day005.java
-      </div>
-      
-    </article>
+        <span class="list-post-date post-info">
+             by <a href="/about-me/" class="p-author h-card"
+                                   rel="author">A N M Bazlur Rahman</a>
+            <time datetime=" 2021-06-11">
+             on 11 June, 2021 at 13:38 EDT
+            </time>
+
+        </span>
+        <span>
+            <div id="tags"><a class="post-tag tag-small" href="/tags/java" rel="tag"> java </a> &nbsp; <a class="post-tag tag-small" href="/tags/coding" rel="tag"> coding </a> &nbsp; <a class="post-tag tag-small" href="/tags/100daysofjava" rel="tag"> 100DaysOfJava </a> &nbsp; <a class="post-tag tag-small" href="/tags/string" rel="tag"> String </a> &nbsp; <a class="post-tag tag-small" href="/tags/100daysofcode" rel="tag"> 100DaysOfCode </a></div>
+        </span>
+    </div>
+</article>
   
-      <article>
-      <header>
+  
+
+
+
+
+<article class="post">
+    <div class="post-title">
         
         <h2 class="list-title"><a href="http://bazlur.com/2021/06/how-to-convert-multiple-images-into-a-single-pdf-file/">How to convert multiple images into a single pdf file</a></h2>
         
-        <p class="list-post-date">
-          <time datetime="2021-06-10T01:38:10-04:00">
-            10 June, 2021 at 01:38 EDT
-          </time>
-        </p>
-      </header>
-      <div>
-        I had some images that I needed had to export as pdf. I looked in the app store to find a free tool that makes it possible for me. However, after a quick search, I was not satisfied with the result. The Apps that support such things come at a hefty price tag. Then it hits me. Why not I write a few lines of java code and export pdf with ITextPdf library.
-      </div>
-      
-      <p><a class="read-more" href="http://bazlur.com/2021/06/how-to-convert-multiple-images-into-a-single-pdf-file/">Read more &rarr;</a></p>
-      
-    </article>
+        <span class="list-post-date post-info">
+             by <a href="/about-me/" class="p-author h-card"
+                                   rel="author">A N M Bazlur Rahman</a>
+            <time datetime=" 2021-06-10">
+             on 10 June, 2021 at 01:38 EDT
+            </time>
+
+        </span>
+        <span>
+            <div id="tags"><a class="post-tag tag-small" href="/tags/java" rel="tag"> java </a> &nbsp; <a class="post-tag tag-small" href="/tags/coding" rel="tag"> coding </a> &nbsp; <a class="post-tag tag-small" href="/tags/100daysofjava" rel="tag"> 100DaysOfJava </a> &nbsp; <a class="post-tag tag-small" href="/tags/image" rel="tag"> image </a> &nbsp; <a class="post-tag tag-small" href="/tags/export" rel="tag"> export </a> &nbsp; <a class="post-tag tag-small" href="/tags/pdf" rel="tag"> pdf </a> &nbsp; <a class="post-tag tag-small" href="/tags/itext-pdf" rel="tag"> itext pdf </a> &nbsp; <a class="post-tag tag-small" href="/tags/100daysofcode" rel="tag"> 100DaysOfCode </a></div>
+        </span>
+    </div>
+</article>
   
-      <article>
-      <header>
+  
+
+
+
+
+<article class="post">
+    <div class="post-title">
         
         <h2 class="list-title"><a href="http://bazlur.com/2021/06/lets-count-the-occurrence-with-groupby-and-counting/">Let&#39;s count the occurrence with groupBy and counting</a></h2>
         
-        <p class="list-post-date">
-          <time datetime="2021-06-10T00:04:10-04:00">
-            10 June, 2021 at 00:04 EDT
-          </time>
-        </p>
-      </header>
-      <div>
-        
-      </div>
-      
-    </article>
+        <span class="list-post-date post-info">
+             by <a href="/about-me/" class="p-author h-card"
+                                   rel="author">A N M Bazlur Rahman</a>
+            <time datetime=" 2021-06-10">
+             on 10 June, 2021 at 00:04 EDT
+            </time>
+
+        </span>
+        <span>
+            <div id="tags"><a class="post-tag tag-small" href="/tags/java" rel="tag"> java </a> &nbsp; <a class="post-tag tag-small" href="/tags/coding" rel="tag"> coding </a> &nbsp; <a class="post-tag tag-small" href="/tags/100daysofjava" rel="tag"> 100DaysOfJava </a> &nbsp; <a class="post-tag tag-small" href="/tags/map" rel="tag"> Map </a> &nbsp; <a class="post-tag tag-small" href="/tags/hashmap" rel="tag"> HashMap </a> &nbsp; <a class="post-tag tag-small" href="/tags/100daysofcode" rel="tag"> 100DaysOfCode </a> &nbsp; <a class="post-tag tag-small" href="/tags/countingcollections" rel="tag"> countingcollections </a> &nbsp; <a class="post-tag tag-small" href="/tags/counting" rel="tag"> counting </a> &nbsp; <a class="post-tag tag-small" href="/tags/record" rel="tag"> record </a> &nbsp; <a class="post-tag tag-small" href="/tags/java16" rel="tag"> java16 </a> &nbsp; <a class="post-tag tag-small" href="/tags/groupby" rel="tag"> groupBy </a> &nbsp; <a class="post-tag tag-small" href="/tags/counting" rel="tag"> counting </a></div>
+        </span>
+    </div>
+</article>
   
-      <article>
-      <header>
+  
+
+
+
+
+<article class="post">
+    <div class="post-title">
         
         <h2 class="list-title"><a href="http://bazlur.com/2021/06/avoid-recursive-invocation-on-computeifabsent-in-hashmap/">Avoid recursive invocation on computeIfAbsent() in HashMap</a></h2>
         
-        <p class="list-post-date">
-          <time datetime="2021-06-09T13:04:10-04:00">
-            9 June, 2021 at 13:04 EDT
-          </time>
-        </p>
-      </header>
-      <div>
-        If a value doesn&rsquo;t exist in the map, we calculate. We do it imperatively.
-We first check if a value exists or not using containsKey() in an &ldquo;if block.&rdquo; If not found, we then calculate as follows-
-static Map&lt;Integer, BigInteger&gt; cache = new HashMap&lt;&gt;( Map.of(0, BigInteger.ZERO, 1, BigInteger.ONE) ); public static BigInteger fibonacci(int n) { if (!cache.containsKey(n)) { var computed = fibonacci(n - 1).add(fibonacci(n - 2)); cache.put(n, computed); } return cache.
-      </div>
-      
-      <p><a class="read-more" href="http://bazlur.com/2021/06/avoid-recursive-invocation-on-computeifabsent-in-hashmap/">Read more &rarr;</a></p>
-      
-    </article>
+        <span class="list-post-date post-info">
+             by <a href="/about-me/" class="p-author h-card"
+                                   rel="author">A N M Bazlur Rahman</a>
+            <time datetime=" 2021-06-09">
+             on 9 June, 2021 at 13:04 EDT
+            </time>
+
+        </span>
+        <span>
+            <div id="tags"><a class="post-tag tag-small" href="/tags/java" rel="tag"> java </a> &nbsp; <a class="post-tag tag-small" href="/tags/fibonacci" rel="tag"> fibonacci </a> &nbsp; <a class="post-tag tag-small" href="/tags/coding" rel="tag"> coding </a> &nbsp; <a class="post-tag tag-small" href="/tags/100daysofjava" rel="tag"> 100DaysOfJava </a> &nbsp; <a class="post-tag tag-small" href="/tags/map" rel="tag"> Map </a> &nbsp; <a class="post-tag tag-small" href="/tags/hashmap" rel="tag"> HashMap </a> &nbsp; <a class="post-tag tag-small" href="/tags/100daysofcode" rel="tag"> 100DaysOfCode </a> &nbsp; <a class="post-tag tag-small" href="/tags/concurrentskiplistmap" rel="tag"> ConcurrentSkipListMap </a> &nbsp; <a class="post-tag tag-small" href="/tags/concurrentmodificationexception" rel="tag"> ConcurrentModificationException </a> &nbsp; <a class="post-tag tag-small" href="/tags/day002" rel="tag"> Day002 </a> &nbsp; <a class="post-tag tag-small" href="/tags/java16" rel="tag"> java16 </a></div>
+        </span>
+    </div>
+</article>
   
-      <article>
-      <header>
+  
+
+
+
+
+<article class="post">
+    <div class="post-title">
         
         <h2 class="list-title"><a href="http://bazlur.com/2021/06/lets-print-100th-fibonacci-number-using-java/">Let&#39;s print 100th fibonacci number using java</a></h2>
         
-        <p class="list-post-date">
-          <time datetime="2021-06-09T01:47:10-04:00">
-            9 June, 2021 at 01:47 EDT
-          </time>
-        </p>
-      </header>
-      <div>
-        
-      </div>
-      
-    </article>
+        <span class="list-post-date post-info">
+             by <a href="/about-me/" class="p-author h-card"
+                                   rel="author">A N M Bazlur Rahman</a>
+            <time datetime=" 2021-06-09">
+             on 9 June, 2021 at 01:47 EDT
+            </time>
+
+        </span>
+        <span>
+            <div id="tags"><a class="post-tag tag-small" href="/tags/java" rel="tag"> java </a> &nbsp; <a class="post-tag tag-small" href="/tags/fibonacci" rel="tag"> fibonacci </a> &nbsp; <a class="post-tag tag-small" href="/tags/coding" rel="tag"> coding </a> &nbsp; <a class="post-tag tag-small" href="/tags/100daysofjava" rel="tag"> 100DaysOfJava </a> &nbsp; <a class="post-tag tag-small" href="/tags/map" rel="tag"> Map </a> &nbsp; <a class="post-tag tag-small" href="/tags/hashmap" rel="tag"> HashMap </a> &nbsp; <a class="post-tag tag-small" href="/tags/100daysofcode" rel="tag"> 100DaysOfCode </a></div>
+        </span>
+    </div>
+</article>
   
 </div>
   <footer>
   <footer>
-  <div>
+  <div  class="wrapper-footer">
     <p>
-    &copy; <a href="https://bazlur.com"> A N M Bazlur Rahman</a> 2012 - 2021 | <a href="https://github.com/rokon12">Github</a>
+      &copy; <a href="https://bazlur.com"> A N M Bazlur Rahman</a> <span id="footer-copyright">2012 - 2021 </span>  | <a href="https://github.com/rokon12">Github</a>
     | <a href=" https://twitter.com/bazlur_rahman"> @bazlur_rahman</a>
     </p>
   </div>

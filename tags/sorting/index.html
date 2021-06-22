@@ -44,6 +44,7 @@
     <script src="/js/prism.js"></script>
 
     <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/icofont.min.css" />
     <link rel="stylesheet" href="/css/fonts.css" />
     <link rel="stylesheet" href="/css/prism.css" />
 
@@ -79,26 +80,36 @@ if (!doNotTrack) {
 
   <body class="line-numbers">
 
-  <nav>
-    <ul class="menu">
-      
-      <li><a href="/">Home</a></li>
-      
-      <li><a href="/archives">Archives</a></li>
-      
-      <li><a href="/about-me/">About me</a></li>
-      
-      <li><a href="/books/">Books</a></li>
-      
-      <li><a href="/categories/">Categories</a></li>
-      
-      <li><a href="/resume/">Resume</a></li>
-      
-      <li><a href="/index.xml">Subscribe</a></li>
-      
-    </ul>
-    <hr/>
-    </nav>
+  <div id="head">
+    <div class="container">
+      <header class="masthead clearfix">
+        <a href="/"></a>
+        <div class="site-info">
+          <h1 class="site-name"> <a href="/"> Bazlur&#39;s Stream of Thoughts</a></h1>
+          <p class="site-description">This blog is meant to be a vehicle for airing my interest, feelings, thoughts, and opinion. </p>
+        </div>
+      </header>
+    </div>
+  </div>
+  <div id="header-menu" class="">
+    <div class="menu">
+      <ul style="margin: 0">
+        
+        <li> <a href="/">Home</a></li>
+        
+        <li> <a href="/archives">Archives</a></li>
+        
+        <li> <a href="/books/">Books</a></li>
+        
+        <li> <a href="/categories/">Categories</a></li>
+        
+        <li> <a href="/resume/">Resume</a></li>
+        
+        <li> <a href="/index.xml">Subscribe</a></li>
+        
+      </ul>
+    </div>
+  </div>
 
 
 <h1>Sorting</h1>
@@ -111,32 +122,36 @@ if (!doNotTrack) {
 
 <div id="content">
     
-        <article>
-      <header>
+    
+
+
+
+
+<article class="post">
+    <div class="post-title">
         
         <h2 class="list-title"><a href="http://bazlur.com/2016/11/turbocharging-java-with-parallel-array-sorting/">Turbocharging Java With Parallel Array Sorting</a></h2>
         
-        <p class="list-post-date">
-          <time datetime="2016-11-29T18:22:00Z">
-            29 November, 2016 at 18:22 &#43;0000
-          </time>
-        </p>
-      </header>
-      <div>
-        Sorting arrays in parallel is a JDK enhancement, which is part of the Java 9 release, which should yield significant performance improvements. JDK enhancement proposal 103 brings a new way of array sorting which uses the Fork/Join parallelism technique to provide sorting of arrays in parallel. This new feature has been added in the Java 8 release.
-Currently, we have two sorting implementations, one sorts arrays and another sorts collections. These two implementations perform sort in a single thread.
-      </div>
-      
-      <p><a class="read-more" href="http://bazlur.com/2016/11/turbocharging-java-with-parallel-array-sorting/">Read more &rarr;</a></p>
-      
-    </article>
+        <span class="list-post-date post-info">
+             by <a href="/about-me/" class="p-author h-card"
+                                   rel="author">A N M Bazlur Rahman</a>
+            <time datetime=" 2016-11-29">
+             on 29 November, 2016 at 18:22 &#43;0000
+            </time>
+
+        </span>
+        <span>
+            <div id="tags"><a class="post-tag tag-small" href="/tags/java" rel="tag"> Java </a> &nbsp; <a class="post-tag tag-small" href="/tags/java-9" rel="tag"> Java 9 </a> &nbsp; <a class="post-tag tag-small" href="/tags/parallel" rel="tag"> Parallel </a> &nbsp; <a class="post-tag tag-small" href="/tags/sorting" rel="tag"> Sorting </a> &nbsp; <a class="post-tag tag-small" href="/tags/performance" rel="tag"> Performance </a></div>
+        </span>
+    </div>
+</article>
     
 </div>
   <footer>
   <footer>
-  <div>
+  <div  class="wrapper-footer">
     <p>
-    &copy; <a href="https://bazlur.com"> A N M Bazlur Rahman</a> 2012 - 2021 | <a href="https://github.com/rokon12">Github</a>
+      &copy; <a href="https://bazlur.com"> A N M Bazlur Rahman</a> <span id="footer-copyright">2012 - 2021 </span>  | <a href="https://github.com/rokon12">Github</a>
     | <a href=" https://twitter.com/bazlur_rahman"> @bazlur_rahman</a>
     </p>
   </div>

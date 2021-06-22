@@ -44,6 +44,7 @@
     <script src="/js/prism.js"></script>
 
     <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/icofont.min.css" />
     <link rel="stylesheet" href="/css/fonts.css" />
     <link rel="stylesheet" href="/css/prism.css" />
 
@@ -79,26 +80,36 @@ if (!doNotTrack) {
 
   <body class="line-numbers">
 
-  <nav>
-    <ul class="menu">
-      
-      <li><a href="/">Home</a></li>
-      
-      <li><a href="/archives">Archives</a></li>
-      
-      <li><a href="/about-me/">About me</a></li>
-      
-      <li><a href="/books/">Books</a></li>
-      
-      <li><a href="/categories/">Categories</a></li>
-      
-      <li><a href="/resume/">Resume</a></li>
-      
-      <li><a href="/index.xml">Subscribe</a></li>
-      
-    </ul>
-    <hr/>
-    </nav>
+  <div id="head">
+    <div class="container">
+      <header class="masthead clearfix">
+        <a href="/"></a>
+        <div class="site-info">
+          <h1 class="site-name"> <a href="/"> Bazlur&#39;s Stream of Thoughts</a></h1>
+          <p class="site-description">This blog is meant to be a vehicle for airing my interest, feelings, thoughts, and opinion. </p>
+        </div>
+      </header>
+    </div>
+  </div>
+  <div id="header-menu" class="">
+    <div class="menu">
+      <ul style="margin: 0">
+        
+        <li> <a href="/">Home</a></li>
+        
+        <li> <a href="/archives">Archives</a></li>
+        
+        <li> <a href="/books/">Books</a></li>
+        
+        <li> <a href="/categories/">Categories</a></li>
+        
+        <li> <a href="/resume/">Resume</a></li>
+        
+        <li> <a href="/index.xml">Subscribe</a></li>
+        
+      </ul>
+    </div>
+  </div>
 
 
 <h1>null pointer exception</h1>
@@ -111,33 +122,36 @@ if (!doNotTrack) {
 
 <div id="content">
     
-        <article>
-      <header>
+    
+
+
+
+
+<article class="post">
+    <div class="post-title">
         
         <h2 class="list-title"><a href="http://bazlur.com/posts/2018-03-13-what-is-null-pointer-exception-in-java-how-to-handle-i/">Java তে Null Pointer Exception কী? কীভাবে একে Handle করা যায়?</a></h2>
         
-        <p class="list-post-date">
-          <time datetime="2018-03-12T22:01:13Z">
-            12 March, 2018 at 22:01 &#43;0000
-          </time>
-        </p>
-      </header>
-      <div>
-        কোনো ভেরিয়েবল যদি কোনো অবজেক্টের রেফারেন্স না রাখে,তাহলে সেই ভেরিয়েবল মূলত একটি নাল রেফারেন্স বা শূণ্য রেফারেন্স ধরে রাখে। সেই ভেরিয়েবল নিয়ে কোনো কাজ করতে চাই, তাহলে জাভা ভার্চুয়াল মেশিন এই এক্সেপশন থ্রো করে। বেশ কয়েকটি জায়গায় এই এক্সেপশন থ্রো হতে পারে। যেমন-
-১. একটি ক্লাসের অবজেক্ট তৈরি না করেই সেই ক্লাসের কোনো মেথড করলে। তবে সেই ক্লাসের স্ট্যাটিক মেথড কল করা হলে NullPointerException (NPE) থ্রো হবে না।
-২. কোনো ভেরিয়েবলের টাইপ যদি ক্লাস হয় এবং এটি যদি নাল(null) হয়, তাহলে সেই ভেরিয়েবলের কোনো ফ্লিল্ড পরিবর্তন না অ্যাকসেস করতে গেলে NPE থ্রো হবে।
-      </div>
-      
-      <p><a class="read-more" href="http://bazlur.com/posts/2018-03-13-what-is-null-pointer-exception-in-java-how-to-handle-i/">Read more &rarr;</a></p>
-      
-    </article>
+        <span class="list-post-date post-info">
+             by <a href="/about-me/" class="p-author h-card"
+                                   rel="author">A N M Bazlur Rahman</a>
+            <time datetime=" 2018-03-12">
+             on 12 March, 2018 at 22:01 &#43;0000
+            </time>
+
+        </span>
+        <span>
+            <div id="tags"><a class="post-tag tag-small" href="/tags/java" rel="tag"> java </a> &nbsp; <a class="post-tag tag-small" href="/tags/null-pointer-exception" rel="tag"> null pointer exception </a></div>
+        </span>
+    </div>
+</article>
     
 </div>
   <footer>
   <footer>
-  <div>
+  <div  class="wrapper-footer">
     <p>
-    &copy; <a href="https://bazlur.com"> A N M Bazlur Rahman</a> 2012 - 2021 | <a href="https://github.com/rokon12">Github</a>
+      &copy; <a href="https://bazlur.com"> A N M Bazlur Rahman</a> <span id="footer-copyright">2012 - 2021 </span>  | <a href="https://github.com/rokon12">Github</a>
     | <a href=" https://twitter.com/bazlur_rahman"> @bazlur_rahman</a>
     </p>
   </div>

@@ -44,6 +44,7 @@
     <script src="/js/prism.js"></script>
 
     <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/icofont.min.css" />
     <link rel="stylesheet" href="/css/fonts.css" />
     <link rel="stylesheet" href="/css/prism.css" />
 
@@ -79,154 +80,315 @@ if (!doNotTrack) {
 
   <body class="line-numbers">
 
-  <nav>
-    <ul class="menu">
-      
-      <li><a href="/">Home</a></li>
-      
-      <li><a href="/archives">Archives</a></li>
-      
-      <li><a href="/about-me/">About me</a></li>
-      
-      <li><a href="/books/">Books</a></li>
-      
-      <li><a href="/categories/">Categories</a></li>
-      
-      <li><a href="/resume/">Resume</a></li>
-      
-      <li><a href="/index.xml">Subscribe</a></li>
-      
-    </ul>
-    <hr/>
-    </nav>
+  <div id="head">
+    <div class="container">
+      <header class="masthead clearfix">
+        <a href="/"></a>
+        <div class="site-info">
+          <h1 class="site-name"> <a href="/"> Bazlur&#39;s Stream of Thoughts</a></h1>
+          <p class="site-description">This blog is meant to be a vehicle for airing my interest, feelings, thoughts, and opinion. </p>
+        </div>
+      </header>
+    </div>
+  </div>
+  <div id="header-menu" class="">
+    <div class="menu">
+      <ul style="margin: 0">
+        
+        <li> <a href="/">Home</a></li>
+        
+        <li> <a href="/archives">Archives</a></li>
+        
+        <li> <a href="/books/">Books</a></li>
+        
+        <li> <a href="/categories/">Categories</a></li>
+        
+        <li> <a href="/resume/">Resume</a></li>
+        
+        <li> <a href="/index.xml">Subscribe</a></li>
+        
+      </ul>
+    </div>
+  </div>
 
 <h1>Posts</h1>
 
 
+<div class="container">
+    <div id="posts" class="page">
+        
+
+        <h2>Posts</h2>
+        <div id="content">
+            
+            
+            
 
 
-<h2>Posts</h2>
-<div id="content">
-  
-  
-      <article>
-      <header>
+
+
+<article class="post">
+    <div class="post-title">
         
-        <h2 class="list-title"><a href="http://bazlur.com/posts/2018-01-29-%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%B6%E0%A7%8D%E0%A6%A8-checked-exception-%E0%A6%8F%E0%A6%AC%E0%A6%82-unchecked-exception-%E0%A6%8F%E0%A6%B0-%E0%A6%AE%E0%A6%A7%E0%A7%8D%E0%A6%AF%E0%A7%87-/">প্রশ্ন: Checked Exception এবং Unchecked Exception এর মধ্যে পার্থক্য কী?</a></h2>
+        <h2 class="list-title"><a href="http://bazlur.com/posts/2017-01-27-%E0%A6%9C%E0%A6%BE%E0%A6%AD%E0%A6%BE-%E0%A6%95%E0%A7%87%E0%A6%A8-%E0%A6%AE%E0%A6%BE%E0%A6%B2%E0%A7%8D%E0%A6%9F%E0%A6%BF%E0%A6%AA%E0%A6%B2-%E0%A6%87%E0%A6%A8%E0%A6%B9%E0%A7%87%E0%A6%B0/">জাভা কেন মাল্টিপল ইনহেরিটেন্স (Multiple Inheritance) সাপোর্ট করে না?</a></h2>
         
-        <p class="list-post-date">
-          <time datetime="2018-01-29T00:01:22Z">
-            29 January, 2018 at 00:01 &#43;0000
-          </time>
-        </p>
-      </header>
-      <div>
-        প্রোগ্রাম লিখতে গেলে নানা রকম সমস্যা হয়। কিছু সমস্যা সিস্টেম থেকে হতে পারে, আবার কিছু সসমস্যা প্রোগ্রাম লেখার সময় ভুলের জন্য হতে পারে। যেমন- আমরা যদি ডেটাবেজই সম্পর্কিত কোনো কোড লিখি, কোনো কারণে ইন্টারনেট কানেকাশন বন্ধ হয়ে যেতে পারে, এবং আমরা ডেটাবেইজে কানেক্ট করতে না পারি। আবার কোনো সিকুয়েল কোডে যে বিশেষ আর্গুমেন্টটি পাস করার কথা ছিল সেটি না করলে সিকুয়েলটি ঠিকমতো এক্সিকিউট হবে না এমন হতে পারে। এরকম পরিস্থিতিতে আমাদের অ্যাপ্লিকেশন কোড একধরেণের এক্সেপশন থ্রু করে জানান দেয় যে কোনো রকম সমস্যা হয়েছে।
-      </div>
-      
-      <p><a class="read-more" href="http://bazlur.com/posts/2018-01-29-%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%B6%E0%A7%8D%E0%A6%A8-checked-exception-%E0%A6%8F%E0%A6%AC%E0%A6%82-unchecked-exception-%E0%A6%8F%E0%A6%B0-%E0%A6%AE%E0%A6%A7%E0%A7%8D%E0%A6%AF%E0%A7%87-/">Read more &rarr;</a></p>
-      
-    </article>
-  
-  
-  
-      <article>
-      <header>
+        <span class="list-post-date post-info">
+             by <a href="/about-me/" class="p-author h-card"
+                                   rel="author">A N M Bazlur Rahman</a>
+            <time datetime=" 2017-01-27">
+             on 27 January, 2017 at 18:18 &#43;0000
+            </time>
+
+        </span>
+        <span>
+            <div id="tags"></div>
+        </span>
+    </div>
+</article>
+            
+            
+            
+            
+
+
+
+
+<article class="post">
+    <div class="post-title">
         
-        <h2 class="list-title"><a href="http://bazlur.com/posts/2018-01-29-%E0%A6%A1%E0%A6%BF%E0%A6%AE%E0%A6%A8-%E0%A6%A5%E0%A7%8D%E0%A6%B0%E0%A7%87%E0%A6%A1-%E0%A6%95%E0%A7%80what-is-daemon-thread-in-jav/">ডিমন থ্রেড কী(What is daemon thread in java)?</a></h2>
+        <h2 class="list-title"><a href="http://bazlur.com/posts/2017-01-27-%E0%A6%9C%E0%A6%BE%E0%A6%AD%E0%A6%BE%E0%A6%A4%E0%A7%87-%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%87%E0%A6%AD%E0%A7%87%E0%A6%9F-%E0%A6%AB%E0%A6%BF%E0%A6%B2%E0%A7%8D%E0%A6%A1private-field-/">জাভাতে প্রাইভেট ফিল্ড(private field) প্রয়োজন কেনো? এগুলো অ্যাকসেস করার জন্য গেটার সেটার কেনো ব্যবহার করা হয় ?</a></h2>
         
-        <p class="list-post-date">
-          <time datetime="2018-01-28T22:10:54Z">
-            28 January, 2018 at 22:10 &#43;0000
-          </time>
-        </p>
-      </header>
-      <div>
-        জাভা ভাচুয়াল মেশিন চালু হওয়ার পর কতগুলাে থ্রেড তৈরি হয়। এর মধ্যে মেইন থ্রেড আমাদের কোডগুলো এক্সিকিউট করে। মেইন থ্রেড থেকে আমরা আরও একাধিক থ্রেড তৈরি করতে পারি। যতক্ষণ পর্যন্ত এই থ্রেডগুলো চলতে থাকে, ততক্ষন পর্যন্ত জাভা ভার্চুয়াল মেশিন চলতে থাকে। তবে অনেক সময় কোনো প্রোগ্রামের একটি প্রধান থ্রেডের সঙ্গে আরও কতগুলো থ্রেড তৈরি করতে হয়, যেগুলো বিভিন্ন সহায়ক কাজ করতে থাকে, কিন্তু প্রধান থ্রেডটি বন্ধ হয়ে গেলে এই সহায়ক থ্রেডগুলো প্রয়োজন নেই। এই সহায়ক থ্রেডগুলোকে ডিমন থ্রেড হিসেবে তৈরি করা যায়। জাভা দুই ধরণের থ্রেড তৈরি করা যায়। ১.
-      </div>
-      
-      <p><a class="read-more" href="http://bazlur.com/posts/2018-01-29-%E0%A6%A1%E0%A6%BF%E0%A6%AE%E0%A6%A8-%E0%A6%A5%E0%A7%8D%E0%A6%B0%E0%A7%87%E0%A6%A1-%E0%A6%95%E0%A7%80what-is-daemon-thread-in-jav/">Read more &rarr;</a></p>
-      
-    </article>
-  
-  
-  
-      <article>
-      <header>
+        <span class="list-post-date post-info">
+             by <a href="/about-me/" class="p-author h-card"
+                                   rel="author">A N M Bazlur Rahman</a>
+            <time datetime=" 2017-01-27">
+             on 27 January, 2017 at 18:06 &#43;0000
+            </time>
+
+        </span>
+        <span>
+            <div id="tags"></div>
+        </span>
+    </div>
+</article>
+            
+            
+            
+            
+
+
+
+
+<article class="post">
+    <div class="post-title">
         
-        <h2 class="list-title"><a href="http://bazlur.com/posts/2017-08-18-arraylist-%E0%A6%93-linkedlist-%E0%A6%AE%E0%A6%A7%E0%A7%8D%E0%A6%AF%E0%A7%87-%E0%A6%AA%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A6%95%E0%A7%8D%E0%A6%AF-%E0%A6%95%E0%A7%80-difference-between-arraylis/">ArrayList ও LinkedList মধ্যে পার্থক্য কী? (Difference between ArrayList and LinkedList in Java)</a></h2>
+        <h2 class="list-title"><a href="http://bazlur.com/posts/2017-01-27-java-%E0%A6%A4%E0%A7%87-string-%E0%A6%95%E0%A7%87-immutable-%E0%A6%AC%E0%A6%B2%E0%A6%BE-%E0%A6%B9%E0%A6%AF%E0%A6%BC-%E0%A6%95%E0%A7%87/">Java তে String কে immutable বলা হয় কেন?</a></h2>
         
-        <p class="list-post-date">
-          <time datetime="2017-08-18T13:17:00Z">
-            18 August, 2017 at 13:17 &#43;0000
-          </time>
-        </p>
-      </header>
-      <div>
-        ArrayList ও LinkedList ক্লাস দুটি লিস্ট ইন্টারফেসকে ইমপ্লিমেন্ট করে। যার ফলে এদের মেথড ও ফলাফল একইরকম হলেও ইম্প্লিমেন্টেশনের দিক থেকে এদের মধ্যে বেশ কিছু পার্থক্য রয়েছে। পার্থক্যগুলো নিয়ে আলোচনা করার আগে লিস্ট ইন্টারফেসের প্রধান মেথডগুলো দেখা যাক-
-public interface List{ public E get(int index); public void add(E element); public void add(E element, int index); public void remove(int index); }  উপরের এই মেথডগুলোর ইমপ্লিমেন্টেশন অ্যারেলিস্ট ও লিংকডলিস্ট দুটো ক্লাসেই রয়েছে। ব্যবহারের দিক থেকে এই মেথডগুলোর কোনো পার্থক্য নেই। উদাহরণ-
-      </div>
-      
-      <p><a class="read-more" href="http://bazlur.com/posts/2017-08-18-arraylist-%E0%A6%93-linkedlist-%E0%A6%AE%E0%A6%A7%E0%A7%8D%E0%A6%AF%E0%A7%87-%E0%A6%AA%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A6%95%E0%A7%8D%E0%A6%AF-%E0%A6%95%E0%A7%80-difference-between-arraylis/">Read more &rarr;</a></p>
-      
-    </article>
-  
-  
-  
-      <article>
-      <header>
+        <span class="list-post-date post-info">
+             by <a href="/about-me/" class="p-author h-card"
+                                   rel="author">A N M Bazlur Rahman</a>
+            <time datetime=" 2017-01-27">
+             on 27 January, 2017 at 17:57 &#43;0000
+            </time>
+
+        </span>
+        <span>
+            <div id="tags"></div>
+        </span>
+    </div>
+</article>
+            
+            
+            
+            
+
+
+
+
+<article class="post">
+    <div class="post-title">
         
-        <h2 class="list-title"><a href="http://bazlur.com/posts/2017-08-03-%E0%A6%95%E0%A6%BF%E0%A6%AD%E0%A6%BE%E0%A6%AC%E0%A7%87-%E0%A6%AE%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%B6%E0%A6%BE%E0%A6%B2-%E0%A6%86%E0%A6%B0%E0%A7%8D%E0%A6%9F%E0%A7%87%E0%A6%B0-%E0%A6%A7/">কীভাবে মার্শাল আর্টের ধারণা আপনাকে জাভাতে মাস্টার হতে সাহায্য করে? (How martial art helps you to master Java)</a></h2>
+        <h2 class="list-title"><a href="http://bazlur.com/posts/2017-01-27-%E0%A6%95%E0%A7%87%E0%A6%A8%E0%A7%8B-%E0%A6%9C%E0%A6%BE%E0%A6%AD%E0%A6%BE-%E0%A6%B6%E0%A7%87%E0%A6%96%E0%A6%BE-%E0%A6%89%E0%A6%9A%E0%A6%BF/">কেনো জাভা শেখা উচিত ?</a></h2>
         
-        <p class="list-post-date">
-          <time datetime="2017-08-03T14:27:00Z">
-            3 August, 2017 at 14:27 &#43;0000
-          </time>
-        </p>
-      </header>
-      <div>
-        Shu, Ha, Ri এই শব্দ তিনটি এসেছে জাপানি মার্শাল আর্টসের কনসেপ্ট থেকে। এটি সাধারণত কোনো কিছু শেখার ক্ষেত্রে ব্যবহার করা হয়। শব্দ তিনটির অর্থ করলে দাঁড়ায় –
-১. shu (守) “protect”, “obey” বা মান্য করা
-২. ha (破) “detach”, “digress”, “break” ভাঙ্গা বা বিচ্ছিন্ন করা
-৩. ri (離) “leave”, “separate” আলাদা হওয়া
-জাভা প্রোগ্রামিং শেখার ক্ষেত্রে এই তিনটি ধারণা ব্যবহার করা যেতে পারে। কীভাবে তা নিয়েই এই আলোচনা-
-প্রথমেই সু, অর্থাৎ এখানে প্রত্যেক শিক্ষানবিসদের যে কোনো একটি বই নিয়ে পড়তে শুরু করা উচিৎ(প্রথম পৃষ্টা থেকে একদম শেষ পৃষ্ঠা পর্যন্ত )। বইয়ে যে অনুশীলনীগুলো রয়েছে সেগুলো ভালোভাবে করা। অনেক ক্ষেত্রে বুঝতে অসুবিধা হতে পারে। না বুঝলেও সমস্যা নেই, তবুও বেশি বেশি করে আয়ত্বের মধ্যে নিয়ে আসা। যেমন- জাভাতে কোনো একটি প্রোগ্রাম রান করতে হলে মেইন মেথড লিখতে হয়। মেইন মেথড কেনো লিখতে হয়, এই ব্যাপারটি এখনই না বুঝলে সমস্যা নেই, বরং –
-      </div>
-      
-      <p><a class="read-more" href="http://bazlur.com/posts/2017-08-03-%E0%A6%95%E0%A6%BF%E0%A6%AD%E0%A6%BE%E0%A6%AC%E0%A7%87-%E0%A6%AE%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%B6%E0%A6%BE%E0%A6%B2-%E0%A6%86%E0%A6%B0%E0%A7%8D%E0%A6%9F%E0%A7%87%E0%A6%B0-%E0%A6%A7/">Read more &rarr;</a></p>
-      
-    </article>
-  
-  
-  
-      <article>
-      <header>
+        <span class="list-post-date post-info">
+             by <a href="/about-me/" class="p-author h-card"
+                                   rel="author">A N M Bazlur Rahman</a>
+            <time datetime=" 2017-01-27">
+             on 27 January, 2017 at 16:20 &#43;0000
+            </time>
+
+        </span>
+        <span>
+            <div id="tags"><a class="post-tag tag-small" href="/tags/java" rel="tag"> java </a> &nbsp; <a class="post-tag tag-small" href="/tags/learning" rel="tag"> learning </a> &nbsp; <a class="post-tag tag-small" href="/tags/why-java" rel="tag"> why java </a></div>
+        </span>
+    </div>
+</article>
+            
+            
+            
+            
+
+
+
+
+<article class="post">
+    <div class="post-title">
         
-        <h2 class="list-title"><a href="http://bazlur.com/posts/2017-07-28-%E0%A6%87%E0%A6%A8%E0%A6%AD%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%B6%E0%A6%A8-%E0%A6%85%E0%A6%AC-%E0%A6%95%E0%A6%A8%E0%A7%8D%E0%A6%9F%E0%A7%8D%E0%A6%B0%E0%A7%8B%E0%A6%B2-%E0%A6%95%E0%A7%80-what-/">ইনভার্শন অব কন্ট্রোল কী (What is Inversion of Control)?</a></h2>
+        <h2 class="list-title"><a href="http://bazlur.com/posts/2017-01-25-%E0%A6%AA%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B0%E0%A6%BE%E0%A6%AE%E0%A6%BF%E0%A6%9F%E0%A6%BE%E0%A6%B0-parameter-%E0%A6%93-%E0%A6%86%E0%A6%B0%E0%A7%8D%E0%A6%97%E0%A7%81%E0%A6%AE%E0%A7%87/">প্যারামিটার (Parameter) ও আর্গুমেন্ট (Argument) এর পার্থক্য</a></h2>
         
-        <p class="list-post-date">
-          <time datetime="2017-07-28T17:57:00Z">
-            28 July, 2017 at 17:57 &#43;0000
-          </time>
-        </p>
-      </header>
-      <div>
-        আমরা বাস্তব জগেতে যখন কোনো কিছু তৈরি করি, তখন কাজগুলোকে ছোট ছোট বিভিন্ন উপাদানে বিভক্ত করে ফেলি। যেমন- গাড়ির ক্ষেত্রে – চাকা, স্টিয়ারিং, chassis, দরজা, ইত্যাদি। এগুলো আরও ছোট ছোট অংশে বিভক্তর করে এদেরকে আলাদা আলাদা ভাবে তৈরি করা হয় এবং পরে একসঙ্গে জুড়ে দেওয়া হয়।
-একইভাবে অবজেক্ট ওরিয়েন্টেড প্রোগ্রামিংয়ের মূল ব্যপার হলো বাস্তব জগতের সঙ্গে সাদৃশ্য রেখে কোনো সমস্যা সমাধান করা। এতে অনেকগুলো অবজেক্ট থাকা যারা নিদির্ষ্ট কোনো কাজ করে এবং এগুলোকে একত্রে জুড়ে দিয়ে একটি বড় অবজেক্ট তৈরি করা হয়। প্রত্যেকটি অবজেক্ট একটি বাস্তব জগতের কোনো কিছুর প্রতিরূপ। Airplane অবজেক্ট একটি উড়োজাহাজকে নির্দেশ করতে পারে, সেভাবে একটি Purchase অবজেক্ট একটি বই কেনার বিভিন্ন ডেটা যেমন- দাম, বই অবজেক্টের রেফারেন্স, কত কপি ইত্যাদি নির্দেশ করতে পারে।
-      </div>
-      
-      <p><a class="read-more" href="http://bazlur.com/posts/2017-07-28-%E0%A6%87%E0%A6%A8%E0%A6%AD%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%B6%E0%A6%A8-%E0%A6%85%E0%A6%AC-%E0%A6%95%E0%A6%A8%E0%A7%8D%E0%A6%9F%E0%A7%8D%E0%A6%B0%E0%A7%8B%E0%A6%B2-%E0%A6%95%E0%A7%80-what-/">Read more &rarr;</a></p>
-      
-    </article>
-  
+        <span class="list-post-date post-info">
+             by <a href="/about-me/" class="p-author h-card"
+                                   rel="author">A N M Bazlur Rahman</a>
+            <time datetime=" 2017-01-25">
+             on 25 January, 2017 at 16:06 &#43;0000
+            </time>
+
+        </span>
+        <span>
+            <div id="tags"></div>
+        </span>
+    </div>
+</article>
+            
+            
+            
+            
+
+
+
+
+<article class="post">
+    <div class="post-title">
+        
+        <h2 class="list-title"><a href="http://bazlur.com/posts/2017-01-25-%E0%A6%9C%E0%A6%BE%E0%A6%AD%E0%A6%BE-%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A7%8B%E0%A6%97%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%AE%E0%A6%BF%E0%A6%82-%E0%A6%B2%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%82/">জাভা প্রোগ্রামিং ল্যাংগুয়েজ তৈরির পেছনের গল্প</a></h2>
+        
+        <span class="list-post-date post-info">
+             by <a href="/about-me/" class="p-author h-card"
+                                   rel="author">A N M Bazlur Rahman</a>
+            <time datetime=" 2017-01-25">
+             on 25 January, 2017 at 15:25 &#43;0000
+            </time>
+
+        </span>
+        <span>
+            <div id="tags"><a class="post-tag tag-small" href="/tags/history" rel="tag"> history </a> &nbsp; <a class="post-tag tag-small" href="/tags/history-of-java" rel="tag"> history of java </a> &nbsp; <a class="post-tag tag-small" href="/tags/java" rel="tag"> java </a></div>
+        </span>
+    </div>
+</article>
+            
+            
+            
+            
+
+
+
+
+<article class="post">
+    <div class="post-title">
+        
+        <h2 class="list-title"><a href="http://bazlur.com/posts/2017-01-13-%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A7%8B%E0%A6%97%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%AE%E0%A6%BF%E0%A6%82-%E0%A6%AA%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B0%E0%A6%BE%E0%A6%A1%E0%A6%BE%E0%A6%87/">প্রোগ্রামিং প্যারাডাইম</a></h2>
+        
+        <span class="list-post-date post-info">
+             by <a href="/about-me/" class="p-author h-card"
+                                   rel="author">A N M Bazlur Rahman</a>
+            <time datetime=" 2017-01-13">
+             on 13 January, 2017 at 17:38 &#43;0000
+            </time>
+
+        </span>
+        <span>
+            <div id="tags"></div>
+        </span>
+    </div>
+</article>
+            
+            
+            
+            
+
+
+
+
+<article class="post">
+    <div class="post-title">
+        
+        <h2 class="list-title"><a href="http://bazlur.com/posts/2017-01-08-agile-and-scru/">Agile and Scrum</a></h2>
+        
+        <span class="list-post-date post-info">
+             by <a href="/about-me/" class="p-author h-card"
+                                   rel="author">A N M Bazlur Rahman</a>
+            <time datetime=" 2017-01-08">
+             on 8 January, 2017 at 22:04 &#43;0000
+            </time>
+
+        </span>
+        <span>
+            <div id="tags"><a class="post-tag tag-small" href="/tags/agile" rel="tag"> agile </a> &nbsp; <a class="post-tag tag-small" href="/tags/methodology" rel="tag"> methodology </a> &nbsp; <a class="post-tag tag-small" href="/tags/scrum" rel="tag"> scrum </a> &nbsp; <a class="post-tag tag-small" href="/tags/software-development" rel="tag"> software development </a></div>
+        </span>
+    </div>
+</article>
+            
+            
+            
+            
+
+
+
+
+<article class="post">
+    <div class="post-title">
+        
+        <h2 class="list-title"><a href="http://bazlur.com/posts/2017-01-05-act-with-prudenc/">Act with Prudence</a></h2>
+        
+        <span class="list-post-date post-info">
+             by <a href="/about-me/" class="p-author h-card"
+                                   rel="author">A N M Bazlur Rahman</a>
+            <time datetime=" 2017-01-05">
+             on 5 January, 2017 at 18:38 &#43;0000
+            </time>
+
+        </span>
+        <span>
+            <div id="tags"></div>
+        </span>
+    </div>
+</article>
+            
+            
+            
+            
+
+
+
+
+<article class="post">
+    <div class="post-title">
+        
+        <h2 class="list-title"><a href="http://bazlur.com/2016/12/we-dont-need-stringbuilder-for-simple-concatenation/">We Don&#39;t Need StringBuilder for Simple Concatenation</a></h2>
+        
+        <span class="list-post-date post-info">
+             by <a href="/about-me/" class="p-author h-card"
+                                   rel="author">A N M Bazlur Rahman</a>
+            <time datetime=" 2016-12-22">
+             on 22 December, 2016 at 19:06 &#43;0000
+            </time>
+
+        </span>
+        <span>
+            <div id="tags"><a class="post-tag tag-small" href="/tags/java" rel="tag"> java </a> &nbsp; <a class="post-tag tag-small" href="/tags/java-performance" rel="tag"> java performance </a> &nbsp; <a class="post-tag tag-small" href="/tags/concatenation" rel="tag"> concatenation </a> &nbsp; <a class="post-tag tag-small" href="/tags/stringbuilder" rel="tag"> stringbuilder </a></div>
+        </span>
+    </div>
+</article>
+            
+        </div>
+    </div>
+
 </div>
-
-
   <footer>
   <footer>
-  <div>
+  <div  class="wrapper-footer">
     <p>
-    &copy; <a href="https://bazlur.com"> A N M Bazlur Rahman</a> 2012 - 2021 | <a href="https://github.com/rokon12">Github</a>
+      &copy; <a href="https://bazlur.com"> A N M Bazlur Rahman</a> <span id="footer-copyright">2012 - 2021 </span>  | <a href="https://github.com/rokon12">Github</a>
     | <a href=" https://twitter.com/bazlur_rahman"> @bazlur_rahman</a>
     </p>
   </div>

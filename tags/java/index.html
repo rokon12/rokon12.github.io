@@ -44,6 +44,7 @@
     <script src="/js/prism.js"></script>
 
     <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/icofont.min.css" />
     <link rel="stylesheet" href="/css/fonts.css" />
     <link rel="stylesheet" href="/css/prism.css" />
 
@@ -79,26 +80,36 @@ if (!doNotTrack) {
 
   <body class="line-numbers">
 
-  <nav>
-    <ul class="menu">
-      
-      <li><a href="/">Home</a></li>
-      
-      <li><a href="/archives">Archives</a></li>
-      
-      <li><a href="/about-me/">About me</a></li>
-      
-      <li><a href="/books/">Books</a></li>
-      
-      <li><a href="/categories/">Categories</a></li>
-      
-      <li><a href="/resume/">Resume</a></li>
-      
-      <li><a href="/index.xml">Subscribe</a></li>
-      
-    </ul>
-    <hr/>
-    </nav>
+  <div id="head">
+    <div class="container">
+      <header class="masthead clearfix">
+        <a href="/"></a>
+        <div class="site-info">
+          <h1 class="site-name"> <a href="/"> Bazlur&#39;s Stream of Thoughts</a></h1>
+          <p class="site-description">This blog is meant to be a vehicle for airing my interest, feelings, thoughts, and opinion. </p>
+        </div>
+      </header>
+    </div>
+  </div>
+  <div id="header-menu" class="">
+    <div class="menu">
+      <ul style="margin: 0">
+        
+        <li> <a href="/">Home</a></li>
+        
+        <li> <a href="/archives">Archives</a></li>
+        
+        <li> <a href="/books/">Books</a></li>
+        
+        <li> <a href="/categories/">Categories</a></li>
+        
+        <li> <a href="/resume/">Resume</a></li>
+        
+        <li> <a href="/index.xml">Subscribe</a></li>
+        
+      </ul>
+    </div>
+  </div>
 
 
 <h1>java</h1>
@@ -111,874 +122,1044 @@ if (!doNotTrack) {
 
 <div id="content">
     
-        <article>
-      <header>
+    
+
+
+
+
+<article class="post">
+    <div class="post-title">
         
         <h2 class="list-title"><a href="http://bazlur.com/2021/06/completablefuture-made-life-easy-running-things-asynchronous/">CompletableFuture made life easy, running things asynchronous</a></h2>
         
-        <p class="list-post-date">
-          <time datetime="2021-06-20T00:10:40-04:00">
-            20 June, 2021 at 00:10 EDT
-          </time>
-        </p>
-      </header>
-      <div>
-        Let&rsquo;s assume you have to invoke two REST APIs and then combine the result. You can run them one by one and then accumulate the result. It looks easy. However, if each call takes up some time, the total time would be pretty significant.
-However, we can reduce the time if we can run these two asynchronously, making them parallel. That&rsquo;s where CompletableFuture comes into play.
-Let&rsquo;s see a code-
-      </div>
-      
-      <p><a class="read-more" href="http://bazlur.com/2021/06/completablefuture-made-life-easy-running-things-asynchronous/">Read more &rarr;</a></p>
-      
-    </article>
+        <span class="list-post-date post-info">
+             by <a href="/about-me/" class="p-author h-card"
+                                   rel="author">A N M Bazlur Rahman</a>
+            <time datetime=" 2021-06-20">
+             on 20 June, 2021 at 00:10 EDT
+            </time>
+
+        </span>
+        <span>
+            <div id="tags"><a class="post-tag tag-small" href="/tags/java" rel="tag"> java </a> &nbsp; <a class="post-tag tag-small" href="/tags/coding" rel="tag"> coding </a> &nbsp; <a class="post-tag tag-small" href="/tags/100daysofjava" rel="tag"> 100DaysOfJava </a> &nbsp; <a class="post-tag tag-small" href="/tags/100daysofcode" rel="tag"> 100DaysOfCode </a> &nbsp; <a class="post-tag tag-small" href="/tags/completablefuture" rel="tag"> CompletableFuture </a></div>
+        </span>
+    </div>
+</article>
     
-        <article>
-      <header>
+    
+
+
+
+
+<article class="post">
+    <div class="post-title">
         
         <h2 class="list-title"><a href="http://bazlur.com/2021/06/lets-find-out-the-most-enormous-known-prime-number-using-java/">Let&#39;s find out the most enormous known prime number using java</a></h2>
         
-        <p class="list-post-date">
-          <time datetime="2021-06-19T00:10:40-04:00">
-            19 June, 2021 at 00:10 EDT
-          </time>
-        </p>
-      </header>
-      <div>
-        According to Wikipedia, the biggest known prime number (as of December 2020) is 2^82,589,933 − 1, which has 24,862,048 digits when printed in base 10.
-The number itself is unfathomable.
-Let&rsquo;s write a java program that calculates this number and writes it in a text file.
-It doesn&rsquo;t take much time to calculate the number, but writing on file or flushing on Standard output would take quite a significant time.
-      </div>
-      
-      <p><a class="read-more" href="http://bazlur.com/2021/06/lets-find-out-the-most-enormous-known-prime-number-using-java/">Read more &rarr;</a></p>
-      
-    </article>
+        <span class="list-post-date post-info">
+             by <a href="/about-me/" class="p-author h-card"
+                                   rel="author">A N M Bazlur Rahman</a>
+            <time datetime=" 2021-06-19">
+             on 19 June, 2021 at 00:10 EDT
+            </time>
+
+        </span>
+        <span>
+            <div id="tags"><a class="post-tag tag-small" href="/tags/java" rel="tag"> java </a> &nbsp; <a class="post-tag tag-small" href="/tags/coding" rel="tag"> coding </a> &nbsp; <a class="post-tag tag-small" href="/tags/100daysofjava" rel="tag"> 100DaysOfJava </a> &nbsp; <a class="post-tag tag-small" href="/tags/100daysofcode" rel="tag"> 100DaysOfCode </a> &nbsp; <a class="post-tag tag-small" href="/tags/prime-number" rel="tag"> Prime Number </a></div>
+        </span>
+    </div>
+</article>
     
-        <article>
-      <header>
+    
+
+
+
+
+<article class="post">
+    <div class="post-title">
         
         <h2 class="list-title"><a href="http://bazlur.com/2021/06/lets-create-coffee-with-a-decorator-pattern-with-the-help-of-lambda-expression/">Let&#39;s create coffee with a decorator pattern with the help of lambda expression</a></h2>
         
-        <p class="list-post-date">
-          <time datetime="2021-06-18T00:10:40-04:00">
-            18 June, 2021 at 00:10 EDT
-          </time>
-        </p>
-      </header>
-      <div>
-        java.util.function.Function&lt;T, R&gt; is a functional interface. It takes a type T and returns type R. We mostly use it to transform a type into a different one. But it doesn&rsquo;t end there. We can use this into a lambda expression to change a value as well. For example-
-Function&lt;Integer, Integer&gt; doubleIt = a -&gt; a * 2;  Over here, we are receiving and in integer but returning after doubling it.
-      </div>
-      
-      <p><a class="read-more" href="http://bazlur.com/2021/06/lets-create-coffee-with-a-decorator-pattern-with-the-help-of-lambda-expression/">Read more &rarr;</a></p>
-      
-    </article>
+        <span class="list-post-date post-info">
+             by <a href="/about-me/" class="p-author h-card"
+                                   rel="author">A N M Bazlur Rahman</a>
+            <time datetime=" 2021-06-18">
+             on 18 June, 2021 at 00:10 EDT
+            </time>
+
+        </span>
+        <span>
+            <div id="tags"><a class="post-tag tag-small" href="/tags/java" rel="tag"> java </a> &nbsp; <a class="post-tag tag-small" href="/tags/coding" rel="tag"> coding </a> &nbsp; <a class="post-tag tag-small" href="/tags/100daysofjava" rel="tag"> 100DaysOfJava </a> &nbsp; <a class="post-tag tag-small" href="/tags/100daysofcode" rel="tag"> 100DaysOfCode </a> &nbsp; <a class="post-tag tag-small" href="/tags/java8" rel="tag"> java8 </a> &nbsp; <a class="post-tag tag-small" href="/tags/lambda-expression" rel="tag"> Lambda Expression </a></div>
+        </span>
+    </div>
+</article>
     
-        <article>
-      <header>
+    
+
+
+
+
+<article class="post">
+    <div class="post-title">
         
         <h2 class="list-title"><a href="http://bazlur.com/2021/06/lets-use-the-new-http-client-that-java-11-brought/">Let&#39;s use the new HTTP Client that java 11 brought</a></h2>
         
-        <p class="list-post-date">
-          <time datetime="2021-06-17T00:06:10-04:00">
-            17 June, 2021 at 00:06 EDT
-          </time>
-        </p>
-      </header>
-      <div>
-        Java 11 brought an inbuilt HTTP client. As a result, we don&rsquo;t need a third-party library anymore to invoke an HTTP request.
-Let&rsquo;s call a chuck Norris api to fetch a random joke.
-package com.bazlur; import java.io.IOException; import java.net.URI; import java.net.URISyntaxException; import java.net.http.HttpClient; import java.net.http.HttpRequest; import java.net.http.HttpResponse; import java.time.Duration; public class Day011 { public static final String CHUCK_NORRIS_RANDOM_JOKES_API = &quot;https://api.chucknorris.io/jokes/random&quot;; public static void main(String[] args) throws URISyntaxException, IOException, InterruptedException { var client = HttpClient.
-      </div>
-      
-      <p><a class="read-more" href="http://bazlur.com/2021/06/lets-use-the-new-http-client-that-java-11-brought/">Read more &rarr;</a></p>
-      
-    </article>
+        <span class="list-post-date post-info">
+             by <a href="/about-me/" class="p-author h-card"
+                                   rel="author">A N M Bazlur Rahman</a>
+            <time datetime=" 2021-06-17">
+             on 17 June, 2021 at 00:06 EDT
+            </time>
+
+        </span>
+        <span>
+            <div id="tags"><a class="post-tag tag-small" href="/tags/java" rel="tag"> java </a> &nbsp; <a class="post-tag tag-small" href="/tags/coding" rel="tag"> coding </a> &nbsp; <a class="post-tag tag-small" href="/tags/100daysofjava" rel="tag"> 100DaysOfJava </a> &nbsp; <a class="post-tag tag-small" href="/tags/http-client" rel="tag"> HTTP Client </a> &nbsp; <a class="post-tag tag-small" href="/tags/100daysofcode" rel="tag"> 100DaysOfCode </a> &nbsp; <a class="post-tag tag-small" href="/tags/java16" rel="tag"> java16 </a> &nbsp; <a class="post-tag tag-small" href="/tags/java11" rel="tag"> java11 </a></div>
+        </span>
+    </div>
+</article>
     
-        <article>
-      <header>
+    
+
+
+
+
+<article class="post">
+    <div class="post-title">
         
         <h2 class="list-title"><a href="http://bazlur.com/2021/06/how-to-calculate-date-and-time-involving-time-zone-doesnt-have-to-be-hard./">How to calculate date and time involving time zone? doesn&#39;t have to be hard.</a></h2>
         
-        <p class="list-post-date">
-          <time datetime="2021-06-16T00:10:10-04:00">
-            16 June, 2021 at 00:10 EDT
-          </time>
-        </p>
-      </header>
-      <div>
-        Calculating time with a zone was never this easy. Using the date-time API, you can calculate with timezone pretty much effortlessly.
-Let&rsquo;s assume we have a flight from Toronto (YYZ) to Dubai (DXB) today. The flight takes off at 21:45. The total duration of the flight is 12 hours and 45 minutes. What would be the local time when the plane lands?
-The following code will allow you to calculate that easily-
-      </div>
-      
-      <p><a class="read-more" href="http://bazlur.com/2021/06/how-to-calculate-date-and-time-involving-time-zone-doesnt-have-to-be-hard./">Read more &rarr;</a></p>
-      
-    </article>
+        <span class="list-post-date post-info">
+             by <a href="/about-me/" class="p-author h-card"
+                                   rel="author">A N M Bazlur Rahman</a>
+            <time datetime=" 2021-06-16">
+             on 16 June, 2021 at 00:10 EDT
+            </time>
+
+        </span>
+        <span>
+            <div id="tags"><a class="post-tag tag-small" href="/tags/java" rel="tag"> java </a> &nbsp; <a class="post-tag tag-small" href="/tags/coding" rel="tag"> coding </a> &nbsp; <a class="post-tag tag-small" href="/tags/100daysofjava" rel="tag"> 100DaysOfJava </a> &nbsp; <a class="post-tag tag-small" href="/tags/localdatetime" rel="tag"> LocalDateTime </a> &nbsp; <a class="post-tag tag-small" href="/tags/zoneid" rel="tag"> ZoneId </a> &nbsp; <a class="post-tag tag-small" href="/tags/duration" rel="tag"> Duration </a> &nbsp; <a class="post-tag tag-small" href="/tags/datetime" rel="tag"> DateTime </a> &nbsp; <a class="post-tag tag-small" href="/tags/100daysofcode" rel="tag"> 100DaysOfCode </a></div>
+        </span>
+    </div>
+</article>
     
-        <article>
-      <header>
+    
+
+
+
+
+<article class="post">
+    <div class="post-title">
         
         <h2 class="list-title"><a href="http://bazlur.com/2021/06/lets-use-optional-to-fix-our-method-contract./">Let&#39;s use Optional to fix our method contract.</a></h2>
         
-        <p class="list-post-date">
-          <time datetime="2021-06-15T00:52:10-04:00">
-            15 June, 2021 at 00:52 EDT
-          </time>
-        </p>
-      </header>
-      <div>
-        A method is a contract; when we define one, we put our thoughts into it. We specify the parameters with their type and also a return type. When we invoke a method, we expect it to behave according to the contract. If it doesn&rsquo;t, it&rsquo;s a violation of the contract.
-We have been dealing with such a violation all the time. We invoke a method with its proper arguments, and we get a return.
-      </div>
-      
-      <p><a class="read-more" href="http://bazlur.com/2021/06/lets-use-optional-to-fix-our-method-contract./">Read more &rarr;</a></p>
-      
-    </article>
+        <span class="list-post-date post-info">
+             by <a href="/about-me/" class="p-author h-card"
+                                   rel="author">A N M Bazlur Rahman</a>
+            <time datetime=" 2021-06-15">
+             on 15 June, 2021 at 00:52 EDT
+            </time>
+
+        </span>
+        <span>
+            <div id="tags"><a class="post-tag tag-small" href="/tags/java" rel="tag"> java </a> &nbsp; <a class="post-tag tag-small" href="/tags/coding" rel="tag"> coding </a> &nbsp; <a class="post-tag tag-small" href="/tags/100daysofjava" rel="tag"> 100DaysOfJava </a> &nbsp; <a class="post-tag tag-small" href="/tags/optional" rel="tag"> Optional </a> &nbsp; <a class="post-tag tag-small" href="/tags/functional" rel="tag"> Functional </a> &nbsp; <a class="post-tag tag-small" href="/tags/100daysofcode" rel="tag"> 100DaysOfCode </a></div>
+        </span>
+    </div>
+</article>
     
-        <article>
-      <header>
+    
+
+
+
+
+<article class="post">
+    <div class="post-title">
         
         <h2 class="list-title"><a href="http://bazlur.com/2021/06/how-to-stop-a-java-program-gracefully/">How to stop a java program gracefully?</a></h2>
         
-        <p class="list-post-date">
-          <time datetime="2021-06-14T00:04:10-04:00">
-            14 June, 2021 at 00:04 EDT
-          </time>
-        </p>
-      </header>
-      <div>
-        Sometimes you may want to stop your java program using SIGINT hitting your CTRL+C. For example, your program may be doing something important, e.g., opening a server socket and waiting on a port or doing some background work on a thread pool. You want to stop it gracefully shutting down your socket or the thread pool. For such scenarios, what you can do is, add a shutdown hook to the java runtime.
-      </div>
-      
-      <p><a class="read-more" href="http://bazlur.com/2021/06/how-to-stop-a-java-program-gracefully/">Read more &rarr;</a></p>
-      
-    </article>
+        <span class="list-post-date post-info">
+             by <a href="/about-me/" class="p-author h-card"
+                                   rel="author">A N M Bazlur Rahman</a>
+            <time datetime=" 2021-06-14">
+             on 14 June, 2021 at 00:04 EDT
+            </time>
+
+        </span>
+        <span>
+            <div id="tags"><a class="post-tag tag-small" href="/tags/java" rel="tag"> java </a> &nbsp; <a class="post-tag tag-small" href="/tags/coding" rel="tag"> coding </a> &nbsp; <a class="post-tag tag-small" href="/tags/100daysofjava" rel="tag"> 100DaysOfJava </a> &nbsp; <a class="post-tag tag-small" href="/tags/executors" rel="tag"> Executors </a> &nbsp; <a class="post-tag tag-small" href="/tags/100daysofcode" rel="tag"> 100DaysOfCode </a></div>
+        </span>
+    </div>
+</article>
     
-        <article>
-      <header>
+    
+
+
+
+
+<article class="post">
+    <div class="post-title">
         
         <h2 class="list-title"><a href="http://bazlur.com/2021/06/how-to-run-a-task-periodically-in-java/">How to run a task periodically in java</a></h2>
         
-        <p class="list-post-date">
-          <time datetime="2021-06-13T04:38:10-04:00">
-            13 June, 2021 at 04:38 EDT
-          </time>
-        </p>
-      </header>
-      <div>
-        Sometimes you want to run a particular task at a fixed rate periodically. The job could be anything, e.g. you may want to call a rest API to check for an update, or perhaps pull information from a database, do some processing, and then send an email. Or maybe you want to keep your eyes on the stock exchange. The following code snippet will allow you to do that sort of task precisely.
-      </div>
-      
-      <p><a class="read-more" href="http://bazlur.com/2021/06/how-to-run-a-task-periodically-in-java/">Read more &rarr;</a></p>
-      
-    </article>
+        <span class="list-post-date post-info">
+             by <a href="/about-me/" class="p-author h-card"
+                                   rel="author">A N M Bazlur Rahman</a>
+            <time datetime=" 2021-06-13">
+             on 13 June, 2021 at 04:38 EDT
+            </time>
+
+        </span>
+        <span>
+            <div id="tags"><a class="post-tag tag-small" href="/tags/java" rel="tag"> java </a> &nbsp; <a class="post-tag tag-small" href="/tags/coding" rel="tag"> coding </a> &nbsp; <a class="post-tag tag-small" href="/tags/100daysofjava" rel="tag"> 100DaysOfJava </a> &nbsp; <a class="post-tag tag-small" href="/tags/file" rel="tag"> File </a> &nbsp; <a class="post-tag tag-small" href="/tags/executors" rel="tag"> Executors </a> &nbsp; <a class="post-tag tag-small" href="/tags/scheduler" rel="tag"> Scheduler </a> &nbsp; <a class="post-tag tag-small" href="/tags/100daysofcode" rel="tag"> 100DaysOfCode </a></div>
+        </span>
+    </div>
+</article>
     
-        <article>
-      <header>
+    
+
+
+
+
+<article class="post">
+    <div class="post-title">
         
         <h2 class="list-title"><a href="http://bazlur.com/2021/06/how-to-watch-a-directory-to-detect-changes-using-java/">How to watch a directory to detect changes using java</a></h2>
         
-        <p class="list-post-date">
-          <time datetime="2021-06-12T16:19:10-04:00">
-            12 June, 2021 at 16:19 EDT
-          </time>
-        </p>
-      </header>
-      <div>
-        Have you ever noticed, when you open a file into two different editors, and when you made changes in one, the other one informs you that the file has changed and you need to reload? How does it do that?
-Well, the following coding snippet would do the trick. Let&rsquo;s watch a particular directory and listen to the event.
-for copy/paste pleasure: https://github.com/rokon12/100DaysOfJava/blob/main/src/main/java/com/bazlur/Day006.java
-      </div>
-      
-    </article>
+        <span class="list-post-date post-info">
+             by <a href="/about-me/" class="p-author h-card"
+                                   rel="author">A N M Bazlur Rahman</a>
+            <time datetime=" 2021-06-12">
+             on 12 June, 2021 at 16:19 EDT
+            </time>
+
+        </span>
+        <span>
+            <div id="tags"><a class="post-tag tag-small" href="/tags/java" rel="tag"> java </a> &nbsp; <a class="post-tag tag-small" href="/tags/coding" rel="tag"> coding </a> &nbsp; <a class="post-tag tag-small" href="/tags/100daysofjava" rel="tag"> 100DaysOfJava </a> &nbsp; <a class="post-tag tag-small" href="/tags/file" rel="tag"> File </a> &nbsp; <a class="post-tag tag-small" href="/tags/nio" rel="tag"> NIO </a> &nbsp; <a class="post-tag tag-small" href="/tags/100daysofcode" rel="tag"> 100DaysOfCode </a></div>
+        </span>
+    </div>
+</article>
     
-        <article>
-      <header>
+    
+
+
+
+
+<article class="post">
+    <div class="post-title">
         
         <h2 class="list-title"><a href="http://bazlur.com/2021/06/how-to-read-texts-from-a-file-using-java/">How to read texts from a file using java</a></h2>
         
-        <p class="list-post-date">
-          <time datetime="2021-06-11T13:38:10-04:00">
-            11 June, 2021 at 13:38 EDT
-          </time>
-        </p>
-      </header>
-      <div>
-        Reading texts from a file has never been this easy. You have to call Files.readString(), that&rsquo;s it.
-Let&rsquo;s read a text file, remove all the punctuation from it and then count all the unique words.
-for copy/paste pleasure: https://github.com/rokon12/100DaysOfJava/blob/main/src/main/java/com/bazlur/Day005.java
-      </div>
-      
-    </article>
+        <span class="list-post-date post-info">
+             by <a href="/about-me/" class="p-author h-card"
+                                   rel="author">A N M Bazlur Rahman</a>
+            <time datetime=" 2021-06-11">
+             on 11 June, 2021 at 13:38 EDT
+            </time>
+
+        </span>
+        <span>
+            <div id="tags"><a class="post-tag tag-small" href="/tags/java" rel="tag"> java </a> &nbsp; <a class="post-tag tag-small" href="/tags/coding" rel="tag"> coding </a> &nbsp; <a class="post-tag tag-small" href="/tags/100daysofjava" rel="tag"> 100DaysOfJava </a> &nbsp; <a class="post-tag tag-small" href="/tags/string" rel="tag"> String </a> &nbsp; <a class="post-tag tag-small" href="/tags/100daysofcode" rel="tag"> 100DaysOfCode </a></div>
+        </span>
+    </div>
+</article>
     
-        <article>
-      <header>
+    
+
+
+
+
+<article class="post">
+    <div class="post-title">
         
         <h2 class="list-title"><a href="http://bazlur.com/2021/06/how-to-convert-multiple-images-into-a-single-pdf-file/">How to convert multiple images into a single pdf file</a></h2>
         
-        <p class="list-post-date">
-          <time datetime="2021-06-10T01:38:10-04:00">
-            10 June, 2021 at 01:38 EDT
-          </time>
-        </p>
-      </header>
-      <div>
-        I had some images that I needed had to export as pdf. I looked in the app store to find a free tool that makes it possible for me. However, after a quick search, I was not satisfied with the result. The Apps that support such things come at a hefty price tag. Then it hits me. Why not I write a few lines of java code and export pdf with ITextPdf library.
-      </div>
-      
-      <p><a class="read-more" href="http://bazlur.com/2021/06/how-to-convert-multiple-images-into-a-single-pdf-file/">Read more &rarr;</a></p>
-      
-    </article>
+        <span class="list-post-date post-info">
+             by <a href="/about-me/" class="p-author h-card"
+                                   rel="author">A N M Bazlur Rahman</a>
+            <time datetime=" 2021-06-10">
+             on 10 June, 2021 at 01:38 EDT
+            </time>
+
+        </span>
+        <span>
+            <div id="tags"><a class="post-tag tag-small" href="/tags/java" rel="tag"> java </a> &nbsp; <a class="post-tag tag-small" href="/tags/coding" rel="tag"> coding </a> &nbsp; <a class="post-tag tag-small" href="/tags/100daysofjava" rel="tag"> 100DaysOfJava </a> &nbsp; <a class="post-tag tag-small" href="/tags/image" rel="tag"> image </a> &nbsp; <a class="post-tag tag-small" href="/tags/export" rel="tag"> export </a> &nbsp; <a class="post-tag tag-small" href="/tags/pdf" rel="tag"> pdf </a> &nbsp; <a class="post-tag tag-small" href="/tags/itext-pdf" rel="tag"> itext pdf </a> &nbsp; <a class="post-tag tag-small" href="/tags/100daysofcode" rel="tag"> 100DaysOfCode </a></div>
+        </span>
+    </div>
+</article>
     
-        <article>
-      <header>
+    
+
+
+
+
+<article class="post">
+    <div class="post-title">
         
         <h2 class="list-title"><a href="http://bazlur.com/2021/06/lets-count-the-occurrence-with-groupby-and-counting/">Let&#39;s count the occurrence with groupBy and counting</a></h2>
         
-        <p class="list-post-date">
-          <time datetime="2021-06-10T00:04:10-04:00">
-            10 June, 2021 at 00:04 EDT
-          </time>
-        </p>
-      </header>
-      <div>
-        
-      </div>
-      
-    </article>
+        <span class="list-post-date post-info">
+             by <a href="/about-me/" class="p-author h-card"
+                                   rel="author">A N M Bazlur Rahman</a>
+            <time datetime=" 2021-06-10">
+             on 10 June, 2021 at 00:04 EDT
+            </time>
+
+        </span>
+        <span>
+            <div id="tags"><a class="post-tag tag-small" href="/tags/java" rel="tag"> java </a> &nbsp; <a class="post-tag tag-small" href="/tags/coding" rel="tag"> coding </a> &nbsp; <a class="post-tag tag-small" href="/tags/100daysofjava" rel="tag"> 100DaysOfJava </a> &nbsp; <a class="post-tag tag-small" href="/tags/map" rel="tag"> Map </a> &nbsp; <a class="post-tag tag-small" href="/tags/hashmap" rel="tag"> HashMap </a> &nbsp; <a class="post-tag tag-small" href="/tags/100daysofcode" rel="tag"> 100DaysOfCode </a> &nbsp; <a class="post-tag tag-small" href="/tags/countingcollections" rel="tag"> countingcollections </a> &nbsp; <a class="post-tag tag-small" href="/tags/counting" rel="tag"> counting </a> &nbsp; <a class="post-tag tag-small" href="/tags/record" rel="tag"> record </a> &nbsp; <a class="post-tag tag-small" href="/tags/java16" rel="tag"> java16 </a> &nbsp; <a class="post-tag tag-small" href="/tags/groupby" rel="tag"> groupBy </a> &nbsp; <a class="post-tag tag-small" href="/tags/counting" rel="tag"> counting </a></div>
+        </span>
+    </div>
+</article>
     
-        <article>
-      <header>
+    
+
+
+
+
+<article class="post">
+    <div class="post-title">
         
         <h2 class="list-title"><a href="http://bazlur.com/2021/06/avoid-recursive-invocation-on-computeifabsent-in-hashmap/">Avoid recursive invocation on computeIfAbsent() in HashMap</a></h2>
         
-        <p class="list-post-date">
-          <time datetime="2021-06-09T13:04:10-04:00">
-            9 June, 2021 at 13:04 EDT
-          </time>
-        </p>
-      </header>
-      <div>
-        If a value doesn&rsquo;t exist in the map, we calculate. We do it imperatively.
-We first check if a value exists or not using containsKey() in an &ldquo;if block.&rdquo; If not found, we then calculate as follows-
-static Map&lt;Integer, BigInteger&gt; cache = new HashMap&lt;&gt;( Map.of(0, BigInteger.ZERO, 1, BigInteger.ONE) ); public static BigInteger fibonacci(int n) { if (!cache.containsKey(n)) { var computed = fibonacci(n - 1).add(fibonacci(n - 2)); cache.put(n, computed); } return cache.
-      </div>
-      
-      <p><a class="read-more" href="http://bazlur.com/2021/06/avoid-recursive-invocation-on-computeifabsent-in-hashmap/">Read more &rarr;</a></p>
-      
-    </article>
+        <span class="list-post-date post-info">
+             by <a href="/about-me/" class="p-author h-card"
+                                   rel="author">A N M Bazlur Rahman</a>
+            <time datetime=" 2021-06-09">
+             on 9 June, 2021 at 13:04 EDT
+            </time>
+
+        </span>
+        <span>
+            <div id="tags"><a class="post-tag tag-small" href="/tags/java" rel="tag"> java </a> &nbsp; <a class="post-tag tag-small" href="/tags/fibonacci" rel="tag"> fibonacci </a> &nbsp; <a class="post-tag tag-small" href="/tags/coding" rel="tag"> coding </a> &nbsp; <a class="post-tag tag-small" href="/tags/100daysofjava" rel="tag"> 100DaysOfJava </a> &nbsp; <a class="post-tag tag-small" href="/tags/map" rel="tag"> Map </a> &nbsp; <a class="post-tag tag-small" href="/tags/hashmap" rel="tag"> HashMap </a> &nbsp; <a class="post-tag tag-small" href="/tags/100daysofcode" rel="tag"> 100DaysOfCode </a> &nbsp; <a class="post-tag tag-small" href="/tags/concurrentskiplistmap" rel="tag"> ConcurrentSkipListMap </a> &nbsp; <a class="post-tag tag-small" href="/tags/concurrentmodificationexception" rel="tag"> ConcurrentModificationException </a> &nbsp; <a class="post-tag tag-small" href="/tags/day002" rel="tag"> Day002 </a> &nbsp; <a class="post-tag tag-small" href="/tags/java16" rel="tag"> java16 </a></div>
+        </span>
+    </div>
+</article>
     
-        <article>
-      <header>
+    
+
+
+
+
+<article class="post">
+    <div class="post-title">
         
         <h2 class="list-title"><a href="http://bazlur.com/2021/06/lets-print-100th-fibonacci-number-using-java/">Let&#39;s print 100th fibonacci number using java</a></h2>
         
-        <p class="list-post-date">
-          <time datetime="2021-06-09T01:47:10-04:00">
-            9 June, 2021 at 01:47 EDT
-          </time>
-        </p>
-      </header>
-      <div>
-        
-      </div>
-      
-    </article>
+        <span class="list-post-date post-info">
+             by <a href="/about-me/" class="p-author h-card"
+                                   rel="author">A N M Bazlur Rahman</a>
+            <time datetime=" 2021-06-09">
+             on 9 June, 2021 at 01:47 EDT
+            </time>
+
+        </span>
+        <span>
+            <div id="tags"><a class="post-tag tag-small" href="/tags/java" rel="tag"> java </a> &nbsp; <a class="post-tag tag-small" href="/tags/fibonacci" rel="tag"> fibonacci </a> &nbsp; <a class="post-tag tag-small" href="/tags/coding" rel="tag"> coding </a> &nbsp; <a class="post-tag tag-small" href="/tags/100daysofjava" rel="tag"> 100DaysOfJava </a> &nbsp; <a class="post-tag tag-small" href="/tags/map" rel="tag"> Map </a> &nbsp; <a class="post-tag tag-small" href="/tags/hashmap" rel="tag"> HashMap </a> &nbsp; <a class="post-tag tag-small" href="/tags/100daysofcode" rel="tag"> 100DaysOfCode </a></div>
+        </span>
+    </div>
+</article>
     
-        <article>
-      <header>
+    
+
+
+
+
+<article class="post">
+    <div class="post-title">
         
         <h2 class="list-title"><a href="http://bazlur.com/2020/11/reclaim-25-of-java-heap-memory-and-lower-your-cloud-bills/">Reclaim 25% of Java Heap Memory and Lower Your Cloud Bills </a></h2>
         
-        <p class="list-post-date">
-          <time datetime="2020-11-20T00:52:10-04:00">
-            20 November, 2020 at 00:52 -0400
-          </time>
-        </p>
-      </header>
-      <div>
-        You can save up to 25% of heap memory using latest java which means less cloud bills Do you know that you can save up to 25% of your heap memory and your cloud bills without any effort?
-Well, that&rsquo;s true. Many exciting features have been added to the latest Java recently, and I&rsquo;m going to cover one of them in this article, so please bear with me.
-We all know, Strings are the most used object in any Java application.
-      </div>
-      
-      <p><a class="read-more" href="http://bazlur.com/2020/11/reclaim-25-of-java-heap-memory-and-lower-your-cloud-bills/">Read more &rarr;</a></p>
-      
-    </article>
+        <span class="list-post-date post-info">
+             by <a href="/about-me/" class="p-author h-card"
+                                   rel="author">A N M Bazlur Rahman</a>
+            <time datetime=" 2020-11-20">
+             on 20 November, 2020 at 00:52 -0400
+            </time>
+
+        </span>
+        <span>
+            <div id="tags"><a class="post-tag tag-small" href="/tags/java" rel="tag"> java </a> &nbsp; <a class="post-tag tag-small" href="/tags/compact-strings" rel="tag"> compact strings </a> &nbsp; <a class="post-tag tag-small" href="/tags/java-11" rel="tag"> java 11 </a> &nbsp; <a class="post-tag tag-small" href="/tags/string" rel="tag"> string </a></div>
+        </span>
+    </div>
+</article>
     
-        <article>
-      <header>
+    
+
+
+
+
+<article class="post">
+    <div class="post-title">
         
         <h2 class="list-title"><a href="http://bazlur.com/2020/10/java-local-type-inference/">Java Local Type Inference</a></h2>
         
-        <p class="list-post-date">
-          <time datetime="2020-10-14T15:47:10-04:00">
-            14 October, 2020 at 15:47 EDT
-          </time>
-        </p>
-      </header>
-      <div>
-        জাভা লোকাল টাইপ ইনফারেন্স জাভাতে কোনো ভ্যারিয়েবল ডিক্লেয়ার করতে হলে দুইবার টাইপ লিখতে হয়। যেমন-
-ArrayList&lt;String&gt; list = new ArrayList&lt;&gt;();  ওপরের এই লাইনে দুইবার ArrayList লিখতে হয়েছে। এটি অনেক সশয় প্রয়োজনাতিরিক্ত ব্যবহার মনে হতে পারে। একপাশে টাইপ ইনফরমেশন থাকলেই আধুনিক কম্পাইলারের তা বুঝে ফেলা উচিৎ। জাভা ১০-এ জাভা কম্পাইলারের এই টাইপ বুঝে ফেলার ফিচারটি সংযুক্ত করা হয়। এর ফলে ভ্যারিয়েবল ডিক্লেয়ার করার সময় বা পাশে var কিওয়ার্ড ব্যবহার করা যায়। উদাহরণ-
-      </div>
-      
-      <p><a class="read-more" href="http://bazlur.com/2020/10/java-local-type-inference/">Read more &rarr;</a></p>
-      
-    </article>
+        <span class="list-post-date post-info">
+             by <a href="/about-me/" class="p-author h-card"
+                                   rel="author">A N M Bazlur Rahman</a>
+            <time datetime=" 2020-10-14">
+             on 14 October, 2020 at 15:47 EDT
+            </time>
+
+        </span>
+        <span>
+            <div id="tags"><a class="post-tag tag-small" href="/tags/java" rel="tag"> java </a> &nbsp; <a class="post-tag tag-small" href="/tags/local-type-inference" rel="tag"> local type inference </a> &nbsp; <a class="post-tag tag-small" href="/tags/java-10" rel="tag"> java 10 </a></div>
+        </span>
+    </div>
+</article>
     
-        <article>
-      <header>
+    
+
+
+
+
+<article class="post">
+    <div class="post-title">
         
         <h2 class="list-title"><a href="http://bazlur.com/2018/07/how-to-handle-checked-exceptions-with-lambda-expression/">How to Handle Checked Exceptions With Lambda Expression</a></h2>
         
-        <p class="list-post-date">
-          <time datetime="2018-07-18T13:17:00Z">
-            18 July, 2018 at 13:17 &#43;0000
-          </time>
-        </p>
-      </header>
-      <div>
-        Lambda expressions are all about how we write code. It’s about how we can write more concise, smaller, and less boilerplate code. However, this aforementioned statement may not seem to be true in the case of exceptions in Java.
-In Java, we can only handle exceptions through the try-catch block, and this hasn’t changed for the lambda expression.
-Let’s say we’re going to develop a simple web crawler. The crawler will take a list of URLs in a string as an argument and save the content of the text file in a text file.
-      </div>
-      
-      <p><a class="read-more" href="http://bazlur.com/2018/07/how-to-handle-checked-exceptions-with-lambda-expression/">Read more &rarr;</a></p>
-      
-    </article>
+        <span class="list-post-date post-info">
+             by <a href="/about-me/" class="p-author h-card"
+                                   rel="author">A N M Bazlur Rahman</a>
+            <time datetime=" 2018-07-18">
+             on 18 July, 2018 at 13:17 &#43;0000
+            </time>
+
+        </span>
+        <span>
+            <div id="tags"><a class="post-tag tag-small" href="/tags/checked-exceptions" rel="tag"> Checked Exceptions </a> &nbsp; <a class="post-tag tag-small" href="/tags/lambda-expression" rel="tag"> Lambda Expression </a> &nbsp; <a class="post-tag tag-small" href="/tags/java8" rel="tag"> Java8 </a> &nbsp; <a class="post-tag tag-small" href="/tags/java-8" rel="tag"> Java 8 </a> &nbsp; <a class="post-tag tag-small" href="/tags/java" rel="tag"> Java </a> &nbsp; <a class="post-tag tag-small" href="/tags/tutorial" rel="tag"> Tutorial </a> &nbsp; <a class="post-tag tag-small" href="/tags/checked" rel="tag"> Checked </a> &nbsp; <a class="post-tag tag-small" href="/tags/unchecked" rel="tag"> Unchecked </a></div>
+        </span>
+    </div>
+</article>
     
-        <article>
-      <header>
+    
+
+
+
+
+<article class="post">
+    <div class="post-title">
         
         <h2 class="list-title"><a href="http://bazlur.com/posts/2018-06-21-%E0%A6%93%E0%A6%AF%E0%A6%BC%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%B2%E0%A7%8D%E0%A6%A1%E0%A6%95%E0%A6%BE%E0%A6%AA%E0%A7%87%E0%A6%B0-%E0%A6%AB%E0%A6%BE%E0%A6%81%E0%A6%95%E0%A7%87-%E0%A6%8F%E0%A6%95%E0%A6%9F/">ওয়ার্ল্ডকাপের ফাঁকে একটি অত্যন্ত জ্ঞানগর্ভ মূলক দামী পোস্ট </a></h2>
         
-        <p class="list-post-date">
-          <time datetime="2018-06-21T05:11:48Z">
-            21 June, 2018 at 05:11 &#43;0000
-          </time>
-        </p>
-      </header>
-      <div>
-        একজন প্রোগ্রামার লাইফ যত সহজ একজন পদার্থবিজ্ঞানীর লাইফ তত সহজ নয়। প্রোগ্রামার কোনাে কিছু চিন্তা করলেই তা সঙ্গে সঙ্গে পরীক্ষা করে দেখতে পারে। এক্সপেরিমেন্টের যোগার-যন্ত্র ব্যবস্থা করা খুব সহজ। সবার পকেটেই একটা করে থাকে।
-চিন্তা করে দেখেন, পদার্থবিজ্ঞানীদের একটি তত্ত্ব প্রমাণ করতে কত সময়, অর্থ লাগে ?
-গ্রাভিটেশনাল ওয়েবের কথাই চিন্তা করেন, ১৯১৬ সালে আইনস্টাইন এ নিয়ে চিন্তা করেছিলেন। কিন্তু তাঁর কাছে কোনো টুলস ছিল না এটা প্রমাণ করা। এটি প্রমাণ করতে গ্রাভিটেশনাল-ওয়েব ফেসিলিটি লাইগো তৈরি করতে লেগে গেছে ৬২০ মিলিয়ন ডলার এবং সময় লেগে গেল প্রায় ১০০ বছর।
-      </div>
-      
-      <p><a class="read-more" href="http://bazlur.com/posts/2018-06-21-%E0%A6%93%E0%A6%AF%E0%A6%BC%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%B2%E0%A7%8D%E0%A6%A1%E0%A6%95%E0%A6%BE%E0%A6%AA%E0%A7%87%E0%A6%B0-%E0%A6%AB%E0%A6%BE%E0%A6%81%E0%A6%95%E0%A7%87-%E0%A6%8F%E0%A6%95%E0%A6%9F/">Read more &rarr;</a></p>
-      
-    </article>
+        <span class="list-post-date post-info">
+             by <a href="/about-me/" class="p-author h-card"
+                                   rel="author">A N M Bazlur Rahman</a>
+            <time datetime=" 2018-06-21">
+             on 21 June, 2018 at 05:11 &#43;0000
+            </time>
+
+        </span>
+        <span>
+            <div id="tags"><a class="post-tag tag-small" href="/tags/coding" rel="tag"> coding </a> &nbsp; <a class="post-tag tag-small" href="/tags/inspiration" rel="tag"> inspiration </a> &nbsp; <a class="post-tag tag-small" href="/tags/java" rel="tag"> java </a> &nbsp; <a class="post-tag tag-small" href="/tags/programming" rel="tag"> programming </a></div>
+        </span>
+    </div>
+</article>
     
-        <article>
-      <header>
+    
+
+
+
+
+<article class="post">
+    <div class="post-title">
         
         <h2 class="list-title"><a href="http://bazlur.com/posts/2018-03-18-%E0%A6%9C%E0%A6%BE%E0%A6%AD%E0%A6%BE-%E0%A6%B8%E0%A7%81%E0%A6%87%E0%A6%AF%E0%A6%BC%E0%A6%BF%E0%A6%82-%E0%A6%AC%E0%A7%8D%E0%A6%AF%E0%A6%AC%E0%A6%B9%E0%A6%BE%E0%A6%B0-%E0%A6%95%E0%A6%B0%E0%A7%87-/">জাভা সুইয়িং ব্যবহার করে একটি ক্যালকুলেটর</a></h2>
         
-        <p class="list-post-date">
-          <time datetime="2018-03-17T22:05:00Z">
-            17 March, 2018 at 22:05 &#43;0000
-          </time>
-        </p>
-      </header>
-      <div>
-        একদম শুরুতে যখন আমার জাভা প্রোগ্রামিংয়ের হাতে খড়ি বলা যায়, তখন জাভার সুইয়িং ব্যবহার করে একটি ক্যালকুলেটর তৈরি করেছিলাম।
-এটি একটি ফোরামে দিয়েছিলাম। সেখানে অনেকেই পছন্দ করেছিল। হঠাৎ করেই পেয়ে গেলাম প্রায় ৮ বছর আগের একটি কোড।
-আজকের এই পোস্টে এই কোডটি শেয়ার করছি।
-package com.bazlur.calculator; public class BasicMath { /** * This method adds up the arguments * * @param a first value * @param b second value * @return result of addition */ public double add(double a, double b) { return a + b; } /** * This method subtract second value from first value * * @param a first value * @param b second value * @return result of subtraction */ public double minus(double a, double b) { return a - b; } /** * This method perform multiplication * * @param a first value * @param b second value * @return result of multiplication */ public double multiply(double a, double b) { return a * b; } /** * This method performs the Division.
-      </div>
-      
-      <p><a class="read-more" href="http://bazlur.com/posts/2018-03-18-%E0%A6%9C%E0%A6%BE%E0%A6%AD%E0%A6%BE-%E0%A6%B8%E0%A7%81%E0%A6%87%E0%A6%AF%E0%A6%BC%E0%A6%BF%E0%A6%82-%E0%A6%AC%E0%A7%8D%E0%A6%AF%E0%A6%AC%E0%A6%B9%E0%A6%BE%E0%A6%B0-%E0%A6%95%E0%A6%B0%E0%A7%87-/">Read more &rarr;</a></p>
-      
-    </article>
+        <span class="list-post-date post-info">
+             by <a href="/about-me/" class="p-author h-card"
+                                   rel="author">A N M Bazlur Rahman</a>
+            <time datetime=" 2018-03-17">
+             on 17 March, 2018 at 22:05 &#43;0000
+            </time>
+
+        </span>
+        <span>
+            <div id="tags"><a class="post-tag tag-small" href="/tags/calculator" rel="tag"> calculator </a> &nbsp; <a class="post-tag tag-small" href="/tags/java" rel="tag"> java </a> &nbsp; <a class="post-tag tag-small" href="/tags/simple-calculator" rel="tag"> simple calculator </a> &nbsp; <a class="post-tag tag-small" href="/tags/swing" rel="tag"> swing </a></div>
+        </span>
+    </div>
+</article>
     
-        <article>
-      <header>
+    
+
+
+
+
+<article class="post">
+    <div class="post-title">
         
         <h2 class="list-title"><a href="http://bazlur.com/posts/2018-03-13-what-is-serialization-in-jav/">জাভাতে সিরিয়ালাইজেশন কী (What is serialization in java)?</a></h2>
         
-        <p class="list-post-date">
-          <time datetime="2018-03-12T22:36:41Z">
-            12 March, 2018 at 22:36 &#43;0000
-          </time>
-        </p>
-      </header>
-      <div>
-        আমরা জানি যে ক্লাস থেকে অবজেক্ট তৈরি করা হয়। ক্লাসে মূলত একটি অবজেক্টে কী কী প্রোপ্রার্টিজ থাকবে এবং এটি কী কী কাজ করতে পারবে তার বর্ণনা থাকে। কিন্তু যখন নিউ(new) অপারেটর ব্যবহার করে একে অবজেক্ট তৈরি করা হয়, তখন এটি একটি জীবন্ত প্রাণির মতো অবজেক্টে পরিণত হয়। একটি জীবন্ত প্রাণির যেমন অনেকগুলো নিজস্ব ও অনন্য (unique) বৈশিষ্ট্য থাকে (যেমন- নাম, বয়স, ডিএনএ সিকুয়েন্স ইত্যাদি), তেমনি একটি অবজেক্টের একইরকম অনন্য পরিচয় (unique identity) থাকে। প্রত্যেকটি অবজেক্ট কিছু না কিছু স্টেট(state) বা ডেটা থাকে। প্রত্যেকটি অবজেক্টের একটি জীবন চক্র থাকে (life cycle)। এটি নিউ অপারেটর দিয়ে শুরু হয় এবং গারবেজ কালেক্টর(garbage collector) দিয়ে শেষ হয়। এই শুরু এবং শেষ হওয়ার মধ্যবর্তী অবজেক্টের কোনো অবস্থাকে বাইনারী ফরমেটে স্টোর করা যায় এবং সেই একই অবস্থা থেকে পুনর্গঠিত করা যায়।
-      </div>
-      
-      <p><a class="read-more" href="http://bazlur.com/posts/2018-03-13-what-is-serialization-in-jav/">Read more &rarr;</a></p>
-      
-    </article>
+        <span class="list-post-date post-info">
+             by <a href="/about-me/" class="p-author h-card"
+                                   rel="author">A N M Bazlur Rahman</a>
+            <time datetime=" 2018-03-12">
+             on 12 March, 2018 at 22:36 &#43;0000
+            </time>
+
+        </span>
+        <span>
+            <div id="tags"><a class="post-tag tag-small" href="/tags/java" rel="tag"> java </a> &nbsp; <a class="post-tag tag-small" href="/tags/serialization" rel="tag"> serialization </a></div>
+        </span>
+    </div>
+</article>
     
-        <article>
-      <header>
+    
+
+
+
+
+<article class="post">
+    <div class="post-title">
         
         <h2 class="list-title"><a href="http://bazlur.com/posts/2018-03-13-what-is-java-object-clonin/">জাভাতে অবজেক্ট ক্লোনিং কী(What is object cloning in java)?</a></h2>
         
-        <p class="list-post-date">
-          <time datetime="2018-03-12T22:32:37Z">
-            12 March, 2018 at 22:32 &#43;0000
-          </time>
-        </p>
-      </header>
-      <div>
-        ক্লােন শব্দের অর্থ হুবহু কপি করা। অবজেক্ট ক্লাোনিংয়ের অর্থ একই রকম আরেকটি অবজেক্ট তৈরি করা। আমরা জানি যে ক্লাস থেকে অবজেক্ট তৈরি করা হয়। একটি ক্লাস থেকে একাধিক অবজেক্ট তৈরি করা যায়। প্রত্যেকটি অবেজেক্টের আলাদা আলদা স্টেট থাকে। অর্থাৎ অবজেক্টগুলো সম্পূর্ণ ভিন্ন হয়। তবে কখনো কখনো একটি অবজেক্টের স্টেটগুলো নিয়ে আরেকটি সম্পূর্ণ একইরকম অবজেক্ট তৈরি করার প্রয়োজন হয়। একইরকম অবজেক্ট তৈরির এই প্রক্রিয়াকে অবজেক্ট ক্লোনিং বলা হয়। উদাহরণসরূপ নিজের উদাহরণটি দেখা যাক –
-      </div>
-      
-      <p><a class="read-more" href="http://bazlur.com/posts/2018-03-13-what-is-java-object-clonin/">Read more &rarr;</a></p>
-      
-    </article>
+        <span class="list-post-date post-info">
+             by <a href="/about-me/" class="p-author h-card"
+                                   rel="author">A N M Bazlur Rahman</a>
+            <time datetime=" 2018-03-12">
+             on 12 March, 2018 at 22:32 &#43;0000
+            </time>
+
+        </span>
+        <span>
+            <div id="tags"><a class="post-tag tag-small" href="/tags/cloning" rel="tag"> cloning </a> &nbsp; <a class="post-tag tag-small" href="/tags/java" rel="tag"> java </a> &nbsp; <a class="post-tag tag-small" href="/tags/object-cloning" rel="tag"> object cloning </a></div>
+        </span>
+    </div>
+</article>
     
-        <article>
-      <header>
+    
+
+
+
+
+<article class="post">
+    <div class="post-title">
         
         <h2 class="list-title"><a href="http://bazlur.com/posts/2018-03-13-what-is-packaging-in-java-how-to-import-package/">জাভাতে প্যাকেজিং কী? কীভাবে প্যাকেজ ইম্পোর্ট করতে হয় ?</a></h2>
         
-        <p class="list-post-date">
-          <time datetime="2018-03-12T22:08:47Z">
-            12 March, 2018 at 22:08 &#43;0000
-          </time>
-        </p>
-      </header>
-      <div>
-        আমরা কম্পিউটারে নানা ধরনের ফাইল বিভিন্ন ফোল্ডারে সাজিয়ে রাখি। যেমন- মুভি ফোল্ডারে হয়তো আমরা শুধুই মুভি রাখি, সেখানে অন্য কোনো ফাইল রাখি না। আবার মুভি ফোল্ডারে এর মধ্যে সাব-ফোল্ডার তৈরি করি আরও আলাদা করার জন্য, যেমন – বাংলা মুভি, ইংরেজি মুভি ইত্যাদি। জাভাতে প্যাকেজ বলতে এই ধারণাটিকেই বোঝায়। একটি জাভা প্রোগ্রামিং ভাষায় লেখা সফ্টওয়্যারে শত শত বা হাজার হাজার পৃথক ক্লাস থাকতে পারে। এজন্য প্যাকেজ ডিক্লেয়ারেশনের মাধ্যমে একই রকম ক্লাসগুলো একাধিক প্যাকেজের মধ্যে আলাদা করে রাখা হয়। এছাড়াও অনেক সময় একই নামের একাধিক ক্লাস লেখার প্রয়োজন হতে পারে যা পরম্পরবিরোধী। এক্ষেত্রে একই নামের ক্লাস বিভিন্ন প্যাকেজে রাখা যেতে পারে।
-      </div>
-      
-      <p><a class="read-more" href="http://bazlur.com/posts/2018-03-13-what-is-packaging-in-java-how-to-import-package/">Read more &rarr;</a></p>
-      
-    </article>
+        <span class="list-post-date post-info">
+             by <a href="/about-me/" class="p-author h-card"
+                                   rel="author">A N M Bazlur Rahman</a>
+            <time datetime=" 2018-03-12">
+             on 12 March, 2018 at 22:08 &#43;0000
+            </time>
+
+        </span>
+        <span>
+            <div id="tags"><a class="post-tag tag-small" href="/tags/import" rel="tag"> import </a> &nbsp; <a class="post-tag tag-small" href="/tags/java" rel="tag"> java </a> &nbsp; <a class="post-tag tag-small" href="/tags/packaging" rel="tag"> packaging </a></div>
+        </span>
+    </div>
+</article>
     
-        <article>
-      <header>
+    
+
+
+
+
+<article class="post">
+    <div class="post-title">
         
         <h2 class="list-title"><a href="http://bazlur.com/posts/2018-03-13-what-is-null-pointer-exception-in-java-how-to-handle-i/">Java তে Null Pointer Exception কী? কীভাবে একে Handle করা যায়?</a></h2>
         
-        <p class="list-post-date">
-          <time datetime="2018-03-12T22:01:13Z">
-            12 March, 2018 at 22:01 &#43;0000
-          </time>
-        </p>
-      </header>
-      <div>
-        কোনো ভেরিয়েবল যদি কোনো অবজেক্টের রেফারেন্স না রাখে,তাহলে সেই ভেরিয়েবল মূলত একটি নাল রেফারেন্স বা শূণ্য রেফারেন্স ধরে রাখে। সেই ভেরিয়েবল নিয়ে কোনো কাজ করতে চাই, তাহলে জাভা ভার্চুয়াল মেশিন এই এক্সেপশন থ্রো করে। বেশ কয়েকটি জায়গায় এই এক্সেপশন থ্রো হতে পারে। যেমন-
-১. একটি ক্লাসের অবজেক্ট তৈরি না করেই সেই ক্লাসের কোনো মেথড করলে। তবে সেই ক্লাসের স্ট্যাটিক মেথড কল করা হলে NullPointerException (NPE) থ্রো হবে না।
-২. কোনো ভেরিয়েবলের টাইপ যদি ক্লাস হয় এবং এটি যদি নাল(null) হয়, তাহলে সেই ভেরিয়েবলের কোনো ফ্লিল্ড পরিবর্তন না অ্যাকসেস করতে গেলে NPE থ্রো হবে।
-      </div>
-      
-      <p><a class="read-more" href="http://bazlur.com/posts/2018-03-13-what-is-null-pointer-exception-in-java-how-to-handle-i/">Read more &rarr;</a></p>
-      
-    </article>
+        <span class="list-post-date post-info">
+             by <a href="/about-me/" class="p-author h-card"
+                                   rel="author">A N M Bazlur Rahman</a>
+            <time datetime=" 2018-03-12">
+             on 12 March, 2018 at 22:01 &#43;0000
+            </time>
+
+        </span>
+        <span>
+            <div id="tags"><a class="post-tag tag-small" href="/tags/java" rel="tag"> java </a> &nbsp; <a class="post-tag tag-small" href="/tags/null-pointer-exception" rel="tag"> null pointer exception </a></div>
+        </span>
+    </div>
+</article>
     
-        <article>
-      <header>
+    
+
+
+
+
+<article class="post">
+    <div class="post-title">
         
         <h2 class="list-title"><a href="http://bazlur.com/posts/2018-03-07-%E0%A6%9C%E0%A6%BE%E0%A6%AD%E0%A6%BE-%E0%A6%A5%E0%A7%8D%E0%A6%B0%E0%A7%87%E0%A6%A1-%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A7%8B%E0%A6%97%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%AE%E0%A6%BF%E0%A6%82-/">জাভা থ্রেড প্রোগ্রামিংঃ ডেটা রেইস (Java Thread Programming: Data Race)</a></h2>
         
-        <p class="list-post-date">
-          <time datetime="2018-03-07T14:24:28Z">
-            7 March, 2018 at 14:24 &#43;0000
-          </time>
-        </p>
-      </header>
-      <div>
-        আমরা যখনি একাধিক থ্রেডের জন্য কোড লিখব তখনি আমাদের চিন্তা করতে হবে যে, এই কোডটি থ্রেড সেফ কি না। থ্রেইড সেইফের সহজ সংজ্ঞা আমরা জানি। এর অর্থ হলো, কোড সঠিকভাবে কাজ করবে। আমরা যখন একটি প্রোগ্রাম লিখি, সেই ক্লাসের একটি স্পেসিফিকেশন থাকে। আমরা সাধারণত প্রোগ্রাম লেখার সময় এর ফরমাল কোনো স্পেসিফিকেশন লিখি না, তবে এই ক্লাসের উদ্দেশ্য সম্পর্কে আমাদের ধারণা থাকে। প্রোগ্রামটিকে রান করা হলে এর ফলাফল সম্পর্কে আমাদের একটি পরিষ্কার ধারণা থাকে। এই প্রোগ্রামটি হয়তো একটি থ্রেড দিয়ে রান করলে যে ফলাফল দেয় সেই সম্পর্কে আমাদের আস্থা থাকে। একই প্রোগ্রামটি যদি একাধিক থ্রেডে রান করা হয়, তাহলে যদি আগের মতো একই রকম আস্থা আমাদের থাকে, তাহলে সেই প্রোগ্রামটিকে আমরা থ্রেড সেফ বলতে পারি। একটি প্রোগ্রামকে থ্রেড সেফ নিশ্চিত করতে হলে প্রোগ্রামটির ডেটাগুলো ঠিকমতো সময়ের সমন্বয় করতে হয় (Synchronize) করতে হয় (এখানে synchronized কিওয়ার্ডের কথা বলা হচ্ছে না)। একটি থ্রেড যে ডেটাগুলো পড়তে পারে বা পরিবর্তন করতে পারে, সেগুলোকে published ডেটা বলা হয়। ডেটা পাবলিশ করার সময় আমাদের সতর্কতা অবলম্বন করা জরুরি। আমরা জানি যে আধুনিক সিপিইউ ডেটা ক্যাশ ব্যবহার করে এবং আধুনিক কম্পিউটারে একাধিক সিপিইউ থাকে। কোনো একটি থ্রেড কোনো সিপিইউতে কোনো ডেটা পরিবর্তন করলে, অন্য সিপিইউতে যে থ্রেডটি চলতে তা সঙ্গে সঙ্গে নাও দেখতে পারে। তবে ভ্যালু যদি পরিবর্তন না হয়, সে ক্ষেত্রে দুশ্চিন্তার কোনো কারণ নেই। সে ক্ষেত্রে ইমমিউটেবল (immutable) ডেটা ব্যবহার করা যায়। আমরা যদি কোনো থ্রেডে ডেটা পরিবর্তন করি, তাহলে আমাদের নিশ্চিত হতে হবে যে, এই পরিবর্তন অন্য থ্রেড যদি এই ডেটা পড়ে তাহলে যেন সঠিক ডেটা (এ ক্ষেত্রে সর্বশেষ সংস্করণ) পড়তে পারে। কোনো কারণে যদি এর ব্যত্যয় ঘটে, তাহলে প্রোগ্রামটিতে ডেটা সিনক্রোনাইজেশনের সমস্যা রয়েছে এবং প্রোগ্রামটি থ্রেড সেফ নয়। একটি জাভা প্রোগ্রাম দেখা যাক- public class HiHello { static boolean s = false; public static void main(String\[\] args) { Thread t1 = new Thread(() -&gt; { while (!
-      </div>
-      
-      <p><a class="read-more" href="http://bazlur.com/posts/2018-03-07-%E0%A6%9C%E0%A6%BE%E0%A6%AD%E0%A6%BE-%E0%A6%A5%E0%A7%8D%E0%A6%B0%E0%A7%87%E0%A6%A1-%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A7%8B%E0%A6%97%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%AE%E0%A6%BF%E0%A6%82-/">Read more &rarr;</a></p>
-      
-    </article>
+        <span class="list-post-date post-info">
+             by <a href="/about-me/" class="p-author h-card"
+                                   rel="author">A N M Bazlur Rahman</a>
+            <time datetime=" 2018-03-07">
+             on 7 March, 2018 at 14:24 &#43;0000
+            </time>
+
+        </span>
+        <span>
+            <div id="tags"><a class="post-tag tag-small" href="/tags/book" rel="tag"> book </a> &nbsp; <a class="post-tag tag-small" href="/tags/data-race" rel="tag"> data race </a> &nbsp; <a class="post-tag tag-small" href="/tags/java" rel="tag"> java </a> &nbsp; <a class="post-tag tag-small" href="/tags/java-thread" rel="tag"> java thread </a> &nbsp; <a class="post-tag tag-small" href="/tags/thread" rel="tag"> thread </a> &nbsp; <a class="post-tag tag-small" href="/tags/volatile" rel="tag"> volatile </a></div>
+        </span>
+    </div>
+</article>
     
-        <article>
-      <header>
+    
+
+
+
+
+<article class="post">
+    <div class="post-title">
         
         <h2 class="list-title"><a href="http://bazlur.com/posts/2018-02-26-java-thread-programming-review-/">জাভা থ্রেড প্রোগ্রামিংঃ রিভিউ-৪</a></h2>
         
-        <p class="list-post-date">
-          <time datetime="2018-02-26T14:11:38Z">
-            26 February, 2018 at 14:11 &#43;0000
-          </time>
-        </p>
-      </header>
-      <div>
-        জাভা থ্রেড প্রোগ্রামিং বইটি নিয়ে নিচের চমৎকার রিভিউটি লিখেছেন Ruhul Quddus Shakkhor   This is a great book, but this is not for everyone. If you’re new to Java, then it’s probably better to learn the basics first. However, if you’re an intermediate to the advanced learner, this book will give you a deeper understanding of Java threads. At this moment, I’m not aware of another Bangla book for any programming language that can give you a similar overview of threads.
-      </div>
-      
-      <p><a class="read-more" href="http://bazlur.com/posts/2018-02-26-java-thread-programming-review-/">Read more &rarr;</a></p>
-      
-    </article>
+        <span class="list-post-date post-info">
+             by <a href="/about-me/" class="p-author h-card"
+                                   rel="author">A N M Bazlur Rahman</a>
+            <time datetime=" 2018-02-26">
+             on 26 February, 2018 at 14:11 &#43;0000
+            </time>
+
+        </span>
+        <span>
+            <div id="tags"><a class="post-tag tag-small" href="/tags/bangla-book" rel="tag"> bangla book </a> &nbsp; <a class="post-tag tag-small" href="/tags/book" rel="tag"> book </a> &nbsp; <a class="post-tag tag-small" href="/tags/review" rel="tag"> review </a> &nbsp; <a class="post-tag tag-small" href="/tags/java" rel="tag"> java </a> &nbsp; <a class="post-tag tag-small" href="/tags/java-thread-programming" rel="tag"> java thread programming </a> &nbsp; <a class="post-tag tag-small" href="/tags/thread" rel="tag"> thread </a></div>
+        </span>
+    </div>
+</article>
     
-        <article>
-      <header>
+    
+
+
+
+
+<article class="post">
+    <div class="post-title">
         
         <h2 class="list-title"><a href="http://bazlur.com/posts/2018-02-22-java-thread-programming-review-/">জাভা থ্রেড প্রোগ্রামিংঃ রিভিউ-৩</a></h2>
         
-        <p class="list-post-date">
-          <time datetime="2018-02-22T17:47:41Z">
-            22 February, 2018 at 17:47 &#43;0000
-          </time>
-        </p>
-      </header>
-      <div>
-        জাভা থ্রেড প্রোগ্রামিং বইটি নিয়ে নিচের চমৎকার রিভিউটি লিখেছেন অরণ্য আব্দুলাহ আল মামুন ভাই।  জাভা বেসড এপ্লিকেশন ডেভেলপমেন্টের একটা গুরুত্বপূর্ন বিষয় হলো থ্রেডিং। সেইটা সার্ভার-সাইড ডেভেলপমেন্ট-ই হোক আর ক্লায়েন্ট সাইড ডেভেলপমেন্ট। সার্ভার-সাইড ডেভেলপমেন্ট এ বিভিন্ন প্রসেসকে একধিক কাজে ভাগ করে faster response করা কিংবা ক্লায়েন্ট সাইড ডেভেলপমেন্ট এ GUI এর পাশাপাশি Network request বা IO Request সঠিক ভাবে handle করা – এগুলা খুবই গুরুত্বপূর্ন বিষয়। থ্রেডিং এর concept ভালো না থাকলে ভালো মানের application develop করা এক কথায় অসম্ভব।
-      </div>
-      
-      <p><a class="read-more" href="http://bazlur.com/posts/2018-02-22-java-thread-programming-review-/">Read more &rarr;</a></p>
-      
-    </article>
+        <span class="list-post-date post-info">
+             by <a href="/about-me/" class="p-author h-card"
+                                   rel="author">A N M Bazlur Rahman</a>
+            <time datetime=" 2018-02-22">
+             on 22 February, 2018 at 17:47 &#43;0000
+            </time>
+
+        </span>
+        <span>
+            <div id="tags"><a class="post-tag tag-small" href="/tags/bangla-book" rel="tag"> bangla book </a> &nbsp; <a class="post-tag tag-small" href="/tags/book" rel="tag"> book </a> &nbsp; <a class="post-tag tag-small" href="/tags/review" rel="tag"> review </a> &nbsp; <a class="post-tag tag-small" href="/tags/java" rel="tag"> java </a> &nbsp; <a class="post-tag tag-small" href="/tags/java-thread-programming" rel="tag"> java thread programming </a> &nbsp; <a class="post-tag tag-small" href="/tags/thread" rel="tag"> thread </a></div>
+        </span>
+    </div>
+</article>
     
-        <article>
-      <header>
+    
+
+
+
+
+<article class="post">
+    <div class="post-title">
         
         <h2 class="list-title"><a href="http://bazlur.com/posts/2018-02-20-java-thread-programming-review-/">জাভা থ্রেড প্রোগ্রামিংঃ রিভিউ-১</a></h2>
         
-        <p class="list-post-date">
-          <time datetime="2018-02-19T20:53:04Z">
-            19 February, 2018 at 20:53 &#43;0000
-          </time>
-        </p>
-      </header>
-      <div>
-        জাভা থ্রেড প্রোগ্রামিং বইটি নিয়ে একটি চমৎকার রিভিউ লিখেছেন তামিম শাহরিয়ার সুবিন ভাই। রিভিউটি নিচে দেওয়া হলো–
- গত বছরের মাঝামাঝি সময় আমাদের জাভা প্রোগ্রামিং বইয়ের লেখক – বজলুর আমাকে জানালো যে, সে জাভা প্রোগ্রামিং বইটার দ্বিতীয় খণ্ড লিখছে। লেখার মাঝামাঝি পর্যায়ে সে আমাকে বইটি রিভিউ করার কাজে যুক্ত করলো। আমি কিছুদূর রিভিউ করার পরে বললাম, বই তো অনেক বড় হয়ে আসছে, তুমি যদি বইমেলায় বই প্রকাশ করতে চাও, তাহলে শুধু মাল্টিথ্রেডিং নিয়ে বই লিখে ফেলো। বাকী জিনিসপত্র নিয়ে জাভা প্রোগ্রামিং দ্বিতীয় খণ্ড নামে একটি বই লিখবে। বজলুর রাজি হয়ে গেলো, থ্রেড নিয়ে আরো লিখতে লাগলো। আমিও রিভিউ করে বিভিন্ন ফিডব্যাক দিতে লাগলাম।
-      </div>
-      
-      <p><a class="read-more" href="http://bazlur.com/posts/2018-02-20-java-thread-programming-review-/">Read more &rarr;</a></p>
-      
-    </article>
+        <span class="list-post-date post-info">
+             by <a href="/about-me/" class="p-author h-card"
+                                   rel="author">A N M Bazlur Rahman</a>
+            <time datetime=" 2018-02-19">
+             on 19 February, 2018 at 20:53 &#43;0000
+            </time>
+
+        </span>
+        <span>
+            <div id="tags"><a class="post-tag tag-small" href="/tags/bangla-book" rel="tag"> bangla book </a> &nbsp; <a class="post-tag tag-small" href="/tags/book" rel="tag"> book </a> &nbsp; <a class="post-tag tag-small" href="/tags/review" rel="tag"> review </a> &nbsp; <a class="post-tag tag-small" href="/tags/java" rel="tag"> java </a> &nbsp; <a class="post-tag tag-small" href="/tags/java-thread-programming" rel="tag"> java thread programming </a> &nbsp; <a class="post-tag tag-small" href="/tags/thread" rel="tag"> thread </a></div>
+        </span>
+    </div>
+</article>
     
-        <article>
-      <header>
+    
+
+
+
+
+<article class="post">
+    <div class="post-title">
         
         <h2 class="list-title"><a href="http://bazlur.com/posts/2018-02-20-java-thread-programming-review-2/">জাভা থ্রেড প্রোগ্রামিংঃ রিভিউ-২</a></h2>
         
-        <p class="list-post-date">
-          <time datetime="2018-02-19T20:41:38Z">
-            19 February, 2018 at 20:41 &#43;0000
-          </time>
-        </p>
-      </header>
-      <div>
-        জাভা থ্রেড প্রোগ্রামিং বইটি নিয়ে একটি চমৎকার রিভিউ লিখেছেন শান্তুনু সরকার ভাই।রিভিউটি নিচে দেওয়া হলো– আ ন ম বজলুর রহমান জাভা থ্রেড পোগ্রামিং নিয়ে একটি নতুন বই লিখেছে,জাভা থ্রেড প্রোগ্রামিং । বইটি আমি আগাগোড়া পড়েছি। বেশকতগুলো জিনিস আমার বেশ পছন্দ হয়েছে।
-আমি এগুলো পয়েন্ট আকারে লিখতে চাইঃ
- কেনো থ্রেড প্রোগ্রামিং শেখা জরুরি, এটি নিয়ে বেশ ভালো আলোচনা রয়েছে। অপারেটিং সিস্টেম কীভাবে থ্রেড ম্যানেজ করে, তা নিয়েও আলোচনা আছে। এছাড়া জাভা ভার্চুয়াল মেশিনে কীভাবে থ্রেড কাজ করে তাও লিখেছে। আমরা হয়তো অনেকই থ্রেড ব্যবহার করি, কিন্তু এর অভ্যন্তরীণ বিষয়গুলোর দিকে মনযোগ দিই না। এটি অত্যন্ত গুরুত্বপূর্ণ। এগুলো নিয়েও এই বইতে বিস্তর আলোচনা রয়েছে। জাভাতে থ্রেড প্রোগ্রামিং দুইভাবে করা হয়। এর একটি খানিকটা সেকেলে এবং একটি আধুনিক পদ্ধতি। থ্রেডিংয়ের ধারণা বুঝতে হলে সেকেলে পদ্ধটি জানা জরুরী। এই বইয়ে দুটি পদ্ধতিই আলোকপাত করা হয়েছে। থ্রেড ব্যাবহার করতে গেলে যে মেথড বা কিওয়ার্ড বা বিষয়গুলো খেয়াল অত্যন্ত জরুরী সেগুলোর দিকে অনেক জোড় দেয়া হয়েছে। থ্রেড ব্যাবহারের বহুল প্রচলিত প্রন্থাগুলো বেশ সমৃদ্ধ এই বইয়ে। এগুলো প্রায়শই বিভিন্ন চাকরির ইন্টারভিউতে প্রশ্ন করা হয়ে থাকে। বাড়তি হিসেবে ইম্যুটেবল অবজেক্ট সম্পর্কেও বেশ খানিকটা লিখেছে যা আমার মতে অত্যন্ত জরুরী একটি বিষয়। থ্রেড ব্যাবহারের বহুল প্রচলিত সমসস্যাগুলো নিয়েও লেখা হয়েছে, যা জানা খুবই জরুরি।  তবে আমি একতরফা ভাল বলে যাবো তা নয়। বইটিতে কিছু টপিক রয়েছে যেগুলো চাইলে আরও উন্নত করা যায়। আমি পরামর্শ দেবো এগুলো যাতে পরবর্তী সংস্করণে যাতে যুক্ত করা হয়।
-      </div>
-      
-      <p><a class="read-more" href="http://bazlur.com/posts/2018-02-20-java-thread-programming-review-2/">Read more &rarr;</a></p>
-      
-    </article>
+        <span class="list-post-date post-info">
+             by <a href="/about-me/" class="p-author h-card"
+                                   rel="author">A N M Bazlur Rahman</a>
+            <time datetime=" 2018-02-19">
+             on 19 February, 2018 at 20:41 &#43;0000
+            </time>
+
+        </span>
+        <span>
+            <div id="tags"><a class="post-tag tag-small" href="/tags/bangla-book" rel="tag"> bangla book </a> &nbsp; <a class="post-tag tag-small" href="/tags/book" rel="tag"> book </a> &nbsp; <a class="post-tag tag-small" href="/tags/review" rel="tag"> review </a> &nbsp; <a class="post-tag tag-small" href="/tags/java" rel="tag"> java </a> &nbsp; <a class="post-tag tag-small" href="/tags/java-thread-programming" rel="tag"> java thread programming </a> &nbsp; <a class="post-tag tag-small" href="/tags/thread" rel="tag"> thread </a></div>
+        </span>
+    </div>
+</article>
     
-        <article>
-      <header>
+    
+
+
+
+
+<article class="post">
+    <div class="post-title">
         
         <h2 class="list-title"><a href="http://bazlur.com/posts/2018-01-29-%E0%A6%A1%E0%A6%BF%E0%A6%AE%E0%A6%A8-%E0%A6%A5%E0%A7%8D%E0%A6%B0%E0%A7%87%E0%A6%A1-%E0%A6%95%E0%A7%80what-is-daemon-thread-in-jav/">ডিমন থ্রেড কী(What is daemon thread in java)?</a></h2>
         
-        <p class="list-post-date">
-          <time datetime="2018-01-28T22:10:54Z">
-            28 January, 2018 at 22:10 &#43;0000
-          </time>
-        </p>
-      </header>
-      <div>
-        জাভা ভাচুয়াল মেশিন চালু হওয়ার পর কতগুলাে থ্রেড তৈরি হয়। এর মধ্যে মেইন থ্রেড আমাদের কোডগুলো এক্সিকিউট করে। মেইন থ্রেড থেকে আমরা আরও একাধিক থ্রেড তৈরি করতে পারি। যতক্ষণ পর্যন্ত এই থ্রেডগুলো চলতে থাকে, ততক্ষন পর্যন্ত জাভা ভার্চুয়াল মেশিন চলতে থাকে। তবে অনেক সময় কোনো প্রোগ্রামের একটি প্রধান থ্রেডের সঙ্গে আরও কতগুলো থ্রেড তৈরি করতে হয়, যেগুলো বিভিন্ন সহায়ক কাজ করতে থাকে, কিন্তু প্রধান থ্রেডটি বন্ধ হয়ে গেলে এই সহায়ক থ্রেডগুলো প্রয়োজন নেই। এই সহায়ক থ্রেডগুলোকে ডিমন থ্রেড হিসেবে তৈরি করা যায়। জাভা দুই ধরণের থ্রেড তৈরি করা যায়। ১.
-      </div>
-      
-      <p><a class="read-more" href="http://bazlur.com/posts/2018-01-29-%E0%A6%A1%E0%A6%BF%E0%A6%AE%E0%A6%A8-%E0%A6%A5%E0%A7%8D%E0%A6%B0%E0%A7%87%E0%A6%A1-%E0%A6%95%E0%A7%80what-is-daemon-thread-in-jav/">Read more &rarr;</a></p>
-      
-    </article>
+        <span class="list-post-date post-info">
+             by <a href="/about-me/" class="p-author h-card"
+                                   rel="author">A N M Bazlur Rahman</a>
+            <time datetime=" 2018-01-28">
+             on 28 January, 2018 at 22:10 &#43;0000
+            </time>
+
+        </span>
+        <span>
+            <div id="tags"><a class="post-tag tag-small" href="/tags/daemon-thread" rel="tag"> daemon thread </a> &nbsp; <a class="post-tag tag-small" href="/tags/java" rel="tag"> java </a> &nbsp; <a class="post-tag tag-small" href="/tags/thread" rel="tag"> thread </a></div>
+        </span>
+    </div>
+</article>
     
-        <article>
-      <header>
+    
+
+
+
+
+<article class="post">
+    <div class="post-title">
         
         <h2 class="list-title"><a href="http://bazlur.com/posts/2017-08-18-arraylist-%E0%A6%93-linkedlist-%E0%A6%AE%E0%A6%A7%E0%A7%8D%E0%A6%AF%E0%A7%87-%E0%A6%AA%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A6%95%E0%A7%8D%E0%A6%AF-%E0%A6%95%E0%A7%80-difference-between-arraylis/">ArrayList ও LinkedList মধ্যে পার্থক্য কী? (Difference between ArrayList and LinkedList in Java)</a></h2>
         
-        <p class="list-post-date">
-          <time datetime="2017-08-18T13:17:00Z">
-            18 August, 2017 at 13:17 &#43;0000
-          </time>
-        </p>
-      </header>
-      <div>
-        ArrayList ও LinkedList ক্লাস দুটি লিস্ট ইন্টারফেসকে ইমপ্লিমেন্ট করে। যার ফলে এদের মেথড ও ফলাফল একইরকম হলেও ইম্প্লিমেন্টেশনের দিক থেকে এদের মধ্যে বেশ কিছু পার্থক্য রয়েছে। পার্থক্যগুলো নিয়ে আলোচনা করার আগে লিস্ট ইন্টারফেসের প্রধান মেথডগুলো দেখা যাক-
-public interface List{ public E get(int index); public void add(E element); public void add(E element, int index); public void remove(int index); }  উপরের এই মেথডগুলোর ইমপ্লিমেন্টেশন অ্যারেলিস্ট ও লিংকডলিস্ট দুটো ক্লাসেই রয়েছে। ব্যবহারের দিক থেকে এই মেথডগুলোর কোনো পার্থক্য নেই। উদাহরণ-
-      </div>
-      
-      <p><a class="read-more" href="http://bazlur.com/posts/2017-08-18-arraylist-%E0%A6%93-linkedlist-%E0%A6%AE%E0%A6%A7%E0%A7%8D%E0%A6%AF%E0%A7%87-%E0%A6%AA%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A6%95%E0%A7%8D%E0%A6%AF-%E0%A6%95%E0%A7%80-difference-between-arraylis/">Read more &rarr;</a></p>
-      
-    </article>
+        <span class="list-post-date post-info">
+             by <a href="/about-me/" class="p-author h-card"
+                                   rel="author">A N M Bazlur Rahman</a>
+            <time datetime=" 2017-08-18">
+             on 18 August, 2017 at 13:17 &#43;0000
+            </time>
+
+        </span>
+        <span>
+            <div id="tags"><a class="post-tag tag-small" href="/tags/arraylist" rel="tag"> arraylist </a> &nbsp; <a class="post-tag tag-small" href="/tags/java" rel="tag"> java </a> &nbsp; <a class="post-tag tag-small" href="/tags/linkedlist" rel="tag"> linkedlist </a></div>
+        </span>
+    </div>
+</article>
     
-        <article>
-      <header>
+    
+
+
+
+
+<article class="post">
+    <div class="post-title">
         
         <h2 class="list-title"><a href="http://bazlur.com/posts/2017-06-24-%E0%A6%9C%E0%A6%BE%E0%A6%AD%E0%A6%BE-%E0%A6%85%E0%A6%AC%E0%A6%9C%E0%A7%87%E0%A6%95%E0%A7%8D%E0%A6%9F-%E0%A6%B8%E0%A6%BF%E0%A6%B0%E0%A6%BF%E0%A6%AF%E0%A6%BC%E0%A6%BE%E0%A6%B2%E0%A6%BE%E0%A6%87%E0%A6%9C/">জাভা অবজেক্ট সিরিয়ালাইজেশন (Java serialization)</a></h2>
         
-        <p class="list-post-date">
-          <time datetime="2017-06-24T03:37:00Z">
-            24 June, 2017 at 03:37 &#43;0000
-          </time>
-        </p>
-      </header>
-      <div>
-        সিরিয়ালাইজেশন (Serialization)
-আমরা জানি যে ক্লাস থেকে অবজেক্ট তৈরি করা হয়। ক্লাসে মূলত একটি অবজেক্টে কী কী প্রোপ্রার্টিজ থাকবে এবং এটি কী কী কাজ করতে পারবে তার বর্ণনা থাকে। কিন্তু যখন নিউ(new) অপারেটর ব্যবহার করে একে অবজেক্ট তৈরি করা হয়, তখন এটি একটি জীবন্ত প্রাণির মতো অবজেক্টে পরিণত হয়। একটি জীবন্ত প্রাণির যেমন অনেকগুলো নিজস্ব ও অনন্য (unique) বৈশিষ্ট্য থাকে (যেমন- নাম, বয়স, ডিএনএ সিকুয়েন্স ইত্যাদি), তেমনি একটি অবজেক্টের একইরকম অনন্য পরিচয় (unique identity) থাকে। প্রত্যেকটি অবজেক্ট কিছু না কিছু স্টেট(state) বা ডেটা থাকে। প্রত্যেকটি অবজেক্টের একটি জীবন চক্র থাকে (life cycle)। এটি নিউ অপারেটর দিয়ে শুরু হয় এবং গারবেজ কালেক্টর(garbage collector) দিয়ে শেষ হয়। এই শুরু এবং শেষ হওয়ার মধ্যবর্তী অবজেক্টের কোনো অবস্থাকে বাইনারী ফরমেটে স্টোর করা যায় এবং সেই একই অবস্থা থেকে পুনর্গঠিত করা যায়।
-      </div>
-      
-      <p><a class="read-more" href="http://bazlur.com/posts/2017-06-24-%E0%A6%9C%E0%A6%BE%E0%A6%AD%E0%A6%BE-%E0%A6%85%E0%A6%AC%E0%A6%9C%E0%A7%87%E0%A6%95%E0%A7%8D%E0%A6%9F-%E0%A6%B8%E0%A6%BF%E0%A6%B0%E0%A6%BF%E0%A6%AF%E0%A6%BC%E0%A6%BE%E0%A6%B2%E0%A6%BE%E0%A6%87%E0%A6%9C/">Read more &rarr;</a></p>
-      
-    </article>
+        <span class="list-post-date post-info">
+             by <a href="/about-me/" class="p-author h-card"
+                                   rel="author">A N M Bazlur Rahman</a>
+            <time datetime=" 2017-06-24">
+             on 24 June, 2017 at 03:37 &#43;0000
+            </time>
+
+        </span>
+        <span>
+            <div id="tags"><a class="post-tag tag-small" href="/tags/deserialization" rel="tag"> deserialization </a> &nbsp; <a class="post-tag tag-small" href="/tags/java" rel="tag"> java </a> &nbsp; <a class="post-tag tag-small" href="/tags/serialization" rel="tag"> serialization </a></div>
+        </span>
+    </div>
+</article>
     
-        <article>
-      <header>
+    
+
+
+
+
+<article class="post">
+    <div class="post-title">
         
         <h2 class="list-title"><a href="http://bazlur.com/posts/2017-03-25-%E0%A6%9C%E0%A6%BE%E0%A6%AD%E0%A6%BE-%E0%A6%AE%E0%A7%87%E0%A6%87%E0%A6%A8-%E0%A6%A5%E0%A7%8D%E0%A6%B0%E0%A7%87%E0%A6%A1-java-main-threa/">জাভা মেইন থ্রেড (Java Main Thread)</a></h2>
         
-        <p class="list-post-date">
-          <time datetime="2017-03-25T02:13:00Z">
-            25 March, 2017 at 02:13 &#43;0000
-          </time>
-        </p>
-      </header>
-      <div>
-        জাভা ভার্চুয়াল মেশিন যখন চলা শুরু করে, তখন এটি একটি থ্রেড তৈরি করে। একে মেইন থ্রেড বলা হয়। আমরা জাভাতে যে কোডগুলো করি সেগুলোকে মেইন থ্রেড রান করে। আমরা জানি যে প্রত্যেকটি জাভা প্রোগ্রামের একটি এন্ট্রি পয়েন্ট থাকে আর সেটি হলো মেইন মেথড (static void main(String[] args))। এই মেইন থ্রেড শুরুতেই এই মেইন মেথডটি খুঁজে। এই মেইন মেথড থেকেই প্রোগ্রাম চলা শুরু করে। উদাহরণ-
-public class MainThreadDemo { public static void main(String\[\] args) { Thread thread = Thread.
-      </div>
-      
-      <p><a class="read-more" href="http://bazlur.com/posts/2017-03-25-%E0%A6%9C%E0%A6%BE%E0%A6%AD%E0%A6%BE-%E0%A6%AE%E0%A7%87%E0%A6%87%E0%A6%A8-%E0%A6%A5%E0%A7%8D%E0%A6%B0%E0%A7%87%E0%A6%A1-java-main-threa/">Read more &rarr;</a></p>
-      
-    </article>
+        <span class="list-post-date post-info">
+             by <a href="/about-me/" class="p-author h-card"
+                                   rel="author">A N M Bazlur Rahman</a>
+            <time datetime=" 2017-03-25">
+             on 25 March, 2017 at 02:13 &#43;0000
+            </time>
+
+        </span>
+        <span>
+            <div id="tags"><a class="post-tag tag-small" href="/tags/java" rel="tag"> java </a> &nbsp; <a class="post-tag tag-small" href="/tags/thread" rel="tag"> thread </a></div>
+        </span>
+    </div>
+</article>
     
-        <article>
-      <header>
+    
+
+
+
+
+<article class="post">
+    <div class="post-title">
         
         <h2 class="list-title"><a href="http://bazlur.com/posts/2017-03-22-%E0%A6%9C%E0%A6%BE%E0%A6%AD%E0%A6%BE%E0%A6%A4%E0%A7%87-%E0%A6%95%E0%A7%80%E0%A6%AD%E0%A6%BE%E0%A6%AC%E0%A7%87-%E0%A6%AB%E0%A6%BE%E0%A6%87%E0%A6%B2-%E0%A6%95%E0%A6%AA%E0%A6%BF-%E0%A6%95/">জাভাতে কীভাবে ফাইল কপি করা যায়(File Copying in Java)</a></h2>
         
-        <p class="list-post-date">
-          <time datetime="2017-03-22T14:08:00Z">
-            22 March, 2017 at 14:08 &#43;0000
-          </time>
-        </p>
-      </header>
-      <div>
-        জাভাতে বিভিন্নভাবে ফাইল কপি করা যায়।
-প্রথমে ইনপুট স্ট্রিম ব্যবহার করে ফাইল কপি করতে পারি।
-copy() মেথডটিতে দুটি প্যারামিটার রয়েছে। প্রথমটিতে ফাইলের সোর্সটি স্ট্রিং আকারে দিতে হবে, অর্থাৎ যে ফাইলটি কপি করা হবে তার পাথ। দ্বিতীয়টি যেখানে ফাইলটি কপি করা হবে। এটি ডেস্টিনেশন ফাইল। এই ফাইলটি সিস্টেমে না থাকলে নতুন করে তৈরি হবে। আর যদি ফাইলটি আগে থেকেই তৈরি করা থাকে, তাহলে এর কন্টেন্ট রিপ্লেস হবে।
-এতে প্রথমে একটি ইনপুট স্ট্রিম ব্যবহার করা হয়েছে যা দিয়ে ফাইল থেকে ডেটা পড়া হয়, এবং একটি আউটপুট স্ট্রিম ব্যবহার করা হয়েছে যা দিয়ে ডেস্টিনেশন ফাইলে রাইট করা হয়।
-      </div>
-      
-      <p><a class="read-more" href="http://bazlur.com/posts/2017-03-22-%E0%A6%9C%E0%A6%BE%E0%A6%AD%E0%A6%BE%E0%A6%A4%E0%A7%87-%E0%A6%95%E0%A7%80%E0%A6%AD%E0%A6%BE%E0%A6%AC%E0%A7%87-%E0%A6%AB%E0%A6%BE%E0%A6%87%E0%A6%B2-%E0%A6%95%E0%A6%AA%E0%A6%BF-%E0%A6%95/">Read more &rarr;</a></p>
-      
-    </article>
+        <span class="list-post-date post-info">
+             by <a href="/about-me/" class="p-author h-card"
+                                   rel="author">A N M Bazlur Rahman</a>
+            <time datetime=" 2017-03-22">
+             on 22 March, 2017 at 14:08 &#43;0000
+            </time>
+
+        </span>
+        <span>
+            <div id="tags"><a class="post-tag tag-small" href="/tags/file-copy" rel="tag"> file copy </a> &nbsp; <a class="post-tag tag-small" href="/tags/java" rel="tag"> java </a></div>
+        </span>
+    </div>
+</article>
     
-        <article>
-      <header>
+    
+
+
+
+
+<article class="post">
+    <div class="post-title">
         
         <h2 class="list-title"><a href="http://bazlur.com/posts/2017-03-01-largest-known-prime-numbe/">Largest known prime number</a></h2>
         
-        <p class="list-post-date">
-          <time datetime="2017-03-01T16:19:00Z">
-            1 March, 2017 at 16:19 &#43;0000
-          </time>
-        </p>
-      </header>
-      <div>
-        সবচেয়ে বড় মৌলিক সংখ্যাটি কতো ?
-এখন পর্যন্ত খুঁজে পাওয়া সবচেয়ে বড় মৌলিক সংখ্যাটি হলো – 2^57,885,161 -1।
-এই লিংকে এ সম্পর্কে আরও বিস্তারিত জানা যাবে।
-এতে 17,425,170 টি সংখ্যা রয়েছে। এই সংখ্যাটি দেখতে চাইলে ঝটপট একটি জাভা প্রোগ্রাম লিখে ফেলা যায়। এর জন্য জাভার BigInteger ক্লাসটি প্রয়োজন হবে।
-import java.math.BigInteger; public class LargestPrimeNumber { public static void main(String[] args) { BigInteger two = BigInteger.valueOf(2); BigInteger largest = two.pow(57_885_161); BigInteger largestPrimeNumber = largest.
-      </div>
-      
-      <p><a class="read-more" href="http://bazlur.com/posts/2017-03-01-largest-known-prime-numbe/">Read more &rarr;</a></p>
-      
-    </article>
+        <span class="list-post-date post-info">
+             by <a href="/about-me/" class="p-author h-card"
+                                   rel="author">A N M Bazlur Rahman</a>
+            <time datetime=" 2017-03-01">
+             on 1 March, 2017 at 16:19 &#43;0000
+            </time>
+
+        </span>
+        <span>
+            <div id="tags"><a class="post-tag tag-small" href="/tags/java" rel="tag"> java </a> &nbsp; <a class="post-tag tag-small" href="/tags/biginteger" rel="tag"> BigInteger </a> &nbsp; <a class="post-tag tag-small" href="/tags/prime-number" rel="tag"> Prime Number </a></div>
+        </span>
+    </div>
+</article>
     
-        <article>
-      <header>
+    
+
+
+
+
+<article class="post">
+    <div class="post-title">
         
         <h2 class="list-title"><a href="http://bazlur.com/posts/2017-02-26-%E0%A6%95%E0%A7%8B%E0%A6%A1%E0%A6%BF%E0%A6%82-%E0%A6%95%E0%A6%A8%E0%A6%AD%E0%A7%87%E0%A6%A8%E0%A6%B6%E0%A6%A8-coding-conventio/">কোডিং কনভেনশন (coding convention)</a></h2>
         
-        <p class="list-post-date">
-          <time datetime="2017-02-26T00:27:00Z">
-            26 February, 2017 at 00:27 &#43;0000
-          </time>
-        </p>
-      </header>
-      <div>
-        আমরা যে কোডগুলো লিখি সেগুলো সাধারণত হাইলেভেল(high-level) প্রোগ্রামিং ভাষায় (যেমন- জাভা)। এর প্রধাণ কারণ, হাইলেভেল প্রোগ্রামিং ভাষাগুলো মানুষের ভাষার কাছাকাছি। এতে করে আমাদের বোঝার সুবিধা হয়। একজন আরেকজনের সহজে কোড পড়তে ও বুঝতে পারে। এইকোডগুলো এজন্যই এভাবে লেখা হয়। কম্পিউটার কিন্তু আমাদের এই হাইলেভেল কোডগুলো বুঝতে পারেনা, এজন্য কম্পাইলারের দরকার হয়। আমাদের কোডগুলো কম্পাইল করার পর মেশিন যাতে বুঝতে পারে এমন কোডে রূপান্তরিত করা হয়।
-সুতরাং দেখা যাচ্ছে, কম্পিউটার মূলত মেশিন কোড পড়ে। আমাদের পক্ষে মেশিনকোড পড়া কষ্টদায়ক বা আমরা তা পারি না। একটি সফটওয়্যার তৈরি করা শেষ হয়ে গেলে একে অনেকদিন মেইনটেইন করতে হয়। এর অর্থ হচ্ছে এই যে, এই সফটওয়্যারটি যতদিন মানুষ ব্যবহার করবে ততদিন এর কোডগুলো নিয়ে কাজ করতে হয়, নতুন নতুন সমস্যার সমাধান যুক্ত করতে হয়, কোনো বাগ বা ত্রুটি থাকলে সেগুলোকে সমাধান করতে হয়। একেই মেইনটেনেনিং (maintaining) বলা হয়। এর বাংলা হতে পারে রক্ষা বা প্রতিপালন করা। একটি সফটওয়্যারের পেছনে শতকরা ৮০ ভাগ খরচ চলে যায় এই মেইনটেনেন্সে। বর্তমানে অনেক জটিল ও বড় মাপের সফটওয়্যারগুলো সবসময় টিম নিয়ে তৈরি করা হয়। একার পক্ষে কখনো বড় কোনো সফটওয়্যারের কোড লেখা বা মেনইটেইন করা সম্ভব হয় না। তাছাড়া কোনো একটি সফটওয়্যার প্রজেক্টের মূল প্রোগ্রামার বা ডেভেলপার সারা জীবন ধরে একই সফটওয়্যার মেইনটেইন করে না। নতুন ডেভেলপারকে পুরোনো কোডগুলো পড়ে বুঝতে হয়। কোডগুলো পড়ে বুঝতে হলে কোডগুলোকে এমনভাবে লিখতে হবে যাতে সহজে পড়ে বোঝা যায়। এখন একেকজন যদি একেকভাবে কোড লিখে, তাহলে এই বোঝার প্রক্রিয়াটি অনেক কষ্টকর ও সময়সাপেক্ষ হয়ে যায়।
-      </div>
-      
-      <p><a class="read-more" href="http://bazlur.com/posts/2017-02-26-%E0%A6%95%E0%A7%8B%E0%A6%A1%E0%A6%BF%E0%A6%82-%E0%A6%95%E0%A6%A8%E0%A6%AD%E0%A7%87%E0%A6%A8%E0%A6%B6%E0%A6%A8-coding-conventio/">Read more &rarr;</a></p>
-      
-    </article>
+        <span class="list-post-date post-info">
+             by <a href="/about-me/" class="p-author h-card"
+                                   rel="author">A N M Bazlur Rahman</a>
+            <time datetime=" 2017-02-26">
+             on 26 February, 2017 at 00:27 &#43;0000
+            </time>
+
+        </span>
+        <span>
+            <div id="tags"><a class="post-tag tag-small" href="/tags/coding-convention" rel="tag"> coding convention </a> &nbsp; <a class="post-tag tag-small" href="/tags/java" rel="tag"> java </a></div>
+        </span>
+    </div>
+</article>
     
-        <article>
-      <header>
+    
+
+
+
+
+<article class="post">
+    <div class="post-title">
         
         <h2 class="list-title"><a href="http://bazlur.com/posts/2017-02-19-%E0%A6%B8%E0%A7%8D%E0%A6%9F%E0%A7%8D%E0%A6%B0%E0%A6%BF%E0%A6%82-%E0%A6%AA%E0%A7%81%E0%A6%B2-%E0%A6%95%E0%A7%80-what-is-string-poo/">স্ট্রিং পুল কী (What is String Pool)</a></h2>
         
-        <p class="list-post-date">
-          <time datetime="2017-02-19T00:39:00Z">
-            19 February, 2017 at 00:39 &#43;0000
-          </time>
-        </p>
-      </header>
-      <div>
-        জাভা ভার্চুয়াল মেশিনে মেমোরি মডেল (Memory Model) দুই ভাবে বিভক্ত। এরা হলো হিপ এবং থ্রেড স্ট্যাক। জাভা অ্যাপ্লিকেশনে যত ধরনের অবজেক্ট তৈরি হয়, সেগুলোর সব থাকে হিপে। স্ট্রিং পুল (String Pool) জাভা হিপের একটি বিশেষ এলাকা।
-জাভাতে স্ট্রিং একটি বহুল ব্যবহৃত ক্লাস। যেহেতু এটি ইমিউটেবল, তাই স্ট্রিং নিয়ে কাজ করার সময় হিপে অনেক নতুন নতুন স্ট্রিং অবজেক্ট তৈরি হয়। এছাড়াও স্ট্রিং অবজেক্ট নিজেও অনেক বেশি মেমোরি নিয়ে থাকে। একটি স্ট্রিং অবজেক্ট কত বাইট মেমোরি নেয় তা হিসাব করে বের করে ফেলা যায়।
-      </div>
-      
-      <p><a class="read-more" href="http://bazlur.com/posts/2017-02-19-%E0%A6%B8%E0%A7%8D%E0%A6%9F%E0%A7%8D%E0%A6%B0%E0%A6%BF%E0%A6%82-%E0%A6%AA%E0%A7%81%E0%A6%B2-%E0%A6%95%E0%A7%80-what-is-string-poo/">Read more &rarr;</a></p>
-      
-    </article>
+        <span class="list-post-date post-info">
+             by <a href="/about-me/" class="p-author h-card"
+                                   rel="author">A N M Bazlur Rahman</a>
+            <time datetime=" 2017-02-19">
+             on 19 February, 2017 at 00:39 &#43;0000
+            </time>
+
+        </span>
+        <span>
+            <div id="tags"><a class="post-tag tag-small" href="/tags/java" rel="tag"> java </a> &nbsp; <a class="post-tag tag-small" href="/tags/string" rel="tag"> string </a> &nbsp; <a class="post-tag tag-small" href="/tags/string-pool" rel="tag"> string pool </a></div>
+        </span>
+    </div>
+</article>
     
-        <article>
-      <header>
+    
+
+
+
+
+<article class="post">
+    <div class="post-title">
         
         <h2 class="list-title"><a href="http://bazlur.com/posts/2017-02-08-%E0%A6%9C%E0%A6%BE%E0%A6%AD%E0%A6%BE-%E0%A6%95%E0%A7%80-%E0%A6%AA%E0%A6%BE%E0%A6%B8-%E0%A6%AC%E0%A6%BE%E0%A6%87-%E0%A6%AD%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B2%E0%A7%81-pass-by-valu/">জাভা কী পাস-বাই-ভ্যালু (Pass-by-Value)</a></h2>
         
-        <p class="list-post-date">
-          <time datetime="2017-02-08T17:55:00Z">
-            8 February, 2017 at 17:55 &#43;0000
-          </time>
-        </p>
-      </header>
-      <div>
-        যখন একটি মেথডে আর্গুমেন্ট হিসেবে একটি অবজেক্ট পাঠানো হয় তখন কী ঘটনা ঘটে? এটি কি পাস-বাই-ভ্যালু (Pass-by-Value) না কি পাস-বাই-রেফারেন্স (Pass-by-Reference)?
-এই প্রশ্ন দুটির উত্তর দিতে হলে আমাদের জানতে হবে অবজেক্টের রেফারেন্স কী।
-জাভাতে অবজেক্টগুলো প্রোগ্রাম মেমোরির হিপ অংশে থাকে। এর একটি ঠিকানা বা অ্যাড্রেস আছে। ভ্যারিয়েবল মূলত সেই অবজেক্টের অ্যাড্রেস ধরে রাখে যাকে আমরা বলি অবজেক্টের রেফারেন্স। আমরা যখন কোনো মেথডে আর্গুমেন্ট হিসেবে একটি ভ্যারিয়েবল বা অবজেক্টের রেফারেন্স পাস করি তখন আসলে সেই অবজেক্টের রেফারেন্সটি পাঠাই না বরং সেই রেফারেন্সের একটি কপি পাঠাই। কোনো একটি অবজেক্টের রেফারেন্স ভ্যালু যদি হয়, 66d3c617 তাহলে মেথড আর্গুমেন্ট হিসেবে এই সংখ্যাটির একটি কপি আর্গুমেন্ট হিসেবে যায়। এর মানে দাঁড়ায় আমরা আসলে রেফারেন্সটি পাঠাচ্ছি না বরং সেই রেফারেন্সের কপি পাঠাচ্ছি।
-      </div>
-      
-      <p><a class="read-more" href="http://bazlur.com/posts/2017-02-08-%E0%A6%9C%E0%A6%BE%E0%A6%AD%E0%A6%BE-%E0%A6%95%E0%A7%80-%E0%A6%AA%E0%A6%BE%E0%A6%B8-%E0%A6%AC%E0%A6%BE%E0%A6%87-%E0%A6%AD%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B2%E0%A7%81-pass-by-valu/">Read more &rarr;</a></p>
-      
-    </article>
+        <span class="list-post-date post-info">
+             by <a href="/about-me/" class="p-author h-card"
+                                   rel="author">A N M Bazlur Rahman</a>
+            <time datetime=" 2017-02-08">
+             on 8 February, 2017 at 17:55 &#43;0000
+            </time>
+
+        </span>
+        <span>
+            <div id="tags"><a class="post-tag tag-small" href="/tags/java" rel="tag"> java </a> &nbsp; <a class="post-tag tag-small" href="/tags/pass-by-reference" rel="tag"> pass by reference </a> &nbsp; <a class="post-tag tag-small" href="/tags/pass-by-value" rel="tag"> pass by value </a></div>
+        </span>
+    </div>
+</article>
     
-        <article>
-      <header>
+    
+
+
+
+
+<article class="post">
+    <div class="post-title">
         
         <h2 class="list-title"><a href="http://bazlur.com/posts/2017-01-27-%E0%A6%95%E0%A7%87%E0%A6%A8%E0%A7%8B-%E0%A6%9C%E0%A6%BE%E0%A6%AD%E0%A6%BE-%E0%A6%B6%E0%A7%87%E0%A6%96%E0%A6%BE-%E0%A6%89%E0%A6%9A%E0%A6%BF/">কেনো জাভা শেখা উচিত ?</a></h2>
         
-        <p class="list-post-date">
-          <time datetime="2017-01-27T16:20:00Z">
-            27 January, 2017 at 16:20 &#43;0000
-          </time>
-        </p>
-      </header>
-      <div>
-        যে যে কারণে জাভা শেখা যেতে পারে তার কারণগুলো নিয়ে আলোচনা করা যাক,
- Pay matters. সাম্প্রতিক একটি প্রতিবেদন থেকে দেখা গেছে যে প্রোগ্রামিং ইন্ডাস্ট্রিতে জাভা প্রোগ্রামাররা অন্যান্য প্রোগ্রামারদের চেয়ে অনেক বেশি বেতন পেয়ে থাকে।1 পৃথিবীতে প্রায় ১৫ বিলিয়ন ডিভাইসে জাভা চলে। এছাড়া জাভা দিয়ে স্মার্টফোন থেকে শুরু করে সার্ভার, এটিএম মেশিন (ATM Machine), পয়েন্ট অব সেল (POS) এর টার্মিনাল, ব্লু-রে প্লেয়ার, টেলিভিশন, সেট-টপ বক্স (STB), ইন্টারনেট অব থিং (Internet of thing) এর গেটওয়ে (Gateway), মেডিকেল ডিভাইস (Medical Device), আমাজনের কিন্ডল (Kindle), অটোমোবাইল এবং আরও অনেক কিছুতে প্রোগ্রাম করা যায়। জাভা সাধরাণত খুব গুরুত্বপূর্ণ এবং রিয়েল ওয়ার্ল্ড অ্যাপ্লিকেশন (Real World Application)2 তৈরিতে ব্যবহার করা হয়। যেমন, এন্ড্রয়েড ডেভেলপমেন্টের ক্ষেত্রে জাভা ব্যবহার অপরিহার্য। বিশেষ বিশেষ শক্তিশালী ওয়েব সাইট যেমন, eBay.
-      </div>
-      
-      <p><a class="read-more" href="http://bazlur.com/posts/2017-01-27-%E0%A6%95%E0%A7%87%E0%A6%A8%E0%A7%8B-%E0%A6%9C%E0%A6%BE%E0%A6%AD%E0%A6%BE-%E0%A6%B6%E0%A7%87%E0%A6%96%E0%A6%BE-%E0%A6%89%E0%A6%9A%E0%A6%BF/">Read more &rarr;</a></p>
-      
-    </article>
+        <span class="list-post-date post-info">
+             by <a href="/about-me/" class="p-author h-card"
+                                   rel="author">A N M Bazlur Rahman</a>
+            <time datetime=" 2017-01-27">
+             on 27 January, 2017 at 16:20 &#43;0000
+            </time>
+
+        </span>
+        <span>
+            <div id="tags"><a class="post-tag tag-small" href="/tags/java" rel="tag"> java </a> &nbsp; <a class="post-tag tag-small" href="/tags/learning" rel="tag"> learning </a> &nbsp; <a class="post-tag tag-small" href="/tags/why-java" rel="tag"> why java </a></div>
+        </span>
+    </div>
+</article>
     
-        <article>
-      <header>
+    
+
+
+
+
+<article class="post">
+    <div class="post-title">
         
         <h2 class="list-title"><a href="http://bazlur.com/posts/2017-01-25-%E0%A6%9C%E0%A6%BE%E0%A6%AD%E0%A6%BE-%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A7%8B%E0%A6%97%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%AE%E0%A6%BF%E0%A6%82-%E0%A6%B2%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%82/">জাভা প্রোগ্রামিং ল্যাংগুয়েজ তৈরির পেছনের গল্প</a></h2>
         
-        <p class="list-post-date">
-          <time datetime="2017-01-25T15:25:00Z">
-            25 January, 2017 at 15:25 &#43;0000
-          </time>
-        </p>
-      </header>
-      <div>
-        ১৯৯৫ সালের ২৩ মে। ঝলমলে চমৎকার একটি দিন1। জন গেইজ (John Gage – ডিরেক্টর অব সান-মাইক্রোসিস্টেম) ও মার্ক অ্যান্ডারসেন (Marc Andreesen – নেটস্কেপের ভাইস প্রেসিডেন্ট ও সহপ্রতিষ্ঠাতা) ঘোষণা দেন যে, জাভা টেকনোলজি মোটেই কোনো উপকথা নয়, বরং এটিই বাস্তবতা এবং এটি নেটস্কেপ নেভিগেটর (Netscape Navigator) এর সঙ্গে সংযুক্ত হতে যাচ্ছে।
-সে সময় জাভাতে কাজ করে এমন লোকের সংখ্যা ত্রিশেরও কম। তারা কখনোই চিন্তা করেনি তাদের এই টিম ভবিষ্যৎ পৃথিবীর প্রধানতম টেকনোলজি নির্ধারণ করতে যাচ্ছে। ২০০৪ সালের ৩ জানুয়ারি মার্স এক্সপ্লোরেশন রোভার (Mars Exploration Rover)2 মঙ্গল গ্রহের মাটিতে পা রাখে যার কন্ট্রোল সিস্টেম থেকে শুরু করে পৃথিবীর অধিকাংশ কনজুমার ইলেকট্রনিক্স, যেমন– কেবল সেট-টপ বক্স (STB), ভিসিআর (VCR), টোস্টার (Toaster), পিডিএ (PDA), স্মার্টফোনসহ প্রায় ১৫ বিলিয়ন ডিভাইস3, ১০০% ব্লু-রে ডিস্ক প্লেয়ার জাভা রান করে।
-      </div>
-      
-      <p><a class="read-more" href="http://bazlur.com/posts/2017-01-25-%E0%A6%9C%E0%A6%BE%E0%A6%AD%E0%A6%BE-%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A7%8B%E0%A6%97%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%AE%E0%A6%BF%E0%A6%82-%E0%A6%B2%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%82/">Read more &rarr;</a></p>
-      
-    </article>
+        <span class="list-post-date post-info">
+             by <a href="/about-me/" class="p-author h-card"
+                                   rel="author">A N M Bazlur Rahman</a>
+            <time datetime=" 2017-01-25">
+             on 25 January, 2017 at 15:25 &#43;0000
+            </time>
+
+        </span>
+        <span>
+            <div id="tags"><a class="post-tag tag-small" href="/tags/history" rel="tag"> history </a> &nbsp; <a class="post-tag tag-small" href="/tags/history-of-java" rel="tag"> history of java </a> &nbsp; <a class="post-tag tag-small" href="/tags/java" rel="tag"> java </a></div>
+        </span>
+    </div>
+</article>
     
-        <article>
-      <header>
+    
+
+
+
+
+<article class="post">
+    <div class="post-title">
         
         <h2 class="list-title"><a href="http://bazlur.com/2016/12/we-dont-need-stringbuilder-for-simple-concatenation/">We Don&#39;t Need StringBuilder for Simple Concatenation</a></h2>
         
-        <p class="list-post-date">
-          <time datetime="2016-12-22T19:06:00Z">
-            22 December, 2016 at 19:06 &#43;0000
-          </time>
-        </p>
-      </header>
-      <div>
-        String concatenation has always been a well-discussed topic among Java developers. It&rsquo;s been costly.
-Let&rsquo;s first dig into the issue of why it&rsquo;s costly.
-In Java, string objects are immutable, which means once it is created, you cannot change it. So when we concatenate one string with another, a new string is created, and the older one is marked for the garbage collector.
-Let&rsquo;s say we need to concatenate a million strings.
-      </div>
-      
-      <p><a class="read-more" href="http://bazlur.com/2016/12/we-dont-need-stringbuilder-for-simple-concatenation/">Read more &rarr;</a></p>
-      
-    </article>
+        <span class="list-post-date post-info">
+             by <a href="/about-me/" class="p-author h-card"
+                                   rel="author">A N M Bazlur Rahman</a>
+            <time datetime=" 2016-12-22">
+             on 22 December, 2016 at 19:06 &#43;0000
+            </time>
+
+        </span>
+        <span>
+            <div id="tags"><a class="post-tag tag-small" href="/tags/java" rel="tag"> java </a> &nbsp; <a class="post-tag tag-small" href="/tags/java-performance" rel="tag"> java performance </a> &nbsp; <a class="post-tag tag-small" href="/tags/concatenation" rel="tag"> concatenation </a> &nbsp; <a class="post-tag tag-small" href="/tags/stringbuilder" rel="tag"> stringbuilder </a></div>
+        </span>
+    </div>
+</article>
     
-        <article>
-      <header>
+    
+
+
+
+
+<article class="post">
+    <div class="post-title">
         
         <h2 class="list-title"><a href="http://bazlur.com/2016/11/turbocharging-java-with-parallel-array-sorting/">Turbocharging Java With Parallel Array Sorting</a></h2>
         
-        <p class="list-post-date">
-          <time datetime="2016-11-29T18:22:00Z">
-            29 November, 2016 at 18:22 &#43;0000
-          </time>
-        </p>
-      </header>
-      <div>
-        Sorting arrays in parallel is a JDK enhancement, which is part of the Java 9 release, which should yield significant performance improvements. JDK enhancement proposal 103 brings a new way of array sorting which uses the Fork/Join parallelism technique to provide sorting of arrays in parallel. This new feature has been added in the Java 8 release.
-Currently, we have two sorting implementations, one sorts arrays and another sorts collections. These two implementations perform sort in a single thread.
-      </div>
-      
-      <p><a class="read-more" href="http://bazlur.com/2016/11/turbocharging-java-with-parallel-array-sorting/">Read more &rarr;</a></p>
-      
-    </article>
+        <span class="list-post-date post-info">
+             by <a href="/about-me/" class="p-author h-card"
+                                   rel="author">A N M Bazlur Rahman</a>
+            <time datetime=" 2016-11-29">
+             on 29 November, 2016 at 18:22 &#43;0000
+            </time>
+
+        </span>
+        <span>
+            <div id="tags"><a class="post-tag tag-small" href="/tags/java" rel="tag"> Java </a> &nbsp; <a class="post-tag tag-small" href="/tags/java-9" rel="tag"> Java 9 </a> &nbsp; <a class="post-tag tag-small" href="/tags/parallel" rel="tag"> Parallel </a> &nbsp; <a class="post-tag tag-small" href="/tags/sorting" rel="tag"> Sorting </a> &nbsp; <a class="post-tag tag-small" href="/tags/performance" rel="tag"> Performance </a></div>
+        </span>
+    </div>
+</article>
     
-        <article>
-      <header>
+    
+
+
+
+
+<article class="post">
+    <div class="post-title">
         
         <h2 class="list-title"><a href="http://bazlur.com/posts/2012-03-31-%E0%A6%AD%E0%A6%AC%E0%A6%BF%E0%A6%B7%E0%A7%8D%E0%A6%AF%E0%A7%8E-%E0%A6%9C%E0%A6%BE%E0%A6%AD%E0%A6%BE-%E0%A6%A1%E0%A7%87%E0%A6%AD%E0%A6%B2%E0%A6%AA%E0%A6%BE%E0%A6%B0%E0%A6%A6%E0%A7%87/">ভবিষ্যৎ জাভা ডেভলপারদের স্বাধীনতা</a></h2>
         
-        <p class="list-post-date">
-          <time datetime="2012-03-31T00:30:00Z">
-            31 March, 2012 at 00:30 &#43;0000
-          </time>
-        </p>
-      </header>
-      <div>
-        তোমরা কি জানো ব্রাজিলে সবচেয়ে জনপ্রিয় টেকনোলজি হচ্ছে জাভা, হয়তো অনেকেই জেনে থাকবে, না জানলেও সমস্যা নেই, এখন জেনে নাও। আজকে একজন ব্রাজিলিয়ান এর সাথে পরিচয় করিয়ে দেবো যার নাম হচ্ছে ব্রুনো সোজা। তাকে সাধারণত জাভা-মানব বলে ডাকা হয়। এই জাভা-মানব সত্যিকার অর্থেই জাভা-মানব। তার সব কাজ জাভা নিয়ে। তিনি সুজাভা (SouJava-Java Technology Users Society) এর প্রতিষ্ঠাতা। তাকে নিয়ে গুগল করলেই অনেক কিছু জানতে পারবে। আমি নিচে তার ব্লগ লিংক এবং টুইটার আইডি দিয়ে দেবো, তোমরা ইচ্ছে করলে তাকে ফলো করতে পারো। যাহোক কিছুদিন আগে ভবিষ্যৎ জাভা ডেভেলপার নিয়ে একটি প্রজেন্টেশান দিয়েছেন। তার একটা ইন্টারভিও আমি পড়লাম। সেখানে তিনি ভবিষ্যৎ জাভা ডেপলপার দের কিছু স্বাধীনতার কথা বলেছেন। আমার আজকের নোটটি হবে সেগুলো নিয়ে। তোমাদের যদি সেগুলো ভাল লাগে, তাহলে নিজেকে জাভা ডেভেলপার হিসেবে তৈরি করতে পারো।
-      </div>
-      
-      <p><a class="read-more" href="http://bazlur.com/posts/2012-03-31-%E0%A6%AD%E0%A6%AC%E0%A6%BF%E0%A6%B7%E0%A7%8D%E0%A6%AF%E0%A7%8E-%E0%A6%9C%E0%A6%BE%E0%A6%AD%E0%A6%BE-%E0%A6%A1%E0%A7%87%E0%A6%AD%E0%A6%B2%E0%A6%AA%E0%A6%BE%E0%A6%B0%E0%A6%A6%E0%A7%87/">Read more &rarr;</a></p>
-      
-    </article>
+        <span class="list-post-date post-info">
+             by <a href="/about-me/" class="p-author h-card"
+                                   rel="author">A N M Bazlur Rahman</a>
+            <time datetime=" 2012-03-31">
+             on 31 March, 2012 at 00:30 &#43;0000
+            </time>
+
+        </span>
+        <span>
+            <div id="tags"><a class="post-tag tag-small" href="/tags/developers" rel="tag"> developers </a> &nbsp; <a class="post-tag tag-small" href="/tags/future-java-developers" rel="tag"> future java developers </a> &nbsp; <a class="post-tag tag-small" href="/tags/java" rel="tag"> java </a> &nbsp; <a class="post-tag tag-small" href="/tags/java-developers" rel="tag"> java developers </a></div>
+        </span>
+    </div>
+</article>
     
-        <article>
-      <header>
+    
+
+
+
+
+<article class="post">
+    <div class="post-title">
         
         <h2 class="list-title"><a href="http://bazlur.com/2011/06/java-collection-framework-list/">Java Collection Framework : List</a></h2>
         
-        <p class="list-post-date">
-          <time datetime="2011-06-01T00:52:10-04:00">
-            1 June, 2011 at 00:52 EDT
-          </time>
-        </p>
-      </header>
-      <div>
-        Java collection framework is very common to every java programmer, again for the beginner, I’m going to share my ideas about it. It’s beneficial to manage objects easily. The Java collection framework is a more likely array, but the difference is that collections can dynamically change their size. Today I’m going to write only about the List.
-List: The java.util.List interface is a subtype of the java.util.Collection interface. It represents an order list of objects.
-      </div>
-      
-      <p><a class="read-more" href="http://bazlur.com/2011/06/java-collection-framework-list/">Read more &rarr;</a></p>
-      
-    </article>
+        <span class="list-post-date post-info">
+             by <a href="/about-me/" class="p-author h-card"
+                                   rel="author">A N M Bazlur Rahman</a>
+            <time datetime=" 2011-06-01">
+             on 1 June, 2011 at 00:52 EDT
+            </time>
+
+        </span>
+        <span>
+            <div id="tags"><a class="post-tag tag-small" href="/tags/java" rel="tag"> java </a> &nbsp; <a class="post-tag tag-small" href="/tags/collection-framework" rel="tag"> Collection Framework </a> &nbsp; <a class="post-tag tag-small" href="/tags/list" rel="tag"> List </a> &nbsp; <a class="post-tag tag-small" href="/tags/access" rel="tag"> access </a> &nbsp; <a class="post-tag tag-small" href="/tags/arraylist" rel="tag"> ArrayList </a> &nbsp; <a class="post-tag tag-small" href="/tags/linkedlist" rel="tag"> LinkedList </a> &nbsp; <a class="post-tag tag-small" href="/tags/stack" rel="tag"> Stack </a> &nbsp; <a class="post-tag tag-small" href="/tags/vector" rel="tag"> Vector </a> &nbsp; <a class="post-tag tag-small" href="/tags/performance" rel="tag"> Performance </a></div>
+        </span>
+    </div>
+</article>
     
 </div>
   <footer>
   <footer>
-  <div>
+  <div  class="wrapper-footer">
     <p>
-    &copy; <a href="https://bazlur.com"> A N M Bazlur Rahman</a> 2012 - 2021 | <a href="https://github.com/rokon12">Github</a>
+      &copy; <a href="https://bazlur.com"> A N M Bazlur Rahman</a> <span id="footer-copyright">2012 - 2021 </span>  | <a href="https://github.com/rokon12">Github</a>
     | <a href=" https://twitter.com/bazlur_rahman"> @bazlur_rahman</a>
     </p>
   </div>

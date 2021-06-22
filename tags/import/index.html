@@ -44,6 +44,7 @@
     <script src="/js/prism.js"></script>
 
     <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/icofont.min.css" />
     <link rel="stylesheet" href="/css/fonts.css" />
     <link rel="stylesheet" href="/css/prism.css" />
 
@@ -79,26 +80,36 @@ if (!doNotTrack) {
 
   <body class="line-numbers">
 
-  <nav>
-    <ul class="menu">
-      
-      <li><a href="/">Home</a></li>
-      
-      <li><a href="/archives">Archives</a></li>
-      
-      <li><a href="/about-me/">About me</a></li>
-      
-      <li><a href="/books/">Books</a></li>
-      
-      <li><a href="/categories/">Categories</a></li>
-      
-      <li><a href="/resume/">Resume</a></li>
-      
-      <li><a href="/index.xml">Subscribe</a></li>
-      
-    </ul>
-    <hr/>
-    </nav>
+  <div id="head">
+    <div class="container">
+      <header class="masthead clearfix">
+        <a href="/"></a>
+        <div class="site-info">
+          <h1 class="site-name"> <a href="/"> Bazlur&#39;s Stream of Thoughts</a></h1>
+          <p class="site-description">This blog is meant to be a vehicle for airing my interest, feelings, thoughts, and opinion. </p>
+        </div>
+      </header>
+    </div>
+  </div>
+  <div id="header-menu" class="">
+    <div class="menu">
+      <ul style="margin: 0">
+        
+        <li> <a href="/">Home</a></li>
+        
+        <li> <a href="/archives">Archives</a></li>
+        
+        <li> <a href="/books/">Books</a></li>
+        
+        <li> <a href="/categories/">Categories</a></li>
+        
+        <li> <a href="/resume/">Resume</a></li>
+        
+        <li> <a href="/index.xml">Subscribe</a></li>
+        
+      </ul>
+    </div>
+  </div>
 
 
 <h1>import</h1>
@@ -111,31 +122,36 @@ if (!doNotTrack) {
 
 <div id="content">
     
-        <article>
-      <header>
+    
+
+
+
+
+<article class="post">
+    <div class="post-title">
         
         <h2 class="list-title"><a href="http://bazlur.com/posts/2018-03-13-what-is-packaging-in-java-how-to-import-package/">জাভাতে প্যাকেজিং কী? কীভাবে প্যাকেজ ইম্পোর্ট করতে হয় ?</a></h2>
         
-        <p class="list-post-date">
-          <time datetime="2018-03-12T22:08:47Z">
-            12 March, 2018 at 22:08 &#43;0000
-          </time>
-        </p>
-      </header>
-      <div>
-        আমরা কম্পিউটারে নানা ধরনের ফাইল বিভিন্ন ফোল্ডারে সাজিয়ে রাখি। যেমন- মুভি ফোল্ডারে হয়তো আমরা শুধুই মুভি রাখি, সেখানে অন্য কোনো ফাইল রাখি না। আবার মুভি ফোল্ডারে এর মধ্যে সাব-ফোল্ডার তৈরি করি আরও আলাদা করার জন্য, যেমন – বাংলা মুভি, ইংরেজি মুভি ইত্যাদি। জাভাতে প্যাকেজ বলতে এই ধারণাটিকেই বোঝায়। একটি জাভা প্রোগ্রামিং ভাষায় লেখা সফ্টওয়্যারে শত শত বা হাজার হাজার পৃথক ক্লাস থাকতে পারে। এজন্য প্যাকেজ ডিক্লেয়ারেশনের মাধ্যমে একই রকম ক্লাসগুলো একাধিক প্যাকেজের মধ্যে আলাদা করে রাখা হয়। এছাড়াও অনেক সময় একই নামের একাধিক ক্লাস লেখার প্রয়োজন হতে পারে যা পরম্পরবিরোধী। এক্ষেত্রে একই নামের ক্লাস বিভিন্ন প্যাকেজে রাখা যেতে পারে।
-      </div>
-      
-      <p><a class="read-more" href="http://bazlur.com/posts/2018-03-13-what-is-packaging-in-java-how-to-import-package/">Read more &rarr;</a></p>
-      
-    </article>
+        <span class="list-post-date post-info">
+             by <a href="/about-me/" class="p-author h-card"
+                                   rel="author">A N M Bazlur Rahman</a>
+            <time datetime=" 2018-03-12">
+             on 12 March, 2018 at 22:08 &#43;0000
+            </time>
+
+        </span>
+        <span>
+            <div id="tags"><a class="post-tag tag-small" href="/tags/import" rel="tag"> import </a> &nbsp; <a class="post-tag tag-small" href="/tags/java" rel="tag"> java </a> &nbsp; <a class="post-tag tag-small" href="/tags/packaging" rel="tag"> packaging </a></div>
+        </span>
+    </div>
+</article>
     
 </div>
   <footer>
   <footer>
-  <div>
+  <div  class="wrapper-footer">
     <p>
-    &copy; <a href="https://bazlur.com"> A N M Bazlur Rahman</a> 2012 - 2021 | <a href="https://github.com/rokon12">Github</a>
+      &copy; <a href="https://bazlur.com"> A N M Bazlur Rahman</a> <span id="footer-copyright">2012 - 2021 </span>  | <a href="https://github.com/rokon12">Github</a>
     | <a href=" https://twitter.com/bazlur_rahman"> @bazlur_rahman</a>
     </p>
   </div>

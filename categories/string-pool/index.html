@@ -44,6 +44,7 @@
     <script src="/js/prism.js"></script>
 
     <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/icofont.min.css" />
     <link rel="stylesheet" href="/css/fonts.css" />
     <link rel="stylesheet" href="/css/prism.css" />
 
@@ -79,26 +80,36 @@ if (!doNotTrack) {
 
   <body class="line-numbers">
 
-  <nav>
-    <ul class="menu">
-      
-      <li><a href="/">Home</a></li>
-      
-      <li><a href="/archives">Archives</a></li>
-      
-      <li><a href="/about-me/">About me</a></li>
-      
-      <li><a href="/books/">Books</a></li>
-      
-      <li><a href="/categories/">Categories</a></li>
-      
-      <li><a href="/resume/">Resume</a></li>
-      
-      <li><a href="/index.xml">Subscribe</a></li>
-      
-    </ul>
-    <hr/>
-    </nav>
+  <div id="head">
+    <div class="container">
+      <header class="masthead clearfix">
+        <a href="/"></a>
+        <div class="site-info">
+          <h1 class="site-name"> <a href="/"> Bazlur&#39;s Stream of Thoughts</a></h1>
+          <p class="site-description">This blog is meant to be a vehicle for airing my interest, feelings, thoughts, and opinion. </p>
+        </div>
+      </header>
+    </div>
+  </div>
+  <div id="header-menu" class="">
+    <div class="menu">
+      <ul style="margin: 0">
+        
+        <li> <a href="/">Home</a></li>
+        
+        <li> <a href="/archives">Archives</a></li>
+        
+        <li> <a href="/books/">Books</a></li>
+        
+        <li> <a href="/categories/">Categories</a></li>
+        
+        <li> <a href="/resume/">Resume</a></li>
+        
+        <li> <a href="/index.xml">Subscribe</a></li>
+        
+      </ul>
+    </div>
+  </div>
 <h2>
   <span class="list-heading-type">categories:</span>
   <span class="list-heading-tag">String pool</span>
@@ -106,32 +117,36 @@ if (!doNotTrack) {
 
 <div id="content">
   
-      <article>
-      <header>
+  
+
+
+
+
+<article class="post">
+    <div class="post-title">
         
         <h2 class="list-title"><a href="http://bazlur.com/posts/2017-02-19-%E0%A6%B8%E0%A7%8D%E0%A6%9F%E0%A7%8D%E0%A6%B0%E0%A6%BF%E0%A6%82-%E0%A6%AA%E0%A7%81%E0%A6%B2-%E0%A6%95%E0%A7%80-what-is-string-poo/">স্ট্রিং পুল কী (What is String Pool)</a></h2>
         
-        <p class="list-post-date">
-          <time datetime="2017-02-19T00:39:00Z">
-            19 February, 2017 at 00:39 &#43;0000
-          </time>
-        </p>
-      </header>
-      <div>
-        জাভা ভার্চুয়াল মেশিনে মেমোরি মডেল (Memory Model) দুই ভাবে বিভক্ত। এরা হলো হিপ এবং থ্রেড স্ট্যাক। জাভা অ্যাপ্লিকেশনে যত ধরনের অবজেক্ট তৈরি হয়, সেগুলোর সব থাকে হিপে। স্ট্রিং পুল (String Pool) জাভা হিপের একটি বিশেষ এলাকা।
-জাভাতে স্ট্রিং একটি বহুল ব্যবহৃত ক্লাস। যেহেতু এটি ইমিউটেবল, তাই স্ট্রিং নিয়ে কাজ করার সময় হিপে অনেক নতুন নতুন স্ট্রিং অবজেক্ট তৈরি হয়। এছাড়াও স্ট্রিং অবজেক্ট নিজেও অনেক বেশি মেমোরি নিয়ে থাকে। একটি স্ট্রিং অবজেক্ট কত বাইট মেমোরি নেয় তা হিসাব করে বের করে ফেলা যায়।
-      </div>
-      
-      <p><a class="read-more" href="http://bazlur.com/posts/2017-02-19-%E0%A6%B8%E0%A7%8D%E0%A6%9F%E0%A7%8D%E0%A6%B0%E0%A6%BF%E0%A6%82-%E0%A6%AA%E0%A7%81%E0%A6%B2-%E0%A6%95%E0%A7%80-what-is-string-poo/">Read more &rarr;</a></p>
-      
-    </article>
+        <span class="list-post-date post-info">
+             by <a href="/about-me/" class="p-author h-card"
+                                   rel="author">A N M Bazlur Rahman</a>
+            <time datetime=" 2017-02-19">
+             on 19 February, 2017 at 00:39 &#43;0000
+            </time>
+
+        </span>
+        <span>
+            <div id="tags"><a class="post-tag tag-small" href="/tags/java" rel="tag"> java </a> &nbsp; <a class="post-tag tag-small" href="/tags/string" rel="tag"> string </a> &nbsp; <a class="post-tag tag-small" href="/tags/string-pool" rel="tag"> string pool </a></div>
+        </span>
+    </div>
+</article>
   
 </div>
   <footer>
   <footer>
-  <div>
+  <div  class="wrapper-footer">
     <p>
-    &copy; <a href="https://bazlur.com"> A N M Bazlur Rahman</a> 2012 - 2021 | <a href="https://github.com/rokon12">Github</a>
+      &copy; <a href="https://bazlur.com"> A N M Bazlur Rahman</a> <span id="footer-copyright">2012 - 2021 </span>  | <a href="https://github.com/rokon12">Github</a>
     | <a href=" https://twitter.com/bazlur_rahman"> @bazlur_rahman</a>
     </p>
   </div>

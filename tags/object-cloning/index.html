@@ -44,6 +44,7 @@
     <script src="/js/prism.js"></script>
 
     <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/icofont.min.css" />
     <link rel="stylesheet" href="/css/fonts.css" />
     <link rel="stylesheet" href="/css/prism.css" />
 
@@ -79,26 +80,36 @@ if (!doNotTrack) {
 
   <body class="line-numbers">
 
-  <nav>
-    <ul class="menu">
-      
-      <li><a href="/">Home</a></li>
-      
-      <li><a href="/archives">Archives</a></li>
-      
-      <li><a href="/about-me/">About me</a></li>
-      
-      <li><a href="/books/">Books</a></li>
-      
-      <li><a href="/categories/">Categories</a></li>
-      
-      <li><a href="/resume/">Resume</a></li>
-      
-      <li><a href="/index.xml">Subscribe</a></li>
-      
-    </ul>
-    <hr/>
-    </nav>
+  <div id="head">
+    <div class="container">
+      <header class="masthead clearfix">
+        <a href="/"></a>
+        <div class="site-info">
+          <h1 class="site-name"> <a href="/"> Bazlur&#39;s Stream of Thoughts</a></h1>
+          <p class="site-description">This blog is meant to be a vehicle for airing my interest, feelings, thoughts, and opinion. </p>
+        </div>
+      </header>
+    </div>
+  </div>
+  <div id="header-menu" class="">
+    <div class="menu">
+      <ul style="margin: 0">
+        
+        <li> <a href="/">Home</a></li>
+        
+        <li> <a href="/archives">Archives</a></li>
+        
+        <li> <a href="/books/">Books</a></li>
+        
+        <li> <a href="/categories/">Categories</a></li>
+        
+        <li> <a href="/resume/">Resume</a></li>
+        
+        <li> <a href="/index.xml">Subscribe</a></li>
+        
+      </ul>
+    </div>
+  </div>
 
 
 <h1>object cloning</h1>
@@ -111,31 +122,36 @@ if (!doNotTrack) {
 
 <div id="content">
     
-        <article>
-      <header>
+    
+
+
+
+
+<article class="post">
+    <div class="post-title">
         
         <h2 class="list-title"><a href="http://bazlur.com/posts/2018-03-13-what-is-java-object-clonin/">জাভাতে অবজেক্ট ক্লোনিং কী(What is object cloning in java)?</a></h2>
         
-        <p class="list-post-date">
-          <time datetime="2018-03-12T22:32:37Z">
-            12 March, 2018 at 22:32 &#43;0000
-          </time>
-        </p>
-      </header>
-      <div>
-        ক্লােন শব্দের অর্থ হুবহু কপি করা। অবজেক্ট ক্লাোনিংয়ের অর্থ একই রকম আরেকটি অবজেক্ট তৈরি করা। আমরা জানি যে ক্লাস থেকে অবজেক্ট তৈরি করা হয়। একটি ক্লাস থেকে একাধিক অবজেক্ট তৈরি করা যায়। প্রত্যেকটি অবেজেক্টের আলাদা আলদা স্টেট থাকে। অর্থাৎ অবজেক্টগুলো সম্পূর্ণ ভিন্ন হয়। তবে কখনো কখনো একটি অবজেক্টের স্টেটগুলো নিয়ে আরেকটি সম্পূর্ণ একইরকম অবজেক্ট তৈরি করার প্রয়োজন হয়। একইরকম অবজেক্ট তৈরির এই প্রক্রিয়াকে অবজেক্ট ক্লোনিং বলা হয়। উদাহরণসরূপ নিজের উদাহরণটি দেখা যাক –
-      </div>
-      
-      <p><a class="read-more" href="http://bazlur.com/posts/2018-03-13-what-is-java-object-clonin/">Read more &rarr;</a></p>
-      
-    </article>
+        <span class="list-post-date post-info">
+             by <a href="/about-me/" class="p-author h-card"
+                                   rel="author">A N M Bazlur Rahman</a>
+            <time datetime=" 2018-03-12">
+             on 12 March, 2018 at 22:32 &#43;0000
+            </time>
+
+        </span>
+        <span>
+            <div id="tags"><a class="post-tag tag-small" href="/tags/cloning" rel="tag"> cloning </a> &nbsp; <a class="post-tag tag-small" href="/tags/java" rel="tag"> java </a> &nbsp; <a class="post-tag tag-small" href="/tags/object-cloning" rel="tag"> object cloning </a></div>
+        </span>
+    </div>
+</article>
     
 </div>
   <footer>
   <footer>
-  <div>
+  <div  class="wrapper-footer">
     <p>
-    &copy; <a href="https://bazlur.com"> A N M Bazlur Rahman</a> 2012 - 2021 | <a href="https://github.com/rokon12">Github</a>
+      &copy; <a href="https://bazlur.com"> A N M Bazlur Rahman</a> <span id="footer-copyright">2012 - 2021 </span>  | <a href="https://github.com/rokon12">Github</a>
     | <a href=" https://twitter.com/bazlur_rahman"> @bazlur_rahman</a>
     </p>
   </div>

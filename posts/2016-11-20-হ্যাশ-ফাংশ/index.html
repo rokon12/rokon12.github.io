@@ -52,6 +52,7 @@
     <script src="/js/prism.js"></script>
 
     <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/icofont.min.css" />
     <link rel="stylesheet" href="/css/fonts.css" />
     <link rel="stylesheet" href="/css/prism.css" />
 
@@ -87,26 +88,36 @@ if (!doNotTrack) {
 
   <body class="line-numbers">
 
-  <nav>
-    <ul class="menu">
-      
-      <li><a href="/">Home</a></li>
-      
-      <li><a href="/archives">Archives</a></li>
-      
-      <li><a href="/about-me/">About me</a></li>
-      
-      <li><a href="/books/">Books</a></li>
-      
-      <li><a href="/categories/">Categories</a></li>
-      
-      <li><a href="/resume/">Resume</a></li>
-      
-      <li><a href="/index.xml">Subscribe</a></li>
-      
-    </ul>
-    <hr/>
-    </nav>
+  <div id="head">
+    <div class="container">
+      <header class="masthead clearfix">
+        <a href="/"></a>
+        <div class="site-info">
+          <h1 class="site-name"> <a href="/"> Bazlur&#39;s Stream of Thoughts</a></h1>
+          <p class="site-description">This blog is meant to be a vehicle for airing my interest, feelings, thoughts, and opinion. </p>
+        </div>
+      </header>
+    </div>
+  </div>
+  <div id="header-menu" class="">
+    <div class="menu">
+      <ul style="margin: 0">
+        
+        <li> <a href="/">Home</a></li>
+        
+        <li> <a href="/archives">Archives</a></li>
+        
+        <li> <a href="/books/">Books</a></li>
+        
+        <li> <a href="/categories/">Categories</a></li>
+        
+        <li> <a href="/resume/">Resume</a></li>
+        
+        <li> <a href="/index.xml">Subscribe</a></li>
+        
+      </ul>
+    </div>
+  </div>
 
 
 
@@ -127,7 +138,7 @@ if (!doNotTrack) {
 </div>
 
 <p class="post-tag">
-    <div>Categories:<a class="post-tag" href="/categories/%e0%a6%86%e0%a6%b0%e0%a7%8d%e0%a6%9f%e0%a6%bf%e0%a6%95%e0%a7%87%e0%a6%b2" rel="tag"> আর্টিকেল </a> &nbsp; <a class="post-tag" href="/categories/%e0%a6%9f%e0%a6%bf%e0%a6%89%e0%a6%9f%e0%a7%8b%e0%a6%b0%e0%a6%bf%e0%a7%9f%e0%a6%be%e0%a6%b2" rel="tag"> টিউটোরিয়াল </a></div>
+    <div>Categories: &nbsp;&nbsp;<a class="post-tag tag-small" href="/categories/%e0%a6%86%e0%a6%b0%e0%a7%8d%e0%a6%9f%e0%a6%bf%e0%a6%95%e0%a7%87%e0%a6%b2" rel="tag"> আর্টিকেল </a> &nbsp; <a class="post-tag tag-small" href="/categories/%e0%a6%9f%e0%a6%bf%e0%a6%89%e0%a6%9f%e0%a7%8b%e0%a6%b0%e0%a6%bf%e0%a7%9f%e0%a6%be%e0%a6%b2" rel="tag"> টিউটোরিয়াল </a></div>
 </p>
 
 <main>
@@ -150,7 +161,7 @@ if (!doNotTrack) {
 </main>
 
 <p class="post-tag">
-    <div id="tags">Tags:<a class="post-tag" href="/tags/algorithm" rel="tag"> algorithm </a> &nbsp; <a class="post-tag" href="/tags/hash-function" rel="tag"> hash function </a></div>
+    <div id="tags"><a class="post-tag tag-small" href="/tags/algorithm" rel="tag"> algorithm </a> &nbsp; <a class="post-tag tag-small" href="/tags/hash-function" rel="tag"> hash function </a></div>
 </p>
 
 
@@ -387,7 +398,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/100daysofcode" style="font-size:2.7434758725890687rem">100daysofcode</a>
+  <a class="tag-cloud" href="/tags/100daysofcode" style="font-size:2.7434758725890687rem">100daysofcode</a>
   
   
   
@@ -395,7 +406,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/100daysofjava" style="font-size:2.7434758725890687rem">100daysofjava</a>
+  <a class="tag-cloud" href="/tags/100daysofjava" style="font-size:2.7434758725890687rem">100daysofjava</a>
   
   
   
@@ -403,7 +414,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/access" style="font-size:1rem">access</a>
+  <a class="tag-cloud" href="/tags/access" style="font-size:1rem">access</a>
   
   
   
@@ -411,7 +422,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/advance-java" style="font-size:1rem">advance-java</a>
+  <a class="tag-cloud" href="/tags/advance-java" style="font-size:1rem">advance-java</a>
   
   
   
@@ -419,7 +430,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/agile" style="font-size:1.725790984958234rem">agile</a>
+  <a class="tag-cloud" href="/tags/agile" style="font-size:1.725790984958234rem">agile</a>
   
   
   
@@ -427,7 +438,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/algorithm" style="font-size:1.457923127284084rem">algorithm</a>
+  <a class="tag-cloud" href="/tags/algorithm" style="font-size:1.457923127284084rem">algorithm</a>
   
   
   
@@ -435,7 +446,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/arraylist" style="font-size:1.457923127284084rem">arraylist</a>
+  <a class="tag-cloud" href="/tags/arraylist" style="font-size:1.457923127284084rem">arraylist</a>
   
   
   
@@ -443,7 +454,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/article" style="font-size:1rem">article</a>
+  <a class="tag-cloud" href="/tags/article" style="font-size:1rem">article</a>
   
   
   
@@ -451,7 +462,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/bangla-book" style="font-size:2.1837141122423183rem">bangla-book</a>
+  <a class="tag-cloud" href="/tags/bangla-book" style="font-size:2.1837141122423183rem">bangla-book</a>
   
   
   
@@ -459,7 +470,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/becoming-expert" style="font-size:1rem">becoming-expert</a>
+  <a class="tag-cloud" href="/tags/becoming-expert" style="font-size:1rem">becoming-expert</a>
   
   
   
@@ -467,7 +478,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/biginteger" style="font-size:1rem">biginteger</a>
+  <a class="tag-cloud" href="/tags/biginteger" style="font-size:1rem">biginteger</a>
   
   
   
@@ -475,7 +486,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/book" style="font-size:2.1837141122423183rem">book</a>
+  <a class="tag-cloud" href="/tags/book" style="font-size:2.1837141122423183rem">book</a>
   
   
   
@@ -483,7 +494,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/calculator" style="font-size:1rem">calculator</a>
+  <a class="tag-cloud" href="/tags/calculator" style="font-size:1rem">calculator</a>
   
   
   
@@ -491,7 +502,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/checked" style="font-size:1rem">checked</a>
+  <a class="tag-cloud" href="/tags/checked" style="font-size:1rem">checked</a>
   
   
   
@@ -499,7 +510,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/checked-exceptions" style="font-size:1rem">checked-exceptions</a>
+  <a class="tag-cloud" href="/tags/checked-exceptions" style="font-size:1rem">checked-exceptions</a>
   
   
   
@@ -507,7 +518,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/cloning" style="font-size:1rem">cloning</a>
+  <a class="tag-cloud" href="/tags/cloning" style="font-size:1rem">cloning</a>
   
   
   
@@ -515,7 +526,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/code-readability" style="font-size:1rem">code-readability</a>
+  <a class="tag-cloud" href="/tags/code-readability" style="font-size:1rem">code-readability</a>
   
   
   
@@ -523,7 +534,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/code-review" style="font-size:1rem">code-review</a>
+  <a class="tag-cloud" href="/tags/code-review" style="font-size:1rem">code-review</a>
   
   
   
@@ -531,7 +542,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/coding" style="font-size:2.7890555594978306rem">coding</a>
+  <a class="tag-cloud" href="/tags/coding" style="font-size:2.7890555594978306rem">coding</a>
   
   
   
@@ -539,7 +550,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/coding-convention" style="font-size:1rem">coding-convention</a>
+  <a class="tag-cloud" href="/tags/coding-convention" style="font-size:1rem">coding-convention</a>
   
   
   
@@ -547,7 +558,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/collection-framework" style="font-size:1rem">collection-framework</a>
+  <a class="tag-cloud" href="/tags/collection-framework" style="font-size:1rem">collection-framework</a>
   
   
   
@@ -555,7 +566,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/compact-strings" style="font-size:1rem">compact-strings</a>
+  <a class="tag-cloud" href="/tags/compact-strings" style="font-size:1rem">compact-strings</a>
   
   
   
@@ -563,7 +574,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/completablefuture" style="font-size:1rem">completablefuture</a>
+  <a class="tag-cloud" href="/tags/completablefuture" style="font-size:1rem">completablefuture</a>
   
   
   
@@ -571,7 +582,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/concatenation" style="font-size:1rem">concatenation</a>
+  <a class="tag-cloud" href="/tags/concatenation" style="font-size:1rem">concatenation</a>
   
   
   
@@ -579,7 +590,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/concurrentmodificationexception" style="font-size:1rem">concurrentmodificationexception</a>
+  <a class="tag-cloud" href="/tags/concurrentmodificationexception" style="font-size:1rem">concurrentmodificationexception</a>
   
   
   
@@ -587,7 +598,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/concurrentskiplistmap" style="font-size:1rem">concurrentskiplistmap</a>
+  <a class="tag-cloud" href="/tags/concurrentskiplistmap" style="font-size:1rem">concurrentskiplistmap</a>
   
   
   
@@ -595,7 +606,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/counting" style="font-size:1rem">counting</a>
+  <a class="tag-cloud" href="/tags/counting" style="font-size:1rem">counting</a>
   
   
   
@@ -603,7 +614,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/countingcollections" style="font-size:1rem">countingcollections</a>
+  <a class="tag-cloud" href="/tags/countingcollections" style="font-size:1rem">countingcollections</a>
   
   
   
@@ -611,7 +622,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/daemon-thread" style="font-size:1rem">daemon-thread</a>
+  <a class="tag-cloud" href="/tags/daemon-thread" style="font-size:1rem">daemon-thread</a>
   
   
   
@@ -619,7 +630,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/data-race" style="font-size:1rem">data-race</a>
+  <a class="tag-cloud" href="/tags/data-race" style="font-size:1rem">data-race</a>
   
   
   
@@ -627,7 +638,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/data-structure" style="font-size:1rem">data-structure</a>
+  <a class="tag-cloud" href="/tags/data-structure" style="font-size:1rem">data-structure</a>
   
   
   
@@ -635,7 +646,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/datetime" style="font-size:1rem">datetime</a>
+  <a class="tag-cloud" href="/tags/datetime" style="font-size:1rem">datetime</a>
   
   
   
@@ -643,7 +654,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/day002" style="font-size:1rem">day002</a>
+  <a class="tag-cloud" href="/tags/day002" style="font-size:1rem">day002</a>
   
   
   
@@ -651,7 +662,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/deliberate-practice" style="font-size:1rem">deliberate-practice</a>
+  <a class="tag-cloud" href="/tags/deliberate-practice" style="font-size:1rem">deliberate-practice</a>
   
   
   
@@ -659,7 +670,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/deserialization" style="font-size:1rem">deserialization</a>
+  <a class="tag-cloud" href="/tags/deserialization" style="font-size:1rem">deserialization</a>
   
   
   
@@ -667,7 +678,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/developers" style="font-size:1rem">developers</a>
+  <a class="tag-cloud" href="/tags/developers" style="font-size:1rem">developers</a>
   
   
   
@@ -675,7 +686,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/duration" style="font-size:1rem">duration</a>
+  <a class="tag-cloud" href="/tags/duration" style="font-size:1rem">duration</a>
   
   
   
@@ -683,7 +694,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/executors" style="font-size:1.457923127284084rem">executors</a>
+  <a class="tag-cloud" href="/tags/executors" style="font-size:1.457923127284084rem">executors</a>
   
   
   
@@ -691,7 +702,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/export" style="font-size:1rem">export</a>
+  <a class="tag-cloud" href="/tags/export" style="font-size:1rem">export</a>
   
   
   
@@ -699,7 +710,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/fibonacci" style="font-size:1.457923127284084rem">fibonacci</a>
+  <a class="tag-cloud" href="/tags/fibonacci" style="font-size:1.457923127284084rem">fibonacci</a>
   
   
   
@@ -707,7 +718,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/file" style="font-size:1.457923127284084rem">file</a>
+  <a class="tag-cloud" href="/tags/file" style="font-size:1.457923127284084rem">file</a>
   
   
   
@@ -715,7 +726,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/file-copy" style="font-size:1rem">file-copy</a>
+  <a class="tag-cloud" href="/tags/file-copy" style="font-size:1rem">file-copy</a>
   
   
   
@@ -723,7 +734,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/functional" style="font-size:1rem">functional</a>
+  <a class="tag-cloud" href="/tags/functional" style="font-size:1rem">functional</a>
   
   
   
@@ -731,7 +742,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/future-java-developers" style="font-size:1rem">future-java-developers</a>
+  <a class="tag-cloud" href="/tags/future-java-developers" style="font-size:1rem">future-java-developers</a>
   
   
   
@@ -739,7 +750,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/groupby" style="font-size:1rem">groupby</a>
+  <a class="tag-cloud" href="/tags/groupby" style="font-size:1rem">groupby</a>
   
   
   
@@ -747,7 +758,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/hash-function" style="font-size:1.457923127284084rem">hash-function</a>
+  <a class="tag-cloud" href="/tags/hash-function" style="font-size:1.457923127284084rem">hash-function</a>
   
   
   
@@ -755,7 +766,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/hashmap" style="font-size:1.725790984958234rem">hashmap</a>
+  <a class="tag-cloud" href="/tags/hashmap" style="font-size:1.725790984958234rem">hashmap</a>
   
   
   
@@ -763,7 +774,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/history" style="font-size:1rem">history</a>
+  <a class="tag-cloud" href="/tags/history" style="font-size:1rem">history</a>
   
   
   
@@ -771,7 +782,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/history-of-java" style="font-size:1rem">history-of-java</a>
+  <a class="tag-cloud" href="/tags/history-of-java" style="font-size:1rem">history-of-java</a>
   
   
   
@@ -779,7 +790,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/how-java-performs-better" style="font-size:1rem">how-java-performs-better</a>
+  <a class="tag-cloud" href="/tags/how-java-performs-better" style="font-size:1rem">how-java-performs-better</a>
   
   
   
@@ -787,7 +798,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/how-java-works" style="font-size:1rem">how-java-works</a>
+  <a class="tag-cloud" href="/tags/how-java-works" style="font-size:1rem">how-java-works</a>
   
   
   
@@ -795,7 +806,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/http-client" style="font-size:1rem">http-client</a>
+  <a class="tag-cloud" href="/tags/http-client" style="font-size:1rem">http-client</a>
   
   
   
@@ -803,7 +814,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/image" style="font-size:1rem">image</a>
+  <a class="tag-cloud" href="/tags/image" style="font-size:1rem">image</a>
   
   
   
@@ -811,7 +822,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/import" style="font-size:1rem">import</a>
+  <a class="tag-cloud" href="/tags/import" style="font-size:1rem">import</a>
   
   
   
@@ -819,7 +830,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/inspiration" style="font-size:1rem">inspiration</a>
+  <a class="tag-cloud" href="/tags/inspiration" style="font-size:1rem">inspiration</a>
   
   
   
@@ -827,7 +838,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/itext-pdf" style="font-size:1rem">itext-pdf</a>
+  <a class="tag-cloud" href="/tags/itext-pdf" style="font-size:1rem">itext-pdf</a>
   
   
   
@@ -835,7 +846,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/java" style="font-size:3.484812125944588rem">java</a>
+  <a class="tag-cloud" href="/tags/java" style="font-size:3.484812125944588rem">java</a>
   
   
   
@@ -843,7 +854,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/java-10" style="font-size:1rem">java-10</a>
+  <a class="tag-cloud" href="/tags/java-10" style="font-size:1rem">java-10</a>
   
   
   
@@ -851,7 +862,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/java-11" style="font-size:1rem">java-11</a>
+  <a class="tag-cloud" href="/tags/java-11" style="font-size:1rem">java-11</a>
   
   
   
@@ -859,7 +870,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/java-8" style="font-size:1rem">java-8</a>
+  <a class="tag-cloud" href="/tags/java-8" style="font-size:1rem">java-8</a>
   
   
   
@@ -867,7 +878,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/java-9" style="font-size:1rem">java-9</a>
+  <a class="tag-cloud" href="/tags/java-9" style="font-size:1rem">java-9</a>
   
   
   
@@ -875,7 +886,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/java-developers" style="font-size:1rem">java-developers</a>
+  <a class="tag-cloud" href="/tags/java-developers" style="font-size:1rem">java-developers</a>
   
   
   
@@ -883,7 +894,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/java-performance" style="font-size:1rem">java-performance</a>
+  <a class="tag-cloud" href="/tags/java-performance" style="font-size:1rem">java-performance</a>
   
   
   
@@ -891,7 +902,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/java-programming" style="font-size:1rem">java-programming</a>
+  <a class="tag-cloud" href="/tags/java-programming" style="font-size:1rem">java-programming</a>
   
   
   
@@ -899,7 +910,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/java-thread" style="font-size:1rem">java-thread</a>
+  <a class="tag-cloud" href="/tags/java-thread" style="font-size:1rem">java-thread</a>
   
   
   
@@ -907,7 +918,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/java-thread-programming" style="font-size:1.915846254568168rem">java-thread-programming</a>
+  <a class="tag-cloud" href="/tags/java-thread-programming" style="font-size:1.915846254568168rem">java-thread-programming</a>
   
   
   
@@ -915,7 +926,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/java11" style="font-size:1rem">java11</a>
+  <a class="tag-cloud" href="/tags/java11" style="font-size:1rem">java11</a>
   
   
   
@@ -923,7 +934,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/java16" style="font-size:1.725790984958234rem">java16</a>
+  <a class="tag-cloud" href="/tags/java16" style="font-size:1.725790984958234rem">java16</a>
   
   
   
@@ -931,7 +942,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/java8" style="font-size:1.457923127284084rem">java8</a>
+  <a class="tag-cloud" href="/tags/java8" style="font-size:1.457923127284084rem">java8</a>
   
   
   
@@ -939,7 +950,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/lambda-expression" style="font-size:1.457923127284084rem">lambda-expression</a>
+  <a class="tag-cloud" href="/tags/lambda-expression" style="font-size:1.457923127284084rem">lambda-expression</a>
   
   
   
@@ -947,7 +958,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/learning" style="font-size:1rem">learning</a>
+  <a class="tag-cloud" href="/tags/learning" style="font-size:1rem">learning</a>
   
   
   
@@ -955,7 +966,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/learning-and-development" style="font-size:1rem">learning-and-development</a>
+  <a class="tag-cloud" href="/tags/learning-and-development" style="font-size:1rem">learning-and-development</a>
   
   
   
@@ -963,7 +974,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/linkedlist" style="font-size:1.457923127284084rem">linkedlist</a>
+  <a class="tag-cloud" href="/tags/linkedlist" style="font-size:1.457923127284084rem">linkedlist</a>
   
   
   
@@ -971,7 +982,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/list" style="font-size:1rem">list</a>
+  <a class="tag-cloud" href="/tags/list" style="font-size:1rem">list</a>
   
   
   
@@ -979,7 +990,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/local-type-inference" style="font-size:1rem">local-type-inference</a>
+  <a class="tag-cloud" href="/tags/local-type-inference" style="font-size:1rem">local-type-inference</a>
   
   
   
@@ -987,7 +998,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/localdatetime" style="font-size:1rem">localdatetime</a>
+  <a class="tag-cloud" href="/tags/localdatetime" style="font-size:1rem">localdatetime</a>
   
   
   
@@ -995,7 +1006,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/map" style="font-size:1.725790984958234rem">map</a>
+  <a class="tag-cloud" href="/tags/map" style="font-size:1.725790984958234rem">map</a>
   
   
   
@@ -1003,7 +1014,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/methodology" style="font-size:1rem">methodology</a>
+  <a class="tag-cloud" href="/tags/methodology" style="font-size:1rem">methodology</a>
   
   
   
@@ -1011,7 +1022,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/nio" style="font-size:1rem">nio</a>
+  <a class="tag-cloud" href="/tags/nio" style="font-size:1rem">nio</a>
   
   
   
@@ -1019,7 +1030,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/null-pointer-exception" style="font-size:1rem">null-pointer-exception</a>
+  <a class="tag-cloud" href="/tags/null-pointer-exception" style="font-size:1rem">null-pointer-exception</a>
   
   
   
@@ -1027,7 +1038,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/object-cloning" style="font-size:1rem">object-cloning</a>
+  <a class="tag-cloud" href="/tags/object-cloning" style="font-size:1rem">object-cloning</a>
   
   
   
@@ -1035,7 +1046,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/optional" style="font-size:1rem">optional</a>
+  <a class="tag-cloud" href="/tags/optional" style="font-size:1rem">optional</a>
   
   
   
@@ -1043,7 +1054,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/packaging" style="font-size:1rem">packaging</a>
+  <a class="tag-cloud" href="/tags/packaging" style="font-size:1rem">packaging</a>
   
   
   
@@ -1051,7 +1062,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/parallel" style="font-size:1rem">parallel</a>
+  <a class="tag-cloud" href="/tags/parallel" style="font-size:1rem">parallel</a>
   
   
   
@@ -1059,7 +1070,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/pass-by-reference" style="font-size:1rem">pass-by-reference</a>
+  <a class="tag-cloud" href="/tags/pass-by-reference" style="font-size:1rem">pass-by-reference</a>
   
   
   
@@ -1067,7 +1078,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/pass-by-value" style="font-size:1rem">pass-by-value</a>
+  <a class="tag-cloud" href="/tags/pass-by-value" style="font-size:1rem">pass-by-value</a>
   
   
   
@@ -1075,7 +1086,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/pdf" style="font-size:1rem">pdf</a>
+  <a class="tag-cloud" href="/tags/pdf" style="font-size:1rem">pdf</a>
   
   
   
@@ -1083,7 +1094,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/performance" style="font-size:1.457923127284084rem">performance</a>
+  <a class="tag-cloud" href="/tags/performance" style="font-size:1.457923127284084rem">performance</a>
   
   
   
@@ -1091,7 +1102,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/prime-number" style="font-size:1.457923127284084rem">prime-number</a>
+  <a class="tag-cloud" href="/tags/prime-number" style="font-size:1.457923127284084rem">prime-number</a>
   
   
   
@@ -1099,7 +1110,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/programming" style="font-size:1rem">programming</a>
+  <a class="tag-cloud" href="/tags/programming" style="font-size:1rem">programming</a>
   
   
   
@@ -1107,7 +1118,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/readable-code" style="font-size:1rem">readable-code</a>
+  <a class="tag-cloud" href="/tags/readable-code" style="font-size:1rem">readable-code</a>
   
   
   
@@ -1115,7 +1126,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/record" style="font-size:1rem">record</a>
+  <a class="tag-cloud" href="/tags/record" style="font-size:1rem">record</a>
   
   
   
@@ -1123,7 +1134,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/refactoring" style="font-size:1rem">refactoring</a>
+  <a class="tag-cloud" href="/tags/refactoring" style="font-size:1rem">refactoring</a>
   
   
   
@@ -1131,7 +1142,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/review" style="font-size:1.915846254568168rem">review</a>
+  <a class="tag-cloud" href="/tags/review" style="font-size:1.915846254568168rem">review</a>
   
   
   
@@ -1139,7 +1150,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/scheduler" style="font-size:1rem">scheduler</a>
+  <a class="tag-cloud" href="/tags/scheduler" style="font-size:1rem">scheduler</a>
   
   
   
@@ -1147,7 +1158,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/scrum" style="font-size:1rem">scrum</a>
+  <a class="tag-cloud" href="/tags/scrum" style="font-size:1rem">scrum</a>
   
   
   
@@ -1155,7 +1166,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/serialization" style="font-size:1.457923127284084rem">serialization</a>
+  <a class="tag-cloud" href="/tags/serialization" style="font-size:1.457923127284084rem">serialization</a>
   
   
   
@@ -1163,7 +1174,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/simple-calculator" style="font-size:1rem">simple-calculator</a>
+  <a class="tag-cloud" href="/tags/simple-calculator" style="font-size:1rem">simple-calculator</a>
   
   
   
@@ -1171,7 +1182,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/software-development" style="font-size:1rem">software-development</a>
+  <a class="tag-cloud" href="/tags/software-development" style="font-size:1rem">software-development</a>
   
   
   
@@ -1179,7 +1190,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/sorting" style="font-size:1rem">sorting</a>
+  <a class="tag-cloud" href="/tags/sorting" style="font-size:1rem">sorting</a>
   
   
   
@@ -1187,7 +1198,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/source-code" style="font-size:1rem">source-code</a>
+  <a class="tag-cloud" href="/tags/source-code" style="font-size:1rem">source-code</a>
   
   
   
@@ -1195,7 +1206,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/stack" style="font-size:1rem">stack</a>
+  <a class="tag-cloud" href="/tags/stack" style="font-size:1rem">stack</a>
   
   
   
@@ -1203,7 +1214,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/string" style="font-size:1.725790984958234rem">string</a>
+  <a class="tag-cloud" href="/tags/string" style="font-size:1.725790984958234rem">string</a>
   
   
   
@@ -1211,7 +1222,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/string-pool" style="font-size:1rem">string-pool</a>
+  <a class="tag-cloud" href="/tags/string-pool" style="font-size:1rem">string-pool</a>
   
   
   
@@ -1219,7 +1230,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/stringbuilder" style="font-size:1rem">stringbuilder</a>
+  <a class="tag-cloud" href="/tags/stringbuilder" style="font-size:1rem">stringbuilder</a>
   
   
   
@@ -1227,7 +1238,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/swing" style="font-size:1rem">swing</a>
+  <a class="tag-cloud" href="/tags/swing" style="font-size:1rem">swing</a>
   
   
   
@@ -1235,7 +1246,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/thread" style="font-size:2.285552745304984rem">thread</a>
+  <a class="tag-cloud" href="/tags/thread" style="font-size:2.285552745304984rem">thread</a>
   
   
   
@@ -1243,7 +1254,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/tutorial" style="font-size:1rem">tutorial</a>
+  <a class="tag-cloud" href="/tags/tutorial" style="font-size:1rem">tutorial</a>
   
   
   
@@ -1251,7 +1262,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/unchecked" style="font-size:1rem">unchecked</a>
+  <a class="tag-cloud" href="/tags/unchecked" style="font-size:1rem">unchecked</a>
   
   
   
@@ -1259,7 +1270,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/vector" style="font-size:1rem">vector</a>
+  <a class="tag-cloud" href="/tags/vector" style="font-size:1rem">vector</a>
   
   
   
@@ -1267,7 +1278,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/volatile" style="font-size:1rem">volatile</a>
+  <a class="tag-cloud" href="/tags/volatile" style="font-size:1rem">volatile</a>
   
   
   
@@ -1275,7 +1286,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/why-java" style="font-size:1rem">why-java</a>
+  <a class="tag-cloud" href="/tags/why-java" style="font-size:1rem">why-java</a>
   
   
   
@@ -1283,15 +1294,15 @@ if (!doNotTrack) {
   
   
   
-  <a href="/tags/zoneid" style="font-size:1rem">zoneid</a>
+  <a class="tag-cloud" href="/tags/zoneid" style="font-size:1rem">zoneid</a>
   
 </div>
 
   <footer>
   <footer>
-  <div>
+  <div  class="wrapper-footer">
     <p>
-    &copy; <a href="https://bazlur.com"> A N M Bazlur Rahman</a> 2012 - 2021 | <a href="https://github.com/rokon12">Github</a>
+      &copy; <a href="https://bazlur.com"> A N M Bazlur Rahman</a> <span id="footer-copyright">2012 - 2021 </span>  | <a href="https://github.com/rokon12">Github</a>
     | <a href=" https://twitter.com/bazlur_rahman"> @bazlur_rahman</a>
     </p>
   </div>
