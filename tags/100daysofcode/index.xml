@@ -14,8 +14,7 @@
       <pubDate>Thu, 24 Jun 2021 00:12:00 -0400</pubDate>
       
       <guid>http://bazlur.com/2021/06/project-loom-the-light-at-the-end-of-the-tunnel/</guid>
-      <description>//Day018.png
-In this article, I&amp;rsquo;m going to write an echo server in multiple ways. The server will not do anything; it will just keep listening for connections on a port and echo back whatever is sent. Then I will compare which way wins.
+      <description>In this article, I&amp;rsquo;m going to write an echo server in multiple ways. The server will not do anything; it will just keep listening for connections on a port and echo back whatever is sent. Then I will compare which way wins.
 Let&amp;rsquo;s first write the single-threaded echo sever-
 package com.bazlur; import java.io.BufferedReader; import java.io.IOException; import java.io.InputStreamReader; import java.io.PrintWriter; import java.net.ServerSocket; public class Day016 { public static void main(String[] args) throws IOException { if (args.</description>
     </item>

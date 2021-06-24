@@ -17,8 +17,7 @@
       <pubDate>Thu, 24 Jun 2021 00:12:00 -0400</pubDate>
       
       <guid>http://bazlur.com/2021/06/project-loom-the-light-at-the-end-of-the-tunnel/</guid>
-      <description>&lt;p&gt;//Day018.png&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://bazlur.com/img/Day018.png&#34; alt=&#34;100DaysOfProgramming_Day018&#34; title=&#34;100DaysOfJava&#34;&gt;&lt;/p&gt;
+      <description>&lt;p&gt;&lt;img src=&#34;http://bazlur.com/img/Day018.png&#34; alt=&#34;100DaysOfProgramming_Day018&#34; title=&#34;100DaysOfJava&#34;&gt;&lt;/p&gt;
 &lt;p&gt;In this article, I&amp;rsquo;m going to write an echo server in multiple ways.  The server will not do anything; it will just keep listening for connections on a port and echo back whatever is sent.
 Then I will compare which way wins.&lt;/p&gt;
 &lt;p&gt;Let&amp;rsquo;s first write the single-threaded echo sever-&lt;/p&gt;
