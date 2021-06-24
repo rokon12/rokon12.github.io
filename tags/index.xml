@@ -7,11 +7,11 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright © 2021, A N M Bazlur Rahman</copyright>
-    <lastBuildDate>Sun, 20 Jun 2021 00:10:40 -0400</lastBuildDate><atom:link href="http://bazlur.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 24 Jun 2021 00:12:00 -0400</lastBuildDate><atom:link href="http://bazlur.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>100DaysOfCode</title>
       <link>http://bazlur.com/tags/100daysofcode/</link>
-      <pubDate>Sun, 20 Jun 2021 00:10:40 -0400</pubDate>
+      <pubDate>Thu, 24 Jun 2021 00:12:00 -0400</pubDate>
       
       <guid>http://bazlur.com/tags/100daysofcode/</guid>
       <description></description>
@@ -20,7 +20,7 @@
     <item>
       <title>100DaysOfJava</title>
       <link>http://bazlur.com/tags/100daysofjava/</link>
-      <pubDate>Sun, 20 Jun 2021 00:10:40 -0400</pubDate>
+      <pubDate>Thu, 24 Jun 2021 00:12:00 -0400</pubDate>
       
       <guid>http://bazlur.com/tags/100daysofjava/</guid>
       <description></description>
@@ -29,9 +29,81 @@
     <item>
       <title>coding</title>
       <link>http://bazlur.com/tags/coding/</link>
-      <pubDate>Sun, 20 Jun 2021 00:10:40 -0400</pubDate>
+      <pubDate>Thu, 24 Jun 2021 00:12:00 -0400</pubDate>
       
       <guid>http://bazlur.com/tags/coding/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>IO</title>
+      <link>http://bazlur.com/tags/io/</link>
+      <pubDate>Thu, 24 Jun 2021 00:12:00 -0400</pubDate>
+      
+      <guid>http://bazlur.com/tags/io/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>java</title>
+      <link>http://bazlur.com/tags/java/</link>
+      <pubDate>Thu, 24 Jun 2021 00:12:00 -0400</pubDate>
+      
+      <guid>http://bazlur.com/tags/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Non-BlockingIO</title>
+      <link>http://bazlur.com/tags/non-blockingio/</link>
+      <pubDate>Thu, 24 Jun 2021 00:12:00 -0400</pubDate>
+      
+      <guid>http://bazlur.com/tags/non-blockingio/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Project Loom</title>
+      <link>http://bazlur.com/tags/project-loom/</link>
+      <pubDate>Thu, 24 Jun 2021 00:12:00 -0400</pubDate>
+      
+      <guid>http://bazlur.com/tags/project-loom/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ServerSocket</title>
+      <link>http://bazlur.com/tags/serversocket/</link>
+      <pubDate>Thu, 24 Jun 2021 00:12:00 -0400</pubDate>
+      
+      <guid>http://bazlur.com/tags/serversocket/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Socket</title>
+      <link>http://bazlur.com/tags/socket/</link>
+      <pubDate>Thu, 24 Jun 2021 00:12:00 -0400</pubDate>
+      
+      <guid>http://bazlur.com/tags/socket/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Threads</title>
+      <link>http://bazlur.com/tags/threads/</link>
+      <pubDate>Thu, 24 Jun 2021 00:12:00 -0400</pubDate>
+      
+      <guid>http://bazlur.com/tags/threads/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Virtual Thread</title>
+      <link>http://bazlur.com/tags/virtual-thread/</link>
+      <pubDate>Thu, 24 Jun 2021 00:12:00 -0400</pubDate>
+      
+      <guid>http://bazlur.com/tags/virtual-thread/</guid>
       <description></description>
     </item>
     
@@ -41,15 +113,6 @@
       <pubDate>Sun, 20 Jun 2021 00:10:40 -0400</pubDate>
       
       <guid>http://bazlur.com/tags/completablefuture/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>java</title>
-      <link>http://bazlur.com/tags/java/</link>
-      <pubDate>Sun, 20 Jun 2021 00:10:40 -0400</pubDate>
-      
-      <guid>http://bazlur.com/tags/java/</guid>
       <description></description>
     </item>
     

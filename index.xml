@@ -6,10 +6,286 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright © 2021, A N M Bazlur Rahman</copyright>
-    <lastBuildDate>Sun, 20 Jun 2021 00:10:40 -0400</lastBuildDate>
+    <lastBuildDate>Thu, 24 Jun 2021 00:12:00 -0400</lastBuildDate>
     
         <atom:link href="http://bazlur.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Project loom: the light at the end of the tunnel</title>
+      <link>http://bazlur.com/2021/06/project-loom-the-light-at-the-end-of-the-tunnel/</link>
+      <pubDate>Thu, 24 Jun 2021 00:12:00 -0400</pubDate>
+      
+      <guid>http://bazlur.com/2021/06/project-loom-the-light-at-the-end-of-the-tunnel/</guid>
+      <description>&lt;p&gt;//Day018.png&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://bazlur.com/img/Day018.png&#34; alt=&#34;100DaysOfProgramming_Day018&#34; title=&#34;100DaysOfJava&#34;&gt;&lt;/p&gt;
+&lt;p&gt;In this article, I&amp;rsquo;m going to write an echo server in multiple ways.  The server will not do anything; it will just keep listening for connections on a port and echo back whatever is sent.
+Then I will compare which way wins.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s first write the single-threaded echo sever-&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;package com.bazlur;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.net.ServerSocket;
+
+public class Day016 {
+  public static void main(String[] args) throws IOException {
+    if (args.length != 1) throw new IllegalArgumentException(&amp;quot;Please specify port&amp;quot;);
+    var port = Integer.parseInt(args[0]);
+
+    var serverSocket = new ServerSocket(port);
+    System.out.println(&amp;quot;Started server on port &amp;quot; + port);
+
+    while (true) {
+      try (var socket = serverSocket.accept();
+           var in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+           var out = new PrintWriter(socket.getOutputStream(), true)) {
+        String line;
+        while ((line = in.readLine()) != null) {
+          out.println(line.toUpperCase());
+        }
+      } catch (IOException e) {
+        System.out.println(&amp;quot;Was unable to establish or communicate with client socket:&amp;quot; + e.getMessage());
+      }
+    }
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The above code is simple and intuitive. We have used a ServerSocket that listens to a port and waits for an incoming connection. Whenever a client connects to it, it reads whatever is sent to it and replies back.&lt;/p&gt;
+&lt;p&gt;The only problem is, it cannot handle multiple connections simultaneously. If one client connects to it, no other will be able to make it to the server at that particular time. Once that specific client disconnect, other will get a chance.&lt;/p&gt;
+&lt;p&gt;However, we can change the experience just by allowing multiple threads to handle each connection here.
+Let&amp;rsquo;s look at the code-&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;package com.bazlur;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.util.concurrent.Executors;
+
+public class Day017 {
+  public static void main(String[] args) throws IOException {
+    if (args.length != 1) throw new IllegalArgumentException(&amp;quot;Please specify port&amp;quot;);
+    var port = Integer.parseInt(args[0]);
+
+    var executorService = Executors.newCachedThreadPool();
+    var serverSocket = new ServerSocket(port);
+    System.out.println(&amp;quot;Started server on port &amp;quot; + port);
+
+    while (true) {
+      var socket = serverSocket.accept();
+      executorService.submit(() -&amp;gt; handle(socket));
+    }
+  }
+
+  private static void handle(Socket socket) {
+    try (socket;
+         var in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+         var out = new PrintWriter(socket.getOutputStream(), true)) {
+      String line;
+      while ((line = in.readLine()) != null) {
+        out.println(line.toUpperCase());
+      }
+    } catch (IOException e) {
+      System.out.println(&amp;quot;Was unable to establish or communicate with client socket:&amp;quot; + e.getMessage());
+    }
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In the above code, we haven&amp;rsquo;t done anything extraordinary. We have just created a ThreadPool using Executors, and whenever a client connects, we put that in a thread to handle that connection.
+This server will do just fine dealing with many connections simultaneously.  However, we are not just happy with the word many. We want to know exactly how many connections it can handle.&lt;br&gt;
+The answer lies in how many threads we can spawn. It is certainly not limited by the socket. Because we know modern OS practically can handle millions of open sockets at a time. So let&amp;rsquo;s rewrite the question again- Can OS handle such an amount of Threads?&lt;/p&gt;
+&lt;p&gt;Well, the answer is no. Threads are limited and heavy. Let&amp;rsquo;s find out how much we can write a simple java program.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;package com.bazlur;
+
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.locks.LockSupport;
+
+public class ThreadCount {
+  public static void main(String[] args) {
+    AtomicInteger threadCount = new AtomicInteger();
+    for (; ; ) {
+      Thread thread = new Thread(() -&amp;gt; {
+        var count = threadCount.incrementAndGet();
+        System.out.println(&amp;quot;count = &amp;quot; + count);
+        LockSupport.park();
+      });
+      thread.start();
+    }
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This little program will demonstrate how many threads we can create on a machine.
+We can conclude that we are limited by the number of threads we can have and that many connections we can handle simultaneously.&lt;/p&gt;
+&lt;p&gt;Now the bigger question is, is there any alternative solution to it? We cannot have more threads; what else we can do to achieve an outstanding throughput.&lt;/p&gt;
+&lt;p&gt;Well, the answer is Non-Blocking IO.  While doing the IO operation, the relationality is that most threads are just waiting idle, doing nothing.  It connects to a client, and the client keeps communicating with a dedicated thread. But the communication is slow, and most of the time, the thread is idle, sitting there doing nothing. Why not use this thread&amp;rsquo;s idle time to serve other clients.
+That seems to be a fantastic idea. Let&amp;rsquo;s do this.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;package com.bazlur;
+
+import java.io.IOException;
+import java.net.InetSocketAddress;
+import java.nio.ByteBuffer;
+import java.nio.channels.SelectionKey;
+import java.nio.channels.Selector;
+import java.nio.channels.ServerSocketChannel;
+import java.nio.channels.SocketChannel;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.*;
+import java.util.concurrent.ConcurrentLinkedDeque;
+
+public class Day018 {
+  static Map&amp;lt;SocketChannel, Queue&amp;lt;ByteBuffer&amp;gt;&amp;gt; pendingData = new HashMap&amp;lt;&amp;gt;();
+
+  public static void main(String[] args) throws IOException {
+    if (args.length != 1) throw new IllegalArgumentException(&amp;quot;Please specify port&amp;quot;);
+    var port = Integer.parseInt(args[0]);
+
+    ServerSocketChannel socketChannel = ServerSocketChannel.open();
+    socketChannel.bind(new InetSocketAddress(port));
+    socketChannel.configureBlocking(false);
+
+    var selector = Selector.open();
+    socketChannel.register(selector, SelectionKey.OP_ACCEPT);
+
+    while (true) {
+      var select = selector.select();
+      if (select == 0) continue;
+      var selectionKeys = selector.selectedKeys();
+      var iterator = selectionKeys.iterator();
+
+      while (iterator.hasNext()) {
+        SelectionKey key = iterator.next();
+        if (key.isValid()) {
+          if (key.isAcceptable()) {
+            accept(key);
+          } else if (key.isReadable()) {
+            read(key);
+          } else if (key.isWritable()) {
+            write(key);
+          }
+        }
+        iterator.remove();
+      }
+    }
+  }
+
+  private static void accept(SelectionKey selectionKey) throws IOException {
+    var channel = (ServerSocketChannel) selectionKey.channel();
+    var sc = channel.accept(); //never null
+    System.out.println(&amp;quot;Connected: &amp;quot; + sc);
+    pendingData.put(sc, new ConcurrentLinkedDeque&amp;lt;&amp;gt;());
+    sc.configureBlocking(false);
+    sc.register(selectionKey.selector(), SelectionKey.OP_READ);
+  }
+
+  private static void read(SelectionKey selectionKey) throws IOException {
+    var channel = (SocketChannel) selectionKey.channel();
+    var byteBuffer = ByteBuffer.allocateDirect(80);
+    var read = channel.read(byteBuffer);
+    if (read == -1) {
+      channel.close();
+      pendingData.remove(channel);
+      return;
+    }
+
+    if (read &amp;gt; 0) {
+      processBuffer(byteBuffer);
+      pendingData.get(channel).add(byteBuffer);
+      selectionKey.interestOps(SelectionKey.OP_WRITE);
+    }
+  }
+
+  private static void write(SelectionKey selectionKey) throws IOException {
+    var channel = (SocketChannel) selectionKey.channel();
+    var queue = pendingData.getOrDefault(channel, new ArrayDeque&amp;lt;&amp;gt;());
+    while (!queue.isEmpty()) {
+      var buff = queue.peek();
+      if (buff.position() != buff.limit()) {
+        buff.flip();
+      }
+      var written = channel.write(buff);
+      if (written == -1) {
+        channel.close();
+        pendingData.remove(channel);
+        return;
+      }
+      if (buff.hasRemaining()) return;
+      queue.remove();
+    }
+    selectionKey.interestOps(SelectionKey.OP_READ);
+  }
+
+  private static void processBuffer(ByteBuffer byteBuffer) {
+    byteBuffer.flip();
+    StringBuilder line = new StringBuilder();
+    line.append(LocalDateTime.now().format(DateTimeFormatter.ofPattern(&amp;quot;yyyy-MM-dd HH:mm:ss&amp;quot;, Locale.getDefault())))
+            .append(&amp;quot;&amp;lt;&amp;lt;server&amp;gt;&amp;gt;: &amp;quot;);
+
+    for (int b = 0; b &amp;lt; byteBuffer.limit(); b++) {
+      var b1 = byteBuffer.get(b);
+      line.append(Character.toUpperCase((char) b1));
+    }
+    var s = line.toString();
+    var bytes = s.getBytes();
+    byteBuffer.clear();
+    byteBuffer.put(bytes);
+    System.out.println(&amp;quot;Executing from: &amp;quot; + Thread.currentThread());
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The above code seems a lot complex than the earlier and a lot more lines than the previous codebase. However, with the above code, we can achieve whatever we want to achieve. This single-threaded would give us a better throughput. We can even make it even better if we throw a few more threads to it.&lt;/p&gt;
+&lt;p&gt;We achieved it, but with a complex programming model, which isn&amp;rsquo;t easy. It has many other problems; one particular is that it will become harder to debug with this complex model.&lt;br&gt;
+Is there any other way?&lt;/p&gt;
+&lt;p&gt;Well, that&amp;rsquo;s where we see the light at the end of the tunnel, the Project loom. It would enable just writing million virtual threads without making any effort, and the programming model would remain the same, and we will achieve the outstanding throughput we intended to. Let&amp;rsquo;s see an example-&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;package com.bazlur;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.util.concurrent.Executors;
+
+public class Day018_1 {
+  public static void main(String[] args) throws IOException {
+    if (args.length != 1) throw new IllegalArgumentException(&amp;quot;Please specify port&amp;quot;);
+    var port = Integer.parseInt(args[0]);
+    var serverSocket = new ServerSocket(port);
+    System.out.println(&amp;quot;Started server on port &amp;quot; + port);
+
+    try (var executors = Executors.newVirtualThreadExecutor()) {
+      while (true) {
+        var socket = serverSocket.accept();
+        executors.submit(() -&amp;gt; handle(socket));
+      }
+    }
+  }
+
+  private static void handle(Socket socket) {
+    try (socket;
+         var in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+         var out = new PrintWriter(socket.getOutputStream(), true)) {
+      String line;
+      while ((line = in.readLine()) != null) {
+        out.println(line.toUpperCase());
+      }
+    } catch (IOException e) {
+      System.out.println(&amp;quot;Was unable to establish or communicate with client socket:&amp;quot; + e.getMessage());
+    }
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The programming model is the same as we did earlier. We are just using a different Executor, that&amp;rsquo;s it. But this would enable us to have millions of threads.&lt;/p&gt;
+&lt;p&gt;Cheers.&lt;/p&gt;
+&lt;p&gt;for &lt;strong&gt;copy/paste&lt;/strong&gt; pleasure: &lt;a href=&#34;https://github.com/rokon12/100DaysOfJava/blob/main/src/main/java/com/bazlur/Day018_1.java&#34;&gt;https://github.com/rokon12/100DaysOfJava/blob/main/src/main/java/com/bazlur/Day018_1.java&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>CompletableFuture made life easy, running things asynchronous</title>
@@ -85,6 +361,9 @@ public class StockExchangeService {
 }
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;I have used &lt;a href=&#34;https://jsoup.org/&#34;&gt;JSoup&lt;/a&gt; to parse the text and exact the desired value from it.&lt;/p&gt;
+
+&lt;i class=&#34;far fa-smile-wink &#34;&gt;&lt;/i&gt;
+
 &lt;p&gt;for &lt;strong&gt;copy/paste&lt;/strong&gt; pleasure: &lt;a href=&#34;https://github.com/rokon12/100DaysOfJava/blob/main/src/main/java/com/bazlur/Day014_2.java&#34;&gt;https://github.com/rokon12/100DaysOfJava/blob/main/src/main/java/com/bazlur/Day014_2.java&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
