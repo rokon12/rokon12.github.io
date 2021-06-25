@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Design Pattern on Bazlur&#39;s Stream of Thoughts</title>
+    <link>http://bazlur.com/tags/design-pattern/</link>
+    <description>Recent content in Design Pattern on Bazlur&#39;s Stream of Thoughts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>Copyright © 2021, A N M Bazlur Rahman</copyright>
+    <lastBuildDate>Fri, 25 Jun 2021 00:01:00 -0400</lastBuildDate><atom:link href="http://bazlur.com/tags/design-pattern/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Let’s remove the boilerplate code with execute around design pattern</title>
+      <link>http://bazlur.com/2021/06/lets-remove-the-boilerplate-code-with-execute-around-design-pattern/</link>
+      <pubDate>Fri, 25 Jun 2021 00:01:00 -0400</pubDate>
+      
+      <guid>http://bazlur.com/2021/06/lets-remove-the-boilerplate-code-with-execute-around-design-pattern/</guid>
+      <description>In this article, I will first create a thread-safe stack from scratch with a traditional approach, and then I will refactor it with an execute-around design pattern.
+Stack is a last-in-first-out (LIFO) data structure. It has two main methods, push and pop. Let’s create it –
+package com.bazlur; import java.util.Arrays; import java.util.NoSuchElementException; import java.util.concurrent.locks.Lock; import java.util.concurrent.locks.ReentrantLock; public class ConcurrentStack&amp;lt;T&amp;gt; { private final Lock lock = new ReentrantLock(); private T[] elements; private int size = -1; public ConcurrentStack() { this(10); } public ConcurrentStack(int initialCapacity) { this.</description>
+    </item>
+    
+  </channel>
+</rss>

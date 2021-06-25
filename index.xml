@@ -6,10 +6,194 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright © 2021, A N M Bazlur Rahman</copyright>
-    <lastBuildDate>Thu, 24 Jun 2021 00:12:00 -0400</lastBuildDate>
+    <lastBuildDate>Fri, 25 Jun 2021 00:01:00 -0400</lastBuildDate>
     
         <atom:link href="http://bazlur.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Let’s remove the boilerplate code with execute around design pattern</title>
+      <link>http://bazlur.com/2021/06/lets-remove-the-boilerplate-code-with-execute-around-design-pattern/</link>
+      <pubDate>Fri, 25 Jun 2021 00:01:00 -0400</pubDate>
+      
+      <guid>http://bazlur.com/2021/06/lets-remove-the-boilerplate-code-with-execute-around-design-pattern/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://bazlur.com/img/Day019.png&#34; alt=&#34;100DaysOfProgramming_Day019&#34; title=&#34;100DaysOfJava&#34;&gt;&lt;/p&gt;
+&lt;p&gt;In this article, I will first create a thread-safe stack from scratch with a traditional approach, and then I will refactor it with an execute-around design pattern.&lt;/p&gt;
+&lt;p&gt;Stack is a &lt;code&gt;last-in-first-out&lt;/code&gt; &lt;a href=&#34;https://en.wikipedia.org/wiki/Stack_(abstract_data_type)&#34;&gt;(LIFO)&lt;/a&gt; data structure. It has two main methods, &lt;code&gt;push&lt;/code&gt; and &lt;code&gt;pop&lt;/code&gt;. Let’s create it –&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;package com.bazlur;
+
+import java.util.Arrays;
+import java.util.NoSuchElementException;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+
+public class ConcurrentStack&amp;lt;T&amp;gt; {
+  private final Lock lock = new ReentrantLock();
+  private T[] elements;
+  private int size = -1;
+
+  public ConcurrentStack() {
+    this(10);
+  }
+
+  public ConcurrentStack(int initialCapacity) {
+    this.elements = (T[]) new Object[initialCapacity];
+  }
+
+  public void push(T value) {
+    lock.lock();
+    try {
+      growIfNeeded();
+      elements[size] = value;
+    } finally {
+      lock.unlock();
+    }
+  }
+  
+  public T pop() {
+    lock.lock();
+    try {
+      if (size == -1) {
+        throw new NoSuchElementException();
+      }
+      trimToSizeIfNeeded();
+
+      var element = elements[size];
+      elements[size] = null;
+      size--;
+      return element;
+    } finally {
+      lock.unlock();
+    }
+  }
+
+  private void growIfNeeded() {
+    if (++size == elements.length) {
+      grow();
+    }
+  }
+
+  private void grow() {
+    int newCapacity = elements.length * 2;
+    elements = Arrays.copyOf(elements, newCapacity);
+  }
+
+  private void trimToSizeIfNeeded() {
+    if (size &amp;lt; elements.length) {
+      elements = Arrays.copyOf(elements, size + 1);
+    }
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This is the most straightforward implementation, and it has many shortcomings; anyway, that&amp;rsquo;s beside the point.&lt;/p&gt;
+&lt;p&gt;Look at the push and pop method; one thing is very common: locking the lock and unlocking it.
+This seems boilerplate, and it has nothing to do with the actual business logic of the stack.&lt;/p&gt;
+&lt;p&gt;Let’s move this boilerplate code to another place-&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;package com.bazlur;
+
+import java.util.concurrent.locks.Lock;
+import java.util.function.Supplier;
+
+public class LockHelper {
+  public static void withLock(Lock lock, Runnable runnable) {
+    lock.lock();
+    try {
+      runnable.run();
+    } finally {
+      lock.unlock();
+    }
+  }
+
+  public static &amp;lt;T&amp;gt; T withLock(Lock lock, Supplier&amp;lt;T&amp;gt; supplier) {
+    lock.lock();
+    try {
+      return supplier.get();
+    } finally {
+      lock.unlock();
+    }
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The first method takes a lock and a runnable. It does the locking and looking, and in between, it executes the run method of the runnable. The following method also takes a lock and a Supplier. In case we need to return something, that’s why we used Supplier here.&lt;/p&gt;
+&lt;p&gt;Let’s use these methods in the ConcurrentStack.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;package com.bazlur;
+
+import java.util.Arrays;
+import java.util.NoSuchElementException;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+
+public class ConcurrentStack2&amp;lt;T&amp;gt; {
+  private final Lock lock = new ReentrantLock();
+  private T[] elements;
+  private int size = -1;
+
+  public ConcurrentStack2() {
+    this(10);
+  }
+
+  public ConcurrentStack2(int initialCapacity) {
+    this.elements = (T[]) new Object[initialCapacity];
+  }
+
+  public void push(T value) {
+    LockHelper.withLock(lock, () -&amp;gt; {
+      growIfNeeded();
+      elements[size] = value;
+    });
+  }
+  
+  public T pop() {
+    return LockHelper.withLock(lock, () -&amp;gt; {
+      if (size == -1) {
+        throw new NoSuchElementException();
+      }
+      trimToSizeIfNeeded();
+
+      var element = elements[size];
+      elements[size] = null;
+      size--;
+      return element;
+    });
+  }
+
+  private void growIfNeeded() {
+    if (++size == elements.length) {
+      grow();
+    }
+  }
+
+  private void grow() {
+    int newCapacity = elements.length * 2;
+    elements = Arrays.copyOf(elements, newCapacity);
+  }
+
+  private void trimToSizeIfNeeded() {
+    if (size &amp;lt; elements.length) {
+      elements = Arrays.copyOf(elements, size + 1);
+    }
+  }
+}
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now our code is much cleaner and doesn&amp;rsquo;t’t have any of those boilerplates locking related code.&lt;/p&gt;
+&lt;p&gt;If we want to add another method in this class, we will use a similar pattern. –&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;
+public T peek() {
+    return LockHelper.withLock(lock, () -&amp;gt; elements[size]);
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We are executing our code around something that seems not present before our eyes, removing noise and bringing clarity.
+This is why it is called execute around design pattern, and it helps to remove a lot of similar boilerplate code.&lt;/p&gt;
+&lt;p&gt;That’s for today!&lt;/p&gt;
+&lt;p&gt;Cheers!! 
+&lt;i class=&#34;far fa-smile-wink &#34;&gt;&lt;/i&gt;
+ 
+&lt;i class=&#34;far fa-laugh-wink &#34;&gt;&lt;/i&gt;
+&lt;/p&gt;
+&lt;p&gt;for &lt;strong&gt;copy/paste&lt;/strong&gt; pleasure: &lt;a href=&#34;https://github.com/rokon12/100DaysOfJava/blob/main/src/main/java/com/bazlur/ConcurrentStack2.java&#34;&gt;https://github.com/rokon12/100DaysOfJava/blob/main/src/main/java/com/bazlur/ConcurrentStack2.java&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Project loom: the light at the end of the tunnel</title>

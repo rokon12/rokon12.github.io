@@ -3,46 +3,76 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://bazlur.com/tags/100daysofcode/</loc>
-    <lastmod>2021-06-24T00:12:00-04:00</lastmod>
+    <lastmod>2021-06-25T00:01:00-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://bazlur.com/tags/100daysofjava/</loc>
-    <lastmod>2021-06-24T00:12:00-04:00</lastmod>
+    <lastmod>2021-06-25T00:01:00-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://bazlur.com/categories/100daysofjava/</loc>
-    <lastmod>2021-06-24T00:12:00-04:00</lastmod>
+    <lastmod>2021-06-25T00:01:00-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://bazlur.com/</loc>
-    <lastmod>2021-06-24T00:12:00-04:00</lastmod>
+    <lastmod>2021-06-25T00:01:00-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://bazlur.com/categories/</loc>
-    <lastmod>2021-06-24T00:12:00-04:00</lastmod>
+    <lastmod>2021-06-25T00:01:00-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://bazlur.com/tags/coding/</loc>
-    <lastmod>2021-06-24T00:12:00-04:00</lastmod>
+    <lastmod>2021-06-25T00:01:00-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://bazlur.com/tags/io/</loc>
-    <lastmod>2021-06-24T00:12:00-04:00</lastmod>
+    <loc>http://bazlur.com/tags/design-pattern/</loc>
+    <lastmod>2021-06-25T00:01:00-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://bazlur.com/tags/execute-around/</loc>
+    <lastmod>2021-06-25T00:01:00-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://bazlur.com/tags/java/</loc>
-    <lastmod>2021-06-24T00:12:00-04:00</lastmod>
+    <lastmod>2021-06-25T00:01:00-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://bazlur.com/categories/java/</loc>
+    <lastmod>2021-06-25T00:01:00-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://bazlur.com/tags/lambda-expression/</loc>
+    <lastmod>2021-06-25T00:01:00-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://bazlur.com/2021/06/lets-remove-the-boilerplate-code-with-execute-around-design-pattern/</loc>
+    <lastmod>2021-06-25T00:01:00-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://bazlur.com/posts/</loc>
+    <lastmod>2021-06-25T00:01:00-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://bazlur.com/tags/</loc>
+    <lastmod>2021-06-25T00:01:00-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://bazlur.com/tags/io/</loc>
     <lastmod>2021-06-24T00:12:00-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -53,11 +83,6 @@
     <priority>0.5</priority>
   </url><url>
     <loc>http://bazlur.com/tags/non-blockingio/</loc>
-    <lastmod>2021-06-24T00:12:00-04:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://bazlur.com/posts/</loc>
     <lastmod>2021-06-24T00:12:00-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -78,11 +103,6 @@
     <priority>0.5</priority>
   </url><url>
     <loc>http://bazlur.com/tags/socket/</loc>
-    <lastmod>2021-06-24T00:12:00-04:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://bazlur.com/tags/</loc>
     <lastmod>2021-06-24T00:12:00-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -118,11 +138,6 @@
     <priority>0.5</priority>
   </url><url>
     <loc>http://bazlur.com/tags/java8/</loc>
-    <lastmod>2021-06-18T00:10:40-04:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://bazlur.com/tags/lambda-expression/</loc>
     <lastmod>2021-06-18T00:10:40-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

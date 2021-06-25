@@ -7,7 +7,18 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright © 2021, A N M Bazlur Rahman</copyright>
-    <lastBuildDate>Thu, 24 Jun 2021 00:12:00 -0400</lastBuildDate><atom:link href="http://bazlur.com/tags/100daysofjava/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 25 Jun 2021 00:01:00 -0400</lastBuildDate><atom:link href="http://bazlur.com/tags/100daysofjava/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Let’s remove the boilerplate code with execute around design pattern</title>
+      <link>http://bazlur.com/2021/06/lets-remove-the-boilerplate-code-with-execute-around-design-pattern/</link>
+      <pubDate>Fri, 25 Jun 2021 00:01:00 -0400</pubDate>
+      
+      <guid>http://bazlur.com/2021/06/lets-remove-the-boilerplate-code-with-execute-around-design-pattern/</guid>
+      <description>In this article, I will first create a thread-safe stack from scratch with a traditional approach, and then I will refactor it with an execute-around design pattern.
+Stack is a last-in-first-out (LIFO) data structure. It has two main methods, push and pop. Let’s create it –
+package com.bazlur; import java.util.Arrays; import java.util.NoSuchElementException; import java.util.concurrent.locks.Lock; import java.util.concurrent.locks.ReentrantLock; public class ConcurrentStack&amp;lt;T&amp;gt; { private final Lock lock = new ReentrantLock(); private T[] elements; private int size = -1; public ConcurrentStack() { this(10); } public ConcurrentStack(int initialCapacity) { this.</description>
+    </item>
+    
     <item>
       <title>Project loom: the light at the end of the tunnel</title>
       <link>http://bazlur.com/2021/06/project-loom-the-light-at-the-end-of-the-tunnel/</link>
