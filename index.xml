@@ -12,11 +12,11 @@
     
     
     <item>
-      <title>Let’s remove the boilerplate code with execute around design pattern</title>
-      <link>http://bazlur.com/2021/06/lets-remove-the-boilerplate-code-with-execute-around-design-pattern/</link>
+      <title>Let’s remove the boilerplate code with execute-around pattern</title>
+      <link>http://bazlur.com/2021/06/lets-remove-the-boilerplate-code-with-execute-around-pattern/</link>
       <pubDate>Fri, 25 Jun 2021 00:01:00 -0400</pubDate>
       
-      <guid>http://bazlur.com/2021/06/lets-remove-the-boilerplate-code-with-execute-around-design-pattern/</guid>
+      <guid>http://bazlur.com/2021/06/lets-remove-the-boilerplate-code-with-execute-around-pattern/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;http://bazlur.com/img/Day019.png&#34; alt=&#34;100DaysOfProgramming_Day019&#34; title=&#34;100DaysOfJava&#34;&gt;&lt;/p&gt;
 &lt;p&gt;In this article, I will first create a thread-safe stack from scratch with a traditional approach, and then I will refactor it with an execute-around design pattern.&lt;/p&gt;
 &lt;p&gt;Stack is a &lt;code&gt;last-in-first-out&lt;/code&gt; &lt;a href=&#34;https://en.wikipedia.org/wiki/Stack_(abstract_data_type)&#34;&gt;(LIFO)&lt;/a&gt; data structure. It has two main methods, &lt;code&gt;push&lt;/code&gt; and &lt;code&gt;pop&lt;/code&gt;. Let’s create it –&lt;/p&gt;
@@ -86,7 +86,7 @@ public class ConcurrentStack&amp;lt;T&amp;gt; {
 }
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;This is the most straightforward implementation, and it has many shortcomings; anyway, that&amp;rsquo;s beside the point.&lt;/p&gt;
-&lt;p&gt;Look at the push and pop method; one thing is very common: locking the lock and unlocking it.
+&lt;p&gt;Look at the push and pop method; one thing is very common: locking the lock and then unlocking it.
 This seems boilerplate, and it has nothing to do with the actual business logic of the stack.&lt;/p&gt;
 &lt;p&gt;Let’s move this boilerplate code to another place-&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;package com.bazlur;
@@ -178,8 +178,7 @@ public class ConcurrentStack2&amp;lt;T&amp;gt; {
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Now our code is much cleaner and doesn&amp;rsquo;t’t have any of those boilerplates locking related code.&lt;/p&gt;
 &lt;p&gt;If we want to add another method in this class, we will use a similar pattern. –&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;
-public T peek() {
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public T peek() {
     return LockHelper.withLock(lock, () -&amp;gt; elements[size]);
 }
 &lt;/code&gt;&lt;/pre&gt;

@@ -22,8 +22,8 @@
     <meta property="fb:pages" content="556530934551556" />
 
     
-    <title>Project loom: the light at the end of the tunnel - Bazlur&#39;s Stream of Thoughts</title>
-    <meta property="og:title" content="Project loom: the light at the end of the tunnel - Bazlur&#39;s Stream of Thoughts">
+    <title>Let’s remove the boilerplate code with execute-around pattern - Bazlur&#39;s Stream of Thoughts</title>
+    <meta property="og:title" content="Let’s remove the boilerplate code with execute-around pattern - Bazlur&#39;s Stream of Thoughts">
     
 
     <meta name="twitter:card" content="summary">
@@ -34,8 +34,10 @@
 
     
     
-    <meta property="description" content="In this article, I&amp;rsquo;m going to write an echo server in multiple ways. The server will not do anything; it will just keep listening for connections on a port and echo back whatever is sent. Then I &amp;hellip;">
-    <meta property="og:description" content="In this article, I&amp;rsquo;m going to write an echo server in multiple ways. The server will not do anything; it will just keep listening for connections on a port and echo back whatever is sent. Then I &amp;hellip;">
+    <meta property="description" content="In this article, I will first create a thread-safe stack from scratch with a traditional approach, and then I will refactor it with an execute-around design pattern.
+Stack is a last-in-first-out &amp;hellip;">
+    <meta property="og:description" content="In this article, I will first create a thread-safe stack from scratch with a traditional approach, and then I will refactor it with an execute-around design pattern.
+Stack is a last-in-first-out &amp;hellip;">
     
     
 
@@ -123,11 +125,11 @@ if (!doNotTrack) {
 
 
 <div class="article-meta">
-    <h1><span class="title">Project loom: the light at the end of the tunnel</span></h1>
+    <h1><span class="title">Let’s remove the boilerplate code with execute-around pattern</span></h1>
     
     <p class="post-date">Posted on
-        <time class="dt-published" datetime="2021-06-24T00:12:00-04:00">
-        24 June, 2021 at 00:12 EDT
+        <time class="dt-published" datetime="2021-06-25T00:01:00-04:00">
+        25 June, 2021 at 00:01 EDT
         </time>  by <a href="/about-me/" class="p-author h-card"
                                        rel="author">A N M Bazlur Rahman</a>
     </p>
@@ -139,277 +141,185 @@ if (!doNotTrack) {
 </p>
 
 <main>
-    <p><img src="/img/Day018.png" alt="100DaysOfProgramming_Day018" title="100DaysOfJava"></p>
-<p>In this article, I&rsquo;m going to write an echo server in multiple ways.  The server will not do anything; it will just keep listening for connections on a port and echo back whatever is sent.
-Then I will compare which way wins.</p>
-<p>Let&rsquo;s first write the single-threaded echo sever-</p>
+    <p><img src="/img/Day019.png" alt="100DaysOfProgramming_Day019" title="100DaysOfJava"></p>
+<p>In this article, I will first create a thread-safe stack from scratch with a traditional approach, and then I will refactor it with an execute-around design pattern.</p>
+<p>Stack is a <code>last-in-first-out</code> <a href="https://en.wikipedia.org/wiki/Stack_(abstract_data_type)">(LIFO)</a> data structure. It has two main methods, <code>push</code> and <code>pop</code>. Let’s create it –</p>
 <pre><code class="language-java">package com.bazlur;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
-import java.net.ServerSocket;
+import java.util.Arrays;
+import java.util.NoSuchElementException;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
-public class Day016 {
-  public static void main(String[] args) throws IOException {
-    if (args.length != 1) throw new IllegalArgumentException(&quot;Please specify port&quot;);
-    var port = Integer.parseInt(args[0]);
+public class ConcurrentStack&lt;T&gt; {
+  private final Lock lock = new ReentrantLock();
+  private T[] elements;
+  private int size = -1;
 
-    var serverSocket = new ServerSocket(port);
-    System.out.println(&quot;Started server on port &quot; + port);
+  public ConcurrentStack() {
+    this(10);
+  }
 
-    while (true) {
-      try (var socket = serverSocket.accept();
-           var in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-           var out = new PrintWriter(socket.getOutputStream(), true)) {
-        String line;
-        while ((line = in.readLine()) != null) {
-          out.println(line.toUpperCase());
-        }
-      } catch (IOException e) {
-        System.out.println(&quot;Was unable to establish or communicate with client socket:&quot; + e.getMessage());
+  public ConcurrentStack(int initialCapacity) {
+    this.elements = (T[]) new Object[initialCapacity];
+  }
+
+  public void push(T value) {
+    lock.lock();
+    try {
+      growIfNeeded();
+      elements[size] = value;
+    } finally {
+      lock.unlock();
+    }
+  }
+  
+  public T pop() {
+    lock.lock();
+    try {
+      if (size == -1) {
+        throw new NoSuchElementException();
       }
+      trimToSizeIfNeeded();
+
+      var element = elements[size];
+      elements[size] = null;
+      size--;
+      return element;
+    } finally {
+      lock.unlock();
+    }
+  }
+
+  private void growIfNeeded() {
+    if (++size == elements.length) {
+      grow();
+    }
+  }
+
+  private void grow() {
+    int newCapacity = elements.length * 2;
+    elements = Arrays.copyOf(elements, newCapacity);
+  }
+
+  private void trimToSizeIfNeeded() {
+    if (size &lt; elements.length) {
+      elements = Arrays.copyOf(elements, size + 1);
     }
   }
 }
 </code></pre>
-<p>The above code is simple and intuitive. We have used a ServerSocket that listens to a port and waits for an incoming connection. Whenever a client connects to it, it reads whatever is sent to it and replies back.</p>
-<p>The only problem is, it cannot handle multiple connections simultaneously. If one client connects to it, no other will be able to make it to the server at that particular time. Once that specific client disconnect, other will get a chance.</p>
-<p>However, we can change the experience just by allowing multiple threads to handle each connection here.
-Let&rsquo;s look at the code-</p>
+<p>This is the most straightforward implementation, and it has many shortcomings; anyway, that&rsquo;s beside the point.</p>
+<p>Look at the push and pop method; one thing is very common: locking the lock and then unlocking it.
+This seems boilerplate, and it has nothing to do with the actual business logic of the stack.</p>
+<p>Let’s move this boilerplate code to another place-</p>
 <pre><code class="language-java">package com.bazlur;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
-import java.net.ServerSocket;
-import java.net.Socket;
-import java.util.concurrent.Executors;
+import java.util.concurrent.locks.Lock;
+import java.util.function.Supplier;
 
-public class Day017 {
-  public static void main(String[] args) throws IOException {
-    if (args.length != 1) throw new IllegalArgumentException(&quot;Please specify port&quot;);
-    var port = Integer.parseInt(args[0]);
-
-    var executorService = Executors.newCachedThreadPool();
-    var serverSocket = new ServerSocket(port);
-    System.out.println(&quot;Started server on port &quot; + port);
-
-    while (true) {
-      var socket = serverSocket.accept();
-      executorService.submit(() -&gt; handle(socket));
+public class LockHelper {
+  public static void withLock(Lock lock, Runnable runnable) {
+    lock.lock();
+    try {
+      runnable.run();
+    } finally {
+      lock.unlock();
     }
   }
 
-  private static void handle(Socket socket) {
-    try (socket;
-         var in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-         var out = new PrintWriter(socket.getOutputStream(), true)) {
-      String line;
-      while ((line = in.readLine()) != null) {
-        out.println(line.toUpperCase());
-      }
-    } catch (IOException e) {
-      System.out.println(&quot;Was unable to establish or communicate with client socket:&quot; + e.getMessage());
+  public static &lt;T&gt; T withLock(Lock lock, Supplier&lt;T&gt; supplier) {
+    lock.lock();
+    try {
+      return supplier.get();
+    } finally {
+      lock.unlock();
     }
   }
 }
 </code></pre>
-<p>In the above code, we haven&rsquo;t done anything extraordinary. We have just created a ThreadPool using Executors, and whenever a client connects, we put that in a thread to handle that connection.
-This server will do just fine dealing with many connections simultaneously.  However, we are not just happy with the word many. We want to know exactly how many connections it can handle.<br>
-The answer lies in how many threads we can spawn. It is certainly not limited by the socket. Because we know modern OS practically can handle millions of open sockets at a time. So let&rsquo;s rewrite the question again- Can OS handle such an amount of Threads?</p>
-<p>Well, the answer is no. Threads are limited and heavy. Let&rsquo;s find out how much we can write a simple java program.</p>
+<p>The first method takes a lock and a runnable. It does the locking and looking, and in between, it executes the run method of the runnable. The following method also takes a lock and a Supplier. In case we need to return something, that’s why we used Supplier here.</p>
+<p>Let’s use these methods in the ConcurrentStack.</p>
 <pre><code class="language-java">package com.bazlur;
 
-import java.util.concurrent.atomic.AtomicInteger;
-import java.util.concurrent.locks.LockSupport;
+import java.util.Arrays;
+import java.util.NoSuchElementException;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
-public class ThreadCount {
-  public static void main(String[] args) {
-    AtomicInteger threadCount = new AtomicInteger();
-    for (; ; ) {
-      Thread thread = new Thread(() -&gt; {
-        var count = threadCount.incrementAndGet();
-        System.out.println(&quot;count = &quot; + count);
-        LockSupport.park();
-      });
-      thread.start();
+public class ConcurrentStack2&lt;T&gt; {
+  private final Lock lock = new ReentrantLock();
+  private T[] elements;
+  private int size = -1;
+
+  public ConcurrentStack2() {
+    this(10);
+  }
+
+  public ConcurrentStack2(int initialCapacity) {
+    this.elements = (T[]) new Object[initialCapacity];
+  }
+
+  public void push(T value) {
+    LockHelper.withLock(lock, () -&gt; {
+      growIfNeeded();
+      elements[size] = value;
+    });
+  }
+  
+  public T pop() {
+    return LockHelper.withLock(lock, () -&gt; {
+      if (size == -1) {
+        throw new NoSuchElementException();
+      }
+      trimToSizeIfNeeded();
+
+      var element = elements[size];
+      elements[size] = null;
+      size--;
+      return element;
+    });
+  }
+
+  private void growIfNeeded() {
+    if (++size == elements.length) {
+      grow();
+    }
+  }
+
+  private void grow() {
+    int newCapacity = elements.length * 2;
+    elements = Arrays.copyOf(elements, newCapacity);
+  }
+
+  private void trimToSizeIfNeeded() {
+    if (size &lt; elements.length) {
+      elements = Arrays.copyOf(elements, size + 1);
     }
   }
 }
+
 </code></pre>
-<p>This little program will demonstrate how many threads we can create on a machine.
-We can conclude that we are limited by the number of threads we can have and that many connections we can handle simultaneously.</p>
-<p>Now the bigger question is, is there any alternative solution to it? We cannot have more threads; what else we can do to achieve an outstanding throughput.</p>
-<p>Well, the answer is Non-Blocking IO.  While doing the IO operation, the relationality is that most threads are just waiting idle, doing nothing.  It connects to a client, and the client keeps communicating with a dedicated thread. But the communication is slow, and most of the time, the thread is idle, sitting there doing nothing. Why not use this thread&rsquo;s idle time to serve other clients.
-That seems to be a fantastic idea. Let&rsquo;s do this.</p>
-<pre><code class="language-java">package com.bazlur;
-
-import java.io.IOException;
-import java.net.InetSocketAddress;
-import java.nio.ByteBuffer;
-import java.nio.channels.SelectionKey;
-import java.nio.channels.Selector;
-import java.nio.channels.ServerSocketChannel;
-import java.nio.channels.SocketChannel;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.util.*;
-import java.util.concurrent.ConcurrentLinkedDeque;
-
-public class Day018 {
-  static Map&lt;SocketChannel, Queue&lt;ByteBuffer&gt;&gt; pendingData = new HashMap&lt;&gt;();
-
-  public static void main(String[] args) throws IOException {
-    if (args.length != 1) throw new IllegalArgumentException(&quot;Please specify port&quot;);
-    var port = Integer.parseInt(args[0]);
-
-    ServerSocketChannel socketChannel = ServerSocketChannel.open();
-    socketChannel.bind(new InetSocketAddress(port));
-    socketChannel.configureBlocking(false);
-
-    var selector = Selector.open();
-    socketChannel.register(selector, SelectionKey.OP_ACCEPT);
-
-    while (true) {
-      var select = selector.select();
-      if (select == 0) continue;
-      var selectionKeys = selector.selectedKeys();
-      var iterator = selectionKeys.iterator();
-
-      while (iterator.hasNext()) {
-        SelectionKey key = iterator.next();
-        if (key.isValid()) {
-          if (key.isAcceptable()) {
-            accept(key);
-          } else if (key.isReadable()) {
-            read(key);
-          } else if (key.isWritable()) {
-            write(key);
-          }
-        }
-        iterator.remove();
-      }
-    }
-  }
-
-  private static void accept(SelectionKey selectionKey) throws IOException {
-    var channel = (ServerSocketChannel) selectionKey.channel();
-    var sc = channel.accept(); //never null
-    System.out.println(&quot;Connected: &quot; + sc);
-    pendingData.put(sc, new ConcurrentLinkedDeque&lt;&gt;());
-    sc.configureBlocking(false);
-    sc.register(selectionKey.selector(), SelectionKey.OP_READ);
-  }
-
-  private static void read(SelectionKey selectionKey) throws IOException {
-    var channel = (SocketChannel) selectionKey.channel();
-    var byteBuffer = ByteBuffer.allocateDirect(80);
-    var read = channel.read(byteBuffer);
-    if (read == -1) {
-      channel.close();
-      pendingData.remove(channel);
-      return;
-    }
-
-    if (read &gt; 0) {
-      processBuffer(byteBuffer);
-      pendingData.get(channel).add(byteBuffer);
-      selectionKey.interestOps(SelectionKey.OP_WRITE);
-    }
-  }
-
-  private static void write(SelectionKey selectionKey) throws IOException {
-    var channel = (SocketChannel) selectionKey.channel();
-    var queue = pendingData.getOrDefault(channel, new ArrayDeque&lt;&gt;());
-    while (!queue.isEmpty()) {
-      var buff = queue.peek();
-      if (buff.position() != buff.limit()) {
-        buff.flip();
-      }
-      var written = channel.write(buff);
-      if (written == -1) {
-        channel.close();
-        pendingData.remove(channel);
-        return;
-      }
-      if (buff.hasRemaining()) return;
-      queue.remove();
-    }
-    selectionKey.interestOps(SelectionKey.OP_READ);
-  }
-
-  private static void processBuffer(ByteBuffer byteBuffer) {
-    byteBuffer.flip();
-    StringBuilder line = new StringBuilder();
-    line.append(LocalDateTime.now().format(DateTimeFormatter.ofPattern(&quot;yyyy-MM-dd HH:mm:ss&quot;, Locale.getDefault())))
-            .append(&quot;&lt;&lt;server&gt;&gt;: &quot;);
-
-    for (int b = 0; b &lt; byteBuffer.limit(); b++) {
-      var b1 = byteBuffer.get(b);
-      line.append(Character.toUpperCase((char) b1));
-    }
-    var s = line.toString();
-    var bytes = s.getBytes();
-    byteBuffer.clear();
-    byteBuffer.put(bytes);
-    System.out.println(&quot;Executing from: &quot; + Thread.currentThread());
-  }
+<p>Now our code is much cleaner and doesn&rsquo;t’t have any of those boilerplates locking related code.</p>
+<p>If we want to add another method in this class, we will use a similar pattern. –</p>
+<pre><code class="language-java">public T peek() {
+    return LockHelper.withLock(lock, () -&gt; elements[size]);
 }
 </code></pre>
-<p>The above code seems a lot complex than the earlier and a lot more lines than the previous codebase. However, with the above code, we can achieve whatever we want to achieve. This single-threaded would give us a better throughput. We can even make it even better if we throw a few more threads to it.</p>
-<p>We achieved it, but with a complex programming model, which isn&rsquo;t easy. It has many other problems; one particular is that it will become harder to debug with this complex model.<br>
-Is there any other way?</p>
-<p>Well, that&rsquo;s where we see the light at the end of the tunnel, the Project loom. It would enable just writing million virtual threads without making any effort, and the programming model would remain the same, and we will achieve the outstanding throughput we intended to. Let&rsquo;s see an example-</p>
-<pre><code class="language-java">package com.bazlur;
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
-import java.net.ServerSocket;
-import java.net.Socket;
-import java.util.concurrent.Executors;
-
-public class Day018_1 {
-  public static void main(String[] args) throws IOException {
-    if (args.length != 1) throw new IllegalArgumentException(&quot;Please specify port&quot;);
-    var port = Integer.parseInt(args[0]);
-    var serverSocket = new ServerSocket(port);
-    System.out.println(&quot;Started server on port &quot; + port);
-
-    try (var executors = Executors.newVirtualThreadExecutor()) {
-      while (true) {
-        var socket = serverSocket.accept();
-        executors.submit(() -&gt; handle(socket));
-      }
-    }
-  }
-
-  private static void handle(Socket socket) {
-    try (socket;
-         var in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-         var out = new PrintWriter(socket.getOutputStream(), true)) {
-      String line;
-      while ((line = in.readLine()) != null) {
-        out.println(line.toUpperCase());
-      }
-    } catch (IOException e) {
-      System.out.println(&quot;Was unable to establish or communicate with client socket:&quot; + e.getMessage());
-    }
-  }
-}
-</code></pre>
-<p>The programming model is the same as we did earlier. We are just using a different Executor, that&rsquo;s it. But this would enable us to have millions of threads.</p>
-<p>Cheers.</p>
-<p>for <strong>copy/paste</strong> pleasure: <a href="https://github.com/rokon12/100DaysOfJava/blob/main/src/main/java/com/bazlur/Day018_1.java">https://github.com/rokon12/100DaysOfJava/blob/main/src/main/java/com/bazlur/Day018_1.java</a></p>
+<p>We are executing our code around something that seems not present before our eyes, removing noise and bringing clarity.
+This is why it is called execute around design pattern, and it helps to remove a lot of similar boilerplate code.</p>
+<p>That’s for today!</p>
+<p>Cheers!! 
+<i class="far fa-smile-wink "></i>
+ 
+<i class="far fa-laugh-wink "></i>
+</p>
+<p>for <strong>copy/paste</strong> pleasure: <a href="https://github.com/rokon12/100DaysOfJava/blob/main/src/main/java/com/bazlur/ConcurrentStack2.java">https://github.com/rokon12/100DaysOfJava/blob/main/src/main/java/com/bazlur/ConcurrentStack2.java</a></p>
 
 </main>
 
 <p class="post-tag">
-    <div id="tags"><a class="post-tag tag-small" href="/tags/java" rel="tag"> java </a> &nbsp; <a class="post-tag tag-small" href="/tags/coding" rel="tag"> coding </a> &nbsp; <a class="post-tag tag-small" href="/tags/100daysofjava" rel="tag"> 100DaysOfJava </a> &nbsp; <a class="post-tag tag-small" href="/tags/100daysofcode" rel="tag"> 100DaysOfCode </a> &nbsp; <a class="post-tag tag-small" href="/tags/project-loom" rel="tag"> Project Loom </a> &nbsp; <a class="post-tag tag-small" href="/tags/serversocket" rel="tag"> ServerSocket </a> &nbsp; <a class="post-tag tag-small" href="/tags/threads" rel="tag"> Threads </a> &nbsp; <a class="post-tag tag-small" href="/tags/virtual-thread" rel="tag"> Virtual Thread </a> &nbsp; <a class="post-tag tag-small" href="/tags/socket" rel="tag"> Socket </a> &nbsp; <a class="post-tag tag-small" href="/tags/io" rel="tag"> IO </a> &nbsp; <a class="post-tag tag-small" href="/tags/non-blockingio" rel="tag"> Non-BlockingIO </a> &nbsp; <a class="post-tag tag-small" href="/tags/java-17" rel="tag"> Java 17 </a></div>
+    <div id="tags"><a class="post-tag tag-small" href="/tags/java" rel="tag"> java </a> &nbsp; <a class="post-tag tag-small" href="/tags/coding" rel="tag"> coding </a> &nbsp; <a class="post-tag tag-small" href="/tags/100daysofjava" rel="tag"> 100DaysOfJava </a> &nbsp; <a class="post-tag tag-small" href="/tags/100daysofcode" rel="tag"> 100DaysOfCode </a> &nbsp; <a class="post-tag tag-small" href="/tags/design-pattern" rel="tag"> Design Pattern </a> &nbsp; <a class="post-tag tag-small" href="/tags/execute-around" rel="tag"> Execute Around </a> &nbsp; <a class="post-tag tag-small" href="/tags/lambda-expression" rel="tag"> Lambda Expression </a></div>
 </p>
 
 
@@ -509,25 +419,25 @@ public class Day018_1 {
 <span style="color: silver;">Share on: </span>
 <div id="share-buttons">
     <div class="facebook" title="Share this on Facebook"
-         onclick="window.open('http://www.facebook.com/share.php?u=http:\/\/bazlur.com\/2021\/06\/project-loom-the-light-at-the-end-of-the-tunnel\/');">
+         onclick="window.open('http://www.facebook.com/share.php?u=http:\/\/bazlur.com\/2021\/06\/lets-remove-the-boilerplate-code-with-execute-around-pattern\/');">
         <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
             <path d="M1343 12v264h-157q-86 0-116 36t-30 108v189h293l-39 296h-254v759h-306v-759h-255v-296h255v-218q0-186 104-288.5t277-102.5q147 0 228 12z"/>
         </svg>
     </div>
     <div class="twitter" title="Share this on Twitter"
-         onclick="window.open('http://twitter.com/intent/tweet?text=Project loom: the light at the end of the tunnel&url=http:\/\/bazlur.com\/2021\/06\/project-loom-the-light-at-the-end-of-the-tunnel\/');">
+         onclick="window.open('http://twitter.com/intent/tweet?text=Let’s remove the boilerplate code with execute-around pattern&url=http:\/\/bazlur.com\/2021\/06\/lets-remove-the-boilerplate-code-with-execute-around-pattern\/');">
         <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
             <path d="M1684 408q-67 98-162 167 1 14 1 42 0 130-38 259.5t-115.5 248.5-184.5 210.5-258 146-323 54.5q-271 0-496-145 35 4 78 4 225 0 401-138-105-2-188-64.5t-114-159.5q33 5 61 5 43 0 85-11-112-23-185.5-111.5t-73.5-205.5v-4q68 38 146 41-66-44-105-115t-39-154q0-88 44-163 121 149 294.5 238.5t371.5 99.5q-8-38-8-74 0-134 94.5-228.5t228.5-94.5q140 0 236 102 109-21 205-78-37 115-142 178 93-10 186-50z"/>
         </svg>
     </div>
     <div class="linkedin" title="Share this on Linkedin"
-         onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&url=http:\/\/bazlur.com\/2021\/06\/project-loom-the-light-at-the-end-of-the-tunnel\/&title=&summary=&source=');">
+         onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&url=http:\/\/bazlur.com\/2021\/06\/lets-remove-the-boilerplate-code-with-execute-around-pattern\/&title=&summary=&source=');">
         <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
             <path d="M477 625v991h-330v-991h330zm21-306q1 73-50.5 122t-135.5 49h-2q-82 0-132-49t-50-122q0-74 51.5-122.5t134.5-48.5 133 48.5 51 122.5zm1166 729v568h-329v-530q0-105-40.5-164.5t-126.5-59.5q-63 0-105.5 34.5t-63.5 85.5q-11 30-11 81v553h-329q2-399 2-647t-1-296l-1-48h329v144h-2q20-32 41-56t56.5-52 87-43.5 114.5-15.5q171 0 275 113.5t104 332.5z"/>
         </svg>
     </div>
     
-    <div class="mail" title="Share this through Email" onclick="window.open('mailto:?&body=http:\/\/bazlur.com\/2021\/06\/project-loom-the-light-at-the-end-of-the-tunnel\/');">
+    <div class="mail" title="Share this through Email" onclick="window.open('mailto:?&body=http:\/\/bazlur.com\/2021\/06\/lets-remove-the-boilerplate-code-with-execute-around-pattern\/');">
         <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
             <path d="M1792 710v794q0 66-47 113t-113 47h-1472q-66 0-113-47t-47-113v-794q44 49 101 87 362 246 497 345 57 42 92.5 65.5t94.5 48 110 24.5h2q51 0 110-24.5t94.5-48 92.5-65.5q170-123 498-345 57-39 100-87zm0-294q0 79-49 151t-122 123q-376 261-468 325-10 7-42.5 30.5t-54 38-52 32.5-57.5 27-50 9h-2q-23 0-50-9t-57.5-27-52-32.5-54-38-42.5-30.5q-91-64-262-182.5t-205-142.5q-62-42-117-115.5t-55-136.5q0-78 41.5-130t118.5-52h1472q65 0 112.5 47t47.5 113z"/>
         </svg>
@@ -538,7 +448,7 @@ public class Day018_1 {
 <nav id="article-skip">
     <div class="next">
         
-        <a alt="Newer article" href="http://bazlur.com/2021/06/lets-remove-the-boilerplate-code-with-execute-around-pattern/">&larr; Newer</a>
+        <p>&nbsp;</p>
         
     </div>
     <div class="top">
@@ -546,7 +456,7 @@ public class Day018_1 {
     </div>
     <div class="prev">
         
-        <a alt="Older article" href="http://bazlur.com/2021/06/completablefuture-made-life-easy-running-things-asynchronous/">Older &rarr;</a>
+        <a alt="Older article" href="http://bazlur.com/2021/06/project-loom-the-light-at-the-end-of-the-tunnel/">Older &rarr;</a>
         
     </div>
 </nav>
@@ -611,9 +521,9 @@ public class Day018_1 {
 
 <script>
     var disqus_config = function () {
-        this.page.identifier = 'http:\/\/bazlur.com\/2021\/06\/project-loom-the-light-at-the-end-of-the-tunnel\/';
-        this.page.title = 'Project loom: the light at the end of the tunnel';
-        this.page.url = 'http:\/\/bazlur.com\/2021\/06\/project-loom-the-light-at-the-end-of-the-tunnel\/';
+        this.page.identifier = 'http:\/\/bazlur.com\/2021\/06\/lets-remove-the-boilerplate-code-with-execute-around-pattern\/';
+        this.page.title = 'Let’s remove the boilerplate code with execute-around pattern';
+        this.page.url = 'http:\/\/bazlur.com\/2021\/06\/lets-remove-the-boilerplate-code-with-execute-around-pattern\/';
     };
 
     (function () { 
