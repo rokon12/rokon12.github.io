@@ -20,7 +20,7 @@ A:hover, A:active {
 .tag-small {
   display: inline-block;
   position: relative;
-  padding: 4px 9px 4px 9px;
+  padding: 4px 4px 4px 4px;
   background: #eef;
   -webkit-border-radius: 3px;
   border-radius: 3px;
@@ -29,7 +29,7 @@ A:hover, A:active {
   color: #667;
   font-size: 12px;
   text-decoration: none;
-  font-family: DejaVu Sans, Bitstream Vera Sans, Luxi Sans, Verdana, Arial, Helvetica;
+  /*font-family: DejaVu Sans, Bitstream Vera Sans, Luxi Sans, Verdana, Arial, Helvetica;*/
 }
 
 #posts .tag-small, #authors .tag-small {
