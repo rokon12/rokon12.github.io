@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright © 2021, A N M Bazlur Rahman</copyright>
-    <lastBuildDate>Fri, 25 Jun 2021 00:01:00 -0400</lastBuildDate><atom:link href="http://bazlur.com/tags/java/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 26 Jun 2021 00:01:00 -0400</lastBuildDate><atom:link href="http://bazlur.com/tags/java/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Java Thread Programming: Lesson 1</title>
+      <link>http://bazlur.com/2021/06/java-thread-programming-lesson-1/</link>
+      <pubDate>Sat, 26 Jun 2021 00:01:00 -0400</pubDate>
+      
+      <guid>http://bazlur.com/2021/06/java-thread-programming-lesson-1/</guid>
+      <description>When we run a java program, we are given an execution environment that runs our code one by one. When we have only one execution environment, things are pretty straightforward. All the code runs the same way we write. However, when we have many things to run simultaneously, this single environment will not help us much. That&amp;rsquo;s where Thread comes into the picture.
+We can write our program in a way; it can do multiple things simultaneously in different threads.</description>
+    </item>
+    
     <item>
       <title>Let’s remove the boilerplate code with execute-around pattern</title>
       <link>http://bazlur.com/2021/06/lets-remove-the-boilerplate-code-with-execute-around-pattern/</link>

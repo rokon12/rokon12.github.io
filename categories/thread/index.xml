@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright © 2021, A N M Bazlur Rahman</copyright>
-    <lastBuildDate>Wed, 07 Mar 2018 14:24:28 +0000</lastBuildDate><atom:link href="http://bazlur.com/categories/thread/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 26 Jun 2021 00:01:00 -0400</lastBuildDate><atom:link href="http://bazlur.com/categories/thread/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Java Thread Programming: Lesson 1</title>
+      <link>http://bazlur.com/2021/06/java-thread-programming-lesson-1/</link>
+      <pubDate>Sat, 26 Jun 2021 00:01:00 -0400</pubDate>
+      
+      <guid>http://bazlur.com/2021/06/java-thread-programming-lesson-1/</guid>
+      <description>When we run a java program, we are given an execution environment that runs our code one by one. When we have only one execution environment, things are pretty straightforward. All the code runs the same way we write. However, when we have many things to run simultaneously, this single environment will not help us much. That&amp;rsquo;s where Thread comes into the picture.
+We can write our program in a way; it can do multiple things simultaneously in different threads.</description>
+    </item>
+    
     <item>
       <title>জাভা থ্রেড প্রোগ্রামিংঃ ডেটা রেইস (Java Thread Programming: Data Race)</title>
       <link>http://bazlur.com/posts/2018-03-07-%E0%A6%9C%E0%A6%BE%E0%A6%AD%E0%A6%BE-%E0%A6%A5%E0%A7%8D%E0%A6%B0%E0%A7%87%E0%A6%A1-%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A7%8B%E0%A6%97%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%AE%E0%A6%BF%E0%A6%82-/</link>

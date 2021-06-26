@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Concurrency on Bazlur&#39;s Stream of Thoughts</title>
+    <link>http://bazlur.com/tags/concurrency/</link>
+    <description>Recent content in Concurrency on Bazlur&#39;s Stream of Thoughts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>Copyright © 2021, A N M Bazlur Rahman</copyright>
+    <lastBuildDate>Sat, 26 Jun 2021 00:01:00 -0400</lastBuildDate><atom:link href="http://bazlur.com/tags/concurrency/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Java Thread Programming: Lesson 1</title>
+      <link>http://bazlur.com/2021/06/java-thread-programming-lesson-1/</link>
+      <pubDate>Sat, 26 Jun 2021 00:01:00 -0400</pubDate>
+      
+      <guid>http://bazlur.com/2021/06/java-thread-programming-lesson-1/</guid>
+      <description>When we run a java program, we are given an execution environment that runs our code one by one. When we have only one execution environment, things are pretty straightforward. All the code runs the same way we write. However, when we have many things to run simultaneously, this single environment will not help us much. That&amp;rsquo;s where Thread comes into the picture.
+We can write our program in a way; it can do multiple things simultaneously in different threads.</description>
+    </item>
+    
+  </channel>
+</rss>

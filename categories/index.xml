@@ -7,11 +7,11 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright © 2021, A N M Bazlur Rahman</copyright>
-    <lastBuildDate>Fri, 25 Jun 2021 00:01:00 -0400</lastBuildDate><atom:link href="http://bazlur.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 26 Jun 2021 00:01:00 -0400</lastBuildDate><atom:link href="http://bazlur.com/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>100DaysOfJava</title>
       <link>http://bazlur.com/categories/100daysofjava/</link>
-      <pubDate>Fri, 25 Jun 2021 00:01:00 -0400</pubDate>
+      <pubDate>Sat, 26 Jun 2021 00:01:00 -0400</pubDate>
       
       <guid>http://bazlur.com/categories/100daysofjava/</guid>
       <description></description>
@@ -20,9 +20,27 @@
     <item>
       <title>java</title>
       <link>http://bazlur.com/categories/java/</link>
-      <pubDate>Fri, 25 Jun 2021 00:01:00 -0400</pubDate>
+      <pubDate>Sat, 26 Jun 2021 00:01:00 -0400</pubDate>
       
       <guid>http://bazlur.com/categories/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>thread</title>
+      <link>http://bazlur.com/categories/thread/</link>
+      <pubDate>Sat, 26 Jun 2021 00:01:00 -0400</pubDate>
+      
+      <guid>http://bazlur.com/categories/thread/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Thread Programming</title>
+      <link>http://bazlur.com/categories/thread-programming/</link>
+      <pubDate>Sat, 26 Jun 2021 00:01:00 -0400</pubDate>
+      
+      <guid>http://bazlur.com/categories/thread-programming/</guid>
       <description></description>
     </item>
     
@@ -131,15 +149,6 @@
       <pubDate>Sat, 17 Mar 2018 22:05:00 +0000</pubDate>
       
       <guid>http://bazlur.com/categories/%E0%A6%9C%E0%A6%BE%E0%A6%AD%E0%A6%BE/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>thread</title>
-      <link>http://bazlur.com/categories/thread/</link>
-      <pubDate>Wed, 07 Mar 2018 14:24:28 +0000</pubDate>
-      
-      <guid>http://bazlur.com/categories/thread/</guid>
       <description></description>
     </item>
     

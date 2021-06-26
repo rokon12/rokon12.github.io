@@ -6,10 +6,74 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright © 2021, A N M Bazlur Rahman</copyright>
-    <lastBuildDate>Fri, 25 Jun 2021 00:01:00 -0400</lastBuildDate>
+    <lastBuildDate>Sat, 26 Jun 2021 00:01:00 -0400</lastBuildDate>
     
         <atom:link href="http://bazlur.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Java Thread Programming: Lesson 1</title>
+      <link>http://bazlur.com/2021/06/java-thread-programming-lesson-1/</link>
+      <pubDate>Sat, 26 Jun 2021 00:01:00 -0400</pubDate>
+      
+      <guid>http://bazlur.com/2021/06/java-thread-programming-lesson-1/</guid>
+      <description>&lt;p&gt;When we run a java program, we are given an execution environment that runs our code one by one. When we have only one execution environment, things are pretty straightforward. All the code runs the same way we write.
+However, when we have many things to run simultaneously, this single environment will not help us much. That&amp;rsquo;s where Thread comes into the picture.&lt;/p&gt;
+&lt;p&gt;We can write our program in a way; it can do multiple things simultaneously in different threads. Each Thread is a unique execution environment.&lt;/p&gt;
+&lt;p&gt;Creating a thread is easy. In java, we have a class called Thread that can be instantiated and provided a job to it, and it will run independently. Let&amp;rsquo;s see an example-
+T&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;package com.bazlur.threads;
+
+public class Playground {
+  public static void main(String[] args) {
+    Thread thread1 = new Thread(() -&amp;gt; {
+      System.out.println(&amp;quot;Running from: &amp;quot; + Thread.currentThread());
+    });
+
+    Thread thread2 = new Thread(() -&amp;gt; {
+      System.out.println(&amp;quot;Running from: &amp;quot; + Thread.currentThread());
+    });
+
+    thread1.start();
+    thread2.start();
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;When we create a thread, we pass a lambda expression to its argument. In the expression, we put our code that we want to run independently.&lt;/p&gt;
+&lt;p&gt;In the above code, we have created two threads. Each Thread will run independently and simultaneously. Although we have started two threads one by one, we can never tell which one would run first. That&amp;rsquo;s the nature of the Thread. They are independent and depend on how the operating system schedules them to run.&lt;/p&gt;
+&lt;p&gt;So far, we have just seen how to create a thread and how to run them.
+They are super helpful when we have some independent work to be done.
+For example- we have to write a web server where multiple clients connect to it. If the server runs with a single thread, then at a time, it will be able only to serve one client. That&amp;rsquo;s not super useful. The server should handle multiple clients at a time, and that&amp;rsquo;s the point of having it.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s see in the code-&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;package com.bazlur.threads;
+
+import java.io.IOException;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+public class Playground {
+  public static void main(String[] args) throws IOException {
+    var serverSocket = new ServerSocket(4040);
+    System.out.println(&amp;quot;Started server on port &amp;quot; + 4040);
+
+    while (true) {
+      var socket = serverSocket.accept();
+      var thread = new Thread(() -&amp;gt; {
+        handleClient(socket);
+      });
+      thread.start();
+    }
+  }
+
+  private static void handleClient(Socket socket) {
+    //here we have code for handling a client
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In the above code, the server keeps listening from clients, and whenever a client connects, it creates a new thread and passes the job into it. That&amp;rsquo;s how threads help us.&lt;/p&gt;
+&lt;p&gt;That&amp;rsquo;s for today, cheers!!&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Let’s remove the boilerplate code with execute-around pattern</title>
