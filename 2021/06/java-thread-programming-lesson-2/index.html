@@ -241,6 +241,7 @@ thread2.join();
 <p>Now let’s run the above code. According to our calculation, the value should be <code>2000</code>.</p>
 <p>However, it doesn’t matter how many times you run it; it will barely be 2000. Every time it will print different results.</p>
 <p>Now you could be a little puzzled, but this is what it is supposed to be. The reason is, the two threads increment the Counter simultaneously, and it could happen that two threads increment the value at the same time. In such a case, one will win, and the other will be discarded, and we will end up with stale data. This is call contention. Whenever a shared variable is changed from multiple threads, this sort of situation happens.</p>
+<p>This is called a <strong>race condition</strong>.</p>
 <p>We can avoid this if we could only allow one thread at a point in time when we want to change a value. We can do this by adding a lock to it.</p>
 <p>Let’s change the counter class and add a look at its method -</p>
 <pre><code class="language-java">package com.bazlur.threads;
@@ -296,7 +297,7 @@ public class Counter {
 </main>
 
 <p class="post-tag">
-    <div id="tags"><a class="post-tag tag-small" href="/tags/java" rel="tag"> java </a> &nbsp; <a class="post-tag tag-small" href="/tags/coding" rel="tag"> coding </a> &nbsp; <a class="post-tag tag-small" href="/tags/100daysofjava" rel="tag"> 100DaysOfJava </a> &nbsp; <a class="post-tag tag-small" href="/tags/100daysofcode" rel="tag"> 100DaysOfCode </a> &nbsp; <a class="post-tag tag-small" href="/tags/thread" rel="tag"> Thread </a> &nbsp; <a class="post-tag tag-small" href="/tags/concurrency" rel="tag"> Concurrency </a> &nbsp; <a class="post-tag tag-small" href="/tags/java-thread-programming" rel="tag"> java thread programming </a></div>
+    <div id="tags"><a class="post-tag tag-small" href="/tags/java" rel="tag"> java </a> &nbsp; <a class="post-tag tag-small" href="/tags/coding" rel="tag"> coding </a> &nbsp; <a class="post-tag tag-small" href="/tags/100daysofjava" rel="tag"> 100DaysOfJava </a> &nbsp; <a class="post-tag tag-small" href="/tags/100daysofcode" rel="tag"> 100DaysOfCode </a> &nbsp; <a class="post-tag tag-small" href="/tags/thread" rel="tag"> Thread </a> &nbsp; <a class="post-tag tag-small" href="/tags/concurrency" rel="tag"> Concurrency </a> &nbsp; <a class="post-tag tag-small" href="/tags/java-thread-programming" rel="tag"> java thread programming </a> &nbsp; <a class="post-tag tag-small" href="/tags/race-condition" rel="tag"> race condition </a></div>
 </p>
 
 
@@ -1302,6 +1303,14 @@ public class Counter {
   
   
   <a class="tag-cloud" href="/tags/project-loom" style="font-size:1rem">project-loom</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/race-condition" style="font-size:1rem">race-condition</a>
   
   
   

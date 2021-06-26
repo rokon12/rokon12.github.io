@@ -111,6 +111,7 @@ thread2.join();
 &lt;p&gt;Now let’s run the above code. According to our calculation, the value should be &lt;code&gt;2000&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;However, it doesn’t matter how many times you run it; it will barely be 2000. Every time it will print different results.&lt;/p&gt;
 &lt;p&gt;Now you could be a little puzzled, but this is what it is supposed to be. The reason is, the two threads increment the Counter simultaneously, and it could happen that two threads increment the value at the same time. In such a case, one will win, and the other will be discarded, and we will end up with stale data. This is call contention. Whenever a shared variable is changed from multiple threads, this sort of situation happens.&lt;/p&gt;
+&lt;p&gt;This is called a &lt;strong&gt;race condition&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;We can avoid this if we could only allow one thread at a point in time when we want to change a value. We can do this by adding a lock to it.&lt;/p&gt;
 &lt;p&gt;Let’s change the counter class and add a look at its method -&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;package com.bazlur.threads;
