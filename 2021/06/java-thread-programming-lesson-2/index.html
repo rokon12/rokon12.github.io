@@ -22,8 +22,8 @@
     <meta property="fb:pages" content="556530934551556" />
 
     
-    <title>জাভা থ্রেড প্রোগ্রামিং - Bazlur&#39;s Stream of Thoughts</title>
-    <meta property="og:title" content="জাভা থ্রেড প্রোগ্রামিং - Bazlur&#39;s Stream of Thoughts">
+    <title>Java Thread Programming: Lesson 2 - Bazlur&#39;s Stream of Thoughts</title>
+    <meta property="og:title" content="Java Thread Programming: Lesson 2 - Bazlur&#39;s Stream of Thoughts">
     
 
     <meta name="twitter:card" content="summary">
@@ -34,8 +34,10 @@
 
     
     
-    <meta property="description" content="আধুনিক কম্পিউটারের প্রোগ্রামগুলো বেশ বুদ্ধিদীপ্ত ও জটিল। এগুলো একই সঙ্গে একাধিক কাজ সম্পাদন করতে পারে। এই প্রোগ্রামগুলো লিখতে হলে আমাদের নিজেদেরও বুদ্ধির পরিচয় দিতে হয়। সাধারণত একটি বড়ো কাজ &amp;hellip;">
-    <meta property="og:description" content="আধুনিক কম্পিউটারের প্রোগ্রামগুলো বেশ বুদ্ধিদীপ্ত ও জটিল। এগুলো একই সঙ্গে একাধিক কাজ সম্পাদন করতে পারে। এই প্রোগ্রামগুলো লিখতে হলে আমাদের নিজেদেরও বুদ্ধির পরিচয় দিতে হয়। সাধারণত একটি বড়ো কাজ &amp;hellip;">
+    <meta property="description" content="Previous article : Java Thread Programming: Lesson 1
+Threads are easy and fun when we don’t have to share data. However, when multiple threads want to get hold of shared resources, things get a little &amp;hellip;">
+    <meta property="og:description" content="Previous article : Java Thread Programming: Lesson 1
+Threads are easy and fun when we don’t have to share data. However, when multiple threads want to get hold of shared resources, things get a little &amp;hellip;">
     
     
 
@@ -129,11 +131,11 @@ if (!doNotTrack) {
 
 
 <div class="article-meta">
-    <h1><span class="title">জাভা থ্রেড প্রোগ্রামিং</span></h1>
+    <h1><span class="title">Java Thread Programming: Lesson 2</span></h1>
     
     <p class="post-date">Posted on
-        <time class="dt-published" datetime="2018-02-16T14:53:57Z">
-        16 February, 2018 at 14:53 &#43;0000
+        <time class="dt-published" datetime="2021-06-26T00:12:00-04:00">
+        26 June, 2021 at 00:12 EDT
         </time>  by <a href="/about-me/" class="p-author h-card"
                                        rel="author">A N M Bazlur Rahman</a>
     </p>
@@ -141,39 +143,160 @@ if (!doNotTrack) {
 </div>
 
 <p class="post-tag">
-    <div>Categories: &nbsp;&nbsp;<a class="post-tag tag-small" href="/categories/books" rel="tag"> books </a> &nbsp; <a class="post-tag tag-small" href="/categories/java" rel="tag"> Java </a></div>
+    <div>Categories: &nbsp;&nbsp;<a class="post-tag tag-small" href="/categories/java" rel="tag"> java </a> &nbsp; <a class="post-tag tag-small" href="/categories/100daysofjava" rel="tag"> 100DaysOfJava </a> &nbsp; <a class="post-tag tag-small" href="/categories/thread-programming" rel="tag"> Thread Programming </a> &nbsp; <a class="post-tag tag-small" href="/categories/thread" rel="tag"> thread </a></div>
 </p>
 
 <main>
-    <p>আধুনিক কম্পিউটারের প্রোগ্রামগুলো বেশ বুদ্ধিদীপ্ত ও জটিল। এগুলো একই সঙ্গে একাধিক কাজ সম্পাদন করতে পারে। এই প্রোগ্রামগুলো লিখতে হলে আমাদের নিজেদেরও বুদ্ধির পরিচয় দিতে হয়। সাধারণত একটি বড়ো কাজ কতগুলো ছোটো ছোটো কাজের সমষ্টি হয়। এই ছোটো কাজগুলোকে আলাদাভাবে করে, এদেরকে জুড়ে দিয়েই সামগ্রিকভাবে বড়ো কাজটি সম্পন্ন করা হয়। এর মধ্যে কিছু কাজ একটি আরেকটির ওপর নির্ভরশীল হয়, অন্যগুলো স্বাধীনভাবে সম্পাদন করা যায়। আবার এই ছোটো ছোটো কাজগুলো কম্পিউটার ধারাবাহিকভাবে একটির পর আরেকটি সম্পাদন করতে পারে। তবে যে কাজগুলো স্বাধীন সেগুলোকে যদি একই সঙ্গে করা যায়, তাহলে অল্প সময়ে আমরা একাধিক কাজ করে ফেলতে পারি। এই একই সঙ্গে একাধিক কাজ কীভাবে করা যায়, তা নির্ভর করে আমাদের প্রোগ্রামটি আমরা কীভাবে লিখছি তার ওপর। জাভা প্রোগ্রামিং ল্যাংগুয়েজ ব্যবহার করে একাধিক ছোটো কাজ খুব সুন্দর ও বুদ্ধিদীপ্তভাবে সাজিয়ে প্রোগ্রাম লেখার উপায় হলো থ্রেডিং। এই সাজানোর প্রক্রিয়াটি শিক্ষানবিশদের কাছে অনেক সময়ই কঠিন মনে হয়। এই কঠিন মনে হওয়াটা যুক্তিসংগত। আমরা মানুষ, একই সময়ে একাধিক কাজে মনোযোগ দিতে পারি না। আমাদের চিন্তাভাবনার প্রক্রিয়াও ধারাবাহিক। এই কঠিন বিষয়টি অনুশীলনের মাধ্যমে আয়ত্তে আনতে পারলে কাজের অনেক সুবিধা হয়। প্রোগ্রামিংয়ের ক্ষেত্রেও পরপর ধারবাহিক প্রোগ্রাম লেখা বা চালানো সহজ হলেও একই সময়ে প্রোগ্রামের একাধিক অংশ পাশাপাশি একই সঙ্গে চালানো এবং এদের মধ্য সমন্বয় করা খানিকটা কঠিন। তবে কোনো কাজ কঠিন হলেই কি আর আমরা থেমে থাকি? মানুষ চাঁদে গিয়ে ফিরে এসেছে আর এখন প্রস্তুত হচ্ছে মঙ্গলযাত্রায়। যেকোনো কঠিন বিষয়কে যদি সহজভাবে উপস্থাপন করা যায়, বিশেষ করে যদি মাতৃভাষায় বোঝানো যায়, তাহলে যে–কেউ তা বিনা ক্লেশেই ধরে ফেলতে পারে। এই সহজ উপস্থাপনের কথা চিন্তা করেই এই বইটি লেখায় প্রয়াস। বইটি লেখার পেছনে আমার গত পাঁচ বছরের পেশাগত অভিজ্ঞতা অনেকভাবে কাজে লেগেছে। এ ছাড়া জাভা ইউজার গ্রুপ বাংলাদেশের (jugbd.org) কল্যাণে অসংখ্য শিক্ষানবিশ, দেশ ও দেশের বাইরের অনেক সফটওয়্যার নির্মাতা, আন্তর্জাতিক খ্যাতিসম্পন্ন বিভিন্ন প্রযুক্তি বিশেষজ্ঞ ও বক্তাদের সঙ্গে বিভিন্ন সময় বিভিন্ন রকম যে আলাপচারিতা হয়েছে এবং এ থেকে যে অভিজ্ঞতা সঞ্চিত হয়েছে, তারও খানিকটা এই বইয়ে প্রতিফলিত হয়েছে। আশা করছি এই ছোট্ট বইটি শুধু শিক্ষানবিশদেরই নয়, বরং যারা ইতিমধ্যে সফটওয়্যার ইন্ড্রাস্ট্রিতে মাত্র পা রেখেছে, তাদের অনেকেরই কাজে আসবে এবং পড়ে উপকৃত হবে। বইটিতে অনেকগুলো গুরুত্বপূর্ণ ধারণা বাংলাতে সহজভাবে উপস্থাপন করার চেষ্টা করেছি এবং এগুলোর সঙ্গে প্রচুর উদাহরণ সংযুক্ত করেছি। বইটি শুধু একবার পড়ে গেলে হবে না, কয়েকবার পড়তে হবে। এ ছাড়া যে কোডগুলো রয়েছে, তার প্রতিটি হাতে আইডিইতে লিখে রান করে পরীক্ষা করে দেখতে হবে। বইটিতে জাভা থ্রেডিংয়ের অনেকগুলো গুরুত্বপূর্ণ বিষয় আলোচনা করা হয়েছে। এটিই শেষ নয়। থ্রেডিং বা কনকারেন্সি অনেক বড়ো এবং জটিল বিষয়। শুধু একটি বই পড়ে এ সম্পর্কে বিস্তর ধারণা নেওয়া সম্ভব নয়। তবে প্রাথমিকভাবে এখানে যে বিষয়গুলো আলোচনা করা হয়েছে সেগুলো ভালোভাবে আয়ত্তে আনতে পারলে জাভা থ্রেড প্রোগ্রামিংয়ের যে ভয়টুকু থাকে, তা মুছে যাবে বলে আমার বিশ্বাস। জাভা ৮–এ জাভা থ্রেডিংয়ের বেশ কিছু নতুন সংযোজন রয়েছে, যা এই বইয়ে আলোচনা করা হয়নি। এর কারণ জাভা ৮ নিয়ে আমার আরেকটি বইয়ের কাজ চলছে। পরবর্তী বইয়ে ল্যামডা এক্সপ্রেশন ও অন্যান্য বিষয় নিয়ে আলোচনা করব। এই বইটি নিয়ে বা এই বইয়ে আলোচিত যেকোনো বিষয় নিয়ে বিভিন্নরকম প্রশ্ন থাকতে পারে। এ ক্ষেত্রে প্রোগ্রামাবাদে (<a href="http://programabad.com/">http://programabad.com/</a>) আপনারা প্রশ্নগুলো করতে পারেন। বাংলা ভাষায় কনকারেন্সি বা থ্রেডিং নিয়ে একটি বই লেখা হয়েছে শুনে অনেকে হয়তো আঁতকে উঠতে পারে এবং মনে করতে পারে যে, এরকম টেকনিক্যাল বই ইংরেজিতেই পড়া উচিত। এমতের সঙ্গে আমার দ্বিমত নেই। ইংরেজিতে যারা সিদ্ধহস্ত, তাদের বরং ইংরেজিতেই পড়া উচিত। তবে বাংলা বিশ্বের অন্যতম প্রধান ভাষা (সপ্তম) হওয়া সত্ত্বেও আমাদের যদি টেকনোলজি বিষয়ে জ্ঞান আহরণের পূর্বশর্ত হিসেবে অন্য একটি ভাষা রপ্ত করতে হয়, তাহলে ব্যাপারটি খানিকটা দুঃখজনক তো বটেই, বরং ভাষার জন্য আমাদের যে অকৃত্রিম ত্যাগ, তা কিছুটা হলেও ম্লান হয়ে যায়। ডিজিটাল বাংলাদেশ বিনির্মাণে ও মাতৃভাষায় প্রযুক্তিচর্চায় এই বই কিছুটা সহায়ক হলেই আমার এ পরিশ্রম সার্থক হয়েছে বলে ধরে নেব। বাংলা ভাষার মান রক্ষার্থে বাংলাদেশের মাটির মানুষেরা যে ত্যাগ ও দায়িত্বশীলতার পরিচয় দিয়েছে, তা মনে রেখে এই ভাষার মাসে টেকনোলজি বিষয়ে আরেকটি বাংলা বই প্রকাশ করতে পারায় আমি অত্যন্ত আনন্দিত। বইয়ের প্রথম সংস্করণে অনিচ্ছাকৃত কিছু ভুল ভ্রান্তি থেকে যায়। যদি চোখে পড়ে, পাঠকদের প্রতি অনুরোধ থাকবে তা ধরিয়ে দেওয়ার জন্য, যাতে পরবর্তী সংস্করণে সেগুলো ঠিক করে দেওয়া যায়।</p>
-<p>বইটি পাওয়া যাবে –</p>
-<p> [spacer height=”20px”]</p>
-<p>## প্রাপ্তিস্থান [spacer height=”20px”]</p>
-<p><strong><a href="https://www.rokomari.com/book/159071/%E0%A6%9C%E0%A6%BE%E0%A6%AD%E0%A6%BE-%E0%A6%A5%E0%A7%8D%E0%A6%B0%E0%A7%87%E0%A6%A1-%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A7%8B%E0%A6%97%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%AE%E0%A6%BF%E0%A6%82">রকমারি ডট কম</a></strong>, ফোন: ১৬২৯৭<br>
-<strong>হক লাইব্রেরী</strong>, নীলক্ষেত, ঢাকা, ফোন: ০১৮২০-১৫৭১৮১<br>
-<strong>মানিক লাইব্রেরী</strong>, নীলক্ষেত, ঢাকা, ফোন: ০১৭৩৫-৭৪২৯০৮<br>
-<strong>রানা বুক পাবলিশার্স</strong>, নীলক্ষেত, ঢাকা, ফোন: ০১৬২৩-০৫৮৪২৮<br>
-<strong>অন্যরকম প্রকাশনী</strong>, ঢাকা</p>
-<p>[spacer height=”40px”]</p>
-<p>## সূচীপত্র ### লেখকের কথা ### লেখক পরিচিতি ### অধ্যায় ১ : থ্রেডিং কী * ১.১ – থ্রেডিং কী * ১.২ – থ্রেডিংয়ের সুবিধা * ১.৩ – জাভা থ্রেড (Java Thread) * ১.৪ – জাভা মেইন থ্রেড (Java Main Thread) ### অধ্যায় ২ : থ্রেড তৈরি ও ব্যবহার * ২.১ – থ্রেডের এক্সেপশন হ্যান্ডেলিং (Exception handling from thread) * ২.২ – থ্রেড বন্ধ করা (Terminating a Thread) * ২.৩ – volatile কিওয়ার্ডের ব্যবহার * ২.৪ – থ্রেডের জীবনচক্র (Life Cycle of a Thread) * ২.৫ – jstack and JConsole 51 * ২.৬ – থ্রেড স্লিপিং এবং রিজিউমিং (Thread sleeping and resuming) * ২.৭ – থ্রেড সমাপ্তির জন্য অপেক্ষা (Waiting for finalization of a thread ) ### অধ্যায় ৩ : থ্রেড সেফটি ও ডেটা সিনক্রোনাইজেশন * ৩.১ – থ্রেডের এক্সেপশন হ্যান্ডেলিং (Exception handling from thread) * ৩.২ – থ্রেড লোকাল (ThreadLocal) * ৩.৩ – একাধিক থ্রেডের মধ্যে মেমোরি শেয়ার করা (Memory sharing across multiple threads) * ৩.৪ – থ্রেড সেফটি (Thread safety) * ৩.৫ – ইমিউটেবল অবজেক্ট (Immutable Object) * ৩.৬ – রেস কন্ডিশন এবং ক্রিটিক্যাল সেকশন (Race condition and Critical section) * ৩.৭ – লাইভনেস (Liveness) * ৩.৮ – ডেডলক (Deadlock) * ৩.৮ – ডাইনিং ফিলোসফারস সমস্যা (The Dining Philosophers Problem) * ৩.৮ – wait(), notify() এবং notifyAll() ### অধ্যায় ৪ : সিনক্রোনাইজড ও কনকারেন্ট কালেকশন * ৪.১ – সিনক্রোনাইজড কালেকশন ও কনকারেন্ট কালেকশন ### অধ্যায় ৫ : ব্লকিং কিউ ও প্রডিউসার-কনজিউমার প্যাটার্ন ### অধ্যায় ৬ : এক্সিকিউটর ফ্রেমওয়ার্ক * ৬.১ – এক্সিকিউটর ফ্রেমওয়ার্ক (Executor Framework) * ৬.২ – থ্রেডপুল (Thread Pool) * ৬.৩ – Callable এবং Future ### অধ্যায় ৭ : লকস এবং ল্যাচেস (Locks and Latches) * ৭.১ – লকস (Locks) * ৭.২ – ল্যাচ (Latch) ### অধ্যায় ৮ : কনকারেন্সি বনাম প্যারালালিজম * ৮.১ – কনকারেন্সি বনাম প্যারালালিজম (Concurrency vs. Parallelism) * ৮.২ – Fork/Join Basics ### অধ্যায় ৯ : প্রজেক্ট * ৯.১ – মাল্টিথ্রেডেড ফাইল ডাউনলোডার (Multi-Threaded File Downloader) ### পরিশিষ্ট * পরিশিষ্ট-১ : অ্যাটোমিক ভ্যারিয়েবলস * পরিশিষ্ট-২ : ডিমন থ্রেড (DAEMON Thread) * পরিশিষ্ট-৩ : একটি লাইভলকের উদাহরণ * পরিশিষ্ট-৪ : অনেক বেশি থ্রেড অ্যাপ্লিকেশনকে ধীর করে * পরিশিষ্ট-৫ : জাভা মেমোরি মডেল (Java Memory Model – JMM) ## বইয়ের বর্ণনা</p>
-<p>শিরোনাম</p>
-<p>জাভা থ্রেড প্রোগ্রামিং</p>
-<p>লেখক</p>
-<p>আ ন ম বজলুর রহমান</p>
-<p>ক্যাটেগরি</p>
-<p>কম্পিউটার প্রোগ্রামিং</p>
-<p>ISBN</p>
-<p>9789843436917</p>
-<p>সংস্করন</p>
-<p>প্রথম প্রকাশ, ফেব্রুয়ারী, ২০১৮</p>
-<p>পৃষ্ঠাসংখ্যা</p>
-<p>২০০</p>
-<p>  বইটি সম্পর্কে কয়েকটি রিভিউ: [রিভিউ ১ ][1] [রিভিউ ২][2] [রিভিউ ৩ ][3] [1]: <a href="https://bazlur.com/java-thread-programming-review-1/">https://bazlur.com/java-thread-programming-review-1/</a> [2]: <a href="https://bazlur.com/java-thread-programming-review-2/">https://bazlur.com/java-thread-programming-review-2/</a> [3]: <a href="https://bazlur.com/java-thread-programming-review-3/">https://bazlur.com/java-thread-programming-review-3/</a></p>
+    <p>Previous article : <a href="https://bazlur.com/2021/06/java-thread-programming-lesson-1/">Java Thread Programming: Lesson 1</a></p>
+<p>Threads are easy and fun when we don’t have to share data. However, when multiple threads want to get hold of shared resources, things get a little messy.</p>
+<p>In our previous article, we have seen a server being handed a thread to deal with a client. Let’s say we want to count how many clients the server was able to serve successfully? How are we going to do that?
+One easy way is, we can have a counter variable and increment it whenever a job is done successfully.</p>
+<pre><code class="language-java">package com.bazlur.threads;
+
+public class Counter {
+  private long count;
+
+  public Counter(long count) {
+    this.count = count;
+  }
+
+  public void increment() {
+    count++;
+  }
+
+  public long getCount() {
+    return count;
+  }
+}
+</code></pre>
+<p>We will pass this <code>Counter</code> to each client handler, and when they are successful, the handler will increment it.</p>
+<pre><code class="language-java">package com.bazlur.threads;
+
+import java.io.IOException;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+public class Playground {
+  public static void main(String[] args) throws IOException {
+    var serverSocket = new ServerSocket(4040);
+    System.out.println(&quot;Started server on port &quot; + 4040);
+
+    Counter counter = new Counter(0);
+
+    while (true) {
+      var socket = serverSocket.accept();
+      var thread = new Thread(() -&gt; {
+        handleClient(socket, counter);
+      });
+      thread.start();
+    }
+  }
+
+  private static void handleClient(Socket socket, Counter counter) {
+    //here we have code for handling a client
+    counter.increment();
+  }
+}
+</code></pre>
+<p>So we have passed the counter reference to the handleClient() method, and it will increment it when the job is done and successful.</p>
+<p>However, this might cause some issues. For example, When multiple threads try to increment on a count variable, some can end up incrementing simultaneously. If this happens, one of the values will be written, and the other one would get lost, and we will end up with stale data. So let’s experiment with this hypothesis.</p>
+<pre><code class="language-java">package com.bazlur.threads;
+
+public class Playground {
+  public static void main(String[] args) throws InterruptedException {
+
+    Counter counter = new Counter(0);
+    Thread thread1 = new Thread(() -&gt; {
+      for (int i = 0; i &lt; 1_000; i++) {
+        counter.increment();
+      }
+    });
+    Thread thread2 = new Thread(() -&gt; {
+      for (int i = 0; i &lt; 1_000; i++) {
+        counter.increment();
+      }
+    });
+
+    thread1.start();
+    thread2.start();
+
+    thread1.join();
+    thread2.join();
+    
+    var count = counter.getCount();
+    System.out.println(&quot;count = &quot; + count);
+  }
+}
+</code></pre>
+<p>In the above code, we have created an instance of Counter and then create two threads.</p>
+<p>Each will run 1000 times and increment the Counter. So if both threads have done their job, we will have2000 as a value in the Counter.</p>
+<p>In java, we start our program in the main method, and the main method runs under a thread called the main thread. Here, we have created two other threads from the main thread, and they are going to run separately.</p>
+<p>When a thread finishes its work, it dies. Here the main method can even finish its work before the other thread ends its work. Let’s look at the main method; what it does is create two threads, then start, then invoke the getCount() method to get the count and print it. While the two threads are incrementing, the main thread can finish its work, and we will never get the final results. Therefore, the main thread has to wait for the other two threads to complete their work. To do that, we call the join() method of the reference of the thread.</p>
+<p>That why in the above code, we have used the following two lines-</p>
+<pre><code class="language-java">thread1.join();
+thread2.join();
+
+</code></pre>
+<p>Now the main thread will wait until the finishes and then prints the count value.</p>
+<p>Now let’s run the above code. According to our calculation, the value should be <code>2000</code>.</p>
+<p>However, it doesn’t matter how many times you run it; it will barely be 2000. Every time it will print different results.</p>
+<p>Now you could be a little puzzled, but this is what it is supposed to be. The reason is, the two threads increment the Counter simultaneously, and it could happen that two threads increment the value at the same time. In such a case, one will win, and the other will be discarded, and we will end up with stale data. This is call contention. Whenever a shared variable is changed from multiple threads, this sort of situation happens.</p>
+<p>We can avoid this if we could only allow one thread at a point in time when we want to change a value. We can do this by adding a lock to it.</p>
+<p>Let’s change the counter class and add a look at its method -</p>
+<pre><code class="language-java">package com.bazlur.threads;
+
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+
+public class Counter {
+  private long count;
+  private Lock lock = new ReentrantLock();
+
+  public Counter(long count) {
+    this.count = count;
+  }
+
+  public void increment() {
+    lock.lock();
+    try {
+      count++;
+    } finally {
+      lock.unlock();
+    }
+  }
+
+  public long getCount() {
+    lock.lock();
+    try {
+      return count;
+    } finally {
+      lock.unlock();
+    }
+  }
+}
+</code></pre>
+<p>Now, if we run our Playground.java, we will always get the current result.</p>
+<p>From this discussion, the conclusion that we can draw is, whenever data is shared into multiple threads, and they are changed, we have to put a locking; otherwise, they will produce stale data.</p>
+<p>In the <a href="https://bazlur.com/2021/06/lets-remove-the-boilerplate-code-with-execute-around-pattern/">previous article</a>, we have seen how we can improve our code using the execute-around pattern. We can use the same pattern in the Counter class and clean some boilerplate code.</p>
+<pre><code class="language-java">class ConcurrentCounter {
+  private long count;
+  private final Lock lock = new ReentrantLock();
+
+  public long incrementAndGet() {
+    return withLock(lock, () -&gt; ++count);
+  }
+
+  public long get() {
+    return withLock(lock, () -&gt; count);
+  }
+}
+</code></pre>
+<p>That’s for today, cheers!!</p>
 
 </main>
 
 <p class="post-tag">
-    <div id="tags"></div>
+    <div id="tags"><a class="post-tag tag-small" href="/tags/java" rel="tag"> java </a> &nbsp; <a class="post-tag tag-small" href="/tags/coding" rel="tag"> coding </a> &nbsp; <a class="post-tag tag-small" href="/tags/100daysofjava" rel="tag"> 100DaysOfJava </a> &nbsp; <a class="post-tag tag-small" href="/tags/100daysofcode" rel="tag"> 100DaysOfCode </a> &nbsp; <a class="post-tag tag-small" href="/tags/thread" rel="tag"> Thread </a> &nbsp; <a class="post-tag tag-small" href="/tags/concurrency" rel="tag"> Concurrency </a> &nbsp; <a class="post-tag tag-small" href="/tags/java-thread-programming" rel="tag"> java thread programming </a></div>
 </p>
 
 
@@ -273,25 +396,25 @@ if (!doNotTrack) {
 <span style="color: silver;">Share on: </span>
 <div id="share-buttons">
     <div class="facebook" title="Share this on Facebook"
-         onclick="window.open('http://www.facebook.com/share.php?u=http:\/\/bazlur.com\/posts\/2018-02-16-java-thread-programmin\/');">
+         onclick="window.open('http://www.facebook.com/share.php?u=http:\/\/bazlur.com\/2021\/06\/java-thread-programming-lesson-2\/');">
         <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
             <path d="M1343 12v264h-157q-86 0-116 36t-30 108v189h293l-39 296h-254v759h-306v-759h-255v-296h255v-218q0-186 104-288.5t277-102.5q147 0 228 12z"/>
         </svg>
     </div>
     <div class="twitter" title="Share this on Twitter"
-         onclick="window.open('http://twitter.com/intent/tweet?text=জাভা থ্রেড প্রোগ্রামিং&url=http:\/\/bazlur.com\/posts\/2018-02-16-java-thread-programmin\/');">
+         onclick="window.open('http://twitter.com/intent/tweet?text=Java Thread Programming: Lesson 2&url=http:\/\/bazlur.com\/2021\/06\/java-thread-programming-lesson-2\/');">
         <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
             <path d="M1684 408q-67 98-162 167 1 14 1 42 0 130-38 259.5t-115.5 248.5-184.5 210.5-258 146-323 54.5q-271 0-496-145 35 4 78 4 225 0 401-138-105-2-188-64.5t-114-159.5q33 5 61 5 43 0 85-11-112-23-185.5-111.5t-73.5-205.5v-4q68 38 146 41-66-44-105-115t-39-154q0-88 44-163 121 149 294.5 238.5t371.5 99.5q-8-38-8-74 0-134 94.5-228.5t228.5-94.5q140 0 236 102 109-21 205-78-37 115-142 178 93-10 186-50z"/>
         </svg>
     </div>
     <div class="linkedin" title="Share this on Linkedin"
-         onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&url=http:\/\/bazlur.com\/posts\/2018-02-16-java-thread-programmin\/&title=&summary=&source=');">
+         onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&url=http:\/\/bazlur.com\/2021\/06\/java-thread-programming-lesson-2\/&title=&summary=&source=');">
         <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
             <path d="M477 625v991h-330v-991h330zm21-306q1 73-50.5 122t-135.5 49h-2q-82 0-132-49t-50-122q0-74 51.5-122.5t134.5-48.5 133 48.5 51 122.5zm1166 729v568h-329v-530q0-105-40.5-164.5t-126.5-59.5q-63 0-105.5 34.5t-63.5 85.5q-11 30-11 81v553h-329q2-399 2-647t-1-296l-1-48h329v144h-2q20-32 41-56t56.5-52 87-43.5 114.5-15.5q171 0 275 113.5t104 332.5z"/>
         </svg>
     </div>
     
-    <div class="mail" title="Share this through Email" onclick="window.open('mailto:?&body=http:\/\/bazlur.com\/posts\/2018-02-16-java-thread-programmin\/');">
+    <div class="mail" title="Share this through Email" onclick="window.open('mailto:?&body=http:\/\/bazlur.com\/2021\/06\/java-thread-programming-lesson-2\/');">
         <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
             <path d="M1792 710v794q0 66-47 113t-113 47h-1472q-66 0-113-47t-47-113v-794q44 49 101 87 362 246 497 345 57 42 92.5 65.5t94.5 48 110 24.5h2q51 0 110-24.5t94.5-48 92.5-65.5q170-123 498-345 57-39 100-87zm0-294q0 79-49 151t-122 123q-376 261-468 325-10 7-42.5 30.5t-54 38-52 32.5-57.5 27-50 9h-2q-23 0-50-9t-57.5-27-52-32.5-54-38-42.5-30.5q-91-64-262-182.5t-205-142.5q-62-42-117-115.5t-55-136.5q0-78 41.5-130t118.5-52h1472q65 0 112.5 47t47.5 113z"/>
         </svg>
@@ -302,7 +425,7 @@ if (!doNotTrack) {
 <nav id="article-skip">
     <div class="next">
         
-        <a alt="Newer article" href="http://bazlur.com/posts/2018-02-16-java-programmin/">&larr; Newer</a>
+        <p>&nbsp;</p>
         
     </div>
     <div class="top">
@@ -310,7 +433,7 @@ if (!doNotTrack) {
     </div>
     <div class="prev">
         
-        <a alt="Older article" href="http://bazlur.com/posts/2018-01-29-%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%B6%E0%A7%8D%E0%A6%A8-checked-exception-%E0%A6%8F%E0%A6%AC%E0%A6%82-unchecked-exception-%E0%A6%8F%E0%A6%B0-%E0%A6%AE%E0%A6%A7%E0%A7%8D%E0%A6%AF%E0%A7%87-/">Older &rarr;</a>
+        <a alt="Older article" href="http://bazlur.com/2021/06/java-thread-programming-lesson-1/">Older &rarr;</a>
         
     </div>
 </nav>
@@ -375,9 +498,9 @@ if (!doNotTrack) {
 
 <script>
     var disqus_config = function () {
-        this.page.identifier = 'http:\/\/bazlur.com\/posts\/2018-02-16-java-thread-programmin\/';
-        this.page.title = 'জাভা থ্রেড প্রোগ্রামিং';
-        this.page.url = 'http:\/\/bazlur.com\/posts\/2018-02-16-java-thread-programmin\/';
+        this.page.identifier = 'http:\/\/bazlur.com\/2021\/06\/java-thread-programming-lesson-2\/';
+        this.page.title = 'Java Thread Programming: Lesson 2';
+        this.page.url = 'http:\/\/bazlur.com\/2021\/06\/java-thread-programming-lesson-2\/';
     };
 
     (function () { 

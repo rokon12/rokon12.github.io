@@ -7,7 +7,18 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright © 2021, A N M Bazlur Rahman</copyright>
-    <lastBuildDate>Sat, 26 Jun 2021 00:01:00 -0400</lastBuildDate><atom:link href="http://bazlur.com/tags/concurrency/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 26 Jun 2021 00:12:00 -0400</lastBuildDate><atom:link href="http://bazlur.com/tags/concurrency/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Java Thread Programming: Lesson 2</title>
+      <link>http://bazlur.com/2021/06/java-thread-programming-lesson-2/</link>
+      <pubDate>Sat, 26 Jun 2021 00:12:00 -0400</pubDate>
+      
+      <guid>http://bazlur.com/2021/06/java-thread-programming-lesson-2/</guid>
+      <description>Previous article : Java Thread Programming: Lesson 1
+Threads are easy and fun when we don’t have to share data. However, when multiple threads want to get hold of shared resources, things get a little messy.
+In our previous article, we have seen a server being handed a thread to deal with a client. Let’s say we want to count how many clients the server was able to serve successfully? How are we going to do that?</description>
+    </item>
+    
     <item>
       <title>Java Thread Programming: Lesson 1</title>
       <link>http://bazlur.com/2021/06/java-thread-programming-lesson-1/</link>
