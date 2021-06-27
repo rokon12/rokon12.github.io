@@ -149,7 +149,7 @@ if (!doNotTrack) {
 <main>
     <p>Previous article : <a href="https://bazlur.com/2021/06/java-thread-programming-lesson-1/">Java Thread Programming: Lesson 1</a></p>
 <p>Threads are easy and fun when we don’t have to share data. However, when multiple threads want to get hold of shared resources, things get a little messy.</p>
-<p>In our previous article, we have seen a server being handed a thread to deal with a client. Let’s say we want to count how many clients the server was able to serve successfully? How are we going to do that?
+<p>In our <a href="https://bazlur.com/2021/06/java-thread-programming-lesson-1/">previous article</a>, we have seen a server being handed a thread to deal with a client. Let’s say we want to count how many clients the server was able to serve successfully? How are we going to do that?
 One easy way is, we can have a counter variable and increment it whenever a job is done successfully.</p>
 <pre><code class="language-java">package com.bazlur.threads;
 
@@ -198,8 +198,10 @@ public class Playground {
   }
 }
 </code></pre>
-<p>So we have passed the counter reference to the handleClient() method, and it will increment it when the job is done and successful.</p>
-<p>However, this might cause some issues. For example, When multiple threads try to increment on a count variable, some can end up incrementing simultaneously. If this happens, one of the values will be written, and the other one would get lost, and we will end up with stale data. So let’s experiment with this hypothesis.</p>
+<p>So we have passed the counter reference to the <code>handleClient()</code> method, and it will increment it when the job is done and successful.</p>
+<p>However, this might cause some issues. For example, when multiple threads try to increment on a <code>count</code> variable, some can end up incrementing simultaneously.
+What happens is, when a thread tries to change a value, it first read it and then changes it. Let&rsquo;s assume at a point in time, thread <code>A</code> reads the value <code>32</code> and at the same time, another thread <code>B</code> reads the same value, which is <code>32</code>. Now both will try to increment it, and they both ended up incrementing it to 33. In reality, it should be 34.</p>
+<p>If this happens, one of the values will be written, and the other one would get lost, and we will end up with stale data. So let’s experiment with this hypothesis.</p>
 <pre><code class="language-java">package com.bazlur.threads;
 
 public class Playground {
@@ -228,19 +230,19 @@ public class Playground {
   }
 }
 </code></pre>
-<p>In the above code, we have created an instance of Counter and then create two threads.</p>
-<p>Each will run 1000 times and increment the Counter. So if both threads have done their job, we will have2000 as a value in the Counter.</p>
-<p>In java, we start our program in the main method, and the main method runs under a thread called the main thread. Here, we have created two other threads from the main thread, and they are going to run separately.</p>
-<p>When a thread finishes its work, it dies. Here the main method can even finish its work before the other thread ends its work. Let’s look at the main method; what it does is create two threads, then start, then invoke the getCount() method to get the count and print it. While the two threads are incrementing, the main thread can finish its work, and we will never get the final results. Therefore, the main thread has to wait for the other two threads to complete their work. To do that, we call the join() method of the reference of the thread.</p>
-<p>That why in the above code, we have used the following two lines-</p>
+<p>In the above code, we have created an instance of <code>Counter</code> and then create two threads.</p>
+<p>Each will run <code>1000</code> times and increment the Counter. So if both threads have done their job, we will have 2000 as a value in the <code>Counter</code>.</p>
+<p>In java, we start our program in the main method, and the main method runs under a thread called the <code>main</code> thread. Here, we have created two other threads from the main thread, and they are going to run separately.</p>
+<p>When a thread finishes it&rsquo;s work, it dies. Here, the main method can even finish its work before the other thread ends its work. Let’s look at the main method; it creates two threads, then starts those threads, finally invokes the <code>getCount()</code> method to get the count and print it. While the two threads are incrementing, if the main thread finishes its work, then we will never get the final count. Therefore, the main thread has to wait for the other two threads to complete their work. To do that, we call the join() method of the reference of the thread.</p>
+<p>That&rsquo;s why in the above code, we have used the following two lines-</p>
 <pre><code class="language-java">thread1.join();
 thread2.join();
 
 </code></pre>
-<p>Now the main thread will wait until the finishes and then prints the count value.</p>
+<p>Now the main thread will wait until these threads finish. Only after that, the main thread will print the count value.</p>
 <p>Now let’s run the above code. According to our calculation, the value should be <code>2000</code>.</p>
-<p>However, it doesn’t matter how many times you run it; it will barely be 2000. Every time it will print different results.</p>
-<p>Now you could be a little puzzled, but this is what it is supposed to be. The reason is, the two threads increment the Counter simultaneously, and it could happen that two threads increment the value at the same time. In such a case, one will win, and the other will be discarded, and we will end up with stale data. This is call contention. Whenever a shared variable is changed from multiple threads, this sort of situation happens.</p>
+<p>However, it doesn’t matter how many times you run it; it will hardly be <code>2000</code>. Every time it will print different results.</p>
+<p>You could be a little puzzled at this point, but this is what it is supposed to be. The reason is, the two threads increment the <code>Counter</code> simultaneously, and it could happen that two threads increment the value at the same time. In such a case, one will win, and the other will be discarded, and we will end up with stale data. This is call contention. Whenever a shared variable is changed from multiple threads, this sort of situation emerges.</p>
 <p>This is called a <strong>race condition</strong>.</p>
 <p>We can avoid this if we could only allow one thread at a point in time when we want to change a value. We can do this by adding a lock to it.</p>
 <p>Let’s change the counter class and add a look at its method -</p>
@@ -276,7 +278,7 @@ public class Counter {
   }
 }
 </code></pre>
-<p>Now, if we run our Playground.java, we will always get the current result.</p>
+<p>Now, if we run the <code>Playground.java</code>, we will always get the correct result.</p>
 <p>From this discussion, the conclusion that we can draw is, whenever data is shared into multiple threads, and they are changed, we have to put a locking; otherwise, they will produce stale data.</p>
 <p>In the <a href="https://bazlur.com/2021/06/lets-remove-the-boilerplate-code-with-execute-around-pattern/">previous article</a>, we have seen how we can improve our code using the execute-around pattern. We can use the same pattern in the Counter class and clean some boilerplate code.</p>
 <pre><code class="language-java">class ConcurrentCounter {
