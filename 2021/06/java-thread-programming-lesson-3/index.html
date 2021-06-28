@@ -22,8 +22,8 @@
     <meta property="fb:pages" content="556530934551556" />
 
     
-    <title>Act with Prudence - Bazlur&#39;s Stream of Thoughts</title>
-    <meta property="og:title" content="Act with Prudence - Bazlur&#39;s Stream of Thoughts">
+    <title>Java Thread Programming: Lesson 3 - Bazlur&#39;s Stream of Thoughts</title>
+    <meta property="og:title" content="Java Thread Programming: Lesson 3 - Bazlur&#39;s Stream of Thoughts">
     
 
     <meta name="twitter:card" content="summary">
@@ -34,10 +34,12 @@
 
     
     
-    <meta property="description" content="Whatever you undertake, act with prudence and consider the consequences
-[&amp;hellip;] Kevlin Henney এর একট বই আছে, নাম 97 Things Every Programmer Should Know. এই বইয়ের প্রথম চ্যাপ্টারের নাম – Act with &amp;hellip;">
-    <meta property="og:description" content="Whatever you undertake, act with prudence and consider the consequences
-[&amp;hellip;] Kevlin Henney এর একট বই আছে, নাম 97 Things Every Programmer Should Know. এই বইয়ের প্রথম চ্যাপ্টারের নাম – Act with &amp;hellip;">
+    <meta property="description" content="Photo by Wonderlane on Unsplash
+[&amp;hellip;] Previous articles :
+[&amp;hellip;] When we write a program, we test its correctness. If the program works according to our assumption, it builds our confidence. &amp;hellip;">
+    <meta property="og:description" content="Photo by Wonderlane on Unsplash
+[&amp;hellip;] Previous articles :
+[&amp;hellip;] When we write a program, we test its correctness. If the program works according to our assumption, it builds our confidence. &amp;hellip;">
     
     
 
@@ -131,11 +133,11 @@ if (!doNotTrack) {
 
 
 <div class="article-meta">
-    <h1><span class="title">Act with Prudence</span></h1>
+    <h1><span class="title">Java Thread Programming: Lesson 3</span></h1>
     
     <p class="post-date">Posted on
-        <time class="dt-published" datetime="2017-01-05T18:38:00Z">
-        5 January, 2017 at 18:38 &#43;0000
+        <time class="dt-published" datetime="2021-06-28T08:12:00-04:00">
+        28 June, 2021 at 08:12 EDT
         </time>  by <a href="/about-me/" class="p-author h-card"
                                        rel="author">A N M Bazlur Rahman</a>
     </p>
@@ -143,44 +145,100 @@ if (!doNotTrack) {
 </div>
 
 <p class="post-tag">
-    <div>Categories: &nbsp;&nbsp;<a class="post-tag tag-small" href="/categories/technical-debt" rel="tag"> technical debt </a> &nbsp; <a class="post-tag tag-small" href="/categories/%e0%a6%86%e0%a6%b0%e0%a7%8d%e0%a6%9f%e0%a6%bf%e0%a6%95%e0%a7%87%e0%a6%b2" rel="tag"> আর্টিকেল </a></div>
+    <div>Categories: &nbsp;&nbsp;<a class="post-tag tag-small" href="/categories/java" rel="tag"> java </a> &nbsp; <a class="post-tag tag-small" href="/categories/100daysofjava" rel="tag"> 100DaysOfJava </a> &nbsp; <a class="post-tag tag-small" href="/categories/thread-programming" rel="tag"> Thread Programming </a> &nbsp; <a class="post-tag tag-small" href="/categories/thread" rel="tag"> thread </a></div>
 </p>
 
 <main>
-    <blockquote>
-<p>Whatever you undertake, act with prudence and consider the consequences</p>
-</blockquote>
-<p><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FKevlin_Henney&amp;h=cAQHpjRqM&amp;s=1">Kevlin Henney</a> এর একট বই আছে, নাম <strong><em>97 Things Every Programmer Should Know</em></strong>. </p>
-<p>এই বইয়ের প্রথম চ্যাপ্টারের নাম – <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.amazon.com%2FThings-Every-Programmer-Should-Know%2Fdp%2F0596809484&amp;h=xAQGkqksG&amp;s=1">Act with prudence</a>.  তারপরেই উপরের লাইনটা আছে। </p>
-<p>Prudence শব্দের অর্থ দূরদর্শিতা বা বিচক্ষণতা। </p>
-<p>লাইনটার মানে দাড়ায় – বিচক্ষণতা সহিত কাজ কর। </p>
-<p>এবার মূল আলোচনায় চলে আসি। আলোচনার বিষয়বস্তু টেকনিক্যাল ডেব্ট(technical debt)</p>
-<p>এই জিনিস খায় না মাথায় দেয় তাই বলছি- </p>
-<p>লোন নেওয়ার স্বল্পকালিন কিছু সুবিধা আছে। আমার হয়তো কিছু টাকার দরকার পড়েছে, আমি ব্যাংক থেকে লোন নিয়ে সাময়িক প্রয়োজনটা মেটাতে পারি। যেকোনো লোনের দীর্ঘ মেয়াদী ফলাফল মোটেও ভালো নয় এই জিনিস সবাই জানে। যতই দিন যাবে চক্রবৃদ্ধি হারে সুদ বাড়তে থাকবে এবং কোনো একসময় আমি যে পরিমান লোন নিয়েছিলাম তার থেকে কয়েকগুণ (ক্ষেত্রবিশেষে ৪/৫ গুণ) বেশি টাকা পরিশোধ করতে হয়। </p>
-<p>তবে এই লোন যত তাড়াতাড়ি শোধ করা যায় ততই মঙ্গলজনক (এতে সুদের পরিমান কম থাকে)। মূল বিষয়টা হচ্ছে লোন নেওয়া সাময়িক সুবিধার মনে হলেও এটি মোটেও ভালো কোনো বিষয় নয়। </p>
-<p>টেকনিক্যাল ডেব্‌ট মূলত রুপক অর্থে ব্যবহৃত(metaphorical term) শব্দ। যেকোনো কাজের কিছু নিয়ম কানুন(discipline) থাকে। ধরুণ আপনি একটি ব্রিজ তৈরি করতে চান। কোনোরকম শৃঙ্খলা ছাড়া একটি ব্রিজ ইচ্ছমতো বানানো সম্ভব নয়। সিভিল ইঞ্জিনিয়াররা পুরো প্রক্রিয়ার পরিকল্পনা তৈরি করে, এই পরিকল্পনাতে প্রচুর হিসেব নিকেশ থাকে, কীভাবে কোন রিসোর্স কোথায় ব্যবহার করা হবে তা নির্দিষ্ট করা হয়। </p>
-<p>এখন মনে করুণ, আপনি একজন সিভিল ইঞ্জিনিয়ার। আপনার এলাকার একজন মন্ত্রী এসে বললো, এই এলাকার উন্নয়নের জন্যে এই নদীতে একটা ব্রিজ তৈরি করে দিতে চাই। ব্রিজটি খুব দ্রুত বানাতে হবে। ১ সপ্তাহের মধ্যেই বানাতে হবে কারণ আমি জনগণের কাছে ওয়াদা দিয়েছি। এখন আপনি নিশ্চয় খাওয়া দাওয়া বাদ দিয়ে ১ সপ্তাহে তাকে ব্রিজ বানিয়ে দেবেন না। কারণ আপনি ভালোভাবেই জানেন যে, এটি সম্ভব নয়। ব্রিজ তৈরি করার জন্যে প্রথমে জায়গা নির্বাচন করতে হবে। যেখানে ব্রিজ তৈরি করা হবে সেখানের মাটি পরীক্ষা করতে হবে। আরও নানারকম পরিকল্পনা করে তারপর কাজে নেমে যেতে হবে। এবং এই কাজের কোথাও ফাঁকি দেওয়া যাবে না। কারণ কোনোরকম হিসাবের গোলমাল হলে ব্রিজ ভেঙ্গে যেতে পারে ইত্যাদি (আমি সিভিল ইঞ্জিয়ার নয়, সুতরাং সব ডিটেইল জানি না)। </p>
-<p>একজন সফটওয়্যার ইঞ্জিনিয়ারিংয়েরও এমন একটি ডিসিপ্লিন রয়েছে। হুটহাট যা ইচ্ছেমতো এই কাজ করা যায় না। একজন ইঞ্জিনিয়ারের অনেকগুলো ডিজাইন ডিসিপ্লিন শিখতে হয়। নানা করম ডেটাস্ট্রাকচার, এলগরিদম এবং ডিজাইন প্যাটার্ন শিখতে হয়। এইগুলোর ভাল মন্দ আছে। অর্থাৎ একটি প্রক্রিয়া খুব ভালোভাবে করা যায় আবার একটু কম ভালোভাবেও করা যায়। ধরুন, আপনাকে একটা ১০ এর নামতা লেখার জন্যে একটি প্রোগ্রাম লিখতে বলা হলো। আপনি ১০ বার প্রিন্ট মেথড লিখে লিখে দিতে পারেন আবার একটা লুপের মধ্যে একটা প্রিন্ট মেথড ব্যবহার করেও লিখতে পারেন। প্রথম প্রক্রিয়াটি যদিও ১০ এর নামতা প্রিন্ট করবে কিন্তু সেটি আসলে মোটেও ভাল ডিজাইন নয়। এটি সাময়িকভাবে কাজ করলেও পরবর্তীতে ভেঙ্গে পরবে। </p>
-<p>আপনি যখন কোনো প্রোগ্রাম লিখেন বা সফটওয়্যার তৈরি করেন, তখন আপনার সবসময় ভালো ডিজাইনগুলো পছন্দ করার উপায় থাকে। এই সিন্ধান্তটি আপনি ডেভেলপার/প্রোগ্রামার হিসেবে নিবেন। তবে এই পছ্ন্দ যে সবসময় করা যায় তা নয়। কখনো কখনো কাস্টোমারকে খুশি করতে খু্ব দ্রুত একটা আউটপুট তৈরি করতে একটা বাঝে সিন্ধান্ত নিতে হয়। এই বাজে সিন্ধান্তের পেছনে একটি ভালো সিন্ধান্ত ছিল যা আপনি নেননি। একে টেকনিক্যাল ডেবট বলা হয়। </p>
-<p>এটি অনেকটা ব্যাংক থেকে লোন নেওয়ার মতো। সাময়িকভাবে সুবিধা দিলেও আপানাকে এর সুদ দিয়ে যেতে হবে যতক্ষণ পর্যন্ত আপনি পুরোপুরি মিটিয়ে না দেন। </p>
-<p>অনেকসময় একজন ডেভেলপার/প্রোগ্রামারকে এমন সিন্ধান্তের মুখোমুখি হতে হয় – </p>
-<ol>
-<li>doing it right. </li>
-<li>doing it quick </li>
-</ol>
-<p>কখনো কখনো আপানকে দ্বিতীয় সিন্ধান্তটি নিতে হয়। আপনি ধরে রাখেন যে, পরবর্তীতে এসে এটিকে আপনি ঠিক করবেন। কিন্তু বাস্তবতা আসলে এমনটা কখনো হয় না। আপনার কাছে প্রতিনিয়ত নতুন নতুন সমস্যা আসতেই থাকবে। আপনি পরে করবেন বলে যে কাজটি রেখে চলে গেলেন তা হয়তো কখনোই করা হয়ে উঠবে না। আর এদিকে আপনার ঋণ বেড়েই চলবে। এভাবে ঋণ বাড়তে বাড়ে কোনো সময় আপনরা পুরো প্রজেক্ট মুখ থুবড়ে পরতেই পার। এটি খুবই স্বাভাবিক। </p>
-<p>সুতরাং এই আলোচনার মূল বিষয় হচ্ছে, টেকনিক্যাল ডেব্‌ট যত কম রাখা যায় ততই ভালো। যদি কোনো কারণে আপনাকে দ্বিতীয় সিন্ধান্ত নিতে হয়, তাহলে আপনাকে দ্রুত সেই ঋণ শোধ করার ব্যবস্থা করতে হবে। পরবর্তী কাজের আগেই করে ফেলুন। সবচেয়ে ভালো হয় যদি কোন ঋণ না থাকে। </p>
-<p>কিন্তু আমরা জানি যে, বাস্তবে এমনটা সবসময় সম্ভব নয়। তাই সিন্ধান্ত নেওয়ার সময় চিন্তাভাবনা করে বিচক্ষণতার সাথে নেওয়া উচিৎ এবং এর পরিণতি (consequences) সম্পর্কে অবগত থাকা উচিৎ। </p>
-<p>কাজী নজরুল ইসলামের একটা কবিতার লাইন – </p>
+    <p><img src="/img/wonderlane-Wo1kOJhfW04-unsplash.jpg" alt="Photo">
+Photo by <a href="https://unsplash.com/@wonderlane?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Wonderlane</a> on <a href="https://unsplash.com/s/photos/visibility?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></p>
 <blockquote>
-<p>“দিনে দিনে বহু বাড়িয়াছে দেনা শুধিতে হইবে ঋণ”</p>
+<p><strong>Previous articles :</strong></p>
+<ol>
+<li><a href="https://bazlur.com/2021/06/java-thread-programming-lesson-1/">Java Thread Programming: Lesson 1</a></li>
+<li><a href="https://bazlur.com/2021/06/java-thread-programming-lesson-2/">Java Thread Programming: Lesson 2</a></li>
+</ol>
 </blockquote>
-<p>দেনা না বাড়ানোই উত্তম।</p>
+<p>When we write a program, we test its correctness. If the program works according to our assumption, it builds our confidence. If the same program runs in a multithread environment and produces the correct result, we call that piece of code thread-safe. Thread safety is critical; otherwise, we will end up having the wrong output, which is not desirable. In this article, we will discuss another problem towards ensuring thread safety.</p>
+<p>In the <a href="https://bazlur.com/2021/06/java-thread-programming-lesson-2/">previous article</a>, we have discussed race conditions. However, that is not the only problem we deal with when we work with java threads. Let us see an example-</p>
+<pre><code class="language-java">package com.bazlur;
+
+public class Day021 {
+	static boolean running = true;
+
+	public static void main(String[] args) {
+		var t1 = new Thread(() -&gt; {
+			while (running) {
+			}
+			System.out.println(&quot;from the other side&quot;);
+		});
+
+		var t2 = new Thread(() -&gt; {
+			running = false;
+			System.out.println(&quot;Hello&quot;);
+		});
+		t1.start();
+		t2.start();
+	}
+}
+</code></pre>
+<p>Look at the above code, it used two threads, and they share data, which is a Boolean, running.</p>
+<p>Note that the first thread has a while loop, and this loop will keep running until the running is true. After the loop, we have a print statement that prints a text. In the second thread, the first statement changes the running variable from true to false, and then it prints another text.</p>
+<p>If you look at the program, at first sight, we would think it will print the following –</p>
+<p>Hello
+From the other side.</p>
+<p>Nevertheless, in reality, it will not be the case. It will produce a different result in different machines, even in the same machine, if run repeatedly. Let me explain why-
+In a single-threaded environment, the execution order of the code remains the same as the way it is written. However, it does not remain the same in a multithreaded environment. It depends on the thread scheduler, the processor and the interaction between two threads.</p>
+<p>There are three possible output of this program-</p>
+<ol>
+<li>In the first thread, the while loop will keep running. Until then, the following line will not be executed. However, when the second thread starts, the first thing it does is, change the value of the running variable. It breaks the while loop of the first thread, and it prints the &ldquo;Hello.&rdquo; Meanwhile, the second thread prints the &ldquo;from the other side.&rdquo;</li>
+</ol>
+<pre><code>Hello
+from the other side
+</code></pre>
+<ol start="2">
+<li>The loop inside the first thread will keep running, and the second thread will change the value and print the text, &ldquo;from the other side,&rdquo; and then the loop of the first thread will break and print the &ldquo;Hello&rdquo;.</li>
+</ol>
+<pre><code>from the other side
+Hello      
+</code></pre>
+<ol start="3">
+<li>Most of us can imagine this far, but there is another possibility that is also trickiest. The first thread will keep running the loop forever, and although the second thread will change the value of running, making it false and print the text, the first thread will not see the changes. In such a case, the program&rsquo;s output will be only- &ldquo;from the other side.&rdquo;</li>
+</ol>
+<p>Now in which case it could happen that the first thread will not read the changes? Usually, we have multiple processors in our modern computer. Each processor has some caches along with them. They are called L1, L2, and L2 cache. The processor uses these caches to execute the program faster without going to the main memory each time. It might well happen that the two threads in the above program can run in two different processors, and each of them can cache the variable, running inside their L caches. If the second thread changes the value, the first thread will not see it because it keeps reading it from the caches. This is called a visibility problem. Although the value was updated, it was not visible to the other thread.</p>
+<p>Now the question is, how do we fix it?</p>
+<p>If we could prevent the thread from not reading from the caches, the fix is to read them constantly from the main memory. There is a keyword for that in java, which is volatile.</p>
+<p>The above code will fix if we add this keyword before running.</p>
+<pre><code class="language-java">package com.bazlur;
+
+public class Day021 {
+	static volatile boolean running = true;
+
+	public static void main(String[] args) {
+		var t1 = new Thread(() -&gt; {
+			while (running) {
+			}
+			System.out.println(&quot;from the other side&quot;);
+		});
+
+		var t2 = new Thread(() -&gt; {
+			running = false;
+			System.out.println(&quot;Hello&quot;);
+		});
+		t1.start();
+		t2.start();
+	}
+}
+
+</code></pre>
+<p>The above code will always produce the correct result.</p>
+<p>Reading from and writing to cache is always cheap compare to the main memory. Thus, we should only use a volatile variable when we need to enforce the visibility of variables.</p>
+<p>That is for today!
+Cheers.</p>
 
 </main>
 
 <p class="post-tag">
-    <div id="tags"></div>
+    <div id="tags"><a class="post-tag tag-small" href="/tags/java" rel="tag"> java </a> &nbsp; <a class="post-tag tag-small" href="/tags/coding" rel="tag"> coding </a> &nbsp; <a class="post-tag tag-small" href="/tags/100daysofjava" rel="tag"> 100DaysOfJava </a> &nbsp; <a class="post-tag tag-small" href="/tags/100daysofcode" rel="tag"> 100DaysOfCode </a> &nbsp; <a class="post-tag tag-small" href="/tags/thread" rel="tag"> Thread </a> &nbsp; <a class="post-tag tag-small" href="/tags/concurrency" rel="tag"> Concurrency </a> &nbsp; <a class="post-tag tag-small" href="/tags/java-thread-programming" rel="tag"> java thread programming </a> &nbsp; <a class="post-tag tag-small" href="/tags/data-race" rel="tag"> data race </a></div>
 </p>
 
 
@@ -280,25 +338,25 @@ if (!doNotTrack) {
 <span style="color: silver;">Share on: </span>
 <div id="share-buttons">
     <div class="facebook" title="Share this on Facebook"
-         onclick="window.open('http://www.facebook.com/share.php?u=http:\/\/bazlur.com\/posts\/2017-01-05-act-with-prudenc\/');">
+         onclick="window.open('http://www.facebook.com/share.php?u=http:\/\/bazlur.com\/2021\/06\/java-thread-programming-lesson-3\/');">
         <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
             <path d="M1343 12v264h-157q-86 0-116 36t-30 108v189h293l-39 296h-254v759h-306v-759h-255v-296h255v-218q0-186 104-288.5t277-102.5q147 0 228 12z"/>
         </svg>
     </div>
     <div class="twitter" title="Share this on Twitter"
-         onclick="window.open('http://twitter.com/intent/tweet?text=Act with Prudence&url=http:\/\/bazlur.com\/posts\/2017-01-05-act-with-prudenc\/');">
+         onclick="window.open('http://twitter.com/intent/tweet?text=Java Thread Programming: Lesson 3&url=http:\/\/bazlur.com\/2021\/06\/java-thread-programming-lesson-3\/');">
         <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
             <path d="M1684 408q-67 98-162 167 1 14 1 42 0 130-38 259.5t-115.5 248.5-184.5 210.5-258 146-323 54.5q-271 0-496-145 35 4 78 4 225 0 401-138-105-2-188-64.5t-114-159.5q33 5 61 5 43 0 85-11-112-23-185.5-111.5t-73.5-205.5v-4q68 38 146 41-66-44-105-115t-39-154q0-88 44-163 121 149 294.5 238.5t371.5 99.5q-8-38-8-74 0-134 94.5-228.5t228.5-94.5q140 0 236 102 109-21 205-78-37 115-142 178 93-10 186-50z"/>
         </svg>
     </div>
     <div class="linkedin" title="Share this on Linkedin"
-         onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&url=http:\/\/bazlur.com\/posts\/2017-01-05-act-with-prudenc\/&title=&summary=&source=');">
+         onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&url=http:\/\/bazlur.com\/2021\/06\/java-thread-programming-lesson-3\/&title=&summary=&source=');">
         <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
             <path d="M477 625v991h-330v-991h330zm21-306q1 73-50.5 122t-135.5 49h-2q-82 0-132-49t-50-122q0-74 51.5-122.5t134.5-48.5 133 48.5 51 122.5zm1166 729v568h-329v-530q0-105-40.5-164.5t-126.5-59.5q-63 0-105.5 34.5t-63.5 85.5q-11 30-11 81v553h-329q2-399 2-647t-1-296l-1-48h329v144h-2q20-32 41-56t56.5-52 87-43.5 114.5-15.5q171 0 275 113.5t104 332.5z"/>
         </svg>
     </div>
     
-    <div class="mail" title="Share this through Email" onclick="window.open('mailto:?&body=http:\/\/bazlur.com\/posts\/2017-01-05-act-with-prudenc\/');">
+    <div class="mail" title="Share this through Email" onclick="window.open('mailto:?&body=http:\/\/bazlur.com\/2021\/06\/java-thread-programming-lesson-3\/');">
         <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
             <path d="M1792 710v794q0 66-47 113t-113 47h-1472q-66 0-113-47t-47-113v-794q44 49 101 87 362 246 497 345 57 42 92.5 65.5t94.5 48 110 24.5h2q51 0 110-24.5t94.5-48 92.5-65.5q170-123 498-345 57-39 100-87zm0-294q0 79-49 151t-122 123q-376 261-468 325-10 7-42.5 30.5t-54 38-52 32.5-57.5 27-50 9h-2q-23 0-50-9t-57.5-27-52-32.5-54-38-42.5-30.5q-91-64-262-182.5t-205-142.5q-62-42-117-115.5t-55-136.5q0-78 41.5-130t118.5-52h1472q65 0 112.5 47t47.5 113z"/>
         </svg>
@@ -309,7 +367,7 @@ if (!doNotTrack) {
 <nav id="article-skip">
     <div class="next">
         
-        <a alt="Newer article" href="http://bazlur.com/posts/2017-01-08-agile-and-scru/">&larr; Newer</a>
+        <p>&nbsp;</p>
         
     </div>
     <div class="top">
@@ -317,7 +375,7 @@ if (!doNotTrack) {
     </div>
     <div class="prev">
         
-        <a alt="Older article" href="http://bazlur.com/2016/12/we-dont-need-stringbuilder-for-simple-concatenation/">Older &rarr;</a>
+        <a alt="Older article" href="http://bazlur.com/2021/06/java-thread-programming-lesson-2/">Older &rarr;</a>
         
     </div>
 </nav>
@@ -382,9 +440,9 @@ if (!doNotTrack) {
 
 <script>
     var disqus_config = function () {
-        this.page.identifier = 'http:\/\/bazlur.com\/posts\/2017-01-05-act-with-prudenc\/';
-        this.page.title = 'Act with Prudence';
-        this.page.url = 'http:\/\/bazlur.com\/posts\/2017-01-05-act-with-prudenc\/';
+        this.page.identifier = 'http:\/\/bazlur.com\/2021\/06\/java-thread-programming-lesson-3\/';
+        this.page.title = 'Java Thread Programming: Lesson 3';
+        this.page.url = 'http:\/\/bazlur.com\/2021\/06\/java-thread-programming-lesson-3\/';
     };
 
     (function () { 
