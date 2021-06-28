@@ -16,7 +16,7 @@
       <guid>http://bazlur.com/2021/06/java-thread-programming-lesson-3/</guid>
       <description>Photo by Wonderlane on Unsplash
  Previous articles :
- Java Thread Programming: Lesson 1 Java Thread Programming: Lesson 2   When we write a program, we test its correctness. If the program works according to our assumption, it builds our confidence. If the same program runs in a multithread environment and produces the correct result, we call that piece of code thread-safe. Thread safety is critical; otherwise, we will end up having the wrong output, which is not desirable.</description>
+ Java Thread Programming: Lesson 1 Java Thread Programming: Lesson 2   When we write a program, we test its correctness. If the program works according to our expectations, it builds confidence. If the same program runs in a multithread environment and produces the correct result, we call that piece of code thread-safe. Thread safety is critical; otherwise, we will end up having the wrong output, which is not desirable.</description>
     </item>
     
     <item>

@@ -36,10 +36,10 @@
     
     <meta property="description" content="Photo by Wonderlane on Unsplash
 [&amp;hellip;] Previous articles :
-[&amp;hellip;] When we write a program, we test its correctness. If the program works according to our assumption, it builds our confidence. &amp;hellip;">
+[&amp;hellip;] When we write a program, we test its correctness. If the program works according to our expectations, it builds confidence. If &amp;hellip;">
     <meta property="og:description" content="Photo by Wonderlane on Unsplash
 [&amp;hellip;] Previous articles :
-[&amp;hellip;] When we write a program, we test its correctness. If the program works according to our assumption, it builds our confidence. &amp;hellip;">
+[&amp;hellip;] When we write a program, we test its correctness. If the program works according to our expectations, it builds confidence. If &amp;hellip;">
     
     
 
@@ -158,8 +158,8 @@ Photo by <a href="https://unsplash.com/@wonderlane?utm_source=unsplash&amp;utm_m
 <li><a href="https://bazlur.com/2021/06/java-thread-programming-lesson-2/">Java Thread Programming: Lesson 2</a></li>
 </ol>
 </blockquote>
-<p>When we write a program, we test its correctness. If the program works according to our assumption, it builds our confidence. If the same program runs in a multithread environment and produces the correct result, we call that piece of code thread-safe. Thread safety is critical; otherwise, we will end up having the wrong output, which is not desirable. In this article, we will discuss another problem towards ensuring thread safety.</p>
-<p>In the <a href="https://bazlur.com/2021/06/java-thread-programming-lesson-2/">previous article</a>, we have discussed race conditions. However, that is not the only problem we deal with when we work with java threads. Let us see an example-</p>
+<p>When we write a program, we test its correctness. If the program works according to our expectations, it builds confidence. If the same program runs in a multithread environment and produces the correct result, we call that piece of code thread-safe. Thread safety is critical; otherwise, we will end up having the wrong output, which is not desirable. In this article, we will discuss another problem towards ensuring thread safety.</p>
+<p>In the <a href="https://bazlur.com/2021/06/java-thread-programming-lesson-2/">previous article</a>, we have discussed <code>race condition</code>. However, that is not the only problem we deal with when we work with java threads. Let us see an example-</p>
 <pre><code class="language-java">package com.bazlur;
 
 public class Day021 {
@@ -182,15 +182,16 @@ public class Day021 {
 }
 </code></pre>
 <p>Look at the above code, it used two threads, and they share data, which is a Boolean, running.</p>
-<p>Note that the first thread has a while loop, and this loop will keep running until the running is true. After the loop, we have a print statement that prints a text. In the second thread, the first statement changes the running variable from true to false, and then it prints another text.</p>
+<p>Note that the first thread has a while loop, and this loop will keep running until the variable <code>running</code> is true. After the loop, we have a print statement that prints a text. In the second thread, the first statement changes the <code>running</code> variable from true to false, and then it prints another text.</p>
 <p>If you look at the program, at first sight, we would think it will print the following –</p>
-<p>Hello
-From the other side.</p>
-<p>Nevertheless, in reality, it will not be the case. It will produce a different result in different machines, even in the same machine, if run repeatedly. Let me explain why-
-In a single-threaded environment, the execution order of the code remains the same as the way it is written. However, it does not remain the same in a multithreaded environment. It depends on the thread scheduler, the processor and the interaction between two threads.</p>
-<p>There are three possible output of this program-</p>
+<pre><code>Hello
+from the other side.
+</code></pre>
+<p>Nevertheless, in reality, it will not be the only case. It will produce a different result in different machines, even in the same machine, if we run repeatedly. Let me explain why-</p>
+<p>In a single-threaded environment, the execution order of the code remains the same as the way it is written. However, it does not remain the same in a multithreaded environment. It depends on the thread scheduler, the processor and the interaction between two threads.</p>
+<p>There are three possible outputs of this program-</p>
 <ol>
-<li>In the first thread, the while loop will keep running. Until then, the following line will not be executed. However, when the second thread starts, the first thing it does is, change the value of the running variable. It breaks the while loop of the first thread, and it prints the &ldquo;Hello.&rdquo; Meanwhile, the second thread prints the &ldquo;from the other side.&rdquo;</li>
+<li>In the first thread, the while loop will keep running. Until then, the following line will not be executed. However, when the second thread starts, the first thing it does is, change the value of the <code>running</code> variable. It breaks the while loop of the first thread, thus, it prints the &ldquo;Hello.&rdquo; Meanwhile, the second thread prints the &ldquo;from the other side.&rdquo;</li>
 </ol>
 <pre><code>Hello
 from the other side
@@ -204,9 +205,11 @@ Hello
 <ol start="3">
 <li>Most of us can imagine this far, but there is another possibility that is also trickiest. The first thread will keep running the loop forever, and although the second thread will change the value of running, making it false and print the text, the first thread will not see the changes. In such a case, the program&rsquo;s output will be only- &ldquo;from the other side.&rdquo;</li>
 </ol>
-<p>Now in which case it could happen that the first thread will not read the changes? Usually, we have multiple processors in our modern computer. Each processor has some caches along with them. They are called L1, L2, and L2 cache. The processor uses these caches to execute the program faster without going to the main memory each time. It might well happen that the two threads in the above program can run in two different processors, and each of them can cache the variable, running inside their L caches. If the second thread changes the value, the first thread will not see it because it keeps reading it from the caches. This is called a visibility problem. Although the value was updated, it was not visible to the other thread.</p>
+<p>Now in which case it could happen that the first thread will not read the changes? Usually, we have multiple processors in our modern computer. Each processor has some caches along with them. They are called L1, L2, and L2 cache. The processor uses these caches to execute the program faster without going to the main memory each time. It might well happen that the two threads in the above program can run in two different processors, and each of them can cache the variable, running inside their L caches. If the second thread changes the value, the first thread will not see it because it keeps reading it from the caches. This is called a visibility problem. Although the value was updated, it was not visible to the other thread.
+This often called <code>data race</code>.</p>
+<p><img src="/img/Cache.png" alt="L Caches" title="How CPU Caches work"></p>
 <p>Now the question is, how do we fix it?</p>
-<p>If we could prevent the thread from not reading from the caches, the fix is to read them constantly from the main memory. There is a keyword for that in java, which is volatile.</p>
+<p>If we could prevent the thread from not reading from the caches, the fix is to read them constantly from the main memory. There is a keyword for that in java, which is <code>volatile</code>.</p>
 <p>The above code will fix if we add this keyword before running.</p>
 <pre><code class="language-java">package com.bazlur;
 
