@@ -7,7 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright © 2021, A N M Bazlur Rahman</copyright>
-    <lastBuildDate>Mon, 28 Jun 2021 08:12:00 -0400</lastBuildDate><atom:link href="http://bazlur.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 30 Jun 2021 01:12:00 -0400</lastBuildDate><atom:link href="http://bazlur.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Java Thread Programming: Lesson 4</title>
+      <link>http://bazlur.com/2021/06/java-thread-programming-lesson-4/</link>
+      <pubDate>Wed, 30 Jun 2021 01:12:00 -0400</pubDate>
+      
+      <guid>http://bazlur.com/2021/06/java-thread-programming-lesson-4/</guid>
+      <description>Photo by Yagnik Sankhedawala on Unsplash
+ Previous articles :
+ Java Thread Programming: Lesson 1 Java Thread Programming: Lesson 2 Java Thread Programming: Lesson 3   In our previous article, I have discussed race conditions. A race condition happens in a critical section. In this article, I will discuss this critical section and why it happens when it happens.
+Let&amp;rsquo;s begin.
+We got some ideas from the previous articles a data can be shared among multiple threads.</description>
+    </item>
+    
     <item>
       <title>Java Thread Programming: Lesson 3</title>
       <link>http://bazlur.com/2021/06/java-thread-programming-lesson-3/</link>

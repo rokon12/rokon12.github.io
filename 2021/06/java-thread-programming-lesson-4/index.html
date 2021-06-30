@@ -1,0 +1,1592 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="fb:pages" content="556530934551556" />
+
+    
+    <title>Java Thread Programming: Lesson 4 - Bazlur&#39;s Stream of Thoughts</title>
+    <meta property="og:title" content="Java Thread Programming: Lesson 4 - Bazlur&#39;s Stream of Thoughts">
+    
+
+    <meta name="twitter:card" content="summary">
+
+    
+    
+    
+
+    
+    
+    <meta property="description" content="Photo by Yagnik Sankhedawala on Unsplash
+[&amp;hellip;] Previous articles :
+[&amp;hellip;] In our previous article, I have discussed race conditions. A race condition happens in a critical section. In this &amp;hellip;">
+    <meta property="og:description" content="Photo by Yagnik Sankhedawala on Unsplash
+[&amp;hellip;] Previous articles :
+[&amp;hellip;] In our previous article, I have discussed race conditions. A race condition happens in a critical section. In this &amp;hellip;">
+    
+    
+
+    
+    
+
+    
+
+    
+
+    <script src="/js/prism.js"></script>
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/icofont.min.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="stylesheet" href="/css/prism.css" />
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <link rel="stylesheet"
+          href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/languages/java.min.js"
+            integrity="sha512-xEnylOTeZvxUCvtK9Lw3FjOgfCwsMEhUbx6Hant1lPgy+PcynqCm8XfqhpRos6XNaTxeMuT4QyrWyo3U1NijHg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+    
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-180587445-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+  </head>
+
+  <body class="line-numbers">
+  <div id="head">
+    <div class="container">
+      <header class="masthead clearfix">
+        <a href="/"></a>
+        <div class="site-info">
+            <h1 class="site-name"><a href="/"> Bazlur&#39;s Stream of Thoughts</a>
+                <span style="float: right; width:20%; ">
+                    <a href="https://www.codementor.io/@bazlur_rahman?refer=badge" target="_blank"><img
+                    src="https://www.codementor.io/m-badges/bazlur_rahman/find-me-on-cm-b.svg"
+                    alt="Codementor badge"></a></span></h1>
+          <p class="site-description">This blog is meant to be a vehicle for airing my interest, feelings, thoughts, and opinion. 
+          </p>
+        </div>
+      </header>
+    </div>
+  </div>
+  <div id="header-menu" class="container">
+    <div class="menu">
+      <ul style="margin: 0">
+        
+        <li> <a href="/"><i class='fas fa-home'></i> Home</a></li>
+        
+        <li> <a href="/archives"><i class='fas fa-file-archive'></i> Archives</a></li>
+        
+        <li> <a href="/books/"><i class='fas fa-book'></i> My Books</a></li>
+        
+        <li> <a href="/categories/"><i class='fas fa-list-alt'></i> Categories</a></li>
+        
+        <li> <a href="/resume/"><i class='fas fa-file'></i> Resume</a></li>
+        
+        <li> <a href="/index.xml"><i class='fas fa-rss'></i> Subscribe</a></li>
+        
+      </ul>
+    </div>
+  </div>
+  <hr/>
+  <br/>
+
+
+
+
+
+
+
+<div class="article-meta">
+    <h1><span class="title">Java Thread Programming: Lesson 4</span></h1>
+    
+    <p class="post-date">Posted on
+        <time class="dt-published" datetime="2021-06-30T01:12:00-04:00">
+        30 June, 2021 at 01:12 EDT
+        </time>  by <a href="/about-me/" class="p-author h-card"
+                                       rel="author">A N M Bazlur Rahman</a>
+    </p>
+    
+</div>
+
+<p class="post-tag">
+    <div>Categories: &nbsp;&nbsp;<a class="post-tag tag-small" href="/categories/java" rel="tag"> java </a> &nbsp; <a class="post-tag tag-small" href="/categories/100daysofjava" rel="tag"> 100DaysOfJava </a> &nbsp; <a class="post-tag tag-small" href="/categories/thread-programming" rel="tag"> Thread Programming </a> &nbsp; <a class="post-tag tag-small" href="/categories/thread" rel="tag"> thread </a></div>
+</p>
+
+<main>
+    <p><img src="/img/yagnik-sankhedawala-9Trha5ptc-c-unsplash.jpg" alt="Photo">
+Photo by <a href="https://unsplash.com/@yagniksankhedawala?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Yagnik Sankhedawala</a> on <a href="https://unsplash.com/s/photos/chess?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></p>
+<blockquote>
+<p><strong>Previous articles :</strong></p>
+<ol>
+<li><a href="https://bazlur.com/2021/06/java-thread-programming-lesson-1/">Java Thread Programming: Lesson 1</a></li>
+<li><a href="https://bazlur.com/2021/06/java-thread-programming-lesson-2/">Java Thread Programming: Lesson 2</a></li>
+<li><a href="https://bazlur.com/2021/06/java-thread-programming-lesson-3/">Java Thread Programming: Lesson 3</a></li>
+</ol>
+</blockquote>
+<p>In our previous article, I have discussed race conditions. A race condition happens in a critical section.  In this article, I will discuss this critical section and why it happens when it happens.</p>
+<p>Let&rsquo;s begin.</p>
+<p>We got some ideas from the previous articles a data can be shared among multiple threads. Multiple threads can read a shared data, and it has no consequences. When one of these threads tries to change/write to the shared data, the problem comes to the picture. An example would be the best approach to explain this-</p>
+<pre><code class="language-java">package com.bazlur;
+
+public class Day022 {
+	public static void main(String[] args) throws InterruptedException {
+		var account = new BankAccount(0);
+
+		Runnable runnable = () -&gt; {
+			for (int i = 0; i &lt; 1000; i++) {
+				account.deposit(100);
+				account.withdraw(100);
+			}
+		};
+
+		var t1 = new Thread(runnable);
+		var t2 = new Thread(runnable);
+
+		t1.start();
+		t2.start();
+
+		t1.join();
+		t2.join();
+
+		System.out.println(&quot;Available balance: &quot; + account.getBalance());
+	}
+}
+
+final class BankAccount {
+	private long initialAmount;
+
+	BankAccount(long initialAmount) {
+		this.initialAmount = initialAmount;
+	}
+
+	public void withdraw(long amount) {
+		deposit(-amount);
+	}
+
+	public void deposit(long amount) {
+		initialAmount = initialAmount + amount;
+	}
+
+	public long getBalance() {
+		return initialAmount;
+	}
+}
+</code></pre>
+<p>In the above code, we have simulated a bank account. We have created two threads, and both of their deposit and withdraw 100 thousand times. According to our calculation, the initial balance was 0, which means it should zero in the end. I run the above code; that&rsquo;s not what we would see. Each time it will print a different result. That&rsquo;s means something wrong here.</p>
+<p>Is it a visibility problem? What if both threads run in two different processors and update their value in the cache? If we add a volatile keyboard and would that solve the issue?
+We can try adding a volatile keyword, but it won&rsquo;t solve the problem because this isn&rsquo;t a visibility issue, something else. Let&rsquo;s discuss that.</p>
+<p>We know in a multi-threaded environment, the execution order of code isn&rsquo;t predictable. While the first thread is depositing the money, the second thread might well withdraw the amount. While both threads contest to write the value to the same variable, one might get discarded, and the other can win. If one of these operations are missed, then we will have incorrect data. That&rsquo;s a problem.</p>
+<p>In fact, in our code, that&rsquo;s precisely what is happening.</p>
+<p>How do we resolve it?</p>
+<p>Well, we have to make the writing operation atomic. Changing the variable has to be done in a way so that only one thread can do it at a time. That way, we can prevent this inconsistency. This is called the critical section.  We have to guard this critical section.</p>
+<p>We have to use a mutual exclusion so that no other thread can go into that section if a thread reaches into the critical section and make the changes. Once a get away from the critical section, only then will the other get a chance.</p>
+<p>This mutual execution is done by a keyword called <code>synchronized</code>. This keyword instructs java to create a lock. When a thread reaches the critical section, and it tries to acquire the lock. If it can acquire the lock, it does the operation, and once done, it releases the lock. Meanwhile, the other threads try to acquire the lock and wait until it is released.</p>
+<p>When only one thread is allowed to perform an operation, then the operation is called atomic. There are multiple ways to achieve this atomicity. The easiest one is, declaring the method synchronized. Example –</p>
+<pre><code class="language-java">class BankAccount {
+  private long initialAmount;
+
+  BankAccount(long initialAmount) {
+    this.initialAmount = initialAmount;
+  }
+
+  public synchronized void withdraw(long amount) {
+    deposit(-amount);
+  }
+
+  public synchronized void deposit(long amount) {
+    initialAmount = initialAmount + amount;
+  }
+
+  public synchronized long getBalance() {
+    return initialAmount;
+  }
+}
+</code></pre>
+<p>When we use mutual exclusion with synchronized keyword or lock, it also ensures visibility. So we don&rsquo;t need to use volatile here.
+We can even create our own lock object. For example-</p>
+<pre><code class="language-java">final class BankAccount {
+  private final Object lock = new Object();
+  private volatile long initialAmount;
+
+  BankAccount(long initialAmount) {
+    this.initialAmount = initialAmount;
+  }
+
+  public void withdraw(long amount) {
+    synchronized (lock) {
+      deposit(-amount);
+    }
+  }
+
+  public void deposit(long amount) {
+    synchronized (lock) {
+      initialAmount = initialAmount + amount;
+    }
+  }
+
+  public long getBalance() {
+    synchronized (lock){
+      return initialAmount;
+    }
+  }
+}
+</code></pre>
+<p>The above code does the same thing; only it doesn&rsquo;t have the synchronized keyword in the method signature.
+When we use synchronized keyword in the method signature, it is effectively synchronizing to the object itself. With the synchronized block, we can have multiple lock objects inside a class. For example, a class may have multiple critical sections, and they may not be related to each other. We can certainly allow multiple threads to use this class that deal with different critical sections. In such a scenario, multiple locks would make sense.</p>
+<p>However, in modern java, we have great APIs with many other functionalities and flexibility in how we lock. These modern concurrency APIs don&rsquo;t use the <code>synchronized</code> keyword at all.  The lock can be conditional, and based on the situation, we can lock and unlock. But that&rsquo;s something we will discuss some other day. Let&rsquo;s just implement the <code>BankAccount</code> class with the Lock API.</p>
+<pre><code class="language-java">class BankAccount {
+  private long initialAmount;
+  private final Lock lock = new ReentrantLock();
+
+  BankAccount(long initialAmount) {
+    this.initialAmount = initialAmount;
+  }
+
+  public void withdraw(long amount) {
+    lock.lock();
+    try {
+      deposit(-amount);
+    } finally {
+      lock.unlock();
+    }
+  }
+
+  public void deposit(long amount) {
+    lock.lock();
+    try {
+      initialAmount = initialAmount + amount;
+    } finally {
+      lock.unlock();
+    }
+  }
+
+  public long getBalance() {
+    lock.lock();
+    try {
+      return initialAmount;
+    } finally {
+      lock.unlock();
+    }
+  }
+}
+
+</code></pre>
+<p>Or we can use the <code>LockHelper</code> from the <a href="https://bazlur.com/2021/06/lets-remove-the-boilerplate-code-with-execute-around-pattern/">previous article</a>.</p>
+<pre><code class="language-java">class BankAccount {
+	private final Lock lock = new ReentrantLock();
+	private volatile long initialAmount;
+
+	BankAccount(long initialAmount) {
+		this.initialAmount = initialAmount;
+	}
+
+	public void withdraw(long amount) {
+		LockHelper.withLock(lock, () -&gt; deposit(-amount));
+	}
+
+	public void deposit(long amount) {
+		LockHelper.withLock(lock, () -&gt; initialAmount = initialAmount + amount);
+	}
+
+	public long getBalance() {
+		return LockHelper.withLock(lock, () -&gt; initialAmount);
+	}
+}
+</code></pre>
+<p>That&rsquo;s for today.<br>
+Cheers!!</p>
+
+</main>
+
+<p class="post-tag">
+    <div id="tags"><a class="post-tag tag-small" href="/tags/java" rel="tag"> java </a> &nbsp; <a class="post-tag tag-small" href="/tags/coding" rel="tag"> coding </a> &nbsp; <a class="post-tag tag-small" href="/tags/100daysofjava" rel="tag"> 100DaysOfJava </a> &nbsp; <a class="post-tag tag-small" href="/tags/100daysofcode" rel="tag"> 100DaysOfCode </a> &nbsp; <a class="post-tag tag-small" href="/tags/thread" rel="tag"> Thread </a> &nbsp; <a class="post-tag tag-small" href="/tags/concurrency" rel="tag"> Concurrency </a> &nbsp; <a class="post-tag tag-small" href="/tags/java-thread-programming" rel="tag"> java thread programming </a> &nbsp; <a class="post-tag tag-small" href="/tags/data-race" rel="tag"> data race </a> &nbsp; <a class="post-tag tag-small" href="/tags/critical-section" rel="tag"> critical section </a></div>
+</p>
+
+
+
+<style>
+    #share-buttons {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    #share-buttons:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+    #share-buttons > div {
+        position: relative;
+        text-align: left;
+        height: 36px;
+        width: 32px;
+        float: left;
+        text-align: center;
+    }
+
+    #share-buttons > div > svg {
+        height: 16px;
+        fill: #d5d5d5;
+        margin-top: 10px;
+    }
+
+    #share-buttons > div:hover {
+        cursor: pointer;
+    }
+
+    #share-buttons > div.facebook:hover > svg {
+        fill: #3B5998;
+    }
+
+    #share-buttons > div.twitter:hover > svg {
+        fill: #55ACEE;
+    }
+
+    #share-buttons > div.linkedin:hover > svg {
+        fill: #0077b5;
+    }
+
+    #share-buttons > div.pinterest:hover > svg {
+        fill: #CB2027;
+    }
+
+    #share-buttons > div.gplus:hover > svg {
+        fill: #dd4b39;
+    }
+
+    #share-buttons > div.mail:hover > svg {
+        fill: #7D7D7D;
+    }
+
+    #share-buttons > div.instagram:hover > svg {
+        fill: #C73B92;
+    }
+
+    #share-buttons > div.facebook > svg {
+        height: 18px;
+        margin-top: 9px;
+    }
+
+    #share-buttons > div.twitter > svg {
+        height: 20px;
+        margin-top: 8px;
+    }
+
+    #share-buttons > div.linkedin > svg {
+        height: 19px;
+        margin-top: 7px;
+    }
+
+    #share-buttons > div.pinterest > svg {
+        height: 20px;
+        margin-top: 9px;
+    }
+
+    #share-buttons > div.gplus > svg {
+        height: 17px;
+        margin-top: 9px;
+        position: relative;
+        left: 1px;
+    }
+
+    #share-buttons > div.mail > svg {
+        height: 14px;
+        margin-top: 11px;
+    }
+</style>
+
+<span style="color: silver;">Share on: </span>
+<div id="share-buttons">
+    <div class="facebook" title="Share this on Facebook"
+         onclick="window.open('http://www.facebook.com/share.php?u=http:\/\/bazlur.com\/2021\/06\/java-thread-programming-lesson-4\/');">
+        <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1343 12v264h-157q-86 0-116 36t-30 108v189h293l-39 296h-254v759h-306v-759h-255v-296h255v-218q0-186 104-288.5t277-102.5q147 0 228 12z"/>
+        </svg>
+    </div>
+    <div class="twitter" title="Share this on Twitter"
+         onclick="window.open('http://twitter.com/intent/tweet?text=Java Thread Programming: Lesson 4&url=http:\/\/bazlur.com\/2021\/06\/java-thread-programming-lesson-4\/');">
+        <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1684 408q-67 98-162 167 1 14 1 42 0 130-38 259.5t-115.5 248.5-184.5 210.5-258 146-323 54.5q-271 0-496-145 35 4 78 4 225 0 401-138-105-2-188-64.5t-114-159.5q33 5 61 5 43 0 85-11-112-23-185.5-111.5t-73.5-205.5v-4q68 38 146 41-66-44-105-115t-39-154q0-88 44-163 121 149 294.5 238.5t371.5 99.5q-8-38-8-74 0-134 94.5-228.5t228.5-94.5q140 0 236 102 109-21 205-78-37 115-142 178 93-10 186-50z"/>
+        </svg>
+    </div>
+    <div class="linkedin" title="Share this on Linkedin"
+         onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&url=http:\/\/bazlur.com\/2021\/06\/java-thread-programming-lesson-4\/&title=&summary=&source=');">
+        <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+            <path d="M477 625v991h-330v-991h330zm21-306q1 73-50.5 122t-135.5 49h-2q-82 0-132-49t-50-122q0-74 51.5-122.5t134.5-48.5 133 48.5 51 122.5zm1166 729v568h-329v-530q0-105-40.5-164.5t-126.5-59.5q-63 0-105.5 34.5t-63.5 85.5q-11 30-11 81v553h-329q2-399 2-647t-1-296l-1-48h329v144h-2q20-32 41-56t56.5-52 87-43.5 114.5-15.5q171 0 275 113.5t104 332.5z"/>
+        </svg>
+    </div>
+    
+    <div class="mail" title="Share this through Email" onclick="window.open('mailto:?&body=http:\/\/bazlur.com\/2021\/06\/java-thread-programming-lesson-4\/');">
+        <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1792 710v794q0 66-47 113t-113 47h-1472q-66 0-113-47t-47-113v-794q44 49 101 87 362 246 497 345 57 42 92.5 65.5t94.5 48 110 24.5h2q51 0 110-24.5t94.5-48 92.5-65.5q170-123 498-345 57-39 100-87zm0-294q0 79-49 151t-122 123q-376 261-468 325-10 7-42.5 30.5t-54 38-52 32.5-57.5 27-50 9h-2q-23 0-50-9t-57.5-27-52-32.5-54-38-42.5-30.5q-91-64-262-182.5t-205-142.5q-62-42-117-115.5t-55-136.5q0-78 41.5-130t118.5-52h1472q65 0 112.5 47t47.5 113z"/>
+        </svg>
+    </div>
+</div>
+
+
+<nav id="article-skip">
+    <div class="next">
+        
+        <p>&nbsp;</p>
+        
+    </div>
+    <div class="top">
+        <a alt="Top of page" href="#">Top</a>
+    </div>
+    <div class="prev">
+        
+        <a alt="Older article" href="http://bazlur.com/2021/06/java-thread-programming-lesson-3/">Older &rarr;</a>
+        
+    </div>
+</nav>
+
+
+ <h2 class="author">Author: A N M Bazlur Rahman</h2>
+
+<img class="header-picture"
+     src="//www.gravatar.com/avatar/2252a7faaa6609bfa3514c284f7e84ef?s=90" alt="" />
+
+ <p> Java enthusiastic | Book author | Mentor | Helping Java Developers to improve their coding &amp; collaboration skills so that they can meet great people &amp; collaborate</p> 
+
+<p class="nav">
+    <aside id="social">
+  <div id="social-icons">
+    
+    <div class="icon-24x24">
+      <a class="glyph" alt="Email me" href="mailto:contact@bazlur.com"><img src=http://bazlur.com/icons/envelope.svg height="24px" width="24px"></a>
+    </div>
+    
+    
+    <div class="icon-24x24">
+      <a class="glyph" alt="Facebook profile" href="https://facebook.com/rokonoid"><img src=http://bazlur.com/icons/facebook.svg height="24px" width="24px"></a>
+    </div>
+    
+    
+    
+    <div class="icon-24x24">
+      <a class="glyph" alt="GitHub profile" href="https://github.com/rokon12"><img src=http://bazlur.com/icons/github.svg height="24px" width="24px"></a>
+    </div>
+    
+    
+    
+    
+    
+    <div class="icon-24x24">
+      <a class="glyph" alt="LinkedIn profile" href="https://www.linkedin.com/in/bazlur"><img src=http://bazlur.com/icons/linkedin.svg height="24px" width="24px"></a>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    <div class="icon-24x24">
+      <a class="glyph" alt="Twitter profile" href="https://twitter.com/bazlur_rahman"><img src=http://bazlur.com/icons/twitter.svg height="24px" width="24px"></a>
+     </div>
+     
+    
+    <div class="icon-24x24">
+      <a class="glyph" alt="Instagram profile" href="https://instagram.com/rokonoid"><img
+          src=http://bazlur.com/icons/instagram.svg height="24px" width="24px"></a>
+    </div>
+    
+  </div>
+</aside>
+
+</p>
+
+<div id="disqus_thread"></div>
+
+<script>
+    var disqus_config = function () {
+        this.page.identifier = 'http:\/\/bazlur.com\/2021\/06\/java-thread-programming-lesson-4\/';
+        this.page.title = 'Java Thread Programming: Lesson 4';
+        this.page.url = 'http:\/\/bazlur.com\/2021\/06\/java-thread-programming-lesson-4\/';
+    };
+
+    (function () { 
+        var d = document, s = d.createElement('script');
+        s.src = 'https://bazlur-com.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+    Disqus.</a></noscript>
+
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+<div id="tag-cloud" style="padding: 5px 15px">
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/100daysofcode" style="font-size:2.9144393255083423rem">100daysofcode</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/100daysofjava" style="font-size:2.9144393255083423rem">100daysofjava</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/access" style="font-size:1rem">access</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/advance-java" style="font-size:1rem">advance-java</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/agile" style="font-size:1.7020742766234536rem">agile</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/algorithm" style="font-size:1.4429595503388948rem">algorithm</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/arraylist" style="font-size:1.4429595503388948rem">arraylist</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/article" style="font-size:1rem">article</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/bangla-book" style="font-size:2.145033826962348rem">bangla-book</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/becoming-expert" style="font-size:1rem">becoming-expert</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/biginteger" style="font-size:1rem">biginteger</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/book" style="font-size:2.145033826962348rem">book</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/calculator" style="font-size:1rem">calculator</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/checked" style="font-size:1rem">checked</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/checked-exceptions" style="font-size:1rem">checked-exceptions</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/cloning" style="font-size:1rem">cloning</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/code-readability" style="font-size:1rem">code-readability</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/code-review" style="font-size:1rem">code-review</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/coding" style="font-size:2.9456189505397727rem">coding</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/coding-convention" style="font-size:1rem">coding-convention</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/collection-framework" style="font-size:1rem">collection-framework</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/compact-strings" style="font-size:1rem">compact-strings</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/completablefuture" style="font-size:1rem">completablefuture</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/concatenation" style="font-size:1rem">concatenation</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/concurrency" style="font-size:1.8859191006777896rem">concurrency</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/concurrentmodificationexception" style="font-size:1rem">concurrentmodificationexception</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/concurrentskiplistmap" style="font-size:1rem">concurrentskiplistmap</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/counting" style="font-size:1rem">counting</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/countingcollections" style="font-size:1rem">countingcollections</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/critical-section" style="font-size:1rem">critical-section</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/daemon-thread" style="font-size:1rem">daemon-thread</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/data-race" style="font-size:1.7020742766234536rem">data-race</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/data-structure" style="font-size:1rem">data-structure</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/datetime" style="font-size:1rem">datetime</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/day002" style="font-size:1rem">day002</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/deliberate-practice" style="font-size:1rem">deliberate-practice</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/deserialization" style="font-size:1rem">deserialization</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/design-pattern" style="font-size:1rem">design-pattern</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/developers" style="font-size:1rem">developers</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/duration" style="font-size:1rem">duration</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/execute-around" style="font-size:1rem">execute-around</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/executors" style="font-size:1.4429595503388948rem">executors</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/export" style="font-size:1rem">export</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/fibonacci" style="font-size:1.4429595503388948rem">fibonacci</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/file" style="font-size:1.4429595503388948rem">file</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/file-copy" style="font-size:1rem">file-copy</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/functional" style="font-size:1rem">functional</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/future-java-developers" style="font-size:1rem">future-java-developers</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/groupby" style="font-size:1rem">groupby</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/hash-function" style="font-size:1.4429595503388948rem">hash-function</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/hashmap" style="font-size:1.7020742766234536rem">hashmap</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/history" style="font-size:1rem">history</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/history-of-java" style="font-size:1rem">history-of-java</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/how-java-performs-better" style="font-size:1rem">how-java-performs-better</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/how-java-works" style="font-size:1rem">how-java-works</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/http-client" style="font-size:1rem">http-client</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/image" style="font-size:1rem">image</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/import" style="font-size:1rem">import</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/inspiration" style="font-size:1rem">inspiration</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/io" style="font-size:1rem">io</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/itext-pdf" style="font-size:1rem">itext-pdf</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/java" style="font-size:3.487089347832639rem">java</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/java-10" style="font-size:1rem">java-10</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/java-11" style="font-size:1rem">java-11</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/java-17" style="font-size:1rem">java-17</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/java-8" style="font-size:1rem">java-8</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/java-9" style="font-size:1rem">java-9</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/java-developers" style="font-size:1rem">java-developers</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/java-performance" style="font-size:1rem">java-performance</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/java-programming" style="font-size:1rem">java-programming</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/java-thread" style="font-size:1rem">java-thread</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/java-thread-programming" style="font-size:2.328878651016684rem">java-thread-programming</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/java11" style="font-size:1rem">java11</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/java16" style="font-size:1.7020742766234536rem">java16</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/java8" style="font-size:1.4429595503388948rem">java8</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/lambda-expression" style="font-size:1.7020742766234536rem">lambda-expression</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/learning" style="font-size:1rem">learning</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/learning-and-development" style="font-size:1rem">learning-and-development</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/linkedlist" style="font-size:1.4429595503388948rem">linkedlist</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/list" style="font-size:1rem">list</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/local-type-inference" style="font-size:1rem">local-type-inference</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/localdatetime" style="font-size:1rem">localdatetime</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/map" style="font-size:1.7020742766234536rem">map</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/methodology" style="font-size:1rem">methodology</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/nio" style="font-size:1rem">nio</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/non-blockingio" style="font-size:1rem">non-blockingio</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/null-pointer-exception" style="font-size:1rem">null-pointer-exception</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/object-cloning" style="font-size:1rem">object-cloning</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/optional" style="font-size:1rem">optional</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/packaging" style="font-size:1rem">packaging</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/parallel" style="font-size:1rem">parallel</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/pass-by-reference" style="font-size:1rem">pass-by-reference</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/pass-by-value" style="font-size:1rem">pass-by-value</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/pdf" style="font-size:1rem">pdf</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/performance" style="font-size:1.4429595503388948rem">performance</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/prime-number" style="font-size:1.4429595503388948rem">prime-number</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/programming" style="font-size:1rem">programming</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/project-loom" style="font-size:1rem">project-loom</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/race-condition" style="font-size:1rem">race-condition</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/readable-code" style="font-size:1rem">readable-code</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/record" style="font-size:1rem">record</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/refactoring" style="font-size:1rem">refactoring</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/review" style="font-size:1.8859191006777896rem">review</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/scheduler" style="font-size:1rem">scheduler</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/scrum" style="font-size:1rem">scrum</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/serialization" style="font-size:1.4429595503388948rem">serialization</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/serversocket" style="font-size:1rem">serversocket</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/simple-calculator" style="font-size:1rem">simple-calculator</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/socket" style="font-size:1rem">socket</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/software-development" style="font-size:1rem">software-development</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/sorting" style="font-size:1rem">sorting</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/source-code" style="font-size:1rem">source-code</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/stack" style="font-size:1rem">stack</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/string" style="font-size:1.7020742766234536rem">string</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/string-pool" style="font-size:1rem">string-pool</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/stringbuilder" style="font-size:1rem">stringbuilder</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/swing" style="font-size:1rem">swing</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/thread" style="font-size:2.5323882742197323rem">thread</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/threads" style="font-size:1rem">threads</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/tutorial" style="font-size:1rem">tutorial</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/unchecked" style="font-size:1rem">unchecked</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/vector" style="font-size:1rem">vector</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/virtual-thread" style="font-size:1rem">virtual-thread</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/volatile" style="font-size:1rem">volatile</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/why-java" style="font-size:1rem">why-java</a>
+  
+  
+  
+  
+  
+  
+  
+  <a class="tag-cloud" href="/tags/zoneid" style="font-size:1rem">zoneid</a>
+  
+</div>
+
+  <footer>
+  <footer>
+  <div  class="wrapper-footer">
+    <p>
+      &copy; <a href="https://bazlur.com"> A N M Bazlur Rahman</a> <span id="footer-copyright">2012 - 2021 </span>  | <a href="https://github.com/rokon12">Github</a>
+    | <a href=" https://twitter.com/bazlur_rahman"> @bazlur_rahman</a>
+    </p>
+  </div>
+</footer>
+  
+  </footer>
+  </body>
+</html>
+

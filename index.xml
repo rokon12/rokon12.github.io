@@ -6,10 +6,201 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright © 2021, A N M Bazlur Rahman</copyright>
-    <lastBuildDate>Mon, 28 Jun 2021 08:12:00 -0400</lastBuildDate>
+    <lastBuildDate>Wed, 30 Jun 2021 01:12:00 -0400</lastBuildDate>
     
         <atom:link href="http://bazlur.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Java Thread Programming: Lesson 4</title>
+      <link>http://bazlur.com/2021/06/java-thread-programming-lesson-4/</link>
+      <pubDate>Wed, 30 Jun 2021 01:12:00 -0400</pubDate>
+      
+      <guid>http://bazlur.com/2021/06/java-thread-programming-lesson-4/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://bazlur.com/img/yagnik-sankhedawala-9Trha5ptc-c-unsplash.jpg&#34; alt=&#34;Photo&#34;&gt;
+Photo by &lt;a href=&#34;https://unsplash.com/@yagniksankhedawala?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText&#34;&gt;Yagnik Sankhedawala&lt;/a&gt; on &lt;a href=&#34;https://unsplash.com/s/photos/chess?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText&#34;&gt;Unsplash&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Previous articles :&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://bazlur.com/2021/06/java-thread-programming-lesson-1/&#34;&gt;Java Thread Programming: Lesson 1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://bazlur.com/2021/06/java-thread-programming-lesson-2/&#34;&gt;Java Thread Programming: Lesson 2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://bazlur.com/2021/06/java-thread-programming-lesson-3/&#34;&gt;Java Thread Programming: Lesson 3&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;In our previous article, I have discussed race conditions. A race condition happens in a critical section.  In this article, I will discuss this critical section and why it happens when it happens.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s begin.&lt;/p&gt;
+&lt;p&gt;We got some ideas from the previous articles a data can be shared among multiple threads. Multiple threads can read a shared data, and it has no consequences. When one of these threads tries to change/write to the shared data, the problem comes to the picture. An example would be the best approach to explain this-&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;package com.bazlur;
+
+public class Day022 {
+	public static void main(String[] args) throws InterruptedException {
+		var account = new BankAccount(0);
+
+		Runnable runnable = () -&amp;gt; {
+			for (int i = 0; i &amp;lt; 1000; i++) {
+				account.deposit(100);
+				account.withdraw(100);
+			}
+		};
+
+		var t1 = new Thread(runnable);
+		var t2 = new Thread(runnable);
+
+		t1.start();
+		t2.start();
+
+		t1.join();
+		t2.join();
+
+		System.out.println(&amp;quot;Available balance: &amp;quot; + account.getBalance());
+	}
+}
+
+final class BankAccount {
+	private long initialAmount;
+
+	BankAccount(long initialAmount) {
+		this.initialAmount = initialAmount;
+	}
+
+	public void withdraw(long amount) {
+		deposit(-amount);
+	}
+
+	public void deposit(long amount) {
+		initialAmount = initialAmount + amount;
+	}
+
+	public long getBalance() {
+		return initialAmount;
+	}
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In the above code, we have simulated a bank account. We have created two threads, and both of their deposit and withdraw 100 thousand times. According to our calculation, the initial balance was 0, which means it should zero in the end. I run the above code; that&amp;rsquo;s not what we would see. Each time it will print a different result. That&amp;rsquo;s means something wrong here.&lt;/p&gt;
+&lt;p&gt;Is it a visibility problem? What if both threads run in two different processors and update their value in the cache? If we add a volatile keyboard and would that solve the issue?
+We can try adding a volatile keyword, but it won&amp;rsquo;t solve the problem because this isn&amp;rsquo;t a visibility issue, something else. Let&amp;rsquo;s discuss that.&lt;/p&gt;
+&lt;p&gt;We know in a multi-threaded environment, the execution order of code isn&amp;rsquo;t predictable. While the first thread is depositing the money, the second thread might well withdraw the amount. While both threads contest to write the value to the same variable, one might get discarded, and the other can win. If one of these operations are missed, then we will have incorrect data. That&amp;rsquo;s a problem.&lt;/p&gt;
+&lt;p&gt;In fact, in our code, that&amp;rsquo;s precisely what is happening.&lt;/p&gt;
+&lt;p&gt;How do we resolve it?&lt;/p&gt;
+&lt;p&gt;Well, we have to make the writing operation atomic. Changing the variable has to be done in a way so that only one thread can do it at a time. That way, we can prevent this inconsistency. This is called the critical section.  We have to guard this critical section.&lt;/p&gt;
+&lt;p&gt;We have to use a mutual exclusion so that no other thread can go into that section if a thread reaches into the critical section and make the changes. Once a get away from the critical section, only then will the other get a chance.&lt;/p&gt;
+&lt;p&gt;This mutual execution is done by a keyword called &lt;code&gt;synchronized&lt;/code&gt;. This keyword instructs java to create a lock. When a thread reaches the critical section, and it tries to acquire the lock. If it can acquire the lock, it does the operation, and once done, it releases the lock. Meanwhile, the other threads try to acquire the lock and wait until it is released.&lt;/p&gt;
+&lt;p&gt;When only one thread is allowed to perform an operation, then the operation is called atomic. There are multiple ways to achieve this atomicity. The easiest one is, declaring the method synchronized. Example –&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;class BankAccount {
+  private long initialAmount;
+
+  BankAccount(long initialAmount) {
+    this.initialAmount = initialAmount;
+  }
+
+  public synchronized void withdraw(long amount) {
+    deposit(-amount);
+  }
+
+  public synchronized void deposit(long amount) {
+    initialAmount = initialAmount + amount;
+  }
+
+  public synchronized long getBalance() {
+    return initialAmount;
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;When we use mutual exclusion with synchronized keyword or lock, it also ensures visibility. So we don&amp;rsquo;t need to use volatile here.
+We can even create our own lock object. For example-&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;final class BankAccount {
+  private final Object lock = new Object();
+  private volatile long initialAmount;
+
+  BankAccount(long initialAmount) {
+    this.initialAmount = initialAmount;
+  }
+
+  public void withdraw(long amount) {
+    synchronized (lock) {
+      deposit(-amount);
+    }
+  }
+
+  public void deposit(long amount) {
+    synchronized (lock) {
+      initialAmount = initialAmount + amount;
+    }
+  }
+
+  public long getBalance() {
+    synchronized (lock){
+      return initialAmount;
+    }
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The above code does the same thing; only it doesn&amp;rsquo;t have the synchronized keyword in the method signature.
+When we use synchronized keyword in the method signature, it is effectively synchronizing to the object itself. With the synchronized block, we can have multiple lock objects inside a class. For example, a class may have multiple critical sections, and they may not be related to each other. We can certainly allow multiple threads to use this class that deal with different critical sections. In such a scenario, multiple locks would make sense.&lt;/p&gt;
+&lt;p&gt;However, in modern java, we have great APIs with many other functionalities and flexibility in how we lock. These modern concurrency APIs don&amp;rsquo;t use the &lt;code&gt;synchronized&lt;/code&gt; keyword at all.  The lock can be conditional, and based on the situation, we can lock and unlock. But that&amp;rsquo;s something we will discuss some other day. Let&amp;rsquo;s just implement the &lt;code&gt;BankAccount&lt;/code&gt; class with the Lock API.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;class BankAccount {
+  private long initialAmount;
+  private final Lock lock = new ReentrantLock();
+
+  BankAccount(long initialAmount) {
+    this.initialAmount = initialAmount;
+  }
+
+  public void withdraw(long amount) {
+    lock.lock();
+    try {
+      deposit(-amount);
+    } finally {
+      lock.unlock();
+    }
+  }
+
+  public void deposit(long amount) {
+    lock.lock();
+    try {
+      initialAmount = initialAmount + amount;
+    } finally {
+      lock.unlock();
+    }
+  }
+
+  public long getBalance() {
+    lock.lock();
+    try {
+      return initialAmount;
+    } finally {
+      lock.unlock();
+    }
+  }
+}
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Or we can use the &lt;code&gt;LockHelper&lt;/code&gt; from the &lt;a href=&#34;https://bazlur.com/2021/06/lets-remove-the-boilerplate-code-with-execute-around-pattern/&#34;&gt;previous article&lt;/a&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;class BankAccount {
+	private final Lock lock = new ReentrantLock();
+	private volatile long initialAmount;
+
+	BankAccount(long initialAmount) {
+		this.initialAmount = initialAmount;
+	}
+
+	public void withdraw(long amount) {
+		LockHelper.withLock(lock, () -&amp;gt; deposit(-amount));
+	}
+
+	public void deposit(long amount) {
+		LockHelper.withLock(lock, () -&amp;gt; initialAmount = initialAmount + amount);
+	}
+
+	public long getBalance() {
+		return LockHelper.withLock(lock, () -&amp;gt; initialAmount);
+	}
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;That&amp;rsquo;s for today.&lt;br&gt;
+Cheers!!&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Java Thread Programming: Lesson 3</title>
