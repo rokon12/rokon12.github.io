@@ -7,11 +7,11 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright © 2021, A N M Bazlur Rahman</copyright>
-    <lastBuildDate>Wed, 30 Jun 2021 01:12:00 -0400</lastBuildDate><atom:link href="http://bazlur.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 03 Jul 2021 06:42:00 -0400</lastBuildDate><atom:link href="http://bazlur.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>100DaysOfCode</title>
       <link>http://bazlur.com/tags/100daysofcode/</link>
-      <pubDate>Wed, 30 Jun 2021 01:12:00 -0400</pubDate>
+      <pubDate>Sat, 03 Jul 2021 06:42:00 -0400</pubDate>
       
       <guid>http://bazlur.com/tags/100daysofcode/</guid>
       <description></description>
@@ -20,7 +20,7 @@
     <item>
       <title>100DaysOfJava</title>
       <link>http://bazlur.com/tags/100daysofjava/</link>
-      <pubDate>Wed, 30 Jun 2021 01:12:00 -0400</pubDate>
+      <pubDate>Sat, 03 Jul 2021 06:42:00 -0400</pubDate>
       
       <guid>http://bazlur.com/tags/100daysofjava/</guid>
       <description></description>
@@ -29,18 +29,45 @@
     <item>
       <title>coding</title>
       <link>http://bazlur.com/tags/coding/</link>
-      <pubDate>Wed, 30 Jun 2021 01:12:00 -0400</pubDate>
+      <pubDate>Sat, 03 Jul 2021 06:42:00 -0400</pubDate>
       
       <guid>http://bazlur.com/tags/coding/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>CompletableFuture</title>
+      <link>http://bazlur.com/tags/completablefuture/</link>
+      <pubDate>Sat, 03 Jul 2021 06:42:00 -0400</pubDate>
+      
+      <guid>http://bazlur.com/tags/completablefuture/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Concurrency</title>
       <link>http://bazlur.com/tags/concurrency/</link>
-      <pubDate>Wed, 30 Jun 2021 01:12:00 -0400</pubDate>
+      <pubDate>Sat, 03 Jul 2021 06:42:00 -0400</pubDate>
       
       <guid>http://bazlur.com/tags/concurrency/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>java</title>
+      <link>http://bazlur.com/tags/java/</link>
+      <pubDate>Sat, 03 Jul 2021 06:42:00 -0400</pubDate>
+      
+      <guid>http://bazlur.com/tags/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>thread</title>
+      <link>http://bazlur.com/tags/thread/</link>
+      <pubDate>Sat, 03 Jul 2021 06:42:00 -0400</pubDate>
+      
+      <guid>http://bazlur.com/tags/thread/</guid>
       <description></description>
     </item>
     
@@ -63,29 +90,11 @@
     </item>
     
     <item>
-      <title>java</title>
-      <link>http://bazlur.com/tags/java/</link>
-      <pubDate>Wed, 30 Jun 2021 01:12:00 -0400</pubDate>
-      
-      <guid>http://bazlur.com/tags/java/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>java thread programming</title>
       <link>http://bazlur.com/tags/java-thread-programming/</link>
       <pubDate>Wed, 30 Jun 2021 01:12:00 -0400</pubDate>
       
       <guid>http://bazlur.com/tags/java-thread-programming/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>thread</title>
-      <link>http://bazlur.com/tags/thread/</link>
-      <pubDate>Wed, 30 Jun 2021 01:12:00 -0400</pubDate>
-      
-      <guid>http://bazlur.com/tags/thread/</guid>
       <description></description>
     </item>
     
@@ -194,15 +203,6 @@
       <pubDate>Thu, 24 Jun 2021 00:12:00 -0400</pubDate>
       
       <guid>http://bazlur.com/tags/virtual-thread/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>CompletableFuture</title>
-      <link>http://bazlur.com/tags/completablefuture/</link>
-      <pubDate>Sun, 20 Jun 2021 00:10:40 -0400</pubDate>
-      
-      <guid>http://bazlur.com/tags/completablefuture/</guid>
       <description></description>
     </item>
     
@@ -1139,6 +1139,15 @@
       <pubDate>Wed, 01 Jun 2011 00:52:10 -0400</pubDate>
       
       <guid>http://bazlur.com/tags/vector/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Fork/Join Common Pool</title>
+      <link>http://bazlur.com/tags/fork/join-common-pool/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://bazlur.com/tags/fork/join-common-pool/</guid>
       <description></description>
     </item>
     

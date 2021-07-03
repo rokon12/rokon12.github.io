@@ -6,10 +6,207 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright © 2021, A N M Bazlur Rahman</copyright>
-    <lastBuildDate>Wed, 30 Jun 2021 01:12:00 -0400</lastBuildDate>
+    <lastBuildDate>Sat, 03 Jul 2021 06:42:00 -0400</lastBuildDate>
     
         <atom:link href="http://bazlur.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Be sure of using Fork/Join common pool; they are daemon threads</title>
+      <link>http://bazlur.com/2021/07/be-sure-of-using-fork/join-common-pool-they-are-daemon-threads/</link>
+      <pubDate>Sat, 03 Jul 2021 06:42:00 -0400</pubDate>
+      
+      <guid>http://bazlur.com/2021/07/be-sure-of-using-fork/join-common-pool-they-are-daemon-threads/</guid>
+      <description>&lt;p&gt;There are two kinds of threads in java-&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;user thread and&lt;/li&gt;
+&lt;li&gt;daemon thread&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The user threads are priority threads. The user thread dies when it completes its work. So if not terminated by any external means, the thread will live until it finishes its work. On the other hand, daemon threads are created from a user thread and serve the user thread. So a daemon thread may die without completing its work if the user thread dies from which it was created.&lt;/p&gt;
+&lt;p&gt;Java program starts from the main method, and the main method starts with the main Thread. Let’s see an example-&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;package com.bazlur;
+
+import java.util.concurrent.TimeUnit;
+
+public class Day024_Playground {
+	public static void main(String[] args) {
+		var thread = new Thread(() -&amp;gt; {
+			while (true) {
+				//this thread is supposed to be running forever
+				sleep(1);
+				System.out.println(Thread.currentThread().getName()
+						+ &amp;quot; is daemon? &amp;quot;
+						+ Thread.currentThread().isDaemon());
+			}
+		});
+
+		thread.setDaemon(true);
+		thread.start();
+
+		System.out.println(&amp;quot;Running from main method&amp;quot;);
+		sleep(5);
+		System.out.println(&amp;quot;Done! will die now&amp;quot;);
+	}
+
+	private static void sleep(int second) {
+		try {
+			TimeUnit.SECONDS.sleep(second);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+}
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In the above code, we have created a new thread from the main method. The Thread is created from a user thread, which is basically the main Thread.
+Inside the Thread, we have an infinite loop. This means this Thread will keep running forever until it is stopped by an external means.&lt;br&gt;
+However, we marked it as a daemon thread. That means this it will keep running as long as the main Thread is alive.&lt;/p&gt;
+&lt;p&gt;The main Thread creates this new Thread, sleeps, then prints a statement and then dies. So immediately, the daemon thread will die.&lt;/p&gt;
+&lt;p&gt;If you run the above code, you will get the following output-&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-text&#34;&gt;main method is running from Thread [main,5,main]
+Running from main method
+Thread-0 is daemon? true
+Thread-0 is daemon? true
+Thread-0 is daemon? true
+Thread-0 is daemon? true
+Done! will die now
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Nothing will print will anymore.&lt;/p&gt;
+&lt;p&gt;We have learned about daemon thread so far. Let&amp;rsquo;s learn something else now-&lt;/p&gt;
+&lt;p&gt;Java has a new construct called &lt;code&gt;CompletableFuture&lt;/code&gt;.  Using it, we can execute a piece of code asynchronously.&lt;/p&gt;
+&lt;p&gt;There are a few factory methods in it which we can use easily.  For example- &lt;code&gt;runAsync()&lt;/code&gt;, &lt;code&gt;supplyAsync()&lt;/code&gt; .
+Example-&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;	CompletableFuture&amp;lt;?&amp;gt; future  = CompletableFuture.runAsync(() -&amp;gt; {
+			System.out.println(&amp;quot;Running asynchronously!&amp;quot;);
+		});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Or in case we need a value from it -&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;CompletableFuture&amp;lt;Integer&amp;gt; meaningOfLife = CompletableFuture.supplyAsync(() -&amp;gt; {
+    return 42;
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now the question is, under which Thread these methods get executed?&lt;/p&gt;
+&lt;p&gt;The answer is, they get executed by Fork/Join Common pool.&lt;/p&gt;
+&lt;p&gt;If you run the following code in your main method-&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;package com.bazlur;
+
+import java.util.concurrent.CompletableFuture;
+
+public class Day024_Playground2 {
+	public static void main(String[] args) {
+
+		CompletableFuture.runAsync(() -&amp;gt; {
+			System.out.println(&amp;quot;Running asynchronously!&amp;quot;);
+			System.out.println(&amp;quot;from &amp;quot; + Thread.currentThread());
+		});
+
+	}
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You should get the following-&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;Running asynchronously!
+from Thread[ForkJoinPool.commonPool-worker-19,5,main]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;However, if your program has only the above code and nothing else in the main method, you may not get anything at all. Nothing will print in the main method.&lt;/p&gt;
+&lt;p&gt;Seems puzzling, right?&lt;/p&gt;
+&lt;p&gt;To able to get a result, either you have to call a get() on the CompletableFuture as bellow-&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;package com.bazlur;
+
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutionException;
+
+public class Day024_Playground2 {
+	public static void main(String[] args) throws ExecutionException, InterruptedException {
+
+		CompletableFuture.runAsync(() -&amp;gt; {
+			System.out.println(&amp;quot;Running asynchronously!&amp;quot;);
+			System.out.println(&amp;quot;from &amp;quot; + Thread.currentThread());
+		}).get();
+	}
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The get() call is a blocking call, which means the main Thread will block here, and nothing from the main Thread will progress until the asynchronous block finishes.&lt;/p&gt;
+&lt;p&gt;If we have some other code in the main Thread, they will wait until this asynchronous block finishes its job, which in turn diminishes the asynchronicity.&lt;/p&gt;
+&lt;p&gt;Or, the main Thread lives longer than the asynchronous block. In that case we will defiantly get the result as expected.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;package com.bazlur;
+
+import java.util.concurrent.CompletableFuture;
+
+public class Day024_Playground2 {
+	public static void main(String[] args) throws InterruptedException {
+
+		CompletableFuture.runAsync(() -&amp;gt; {
+			System.out.println(&amp;quot;Running asynchronously!&amp;quot;);
+			System.out.println(&amp;quot;from &amp;quot; + Thread.currentThread());
+		});
+
+		System.out.println(&amp;quot;Doing some important work!&amp;quot;);
+		Thread.sleep(1000);
+	}
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now if we run the above code, we will get the result. The reason is, the main Thread lives longer than the &lt;code&gt;CompletableFuture&lt;/code&gt;. Assuming the &lt;code&gt;CompletableFuture&lt;/code&gt; won&amp;rsquo;t take longer than 1000 milliseconds.&lt;/p&gt;
+&lt;p&gt;From the above discussion, we can conclude that the ForkJoinPool.commonPool holds the daemon threads. If they were user threads, they would finish their job; it wouldn&amp;rsquo;t matter if the main Thread finishes it works or not.&lt;/p&gt;
+&lt;p&gt;Let’s see if this is the case or not?&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;
+package com.bazlur;
+
+import java.util.concurrent.CompletableFuture;
+
+public class Day024_Playground2 {
+	public static void main(String[] args) throws InterruptedException {
+
+		CompletableFuture.runAsync(() -&amp;gt; {
+			System.out.println(&amp;quot;Running asynchronously!&amp;quot;);
+			System.out.println(&amp;quot;from &amp;quot; + Thread.currentThread());
+			System.out.println(&amp;quot;Is it a daemon thread? &amp;quot;+ Thread.currentThread().isDaemon());
+		});
+
+		System.out.println(&amp;quot;Doing some important work!&amp;quot;);
+		Thread.sleep(1000);
+	}
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The answer is an astounding yes.  They are indeed daemon thread.&lt;/p&gt;
+&lt;p&gt;So what have we learned from this entire discussion?&lt;/p&gt;
+&lt;p&gt;If our main Thread doesn’t live longer than the daemon thread, we won’t get any result from the &lt;code&gt;CompletableFuture&lt;/code&gt;. This is because they will not live to finish their work.&lt;/p&gt;
+&lt;p&gt;What can we do if we have a case where multiple &lt;code&gt;CompletableFuture&lt;/code&gt; do some asynchronous jobs, but the user thread from which they are created dies early?&lt;/p&gt;
+&lt;p&gt;Instead of using the ForkJoin common pool, my solution would be to provide our own thread pool. We have executors.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;package com.bazlur;
+
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.Executors;
+
+public class Day024_Playground2 {
+	public static void main(String[] args) throws InterruptedException {
+
+		var threadPool = Executors.newCachedThreadPool();
+
+		CompletableFuture.runAsync(() -&amp;gt; {
+			System.out.println(&amp;quot;Running asynchronously!&amp;quot;);
+			sleep();
+			System.out.println(&amp;quot;from &amp;quot; + Thread.currentThread());
+		}, threadPool);
+
+		System.out.println(&amp;quot;I&#39;m Done!! going to die.&amp;quot;);
+		threadPool.shutdown();
+	}
+
+	private static void sleep() {
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In the above code, even the user thread dies, it won’t affect the &lt;code&gt;CompletableFuture&lt;/code&gt;; it will finish its job and then it would die.&lt;/p&gt;
+&lt;p&gt;If we need such assurance, we should always provide executors to the CompletableFuture.&lt;/p&gt;
+&lt;p&gt;That&amp;rsquo;s for today!
+Cheers!&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Java Thread Programming: Lesson 4</title>
