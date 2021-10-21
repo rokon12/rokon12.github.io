@@ -1,6 +1,6 @@
 ### Hi there 👋
 
-- 🔭 I’m a ✨Java Devleoper✨, author and a mentor. I help junior software developers to master the top coding and collaboration skills so they get hired to work on amazing projects.
+- 🔭 I’m a ✨Java Devleoper✨, an author and a mentor. I help junior software developers to master the top coding and collaboration skills so they get hired to work on amazing projects.
 - 🌱 I’m currently learning Cloud Technologies ☁️ 
 - 👯 I would love to collaborate on any exciting ideas in the java space
 - 🤔 I’m looking for help with ...
