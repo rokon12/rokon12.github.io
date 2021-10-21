@@ -7,7 +7,7 @@
 - 💬 Ask me anything about *Java*
 - :bowtie: I'm a JUG Leader [jugbd](https://jugbd.org/) & [@bazlur_rahman](https://twitter.com/bazlur_rahman)
 - :books: My books, [rokomari](https://www.rokomari.com/book/author/47860/a-n-m-bazlur-rahman), [Amazon Kindle](https://www.amazon.com/s?i=digital-text&rh=p_27%3AA+N+M+Bazlur+Rahman&s=relevancerank&text=A+N+M+Bazlur+Rahman&ref=dp_byline_sr_ebooks_1) 
-- 📫 How to reach me: bazlur at jugbd org
+- 📫 How to reach me: bazlur at jugbd dot org
 
 <!--
 **rokon12/rokon12** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
