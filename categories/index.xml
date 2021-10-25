@@ -7,7 +7,34 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright © 2021, A N M Bazlur Rahman</copyright>
-    <lastBuildDate>Thu, 21 Oct 2021 06:42:00 -0400</lastBuildDate><atom:link href="http://bazlur.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 25 Oct 2021 00:12:00 -0400</lastBuildDate><atom:link href="http://bazlur.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>microservices</title>
+      <link>http://bazlur.com/categories/microservices/</link>
+      <pubDate>Mon, 25 Oct 2021 00:12:00 -0400</pubDate>
+      
+      <guid>http://bazlur.com/categories/microservices/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>softwarearchitecture</title>
+      <link>http://bazlur.com/categories/softwarearchitecture/</link>
+      <pubDate>Mon, 25 Oct 2021 00:12:00 -0400</pubDate>
+      
+      <guid>http://bazlur.com/categories/softwarearchitecture/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>softwareengineering</title>
+      <link>http://bazlur.com/categories/softwareengineering/</link>
+      <pubDate>Mon, 25 Oct 2021 00:12:00 -0400</pubDate>
+      
+      <guid>http://bazlur.com/categories/softwareengineering/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>concurrency</title>
       <link>http://bazlur.com/categories/concurrency/</link>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>microservices on Bazlur&#39;s Stream of Thoughts</title>
+    <link>http://bazlur.com/tags/microservices/</link>
+    <description>Recent content in microservices on Bazlur&#39;s Stream of Thoughts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>Copyright © 2021, A N M Bazlur Rahman</copyright>
+    <lastBuildDate>Mon, 25 Oct 2021 00:12:00 -0400</lastBuildDate><atom:link href="http://bazlur.com/tags/microservices/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Book Review: Monolith to Microservices (Part 1)</title>
+      <link>http://bazlur.com/2021/10/book-review-monolith-to-microservices-part-1/</link>
+      <pubDate>Mon, 25 Oct 2021 00:12:00 -0400</pubDate>
+      
+      <guid>http://bazlur.com/2021/10/book-review-monolith-to-microservices-part-1/</guid>
+      <description>I have just finished reading &amp;ldquo;Monolith to Microservices: Evolutionary Patterns to Transform Your Monolith&amp;rdquo; by Sam Newman.
+This book is undoubtedly great; it explained a few critical aspects while moving away from a monolith to a Microservices architecture. In this article, I will try to summarize some of the elements from the book that impacted me.
+This book contains five chapters, and each of them has a great deal of context and explanation.</description>
+    </item>
+    
+  </channel>
+</rss>
