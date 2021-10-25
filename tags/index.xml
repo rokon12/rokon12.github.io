@@ -7,7 +7,43 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright © 2021, A N M Bazlur Rahman</copyright>
-    <lastBuildDate>Sat, 03 Jul 2021 06:42:00 -0400</lastBuildDate><atom:link href="http://bazlur.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 07 Oct 2021 06:42:00 -0400</lastBuildDate><atom:link href="http://bazlur.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>coding</title>
+      <link>http://bazlur.com/tags/coding/</link>
+      <pubDate>Thu, 07 Oct 2021 06:42:00 -0400</pubDate>
+      
+      <guid>http://bazlur.com/tags/coding/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Concurrency</title>
+      <link>http://bazlur.com/tags/concurrency/</link>
+      <pubDate>Thu, 07 Oct 2021 06:42:00 -0400</pubDate>
+      
+      <guid>http://bazlur.com/tags/concurrency/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>java</title>
+      <link>http://bazlur.com/tags/java/</link>
+      <pubDate>Thu, 07 Oct 2021 06:42:00 -0400</pubDate>
+      
+      <guid>http://bazlur.com/tags/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>thread</title>
+      <link>http://bazlur.com/tags/thread/</link>
+      <pubDate>Thu, 07 Oct 2021 06:42:00 -0400</pubDate>
+      
+      <guid>http://bazlur.com/tags/thread/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>100DaysOfCode</title>
       <link>http://bazlur.com/tags/100daysofcode/</link>
@@ -27,47 +63,11 @@
     </item>
     
     <item>
-      <title>coding</title>
-      <link>http://bazlur.com/tags/coding/</link>
-      <pubDate>Sat, 03 Jul 2021 06:42:00 -0400</pubDate>
-      
-      <guid>http://bazlur.com/tags/coding/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>CompletableFuture</title>
       <link>http://bazlur.com/tags/completablefuture/</link>
       <pubDate>Sat, 03 Jul 2021 06:42:00 -0400</pubDate>
       
       <guid>http://bazlur.com/tags/completablefuture/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Concurrency</title>
-      <link>http://bazlur.com/tags/concurrency/</link>
-      <pubDate>Sat, 03 Jul 2021 06:42:00 -0400</pubDate>
-      
-      <guid>http://bazlur.com/tags/concurrency/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>java</title>
-      <link>http://bazlur.com/tags/java/</link>
-      <pubDate>Sat, 03 Jul 2021 06:42:00 -0400</pubDate>
-      
-      <guid>http://bazlur.com/tags/java/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>thread</title>
-      <link>http://bazlur.com/tags/thread/</link>
-      <pubDate>Sat, 03 Jul 2021 06:42:00 -0400</pubDate>
-      
-      <guid>http://bazlur.com/tags/thread/</guid>
       <description></description>
     </item>
     

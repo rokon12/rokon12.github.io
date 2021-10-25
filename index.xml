@@ -6,10 +6,152 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright © 2021, A N M Bazlur Rahman</copyright>
-    <lastBuildDate>Sat, 03 Jul 2021 06:42:00 -0400</lastBuildDate>
+    <lastBuildDate>Thu, 07 Oct 2021 06:42:00 -0400</lastBuildDate>
     
         <atom:link href="http://bazlur.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Java Thread Programming (Part 1)</title>
+      <link>http://bazlur.com/2021/10/java-thread-programming-part-1/</link>
+      <pubDate>Thu, 07 Oct 2021 06:42:00 -0400</pubDate>
+      
+      <guid>http://bazlur.com/2021/10/java-thread-programming-part-1/</guid>
+      <description>&lt;p&gt;This article was first published in &lt;a href=&#34;https://foojay.io/today/java-thread-programming-part-1/&#34;&gt;Foojay.io&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;what-is-a-thread&#34;&gt;What is a Thread?&lt;/h2&gt;
+&lt;p&gt;We write code in a file line by line, and then it gets executed. To be able to execute a piece of code requires an execution environment. In Java, &lt;strong&gt;a thread is an execution environment&lt;/strong&gt;. If a program has only one execution environment, then we call this program a single-threaded program.&lt;/p&gt;
+&lt;p&gt;Interestingly, in Java, we can create a lot of threads to run different parts of the code of a program executing independently. And when we have achieved that, we call it a multi-threaded program.&lt;/p&gt;
+&lt;p&gt;In short, &lt;strong&gt;a thread executes a piece of code on a computer&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;what-are-some-benefits-of-multiple-threads&#34;&gt;What are some benefits of multiple threads?&lt;/h2&gt;
+&lt;p&gt;The benefits of having multiple threads are enormous. Think about a web application that serves hundreds of users at a time, then the question would be, how it does it do that? Well, the answer is simple: it usually runs different requests on a separate thread. So each user gets a thread to execute their request.&lt;/p&gt;
+&lt;p&gt;Similarly, when I’m typing on this computer on a word processor, it’s doing multiple things simultaneously. One is perhaps checking my spelling, and one is possibly taking input from when I type on the keyboard. That way, we can achieve various tasks simultaneously. Otherwise, if the word processor would be a single-threaded program, it would need to first read input from the keyboard, and then only it would check the spelling. Naturally, then, the experience wouldn’t be pleasant, at all.&lt;/p&gt;
+&lt;h2 id=&#34;why-do-we-need-to-learn-about-threads&#34;&gt;Why do we need to learn about threads?&lt;/h2&gt;
+&lt;p&gt;We could think of many more similar examples in addition to the one mentioned above, but let’s think about the current computer architecture. The modern computer comes with multiple cores, since clock speed isn’t increasing anymore nowadays. The laptop I’m using at this moment has 16 cores. That means that at a point in time, it can run 16 different things. If a program is single-threaded, then it can only utilize 1 core at the moment, the rest of the 15 would be just idle. We shouldn’t waste valuable resources like this.&lt;/p&gt;
+&lt;p&gt;So, we should be able to write our program in a way to utilize the available resources in the best possible way. On the other hand, if an application can do multiple things at once, we can achieve substantial progress quickly, and the application can become more responsive. We can even subdivide a program into various independent units and then execute them in parallel, resulting in faster results.&lt;/p&gt;
+&lt;h2 id=&#34;do-all-java-programs-have-a-thread-associated-with-them&#34;&gt;Do all Java programs have a thread associated with them?&lt;/h2&gt;
+&lt;p&gt;The answer is yes. Java was designed to have threads from the very beginning. If we just start a &amp;ldquo;hello world&amp;rdquo; program in the main method, it will be executed through a thread, which is called the &amp;ldquo;main Thread&amp;rdquo;. Let’s see an example:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;package com.bazlur;
+
+public class HelloWorld {
+ public static void main(String[] args) {
+  System.out.println(&amp;quot;This program is running on: &amp;quot; + Thread.currentThread());
+  System.out.println(&amp;quot;Hello world&amp;quot;);
+ }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; &lt;code&gt;Thread.currrentThread()&lt;/code&gt; method returns the reference of the Thread currently executing the piece of code.&lt;/p&gt;
+&lt;p&gt;If we run the above program, then we will get the following output in the console:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-textmate&#34;&gt;This program is running on: Thread[main,5,main]
+Hello world
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;So, the output ensures us that running a Java program is all about running its different pieces of code on one or multiple threads.&lt;/p&gt;
+&lt;h2 id=&#34;how-do-i-create-my-own-threads&#34;&gt;How do I create my own threads?&lt;/h2&gt;
+&lt;p&gt;The code that writes in the main method executes by means of the main Thread. However, we can have more threads to run multiple pieces of code at once. There are two ways of creating threads:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Through extending the &lt;code&gt;java.lang.Thread&lt;/code&gt; class&lt;/li&gt;
+&lt;li&gt;Through an interface called &lt;code&gt;java.lang.Runnable&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Let’s start by extending the Thread class.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;package com.bazlur;
+
+public class MyThread extends Thread {
+ @Override
+ public void run() {
+  System.out.println(&amp;quot;Executing code from: &amp;quot; + Thread.currentThread());
+  System.out.println(&amp;quot;Hello world&amp;quot;);
+ }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In the above code, we have created a class, &lt;code&gt;MyThread&lt;/code&gt;, extending the &lt;code&gt;Thread&lt;/code&gt; class, and then we override the run method. Thus, whatever we write in this run method will be executed by this &lt;code&gt;Thread&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;To use this Thread, we have to create an instance and then call its &lt;code&gt;start()&lt;/code&gt; method:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;package com.bazlur;
+
+public class Playground {
+ public static void main(String[] args) {
+  System.out.println(&amp;quot;Creating a new thread from : &amp;quot; + Thread.currentThread());
+  var myThread = new MyThread();
+  myThread.start();
+  System.out.println(&amp;quot;Leaving from: &amp;quot; + Thread.currentThread());
+ }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In the above code, the main method gets executed by the main Thread. The main Thread sees the code that instantiates a Thread object, so it does. Then it executes its &lt;code&gt;start()&lt;/code&gt; method. Since there is no more code after it, the main Thread exits here. On the other hand, the &lt;code&gt;MyThread&lt;/code&gt; keeps running its code until it finishes its work.&lt;/p&gt;
+&lt;p&gt;Here, you have to keep in mind, when starting a thread, you must call the &lt;code&gt;start()&lt;/code&gt; method, not the &lt;code&gt;run()&lt;/code&gt; method. This is because the start method initializes the Thread and then calls the &lt;code&gt;run()&lt;/code&gt; method. So, that means the platform that constructs the Thread calls the run method, not us as programmers. This information is very crucial to remember.&lt;/p&gt;
+&lt;p&gt;The above code will result following output:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-textmate&#34;&gt;Creating a new thread from : Thread[main,5,main]
+Leaving from: Thread[main,5,main]
+Executing code from: Thread[Thread-0,5,main]
+Hello world
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;So, the steps are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Create a class extending the &lt;code&gt;java.lang.Thread&lt;/code&gt; class&lt;/li&gt;
+&lt;li&gt;Override the &lt;code&gt;run()&lt;/code&gt; method in it.&lt;/li&gt;
+&lt;li&gt;Put the code that you want to be executed by this Thread in the run method.&lt;/li&gt;
+&lt;li&gt;Create an instance of this class and then call &lt;code&gt;start()&lt;/code&gt; method of its instance. That’s it.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The other way is to have an implementation of the &lt;code&gt;Runnable&lt;/code&gt; interface. For example:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;package com.bazlur;
+
+public class MyRunnable implements Runnable{
+ @Override
+ public void run() {
+  System.out.println(&amp;quot;Executing code using Runnable from: &amp;quot; + Thread.currentThread());
+  System.out.println(&amp;quot;Hello world&amp;quot;);
+ }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In the above class, we have implemented the runnable interface, and put our desired code in the run method.&lt;/p&gt;
+&lt;p&gt;The next steps is to create an instance of java.lang.Thread. We will put an instance of the MyRunnable class as an argument to the constructor of the &lt;code&gt;java.lang.Thread&lt;/code&gt;. Then we call the start method:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;package com.bazlur;
+
+public class Playground {
+ public static void main(String[] args) {
+  System.out.println(&amp;quot;Creating a new thread from : &amp;quot; + Thread.currentThread());
+
+  var myRunnable = new MyRunnable();
+  var thread = new Thread(myRunnable);
+  thread.start();
+  System.out.println(&amp;quot;Leaving from: &amp;quot; + Thread.currentThread());
+ }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The above code will result following output:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-textmate&#34;&gt;Creating a new thread from : Thread[main,5,main]
+Leaving from: Thread[main,5,main]
+Executing code using Runnable from: Thread[Thread-0,5,main]
+Hello world
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;So, the steps are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Create a class that implements a &lt;code&gt;java.lang.Runnable&lt;/code&gt; interface.&lt;/li&gt;
+&lt;li&gt;Put your desired code in the &lt;code&gt;run()&lt;/code&gt; method.&lt;/li&gt;
+&lt;li&gt;Create an instance of the class that implements the Runnable interface.&lt;/li&gt;
+&lt;li&gt;Use this instance as an argument of &lt;code&gt;java.lang.Thread&lt;/code&gt;’s constructor and create an instance of it.&lt;/li&gt;
+&lt;li&gt;Call the &lt;code&gt;start()&lt;/code&gt; method of the newly created instance of Thread.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;That’s it.&lt;/p&gt;
+&lt;p&gt;Alternatively, you can use an anonymous inner class, and put this as an argument of the Thread’s constructor. Example:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;var thread = new Thread(new Runnable() {
+@Override
+ public void run() {
+  System.out.println(&amp;quot;Executing code using Runnable from: &amp;quot; + Thread.currentThread());
+  System.out.println(&amp;quot;Hello world&amp;quot;);
+ }
+});
+thread.start();
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Or, even, you can use lambda expression, since the &lt;code&gt;Runnable&lt;/code&gt; interface has a SAM (single abstract method). Example:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;var thread = new Thread(() -&amp;gt; {
+ System.out.println(&amp;quot;Executing code using Runnable from: &amp;quot; + Thread.currentThread());
+ System.out.println(&amp;quot;Hello world&amp;quot;);
+});
+thread.start();
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;That’s it for today!&lt;/p&gt;
+&lt;p&gt;Don’t Forget to Share This Post!&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>জাভা প্রোগ্রামিং</title>

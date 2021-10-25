@@ -22,8 +22,8 @@
     <meta property="fb:pages" content="556530934551556" />
 
     
-    <title>7 Ways to Improve Your Code Reading Skills - Bazlur&#39;s Stream of Thoughts</title>
-    <meta property="og:title" content="7 Ways to Improve Your Code Reading Skills - Bazlur&#39;s Stream of Thoughts">
+    <title>Java Thread Programming (Part 1) - Bazlur&#39;s Stream of Thoughts</title>
+    <meta property="og:title" content="Java Thread Programming (Part 1) - Bazlur&#39;s Stream of Thoughts">
     
 
     <meta name="twitter:card" content="summary">
@@ -34,8 +34,10 @@
 
     
     
-    <meta property="description" content="Reading source code is in the job description of a software developer. However, this experience is not always pleasant. Not everyone would like to read someone else’s code because they find it boring, &amp;hellip;">
-    <meta property="og:description" content="Reading source code is in the job description of a software developer. However, this experience is not always pleasant. Not everyone would like to read someone else’s code because they find it boring, &amp;hellip;">
+    <meta property="description" content="This article was first published in Foojay.io
+[&amp;hellip;] We write code in a file line by line, and then it gets executed. To be able to execute a piece of code requires an execution environment. In &amp;hellip;">
+    <meta property="og:description" content="This article was first published in Foojay.io
+[&amp;hellip;] We write code in a file line by line, and then it gets executed. To be able to execute a piece of code requires an execution environment. In &amp;hellip;">
     
     
 
@@ -126,12 +128,14 @@ if (!doNotTrack) {
 
 
 
+
+
 <div class="article-meta">
-    <h1><span class="title">7 Ways to Improve Your Code Reading Skills</span></h1>
+    <h1><span class="title">Java Thread Programming (Part 1)</span></h1>
     
     <p class="post-date">Posted on
-        <time class="dt-published" datetime="2020-10-14T00:57:21-04:00">
-        14 October, 2020 at 00:57 EDT
+        <time class="dt-published" datetime="2021-10-07T06:42:00-04:00">
+        7 October, 2021 at 06:42 EDT
         </time>  by <a href="/about-me/" class="p-author h-card"
                                        rel="author">A N M Bazlur Rahman</a>
     </p>
@@ -139,46 +143,148 @@ if (!doNotTrack) {
 </div>
 
 <p class="post-tag">
-    <div></div>
+    <div>Categories: &nbsp;&nbsp;<a class="post-tag tag-small" href="/categories/java" rel="tag"> java </a> &nbsp; <a class="post-tag tag-small" href="/categories/concurrency" rel="tag"> concurrency </a> &nbsp; <a class="post-tag tag-small" href="/categories/thread-programming" rel="tag"> Thread Programming </a> &nbsp; <a class="post-tag tag-small" href="/categories/thread" rel="tag"> thread </a></div>
 </p>
 
 <main>
-    <p>Reading source code is in the job description of a software developer. However, this experience is not always pleasant. Not everyone would like to read someone else’s code because they find it boring, sometimes frustrating. There are cases when you start reading someone else’s code but end up getting a bitter feeling because you are not being able to understand it or the code is not well written. Most developers want to focus on writing code rather reading it, not realizing that reading code is also an important skill to have.</p>
-<p>However, reading source code has a lot of benefits. The payoffs of reading code are enormous. One can compare coding with literature. Most writers focus on reading great masterpieces while they write. The reason is you cannot just create anything out of a vacuum. You have to absorb things from different sources and work on top of that and create your own masterpiece. Writing code is not in any way different from this.</p>
-<p>To be able to write good code, you have to read a lot of good code. This way you can learn how other developers think and how they solve a particular problem and where they lack. You can take up different ideas, styles, and patterns from reading others' code and let your knowledge grow gradually.</p>
-<p>If we want to put it in simple words– code reading skills improve coding skills.</p>
-<p>There are several ways to improve reading skills. In this article, I would like to mention a few.</p>
-<ol>
-<li>
-<p><strong>Run the code</strong> — Well, this is the first step in reading code. This might not give you a lot of details about the project, however, you will know how to build it and run it, and you will get to learn about the libraries it uses, the framework(s) it depends on, etc., which is a great way to improve your understanding of a particular project. If you want to write your own piece of software similar to the particular project you are exploring, you might get some ideas about the possible framework or libraries you should use.</p>
-</li>
-<li>
-<p><strong>Find the high-level logic</strong> — You may not jump into each detail when you start reading a project. Rather, you should focus on the high-level structure. Start from the entry point. Most projects have a main method, start from there. Besides, if this is a web application, start looking into different packages, like where the business logic is housed, where the UI code is kept, where the controllers are, etc. Basically, skim through the whole project and gain a primary idea, and then ask yourself where you want to focus and which part you want to read first. You may not read the entire code base, rather, just a portion of it may interest you. When you find your spot, you can start by method calling and see where it leads you.</p>
-</li>
-<li>
-<p><strong>Use/ know tools</strong>– There are plenty of tools out there for reading and exploring source code that can help to visualize code. For example, IntelliJIdea has the capability to navigate source code, allowing you to search by words, part of a word, or even an abbreviation. You should learn the keyboard shortcuts as well. Navigating source code with the mouse can be pretty boring and slow where working with the keyboard shortcuts can be faster. You can jump from one part of the source code to another quickly.
-There is another great software to read code, called Sourcegraph, which was created by two Stanford grads, Quinn Slack and Beyang Liu, who, after spending hours hunting through the poorly documented code, decided to build a tool to help them better reading and understanding the code.</p>
-</li>
-<li>
-<p><strong>Know the language/ conventions</strong>– Knowing a particular language deeply helps you to improve your code reading skill. Every language has its own set of conventions, styles, and syntax. Knowledge of those helps you to be familiar with a particular piece of code, quickly. For example, in Java, method names start with a lower case letter, whereas in C# they start with an uppercase letter. Knowing this distinction helps you to identify the methods from the source code.</p>
-</li>
-<li>
-<p><strong>Read the best practices/ design patterns</strong>– The code you are reading, or a certain construct of it, may seem obscure or you may not be familiar with it, which is natural. There are plenty of good practices and design patterns that people use to do things correctly and optimally. For example, there is a pattern called Singleton where the constructor is kept private. You may ask, why on earth someone want to keep a constructor private, I have always seen it is as public, otherwise, how would I create an instance out of a class. Well, there is a reason behind it. Singleton patterns prevent you from instantiating a class more than once, which has many practical use cases. If you know the pattern, you would not bang your head against the wall for that. So, having the knowledge of certain patterns, for example, Gang of Four has 23 documented design patterns, can help your code reading skill dramatically.</p>
-</li>
-<li>
-<p><strong>Code Review</strong>– Software development is a very collaborative effort. No one can build a large or a significant software alone. Every software is built by a team. In a team, everyone contributes to shaping a project. At the end of the day, everyone’s contributions get merged and become a good piece of work which has a real value to the customers. Besides doing the actual coding, there is another practice that every team these days does, which is, review each other’s code while making observations, suggestions, and learning from one another. This is a powerful tool for building knowledge of a code base, creating strong bonds in a team, and improving code quality that leads to fewer bugs in the system, and happy customers.
-Doing code reviews, you are forced to read someone else’s code in your team which ends up improving your code reading skills.</p>
-</li>
-<li>
-<p><strong>Temporary Refactoring</strong>– Temporary refactoring also can help you improve your code reading skill. You can start taking a long method and then keep breaking the method into multiple pieces. Keep doing that until you get a sense of what the intent behind the larger method was. After that, you can take a few notes on what the method does and then rollback the changes.</p>
-</li>
-</ol>
-<p>This can help your understanding of the method construct and improve your knowledge of refactoring as well.</p>
+    <p>This article was first published in <a href="https://foojay.io/today/java-thread-programming-part-1/">Foojay.io</a></p>
+<h2 id="what-is-a-thread">What is a Thread?</h2>
+<p>We write code in a file line by line, and then it gets executed. To be able to execute a piece of code requires an execution environment. In Java, <strong>a thread is an execution environment</strong>. If a program has only one execution environment, then we call this program a single-threaded program.</p>
+<p>Interestingly, in Java, we can create a lot of threads to run different parts of the code of a program executing independently. And when we have achieved that, we call it a multi-threaded program.</p>
+<p>In short, <strong>a thread executes a piece of code on a computer</strong>.</p>
+<h2 id="what-are-some-benefits-of-multiple-threads">What are some benefits of multiple threads?</h2>
+<p>The benefits of having multiple threads are enormous. Think about a web application that serves hundreds of users at a time, then the question would be, how it does it do that? Well, the answer is simple: it usually runs different requests on a separate thread. So each user gets a thread to execute their request.</p>
+<p>Similarly, when I’m typing on this computer on a word processor, it’s doing multiple things simultaneously. One is perhaps checking my spelling, and one is possibly taking input from when I type on the keyboard. That way, we can achieve various tasks simultaneously. Otherwise, if the word processor would be a single-threaded program, it would need to first read input from the keyboard, and then only it would check the spelling. Naturally, then, the experience wouldn’t be pleasant, at all.</p>
+<h2 id="why-do-we-need-to-learn-about-threads">Why do we need to learn about threads?</h2>
+<p>We could think of many more similar examples in addition to the one mentioned above, but let’s think about the current computer architecture. The modern computer comes with multiple cores, since clock speed isn’t increasing anymore nowadays. The laptop I’m using at this moment has 16 cores. That means that at a point in time, it can run 16 different things. If a program is single-threaded, then it can only utilize 1 core at the moment, the rest of the 15 would be just idle. We shouldn’t waste valuable resources like this.</p>
+<p>So, we should be able to write our program in a way to utilize the available resources in the best possible way. On the other hand, if an application can do multiple things at once, we can achieve substantial progress quickly, and the application can become more responsive. We can even subdivide a program into various independent units and then execute them in parallel, resulting in faster results.</p>
+<h2 id="do-all-java-programs-have-a-thread-associated-with-them">Do all Java programs have a thread associated with them?</h2>
+<p>The answer is yes. Java was designed to have threads from the very beginning. If we just start a &ldquo;hello world&rdquo; program in the main method, it will be executed through a thread, which is called the &ldquo;main Thread&rdquo;. Let’s see an example:</p>
+<pre><code class="language-java">package com.bazlur;
+
+public class HelloWorld {
+ public static void main(String[] args) {
+  System.out.println(&quot;This program is running on: &quot; + Thread.currentThread());
+  System.out.println(&quot;Hello world&quot;);
+ }
+}
+</code></pre>
+<p><strong>Note:</strong> <code>Thread.currrentThread()</code> method returns the reference of the Thread currently executing the piece of code.</p>
+<p>If we run the above program, then we will get the following output in the console:</p>
+<pre><code class="language-textmate">This program is running on: Thread[main,5,main]
+Hello world
+</code></pre>
+<p>So, the output ensures us that running a Java program is all about running its different pieces of code on one or multiple threads.</p>
+<h2 id="how-do-i-create-my-own-threads">How do I create my own threads?</h2>
+<p>The code that writes in the main method executes by means of the main Thread. However, we can have more threads to run multiple pieces of code at once. There are two ways of creating threads:</p>
+<ul>
+<li>Through extending the <code>java.lang.Thread</code> class</li>
+<li>Through an interface called <code>java.lang.Runnable</code></li>
+</ul>
+<p>Let’s start by extending the Thread class.</p>
+<pre><code class="language-java">package com.bazlur;
+
+public class MyThread extends Thread {
+ @Override
+ public void run() {
+  System.out.println(&quot;Executing code from: &quot; + Thread.currentThread());
+  System.out.println(&quot;Hello world&quot;);
+ }
+}
+</code></pre>
+<p>In the above code, we have created a class, <code>MyThread</code>, extending the <code>Thread</code> class, and then we override the run method. Thus, whatever we write in this run method will be executed by this <code>Thread</code>.</p>
+<p>To use this Thread, we have to create an instance and then call its <code>start()</code> method:</p>
+<pre><code class="language-java">package com.bazlur;
+
+public class Playground {
+ public static void main(String[] args) {
+  System.out.println(&quot;Creating a new thread from : &quot; + Thread.currentThread());
+  var myThread = new MyThread();
+  myThread.start();
+  System.out.println(&quot;Leaving from: &quot; + Thread.currentThread());
+ }
+}
+</code></pre>
+<p>In the above code, the main method gets executed by the main Thread. The main Thread sees the code that instantiates a Thread object, so it does. Then it executes its <code>start()</code> method. Since there is no more code after it, the main Thread exits here. On the other hand, the <code>MyThread</code> keeps running its code until it finishes its work.</p>
+<p>Here, you have to keep in mind, when starting a thread, you must call the <code>start()</code> method, not the <code>run()</code> method. This is because the start method initializes the Thread and then calls the <code>run()</code> method. So, that means the platform that constructs the Thread calls the run method, not us as programmers. This information is very crucial to remember.</p>
+<p>The above code will result following output:</p>
+<pre><code class="language-textmate">Creating a new thread from : Thread[main,5,main]
+Leaving from: Thread[main,5,main]
+Executing code from: Thread[Thread-0,5,main]
+Hello world
+</code></pre>
+<p>So, the steps are:</p>
+<ul>
+<li>Create a class extending the <code>java.lang.Thread</code> class</li>
+<li>Override the <code>run()</code> method in it.</li>
+<li>Put the code that you want to be executed by this Thread in the run method.</li>
+<li>Create an instance of this class and then call <code>start()</code> method of its instance. That’s it.</li>
+</ul>
+<p>The other way is to have an implementation of the <code>Runnable</code> interface. For example:</p>
+<pre><code class="language-java">package com.bazlur;
+
+public class MyRunnable implements Runnable{
+ @Override
+ public void run() {
+  System.out.println(&quot;Executing code using Runnable from: &quot; + Thread.currentThread());
+  System.out.println(&quot;Hello world&quot;);
+ }
+}
+</code></pre>
+<p>In the above class, we have implemented the runnable interface, and put our desired code in the run method.</p>
+<p>The next steps is to create an instance of java.lang.Thread. We will put an instance of the MyRunnable class as an argument to the constructor of the <code>java.lang.Thread</code>. Then we call the start method:</p>
+<pre><code class="language-java">package com.bazlur;
+
+public class Playground {
+ public static void main(String[] args) {
+  System.out.println(&quot;Creating a new thread from : &quot; + Thread.currentThread());
+
+  var myRunnable = new MyRunnable();
+  var thread = new Thread(myRunnable);
+  thread.start();
+  System.out.println(&quot;Leaving from: &quot; + Thread.currentThread());
+ }
+}
+</code></pre>
+<p>The above code will result following output:</p>
+<pre><code class="language-textmate">Creating a new thread from : Thread[main,5,main]
+Leaving from: Thread[main,5,main]
+Executing code using Runnable from: Thread[Thread-0,5,main]
+Hello world
+</code></pre>
+<p>So, the steps are:</p>
+<ul>
+<li>Create a class that implements a <code>java.lang.Runnable</code> interface.</li>
+<li>Put your desired code in the <code>run()</code> method.</li>
+<li>Create an instance of the class that implements the Runnable interface.</li>
+<li>Use this instance as an argument of <code>java.lang.Thread</code>’s constructor and create an instance of it.</li>
+<li>Call the <code>start()</code> method of the newly created instance of Thread.</li>
+</ul>
+<p>That’s it.</p>
+<p>Alternatively, you can use an anonymous inner class, and put this as an argument of the Thread’s constructor. Example:</p>
+<pre><code class="language-java">var thread = new Thread(new Runnable() {
+@Override
+ public void run() {
+  System.out.println(&quot;Executing code using Runnable from: &quot; + Thread.currentThread());
+  System.out.println(&quot;Hello world&quot;);
+ }
+});
+thread.start();
+</code></pre>
+<p>Or, even, you can use lambda expression, since the <code>Runnable</code> interface has a SAM (single abstract method). Example:</p>
+<pre><code class="language-java">var thread = new Thread(() -&gt; {
+ System.out.println(&quot;Executing code using Runnable from: &quot; + Thread.currentThread());
+ System.out.println(&quot;Hello world&quot;);
+});
+thread.start();
+</code></pre>
+<p>That’s it for today!</p>
+<p>Don’t Forget to Share This Post!</p>
 
 </main>
 
 <p class="post-tag">
-    <div id="tags"><a class="post-tag tag-small" href="/tags/source-code" rel="tag"> source code </a> &nbsp; <a class="post-tag tag-small" href="/tags/agile" rel="tag"> agile </a> &nbsp; <a class="post-tag tag-small" href="/tags/code-review" rel="tag"> code review </a> &nbsp; <a class="post-tag tag-small" href="/tags/code-readability" rel="tag"> code readability </a></div>
+    <div id="tags"><a class="post-tag tag-small" href="/tags/java" rel="tag"> java </a> &nbsp; <a class="post-tag tag-small" href="/tags/coding" rel="tag"> coding </a> &nbsp; <a class="post-tag tag-small" href="/tags/thread" rel="tag"> Thread </a> &nbsp; <a class="post-tag tag-small" href="/tags/concurrency" rel="tag"> Concurrency </a></div>
 </p>
 
 
@@ -278,25 +384,25 @@ Doing code reviews, you are forced to read someone else’s code in your team wh
 <span style="color: silver;">Share on: </span>
 <div id="share-buttons">
     <div class="facebook" title="Share this on Facebook"
-         onclick="window.open('http://www.facebook.com/share.php?u=http:\/\/bazlur.com\/2020\/10\/7-ways-to-improve-your-code-reading-skills\/');">
+         onclick="window.open('http://www.facebook.com/share.php?u=http:\/\/bazlur.com\/2021\/10\/java-thread-programming-part-1\/');">
         <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
             <path d="M1343 12v264h-157q-86 0-116 36t-30 108v189h293l-39 296h-254v759h-306v-759h-255v-296h255v-218q0-186 104-288.5t277-102.5q147 0 228 12z"/>
         </svg>
     </div>
     <div class="twitter" title="Share this on Twitter"
-         onclick="window.open('http://twitter.com/intent/tweet?text=7 Ways to Improve Your Code Reading Skills&url=http:\/\/bazlur.com\/2020\/10\/7-ways-to-improve-your-code-reading-skills\/');">
+         onclick="window.open('http://twitter.com/intent/tweet?text=Java Thread Programming (Part 1)&url=http:\/\/bazlur.com\/2021\/10\/java-thread-programming-part-1\/');">
         <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
             <path d="M1684 408q-67 98-162 167 1 14 1 42 0 130-38 259.5t-115.5 248.5-184.5 210.5-258 146-323 54.5q-271 0-496-145 35 4 78 4 225 0 401-138-105-2-188-64.5t-114-159.5q33 5 61 5 43 0 85-11-112-23-185.5-111.5t-73.5-205.5v-4q68 38 146 41-66-44-105-115t-39-154q0-88 44-163 121 149 294.5 238.5t371.5 99.5q-8-38-8-74 0-134 94.5-228.5t228.5-94.5q140 0 236 102 109-21 205-78-37 115-142 178 93-10 186-50z"/>
         </svg>
     </div>
     <div class="linkedin" title="Share this on Linkedin"
-         onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&url=http:\/\/bazlur.com\/2020\/10\/7-ways-to-improve-your-code-reading-skills\/&title=&summary=&source=');">
+         onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&url=http:\/\/bazlur.com\/2021\/10\/java-thread-programming-part-1\/&title=&summary=&source=');">
         <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
             <path d="M477 625v991h-330v-991h330zm21-306q1 73-50.5 122t-135.5 49h-2q-82 0-132-49t-50-122q0-74 51.5-122.5t134.5-48.5 133 48.5 51 122.5zm1166 729v568h-329v-530q0-105-40.5-164.5t-126.5-59.5q-63 0-105.5 34.5t-63.5 85.5q-11 30-11 81v553h-329q2-399 2-647t-1-296l-1-48h329v144h-2q20-32 41-56t56.5-52 87-43.5 114.5-15.5q171 0 275 113.5t104 332.5z"/>
         </svg>
     </div>
     
-    <div class="mail" title="Share this through Email" onclick="window.open('mailto:?&body=http:\/\/bazlur.com\/2020\/10\/7-ways-to-improve-your-code-reading-skills\/');">
+    <div class="mail" title="Share this through Email" onclick="window.open('mailto:?&body=http:\/\/bazlur.com\/2021\/10\/java-thread-programming-part-1\/');">
         <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
             <path d="M1792 710v794q0 66-47 113t-113 47h-1472q-66 0-113-47t-47-113v-794q44 49 101 87 362 246 497 345 57 42 92.5 65.5t94.5 48 110 24.5h2q51 0 110-24.5t94.5-48 92.5-65.5q170-123 498-345 57-39 100-87zm0-294q0 79-49 151t-122 123q-376 261-468 325-10 7-42.5 30.5t-54 38-52 32.5-57.5 27-50 9h-2q-23 0-50-9t-57.5-27-52-32.5-54-38-42.5-30.5q-91-64-262-182.5t-205-142.5q-62-42-117-115.5t-55-136.5q0-78 41.5-130t118.5-52h1472q65 0 112.5 47t47.5 113z"/>
         </svg>
@@ -307,7 +413,7 @@ Doing code reviews, you are forced to read someone else’s code in your team wh
 <nav id="article-skip">
     <div class="next">
         
-        <a alt="Newer article" href="http://bazlur.com/2020/10/java-local-type-inference/">&larr; Newer</a>
+        <p>&nbsp;</p>
         
     </div>
     <div class="top">
@@ -315,13 +421,13 @@ Doing code reviews, you are forced to read someone else’s code in your team wh
     </div>
     <div class="prev">
         
-        <a alt="Older article" href="http://bazlur.com/posts/2020-03-06-%E0%A6%9C%E0%A6%BE%E0%A6%AD%E0%A6%BE-%E0%A6%93%E0%A6%AF%E0%A6%BC%E0%A7%87%E0%A6%AC-%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A7%8B%E0%A6%97%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%AE%E0%A6%BF/">Older &rarr;</a>
+        <a alt="Older article" href="http://bazlur.com/java-programming/">Older &rarr;</a>
         
     </div>
 </nav>
 
 
-
+ <h2 class="author">Author: A N M Bazlur Rahman</h2>
 
 <img class="header-picture"
      src="//www.gravatar.com/avatar/2252a7faaa6609bfa3514c284f7e84ef?s=90" alt="" />
@@ -380,9 +486,9 @@ Doing code reviews, you are forced to read someone else’s code in your team wh
 
 <script>
     var disqus_config = function () {
-        this.page.identifier = 'http:\/\/bazlur.com\/2020\/10\/7-ways-to-improve-your-code-reading-skills\/';
-        this.page.title = '7 Ways to Improve Your Code Reading Skills';
-        this.page.url = 'http:\/\/bazlur.com\/2020\/10\/7-ways-to-improve-your-code-reading-skills\/';
+        this.page.identifier = 'http:\/\/bazlur.com\/2021\/10\/java-thread-programming-part-1\/';
+        this.page.title = 'Java Thread Programming (Part 1)';
+        this.page.url = 'http:\/\/bazlur.com\/2021\/10\/java-thread-programming-part-1\/';
     };
 
     (function () { 

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>concurrency on Bazlur&#39;s Stream of Thoughts</title>
+    <link>http://bazlur.com/categories/concurrency/</link>
+    <description>Recent content in concurrency on Bazlur&#39;s Stream of Thoughts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>Copyright © 2021, A N M Bazlur Rahman</copyright>
+    <lastBuildDate>Thu, 07 Oct 2021 06:42:00 -0400</lastBuildDate><atom:link href="http://bazlur.com/categories/concurrency/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Java Thread Programming (Part 1)</title>
+      <link>http://bazlur.com/2021/10/java-thread-programming-part-1/</link>
+      <pubDate>Thu, 07 Oct 2021 06:42:00 -0400</pubDate>
+      
+      <guid>http://bazlur.com/2021/10/java-thread-programming-part-1/</guid>
+      <description>This article was first published in Foojay.io
+What is a Thread? We write code in a file line by line, and then it gets executed. To be able to execute a piece of code requires an execution environment. In Java, a thread is an execution environment. If a program has only one execution environment, then we call this program a single-threaded program.
+Interestingly, in Java, we can create a lot of threads to run different parts of the code of a program executing independently.</description>
+    </item>
+    
+  </channel>
+</rss>
