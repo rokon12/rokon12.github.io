@@ -6,10 +6,92 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright © 2021, A N M Bazlur Rahman</copyright>
-    <lastBuildDate>Tue, 12 Oct 2021 06:42:00 -0400</lastBuildDate>
+    <lastBuildDate>Thu, 21 Oct 2021 06:42:00 -0400</lastBuildDate>
     
         <atom:link href="http://bazlur.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Java Thread Programming (Part 3)</title>
+      <link>http://bazlur.com/2021/10/java-thread-programming-part-3/</link>
+      <pubDate>Thu, 21 Oct 2021 06:42:00 -0400</pubDate>
+      
+      <guid>http://bazlur.com/2021/10/java-thread-programming-part-3/</guid>
+      <description>&lt;p&gt;This article was first published in &lt;a href=&#34;https://foojay.io/today/java-thread-programming-part-3/&#34;&gt;Foojay.io&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Continuing &lt;a href=&#34;https://bazlur.com/2021/10/java-thread-programming-part-2/&#34;&gt;from part 2&lt;/a&gt;, let’s start this article with a bit of context first (&lt;em&gt;and if you don’t like reading text, you can skip this introduction, and go directly to the section below where I discuss pieces of code&lt;/em&gt;).&lt;/p&gt;
+&lt;h2 id=&#34;context&#34;&gt;Context&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;When we start an application program, the operating system creates a process.&lt;/li&gt;
+&lt;li&gt;Each process has a unique id (we call it PID) and a memory boundary.&lt;/li&gt;
+&lt;li&gt;A process allocates its required memory from the main memory, and it manipulates data within a boundary.&lt;/li&gt;
+&lt;li&gt;No other process can access the allocated memory that is already acquired by a process.&lt;/li&gt;
+&lt;li&gt;It works like a sandbox, and in that way avoids processes stepping on one another&amp;rsquo;s foot.&lt;/li&gt;
+&lt;li&gt;Ideally, we can have many small processes to run multiple things simultaneously on our computers and let the operating systems scheduler schedule them as it sees fit.&lt;/li&gt;
+&lt;li&gt;In fact, this is how it was done before the development of threads. However, when we want to do large pieces of work, breaking them into smaller pieces, we need to accumulate them once they are finished.&lt;/li&gt;
+&lt;li&gt;And not all tiny pieces can be independent, some of them must rely on each other, and thus we need to share information amongst them.&lt;/li&gt;
+&lt;li&gt;To do that, we use inter-process communication. The problem with this idea is that having too many processes on a computer and then communicating with each other isn’t cheap. And precisely that is where the notion of threads comes into the picture.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The idea of the thread is that a process can have many tiny processes within itself. These small processes can share the memory space that a process acquires. These little processes are called a thread. So the bottom line is, threads are independent execution environments in the CPU and share the same memory space. That allows them faster memory access and better performance.&lt;/p&gt;
+&lt;p&gt;That seems to be a good idea. However, it comes with many problems alongside its benefits. Let’s discuss some of those problems and how we can deal with them. But don’t get discouraged, the benefits still outweigh the problems!&lt;/p&gt;
+&lt;h2 id=&#34;code&#34;&gt;Code&lt;/h2&gt;
+&lt;p&gt;Let’s begin by running a piece of code.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;package com.bazlur.threads;
+
+public class FoojayPlayground {
+ private static boolean running = false;
+
+ public static void main(String[] args) {
+  var t1 = new Thread(() -&amp;gt; {
+   while (!running) {
+   }
+   System.out.println(&amp;quot;Foojay.io&amp;quot;);
+  });
+
+  var t2 = new Thread(() -&amp;gt; {
+   running = true;
+   System.out.println(&amp;quot;I love &amp;quot;);
+  });
+
+  t1.start();
+  t2.start();
+ }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The above piece of code is reasonably straightforward. We have created two threads. Both of them share a variable named &amp;ldquo;running&amp;rdquo;. There is a while loop inside the first thread. The loop will keep running while the variable is false, which means this thread will continue to execute the loop unless the variable is changed. Once the loop breaks, it prints “Foojay.io.” The second thread changes the variable and then prints “I love.”&lt;/p&gt;
+&lt;p&gt;Now the question gets to be, what would be the output?&lt;/p&gt;
+&lt;p&gt;Outwardly it seems the output would be following:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-textmate&#34;&gt;I love 
+Foojay.io
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Well, that’s only one case because if you run the above code several times, you will see different results. There would be three outcomes of the program, varying on different computers. The reason is, we can only ask the thread to execute a piece of code, but &lt;strong&gt;we cannot guarantee the execution order of multiple threads&lt;/strong&gt;. Threads are scheduled by the operating system&amp;rsquo;s thread scheduler. We will discuss the thread’s lifecycle in forthcoming articles.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Case 1.&lt;/strong&gt; The first thread will continue running the loop. In contrast, the second thread will change the variable and immediately print “I love”. Since the variable now changed, the loop breaks, and it prints “Foojay.io”, so that the output is:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-textmate&#34;&gt;I love 
+Foojay.io
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Case 2.&lt;/strong&gt; The second thread will run first and change the variable and then immediately in the first thread, the loop will break and print the “Foojay.io”. And the second thread will print “I love”. Thus the output is:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-textmate&#34;&gt;Foojay.io 
+I love
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Case 3.&lt;/strong&gt; The above two cases seem reasonable. &lt;strong&gt;However, there is a third case that we may not anticipate immediately:&lt;/strong&gt; the first thread may be stuck and the second thread will print “I love” and that’s all. No more output. This can be difficult to reproduce, but it can happen.&lt;/p&gt;
+&lt;p&gt;Let me explain the third case!&lt;/p&gt;
+&lt;p&gt;We know the modern computer has multiple CPUs in it. Nonetheless, we cannot guarantee in which core the thread will eventually run. For example, the above two threads can run in two different CPUs, which most likely the case.&lt;/p&gt;
+&lt;p&gt;When a CPU executes a code, it reads data from the main memory. However, modern CPUs have various caches for faster access to memory. There are three types of cache associated with each CPU. They are L1 Cache, L2 Cache, and L3 Cache.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://bazlur.com/img/Cache-678x510.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;When starting the first thread, the CPU it runs may cache the running variable and keeps it running. But, on the other hand, when the second thread runs and changes the variable on a different CPU, it won’t be visible to the first thread. Thus the problem of the third case would occur.&lt;/p&gt;
+&lt;p&gt;We cannot tell whether this would be the case because it all depends on the operating system and having multiple CPUs in a computer. Despite this, we can prevent the CPU from caching, by using &amp;ldquo;volatile&amp;rdquo; in the variable. This will instruct the CPU not to cache the variable and, instead, it will read it from the main memory:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public class FoojayPlayground {
+   private static volatile boolean running = false;
+   ...
+   ...
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now, if we run the above program, the third case will not happen.&lt;/p&gt;
+&lt;p&gt;The above problem is called the visibility problem. There are a few similar problems that deal with the visibility issue.&lt;/p&gt;
+&lt;p&gt;We will discuss them in the following articles!&lt;/p&gt;
+&lt;p&gt;That’s it for today!&lt;/p&gt;
+&lt;p&gt;Don’t Forget to Share This Post!&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Java Thread Programming (Part 2)</title>

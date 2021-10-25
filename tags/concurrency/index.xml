@@ -7,7 +7,18 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright © 2021, A N M Bazlur Rahman</copyright>
-    <lastBuildDate>Tue, 12 Oct 2021 06:42:00 -0400</lastBuildDate><atom:link href="http://bazlur.com/tags/concurrency/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 21 Oct 2021 06:42:00 -0400</lastBuildDate><atom:link href="http://bazlur.com/tags/concurrency/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Java Thread Programming (Part 3)</title>
+      <link>http://bazlur.com/2021/10/java-thread-programming-part-3/</link>
+      <pubDate>Thu, 21 Oct 2021 06:42:00 -0400</pubDate>
+      
+      <guid>http://bazlur.com/2021/10/java-thread-programming-part-3/</guid>
+      <description>This article was first published in Foojay.io
+Continuing from part 2, let’s start this article with a bit of context first (and if you don’t like reading text, you can skip this introduction, and go directly to the section below where I discuss pieces of code).
+Context  When we start an application program, the operating system creates a process. Each process has a unique id (we call it PID) and a memory boundary.</description>
+    </item>
+    
     <item>
       <title>Java Thread Programming (Part 2)</title>
       <link>http://bazlur.com/2021/10/java-thread-programming-part-2/</link>

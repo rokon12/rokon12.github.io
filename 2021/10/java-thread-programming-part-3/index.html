@@ -22,8 +22,8 @@
     <meta property="fb:pages" content="556530934551556" />
 
     
-    <title>5 Mistakes Java developer makes that prevent them from growing their careers - Bazlur&#39;s Stream of Thoughts</title>
-    <meta property="og:title" content="5 Mistakes Java developer makes that prevent them from growing their careers - Bazlur&#39;s Stream of Thoughts">
+    <title>Java Thread Programming (Part 3) - Bazlur&#39;s Stream of Thoughts</title>
+    <meta property="og:title" content="Java Thread Programming (Part 3) - Bazlur&#39;s Stream of Thoughts">
     
 
     <meta name="twitter:card" content="summary">
@@ -34,8 +34,10 @@
 
     
     
-    <meta property="description" content="ব্রুনো সোজা (Bruno Souza) জাভা ডেভেলপারদের ক্যারিয়ার উন্নতির লক্ষ্যে একটি নতুন সাইট তৈরি করেছে। গতকাল তার একটি ওয়েবইনার ছিল। এর টপিকটি হলো- একজন জাভা প্রোগ্রামার তার ক্যারিয়ার উন্নতির ক্ষেত্রে যে &amp;hellip;">
-    <meta property="og:description" content="ব্রুনো সোজা (Bruno Souza) জাভা ডেভেলপারদের ক্যারিয়ার উন্নতির লক্ষ্যে একটি নতুন সাইট তৈরি করেছে। গতকাল তার একটি ওয়েবইনার ছিল। এর টপিকটি হলো- একজন জাভা প্রোগ্রামার তার ক্যারিয়ার উন্নতির ক্ষেত্রে যে &amp;hellip;">
+    <meta property="description" content="This article was first published in Foojay.io
+Continuing from part 2, let’s start this article with a bit of context first (and if you don’t like reading text, you can skip this introduction, and go &amp;hellip;">
+    <meta property="og:description" content="This article was first published in Foojay.io
+Continuing from part 2, let’s start this article with a bit of context first (and if you don’t like reading text, you can skip this introduction, and go &amp;hellip;">
     
     
 
@@ -129,11 +131,11 @@ if (!doNotTrack) {
 
 
 <div class="article-meta">
-    <h1><span class="title">5 Mistakes Java developer makes that prevent them from growing their careers</span></h1>
+    <h1><span class="title">Java Thread Programming (Part 3)</span></h1>
     
     <p class="post-date">Posted on
-        <time class="dt-published" datetime="2016-10-23T16:15:00Z">
-        23 October, 2016 at 16:15 &#43;0000
+        <time class="dt-published" datetime="2021-10-21T06:42:00-04:00">
+        21 October, 2021 at 06:42 EDT
         </time>  by <a href="/about-me/" class="p-author h-card"
                                        rel="author">A N M Bazlur Rahman</a>
     </p>
@@ -141,35 +143,88 @@ if (!doNotTrack) {
 </div>
 
 <p class="post-tag">
-    <div>Categories: &nbsp;&nbsp;<a class="post-tag tag-small" href="/categories/career" rel="tag"> career </a> &nbsp; <a class="post-tag tag-small" href="/categories/java-developers" rel="tag"> Java developers </a> &nbsp; <a class="post-tag tag-small" href="/categories/thoughts" rel="tag"> thoughts </a></div>
+    <div>Categories: &nbsp;&nbsp;<a class="post-tag tag-small" href="/categories/java" rel="tag"> java </a> &nbsp; <a class="post-tag tag-small" href="/categories/concurrency" rel="tag"> concurrency </a> &nbsp; <a class="post-tag tag-small" href="/categories/thread-programming" rel="tag"> Thread Programming </a> &nbsp; <a class="post-tag tag-small" href="/categories/thread" rel="tag"> thread </a></div>
 </p>
 
 <main>
-    <p>ব্রুনো সোজা (Bruno Souza) জাভা ডেভেলপারদের ক্যারিয়ার উন্নতির লক্ষ্যে একটি নতুন <a href="http://www.code4.life/">সাইট</a> তৈরি করেছে। গতকাল তার একটি ওয়েবইনার ছিল। এর টপিকটি হলো- একজন জাভা প্রোগ্রামার তার ক্যারিয়ার উন্নতির ক্ষেত্রে যে ৫ টি ভুল করে থাকে তার উপর। </p>
-<p>ওয়েবইনারটির লিংক: <a href="https://www.youtube.com/watch?v=pFbMYZUUT8Q">https://www.youtube.com/watch?v=pFbMYZUUT8Q</a></p>
-<p>তবে এটিকে আমি বাংলাতে সংক্ষেপে বলার চেষ্টা করবো। তিনি শেষ থেকে শুরু করেছেন । এখানেও সেভাবেই লিখছি – </p>
-<p><strong><strong>পঞ্চমত, শুধুমাত্র টেকনোলজি জানলেই চলবে।</strong></strong></p>
-<p>ডেভেলপারা নিজেদের সময়ের সাথে নিজেদের নৈপুণ্য ধরে রাখতে এবং তা উত্তরোত্তর উন্নত করতে অনেক কাজ করে থাকে, প্রতিনিয়ত নতুন কিছু দেখে এবং শেখে। তবে একজন ভাল ডেভেলপার হওয়ার জন্যে এগুলোই একমাত্র বিষয় নয়। টেকনোলজি শেখার বাইরেও অনেক কিছু করতে হয়। যে জিনিসগুলো একজনের ক্যারিয়ারে সবচেয়ে বেশি প্রভাবিত করে তা শুধুমাত্র টেকনোলজি নয়। সফটওয়্যার কোম্পানিগুলোতে হায়ারিংগুলো সাধারণত পরিচিত নেটওয়ার্কের মধ্যে থেকেই বেশির ভাগ ক্ষেত্রে হয়ে থাকে। যাদের ইতিমধ্যে হায়ার করা হয়েছে তাদের পরিচিত রেফারেন্সের উপর ভিত্তি করে অনেক হায়ার হয়ে থাকে। এ জন্যে অনেক ভাল ভাল জবগুলো সাধারণত সহজে খুঁজে পাওয়া যায় না। সফটওয়্যার ফার্মগুলোর জব নোটিশগুলো সাধারণত তখনি প্রকাশ্যে পাওয়া যায় যখন তারা তাদের পছন্দমত লোক খুঁজে পায়নি নিজেদের নেটওয়ার্কের মাঝে। এক্ষেত্রে আপনি যদি দ্রুত হায়ার্ড হতে চান, তাহলে নিজেকে পরিচিত করে তুলতে হবে। আপনি যে জাভাতে এক্সপার্ট এই তথ্যটি যারা হায়ার করছে তাদের জানাতে হবে। তারা আপনাকে হায়ার করছে না কারণ আপনি হয়তো কখনো ইন্টারেস্ট দেখান নি। আপনাকে ভিজিবল হতে হবে। বিভিন্ন সোসাল কর্মকাণ্ডের সাথে নিজেকে জড়াতে হবে। জাগবিডির (<a href="http://www.jugbd.org">http://www.jugbd.org</a>) ইভেন্টগুলোতে যোগ দিতে পারেন। কোন ওপেন-সোর্স টেকনোলজিতে অংশগ্রহণ করতে পারেন। নিজে নিজে একটা সফটওয়্যার বা এপিআই লিখে সেগুলো শেয়ার করতে পারেন। কারণ আপনি নিজেও হয়তো জানেন না কতরকম অপরচুনিটি আসতে পারে। কেও হয়তো নতুন স্টার্টআপ দিতে পারে যেখানে আপনার মতো একজন ডেভলপারের প্রয়োজন হতে পারে। ইত্যাদি। </p>
-<p><strong><strong>চতুর্থত, অনেক বেশি অনুশীলন বা চর্চা না করা</strong></strong></p>
-<p>প্রচুর অনুশীলন করতে হবে। সফটওয়্যার ডেভেলপমেন্ট একটি ক্রিয়েটিভ প্রক্রিয়া। এতে প্রচুর চিন্তাভাবনার ব্যপার থাকে। কিন্তু এই কাজ করতে যেয়ে যদি ছোটখাটো ইস্যাুুগুলো যেমন- কিভাবে লুপ লিখতে হয়, কিভাবে ল্যাম্বডা ব্যবহার করতে হয় এগুলো নিয়ে চিন্তা করতে হয়, তাহলে মূল বিষয়টিতে বেশি মনযোগ দেওয়া কঠিন হয়ে যায়। এজন্যে কম্যান্ড লাইন, কমন এলগরিদম, ল্যাম্বডা এগুলোকে প্রচুর অনুশীলনের মাধ্যমে একদম হাতের মেমরিতে নিয়ে আনুন যাতে এগুলো করার সসয় খুব বেশি চিন্তা না করতে হয়। </p>
-<p><strong><strong>তৃতীয়ত, আপনি যা জানেন তা অন্যদের সাথে শেয়ার না করা</strong></strong></p>
-<p>অনেকেই আছে যারা শেয়ার করতে পছন্দ করে না। অনেকটা এমন, এই জিনিস আমি জানি, সুতরাং এটি অন্য কাওকে জানাবো না, অন্যের দরকার হলে আমার কাছে আসবে। আরেক দল আছে যারা মনে করে যে তারা শেয়ার করার মতো তেমন কিছু জানে না। ব্যপারটি সত্য নয়। প্রত্যেকেই কিছু না কিছু জানে। অনেকে আবার ভয় পায়। মনে করে, আমি তো জানি না কীভাবে শেয়ার করতে হয় কিংবা আমি তো ভাল বলতে পারি না বা আমার ইংরেজি ভাল নয় ইত্যাদি। কিন্তু এই শেয়ারিং না করা ক্যারিয়ারের জন্যে খারাপ হতে পারে। মূল বিষয় হচ্ছে আপনি যত বেশি শেয়ার করবেন, অন্যরা আপানার সাথে তত বেশি শেয়ার করবে। এতে আপনিও অনেক বেশি লাভবান হবেন। এতে আপনার টিম অনেক ভাল ভাবে কাজ করতে পারবে। আপনি যত বেশি শেয়ার করবেন, আপনার টিম-এ আপনি তত বেশি ভ্যালুয়েবল হবেন। এছাড়াও যত বেশি শেয়ার করবেন, আপনার আশে পাশের লোকজন সেগুলো সম্পর্কে জানবে, এতে করে সবসময় আপনাকে প্রশ্ন করতে আসবে না। এতে আপনার টাইম বেঁচে যাবে। এছাড়াও এটি আপনাকে ভিজিবল করে তুলবে যা পঞ্চম মিসটেকও শুধরে দেবে। </p>
-<p>আরেকটি কঠিন সত্য ব্যপার হলো, মানুষ আসলে আপনাকে খুব একটা কেয়ার করে না। আপনি আসলে তাদের জন্যে কি করতে সেটাই মুখ্য। সুতরাং আপনি যত বেশি শেয়ার করবেন, আপনি অন্যের জন্যে ততবেশি প্রয়োজনীয় হয়ে উঠবেন। </p>
-<p><strong><strong>দ্বিতীয়ত, ফোকাস</strong></strong></p>
-<p>আপনি নিজে দুনিয়ার সব মানুষকে অ্যাকসসে করতে পারবেন না বা সবার সঙ্গে সবকিছু শেয়ার করতে পারবেন না। আপনাকে একটি নির্দিষ্ট বিষয়ে ফোকাস করতে হবে। </p>
-<p>এক্ষেত্রে একটি স্পেসিফিক একটি লাইন ফলো করা যেতে পারে- </p>
-<p><em><strong>I help (a person) to do (something) so he/she can have (something)</strong></em></p>
-<p>Example – </p>
-<p><strong><em>I help my coworker to learn Java so he/she can program in Java</em></strong></p>
-<p><em><strong>I help professional java developers do solve hard Java problems so they can have a secure and satisfying job or project</strong></em></p>
-<p><strong>প্রথমত, সব কিছু নিজে করা</strong></p>
-<p>অনেকেই আছে যারা সব কিছু নিজে নিজে করতে চায়। তারা নিজে অনেকটা গ্রেট পার্সন, দি গ্রেট গাই অথবা দি অ্যমেজিং গার্ল হিসেবে দেখতে চায়। এজন্যে সবকিছু নিজেই করতে চায়। এটি একটি মিস্টেক। নিজে নিজে সব কিছু করা যায় না। শিখতে হলে অন্যদের সাথে টিমআপ করতে হবে। আপনার চেয়ে যারা অনেক ভাল তাদের সাথে কাজ করতে হবে। </p>
-<p>অনেকভাবেই টিমআপ করতে পারেন। একটি চমৎকার আইডিয়া হতে পারে জাভা ইউজার গ্রুপে জয়েন করা। অন্যের কোন ওপেন-সোর্স প্রজেক্টের সাথে জয়েন করতে পারেন।</p>
+    <p>This article was first published in <a href="https://foojay.io/today/java-thread-programming-part-3/">Foojay.io</a></p>
+<p>Continuing <a href="https://bazlur.com/2021/10/java-thread-programming-part-2/">from part 2</a>, let’s start this article with a bit of context first (<em>and if you don’t like reading text, you can skip this introduction, and go directly to the section below where I discuss pieces of code</em>).</p>
+<h2 id="context">Context</h2>
+<ul>
+<li>When we start an application program, the operating system creates a process.</li>
+<li>Each process has a unique id (we call it PID) and a memory boundary.</li>
+<li>A process allocates its required memory from the main memory, and it manipulates data within a boundary.</li>
+<li>No other process can access the allocated memory that is already acquired by a process.</li>
+<li>It works like a sandbox, and in that way avoids processes stepping on one another&rsquo;s foot.</li>
+<li>Ideally, we can have many small processes to run multiple things simultaneously on our computers and let the operating systems scheduler schedule them as it sees fit.</li>
+<li>In fact, this is how it was done before the development of threads. However, when we want to do large pieces of work, breaking them into smaller pieces, we need to accumulate them once they are finished.</li>
+<li>And not all tiny pieces can be independent, some of them must rely on each other, and thus we need to share information amongst them.</li>
+<li>To do that, we use inter-process communication. The problem with this idea is that having too many processes on a computer and then communicating with each other isn’t cheap. And precisely that is where the notion of threads comes into the picture.</li>
+</ul>
+<p>The idea of the thread is that a process can have many tiny processes within itself. These small processes can share the memory space that a process acquires. These little processes are called a thread. So the bottom line is, threads are independent execution environments in the CPU and share the same memory space. That allows them faster memory access and better performance.</p>
+<p>That seems to be a good idea. However, it comes with many problems alongside its benefits. Let’s discuss some of those problems and how we can deal with them. But don’t get discouraged, the benefits still outweigh the problems!</p>
+<h2 id="code">Code</h2>
+<p>Let’s begin by running a piece of code.</p>
+<pre><code class="language-java">package com.bazlur.threads;
+
+public class FoojayPlayground {
+ private static boolean running = false;
+
+ public static void main(String[] args) {
+  var t1 = new Thread(() -&gt; {
+   while (!running) {
+   }
+   System.out.println(&quot;Foojay.io&quot;);
+  });
+
+  var t2 = new Thread(() -&gt; {
+   running = true;
+   System.out.println(&quot;I love &quot;);
+  });
+
+  t1.start();
+  t2.start();
+ }
+}
+</code></pre>
+<p>The above piece of code is reasonably straightforward. We have created two threads. Both of them share a variable named &ldquo;running&rdquo;. There is a while loop inside the first thread. The loop will keep running while the variable is false, which means this thread will continue to execute the loop unless the variable is changed. Once the loop breaks, it prints “Foojay.io.” The second thread changes the variable and then prints “I love.”</p>
+<p>Now the question gets to be, what would be the output?</p>
+<p>Outwardly it seems the output would be following:</p>
+<pre><code class="language-textmate">I love 
+Foojay.io
+</code></pre>
+<p>Well, that’s only one case because if you run the above code several times, you will see different results. There would be three outcomes of the program, varying on different computers. The reason is, we can only ask the thread to execute a piece of code, but <strong>we cannot guarantee the execution order of multiple threads</strong>. Threads are scheduled by the operating system&rsquo;s thread scheduler. We will discuss the thread’s lifecycle in forthcoming articles.</p>
+<p><strong>Case 1.</strong> The first thread will continue running the loop. In contrast, the second thread will change the variable and immediately print “I love”. Since the variable now changed, the loop breaks, and it prints “Foojay.io”, so that the output is:</p>
+<pre><code class="language-textmate">I love 
+Foojay.io
+</code></pre>
+<p><strong>Case 2.</strong> The second thread will run first and change the variable and then immediately in the first thread, the loop will break and print the “Foojay.io”. And the second thread will print “I love”. Thus the output is:</p>
+<pre><code class="language-textmate">Foojay.io 
+I love
+</code></pre>
+<p><strong>Case 3.</strong> The above two cases seem reasonable. <strong>However, there is a third case that we may not anticipate immediately:</strong> the first thread may be stuck and the second thread will print “I love” and that’s all. No more output. This can be difficult to reproduce, but it can happen.</p>
+<p>Let me explain the third case!</p>
+<p>We know the modern computer has multiple CPUs in it. Nonetheless, we cannot guarantee in which core the thread will eventually run. For example, the above two threads can run in two different CPUs, which most likely the case.</p>
+<p>When a CPU executes a code, it reads data from the main memory. However, modern CPUs have various caches for faster access to memory. There are three types of cache associated with each CPU. They are L1 Cache, L2 Cache, and L3 Cache.</p>
+<p><img src="/img/Cache-678x510.png" alt=""></p>
+<p>When starting the first thread, the CPU it runs may cache the running variable and keeps it running. But, on the other hand, when the second thread runs and changes the variable on a different CPU, it won’t be visible to the first thread. Thus the problem of the third case would occur.</p>
+<p>We cannot tell whether this would be the case because it all depends on the operating system and having multiple CPUs in a computer. Despite this, we can prevent the CPU from caching, by using &ldquo;volatile&rdquo; in the variable. This will instruct the CPU not to cache the variable and, instead, it will read it from the main memory:</p>
+<pre><code class="language-java">public class FoojayPlayground {
+   private static volatile boolean running = false;
+   ...
+   ...
+}
+</code></pre>
+<p>Now, if we run the above program, the third case will not happen.</p>
+<p>The above problem is called the visibility problem. There are a few similar problems that deal with the visibility issue.</p>
+<p>We will discuss them in the following articles!</p>
+<p>That’s it for today!</p>
+<p>Don’t Forget to Share This Post!</p>
 
 </main>
 
 <p class="post-tag">
-    <div id="tags"></div>
+    <div id="tags"><a class="post-tag tag-small" href="/tags/java" rel="tag"> java </a> &nbsp; <a class="post-tag tag-small" href="/tags/coding" rel="tag"> coding </a> &nbsp; <a class="post-tag tag-small" href="/tags/thread" rel="tag"> Thread </a> &nbsp; <a class="post-tag tag-small" href="/tags/concurrency" rel="tag"> Concurrency </a></div>
 </p>
 
 
@@ -269,25 +324,25 @@ if (!doNotTrack) {
 <span style="color: silver;">Share on: </span>
 <div id="share-buttons">
     <div class="facebook" title="Share this on Facebook"
-         onclick="window.open('http://www.facebook.com/share.php?u=http:\/\/bazlur.com\/posts\/2016-10-23-5-mistakes-java-developer-makes-that-prevent-them-from-growing-their-career\/');">
+         onclick="window.open('http://www.facebook.com/share.php?u=http:\/\/bazlur.com\/2021\/10\/java-thread-programming-part-3\/');">
         <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
             <path d="M1343 12v264h-157q-86 0-116 36t-30 108v189h293l-39 296h-254v759h-306v-759h-255v-296h255v-218q0-186 104-288.5t277-102.5q147 0 228 12z"/>
         </svg>
     </div>
     <div class="twitter" title="Share this on Twitter"
-         onclick="window.open('http://twitter.com/intent/tweet?text=5 Mistakes Java developer makes that prevent them from growing their careers&url=http:\/\/bazlur.com\/posts\/2016-10-23-5-mistakes-java-developer-makes-that-prevent-them-from-growing-their-career\/');">
+         onclick="window.open('http://twitter.com/intent/tweet?text=Java Thread Programming (Part 3)&url=http:\/\/bazlur.com\/2021\/10\/java-thread-programming-part-3\/');">
         <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
             <path d="M1684 408q-67 98-162 167 1 14 1 42 0 130-38 259.5t-115.5 248.5-184.5 210.5-258 146-323 54.5q-271 0-496-145 35 4 78 4 225 0 401-138-105-2-188-64.5t-114-159.5q33 5 61 5 43 0 85-11-112-23-185.5-111.5t-73.5-205.5v-4q68 38 146 41-66-44-105-115t-39-154q0-88 44-163 121 149 294.5 238.5t371.5 99.5q-8-38-8-74 0-134 94.5-228.5t228.5-94.5q140 0 236 102 109-21 205-78-37 115-142 178 93-10 186-50z"/>
         </svg>
     </div>
     <div class="linkedin" title="Share this on Linkedin"
-         onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&url=http:\/\/bazlur.com\/posts\/2016-10-23-5-mistakes-java-developer-makes-that-prevent-them-from-growing-their-career\/&title=&summary=&source=');">
+         onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&url=http:\/\/bazlur.com\/2021\/10\/java-thread-programming-part-3\/&title=&summary=&source=');">
         <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
             <path d="M477 625v991h-330v-991h330zm21-306q1 73-50.5 122t-135.5 49h-2q-82 0-132-49t-50-122q0-74 51.5-122.5t134.5-48.5 133 48.5 51 122.5zm1166 729v568h-329v-530q0-105-40.5-164.5t-126.5-59.5q-63 0-105.5 34.5t-63.5 85.5q-11 30-11 81v553h-329q2-399 2-647t-1-296l-1-48h329v144h-2q20-32 41-56t56.5-52 87-43.5 114.5-15.5q171 0 275 113.5t104 332.5z"/>
         </svg>
     </div>
     
-    <div class="mail" title="Share this through Email" onclick="window.open('mailto:?&body=http:\/\/bazlur.com\/posts\/2016-10-23-5-mistakes-java-developer-makes-that-prevent-them-from-growing-their-career\/');">
+    <div class="mail" title="Share this through Email" onclick="window.open('mailto:?&body=http:\/\/bazlur.com\/2021\/10\/java-thread-programming-part-3\/');">
         <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
             <path d="M1792 710v794q0 66-47 113t-113 47h-1472q-66 0-113-47t-47-113v-794q44 49 101 87 362 246 497 345 57 42 92.5 65.5t94.5 48 110 24.5h2q51 0 110-24.5t94.5-48 92.5-65.5q170-123 498-345 57-39 100-87zm0-294q0 79-49 151t-122 123q-376 261-468 325-10 7-42.5 30.5t-54 38-52 32.5-57.5 27-50 9h-2q-23 0-50-9t-57.5-27-52-32.5-54-38-42.5-30.5q-91-64-262-182.5t-205-142.5q-62-42-117-115.5t-55-136.5q0-78 41.5-130t118.5-52h1472q65 0 112.5 47t47.5 113z"/>
         </svg>
@@ -298,7 +353,7 @@ if (!doNotTrack) {
 <nav id="article-skip">
     <div class="next">
         
-        <a alt="Newer article" href="http://bazlur.com/posts/2016-11-01-%E0%A6%95%E0%A7%80%E0%A6%AD%E0%A6%BE%E0%A6%AC%E0%A7%87-%E0%A6%AD%E0%A6%BE%E0%A6%B2-%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A7%8B%E0%A6%97%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%AE%E0%A6%BE/">&larr; Newer</a>
+        <p>&nbsp;</p>
         
     </div>
     <div class="top">
@@ -306,7 +361,7 @@ if (!doNotTrack) {
     </div>
     <div class="prev">
         
-        <a alt="Older article" href="http://bazlur.com/posts/2016-10-18-im-writing-a-boo/">Older &rarr;</a>
+        <a alt="Older article" href="http://bazlur.com/2021/10/java-thread-programming-part-2/">Older &rarr;</a>
         
     </div>
 </nav>
@@ -371,9 +426,9 @@ if (!doNotTrack) {
 
 <script>
     var disqus_config = function () {
-        this.page.identifier = 'http:\/\/bazlur.com\/posts\/2016-10-23-5-mistakes-java-developer-makes-that-prevent-them-from-growing-their-career\/';
-        this.page.title = '5 Mistakes Java developer makes that prevent them from growing their careers';
-        this.page.url = 'http:\/\/bazlur.com\/posts\/2016-10-23-5-mistakes-java-developer-makes-that-prevent-them-from-growing-their-career\/';
+        this.page.identifier = 'http:\/\/bazlur.com\/2021\/10\/java-thread-programming-part-3\/';
+        this.page.title = 'Java Thread Programming (Part 3)';
+        this.page.url = 'http:\/\/bazlur.com\/2021\/10\/java-thread-programming-part-3\/';
     };
 
     (function () { 
