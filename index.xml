@@ -6,10 +6,157 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright © 2021, A N M Bazlur Rahman</copyright>
-    <lastBuildDate>Thu, 07 Oct 2021 06:42:00 -0400</lastBuildDate>
+    <lastBuildDate>Tue, 12 Oct 2021 06:42:00 -0400</lastBuildDate>
     
         <atom:link href="http://bazlur.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Java Thread Programming (Part 2)</title>
+      <link>http://bazlur.com/2021/10/java-thread-programming-part-2/</link>
+      <pubDate>Tue, 12 Oct 2021 06:42:00 -0400</pubDate>
+      
+      <guid>http://bazlur.com/2021/10/java-thread-programming-part-2/</guid>
+      <description>&lt;p&gt;This article was first published in &lt;a href=&#34;https://foojay.io/today/java-thread-programming-part-2/&#34;&gt;Foojay.io&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;In &lt;a href=&#34;https://bazlur.com/2021/10/java-thread-programming-part-1/&#34;&gt;our earlier article&lt;/a&gt;, we explained the background to threading and how to create and start a thread.&lt;/p&gt;
+&lt;p&gt;In this article, let&amp;rsquo;s see an example where we can use Threads to our benefit.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s assume we are going to build a web server. For the sake of the example, let&amp;rsquo;s constrain ourselves to one single use case, which is that the web server will listen to any client, and if it receives a URL, it will return the top five most frequently used words in that website.&lt;/p&gt;
+&lt;p&gt;OK, enough talk, let&amp;rsquo;s see the code!&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;package com.bazlur;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.net.MalformedURLException;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.net.URL;
+import java.util.stream.Collectors;
+
+public class SingleThreadedServer {
+  private final MostFrequentWordService mostFrequentWordService = new MostFrequentWordService();
+
+  public SingleThreadedServer(int port) throws IOException {
+    var serverSocket = new ServerSocket(port);
+    while (true) {
+      var socket = serverSocket.accept();
+      handle(socket);
+    }
+  }
+
+  private void handle(Socket socket) {
+    System.out.println(&amp;quot;Client connected: &amp;quot; + socket);
+
+    try (var in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+         var out = new PrintWriter(socket.getOutputStream(), true)) {
+      String line;
+
+      while ((line = in.readLine()) != null) {
+        if (isValid(line)) {
+          var wordCount = mostFrequentWordService.mostFrequentWord(line)
+                  .stream()
+                  .map(counter -&amp;gt; counter.word() + &amp;quot;: &amp;quot; + counter.count())
+                  .collect(Collectors.joining(&amp;quot;\n&amp;quot;));
+          out.println(wordCount);
+        } else if (line.contains(&amp;quot;quit&amp;quot;)) {
+          out.println(&amp;quot;Goodbye!&amp;quot;);
+          socket.close();
+        } else {
+          out.println(&amp;quot;Malformed URL&amp;quot;);
+        }
+      }
+    } catch (IOException e) {
+      System.out.println(&amp;quot;Was unable to establish or communicate with client socket:&amp;quot; + e.getMessage());
+    }
+  }
+
+  private static boolean isValid(String stringURL) {
+    try {
+      new URL(stringURL);
+    } catch (MalformedURLException e) {
+      System.out.println(&amp;quot;invalid url: &amp;quot; + stringURL);
+      return false;
+    }
+    return true;
+  }
+
+  public static void main(String[] args) throws IOException {
+    new SingleThreadedServer(2222);
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Let&amp;rsquo;s walk through the code first. In the above code, a &lt;code&gt;ServerSocket&lt;/code&gt; starts at a port and waits in a loop for the clients to connect. The &lt;code&gt;handle()&lt;/code&gt; method is the most important one. It gets a Socket object and then talks to the client. If a client sends a valid URL, It calls a service, &lt;code&gt;MostFrequentWordService&lt;/code&gt;, to get the most frequent words.&lt;/p&gt;
+&lt;p&gt;We can use telnet to connect the server and use this server.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://bazlur.com/img/single-threaded-server.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The only problem with this is it can handle only one client at a time. So if we try to connect another client, it will respond only when the other connected client gets disconnected.&lt;/p&gt;
+&lt;p&gt;That&amp;rsquo;s certainly a problem for a web server. A web server is supposed to connect with hundreds or thousands of clients simultaneously.&lt;/p&gt;
+&lt;p&gt;We can solve this problem quite quickly, if we turn this single-threaded program into a multi-threaded program. Recall the &lt;code&gt;handle()&lt;/code&gt; method from the above code. Whenever a client connects, I can spawn a new thread and hand over the &lt;code&gt;handle()&lt;/code&gt; method to that Thread:&lt;/p&gt;
+&lt;p&gt;Yes, that&amp;rsquo;s the trick. Let&amp;rsquo;s do it:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public class MultiThreadedServer {
+  private final MostFrequentWordService mostFrequentWordService = new MostFrequentWordService();
+
+  public MultiThreadedServer(int port) throws IOException {
+    var serverSocket = new ServerSocket(port);
+    while (true) {
+      var socket = serverSocket.accept();
+
+      var thread = new Thread(() -&amp;gt; handle(socket));
+      thread.start();
+    }
+  }
+
+  //rest of the code. 
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now, we can connect multiple clients at once, and serve them all simultaneously:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://bazlur.com/img/multiple-client.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Now that we understand the benefits of using threads in Java, we will dig a bit deeper into using threads in the following articles in this series.&lt;/p&gt;
+&lt;p&gt;And in case you are interested in how I wrote the &amp;ldquo;MostFrequentWordService&amp;rdquo;, here it is:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;package com.bazlur;
+
+import org.jsoup.Jsoup;
+
+import java.io.IOException;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
+import java.util.Map;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+
+record WordCount(String word, long count) {
+}
+
+public class MostFrequentWordService {
+  public List mostFrequentWord(String url) throws IOException {
+    var wordCount = Arrays.stream(getWords(url))
+            .filter(value -&amp;gt; !value.isEmpty())
+            .filter(value -&amp;gt; value.length() &amp;gt; 3)
+            .map(String::toLowerCase)
+            .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+
+    return wordCount.entrySet()
+            .stream()
+            .sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
+            .limit(5)
+            .map(entry -&amp;gt; new WordCount(entry.getKey(), entry.getValue()))
+            .collect(Collectors.toList());
+  }
+
+  private String[] getWords(String url) throws IOException {
+    var connect = Jsoup.connect(url);
+    var document = connect.get();
+    var content = document.body().text();
+
+    return content.split(&amp;quot;[^a-zA-Z]&amp;quot;);
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;That&amp;rsquo;s it for today!&lt;/p&gt;
+&lt;p&gt;Don’t Forget to Share This Post!&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Java Thread Programming (Part 1)</title>

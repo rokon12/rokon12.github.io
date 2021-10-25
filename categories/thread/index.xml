@@ -7,7 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright © 2021, A N M Bazlur Rahman</copyright>
-    <lastBuildDate>Thu, 07 Oct 2021 06:42:00 -0400</lastBuildDate><atom:link href="http://bazlur.com/categories/thread/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 12 Oct 2021 06:42:00 -0400</lastBuildDate><atom:link href="http://bazlur.com/categories/thread/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Java Thread Programming (Part 2)</title>
+      <link>http://bazlur.com/2021/10/java-thread-programming-part-2/</link>
+      <pubDate>Tue, 12 Oct 2021 06:42:00 -0400</pubDate>
+      
+      <guid>http://bazlur.com/2021/10/java-thread-programming-part-2/</guid>
+      <description>This article was first published in Foojay.io
+In our earlier article, we explained the background to threading and how to create and start a thread.
+In this article, let&amp;rsquo;s see an example where we can use Threads to our benefit.
+Let&amp;rsquo;s assume we are going to build a web server. For the sake of the example, let&amp;rsquo;s constrain ourselves to one single use case, which is that the web server will listen to any client, and if it receives a URL, it will return the top five most frequently used words in that website.</description>
+    </item>
+    
     <item>
       <title>Java Thread Programming (Part 1)</title>
       <link>http://bazlur.com/2021/10/java-thread-programming-part-1/</link>

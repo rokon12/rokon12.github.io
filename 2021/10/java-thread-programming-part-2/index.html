@@ -22,8 +22,8 @@
     <meta property="fb:pages" content="556530934551556" />
 
     
-    <title>CompletableFuture made life easy, running things asynchronous - Bazlur&#39;s Stream of Thoughts</title>
-    <meta property="og:title" content="CompletableFuture made life easy, running things asynchronous - Bazlur&#39;s Stream of Thoughts">
+    <title>Java Thread Programming (Part 2) - Bazlur&#39;s Stream of Thoughts</title>
+    <meta property="og:title" content="Java Thread Programming (Part 2) - Bazlur&#39;s Stream of Thoughts">
     
 
     <meta name="twitter:card" content="summary">
@@ -34,8 +34,12 @@
 
     
     
-    <meta property="description" content="Let&amp;rsquo;s assume you have to invoke two REST APIs and then combine the result. You can run them one by one and then accumulate the result. It looks easy. However, if each call takes up some time, &amp;hellip;">
-    <meta property="og:description" content="Let&amp;rsquo;s assume you have to invoke two REST APIs and then combine the result. You can run them one by one and then accumulate the result. It looks easy. However, if each call takes up some time, &amp;hellip;">
+    <meta property="description" content="This article was first published in Foojay.io
+In our earlier article, we explained the background to threading and how to create and start a thread.
+In this article, let&amp;rsquo;s see an example where &amp;hellip;">
+    <meta property="og:description" content="This article was first published in Foojay.io
+In our earlier article, we explained the background to threading and how to create and start a thread.
+In this article, let&amp;rsquo;s see an example where &amp;hellip;">
     
     
 
@@ -129,11 +133,11 @@ if (!doNotTrack) {
 
 
 <div class="article-meta">
-    <h1><span class="title">CompletableFuture made life easy, running things asynchronous</span></h1>
+    <h1><span class="title">Java Thread Programming (Part 2)</span></h1>
     
     <p class="post-date">Posted on
-        <time class="dt-published" datetime="2021-06-20T00:10:40-04:00">
-        20 June, 2021 at 00:10 EDT
+        <time class="dt-published" datetime="2021-10-12T06:42:00-04:00">
+        12 October, 2021 at 06:42 EDT
         </time>  by <a href="/about-me/" class="p-author h-card"
                                        rel="author">A N M Bazlur Rahman</a>
     </p>
@@ -141,87 +145,153 @@ if (!doNotTrack) {
 </div>
 
 <p class="post-tag">
-    <div>Categories: &nbsp;&nbsp;<a class="post-tag tag-small" href="/categories/java" rel="tag"> java </a> &nbsp; <a class="post-tag tag-small" href="/categories/100daysofjava" rel="tag"> 100DaysOfJava </a></div>
+    <div>Categories: &nbsp;&nbsp;<a class="post-tag tag-small" href="/categories/java" rel="tag"> java </a> &nbsp; <a class="post-tag tag-small" href="/categories/concurrency" rel="tag"> concurrency </a> &nbsp; <a class="post-tag tag-small" href="/categories/thread-programming" rel="tag"> Thread Programming </a> &nbsp; <a class="post-tag tag-small" href="/categories/thread" rel="tag"> thread </a></div>
 </p>
 
 <main>
-    <p><img src="/img/Day014.png" alt="100DaysOfProgramming_Day014" title="100DaysOfJava"></p>
-<p>Let&rsquo;s assume you have to invoke two REST APIs and then combine the result.  You can run them one by one and then accumulate the result. It looks easy. However, if each call takes up some time, the total time would be pretty significant.</p>
-<p>However, we can reduce the time if we can run these two asynchronously, making them parallel.  That&rsquo;s where <code>CompletableFuture</code> comes into play.</p>
-<p>Let&rsquo;s see a code-</p>
-<pre><code class="language-java">
-package com.bazlur;
+    <p>This article was first published in <a href="https://foojay.io/today/java-thread-programming-part-2/">Foojay.io</a></p>
+<p>In <a href="https://bazlur.com/2021/10/java-thread-programming-part-1/">our earlier article</a>, we explained the background to threading and how to create and start a thread.</p>
+<p>In this article, let&rsquo;s see an example where we can use Threads to our benefit.</p>
+<p>Let&rsquo;s assume we are going to build a web server. For the sake of the example, let&rsquo;s constrain ourselves to one single use case, which is that the web server will listen to any client, and if it receives a URL, it will return the top five most frequently used words in that website.</p>
+<p>OK, enough talk, let&rsquo;s see the code!</p>
+<pre><code class="language-java">package com.bazlur;
 
-import java.util.Optional;
-import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.ExecutionException;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.net.MalformedURLException;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.net.URL;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
-public class Day014 {
-  public static void main(String[] args) throws ExecutionException, InterruptedException {
-    var stockExchangeService = new StockExchangeService();
-    var futureCAD = CompletableFuture.supplyAsync(stockExchangeService::getBitcoinValueInCAD);
-    var futureUSD = CompletableFuture.supplyAsync(stockExchangeService::getBitcoinValueInUSD);
+public class SingleThreadedServer {
+  private final MostFrequentWordService mostFrequentWordService = new MostFrequentWordService();
 
-    var combined = futureCAD.thenCombine(futureUSD, (cad, usd) -&gt; Stream.of(cad, usd)
-            .flatMap(Optional::stream)
-            .collect(Collectors.joining(&quot;, &quot;)));
+  public SingleThreadedServer(int port) throws IOException {
+    var serverSocket = new ServerSocket(port);
+    while (true) {
+      var socket = serverSocket.accept();
+      handle(socket);
+    }
+  }
 
-    System.out.println(&quot;combined = &quot; + combined.get());
+  private void handle(Socket socket) {
+    System.out.println(&quot;Client connected: &quot; + socket);
+
+    try (var in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+         var out = new PrintWriter(socket.getOutputStream(), true)) {
+      String line;
+
+      while ((line = in.readLine()) != null) {
+        if (isValid(line)) {
+          var wordCount = mostFrequentWordService.mostFrequentWord(line)
+                  .stream()
+                  .map(counter -&gt; counter.word() + &quot;: &quot; + counter.count())
+                  .collect(Collectors.joining(&quot;\n&quot;));
+          out.println(wordCount);
+        } else if (line.contains(&quot;quit&quot;)) {
+          out.println(&quot;Goodbye!&quot;);
+          socket.close();
+        } else {
+          out.println(&quot;Malformed URL&quot;);
+        }
+      }
+    } catch (IOException e) {
+      System.out.println(&quot;Was unable to establish or communicate with client socket:&quot; + e.getMessage());
+    }
+  }
+
+  private static boolean isValid(String stringURL) {
+    try {
+      new URL(stringURL);
+    } catch (MalformedURLException e) {
+      System.out.println(&quot;invalid url: &quot; + stringURL);
+      return false;
+    }
+    return true;
+  }
+
+  public static void main(String[] args) throws IOException {
+    new SingleThreadedServer(2222);
   }
 }
 </code></pre>
-<p>The stockExchange Service:</p>
+<p>Let&rsquo;s walk through the code first. In the above code, a <code>ServerSocket</code> starts at a port and waits in a loop for the clients to connect. The <code>handle()</code> method is the most important one. It gets a Socket object and then talks to the client. If a client sends a valid URL, It calls a service, <code>MostFrequentWordService</code>, to get the most frequent words.</p>
+<p>We can use telnet to connect the server and use this server.</p>
+<p><img src="/img/single-threaded-server.png" alt=""></p>
+<p>The only problem with this is it can handle only one client at a time. So if we try to connect another client, it will respond only when the other connected client gets disconnected.</p>
+<p>That&rsquo;s certainly a problem for a web server. A web server is supposed to connect with hundreds or thousands of clients simultaneously.</p>
+<p>We can solve this problem quite quickly, if we turn this single-threaded program into a multi-threaded program. Recall the <code>handle()</code> method from the above code. Whenever a client connects, I can spawn a new thread and hand over the <code>handle()</code> method to that Thread:</p>
+<p>Yes, that&rsquo;s the trick. Let&rsquo;s do it:</p>
+<pre><code class="language-java">public class MultiThreadedServer {
+  private final MostFrequentWordService mostFrequentWordService = new MostFrequentWordService();
+
+  public MultiThreadedServer(int port) throws IOException {
+    var serverSocket = new ServerSocket(port);
+    while (true) {
+      var socket = serverSocket.accept();
+
+      var thread = new Thread(() -&gt; handle(socket));
+      thread.start();
+    }
+  }
+
+  //rest of the code. 
+}
+</code></pre>
+<p>Now, we can connect multiple clients at once, and serve them all simultaneously:</p>
+<p><img src="/img/multiple-client.png" alt=""></p>
+<p>Now that we understand the benefits of using threads in Java, we will dig a bit deeper into using threads in the following articles in this series.</p>
+<p>And in case you are interested in how I wrote the &ldquo;MostFrequentWordService&rdquo;, here it is:</p>
 <pre><code class="language-java">package com.bazlur;
 
 import org.jsoup.Jsoup;
-import org.jsoup.nodes.Element;
 
 import java.io.IOException;
-import java.util.Optional;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
+import java.util.Map;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
-public class StockExchangeService {
+record WordCount(String word, long count) {
+}
 
-  public static final String GOOGLE_FINANCE_QUOTE_BTC_CAD = &quot;https://www.google.com/finance/quote/BTC-CAD&quot;;
-  public static final String GOOGLE_FINANCE_QUOTE_BTC_USD = &quot;https://www.google.com/finance/quote/BTC-USD&quot;;
-  public static final String CAD_TEXT = &quot;Bitcoin to Canadian dollar&quot;;
-  public static final String USD_TEXT = &quot;Bitcoin to United States Dollar&quot;;
+public class MostFrequentWordService {
+  public List mostFrequentWord(String url) throws IOException {
+    var wordCount = Arrays.stream(getWords(url))
+            .filter(value -&gt; !value.isEmpty())
+            .filter(value -&gt; value.length() &gt; 3)
+            .map(String::toLowerCase)
+            .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
 
-  public Optional&lt;String&gt; getBitcoinValueInCAD() {
-    return getBitConValue(GOOGLE_FINANCE_QUOTE_BTC_CAD, CAD_TEXT);
+    return wordCount.entrySet()
+            .stream()
+            .sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
+            .limit(5)
+            .map(entry -&gt; new WordCount(entry.getKey(), entry.getValue()))
+            .collect(Collectors.toList());
   }
 
-  public Optional&lt;String&gt; getBitcoinValueInUSD() {
-    return getBitConValue(GOOGLE_FINANCE_QUOTE_BTC_USD, USD_TEXT);
-  }
-
-  private Optional&lt;String&gt; getBitConValue(String url, String textToFind) {
+  private String[] getWords(String url) throws IOException {
     var connect = Jsoup.connect(url);
-    try {
-      var document = connect.get();
-      var select = document.select(&quot;h2&quot;);
-      return select.stream()
-              .filter(element -&gt; element.text().contains(textToFind))
-              .map(Element::parent)
-              .map(Element::text)
-              .findFirst();
-    } catch (IOException e) {
-      return Optional.empty();
-    }
+    var document = connect.get();
+    var content = document.body().text();
+
+    return content.split(&quot;[^a-zA-Z]&quot;);
   }
 }
 </code></pre>
-<p>I have used <a href="https://jsoup.org/">JSoup</a> to parse the text and exact the desired value from it.</p>
-
-<i class="far fa-smile-wink "></i>
-
-<p>for <strong>copy/paste</strong> pleasure: <a href="https://github.com/rokon12/100DaysOfJava/blob/main/src/main/java/com/bazlur/Day014_2.java">https://github.com/rokon12/100DaysOfJava/blob/main/src/main/java/com/bazlur/Day014_2.java</a></p>
+<p>That&rsquo;s it for today!</p>
+<p>Don’t Forget to Share This Post!</p>
 
 </main>
 
 <p class="post-tag">
-    <div id="tags"><a class="post-tag tag-small" href="/tags/java" rel="tag"> java </a> &nbsp; <a class="post-tag tag-small" href="/tags/coding" rel="tag"> coding </a> &nbsp; <a class="post-tag tag-small" href="/tags/100daysofjava" rel="tag"> 100DaysOfJava </a> &nbsp; <a class="post-tag tag-small" href="/tags/100daysofcode" rel="tag"> 100DaysOfCode </a> &nbsp; <a class="post-tag tag-small" href="/tags/completablefuture" rel="tag"> CompletableFuture </a></div>
+    <div id="tags"><a class="post-tag tag-small" href="/tags/java" rel="tag"> java </a> &nbsp; <a class="post-tag tag-small" href="/tags/coding" rel="tag"> coding </a> &nbsp; <a class="post-tag tag-small" href="/tags/thread" rel="tag"> Thread </a> &nbsp; <a class="post-tag tag-small" href="/tags/concurrency" rel="tag"> Concurrency </a></div>
 </p>
 
 
@@ -321,25 +391,25 @@ public class StockExchangeService {
 <span style="color: silver;">Share on: </span>
 <div id="share-buttons">
     <div class="facebook" title="Share this on Facebook"
-         onclick="window.open('http://www.facebook.com/share.php?u=http:\/\/bazlur.com\/2021\/06\/completablefuture-made-life-easy-running-things-asynchronous\/');">
+         onclick="window.open('http://www.facebook.com/share.php?u=http:\/\/bazlur.com\/2021\/10\/java-thread-programming-part-2\/');">
         <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
             <path d="M1343 12v264h-157q-86 0-116 36t-30 108v189h293l-39 296h-254v759h-306v-759h-255v-296h255v-218q0-186 104-288.5t277-102.5q147 0 228 12z"/>
         </svg>
     </div>
     <div class="twitter" title="Share this on Twitter"
-         onclick="window.open('http://twitter.com/intent/tweet?text=CompletableFuture made life easy, running things asynchronous&url=http:\/\/bazlur.com\/2021\/06\/completablefuture-made-life-easy-running-things-asynchronous\/');">
+         onclick="window.open('http://twitter.com/intent/tweet?text=Java Thread Programming (Part 2)&url=http:\/\/bazlur.com\/2021\/10\/java-thread-programming-part-2\/');">
         <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
             <path d="M1684 408q-67 98-162 167 1 14 1 42 0 130-38 259.5t-115.5 248.5-184.5 210.5-258 146-323 54.5q-271 0-496-145 35 4 78 4 225 0 401-138-105-2-188-64.5t-114-159.5q33 5 61 5 43 0 85-11-112-23-185.5-111.5t-73.5-205.5v-4q68 38 146 41-66-44-105-115t-39-154q0-88 44-163 121 149 294.5 238.5t371.5 99.5q-8-38-8-74 0-134 94.5-228.5t228.5-94.5q140 0 236 102 109-21 205-78-37 115-142 178 93-10 186-50z"/>
         </svg>
     </div>
     <div class="linkedin" title="Share this on Linkedin"
-         onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&url=http:\/\/bazlur.com\/2021\/06\/completablefuture-made-life-easy-running-things-asynchronous\/&title=&summary=&source=');">
+         onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&url=http:\/\/bazlur.com\/2021\/10\/java-thread-programming-part-2\/&title=&summary=&source=');">
         <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
             <path d="M477 625v991h-330v-991h330zm21-306q1 73-50.5 122t-135.5 49h-2q-82 0-132-49t-50-122q0-74 51.5-122.5t134.5-48.5 133 48.5 51 122.5zm1166 729v568h-329v-530q0-105-40.5-164.5t-126.5-59.5q-63 0-105.5 34.5t-63.5 85.5q-11 30-11 81v553h-329q2-399 2-647t-1-296l-1-48h329v144h-2q20-32 41-56t56.5-52 87-43.5 114.5-15.5q171 0 275 113.5t104 332.5z"/>
         </svg>
     </div>
     
-    <div class="mail" title="Share this through Email" onclick="window.open('mailto:?&body=http:\/\/bazlur.com\/2021\/06\/completablefuture-made-life-easy-running-things-asynchronous\/');">
+    <div class="mail" title="Share this through Email" onclick="window.open('mailto:?&body=http:\/\/bazlur.com\/2021\/10\/java-thread-programming-part-2\/');">
         <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
             <path d="M1792 710v794q0 66-47 113t-113 47h-1472q-66 0-113-47t-47-113v-794q44 49 101 87 362 246 497 345 57 42 92.5 65.5t94.5 48 110 24.5h2q51 0 110-24.5t94.5-48 92.5-65.5q170-123 498-345 57-39 100-87zm0-294q0 79-49 151t-122 123q-376 261-468 325-10 7-42.5 30.5t-54 38-52 32.5-57.5 27-50 9h-2q-23 0-50-9t-57.5-27-52-32.5-54-38-42.5-30.5q-91-64-262-182.5t-205-142.5q-62-42-117-115.5t-55-136.5q0-78 41.5-130t118.5-52h1472q65 0 112.5 47t47.5 113z"/>
         </svg>
@@ -350,7 +420,7 @@ public class StockExchangeService {
 <nav id="article-skip">
     <div class="next">
         
-        <a alt="Newer article" href="http://bazlur.com/2021/06/project-loom-the-light-at-the-end-of-the-tunnel/">&larr; Newer</a>
+        <p>&nbsp;</p>
         
     </div>
     <div class="top">
@@ -358,7 +428,7 @@ public class StockExchangeService {
     </div>
     <div class="prev">
         
-        <a alt="Older article" href="http://bazlur.com/2021/06/lets-find-out-the-most-enormous-known-prime-number-using-java/">Older &rarr;</a>
+        <a alt="Older article" href="http://bazlur.com/2021/10/java-thread-programming-part-1/">Older &rarr;</a>
         
     </div>
 </nav>
@@ -423,9 +493,9 @@ public class StockExchangeService {
 
 <script>
     var disqus_config = function () {
-        this.page.identifier = 'http:\/\/bazlur.com\/2021\/06\/completablefuture-made-life-easy-running-things-asynchronous\/';
-        this.page.title = 'CompletableFuture made life easy, running things asynchronous';
-        this.page.url = 'http:\/\/bazlur.com\/2021\/06\/completablefuture-made-life-easy-running-things-asynchronous\/';
+        this.page.identifier = 'http:\/\/bazlur.com\/2021\/10\/java-thread-programming-part-2\/';
+        this.page.title = 'Java Thread Programming (Part 2)';
+        this.page.url = 'http:\/\/bazlur.com\/2021\/10\/java-thread-programming-part-2\/';
     };
 
     (function () { 
