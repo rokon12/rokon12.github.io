@@ -1,12 +1,13 @@
 <h1 align="center">Hi 👋, I'm  A N M Bazlur Rahman</h1>
 
 - 🔭 I’m a ✨[Java Devleoper](https://www.linkedin.com/in/bazlur/)✨, an [author](https://www.rokomari.com/book/author/47860/a-n-m-bazlur-rahman) and a mentor. I help junior software developers to master the top coding and collaboration skills so they get hired to work on amazing projects.
-- 🌱 I’m currently learning Cloud Technologies ☁️ 
+- 🌱 I’m currently learning Cloud Technologies ☁️, Kubernetes ☸️  
 - 👯 I would love to collaborate on any exciting ideas in the java space
-- 🤔 I’m looking for help with ...
+- 🤔 I’m looking for help with ...tips on speaking at conf./ improve my technical writups. 
 - 💬 Ask me anything about *Java*
 - :bowtie: I'm a [JUG Leader](https://jugbd.org/) & I tweet as [@bazlur_rahman](https://twitter.com/bazlur_rahman)
 - :books: I have write couple of books: [rokomari](https://www.rokomari.com/book/author/47860/a-n-m-bazlur-rahman), [Amazon Kindle](https://www.amazon.com/s?i=digital-text&rh=p_27%3AA+N+M+Bazlur+Rahman&s=relevancerank&text=A+N+M+Bazlur+Rahman&ref=dp_byline_sr_ebooks_1) 
+- ✍️ I'm an editor at [InfoQ](https://www.infoq.com/) and [Foojay.IO](https://foojay.io/)
 
 - 📝 I regularly write articles on [Foojay.IO](https://foojay.io/today/author/bazlur-rahman/), [DZone](https://www.codenameone.com/blog), [Dev.to](https://dev.to/bazlur_rahman), [Medium](https://medium.com/@bazlur_rahman), [JUGBD](https://jugbd.org/) and [InfoQ](https://www.infoq.com/profile/Bazlur-Rahman/). 
 - 📫 How to reach me: bazlur at jugbd dot org
