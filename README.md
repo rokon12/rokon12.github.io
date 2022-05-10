@@ -1,6 +1,6 @@
 <h1 align="center">Hi 👋, I'm  A N M Bazlur Rahman</h1>
 
-- 🔭 I’m a ✨[Java Devleoper](https://www.linkedin.com/in/bazlur/)✨, an [author](https://www.rokomari.com/book/author/47860/a-n-m-bazlur-rahman) and a mentor. I help junior software developers to master the top coding and collaboration skills so they get hired to work on amazing projects.
+- 🔭 I’m a [Java Champion](https://twitter.com/Java_Champions/status/1523728715368509440)🏆, ✨[Software Engineer](https://www.linkedin.com/in/bazlur/)✨, an [author](https://www.rokomari.com/book/author/47860/a-n-m-bazlur-rahman) and a mentor. I help junior software developers to master the top coding and collaboration skills so they get hired to work on amazing projects.
 - 🌱 I’m currently learning Cloud Technologies ☁️, Kubernetes ☸️  
 - 👯 I would love to collaborate on any exciting ideas in the java space
 - 🤔 I’m looking for help with ...tips on speaking at conf./ improve my technical writups. 
