@@ -1,13 +1,3 @@
-ifdef::env-github[]
-:tip-caption: :bulb:
-:note-caption: :information_source:
-:important-caption: :heavy_exclamation_mark:
-:caution-caption: :fire:
-:warning-caption: :warning:
-endif::[]
-
-:figure-caption!:
-
 ## Bio:
 
 **A N M Bazlur Rahman** works at [Contrast Security](https://www.contrastsecurity.com/) as a Sr. Software Engineer. He has more than ten years of professional experience in the software industry, predominantly in Java and Java-related technologies. Recently, he was honoured by being given the title of  [Java Champion](https://twitter.com/Java_Champions/status/1523728715368509440).
@@ -16,6 +6,16 @@ endif::[]
 Outside of his regular work hours, he loves to mentor, write, speak at conferences, and contribute to open-source projects. He is the founder and current moderator of the [Java User Group in Bangladesh](https://jugbd.org/). He has organized meetups and conferences to share Java-related knowledge with the community since 2013. He was named Most Valuable Blogger (MVP) at [DZone](https://dzone.com/users/1298119/bazlur_rahman.html), one of the most recognized technology publishers in the world. Besides DZone, he is an editor for the Java Queue at [InfoQ](https://www.infoq.com/profile/A-N-M-Bazlur-Rahman/), another leading technology content publisher and conference organizer, and an editor at [Foojay.io](https://foojay.io/today/author/bazlur-rahman/), a place for friends of OpenJDK. In addition, he has published [four books](https://www.rokomari.com/book/129165/java-programming) about the Java programming language in Bengali; they were bestsellers in Bangladesh.
 
 He earned his bachelor’s degree from the Institute of Information Technology, University of Dhaka, Bangladesh, in Information Technology, majoring in Software Engineering. He currently lives in Toronto, Canada.
+
+<h3 align="left">Connect:</h3>
+<p align="left">
+<a href="https://twitter.com/bazlur_rahman/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="debugagent" height="30" width="40" /></a>
+<a href="https://www.linkedin.com/in/bazlur" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="shai-almog-81a42" height="30" width="40" /></a>
+<a href="https://stackoverflow.com/users/893197/rokonoid" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/stack-overflow.svg" alt="756809" height="30" width="40" /></a>
+<a href="https://www.youtube.com/c/ANMBazlurRahman" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg" alt="codenameone" height="30" width="40" /></a>
+<a href="/https://www.bazlur.com/feed.xml" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/rss.svg" alt="https://www.bazlur.com/feed.xml" height="30" width="40" /></a>
+</p>
+
 
 ## ✍️ Most recent blog posts
 
@@ -102,14 +102,6 @@ He earned his bachelor’s degree from the Institute of Information Technology, 
 [Read further^](https://foojay.io/today/book-review-monolith-to-microservices-part-2/)
 
 
-<h3 align="left">Connect with me:</h3>
-<p align="left">
-<a href="https://twitter.com/bazlur_rahman/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="debugagent" height="30" width="40" /></a>
-<a href="https://www.linkedin.com/in/bazlur" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="shai-almog-81a42" height="30" width="40" /></a>
-<a href="https://stackoverflow.com/users/893197/rokonoid" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/stack-overflow.svg" alt="756809" height="30" width="40" /></a>
-<a href="https://www.youtube.com/c/ANMBazlurRahman" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg" alt="codenameone" height="30" width="40" /></a>
-<a href="/https://www.bazlur.com/feed.xml" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/rss.svg" alt="https://www.bazlur.com/feed.xml" height="30" width="40" /></a>
-</p>
 
 
 ## &#x1f4c8; GitHub Stats
