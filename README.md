@@ -22,83 +22,73 @@ He earned his bachelor’s degree from the Institute of Information Technology, 
 ### Foojay.io
 
 
-### Why Did We Choose Jakarta Faces for the UI of the Eclipse Starter for Jakarta EE? (2022-12-13)::
-<p>This article explains why we chose JSF to build the Eclipse starter for Jakarta and why it deserves more love and attention!</p>
-<p>The post <a rel="nofollow" href="https://foojay.io/today/why-did-we-choose-jakarta-faces-for-the-ui-of-the-eclipse-starter-for-jakarta-ee/">Why Did We Choose Jakarta Faces for the UI of the Eclipse Starter for Jakarta EE?</a> appeared first on <a rel="nofollow" href="https://foojay.io">foojay</a>.</p>
+### Why Did We Choose Jakarta Faces for the UI of the Eclipse Starter for Jakarta EE? (2022-12-13)
+This article explains why we chose JSF to build the Eclipse starter for Jakarta and why it deserves more love and attention!
+The post <a rel="nofollow" href="https://foojay.io/today/why-did-we-choose-jakarta-faces-for-the-ui-of-the-eclipse-starter-for-jakarta-ee/">Why Did We Choose Jakarta Faces for the UI of the Eclipse Starter for Jakarta EE?</a> appeared first on <a rel="nofollow" href="https://foojay.io">foojay</a>.
 ...
-
 [Read further^](https://foojay.io/today/why-did-we-choose-jakarta-faces-for-the-ui-of-the-eclipse-starter-for-jakarta-ee/)
 
 
-### A Minor But Useful Refactoring Technique That Would Reduce Your Code Footprint (Part 2) (2022-10-26)::
-<p>As I keep refactoring, this article will focus on a few more interesting ways to do it. These are pretty much minor yet effective and useful changes. Stream.noneMatch() and Stream.anyMatch() In some situations, we need to find a single case ...</p>
-<p>The post <a rel="nofollow" href="https://foojay.io/today/a-minor-but-useful-refactoring-technique-that-would-reduce-your-code-footprint-part-2/">A Minor But Useful Refactoring Technique That Would Reduce Your Code Footprint (Part 2)</a> appeared first on <a rel="nofollow" href="https://foojay.io">foojay</a>.</p>
+### A Minor But Useful Refactoring Technique That Would Reduce Your Code Footprint (Part 2) (2022-10-26)
+As I keep refactoring, this article will focus on a few more interesting ways to do it. These are pretty much minor yet effective and useful changes. Stream.noneMatch() and Stream.anyMatch() In some situations, we need to find a single case ...
+The post <a rel="nofollow" href="https://foojay.io/today/a-minor-but-useful-refactoring-technique-that-would-reduce-your-code-footprint-part-2/">A Minor But Useful Refactoring Technique That Would Reduce Your Code Footprint (Part 2)</a> appeared first on <a rel="nofollow" href="https://foojay.io">foojay</a>.
 ...
-
 [Read further^](https://foojay.io/today/a-minor-but-useful-refactoring-technique-that-would-reduce-your-code-footprint-part-2/)
 
 
-### A Minor But Useful Refactoring Technique That Would Reduce Your Code Footprint (Part 1) (2022-10-20)::
-<p>That was a long-awaited migration, but I'm pleased that we eventually made it. The next thing... "Why not Java 17 directly?" </p>
-<p>The post <a rel="nofollow" href="https://foojay.io/today/a-minor-but-useful-refactoring-technique-that-would-reduce-your-code-footprint-part-1/">A Minor But Useful Refactoring Technique That Would Reduce Your Code Footprint (Part 1)</a> appeared first on <a rel="nofollow" href="https://foojay.io">foojay</a>.</p>
+### A Minor But Useful Refactoring Technique That Would Reduce Your Code Footprint (Part 1) (2022-10-20)
+That was a long-awaited migration, but I'm pleased that we eventually made it. The next thing... "Why not Java 17 directly?" 
+The post <a rel="nofollow" href="https://foojay.io/today/a-minor-but-useful-refactoring-technique-that-would-reduce-your-code-footprint-part-1/">A Minor But Useful Refactoring Technique That Would Reduce Your Code Footprint (Part 1)</a> appeared first on <a rel="nofollow" href="https://foojay.io">foojay</a>.
 ...
-
 [Read further^](https://foojay.io/today/a-minor-but-useful-refactoring-technique-that-would-reduce-your-code-footprint-part-1/)
 
 
-### What Does a Modern JVM Look Like, And How Does It Work? (2022-09-29)::
-<p>In this article, the internal workings of the JVM are discussed, e.g., interpreter, JIT compiler, and how it optimizes code.</p>
-<p>The post <a rel="nofollow" href="https://foojay.io/today/what-does-a-modern-jvm-look-like-and-how-does-it-work/">What Does a Modern JVM Look Like, And How Does It Work?</a> appeared first on <a rel="nofollow" href="https://foojay.io">foojay</a>.</p>
+### What Does a Modern JVM Look Like, And How Does It Work? (2022-09-29)
+In this article, the internal workings of the JVM are discussed, e.g., interpreter, JIT compiler, and how it optimizes code.
+The post <a rel="nofollow" href="https://foojay.io/today/what-does-a-modern-jvm-look-like-and-how-does-it-work/">What Does a Modern JVM Look Like, And How Does It Work?</a> appeared first on <a rel="nofollow" href="https://foojay.io">foojay</a>.
 ...
-
 [Read further^](https://foojay.io/today/what-does-a-modern-jvm-look-like-and-how-does-it-work/)
 
 
-### The 5 Most Pivotal and Innovative Additions to OpenJDK 19 (2022-09-20)::
-<p>Although OpenJDK 19 is not an LTS, it is still a significant release, in my opinion. It includes several game-changing features that will alter the Java landscape.</p>
-<p>The post <a rel="nofollow" href="https://foojay.io/today/the-5-most-pivotal-and-innovative-additions-to-openjdk-19/">The 5 Most Pivotal and Innovative Additions to OpenJDK 19</a> appeared first on <a rel="nofollow" href="https://foojay.io">foojay</a>.</p>
+### The 5 Most Pivotal and Innovative Additions to OpenJDK 19 (2022-09-20)
+Although OpenJDK 19 is not an LTS, it is still a significant release, in my opinion. It includes several game-changing features that will alter the Java landscape.
+The post <a rel="nofollow" href="https://foojay.io/today/the-5-most-pivotal-and-innovative-additions-to-openjdk-19/">The 5 Most Pivotal and Innovative Additions to OpenJDK 19</a> appeared first on <a rel="nofollow" href="https://foojay.io">foojay</a>.
 ...
-
 [Read further^](https://foojay.io/today/the-5-most-pivotal-and-innovative-additions-to-openjdk-19/)
 
 
-### Java Thread Programming (Part 15) (2022-08-31)::
-<p>Learn how to do asynchronous method invocation with Callable and Future with a practical example.</p>
-<p>The post <a rel="nofollow" href="https://foojay.io/today/java-thread-programming-part-15/">Java Thread Programming (Part 15)</a> appeared first on <a rel="nofollow" href="https://foojay.io">foojay</a>.</p>
+### Java Thread Programming (Part 15) (2022-08-31)
+Learn how to do asynchronous method invocation with Callable and Future with a practical example.
+The post <a rel="nofollow" href="https://foojay.io/today/java-thread-programming-part-15/">Java Thread Programming (Part 15)</a> appeared first on <a rel="nofollow" href="https://foojay.io">foojay</a>.
 ...
-
 [Read further^](https://foojay.io/today/java-thread-programming-part-15/)
 
 
-### Java Bytecode Simplified: Journey to the Wonderland (Part 2) (2022-08-16)::
-<p>Let’s appreciate the Java Virtual Machine (JVM) even more. Today we'll discuss Constant Pool in quite some detail.</p>
-<p>The post <a rel="nofollow" href="https://foojay.io/today/java-bytecode-simplified-journey-to-the-wonderland-part-2/">Java Bytecode Simplified: Journey to the Wonderland (Part 2)</a> appeared first on <a rel="nofollow" href="https://foojay.io">foojay</a>.</p>
+### Java Bytecode Simplified: Journey to the Wonderland (Part 2) (2022-08-16)
+Let’s appreciate the Java Virtual Machine (JVM) even more. Today we'll discuss Constant Pool in quite some detail.
+The post <a rel="nofollow" href="https://foojay.io/today/java-bytecode-simplified-journey-to-the-wonderland-part-2/">Java Bytecode Simplified: Journey to the Wonderland (Part 2)</a> appeared first on <a rel="nofollow" href="https://foojay.io">foojay</a>.
 ...
-
 [Read further^](https://foojay.io/today/java-bytecode-simplified-journey-to-the-wonderland-part-2/)
 
 
-### Top 7 Features in Jakarta EE 10 (2022-06-28)::
-<p>Jakarta EE is a dominant force behind all enterprise development in Java. Check out my favorite top 7 features, what are yours?</p>
-<p>The post <a rel="nofollow" href="https://foojay.io/today/top-7-features-in-jakarta-ee-10/">Top 7 Features in Jakarta EE 10</a> appeared first on <a rel="nofollow" href="https://foojay.io">foojay</a>.</p>
+### Top 7 Features in Jakarta EE 10 (2022-06-28)
+Jakarta EE is a dominant force behind all enterprise development in Java. Check out my favorite top 7 features, what are yours?
+The post <a rel="nofollow" href="https://foojay.io/today/top-7-features-in-jakarta-ee-10/">Top 7 Features in Jakarta EE 10</a> appeared first on <a rel="nofollow" href="https://foojay.io">foojay</a>.
 ...
-
 [Read further^](https://foojay.io/today/top-7-features-in-jakarta-ee-10/)
 
 
-### How to Add an Event to the Foojay Event Calendar (2022-06-07)::
-<p>If you want to add an event to our calendar or advertize your event on Foojay.io, you can follow the following steps! </p>
-<p>The post <a rel="nofollow" href="https://foojay.io/today/how-to-add-an-event-to-the-foojay-event-calendar/">How to Add an Event to the Foojay Event Calendar</a> appeared first on <a rel="nofollow" href="https://foojay.io">foojay</a>.</p>
+### How to Add an Event to the Foojay Event Calendar (2022-06-07)
+If you want to add an event to our calendar or advertize your event on Foojay.io, you can follow the following steps! 
+The post <a rel="nofollow" href="https://foojay.io/today/how-to-add-an-event-to-the-foojay-event-calendar/">How to Add an Event to the Foojay Event Calendar</a> appeared first on <a rel="nofollow" href="https://foojay.io">foojay</a>.
 ...
-
 [Read further^](https://foojay.io/today/how-to-add-an-event-to-the-foojay-event-calendar/)
 
 
-### Book Review: Monolith to Microservices (Part 2) (2022-05-25)::
-<p>In many cases, microservices are probably not ideal, but if you're going to do it, take baby steps. Small and short-term wins matter; it boasts the team's confidence. Always put checks and balance whether it is working or not. If not, then go back to the alternative ways.</p>
-<p>The post <a rel="nofollow" href="https://foojay.io/today/book-review-monolith-to-microservices-part-2/">Book Review: Monolith to Microservices (Part 2)</a> appeared first on <a rel="nofollow" href="https://foojay.io">foojay</a>.</p>
+### Book Review: Monolith to Microservices (Part 2) (2022-05-25)
+In many cases, microservices are probably not ideal, but if you're going to do it, take baby steps. Small and short-term wins matter; it boasts the team's confidence. Always put checks and balance whether it is working or not. If not, then go back to the alternative ways.
+The post <a rel="nofollow" href="https://foojay.io/today/book-review-monolith-to-microservices-part-2/">Book Review: Monolith to Microservices (Part 2)</a> appeared first on <a rel="nofollow" href="https://foojay.io">foojay</a>.
 ...
-
 [Read further^](https://foojay.io/today/book-review-monolith-to-microservices-part-2/)
 
 
