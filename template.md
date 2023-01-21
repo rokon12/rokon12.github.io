@@ -1,13 +1,3 @@
-ifdef::env-github[]
-:tip-caption: :bulb:
-:note-caption: :information_source:
-:important-caption: :heavy_exclamation_mark:
-:caution-caption: :fire:
-:warning-caption: :warning:
-endif::[]
-
-:figure-caption!:
-
 ## Bio:
 
 **A N M Bazlur Rahman** works at [Contrast Security](https://www.contrastsecurity.com/) as a Sr. Software Engineer. He has more than ten years of professional experience in the software industry, predominantly in Java and Java-related technologies. Recently, he was honoured by being given the title of  [Java Champion](https://twitter.com/Java_Champions/status/1523728715368509440).
