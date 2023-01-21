@@ -23,9 +23,8 @@ He earned his bachelor’s degree from the Institute of Information Technology, 
 
 <#list foojayPosts as post>
 
-### ${post.title} (${(post.published).format('YYYY-MM-dd')})::
+### ${post.title} (${(post.published).format('YYYY-MM-dd')})
 ${post.excerpt}...
-
 [Read further^](${post.link})
 
 </#list>

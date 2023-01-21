@@ -44,27 +44,19 @@ val template: Template = Configuration(Configuration.VERSION_2_3_29)
             objectWrapper = Java8ObjectWrapper(this.incompatibleImprovements)
         }.getTemplate("template.md")
 
-
-
-val divRegex = Regex("<div>.*?</div>")
-
 val posts: List<Post> by lazy {
     val url = URL("https://foojay.io/today/author/bazlur-rahman/feed")
     val input = XmlReader(url)
     val feed = SyndFeedInput().build(input)
     feed.entries.map {
-        val published = convertToLocalDate(it.publishedDate)
+        val published = Instant.ofEpochMilli(it.publishedDate.time)
+                .atZone(ZoneId.systemDefault())
+                .toLocalDate()
         var content = it.description.value
-        content = content.replace(divRegex, "")
-        content = StringEscapeUtils.unescapeHtml4(content);
+        content = StringEscapeUtils.unescapeHtml4(content)
+        content = content.replace(Regex("<(div|p)[^>]*>"), "").replace(Regex("</(div|p)>"), "")
         Post(published, it.title, it.link, content)
     }
-}
-
-fun convertToLocalDate(dateToConvert: Date): LocalDate {
-    return Instant.ofEpochMilli(dateToConvert.time)
-            .atZone(ZoneId.systemDefault())
-            .toLocalDate()
 }
 
 data class Post(val published: LocalDate, val title: String, val link: String, val excerpt: String)
