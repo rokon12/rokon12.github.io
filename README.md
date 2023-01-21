@@ -1,18 +1,105 @@
-<h1 align="center">Hi 👋, I'm  A N M Bazlur Rahman</h1>
+ifdef::env-github[]
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
 
-- 🔭 I’m a [Java Champion](https://twitter.com/Java_Champions/status/1523728715368509440)🏆, ✨[Software Engineer](https://www.linkedin.com/in/bazlur/)✨, an [author](https://www.rokomari.com/book/author/47860/a-n-m-bazlur-rahman) and a mentor. I help junior software developers to master the top coding and collaboration skills so they get hired to work on amazing projects.
-- 🌱 I’m currently learning Cloud Technologies ☁️, Kubernetes ☸️  
-- 👯 I would love to collaborate on any exciting ideas in the java space
-- 🤔 I’m looking for help with ...tips on speaking at conf./ improve my technical writups. 
-- 💬 Ask me anything about *Java*
-- :bowtie: I'm a [JUG Leader](https://jugbd.org/) & I tweet as [@bazlur_rahman](https://twitter.com/bazlur_rahman)
-- :books: I have write couple of books: [rokomari](https://www.rokomari.com/book/author/47860/a-n-m-bazlur-rahman), [Amazon Kindle](https://www.amazon.com/s?i=digital-text&rh=p_27%3AA+N+M+Bazlur+Rahman&s=relevancerank&text=A+N+M+Bazlur+Rahman&ref=dp_byline_sr_ebooks_1) 
-- ✍️ I'm an editor at [InfoQ](https://www.infoq.com/) and [Foojay.IO](https://foojay.io/)
+:figure-caption!:
 
-- 📝 I regularly write articles on [Foojay.IO](https://foojay.io/today/author/bazlur-rahman/), [DZone](https://www.codenameone.com/blog), [Dev.to](https://dev.to/bazlur_rahman), [Medium](https://medium.com/@bazlur_rahman), [JUGBD](https://jugbd.org/) and [InfoQ](https://www.infoq.com/profile/Bazlur-Rahman/). 
-- 📫 How to reach me: bazlur at jugbd dot org
+## Bio:
+
+**A N M Bazlur Rahman** works at [Contrast Security](https://www.contrastsecurity.com/) as a Sr. Software Engineer. He has more than ten years of professional experience in the software industry, predominantly in Java and Java-related technologies. Recently, he was honoured by being given the title of  [Java Champion](https://twitter.com/Java_Champions/status/1523728715368509440).
 
 
+Outside of his regular work hours, he loves to mentor, write, speak at conferences, and contribute to open-source projects. He is the founder and current moderator of the [Java User Group in Bangladesh](https://jugbd.org/). He has organized meetups and conferences to share Java-related knowledge with the community since 2013. He was named Most Valuable Blogger (MVP) at [DZone](https://dzone.com/users/1298119/bazlur_rahman.html), one of the most recognized technology publishers in the world. Besides DZone, he is an editor for the Java Queue at [InfoQ](https://www.infoq.com/profile/A-N-M-Bazlur-Rahman/), another leading technology content publisher and conference organizer, and an editor at [Foojay.io](https://foojay.io/today/author/bazlur-rahman/), a place for friends of OpenJDK. In addition, he has published [four books](https://www.rokomari.com/book/129165/java-programming) about the Java programming language in Bengali; they were bestsellers in Bangladesh.
+
+He earned his bachelor’s degree from the Institute of Information Technology, University of Dhaka, Bangladesh, in Information Technology, majoring in Software Engineering. He currently lives in Toronto, Canada.
+
+## ✍️ Most recent blog posts
+
+### Foojay.io
+
+
+### Why Did We Choose Jakarta Faces for the UI of the Eclipse Starter for Jakarta EE? (2022-12-13)::
+<p>This article explains why we chose JSF to build the Eclipse starter for Jakarta and why it deserves more love and attention!</p>
+<p>The post <a rel="nofollow" href="https://foojay.io/today/why-did-we-choose-jakarta-faces-for-the-ui-of-the-eclipse-starter-for-jakarta-ee/">Why Did We Choose Jakarta Faces for the UI of the Eclipse Starter for Jakarta EE?</a> appeared first on <a rel="nofollow" href="https://foojay.io">foojay</a>.</p>
+...
+
+[Read further^](https://foojay.io/today/why-did-we-choose-jakarta-faces-for-the-ui-of-the-eclipse-starter-for-jakarta-ee/)
+
+
+### A Minor But Useful Refactoring Technique That Would Reduce Your Code Footprint (Part 2) (2022-10-26)::
+<p>As I keep refactoring, this article will focus on a few more interesting ways to do it. These are pretty much minor yet effective and useful changes. Stream.noneMatch() and Stream.anyMatch() In some situations, we need to find a single case ...</p>
+<p>The post <a rel="nofollow" href="https://foojay.io/today/a-minor-but-useful-refactoring-technique-that-would-reduce-your-code-footprint-part-2/">A Minor But Useful Refactoring Technique That Would Reduce Your Code Footprint (Part 2)</a> appeared first on <a rel="nofollow" href="https://foojay.io">foojay</a>.</p>
+...
+
+[Read further^](https://foojay.io/today/a-minor-but-useful-refactoring-technique-that-would-reduce-your-code-footprint-part-2/)
+
+
+### A Minor But Useful Refactoring Technique That Would Reduce Your Code Footprint (Part 1) (2022-10-20)::
+<p>That was a long-awaited migration, but I'm pleased that we eventually made it. The next thing... "Why not Java 17 directly?" </p>
+<p>The post <a rel="nofollow" href="https://foojay.io/today/a-minor-but-useful-refactoring-technique-that-would-reduce-your-code-footprint-part-1/">A Minor But Useful Refactoring Technique That Would Reduce Your Code Footprint (Part 1)</a> appeared first on <a rel="nofollow" href="https://foojay.io">foojay</a>.</p>
+...
+
+[Read further^](https://foojay.io/today/a-minor-but-useful-refactoring-technique-that-would-reduce-your-code-footprint-part-1/)
+
+
+### What Does a Modern JVM Look Like, And How Does It Work? (2022-09-29)::
+<p>In this article, the internal workings of the JVM are discussed, e.g., interpreter, JIT compiler, and how it optimizes code.</p>
+<p>The post <a rel="nofollow" href="https://foojay.io/today/what-does-a-modern-jvm-look-like-and-how-does-it-work/">What Does a Modern JVM Look Like, And How Does It Work?</a> appeared first on <a rel="nofollow" href="https://foojay.io">foojay</a>.</p>
+...
+
+[Read further^](https://foojay.io/today/what-does-a-modern-jvm-look-like-and-how-does-it-work/)
+
+
+### The 5 Most Pivotal and Innovative Additions to OpenJDK 19 (2022-09-20)::
+<p>Although OpenJDK 19 is not an LTS, it is still a significant release, in my opinion. It includes several game-changing features that will alter the Java landscape.</p>
+<p>The post <a rel="nofollow" href="https://foojay.io/today/the-5-most-pivotal-and-innovative-additions-to-openjdk-19/">The 5 Most Pivotal and Innovative Additions to OpenJDK 19</a> appeared first on <a rel="nofollow" href="https://foojay.io">foojay</a>.</p>
+...
+
+[Read further^](https://foojay.io/today/the-5-most-pivotal-and-innovative-additions-to-openjdk-19/)
+
+
+### Java Thread Programming (Part 15) (2022-08-31)::
+<p>Learn how to do asynchronous method invocation with Callable and Future with a practical example.</p>
+<p>The post <a rel="nofollow" href="https://foojay.io/today/java-thread-programming-part-15/">Java Thread Programming (Part 15)</a> appeared first on <a rel="nofollow" href="https://foojay.io">foojay</a>.</p>
+...
+
+[Read further^](https://foojay.io/today/java-thread-programming-part-15/)
+
+
+### Java Bytecode Simplified: Journey to the Wonderland (Part 2) (2022-08-16)::
+<p>Let’s appreciate the Java Virtual Machine (JVM) even more. Today we'll discuss Constant Pool in quite some detail.</p>
+<p>The post <a rel="nofollow" href="https://foojay.io/today/java-bytecode-simplified-journey-to-the-wonderland-part-2/">Java Bytecode Simplified: Journey to the Wonderland (Part 2)</a> appeared first on <a rel="nofollow" href="https://foojay.io">foojay</a>.</p>
+...
+
+[Read further^](https://foojay.io/today/java-bytecode-simplified-journey-to-the-wonderland-part-2/)
+
+
+### Top 7 Features in Jakarta EE 10 (2022-06-28)::
+<p>Jakarta EE is a dominant force behind all enterprise development in Java. Check out my favorite top 7 features, what are yours?</p>
+<p>The post <a rel="nofollow" href="https://foojay.io/today/top-7-features-in-jakarta-ee-10/">Top 7 Features in Jakarta EE 10</a> appeared first on <a rel="nofollow" href="https://foojay.io">foojay</a>.</p>
+...
+
+[Read further^](https://foojay.io/today/top-7-features-in-jakarta-ee-10/)
+
+
+### How to Add an Event to the Foojay Event Calendar (2022-06-07)::
+<p>If you want to add an event to our calendar or advertize your event on Foojay.io, you can follow the following steps! </p>
+<p>The post <a rel="nofollow" href="https://foojay.io/today/how-to-add-an-event-to-the-foojay-event-calendar/">How to Add an Event to the Foojay Event Calendar</a> appeared first on <a rel="nofollow" href="https://foojay.io">foojay</a>.</p>
+...
+
+[Read further^](https://foojay.io/today/how-to-add-an-event-to-the-foojay-event-calendar/)
+
+
+### Book Review: Monolith to Microservices (Part 2) (2022-05-25)::
+<p>In many cases, microservices are probably not ideal, but if you're going to do it, take baby steps. Small and short-term wins matter; it boasts the team's confidence. Always put checks and balance whether it is working or not. If not, then go back to the alternative ways.</p>
+<p>The post <a rel="nofollow" href="https://foojay.io/today/book-review-monolith-to-microservices-part-2/">Book Review: Monolith to Microservices (Part 2)</a> appeared first on <a rel="nofollow" href="https://foojay.io">foojay</a>.</p>
+...
+
+[Read further^](https://foojay.io/today/book-review-monolith-to-microservices-part-2/)
 
 
 <h3 align="left">Connect with me:</h3>
@@ -29,3 +116,4 @@
 
 <a href="https://github.com/rokon12/rokon12">
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
+

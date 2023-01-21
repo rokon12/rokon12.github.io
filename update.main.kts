@@ -42,7 +42,11 @@ val template: Template = Configuration(Configuration.VERSION_2_3_29)
             wrapUncheckedExceptions = true
             fallbackOnNullLoopVariable = false
             objectWrapper = Java8ObjectWrapper(this.incompatibleImprovements)
-        }.getTemplate("template.adoc")
+        }.getTemplate("template.md")
+
+
+
+val divRegex = Regex("<div>.*?</div>")
 
 val posts: List<Post> by lazy {
     val url = URL("https://foojay.io/today/author/bazlur-rahman/feed")
@@ -50,7 +54,10 @@ val posts: List<Post> by lazy {
     val feed = SyndFeedInput().build(input)
     feed.entries.map {
         val published = convertToLocalDate(it.publishedDate)
-        Post(published, it.title, it.link, StringEscapeUtils.unescapeHtml4(it.description.value))
+        var content = it.description.value
+        content = content.replace(divRegex, "")
+        content = StringEscapeUtils.unescapeHtml4(content);
+        Post(published, it.title, it.link, content)
     }
 }
 
@@ -66,4 +73,4 @@ val root = mapOf(
         "foojayPosts" to posts,
 )
 
-template.process(root, FileWriter("README.adoc"))
+template.process(root, FileWriter("README.md"))
