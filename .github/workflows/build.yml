@@ -26,5 +26,5 @@ jobs:
         uses: EndBug/add-and-commit@v9
         with:
           add: README.md
-          default_user: rokon12
+          default_author: rokon12
           message: Automatically update README.md
