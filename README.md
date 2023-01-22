@@ -1,6 +1,6 @@
 ## Bio:
 
-My name is **A N M Bazlur Rahman** and I work as a Sr. Software Engineer at [Contrast Security](https://www.contrastsecurity.com/). I have over a decade of professional experience in the software industry, primarily in Java and Java-related technologies. Recently, I was honored with the title of [Java Champion](https://twitter.com/Java_Champions/status/1523728715368509440).
+Hey there! I'm **Bazlur** and I work as a Senior Software Engineer at [Contrast Security](https://www.contrastsecurity.com/). I have over a decade of professional experience in the software industry, primarily in Java and Java-related technologies. Recently, I was honored with the title of [Java Champion](https://twitter.com/Java_Champions/status/1523728715368509440).
 
 Outside of my regular work hours, I love to mentor, write, speak at conferences, and contribute to open-source projects. I am the founder and current moderator of the [Java User Group in Bangladesh](https://jugbd.org/), and I have been organizing meetups and conferences to share Java-related knowledge with the community since 2013. I was named Most Valuable Blogger (MVP) at [DZone](https://dzone.com/users/1298119/bazlur_rahman.html), one of the most recognized technology publishers in the world. Additionally, I am an editor for the Java Queue at [InfoQ](https://www.infoq.com/profile/A-N-M-Bazlur-Rahman/), another leading technology content publisher and conference organizer, and an editor at [Foojay.io](https://foojay.io/today/author/bazlur-rahman/), a platform for OpenJDK enthusiasts. I have also published [four books](https://www.rokomari.com/book/129165/java-programming) about the Java programming language in Bengali, which were bestsellers in Bangladesh.
 
@@ -41,17 +41,17 @@ Red Hat has released WildFly 27, featuring support for JDK 11, JDK 17, Jakarta E
 [Read further^](https://www.infoq.com//news/2022/12/wildfly-delivers-support-jdk-17/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
 
 
-### Jakarta EE 10 Delivers New Core Profile and Updates to Specifications (2022-09-27)
+### Jakarta EE 10 Delivers New Core Profile and Updates to Specifications (2023-01-21)
 Jakarta EE 10, released on September 22, 2022, is the third major, and fourth overall, release of Jakarta EE by the Jakarta EE Working Group since Oracle donated Java EE 8 to the Eclipse Foundation in 2017. This release aims to deliver a set of coordinated specifications for building modernized, simplified, and lightweight cloud-native Java applications across the spectrum of Jakarta EE....
 [Read further^](https://www.infoq.com//news/2022/09/jakarta-ee-10-updates/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
 
 
-### Introducing Helidon N&iacute;ma Using Virtual Threads to Achieve Simplicity and High Performance (2022-09-16)
+### Introducing Helidon N&iacute;ma Using Virtual Threads to Achieve Simplicity and High Performance (2023-01-21)
 Under the umbrella of Project Helidon, Oracle introduced the first microservices framework based on virtual threads (JEP 425) called Helidon N&iacute;ma. It is built from the ground up to achieve an easy-to-use programming model with outstanding performance. The technology preview is now available with the Helidon 4.0.0-ALPHA1 release for those who are interested in evaluating the latest Java technology....
 [Read further^](https://www.infoq.com//news/2022/09/introducing-helidon-nima/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
 
 
-### JEP 429: Extent-Local Variables to Promote Immutability in Java (2022-09-09)
+### JEP 429: Extent-Local Variables to Promote Immutability in Java (2023-01-21)
 JEP 429, Extent-Local Variables (Incubator), was promoted from its JEP Draft 8263012 to Candidate status. This incubating JEP, under the umbrella of Project Loom, proposes enabling the sharing of immutable data within and across threads. This is preferred to thread-local variables, especially when using large numbers of virtual threads....
 [Read further^](https://www.infoq.com//news/2022/09/extent-local-variables-java/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
 
@@ -173,8 +173,10 @@ The post <a rel="nofollow" href="https://foojay.io/today/book-review-monolith-to
 - Workshop on Advance Java Programming: Thread &amp; Lambda Expression at <a href="https://site.ieee.org/sb-udhaka-cs/past-events/">IEEE Computer Society</a>
 - Panel discussion at <a href="https://javaconference.world/speaker/a-n-m-bazlur-rahman/">Java Developers’ Conference 21</a>
 
+
 ## &#x1f4c8; GitHub Stats
 
 <a href="https://github.com/rokon12/rokon12">
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
+*This document was last updated at Sat, 21 Jan 2023 22:27:59 -0500*

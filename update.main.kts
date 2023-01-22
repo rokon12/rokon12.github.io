@@ -24,6 +24,7 @@ import java.io.*
 import java.net.URL
 import java.time.Instant
 import java.time.LocalDate
+import java.time.LocalDateTime
 import java.time.ZoneId
 import java.time.format.DateTimeFormatter
 import java.util.*
@@ -88,7 +89,8 @@ val talks: List<String> by lazy {
 val root = mapOf(
         "foojayPosts" to posts,
         "infoqPosts" to infoqPosts,
-        "talks" to talks
+        "talks" to talks,
+        "lastUpdated" to LocalDateTime.now().atZone(ZoneId.systemDefault()).format(DateTimeFormatter.RFC_1123_DATE_TIME)
 )
 
 template.process(root, FileWriter("README.md"))

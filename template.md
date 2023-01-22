@@ -1,6 +1,6 @@
 ## Bio:
 
-My name is **A N M Bazlur Rahman** and I work as a Sr. Software Engineer at [Contrast Security](https://www.contrastsecurity.com/). I have over a decade of professional experience in the software industry, primarily in Java and Java-related technologies. Recently, I was honored with the title of [Java Champion](https://twitter.com/Java_Champions/status/1523728715368509440).
+Hey there! I'm **Bazlur** and I work as a Senior Software Engineer at [Contrast Security](https://www.contrastsecurity.com/). I have over a decade of professional experience in the software industry, primarily in Java and Java-related technologies. Recently, I was honored with the title of [Java Champion](https://twitter.com/Java_Champions/status/1523728715368509440).
 
 Outside of my regular work hours, I love to mentor, write, speak at conferences, and contribute to open-source projects. I am the founder and current moderator of the [Java User Group in Bangladesh](https://jugbd.org/), and I have been organizing meetups and conferences to share Java-related knowledge with the community since 2013. I was named Most Valuable Blogger (MVP) at [DZone](https://dzone.com/users/1298119/bazlur_rahman.html), one of the most recognized technology publishers in the world. Additionally, I am an editor for the Java Queue at [InfoQ](https://www.infoq.com/profile/A-N-M-Bazlur-Rahman/), another leading technology content publisher and conference organizer, and an editor at [Foojay.io](https://foojay.io/today/author/bazlur-rahman/), a platform for OpenJDK enthusiasts. I have also published [four books](https://www.rokomari.com/book/129165/java-programming) about the Java programming language in Bengali, which were bestsellers in Bangladesh.
 
@@ -44,8 +44,10 @@ ${post.excerpt}...
 - ${talk}
 </#list>
 
+
 ## &#x1f4c8; GitHub Stats
 
 <a href="https://github.com/rokon12/rokon12">
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
+*This document was last updated at ${lastUpdated}*
