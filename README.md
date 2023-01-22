@@ -1,11 +1,11 @@
 ## Bio:
 
-**A N M Bazlur Rahman** works at [Contrast Security](https://www.contrastsecurity.com/) as a Sr. Software Engineer. He has more than ten years of professional experience in the software industry, predominantly in Java and Java-related technologies. Recently, he was honoured by being given the title of  [Java Champion](https://twitter.com/Java_Champions/status/1523728715368509440).
+My name is **A N M Bazlur Rahman** and I work as a Sr. Software Engineer at [Contrast Security](https://www.contrastsecurity.com/). I have over a decade of professional experience in the software industry, primarily in Java and Java-related technologies. Recently, I was honored with the title of [Java Champion](https://twitter.com/Java_Champions/status/1523728715368509440).
 
+Outside of my regular work hours, I love to mentor, write, speak at conferences, and contribute to open-source projects. I am the founder and current moderator of the [Java User Group in Bangladesh](https://jugbd.org/), and I have been organizing meetups and conferences to share Java-related knowledge with the community since 2013. I was named Most Valuable Blogger (MVP) at [DZone](https://dzone.com/users/1298119/bazlur_rahman.html), one of the most recognized technology publishers in the world. Additionally, I am an editor for the Java Queue at [InfoQ](https://www.infoq.com/profile/A-N-M-Bazlur-Rahman/), another leading technology content publisher and conference organizer, and an editor at [Foojay.io](https://foojay.io/today/author/bazlur-rahman/), a platform for OpenJDK enthusiasts. I have also published [four books](https://www.rokomari.com/book/129165/java-programming) about the Java programming language in Bengali, which were bestsellers in Bangladesh.
 
-Outside of his regular work hours, he loves to mentor, write, speak at conferences, and contribute to open-source projects. He is the founder and current moderator of the [Java User Group in Bangladesh](https://jugbd.org/). He has organized meetups and conferences to share Java-related knowledge with the community since 2013. He was named Most Valuable Blogger (MVP) at [DZone](https://dzone.com/users/1298119/bazlur_rahman.html), one of the most recognized technology publishers in the world. Besides DZone, he is an editor for the Java Queue at [InfoQ](https://www.infoq.com/profile/A-N-M-Bazlur-Rahman/), another leading technology content publisher and conference organizer, and an editor at [Foojay.io](https://foojay.io/today/author/bazlur-rahman/), a place for friends of OpenJDK. In addition, he has published [four books](https://www.rokomari.com/book/129165/java-programming) about the Java programming language in Bengali; they were bestsellers in Bangladesh.
+I earned my bachelor's degree in Information Technology, majoring in Software Engineering from the Institute of Information Technology, University of Dhaka, Bangladesh. I currently live in Toronto, Canada.
 
-He earned his bachelor’s degree from the Institute of Information Technology, University of Dhaka, Bangladesh, in Information Technology, majoring in Software Engineering. He currently lives in Toronto, Canada.
 
 <h3 align="left">Connect:</h3>
 <p align="left">
@@ -18,8 +18,60 @@ He earned his bachelor’s degree from the Institute of Information Technology, 
 
 
 ## ✍️ Most recent blog posts
+## <u>[InfoQ](https://www.infoq.com/profile/A-N-M-Bazlur-Rahman/)</u>
 
-### Foojay.io
+
+### MicroProfile 6.0 Delivers Alignment with Jakarta EE 10 and a New Specification (2023-01-18)
+In a major move for the Java community, the MicroProfile Working Group has officially released MicroProfile 6.0. This anticipated release brings a host of new features and improvements, including alignment with the Jakarta 10 Core Profile and updates to several key specifications, such as Metrics, JWT Authentication, Open API, Reactive Messaging, and Reactive Streams Operators....
+[Read further^](https://www.infoq.com//news/2023/01/microprofile6-delivers-alignmens/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
+
+
+### Micronaut 3.8.0: Build Scalable Applications with the Updated CRaC Feature (2023-01-13)
+Just one week after the release of version 3.7.5,  the Micronaut Foundation released Micronaut 3.8.0. This new version brings several exciting features, including support for GraalVM 22.3.0, the ability to use @RequestBean annotations with Java records, and a new command that guides users in creating a Micronaut AWS Lambda project....
+[Read further^](https://www.infoq.com//news/2023/01/micronaut-released-3-8-0/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
+
+
+### GlassFish 7.0 Delivers Support for JDK 17 and Jakarta EE 10 (2023-01-06)
+The Eclipse Foundation has released the latest version of its open-source application server, GlassFish 7.0, which is now available. The new release includes support for the MicroProfile Config, MicroProfile JWT Propagation, and Jakarta MVC 2.1 specifications. Changes to the API and JSON parts of the Jakarta Standard Tag Library and new Jakarta Authentication methods are also essential features....
+[Read further^](https://www.infoq.com//news/2023/01/glassfish-delivers-support-jdk17/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
+
+
+### WildFly 27 Delivers Support for JDK 17 and Jakarta EE 10 (2022-12-13)
+Red Hat has released WildFly 27, featuring support for JDK 11, JDK 17, Jakarta EE 10 and MicroProfile 5.0. There are also dependency upgrades to Hibernate ORM 6.1, Hibernate Search 6.1, Infinispan 14, JGroups 5.2, RESTEasy 6.2, and Weld 5. WildFly 27 is a compatible implementation for Jakarta EE 10, having passed the TCKs in the Platform, Web and Core profiles....
+[Read further^](https://www.infoq.com//news/2022/12/wildfly-delivers-support-jdk-17/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
+
+
+### Jakarta EE 10 Delivers New Core Profile and Updates to Specifications (2022-09-27)
+Jakarta EE 10, released on September 22, 2022, is the third major, and fourth overall, release of Jakarta EE by the Jakarta EE Working Group since Oracle donated Java EE 8 to the Eclipse Foundation in 2017. This release aims to deliver a set of coordinated specifications for building modernized, simplified, and lightweight cloud-native Java applications across the spectrum of Jakarta EE....
+[Read further^](https://www.infoq.com//news/2022/09/jakarta-ee-10-updates/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
+
+
+### Introducing Helidon N&iacute;ma Using Virtual Threads to Achieve Simplicity and High Performance (2022-09-16)
+Under the umbrella of Project Helidon, Oracle introduced the first microservices framework based on virtual threads (JEP 425) called Helidon N&iacute;ma. It is built from the ground up to achieve an easy-to-use programming model with outstanding performance. The technology preview is now available with the Helidon 4.0.0-ALPHA1 release for those who are interested in evaluating the latest Java technology....
+[Read further^](https://www.infoq.com//news/2022/09/introducing-helidon-nima/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
+
+
+### JEP 429: Extent-Local Variables to Promote Immutability in Java (2022-09-09)
+JEP 429, Extent-Local Variables (Incubator), was promoted from its JEP Draft 8263012 to Candidate status. This incubating JEP, under the umbrella of Project Loom, proposes enabling the sharing of immutable data within and across threads. This is preferred to thread-local variables, especially when using large numbers of virtual threads....
+[Read further^](https://www.infoq.com//news/2022/09/extent-local-variables-java/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
+
+
+### JEP 428: Structured Concurrency to Simplify Java Multithreaded Programming (2022-06-03)
+JEP 428, Structured Concurrency (Incubator), has been promoted from Proposed to Target to Targeted status for JDK 19. Under the umbrella of Project Loom, this JEP proposes simplifying multithreaded programming by introducing a library to treat multiple tasks running on different threads as an atomic operation. It will streamline error handling, improve reliability, and enhance observability....
+[Read further^](https://www.infoq.com//news/2022/06/java-structured-concurrency/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
+
+
+### JEP 405: Record Classes to Extend Pattern Matching in Java (2022-05-26)
+JEP 405, Record Patterns (Preview), has been promoted from Proposed to Target to Targeted for JDK 19. Under the umbrella of Project Amber, this JEP proposes to enhance the language with record patterns to deconstruct record values. Record patterns may be used in conjunction with type patterns to &quot;enable a robust, declarative, and composable form of data navigation and processing.&quot;...
+[Read further^](https://www.infoq.com//news/2022/05/java-record-pattern/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
+
+
+### JEP 425: Java Virtual Threads to Deliver Improved Throughput (2022-05-11)
+JEP 425, Virtual Threads (Preview), has been promoted from Proposed to Target to Targeted status for JDK 19. This JEP, under the umbrella of Project Loom, introduces virtual threads. These lightweight threads aim to dramatically reduce the effort of writing, maintaining, and observing high-throughput concurrent applications to the Java platform. This is a preview feature....
+[Read further^](https://www.infoq.com//news/2022/05/virtual-threads-for-jdk19/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
+
+
+## <u>[Foojay.io](https://foojay.io/)</u>
 
 
 ### Why Did We Choose Jakarta Faces for the UI of the Eclipse Starter for Jakarta EE? (2022-12-13)
@@ -90,7 +142,6 @@ In many cases, microservices are probably not ideal, but if you're going to do i
 The post <a rel="nofollow" href="https://foojay.io/today/book-review-monolith-to-microservices-part-2/">Book Review: Monolith to Microservices (Part 2)</a> appeared first on <a rel="nofollow" href="https://foojay.io">foojay</a>.
 ...
 [Read further^](https://foojay.io/today/book-review-monolith-to-microservices-part-2/)
-
 
 
 
