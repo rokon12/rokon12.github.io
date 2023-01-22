@@ -41,17 +41,17 @@ Red Hat has released WildFly 27, featuring support for JDK 11, JDK 17, Jakarta E
 [Read further^](https://www.infoq.com//news/2022/12/wildfly-delivers-support-jdk-17/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
 
 
-### Jakarta EE 10 Delivers New Core Profile and Updates to Specifications (2023-01-21)
+### Jakarta EE 10 Delivers New Core Profile and Updates to Specifications (2022-09-27)
 Jakarta EE 10, released on September 22, 2022, is the third major, and fourth overall, release of Jakarta EE by the Jakarta EE Working Group since Oracle donated Java EE 8 to the Eclipse Foundation in 2017. This release aims to deliver a set of coordinated specifications for building modernized, simplified, and lightweight cloud-native Java applications across the spectrum of Jakarta EE....
 [Read further^](https://www.infoq.com//news/2022/09/jakarta-ee-10-updates/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
 
 
-### Introducing Helidon N&iacute;ma Using Virtual Threads to Achieve Simplicity and High Performance (2023-01-21)
+### Introducing Helidon N&iacute;ma Using Virtual Threads to Achieve Simplicity and High Performance (2022-09-16)
 Under the umbrella of Project Helidon, Oracle introduced the first microservices framework based on virtual threads (JEP 425) called Helidon N&iacute;ma. It is built from the ground up to achieve an easy-to-use programming model with outstanding performance. The technology preview is now available with the Helidon 4.0.0-ALPHA1 release for those who are interested in evaluating the latest Java technology....
 [Read further^](https://www.infoq.com//news/2022/09/introducing-helidon-nima/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
 
 
-### JEP 429: Extent-Local Variables to Promote Immutability in Java (2023-01-21)
+### JEP 429: Extent-Local Variables to Promote Immutability in Java (2022-09-09)
 JEP 429, Extent-Local Variables (Incubator), was promoted from its JEP Draft 8263012 to Candidate status. This incubating JEP, under the umbrella of Project Loom, proposes enabling the sharing of immutable data within and across threads. This is preferred to thread-local variables, especially when using large numbers of virtual threads....
 [Read further^](https://www.infoq.com//news/2022/09/extent-local-variables-java/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
 
@@ -144,34 +144,6 @@ The post <a rel="nofollow" href="https://foojay.io/today/book-review-monolith-to
 [Read further^](https://foojay.io/today/book-review-monolith-to-microservices-part-2/)
 
 
-## <u>Talks</u>
-
-- <strong>A tale of two cities: blocking code vs. non-blocking code at <a href="https://devnexus.com/presentations/a-tale-of-two-cities-blocking-code-vs-non-blocking-code">DevNeus</a></strong>
-- <strong> A tale of two cities: blocking code vs. non-blocking code at <a href="https://events.geekle.us/java23/">Online Summit for Java Dev</a></strong>
-- <a href="https://jchampionsconf.com/speakers.html#rahmanCard">A tale of two cities: blocking code vs. non-blocking code</a> at JChampion Conference
-- <a href="https://confoo.ca/en/2023/session/java-virtual-threads-to-deliver-improved-throughput">Java Virtual Threads to Deliver Improved Throughput </a> at <a href="https://confoo.ca/en/2023/schedule">ConFoo.ca</a>
-- <a href="https://confoo.ca/en/2023/session/your-code-on-the-fastlane-catch-up-with-everyone">Your code on the Fastlane: catch up with everyone</a> at <a href="https://confoo.ca/en/2023/schedule">ConFoo.ca</a>
-- Jakarta Starter: Create, build and run Jakarta EE Applications in under a minute at <a href="https://jakartaone.org/2022/speakers/#bazlur-rahman">JakartaOne LIVESTREAM</a>
-- Creating a Million Virtual Threads Using Project Loom at <a href="https://twitter.com/bazlur_rahman/status/1591597860323221504?ref_src=twsrc%5Etfw%7Ctwcamp%5Eembeddedtimeline%7Ctwterm%5Escreen-name%3Abazlur_rahman%7Ctwcon%5Es1">PeruJUG</a>
-- Java Threading Essentials: Novice to Expert workshop at <a href="https://devoxx.ma/talk/?id=2724">Devoxx Morocco</a>
-- Your Java Code in the Fastlane: Project Loom at <a href="https://www.meetup.com/arab-java-user-group/events/287738576/">Arab Java User Group</a>
-- Creating a Million Virtual Threads Using Project Loom with Bazlur Rahman at <a href="https://www.meetup.com/the-pittsburgh-java-meetup-group/events/287639185/">The Pittsburgh Java Meetup Group</a>
-- Your Java Code in the Fastlane: Creating a Million Virtual Threads Using Project Loom to Improve Throughput at <a href="https://twitter.com/StarofJava/status/1552574469822025728">Star Meetup</a>
-- Your Java Code in the Fastlane: Creating a Million Virtual Threads Using Project Loom to Improve Throughput at <a href="https://www.meetup.com/PhillyJUG/events/285970065/">PhillyJUG</a>
-- Your Java Code in the Fastlane: Creating a Million Virtual Threads Using Project Loom to Improve Throughput at <a href="https://gsjug.org/meetings/2022/jul2022.html">Garden State Java User Group</a>
-- Creating a Million Virtual Threads Using Project loom at <a href="https://www.meetup.com/SouJava/events/286013245/">SouJava</a>
-- Java Threading Essentials: Novice to Expert workshop at <a href="https://www.javaday.istanbul/bazlur-rahman-speaker">JavaDay Istambul 2022</a>
-- Java Threading Essentials at Geekly <a href="https://geekle.us/schedule/java">Online Java Summit</a>
-- Java Threading Essentials at <a href="https://fosdem.org/2022/schedule/event/threading/">FOSDEM 22</a>
-- Advanced Java Memory Management at <a href="https://www.youtube.com/watch?v=4Pz-DaH9KVo">JUGBD</a>
-- Top 10 questions asked by Junior Java Developers at <a href="https://www.youtube.com/watch?v=mXbGz3cUZ0Y&amp;t=34s">JUGBD</a>
-- Keynote Speech: Looking back and moving forward at <a href="https://www.youtube.com/watch?v=_-QOHqQr_yE&amp;t=1451s">JUGBD</a>
-- What industry expects from a junior software developer at <a href="https://www.youtube.com/watch?v=eIaqbmfl9-c">JUGBD</a>
-- Overseas Career Opportunities at <a href="https://www.youtube.com/watch?v=eIaqbmfl9-c">JUGBD</a>
-- Top 20 reasons to learn Java now than ever at <a href="https://youtu.be/8GOZRoEUiaA">JUGBD</a>
-- Workshop on Basic Java Programming at <a href="https://site.ieee.org/sb-udhaka-cs/past-events/">IEEE Computer Society </a>
-- Workshop on Advance Java Programming: Thread &amp; Lambda Expression at <a href="https://site.ieee.org/sb-udhaka-cs/past-events/">IEEE Computer Society</a>
-- Panel discussion at <a href="https://javaconference.world/speaker/a-n-m-bazlur-rahman/">Java Developers’ Conference 21</a>
 
 ## &#x1f4c8; GitHub Stats
 
