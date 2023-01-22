@@ -28,7 +28,6 @@ import java.time.ZoneId
 import java.time.format.DateTimeFormatter
 import java.util.*
 
-
 val template: Template = Configuration(Configuration.VERSION_2_3_29)
         .apply {
             setDirectoryForTemplateLoading(File("."))
@@ -55,27 +54,7 @@ val posts: List<Post> by lazy {
     }
 }
 
-//val infoQPosts: List<Post> by lazy {
-//    val url = "https://www.infoq.com/userProfile!getMore.action?single=true&token=ElCokalLPL2msy8g83iejKIMwEQ7Cnmn&fu=0&f=0&ft=0&lc=0&cml=0&cmo=0&news=100"
-//    client.newCall(Request())
-//
-//}
-
-//https://www.infoq.com/userProfile!getMore.action?single=false&token=ElCokalLPL2msy8g83iejKIMwEQ7Cnmn&fu=3&f=0&ft=0&lc=0&cml=0&cmo=0&news=7&articles=0&presentations=0&minibooks=0&podcasts=0&interviews=0&research=0&reviewed=0
-data class Data(
-        val id: String,
-        val type: String,
-        val title: String,
-        val date: String,
-        val meta: String,
-        val body: String,
-        val hidden: String,
-        val hasMore: Boolean,
-        val followedByCurrentUser: Boolean,
-        val count: String,
-        val link: String,
-        val msg: String
-)
+data class Post(val published: LocalDate, val title: String, val link: String, val excerpt: String)
 
 val client = OkHttpClient()
 val gson = Gson()
@@ -86,31 +65,25 @@ val infoqUrl = "${baseUrl}userProfile!getMore.action?single=true&token=ElCokalLP
 val request = Request.Builder()
         .url(infoqUrl)
         .build()
+data class Data(val id: String, val type: String, val title: String, val date: String, val meta: String, val body: String, val hidden: String, val hasMore: Boolean, val followedByCurrentUser: Boolean, val count: String, val link: String, val msg: String)
+
 val infoqPosts: List<Post> by lazy {
     val response = client.newCall(request).execute()
     val responseData = response.body?.string()
 
     gson.fromJson(responseData, Array<Data>::class.java)
             .filter { it.type == "news" }
-            .map {
-                val date = localDate(it)
-                Post(date, it.title, (baseUrl + it.link), it.body)
-            }
+            .map { Post(localDate(it), it.title, (baseUrl + it.link), it.body) }
 }
-data class Post(val published: LocalDate, val title: String, val link: String, val excerpt: String)
 
 val talks: List<String> by lazy {
     val document = Jsoup.connect("https://bazlur.ca/conference-talks/")
-            .userAgent("Mozilla").get();
-    val container = document.getElementsByClass("container");
-    val ul = container.select("div.entry-content > ul");
-    val li = ul.select("li");
-
-    val list = li.map { it.html() }
-
-    list
+            .userAgent("Mozilla").get()
+    val container = document.getElementsByClass("container")
+    val ul = container.select("div.entry-content > ul")
+    val li = ul.select("li")
+    li.map { it.html() }
 }
-
 
 val root = mapOf(
         "foojayPosts" to posts,
@@ -127,7 +100,7 @@ fun localDate(it: Data): LocalDate {
         try {
             LocalDate.parse(it.date, formatter2)
         } catch (e: Exception) {
-            LocalDate.now();
+            LocalDate.now()
         }
     }
     return date
