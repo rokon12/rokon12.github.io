@@ -18,89 +18,130 @@ He earned his bachelor’s degree from the Institute of Information Technology, 
 
 
 ## ✍️ Most recent blog posts
+## InfoQ
 
-### Foojay.io
+
+### MicroProfile 6.0 Delivers Alignment with Jakarta EE 10 and a New Specification (2023-01-18)
+In a major move for the Java community, the MicroProfile Working Group has officially released MicroProfile 6.0. This anticipated release brings a host of new features and improvements, including alignment with the Jakarta 10 Core Profile and updates to several key specifications, such as Metrics, JWT Authentication, Open API, Reactive Messaging, and Reactive Streams Operators....
+[Read further^](https://www.infoq.com//news/2023/01/microprofile6-delivers-alignmens/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
 
 
-### Why Did We Choose Jakarta Faces for the UI of the Eclipse Starter for Jakarta EE? (2022-12-13)::
-<p>This article explains why we chose JSF to build the Eclipse starter for Jakarta and why it deserves more love and attention!</p>
-<p>The post <a rel="nofollow" href="https://foojay.io/today/why-did-we-choose-jakarta-faces-for-the-ui-of-the-eclipse-starter-for-jakarta-ee/">Why Did We Choose Jakarta Faces for the UI of the Eclipse Starter for Jakarta EE?</a> appeared first on <a rel="nofollow" href="https://foojay.io">foojay</a>.</p>
+### Micronaut 3.8.0: Build Scalable Applications with the Updated CRaC Feature (2023-01-13)
+Just one week after the release of version 3.7.5,  the Micronaut Foundation released Micronaut 3.8.0. This new version brings several exciting features, including support for GraalVM 22.3.0, the ability to use @RequestBean annotations with Java records, and a new command that guides users in creating a Micronaut AWS Lambda project....
+[Read further^](https://www.infoq.com//news/2023/01/micronaut-released-3-8-0/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
+
+
+### GlassFish 7.0 Delivers Support for JDK 17 and Jakarta EE 10 (2023-01-06)
+The Eclipse Foundation has released the latest version of its open-source application server, GlassFish 7.0, which is now available. The new release includes support for the MicroProfile Config, MicroProfile JWT Propagation, and Jakarta MVC 2.1 specifications. Changes to the API and JSON parts of the Jakarta Standard Tag Library and new Jakarta Authentication methods are also essential features....
+[Read further^](https://www.infoq.com//news/2023/01/glassfish-delivers-support-jdk17/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
+
+
+### WildFly 27 Delivers Support for JDK 17 and Jakarta EE 10 (2022-12-13)
+Red Hat has released WildFly 27, featuring support for JDK 11, JDK 17, Jakarta EE 10 and MicroProfile 5.0. There are also dependency upgrades to Hibernate ORM 6.1, Hibernate Search 6.1, Infinispan 14, JGroups 5.2, RESTEasy 6.2, and Weld 5. WildFly 27 is a compatible implementation for Jakarta EE 10, having passed the TCKs in the Platform, Web and Core profiles....
+[Read further^](https://www.infoq.com//news/2022/12/wildfly-delivers-support-jdk-17/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
+
+
+### Jakarta EE 10 Delivers New Core Profile and Updates to Specifications (2023-01-21)
+Jakarta EE 10, released on September 22, 2022, is the third major, and fourth overall, release of Jakarta EE by the Jakarta EE Working Group since Oracle donated Java EE 8 to the Eclipse Foundation in 2017. This release aims to deliver a set of coordinated specifications for building modernized, simplified, and lightweight cloud-native Java applications across the spectrum of Jakarta EE....
+[Read further^](https://www.infoq.com//news/2022/09/jakarta-ee-10-updates/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
+
+
+### Introducing Helidon N&iacute;ma Using Virtual Threads to Achieve Simplicity and High Performance (2023-01-21)
+Under the umbrella of Project Helidon, Oracle introduced the first microservices framework based on virtual threads (JEP 425) called Helidon N&iacute;ma. It is built from the ground up to achieve an easy-to-use programming model with outstanding performance. The technology preview is now available with the Helidon 4.0.0-ALPHA1 release for those who are interested in evaluating the latest Java technology....
+[Read further^](https://www.infoq.com//news/2022/09/introducing-helidon-nima/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
+
+
+### JEP 429: Extent-Local Variables to Promote Immutability in Java (2023-01-21)
+JEP 429, Extent-Local Variables (Incubator), was promoted from its JEP Draft 8263012 to Candidate status. This incubating JEP, under the umbrella of Project Loom, proposes enabling the sharing of immutable data within and across threads. This is preferred to thread-local variables, especially when using large numbers of virtual threads....
+[Read further^](https://www.infoq.com//news/2022/09/extent-local-variables-java/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
+
+
+### JEP 428: Structured Concurrency to Simplify Java Multithreaded Programming (2022-06-03)
+JEP 428, Structured Concurrency (Incubator), has been promoted from Proposed to Target to Targeted status for JDK 19. Under the umbrella of Project Loom, this JEP proposes simplifying multithreaded programming by introducing a library to treat multiple tasks running on different threads as an atomic operation. It will streamline error handling, improve reliability, and enhance observability....
+[Read further^](https://www.infoq.com//news/2022/06/java-structured-concurrency/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
+
+
+### JEP 405: Record Classes to Extend Pattern Matching in Java (2022-05-26)
+JEP 405, Record Patterns (Preview), has been promoted from Proposed to Target to Targeted for JDK 19. Under the umbrella of Project Amber, this JEP proposes to enhance the language with record patterns to deconstruct record values. Record patterns may be used in conjunction with type patterns to &quot;enable a robust, declarative, and composable form of data navigation and processing.&quot;...
+[Read further^](https://www.infoq.com//news/2022/05/java-record-pattern/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
+
+
+### JEP 425: Java Virtual Threads to Deliver Improved Throughput (2022-05-11)
+JEP 425, Virtual Threads (Preview), has been promoted from Proposed to Target to Targeted status for JDK 19. This JEP, under the umbrella of Project Loom, introduces virtual threads. These lightweight threads aim to dramatically reduce the effort of writing, maintaining, and observing high-throughput concurrent applications to the Java platform. This is a preview feature....
+[Read further^](https://www.infoq.com//news/2022/05/virtual-threads-for-jdk19/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
+
+
+## Foojay.io
+
+
+### Why Did We Choose Jakarta Faces for the UI of the Eclipse Starter for Jakarta EE? (2022-12-13)
+This article explains why we chose JSF to build the Eclipse starter for Jakarta and why it deserves more love and attention!
+The post <a rel="nofollow" href="https://foojay.io/today/why-did-we-choose-jakarta-faces-for-the-ui-of-the-eclipse-starter-for-jakarta-ee/">Why Did We Choose Jakarta Faces for the UI of the Eclipse Starter for Jakarta EE?</a> appeared first on <a rel="nofollow" href="https://foojay.io">foojay</a>.
 ...
-
 [Read further^](https://foojay.io/today/why-did-we-choose-jakarta-faces-for-the-ui-of-the-eclipse-starter-for-jakarta-ee/)
 
 
-### A Minor But Useful Refactoring Technique That Would Reduce Your Code Footprint (Part 2) (2022-10-26)::
-<p>As I keep refactoring, this article will focus on a few more interesting ways to do it. These are pretty much minor yet effective and useful changes. Stream.noneMatch() and Stream.anyMatch() In some situations, we need to find a single case ...</p>
-<p>The post <a rel="nofollow" href="https://foojay.io/today/a-minor-but-useful-refactoring-technique-that-would-reduce-your-code-footprint-part-2/">A Minor But Useful Refactoring Technique That Would Reduce Your Code Footprint (Part 2)</a> appeared first on <a rel="nofollow" href="https://foojay.io">foojay</a>.</p>
+### A Minor But Useful Refactoring Technique That Would Reduce Your Code Footprint (Part 2) (2022-10-26)
+As I keep refactoring, this article will focus on a few more interesting ways to do it. These are pretty much minor yet effective and useful changes. Stream.noneMatch() and Stream.anyMatch() In some situations, we need to find a single case ...
+The post <a rel="nofollow" href="https://foojay.io/today/a-minor-but-useful-refactoring-technique-that-would-reduce-your-code-footprint-part-2/">A Minor But Useful Refactoring Technique That Would Reduce Your Code Footprint (Part 2)</a> appeared first on <a rel="nofollow" href="https://foojay.io">foojay</a>.
 ...
-
 [Read further^](https://foojay.io/today/a-minor-but-useful-refactoring-technique-that-would-reduce-your-code-footprint-part-2/)
 
 
-### A Minor But Useful Refactoring Technique That Would Reduce Your Code Footprint (Part 1) (2022-10-20)::
-<p>That was a long-awaited migration, but I'm pleased that we eventually made it. The next thing... "Why not Java 17 directly?" </p>
-<p>The post <a rel="nofollow" href="https://foojay.io/today/a-minor-but-useful-refactoring-technique-that-would-reduce-your-code-footprint-part-1/">A Minor But Useful Refactoring Technique That Would Reduce Your Code Footprint (Part 1)</a> appeared first on <a rel="nofollow" href="https://foojay.io">foojay</a>.</p>
+### A Minor But Useful Refactoring Technique That Would Reduce Your Code Footprint (Part 1) (2022-10-20)
+That was a long-awaited migration, but I'm pleased that we eventually made it. The next thing... "Why not Java 17 directly?" 
+The post <a rel="nofollow" href="https://foojay.io/today/a-minor-but-useful-refactoring-technique-that-would-reduce-your-code-footprint-part-1/">A Minor But Useful Refactoring Technique That Would Reduce Your Code Footprint (Part 1)</a> appeared first on <a rel="nofollow" href="https://foojay.io">foojay</a>.
 ...
-
 [Read further^](https://foojay.io/today/a-minor-but-useful-refactoring-technique-that-would-reduce-your-code-footprint-part-1/)
 
 
-### What Does a Modern JVM Look Like, And How Does It Work? (2022-09-29)::
-<p>In this article, the internal workings of the JVM are discussed, e.g., interpreter, JIT compiler, and how it optimizes code.</p>
-<p>The post <a rel="nofollow" href="https://foojay.io/today/what-does-a-modern-jvm-look-like-and-how-does-it-work/">What Does a Modern JVM Look Like, And How Does It Work?</a> appeared first on <a rel="nofollow" href="https://foojay.io">foojay</a>.</p>
+### What Does a Modern JVM Look Like, And How Does It Work? (2022-09-29)
+In this article, the internal workings of the JVM are discussed, e.g., interpreter, JIT compiler, and how it optimizes code.
+The post <a rel="nofollow" href="https://foojay.io/today/what-does-a-modern-jvm-look-like-and-how-does-it-work/">What Does a Modern JVM Look Like, And How Does It Work?</a> appeared first on <a rel="nofollow" href="https://foojay.io">foojay</a>.
 ...
-
 [Read further^](https://foojay.io/today/what-does-a-modern-jvm-look-like-and-how-does-it-work/)
 
 
-### The 5 Most Pivotal and Innovative Additions to OpenJDK 19 (2022-09-20)::
-<p>Although OpenJDK 19 is not an LTS, it is still a significant release, in my opinion. It includes several game-changing features that will alter the Java landscape.</p>
-<p>The post <a rel="nofollow" href="https://foojay.io/today/the-5-most-pivotal-and-innovative-additions-to-openjdk-19/">The 5 Most Pivotal and Innovative Additions to OpenJDK 19</a> appeared first on <a rel="nofollow" href="https://foojay.io">foojay</a>.</p>
+### The 5 Most Pivotal and Innovative Additions to OpenJDK 19 (2022-09-20)
+Although OpenJDK 19 is not an LTS, it is still a significant release, in my opinion. It includes several game-changing features that will alter the Java landscape.
+The post <a rel="nofollow" href="https://foojay.io/today/the-5-most-pivotal-and-innovative-additions-to-openjdk-19/">The 5 Most Pivotal and Innovative Additions to OpenJDK 19</a> appeared first on <a rel="nofollow" href="https://foojay.io">foojay</a>.
 ...
-
 [Read further^](https://foojay.io/today/the-5-most-pivotal-and-innovative-additions-to-openjdk-19/)
 
 
-### Java Thread Programming (Part 15) (2022-08-31)::
-<p>Learn how to do asynchronous method invocation with Callable and Future with a practical example.</p>
-<p>The post <a rel="nofollow" href="https://foojay.io/today/java-thread-programming-part-15/">Java Thread Programming (Part 15)</a> appeared first on <a rel="nofollow" href="https://foojay.io">foojay</a>.</p>
+### Java Thread Programming (Part 15) (2022-08-31)
+Learn how to do asynchronous method invocation with Callable and Future with a practical example.
+The post <a rel="nofollow" href="https://foojay.io/today/java-thread-programming-part-15/">Java Thread Programming (Part 15)</a> appeared first on <a rel="nofollow" href="https://foojay.io">foojay</a>.
 ...
-
 [Read further^](https://foojay.io/today/java-thread-programming-part-15/)
 
 
-### Java Bytecode Simplified: Journey to the Wonderland (Part 2) (2022-08-16)::
-<p>Let’s appreciate the Java Virtual Machine (JVM) even more. Today we'll discuss Constant Pool in quite some detail.</p>
-<p>The post <a rel="nofollow" href="https://foojay.io/today/java-bytecode-simplified-journey-to-the-wonderland-part-2/">Java Bytecode Simplified: Journey to the Wonderland (Part 2)</a> appeared first on <a rel="nofollow" href="https://foojay.io">foojay</a>.</p>
+### Java Bytecode Simplified: Journey to the Wonderland (Part 2) (2022-08-16)
+Let’s appreciate the Java Virtual Machine (JVM) even more. Today we'll discuss Constant Pool in quite some detail.
+The post <a rel="nofollow" href="https://foojay.io/today/java-bytecode-simplified-journey-to-the-wonderland-part-2/">Java Bytecode Simplified: Journey to the Wonderland (Part 2)</a> appeared first on <a rel="nofollow" href="https://foojay.io">foojay</a>.
 ...
-
 [Read further^](https://foojay.io/today/java-bytecode-simplified-journey-to-the-wonderland-part-2/)
 
 
-### Top 7 Features in Jakarta EE 10 (2022-06-28)::
-<p>Jakarta EE is a dominant force behind all enterprise development in Java. Check out my favorite top 7 features, what are yours?</p>
-<p>The post <a rel="nofollow" href="https://foojay.io/today/top-7-features-in-jakarta-ee-10/">Top 7 Features in Jakarta EE 10</a> appeared first on <a rel="nofollow" href="https://foojay.io">foojay</a>.</p>
+### Top 7 Features in Jakarta EE 10 (2022-06-28)
+Jakarta EE is a dominant force behind all enterprise development in Java. Check out my favorite top 7 features, what are yours?
+The post <a rel="nofollow" href="https://foojay.io/today/top-7-features-in-jakarta-ee-10/">Top 7 Features in Jakarta EE 10</a> appeared first on <a rel="nofollow" href="https://foojay.io">foojay</a>.
 ...
-
 [Read further^](https://foojay.io/today/top-7-features-in-jakarta-ee-10/)
 
 
-### How to Add an Event to the Foojay Event Calendar (2022-06-07)::
-<p>If you want to add an event to our calendar or advertize your event on Foojay.io, you can follow the following steps! </p>
-<p>The post <a rel="nofollow" href="https://foojay.io/today/how-to-add-an-event-to-the-foojay-event-calendar/">How to Add an Event to the Foojay Event Calendar</a> appeared first on <a rel="nofollow" href="https://foojay.io">foojay</a>.</p>
+### How to Add an Event to the Foojay Event Calendar (2022-06-07)
+If you want to add an event to our calendar or advertize your event on Foojay.io, you can follow the following steps! 
+The post <a rel="nofollow" href="https://foojay.io/today/how-to-add-an-event-to-the-foojay-event-calendar/">How to Add an Event to the Foojay Event Calendar</a> appeared first on <a rel="nofollow" href="https://foojay.io">foojay</a>.
 ...
-
 [Read further^](https://foojay.io/today/how-to-add-an-event-to-the-foojay-event-calendar/)
 
 
-### Book Review: Monolith to Microservices (Part 2) (2022-05-25)::
-<p>In many cases, microservices are probably not ideal, but if you're going to do it, take baby steps. Small and short-term wins matter; it boasts the team's confidence. Always put checks and balance whether it is working or not. If not, then go back to the alternative ways.</p>
-<p>The post <a rel="nofollow" href="https://foojay.io/today/book-review-monolith-to-microservices-part-2/">Book Review: Monolith to Microservices (Part 2)</a> appeared first on <a rel="nofollow" href="https://foojay.io">foojay</a>.</p>
+### Book Review: Monolith to Microservices (Part 2) (2022-05-25)
+In many cases, microservices are probably not ideal, but if you're going to do it, take baby steps. Small and short-term wins matter; it boasts the team's confidence. Always put checks and balance whether it is working or not. If not, then go back to the alternative ways.
+The post <a rel="nofollow" href="https://foojay.io/today/book-review-monolith-to-microservices-part-2/">Book Review: Monolith to Microservices (Part 2)</a> appeared first on <a rel="nofollow" href="https://foojay.io">foojay</a>.
 ...
-
 [Read further^](https://foojay.io/today/book-review-monolith-to-microservices-part-2/)
-
 
 
 

@@ -18,8 +18,17 @@ He earned his bachelor’s degree from the Institute of Information Technology, 
 
 
 ## ✍️ Most recent blog posts
+## <u>[InfoQ](https://www.infoq.com/profile/A-N-M-Bazlur-Rahman/)</u>
 
-### Foojay.io
+<#list infoqPosts as post>
+
+### ${post.title} (${(post.published).format('YYYY-MM-dd')})
+${post.excerpt}...
+[Read further^](${post.link})
+
+</#list>
+
+## <u>[Foojay.io](https://foojay.io/)</u>
 
 <#list foojayPosts as post>
 
@@ -28,7 +37,6 @@ ${post.excerpt}...
 [Read further^](${post.link})
 
 </#list>
-
 
 
 ## &#x1f4c8; GitHub Stats

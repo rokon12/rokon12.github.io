@@ -8,7 +8,11 @@
 @file:DependsOn("org.json:json:20220924")
 @file:DependsOn("org.jsoup:jsoup:1.15.3")
 @file:DependsOn("com.rometools:rome:1.12.0")
+@file:DependsOn("com.squareup.retrofit2:retrofit:2.9.0")
+@file:DependsOn("com.squareup.retrofit2:converter-gson:2.0.0-beta3")
+@file:DependsOn("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.2")
 
+import com.google.gson.Gson
 import com.rometools.rome.io.SyndFeedInput
 import com.rometools.rome.io.XmlReader
 import freemarker.template.*
@@ -20,18 +24,9 @@ import java.net.URL
 import java.time.Instant
 import java.time.LocalDate
 import java.time.ZoneId
+import java.time.format.DateTimeFormatter
 import java.util.*
 
-
-val client = OkHttpClient()
-
-fun <T> execute(builder: Request.Builder, extractor: (String?) -> T): T {
-    val body = client.newCall(builder.build())
-            .execute()
-            .body
-            ?.string()
-    return extractor(body)
-}
 
 val template: Template = Configuration(Configuration.VERSION_2_3_29)
         .apply {
@@ -59,10 +54,67 @@ val posts: List<Post> by lazy {
     }
 }
 
+//val infoQPosts: List<Post> by lazy {
+//    val url = "https://www.infoq.com/userProfile!getMore.action?single=true&token=ElCokalLPL2msy8g83iejKIMwEQ7Cnmn&fu=0&f=0&ft=0&lc=0&cml=0&cmo=0&news=100"
+//    client.newCall(Request())
+//
+//}
+
+//https://www.infoq.com/userProfile!getMore.action?single=false&token=ElCokalLPL2msy8g83iejKIMwEQ7Cnmn&fu=3&f=0&ft=0&lc=0&cml=0&cmo=0&news=7&articles=0&presentations=0&minibooks=0&podcasts=0&interviews=0&research=0&reviewed=0
+data class Data(
+        val id: String,
+        val type: String,
+        val title: String,
+        val date: String,
+        val meta: String,
+        val body: String,
+        val hidden: String,
+        val hasMore: Boolean,
+        val followedByCurrentUser: Boolean,
+        val count: String,
+        val link: String,
+        val msg: String
+)
+
+val client = OkHttpClient()
+val gson = Gson()
+var formatter: DateTimeFormatter = DateTimeFormatter.ofPattern("dd MMM, yyyy")
+var formatter2: DateTimeFormatter = DateTimeFormatter.ofPattern("dd MMM, yyyy HH:mm")
+val baseUrl = "https://www.infoq.com/"
+val infoqUrl = "${baseUrl}userProfile!getMore.action?single=true&token=ElCokalLPL2msy8g83iejKIMwEQ7Cnmn&fu=0&f=0&ft=0&lc=0&cml=0&cmo=0&news=0&articles=0&presentations=0&minibooks=0&podcasts=0&interviews=0&research=0&reviewed=0"
+val request = Request.Builder()
+        .url(infoqUrl)
+        .build()
+val infoqPosts: List<Post> by lazy {
+    val response = client.newCall(request).execute()
+    val responseData = response.body?.string()
+
+    gson.fromJson(responseData, Array<Data>::class.java)
+            .filter { it.type == "news" }
+            .map {
+                val date = localDate(it)
+                Post(date, it.title, (baseUrl + it.link), it.body)
+            }
+}
+
 data class Post(val published: LocalDate, val title: String, val link: String, val excerpt: String)
 
 val root = mapOf(
         "foojayPosts" to posts,
+        "infoqPosts" to infoqPosts,
 )
 
 template.process(root, FileWriter("README.md"))
+
+fun localDate(it: Data): LocalDate {
+    val date = try {
+        LocalDate.parse(it.date, formatter)
+    } catch (e: Exception) {
+        try {
+            LocalDate.parse(it.date, formatter2)
+        } catch (e: Exception) {
+            LocalDate.now();
+        }
+    }
+    return date
+}
