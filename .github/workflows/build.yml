@@ -18,13 +18,10 @@ jobs:
         run: sudo snap install --classic --channel=1.7/stable kotlin
       - name: Update README
         run: ./update.main.kts
-      - name: Configure git
-        run: |
-          git config user.name "Bazlur Rahman"
-          git config user.email "bazlur@jugbd.org"  
       - name: Commit README and push
         uses: EndBug/add-and-commit@v9
         with:
           add: README.md
-          default_author: rokon12
+          author_name: Bazlur Rahman
+          author_email: bazlur@jugbd.org
           message: Automatically update README.md
