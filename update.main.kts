@@ -19,6 +19,7 @@ import freemarker.template.*
 import no.api.freemarker.java8.Java8ObjectWrapper
 import okhttp3.*
 import org.apache.commons.text.StringEscapeUtils
+import org.jsoup.Jsoup
 import java.io.*
 import java.net.URL
 import java.time.Instant
@@ -96,12 +97,25 @@ val infoqPosts: List<Post> by lazy {
                 Post(date, it.title, (baseUrl + it.link), it.body)
             }
 }
-
 data class Post(val published: LocalDate, val title: String, val link: String, val excerpt: String)
+
+val talks: List<String> by lazy {
+    val document = Jsoup.connect("https://bazlur.ca/conference-talks/")
+            .userAgent("Mozilla").get();
+    val container = document.getElementsByClass("container");
+    val ul = container.select("div.entry-content > ul");
+    val li = ul.select("li");
+
+    val list = li.map { it.html() }
+
+    list
+}
+
 
 val root = mapOf(
         "foojayPosts" to posts,
         "infoqPosts" to infoqPosts,
+        "talks" to talks
 )
 
 template.process(root, FileWriter("README.md"))

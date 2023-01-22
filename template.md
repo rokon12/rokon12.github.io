@@ -38,6 +38,11 @@ ${post.excerpt}...
 
 </#list>
 
+## <u>Talks</u>
+
+<#list talks as talk>
+- ${talk}
+</#list>
 
 ## &#x1f4c8; GitHub Stats
 
