@@ -22,5 +22,6 @@ jobs:
         uses: EndBug/add-and-commit@v9
         with:
           add: README.md
-          default_author: github_actions
-          message: Automatically update README.adoc
+          author_name: Bazlur Rahman
+          author_email: bazlur@jugbd.org
+          message: Automatically update README.md

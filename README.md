@@ -74,6 +74,13 @@ JEP 425, Virtual Threads (Preview), has been promoted from Proposed to Target to
 ## <u>[Foojay.io](https://foojay.io/)</u>
 
 
+### Why Many Developers Don’t Write or Give Talks and How to Overcome Challenges (2023-01-11)
+Learn why developers may not write or give talks and how sharing knowledge and experiences can improve communication skills, and much more!
+The post <a rel="nofollow" href="https://foojay.io/today/why-many-developers-dont-write-or-give-talks-and-how-to-overcome-challenges/">Why Many Developers Don’t Write or Give Talks and How to Overcome Challenges</a> appeared first on <a rel="nofollow" href="https://foojay.io">foojay</a>.
+...
+[Read further^](https://foojay.io/today/why-many-developers-dont-write-or-give-talks-and-how-to-overcome-challenges/)
+
+
 ### Why Did We Choose Jakarta Faces for the UI of the Eclipse Starter for Jakarta EE? (2022-12-13)
 This article explains why we chose JSF to build the Eclipse starter for Jakarta and why it deserves more love and attention!
 The post <a rel="nofollow" href="https://foojay.io/today/why-did-we-choose-jakarta-faces-for-the-ui-of-the-eclipse-starter-for-jakarta-ee/">Why Did We Choose Jakarta Faces for the UI of the Eclipse Starter for Jakarta EE?</a> appeared first on <a rel="nofollow" href="https://foojay.io">foojay</a>.
@@ -137,13 +144,6 @@ The post <a rel="nofollow" href="https://foojay.io/today/how-to-add-an-event-to-
 [Read further^](https://foojay.io/today/how-to-add-an-event-to-the-foojay-event-calendar/)
 
 
-### Book Review: Monolith to Microservices (Part 2) (2022-05-25)
-In many cases, microservices are probably not ideal, but if you're going to do it, take baby steps. Small and short-term wins matter; it boasts the team's confidence. Always put checks and balance whether it is working or not. If not, then go back to the alternative ways.
-The post <a rel="nofollow" href="https://foojay.io/today/book-review-monolith-to-microservices-part-2/">Book Review: Monolith to Microservices (Part 2)</a> appeared first on <a rel="nofollow" href="https://foojay.io">foojay</a>.
-...
-[Read further^](https://foojay.io/today/book-review-monolith-to-microservices-part-2/)
-
-
 ## <u>Talks</u>
 
 - <strong>A tale of two cities: blocking code vs. non-blocking code at <a href="https://devnexus.com/presentations/a-tale-of-two-cities-blocking-code-vs-non-blocking-code">DevNeus</a></strong>
@@ -179,4 +179,4 @@ The post <a rel="nofollow" href="https://foojay.io/today/book-review-monolith-to
 <a href="https://github.com/rokon12/rokon12">
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
-*This document was last updated on Sun, 22 Jan 2023 03:53:56 GMT*
+*This document was last updated on Wed, 25 Jan 2023 02:33:31 GMT*
