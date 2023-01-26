@@ -10,24 +10,20 @@
 @file:DependsOn("com.rometools:rome:1.12.0")
 @file:DependsOn("com.squareup.retrofit2:retrofit:2.9.0")
 @file:DependsOn("com.squareup.retrofit2:converter-gson:2.0.0-beta3")
-@file:DependsOn("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.2")
 
 import com.google.gson.Gson
-import com.rometools.rome.io.SyndFeedInput
-import com.rometools.rome.io.XmlReader
 import freemarker.template.*
 import no.api.freemarker.java8.Java8ObjectWrapper
 import okhttp3.*
-import org.apache.commons.text.StringEscapeUtils
 import org.jsoup.Jsoup
 import java.io.*
-import java.net.URL
-import java.time.Instant
 import java.time.LocalDate
 import java.time.LocalDateTime
 import java.time.ZoneId
 import java.time.format.DateTimeFormatter
 import java.util.*
+import java.util.Locale
+
 
 val template: Template = Configuration(Configuration.VERSION_2_3_29)
         .apply {
@@ -41,17 +37,20 @@ val template: Template = Configuration(Configuration.VERSION_2_3_29)
         }.getTemplate("template.md")
 
 val posts: List<Post> by lazy {
-    val url = URL("https://foojay.io/today/author/bazlur-rahman/feed")
-    val input = XmlReader(url)
-    val feed = SyndFeedInput().build(input)
-    feed.entries.map {
-        val published = Instant.ofEpochMilli(it.publishedDate.time)
-                .atZone(ZoneId.systemDefault())
-                .toLocalDate()
-        var content = it.description.value
-        content = StringEscapeUtils.unescapeHtml4(content)
-        content = content.replace(Regex("<(div|p)[^>]*>"), "").replace(Regex("</(div|p)>"), "")
-        Post(published, it.title, it.link, content)
+    var url = "https://foojay.io/today/author/bazlur-rahman/";
+    var document = Jsoup.connect(url)
+            .userAgent("Mozilla").get();
+    var elements = document.select("div.article-card__wrapper");
+    val formatter: DateTimeFormatter = DateTimeFormatter.ofPattern("MMMM d, yyyy", Locale.ENGLISH)
+
+    elements.map{
+        var titleWithLink = it.select(".article-card__title")
+        var link = titleWithLink.select("a")?.first()?.attr("abs:href")
+        var title = titleWithLink.text();
+        var content = it.select("div.article-card__content-box").text()
+        var date = it.select(".article-card__date").text()
+        val published: LocalDate = LocalDate.parse(date, formatter)
+        Post(published, title, link?:url, content)
     }
 }
 
