@@ -74,6 +74,16 @@ JEP 425, Virtual Threads (Preview), has been promoted from Proposed to Target to
 ## <u>[Foojay.io](https://foojay.io/)</u>
 
 
+### Java Sealed Classes in Action: Building Robust and Secure Applications (2023-02-20)
+Java sealed classes are a powerful feature that can help you create more robust and maintainable code by restricting the inheritance hierarchy of your classes and interfaces....
+[Read further^](https://foojay.io/today/java-sealed-classes-in-action-building-robust-and-secure-applications/)
+
+
+### Optional in Java: A Swiss Army Knife for Handling Nulls and Improving Code Quality (2023-02-01)
+Optional is a Java class that provides a way to handle null values in a type-safe and efficient manner. It can help you avoid null pointer exceptions, simplify your code, and improve its readability and maintainability. This tutorial will cover the features and use cases of Optional in Java, with practical examples of how to use it for handling nulls...
+[Read further^](https://foojay.io/today/optional-in-java-a-swiss-army-knife-for-handling-nulls-and-improving-code-quality/)
+
+
 ### Java Bytecode Simplified: Journey to the Wonderland (Part 3) (2023-01-24)
 Java bytecode can be updated and controlled for many reasons, such as adding new features, instrumenting code for performance monitoring....
 [Read further^](https://foojay.io/today/java-bytecode-simplified-journey-to-the-wonderland-part-3/)
@@ -119,16 +129,6 @@ Let’s appreciate the Java Virtual Machine (JVM) even more. Today we’ll discu
 [Read further^](https://foojay.io/today/java-bytecode-simplified-journey-to-the-wonderland-part-2/)
 
 
-### Top 7 Features in Jakarta EE 10 (2022-06-28)
-Jakarta EE is a dominant force behind all enterprise development in Java. Check out my favorite top 7 features, what are yours?...
-[Read further^](https://foojay.io/today/top-7-features-in-jakarta-ee-10/)
-
-
-### How to Add an Event to the Foojay Event Calendar (2022-06-07)
-If you want to add an event to our calendar or advertize your event on Foojay.io, you can follow the following steps!...
-[Read further^](https://foojay.io/today/how-to-add-an-event-to-the-foojay-event-calendar/)
-
-
 ## <u>Talks</u>
 
 - <strong>A tale of two cities: blocking code vs. non-blocking code at <a href="https://devnexus.com/presentations/a-tale-of-two-cities-blocking-code-vs-non-blocking-code">DevNeus</a></strong>
@@ -165,4 +165,4 @@ If you want to add an event to our calendar or advertize your event on Foojay.io
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Mon, 20 Feb 2023 02:44:16 GMT*
+*This page was last updated on Tue, 21 Feb 2023 02:44:02 GMT*
