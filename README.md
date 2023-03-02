@@ -104,6 +104,11 @@ As I keep refactoring, this article will focus on a few more interesting ways to
 [Read further^](https://foojay.io/today/a-minor-but-useful-refactoring-technique-that-would-reduce-your-code-footprint-part-2/)
 
 
+### Foojay Podcast #6: Welcome to Foojay! (2022-10-24)
+Let’s look back and what has happened on Foojay during the last 2,5 years and talk to some of the people behind the project....
+[Read further^](https://foojay.io/today/foojay-podcast-6/)
+
+
 ### A Minor But Useful Refactoring Technique That Would Reduce Your Code Footprint (Part 1) (2022-10-20)
 That was a long-awaited migration, but I’m pleased that we eventually made it. The next thing… “Why not Java 17 directly?”...
 [Read further^](https://foojay.io/today/a-minor-but-useful-refactoring-technique-that-would-reduce-your-code-footprint-part-1/)
@@ -122,11 +127,6 @@ Although OpenJDK 19 is not an LTS, it is still a significant release, in my opin
 ### Java Thread Programming (Part 15) (2022-08-31)
 Learn how to do asynchronous method invocation with Callable and Future with a practical example....
 [Read further^](https://foojay.io/today/java-thread-programming-part-15/)
-
-
-### Java Bytecode Simplified: Journey to the Wonderland (Part 2) (2022-08-16)
-Let’s appreciate the Java Virtual Machine (JVM) even more. Today we’ll discuss Constant Pool in quite some detail....
-[Read further^](https://foojay.io/today/java-bytecode-simplified-journey-to-the-wonderland-part-2/)
 
 
 ## <u>Talks</u>
@@ -165,4 +165,4 @@ Let’s appreciate the Java Virtual Machine (JVM) even more. Today we’ll discu
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Wed, 1 Mar 2023 02:52:56 GMT*
+*This page was last updated on Thu, 2 Mar 2023 02:46:50 GMT*
