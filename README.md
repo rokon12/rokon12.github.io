@@ -74,6 +74,11 @@ JEP 425, Virtual Threads (Preview), has been promoted from Proposed to Target to
 ## <u>[Foojay.io](https://foojay.io/)</u>
 
 
+### Java, Friends, and Cold Weather: My Adventure at ConFoo Conference (2023-03-06)
+I attended the ConFoo conference in Montreal for a day, gave two talks on Java, and met with old and new friends, and had a great experience....
+[Read further^](https://foojay.io/today/java-friends-and-cold-weather-my-adventure-at-confoo-conference/)
+
+
 ### Java Sealed Classes in Action: Building Robust and Secure Applications (2023-02-20)
 Java sealed classes are a powerful feature that can help you create more robust and maintainable code by restricting the inheritance hierarchy of your classes and interfaces....
 [Read further^](https://foojay.io/today/java-sealed-classes-in-action-building-robust-and-secure-applications/)
@@ -124,11 +129,6 @@ Although OpenJDK 19 is not an LTS, it is still a significant release, in my opin
 [Read further^](https://foojay.io/today/the-5-most-pivotal-and-innovative-additions-to-openjdk-19/)
 
 
-### Java Thread Programming (Part 15) (2022-08-31)
-Learn how to do asynchronous method invocation with Callable and Future with a practical example....
-[Read further^](https://foojay.io/today/java-thread-programming-part-15/)
-
-
 ## <u>Talks</u>
 
 - <strong>A tale of two cities: blocking code vs. non-blocking code at <a href="https://devnexus.com/presentations/a-tale-of-two-cities-blocking-code-vs-non-blocking-code">DevNeus</a></strong>
@@ -165,4 +165,4 @@ Learn how to do asynchronous method invocation with Callable and Future with a p
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Mon, 6 Mar 2023 02:45:14 GMT*
+*This page was last updated on Tue, 7 Mar 2023 02:52:17 GMT*
