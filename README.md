@@ -21,6 +21,11 @@ I earned my bachelor's degree in Information Technology, majoring in Software En
 ## <u>[InfoQ](https://www.infoq.com/profile/A-N-M-Bazlur-Rahman/)</u>
 
 
+### Introducing Hilla 2.0: Reactive Endpoints, Native Image, Simplified Theming, SSO Kit, and More (2023-03-10)
+Hilla, the type-safe web framework for Spring Boot, has announced the release of version 2.0. This release utilizes Spring Boot 3, Java 17, and Jakarta EE 10, providing access to the latest features in the Java ecosystem. It includes an improved TypeScript generator, web socket support for reactive endpoints, support for GraalVM native images, a simplified theming mechanism, and a new SSO kit....
+[Read further^](https://www.infoq.com//news/2023/03/introducing-hilla-20/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
+
+
 ### MicroProfile 6.0 Delivers Alignment with Jakarta EE 10 and a New Specification (2023-01-18)
 In a major move for the Java community, the MicroProfile Working Group has officially released MicroProfile 6.0. This anticipated release brings a host of new features and improvements, including alignment with the Jakarta 10 Core Profile and updates to several key specifications, such as Metrics, JWT Authentication, Open API, Reactive Messaging, and Reactive Streams Operators....
 [Read further^](https://www.infoq.com//news/2023/01/microprofile6-delivers-alignmens/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
@@ -64,11 +69,6 @@ JEP 428, Structured Concurrency (Incubator), has been promoted from Proposed to 
 ### JEP 405: Record Classes to Extend Pattern Matching in Java (2022-05-26)
 JEP 405, Record Patterns (Preview), has been promoted from Proposed to Target to Targeted for JDK 19. Under the umbrella of Project Amber, this JEP proposes to enhance the language with record patterns to deconstruct record values. Record patterns may be used in conjunction with type patterns to &quot;enable a robust, declarative, and composable form of data navigation and processing.&quot;...
 [Read further^](https://www.infoq.com//news/2022/05/java-record-pattern/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
-
-
-### JEP 425: Java Virtual Threads to Deliver Improved Throughput (2022-05-11)
-JEP 425, Virtual Threads (Preview), has been promoted from Proposed to Target to Targeted status for JDK 19. This JEP, under the umbrella of Project Loom, introduces virtual threads. These lightweight threads aim to dramatically reduce the effort of writing, maintaining, and observing high-throughput concurrent applications to the Java platform. This is a preview feature....
-[Read further^](https://www.infoq.com//news/2022/05/virtual-threads-for-jdk19/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
 
 
 ## <u>[Foojay.io](https://foojay.io/)</u>
@@ -165,4 +165,4 @@ Although OpenJDK 19 is not an LTS, it is still a significant release, in my opin
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Fri, 10 Mar 2023 02:49:24 GMT*
+*This page was last updated on Sat, 11 Mar 2023 02:29:20 GMT*
