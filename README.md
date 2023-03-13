@@ -21,6 +21,11 @@ I earned my bachelor's degree in Information Technology, majoring in Software En
 ## <u>[InfoQ](https://www.infoq.com/profile/A-N-M-Bazlur-Rahman/)</u>
 
 
+### Java's Collections Framework Gets a Makeover with New Sequenced Collection Types (2023-03-13)
+JEP 431: Sequenced Collections has been promoted from Candidate to Proposed to Target status for JDK 21. It proposes introducing &quot;a new family of interfaces that represent the concept of a collection whose elements are arranged in a well-defined sequence or ordering, as a structural property of the collection.&quot;...
+[Read further^](https://www.infoq.com//news/2023/03/collections-framework-makeover/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
+
+
 ### Introducing Hilla 2.0: Reactive Endpoints, Native Image, Simplified Theming, SSO Kit, and More (2023-03-10)
 Hilla, the type-safe web framework for Spring Boot, has announced the release of version 2.0. This release utilizes Spring Boot 3, Java 17, and Jakarta EE 10, providing access to the latest features in the Java ecosystem. It includes an improved TypeScript generator, web socket support for reactive endpoints, support for GraalVM native images, a simplified theming mechanism, and a new SSO kit....
 [Read further^](https://www.infoq.com//news/2023/03/introducing-hilla-20/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
@@ -64,11 +69,6 @@ JEP 429, Extent-Local Variables (Incubator), was promoted from its JEP Draft 826
 ### JEP 428: Structured Concurrency to Simplify Java Multithreaded Programming (2022-06-03)
 JEP 428, Structured Concurrency (Incubator), has been promoted from Proposed to Target to Targeted status for JDK 19. Under the umbrella of Project Loom, this JEP proposes simplifying multithreaded programming by introducing a library to treat multiple tasks running on different threads as an atomic operation. It will streamline error handling, improve reliability, and enhance observability....
 [Read further^](https://www.infoq.com//news/2022/06/java-structured-concurrency/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
-
-
-### JEP 405: Record Classes to Extend Pattern Matching in Java (2022-05-26)
-JEP 405, Record Patterns (Preview), has been promoted from Proposed to Target to Targeted for JDK 19. Under the umbrella of Project Amber, this JEP proposes to enhance the language with record patterns to deconstruct record values. Record patterns may be used in conjunction with type patterns to &quot;enable a robust, declarative, and composable form of data navigation and processing.&quot;...
-[Read further^](https://www.infoq.com//news/2022/05/java-record-pattern/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
 
 
 ## <u>[Foojay.io](https://foojay.io/)</u>
@@ -165,4 +165,4 @@ Although OpenJDK 19 is not an LTS, it is still a significant release, in my opin
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Sun, 12 Mar 2023 02:40:25 GMT*
+*This page was last updated on Mon, 13 Mar 2023 02:32:53 GMT*
