@@ -74,6 +74,11 @@ JEP 428, Structured Concurrency (Incubator), has been promoted from Proposed to 
 ## <u>[Foojay.io](https://foojay.io/)</u>
 
 
+### The Speed Test: Comparing Map.of() and new HashMap<>() in Java (2023-03-16)
+Discussion of the use of Map.of() and new HashMap<>() in Java, the difference between them, and the benefits of using Map.of()....
+[Read further^](https://foojay.io/today/speed-test-comparing-map-of-new-hashmap/)
+
+
 ### From Law Degree to Java Champion: Geertjan Wielenga on the Success of Java and Navigating the Software Industry (2023-03-13)
 In this interview with Geertjan Wielenga, a Java Champion and developer advocate at Azul Systems, we learn about his unconventional journey into the software industry, his involvement with Java and its community, and what has made Java so successful. Wielenga also shares his proudest accomplishments and challenges in the industry, the importance of community involvement, and the benefits of contributing to open-source projects. As a Java Champion, Wielenga emphasizes the importance of sharing knowledge and enabling others to grow within the Java community. His advice to aspiring software developers is to follow their interests, be open to unconventional paths, and contribute to open-source projects....
 [Read further^](https://foojay.io/today/from-law-degree-to-java-champion-geertjan-wielenga-on-the-success-of-java-and-navigating-the-software-industry/)
@@ -124,11 +129,6 @@ That was a long-awaited migration, but I’m pleased that we eventually made it.
 [Read further^](https://foojay.io/today/a-minor-but-useful-refactoring-technique-that-would-reduce-your-code-footprint-part-1/)
 
 
-### What Does a Modern JVM Look Like, And How Does It Work? (2022-09-29)
-In this article, the internal workings of the JVM are discussed, e.g., interpreter, JIT compiler, and how it optimizes code....
-[Read further^](https://foojay.io/today/what-does-a-modern-jvm-look-like-and-how-does-it-work/)
-
-
 ## <u>Talks</u>
 
 - <strong>A tale of two cities: blocking code vs. non-blocking code at <a href="https://devnexus.com/presentations/a-tale-of-two-cities-blocking-code-vs-non-blocking-code">DevNeus</a></strong>
@@ -165,4 +165,4 @@ In this article, the internal workings of the JVM are discussed, e.g., interpret
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Thu, 16 Mar 2023 02:32:42 GMT*
+*This page was last updated on Fri, 17 Mar 2023 02:30:21 GMT*
