@@ -77,7 +77,9 @@ val infoqPosts: List<Post> by lazy {
 }
 
 val talks: List<String> by lazy {
+    val timeoutMillis = 1000*60*5 // 5 minutes
     val document = Jsoup.connect("https://bazlur.ca/conference-talks/")
+            .timeout(timeoutMillis)
             .userAgent("Mozilla").get()
     val container = document.getElementsByClass("container")
     val ul = container.select("div.entry-content > ul")
