@@ -2,7 +2,7 @@
 
 Hey there! I'm **Bazlur** and I work as a Senior Software Engineer at [Contrast Security](https://www.contrastsecurity.com/). I have over a decade of professional experience in the software industry, primarily in Java and Java-related technologies. Recently, I was honored with the title of [Java Champion](https://twitter.com/Java_Champions/status/1523728715368509440).
 
-Outside of my regular work hours, I love to mentor, write, speak at conferences, and contribute to open-source projects. I am the founder and current moderator of the [Java User Group in Bangladesh](https://jugbd.org/), and I have been organizing meetups and conferences to share Java-related knowledge with the community since 2013. I was named Most Valuable Blogger (MVP) at [DZone](https://dzone.com/users/1298119/bazlur_rahman.html), one of the most recognized technology publishers in the world. Additionally, I am an editor for the Java Queue at [InfoQ](https://www.infoq.com/profile/A-N-M-Bazlur-Rahman/), another leading technology content publisher and conference organizer, and an editor at [Foojay.io](https://foojay.io/today/author/bazlur-rahman/), a platform for OpenJDK enthusiasts. I have also published [four books](https://www.rokomari.com/book/129165/java-programming) about the Java programming language in Bengali, which were bestsellers in Bangladesh.
+Outside of my regular work hours, I love to mentor, write, speak at conferences, and contribute to open-source projects. I am the founder and current moderator of the [Java User Group in Bangladesh](https://jugbd.org/), and I have been organizing meetups and conferences to share Java-related knowledge with the community since 2013. I was named Most Valuable Blogger (MVP) at [DZone](https://dzone.com/users/1298119/bazlur_rahman.html), one of the most recognized technology publishers in the world. Additionally, I am an editor for the Java Queue at [InfoQ](https://www.infoq.com/profile/A-N-M-Bazlur-Rahman/), another leading technology content publisher and conference organizer, and an editor at [Foojay.io](https://foojay.io/today/author/bazlur-rahman/), a platform for OpenJDK enthusiasts. I have also published [five books](https://www.rokomari.com/book/129165/java-programming) about the Java programming language in Bengali, which were bestsellers in Bangladesh.
 
 I earned my bachelor's degree in Information Technology, majoring in Software Engineering from the Institute of Information Technology, University of Dhaka, Bangladesh. I currently live in Toronto, Canada.
 
@@ -19,6 +19,16 @@ I earned my bachelor's degree in Information Technology, majoring in Software En
 
 ## ✍️ Most recent blog posts
 ## <u>[InfoQ](https://www.infoq.com/profile/A-N-M-Bazlur-Rahman/)</u>
+
+
+### Java's Collections Framework Gets a Makeover with New Sequenced Collection Types (2023-03-13)
+JEP 431: Sequenced Collections has been promoted from Candidate to Proposed to Target status for JDK 21. It proposes introducing &quot;a new family of interfaces that represent the concept of a collection whose elements are arranged in a well-defined sequence or ordering, as a structural property of the collection.&quot;...
+[Read further^](https://www.infoq.com//news/2023/03/collections-framework-makeover/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
+
+
+### Introducing Hilla 2.0: Reactive Endpoints, Native Image, Simplified Theming, SSO Kit, and More (2023-03-10)
+Hilla, the type-safe web framework for Spring Boot, has announced the release of version 2.0. This release utilizes Spring Boot 3, Java 17, and Jakarta EE 10, providing access to the latest features in the Java ecosystem. It includes an improved TypeScript generator, web socket support for reactive endpoints, support for GraalVM native images, a simplified theming mechanism, and a new SSO kit....
+[Read further^](https://www.infoq.com//news/2023/03/introducing-hilla-20/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
 
 
 ### MicroProfile 6.0 Delivers Alignment with Jakarta EE 10 and a New Specification (2023-01-18)
@@ -61,87 +71,62 @@ JEP 428, Structured Concurrency (Incubator), has been promoted from Proposed to 
 [Read further^](https://www.infoq.com//news/2022/06/java-structured-concurrency/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
 
 
-### JEP 405: Record Classes to Extend Pattern Matching in Java (2022-05-26)
-JEP 405, Record Patterns (Preview), has been promoted from Proposed to Target to Targeted for JDK 19. Under the umbrella of Project Amber, this JEP proposes to enhance the language with record patterns to deconstruct record values. Record patterns may be used in conjunction with type patterns to &quot;enable a robust, declarative, and composable form of data navigation and processing.&quot;...
-[Read further^](https://www.infoq.com//news/2022/05/java-record-pattern/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
-
-
-### JEP 425: Java Virtual Threads to Deliver Improved Throughput (2022-05-11)
-JEP 425, Virtual Threads (Preview), has been promoted from Proposed to Target to Targeted status for JDK 19. This JEP, under the umbrella of Project Loom, introduces virtual threads. These lightweight threads aim to dramatically reduce the effort of writing, maintaining, and observing high-throughput concurrent applications to the Java platform. This is a preview feature....
-[Read further^](https://www.infoq.com//news/2022/05/virtual-threads-for-jdk19/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
-
-
 ## <u>[Foojay.io](https://foojay.io/)</u>
 
 
+### The Speed Test: Comparing Map.of() and new HashMap<>() in Java (2023-03-16)
+Discussion of the use of Map.of() and new HashMap<>() in Java, the difference between them, and the benefits of using Map.of()....
+[Read further^](https://foojay.io/today/speed-test-comparing-map-of-new-hashmap/)
+
+
+### From Law Degree to Java Champion: Geertjan Wielenga on the Success of Java and Navigating the Software Industry (2023-03-13)
+In this interview with Geertjan Wielenga, a Java Champion and developer advocate at Azul Systems, we learn about his unconventional journey into the software industry, his involvement with Java and its community, and what has made Java so successful. Wielenga also shares his proudest accomplishments and challenges in the industry, the importance of community involvement, and the benefits of contributing to open-source projects. As a Java Champion, Wielenga emphasizes the importance of sharing knowledge and enabling others to grow within the Java community. His advice to aspiring software developers is to follow their interests, be open to unconventional paths, and contribute to open-source projects....
+[Read further^](https://foojay.io/today/from-law-degree-to-java-champion-geertjan-wielenga-on-the-success-of-java-and-navigating-the-software-industry/)
+
+
+### Java, Friends, and Cold Weather: My Adventure at ConFoo Conference (2023-03-06)
+I attended the ConFoo conference in Montreal for a day, gave two talks on Java, and met with old and new friends, and had a great experience....
+[Read further^](https://foojay.io/today/java-friends-and-cold-weather-my-adventure-at-confoo-conference/)
+
+
+### Java Sealed Classes in Action: Building Robust and Secure Applications (2023-02-20)
+Java sealed classes are a powerful feature that can help you create more robust and maintainable code by restricting the inheritance hierarchy of your classes and interfaces....
+[Read further^](https://foojay.io/today/java-sealed-classes-in-action-building-robust-and-secure-applications/)
+
+
+### Optional in Java: A Swiss Army Knife for Handling Nulls and Improving Code Quality (2023-02-01)
+Optional is a Java class that provides a way to handle null values in a type-safe and efficient manner. It can help you avoid null pointer exceptions, simplify your code, and improve its readability and maintainability. This tutorial will cover the features and use cases of Optional in Java, with practical examples of how to use it for handling nulls...
+[Read further^](https://foojay.io/today/optional-in-java-a-swiss-army-knife-for-handling-nulls-and-improving-code-quality/)
+
+
+### Java Bytecode Simplified: Journey to the Wonderland (Part 3) (2023-01-24)
+Java bytecode can be updated and controlled for many reasons, such as adding new features, instrumenting code for performance monitoring....
+[Read further^](https://foojay.io/today/java-bytecode-simplified-journey-to-the-wonderland-part-3/)
+
+
 ### Why Many Developers Don’t Write or Give Talks and How to Overcome Challenges (2023-01-11)
-Learn why developers may not write or give talks and how sharing knowledge and experiences can improve communication skills, and much more!
-The post <a rel="nofollow" href="https://foojay.io/today/why-many-developers-dont-write-or-give-talks-and-how-to-overcome-challenges/">Why Many Developers Don’t Write or Give Talks and How to Overcome Challenges</a> appeared first on <a rel="nofollow" href="https://foojay.io">foojay</a>.
-...
+Learn why developers may not write or give talks and how sharing knowledge and experiences can improve communication skills, and much more!...
 [Read further^](https://foojay.io/today/why-many-developers-dont-write-or-give-talks-and-how-to-overcome-challenges/)
 
 
 ### Why Did We Choose Jakarta Faces for the UI of the Eclipse Starter for Jakarta EE? (2022-12-13)
-This article explains why we chose JSF to build the Eclipse starter for Jakarta and why it deserves more love and attention!
-The post <a rel="nofollow" href="https://foojay.io/today/why-did-we-choose-jakarta-faces-for-the-ui-of-the-eclipse-starter-for-jakarta-ee/">Why Did We Choose Jakarta Faces for the UI of the Eclipse Starter for Jakarta EE?</a> appeared first on <a rel="nofollow" href="https://foojay.io">foojay</a>.
-...
+This article explains why we chose JSF to build the Eclipse starter for Jakarta and why it deserves more love and attention!...
 [Read further^](https://foojay.io/today/why-did-we-choose-jakarta-faces-for-the-ui-of-the-eclipse-starter-for-jakarta-ee/)
 
 
 ### A Minor But Useful Refactoring Technique That Would Reduce Your Code Footprint (Part 2) (2022-10-26)
-As I keep refactoring, this article will focus on a few more interesting ways to do it. These are pretty much minor yet effective and useful changes. Stream.noneMatch() and Stream.anyMatch() In some situations, we need to find a single case ...
-The post <a rel="nofollow" href="https://foojay.io/today/a-minor-but-useful-refactoring-technique-that-would-reduce-your-code-footprint-part-2/">A Minor But Useful Refactoring Technique That Would Reduce Your Code Footprint (Part 2)</a> appeared first on <a rel="nofollow" href="https://foojay.io">foojay</a>.
-...
+As I keep refactoring, this article will focus on a few more interesting ways to do it. These are pretty much minor yet effective and useful changes. Stream.noneMatch() and Stream.anyMatch() In some situations, we need to find a single case …...
 [Read further^](https://foojay.io/today/a-minor-but-useful-refactoring-technique-that-would-reduce-your-code-footprint-part-2/)
 
 
+### Foojay Podcast #6: Welcome to Foojay! (2022-10-24)
+Let’s look back and what has happened on Foojay during the last 2,5 years and talk to some of the people behind the project....
+[Read further^](https://foojay.io/today/foojay-podcast-6/)
+
+
 ### A Minor But Useful Refactoring Technique That Would Reduce Your Code Footprint (Part 1) (2022-10-20)
-That was a long-awaited migration, but I'm pleased that we eventually made it. The next thing... "Why not Java 17 directly?" 
-The post <a rel="nofollow" href="https://foojay.io/today/a-minor-but-useful-refactoring-technique-that-would-reduce-your-code-footprint-part-1/">A Minor But Useful Refactoring Technique That Would Reduce Your Code Footprint (Part 1)</a> appeared first on <a rel="nofollow" href="https://foojay.io">foojay</a>.
-...
+That was a long-awaited migration, but I’m pleased that we eventually made it. The next thing… “Why not Java 17 directly?”...
 [Read further^](https://foojay.io/today/a-minor-but-useful-refactoring-technique-that-would-reduce-your-code-footprint-part-1/)
-
-
-### What Does a Modern JVM Look Like, And How Does It Work? (2022-09-29)
-In this article, the internal workings of the JVM are discussed, e.g., interpreter, JIT compiler, and how it optimizes code.
-The post <a rel="nofollow" href="https://foojay.io/today/what-does-a-modern-jvm-look-like-and-how-does-it-work/">What Does a Modern JVM Look Like, And How Does It Work?</a> appeared first on <a rel="nofollow" href="https://foojay.io">foojay</a>.
-...
-[Read further^](https://foojay.io/today/what-does-a-modern-jvm-look-like-and-how-does-it-work/)
-
-
-### The 5 Most Pivotal and Innovative Additions to OpenJDK 19 (2022-09-20)
-Although OpenJDK 19 is not an LTS, it is still a significant release, in my opinion. It includes several game-changing features that will alter the Java landscape.
-The post <a rel="nofollow" href="https://foojay.io/today/the-5-most-pivotal-and-innovative-additions-to-openjdk-19/">The 5 Most Pivotal and Innovative Additions to OpenJDK 19</a> appeared first on <a rel="nofollow" href="https://foojay.io">foojay</a>.
-...
-[Read further^](https://foojay.io/today/the-5-most-pivotal-and-innovative-additions-to-openjdk-19/)
-
-
-### Java Thread Programming (Part 15) (2022-08-31)
-Learn how to do asynchronous method invocation with Callable and Future with a practical example.
-The post <a rel="nofollow" href="https://foojay.io/today/java-thread-programming-part-15/">Java Thread Programming (Part 15)</a> appeared first on <a rel="nofollow" href="https://foojay.io">foojay</a>.
-...
-[Read further^](https://foojay.io/today/java-thread-programming-part-15/)
-
-
-### Java Bytecode Simplified: Journey to the Wonderland (Part 2) (2022-08-16)
-Let’s appreciate the Java Virtual Machine (JVM) even more. Today we'll discuss Constant Pool in quite some detail.
-The post <a rel="nofollow" href="https://foojay.io/today/java-bytecode-simplified-journey-to-the-wonderland-part-2/">Java Bytecode Simplified: Journey to the Wonderland (Part 2)</a> appeared first on <a rel="nofollow" href="https://foojay.io">foojay</a>.
-...
-[Read further^](https://foojay.io/today/java-bytecode-simplified-journey-to-the-wonderland-part-2/)
-
-
-### Top 7 Features in Jakarta EE 10 (2022-06-28)
-Jakarta EE is a dominant force behind all enterprise development in Java. Check out my favorite top 7 features, what are yours?
-The post <a rel="nofollow" href="https://foojay.io/today/top-7-features-in-jakarta-ee-10/">Top 7 Features in Jakarta EE 10</a> appeared first on <a rel="nofollow" href="https://foojay.io">foojay</a>.
-...
-[Read further^](https://foojay.io/today/top-7-features-in-jakarta-ee-10/)
-
-
-### How to Add an Event to the Foojay Event Calendar (2022-06-07)
-If you want to add an event to our calendar or advertize your event on Foojay.io, you can follow the following steps! 
-The post <a rel="nofollow" href="https://foojay.io/today/how-to-add-an-event-to-the-foojay-event-calendar/">How to Add an Event to the Foojay Event Calendar</a> appeared first on <a rel="nofollow" href="https://foojay.io">foojay</a>.
-...
-[Read further^](https://foojay.io/today/how-to-add-an-event-to-the-foojay-event-calendar/)
 
 
 ## <u>Talks</u>
@@ -179,4 +164,5 @@ The post <a rel="nofollow" href="https://foojay.io/today/how-to-add-an-event-to-
 <a href="https://github.com/rokon12/rokon12">
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
-*This document was last updated on Wed, 25 Jan 2023 02:33:31 GMT*
+
+*This page was last updated on Mon, 20 Mar 2023 02:35:47 GMT*
