@@ -76,26 +76,26 @@ val infoqPosts: List<Post> by lazy {
             .map { Post(localDate(it), it.title, (baseUrl + it.link), it.body) }
 }
 
-//val talks: List<String> by lazy {
-//    try {
-//        val timeoutMillis = 1000*60*5 // 5 minutes
-//        val document = Jsoup.connect("https://bazlur.ca/conference-talks/")
-//                .timeout(timeoutMillis)
-//                .userAgent("Mozilla").get()
-//        val container = document.getElementsByClass("container")
-//        val ul = container.select("div.entry-content > ul")
-//        val li = ul.select("li")
-//        li.map { it.html() }
-//    } catch (e: Exception) {
-//        println(e)
-//        emptyList()
-//    }
-//}
+val talks: List<String> by lazy {
+    try {
+        val timeoutMillis = 1000*60*5 // 5 minutes
+        val document = Jsoup.connect("https://bazlur.ca/conference-talks/")
+                .timeout(timeoutMillis)
+                .userAgent("Mozilla").get()
+        val container = document.getElementsByClass("container")
+        val ul = container.select("div.entry-content > ul")
+        val li = ul.select("li")
+        li.map { it.html() }
+    } catch (e: Exception) {
+        println(e)
+        emptyList<String>()
+    }
+}
 
 val root = mapOf(
         "foojayPosts" to posts,
         "infoqPosts" to infoqPosts,
-        "talks" to emptyList<>(),
+        "talks" to talks,
         "lastUpdated" to LocalDateTime.now().atZone(ZoneId.systemDefault()).format(DateTimeFormatter.RFC_1123_DATE_TIME)
 )
 
