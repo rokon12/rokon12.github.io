@@ -74,6 +74,21 @@ JEP 428, Structured Concurrency (Incubator), has been promoted from Proposed to 
 ## <u>[Foojay.io](https://foojay.io/)</u>
 
 
+### Competing for the Crown: A Friendly Debate on the Future of Java and Kotlin on Foojay.io Today (2023-03-29)
+In this article, we look at a discussion on Foojay’s Slack comparing Java and Kotlin, showing why developers should join the platform....
+[Read further^](https://foojay.io/today/competing-for-the-crown-a-friendly-debate-on-the-future-of-java-and-kotlin-on-foojay-io-today/)
+
+
+### Navigating the Challenges of Modern Software Development: An Exclusive Interview with Shai Almog (2023-03-27)
+Discover the insights of Shai Almog, a Java expert and entrepreneur with over 20 years of experience, as he shares his journey....
+[Read further^](https://foojay.io/today/navigating-the-challenges-of-modern-software-development-an-exclusive-interview-with-shai-almog/)
+
+
+### From Assembler to Chat-GPT: Steve Poole on the Shifting Landscape of Programming (2023-03-20)
+In this engaging interview with Steve Poole, a seasoned Java developer and DevOps practitioner, we delve into his career journey, valuable insights, and the evolution of technology. Poole shares his experiences, highlighting the importance of critical thinking, adapting to change, and embracing innovation in the world of software development....
+[Read further^](https://foojay.io/today/from-assembler-to-chat-gpt-steve-poole-on-the-shifting-landscape-of-programming/)
+
+
 ### The Speed Test: Comparing Map.of() and new HashMap<>() in Java (2023-03-16)
 Discussion of the use of Map.of() and new HashMap<>() in Java, the difference between them, and the benefits of using Map.of()....
 [Read further^](https://foojay.io/today/speed-test-comparing-map-of-new-hashmap/)
@@ -114,49 +129,8 @@ This article explains why we chose JSF to build the Eclipse starter for Jakarta 
 [Read further^](https://foojay.io/today/why-did-we-choose-jakarta-faces-for-the-ui-of-the-eclipse-starter-for-jakarta-ee/)
 
 
-### A Minor But Useful Refactoring Technique That Would Reduce Your Code Footprint (Part 2) (2022-10-26)
-As I keep refactoring, this article will focus on a few more interesting ways to do it. These are pretty much minor yet effective and useful changes. Stream.noneMatch() and Stream.anyMatch() In some situations, we need to find a single case …...
-[Read further^](https://foojay.io/today/a-minor-but-useful-refactoring-technique-that-would-reduce-your-code-footprint-part-2/)
-
-
-### Foojay Podcast #6: Welcome to Foojay! (2022-10-24)
-Let’s look back and what has happened on Foojay during the last 2,5 years and talk to some of the people behind the project....
-[Read further^](https://foojay.io/today/foojay-podcast-6/)
-
-
-### A Minor But Useful Refactoring Technique That Would Reduce Your Code Footprint (Part 1) (2022-10-20)
-That was a long-awaited migration, but I’m pleased that we eventually made it. The next thing… “Why not Java 17 directly?”...
-[Read further^](https://foojay.io/today/a-minor-but-useful-refactoring-technique-that-would-reduce-your-code-footprint-part-1/)
-
-
 ## <u>Talks</u>
 
-- <strong>A tale of two cities: blocking code vs. non-blocking code at <a href="https://devnexus.com/presentations/a-tale-of-two-cities-blocking-code-vs-non-blocking-code">DevNeus</a></strong>
-- <strong> A tale of two cities: blocking code vs. non-blocking code at <a href="https://events.geekle.us/java23/">Online Summit for Java Dev</a></strong>
-- <a href="https://jchampionsconf.com/speakers.html#rahmanCard">A tale of two cities: blocking code vs. non-blocking code</a> at JChampion Conference
-- <a href="https://confoo.ca/en/2023/session/java-virtual-threads-to-deliver-improved-throughput">Java Virtual Threads to Deliver Improved Throughput </a> at <a href="https://confoo.ca/en/2023/schedule">ConFoo.ca</a>
-- <a href="https://confoo.ca/en/2023/session/your-code-on-the-fastlane-catch-up-with-everyone">Your code on the Fastlane: catch up with everyone</a> at <a href="https://confoo.ca/en/2023/schedule">ConFoo.ca</a>
-- Jakarta Starter: Create, build and run Jakarta EE Applications in under a minute at <a href="https://jakartaone.org/2022/speakers/#bazlur-rahman">JakartaOne LIVESTREAM</a>
-- Creating a Million Virtual Threads Using Project Loom at <a href="https://twitter.com/bazlur_rahman/status/1591597860323221504?ref_src=twsrc%5Etfw%7Ctwcamp%5Eembeddedtimeline%7Ctwterm%5Escreen-name%3Abazlur_rahman%7Ctwcon%5Es1">PeruJUG</a>
-- Java Threading Essentials: Novice to Expert workshop at <a href="https://devoxx.ma/talk/?id=2724">Devoxx Morocco</a>
-- Your Java Code in the Fastlane: Project Loom at <a href="https://www.meetup.com/arab-java-user-group/events/287738576/">Arab Java User Group</a>
-- Creating a Million Virtual Threads Using Project Loom with Bazlur Rahman at <a href="https://www.meetup.com/the-pittsburgh-java-meetup-group/events/287639185/">The Pittsburgh Java Meetup Group</a>
-- Your Java Code in the Fastlane: Creating a Million Virtual Threads Using Project Loom to Improve Throughput at <a href="https://twitter.com/StarofJava/status/1552574469822025728">Star Meetup</a>
-- Your Java Code in the Fastlane: Creating a Million Virtual Threads Using Project Loom to Improve Throughput at <a href="https://www.meetup.com/PhillyJUG/events/285970065/">PhillyJUG</a>
-- Your Java Code in the Fastlane: Creating a Million Virtual Threads Using Project Loom to Improve Throughput at <a href="https://gsjug.org/meetings/2022/jul2022.html">Garden State Java User Group</a>
-- Creating a Million Virtual Threads Using Project loom at <a href="https://www.meetup.com/SouJava/events/286013245/">SouJava</a>
-- Java Threading Essentials: Novice to Expert workshop at <a href="https://www.javaday.istanbul/bazlur-rahman-speaker">JavaDay Istambul 2022</a>
-- Java Threading Essentials at Geekly <a href="https://geekle.us/schedule/java">Online Java Summit</a>
-- Java Threading Essentials at <a href="https://fosdem.org/2022/schedule/event/threading/">FOSDEM 22</a>
-- Advanced Java Memory Management at <a href="https://www.youtube.com/watch?v=4Pz-DaH9KVo">JUGBD</a>
-- Top 10 questions asked by Junior Java Developers at <a href="https://www.youtube.com/watch?v=mXbGz3cUZ0Y&amp;t=34s">JUGBD</a>
-- Keynote Speech: Looking back and moving forward at <a href="https://www.youtube.com/watch?v=_-QOHqQr_yE&amp;t=1451s">JUGBD</a>
-- What industry expects from a junior software developer at <a href="https://www.youtube.com/watch?v=eIaqbmfl9-c">JUGBD</a>
-- Overseas Career Opportunities at <a href="https://www.youtube.com/watch?v=eIaqbmfl9-c">JUGBD</a>
-- Top 20 reasons to learn Java now than ever at <a href="https://youtu.be/8GOZRoEUiaA">JUGBD</a>
-- Workshop on Basic Java Programming at <a href="https://site.ieee.org/sb-udhaka-cs/past-events/">IEEE Computer Society </a>
-- Workshop on Advance Java Programming: Thread &amp; Lambda Expression at <a href="https://site.ieee.org/sb-udhaka-cs/past-events/">IEEE Computer Society</a>
-- Panel discussion at <a href="https://javaconference.world/speaker/a-n-m-bazlur-rahman/">Java Developers’ Conference 21</a>
 
 
 ## &#x1f4c8; GitHub Stats
@@ -165,4 +139,4 @@ That was a long-awaited migration, but I’m pleased that we eventually made it.
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Mon, 20 Mar 2023 02:35:47 GMT*
+*This page was last updated on Fri, 31 Mar 2023 14:32:33 GMT*
