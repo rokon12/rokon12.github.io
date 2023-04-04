@@ -74,6 +74,11 @@ JEP 428, Structured Concurrency (Incubator), has been promoted from Proposed to 
 ## <u>[Foojay.io](https://foojay.io/)</u>
 
 
+### Unlocking the Secrets to a Successful Software Engineering Career: An Interview with Otavio Santana (2023-04-03)
+Otavio Santana shares his journey as a passionate software engineer and architect, emphasizing the crucial roles of open-source contributions, and more....
+[Read further^](https://foojay.io/today/unlocking-the-secrets-to-a-successful-software-engineering-career-an-interview-with-otavio-santana/)
+
+
 ### Competing for the Crown: A Friendly Debate on the Future of Java and Kotlin on Foojay.io Today (2023-03-29)
 In this article, we look at a discussion on Foojay’s Slack comparing Java and Kotlin, showing why developers should join the platform....
 [Read further^](https://foojay.io/today/competing-for-the-crown-a-friendly-debate-on-the-future-of-java-and-kotlin-on-foojay-io-today/)
@@ -124,11 +129,6 @@ Learn why developers may not write or give talks and how sharing knowledge and e
 [Read further^](https://foojay.io/today/why-many-developers-dont-write-or-give-talks-and-how-to-overcome-challenges/)
 
 
-### Why Did We Choose Jakarta Faces for the UI of the Eclipse Starter for Jakarta EE? (2022-12-13)
-This article explains why we chose JSF to build the Eclipse starter for Jakarta and why it deserves more love and attention!...
-[Read further^](https://foojay.io/today/why-did-we-choose-jakarta-faces-for-the-ui-of-the-eclipse-starter-for-jakarta-ee/)
-
-
 ## <u>Talks</u>
 
 - <strong>A tale of two cities: blocking code vs. non-blocking code at <a href="https://devnexus.com/presentations/a-tale-of-two-cities-blocking-code-vs-non-blocking-code">DevNeus</a></strong>
@@ -165,4 +165,4 @@ This article explains why we chose JSF to build the Eclipse starter for Jakarta 
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Mon, 3 Apr 2023 02:20:36 GMT*
+*This page was last updated on Tue, 4 Apr 2023 02:24:30 GMT*
