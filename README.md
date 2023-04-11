@@ -74,6 +74,11 @@ JEP 429, Extent-Local Variables (Incubator), was promoted from its JEP Draft 826
 ## <u>[Foojay.io](https://foojay.io/)</u>
 
 
+### Unlocking Java Secrets with Frank Delporte: Insights, Stories, and Tips for Success (2023-04-10)
+Dive into our insightful interview with Frank Delporte, Java Champion and Senior Technical Writer at Azul Systems, as he shares his experiences in the software industry....
+[Read further^](https://foojay.io/today/unlocking-java-secrets-with-frank-delporte-insights-stories-and-tips-for-success/)
+
+
 ### Unlocking the Secrets to a Successful Software Engineering Career: An Interview with Otavio Santana (2023-04-03)
 Otavio Santana shares his journey as a passionate software engineer and architect, emphasizing the crucial roles of open-source contributions, and more....
 [Read further^](https://foojay.io/today/unlocking-the-secrets-to-a-successful-software-engineering-career-an-interview-with-otavio-santana/)
@@ -124,11 +129,6 @@ Java bytecode can be updated and controlled for many reasons, such as adding new
 [Read further^](https://foojay.io/today/java-bytecode-simplified-journey-to-the-wonderland-part-3/)
 
 
-### Why Many Developers Don’t Write or Give Talks and How to Overcome Challenges (2023-01-11)
-Learn why developers may not write or give talks and how sharing knowledge and experiences can improve communication skills, and much more!...
-[Read further^](https://foojay.io/today/why-many-developers-dont-write-or-give-talks-and-how-to-overcome-challenges/)
-
-
 ## <u>Talks</u>
 
 - <strong>A tale of two cities: blocking code vs. non-blocking code at <a href="https://devnexus.com/presentations/a-tale-of-two-cities-blocking-code-vs-non-blocking-code">DevNeus</a></strong>
@@ -165,4 +165,4 @@ Learn why developers may not write or give talks and how sharing knowledge and e
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Mon, 10 Apr 2023 02:20:45 GMT*
+*This page was last updated on Tue, 11 Apr 2023 02:22:53 GMT*
