@@ -21,6 +21,11 @@ I earned my bachelor's degree in Information Technology, majoring in Software En
 ## <u>[InfoQ](https://www.infoq.com/profile/A-N-M-Bazlur-Rahman/)</u>
 
 
+### Boosting Quarkus Native Performance: Should You Stick with Space/Time or Switch to Adaptive GC? (2023-04-21)
+Quarkus, the Kubernetes Native Java Framework, has switched its default garbage collection policy from space/time to adaptive GC for native runtime in version 2.13.6.Final. Adaptive GC is designed to trigger GCs aggressively in order to keep memory consumption low. This makes it effective in situations where a low memory footprint is essential, and it appears to perform better under heavy stress....
+[Read further^](https://www.infoq.com//news/2023/04/boosting-quarkus-native/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
+
+
 ### JEP 444: Virtual Threads Arrive in JDK 21, Ushering a New Era of Concurrency (2023-04-09)
 JEP 444, Virtual Threads, was promoted from Candidate to Proposed to Target status for JDK 21. This feature offers a lightweight threading model to simplify the creation, management, and monitoring of high-throughput concurrent Java applications, allowing developers to efficiently handle millions of tasks and make better use of system resources....
 [Read further^](https://www.infoq.com//news/2023/04/virtual-threads-arrives-jdk21/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
@@ -64,11 +69,6 @@ Jakarta EE 10, released on September 22, 2022, is the third major, and fourth ov
 ### Introducing Helidon N&iacute;ma Using Virtual Threads to Achieve Simplicity and High Performance (2022-09-16)
 Under the umbrella of Project Helidon, Oracle introduced the first microservices framework based on virtual threads (JEP 425) called Helidon N&iacute;ma. It is built from the ground up to achieve an easy-to-use programming model with outstanding performance. The technology preview is now available with the Helidon 4.0.0-ALPHA1 release for those who are interested in evaluating the latest Java technology....
 [Read further^](https://www.infoq.com//news/2022/09/introducing-helidon-nima/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
-
-
-### JEP 429: Extent-Local Variables to Promote Immutability in Java (2022-09-09)
-JEP 429, Extent-Local Variables (Incubator), was promoted from its JEP Draft 8263012 to Candidate status. This incubating JEP, under the umbrella of Project Loom, proposes enabling the sharing of immutable data within and across threads. This is preferred to thread-local variables, especially when using large numbers of virtual threads....
-[Read further^](https://www.infoq.com//news/2022/09/extent-local-variables-java/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
 
 
 ## <u>[Foojay.io](https://foojay.io/)</u>
@@ -165,4 +165,4 @@ Java bytecode can be updated and controlled for many reasons, such as adding new
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Fri, 21 Apr 2023 02:24:09 GMT*
+*This page was last updated on Sat, 22 Apr 2023 02:24:55 GMT*
