@@ -21,6 +21,11 @@ I earned my bachelor's degree in Information Technology, majoring in Software En
 ## <u>[InfoQ](https://www.infoq.com/profile/A-N-M-Bazlur-Rahman/)</u>
 
 
+### Java Gets a Boost with String Templates: Simplifying Code and Improving Security (2023-04-28)
+JEP 430, String Templates (Preview), has been promoted from Proposed to Target to Targeted status for JDK 21, a feature JEP type that proposes to enhance the Java programming language with string templates, which are similar to string literals but contain embedded expressions incorporated into the string template at run time....
+[Read further^](https://www.infoq.com//news/2023/04/java-gets-a-boost-with-string/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
+
+
 ### Boosting Quarkus Native Performance: Should You Stick with Space/Time or Switch to Adaptive GC? (2023-04-21)
 Quarkus, the Kubernetes Native Java Framework, has switched its default garbage collection policy from space/time to adaptive GC for native runtime in version 2.13.6.Final. Adaptive GC is designed to trigger GCs aggressively in order to keep memory consumption low. This makes it effective in situations where a low memory footprint is essential, and it appears to perform better under heavy stress....
 [Read further^](https://www.infoq.com//news/2023/04/boosting-quarkus-native/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
@@ -64,11 +69,6 @@ Red Hat has released WildFly 27, featuring support for JDK 11, JDK 17, Jakarta E
 ### Jakarta EE 10 Delivers New Core Profile and Updates to Specifications (2022-09-27)
 Jakarta EE 10, released on September 22, 2022, is the third major, and fourth overall, release of Jakarta EE by the Jakarta EE Working Group since Oracle donated Java EE 8 to the Eclipse Foundation in 2017. This release aims to deliver a set of coordinated specifications for building modernized, simplified, and lightweight cloud-native Java applications across the spectrum of Jakarta EE....
 [Read further^](https://www.infoq.com//news/2022/09/jakarta-ee-10-updates/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
-
-
-### Introducing Helidon N&iacute;ma Using Virtual Threads to Achieve Simplicity and High Performance (2022-09-16)
-Under the umbrella of Project Helidon, Oracle introduced the first microservices framework based on virtual threads (JEP 425) called Helidon N&iacute;ma. It is built from the ground up to achieve an easy-to-use programming model with outstanding performance. The technology preview is now available with the Helidon 4.0.0-ALPHA1 release for those who are interested in evaluating the latest Java technology....
-[Read further^](https://www.infoq.com//news/2022/09/introducing-helidon-nima/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
 
 
 ## <u>[Foojay.io](https://foojay.io/)</u>
@@ -165,4 +165,4 @@ Java bytecode can be updated and controlled for many reasons, such as adding new
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Fri, 28 Apr 2023 02:25:50 GMT*
+*This page was last updated on Sat, 29 Apr 2023 02:23:42 GMT*
