@@ -21,6 +21,11 @@ I earned my bachelor's degree in Information Technology, majoring in Software En
 ## <u>[InfoQ](https://www.infoq.com/profile/A-N-M-Bazlur-Rahman/)</u>
 
 
+### Open Liberty 23.0.0.3 Unveiled: Embracing Cloud-Native Java Microservices, Jakarta EE 10 and beyond (2023-05-05)
+IBM unveiled Open Liberty 23.0.0.3, boasting support for Java SE 20, Jakarta EE 10, and MicroProfile 6.0. This significant release introduces the Jakarta EE 10 Core Profile, Web Profile, and Platform and enhancements to various features that comprise the profiles. Additionally, the release includes MicroProfile Telemetry 1.0 and updates to Metrics, OpenAPI, and JWT Authentication specifications....
+[Read further^](https://www.infoq.com//news/2023/05/open-liberty-23003-unveiled/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
+
+
 ### Java Gets a Boost with String Templates: Simplifying Code and Improving Security (2023-04-28)
 JEP 430, String Templates (Preview), has been promoted from Proposed to Target to Targeted status for JDK 21, a feature JEP type that proposes to enhance the Java programming language with string templates, which are similar to string literals but contain embedded expressions incorporated into the string template at run time....
 [Read further^](https://www.infoq.com//news/2023/04/java-gets-a-boost-with-string/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
@@ -64,11 +69,6 @@ The Eclipse Foundation has released the latest version of its open-source applic
 ### WildFly 27 Delivers Support for JDK 17 and Jakarta EE 10 (2022-12-13)
 Red Hat has released WildFly 27, featuring support for JDK 11, JDK 17, Jakarta EE 10 and MicroProfile 5.0. There are also dependency upgrades to Hibernate ORM 6.1, Hibernate Search 6.1, Infinispan 14, JGroups 5.2, RESTEasy 6.2, and Weld 5. WildFly 27 is a compatible implementation for Jakarta EE 10, having passed the TCKs in the Platform, Web and Core profiles....
 [Read further^](https://www.infoq.com//news/2022/12/wildfly-delivers-support-jdk-17/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
-
-
-### Jakarta EE 10 Delivers New Core Profile and Updates to Specifications (2022-09-27)
-Jakarta EE 10, released on September 22, 2022, is the third major, and fourth overall, release of Jakarta EE by the Jakarta EE Working Group since Oracle donated Java EE 8 to the Eclipse Foundation in 2017. This release aims to deliver a set of coordinated specifications for building modernized, simplified, and lightweight cloud-native Java applications across the spectrum of Jakarta EE....
-[Read further^](https://www.infoq.com//news/2022/09/jakarta-ee-10-updates/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
 
 
 ## <u>[Foojay.io](https://foojay.io/)</u>
@@ -165,4 +165,4 @@ Java bytecode can be updated and controlled for many reasons, such as adding new
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Fri, 5 May 2023 02:20:48 GMT*
+*This page was last updated on Sat, 6 May 2023 02:19:26 GMT*
