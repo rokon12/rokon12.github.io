@@ -21,6 +21,11 @@ I earned my bachelor's degree in Information Technology, majoring in Software En
 ## <u>[InfoQ](https://www.infoq.com/profile/A-N-M-Bazlur-Rahman/)</u>
 
 
+### Quarkus 3.0 Released: Improving Cloud-Native Java Development with Jakarta EE 10 Support (2023-05-09)
+Following six alpha releases, a beta release, and two release candidates, Red Hat has launched the highly anticipated Quarkus 3.0 release this past week. This update brings a host of new features, including support for Jakarta EE 10, MicroProfile 6.0, Hibernate ORM 6.0, and Hibernate Reactive 2.0....
+[Read further^](https://www.infoq.com//news/2023/05/quarkus-improves-cloud-native/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
+
+
 ### Open Liberty 23.0.0.3 Unveiled: Embracing Cloud-Native Java Microservices, Jakarta EE 10 and beyond (2023-05-05)
 IBM unveiled Open Liberty 23.0.0.3, boasting support for Java SE 20, Jakarta EE 10, and MicroProfile 6.0. This significant release introduces the Jakarta EE 10 Core Profile, Web Profile, and Platform and enhancements to various features that comprise the profiles. Additionally, the release includes MicroProfile Telemetry 1.0 and updates to Metrics, OpenAPI, and JWT Authentication specifications....
 [Read further^](https://www.infoq.com//news/2023/05/open-liberty-23003-unveiled/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
@@ -66,12 +71,12 @@ The Eclipse Foundation has released the latest version of its open-source applic
 [Read further^](https://www.infoq.com//news/2023/01/glassfish-delivers-support-jdk17/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
 
 
-### WildFly 27 Delivers Support for JDK 17 and Jakarta EE 10 (2022-12-13)
-Red Hat has released WildFly 27, featuring support for JDK 11, JDK 17, Jakarta EE 10 and MicroProfile 5.0. There are also dependency upgrades to Hibernate ORM 6.1, Hibernate Search 6.1, Infinispan 14, JGroups 5.2, RESTEasy 6.2, and Weld 5. WildFly 27 is a compatible implementation for Jakarta EE 10, having passed the TCKs in the Platform, Web and Core profiles....
-[Read further^](https://www.infoq.com//news/2022/12/wildfly-delivers-support-jdk-17/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
-
-
 ## <u>[Foojay.io](https://foojay.io/)</u>
+
+
+### Unleashing the Power of Lightweight Concurrency: A Comprehensive Guide to Java Virtual Threads (Part 1) (2023-05-09)
+Java Virtual Threads, also known as lightweight threads, are a new feature in Java’s Project Loom that aim to simplify concurrent programming....
+[Read further^](https://foojay.io/today/unleashing-the-power-of-lightweight-concurrency-a-comprehensive-guide-to-java-virtual-threads-part-1/)
 
 
 ### Unlocking Java Secrets with Frank Delporte: Insights, Stories, and Tips for Success (2023-04-10)
@@ -124,11 +129,6 @@ Optional is a Java class that provides a way to handle null values in a type-saf
 [Read further^](https://foojay.io/today/optional-in-java-a-swiss-army-knife-for-handling-nulls-and-improving-code-quality/)
 
 
-### Java Bytecode Simplified: Journey to the Wonderland (Part 3) (2023-01-24)
-Java bytecode can be updated and controlled for many reasons, such as adding new features, instrumenting code for performance monitoring....
-[Read further^](https://foojay.io/today/java-bytecode-simplified-journey-to-the-wonderland-part-3/)
-
-
 ## <u>Talks</u>
 
 - <strong>A tale of two cities: blocking code vs. non-blocking code at <a href="https://devnexus.com/presentations/a-tale-of-two-cities-blocking-code-vs-non-blocking-code">DevNeus</a></strong>
@@ -165,4 +165,4 @@ Java bytecode can be updated and controlled for many reasons, such as adding new
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Tue, 9 May 2023 02:25:24 GMT*
+*This page was last updated on Wed, 10 May 2023 02:23:11 GMT*
