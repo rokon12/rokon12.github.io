@@ -21,6 +21,11 @@ I earned my bachelor's degree in Information Technology, majoring in Software En
 ## <u>[InfoQ](https://www.infoq.com/profile/A-N-M-Bazlur-Rahman/)</u>
 
 
+### Java Gets a Boost with the Record Pattern, Enabling More Expressive Coding (2023-05-15)
+JEP 440, finalizing Record Patterns, has been promoted from Proposed to Target to Targeted status for JDK 21, following feedback-driven enhancements in JEP 432 and JEP 405. Record patterns now allow for powerful data navigation and processing when used with type patterns. The main change from JEP 432 is the removal of record patterns in the header of an enhanced for statement....
+[Read further^](https://www.infoq.com//news/2023/05/java-gets-boost-with-record/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
+
+
 ### Quarkus 3.0 Released: Improving Cloud-Native Java Development with Jakarta EE 10 Support (2023-05-09)
 Following six alpha releases, a beta release, and two release candidates, Red Hat has launched the highly anticipated Quarkus 3.0 release this past week. This update brings a host of new features, including support for Jakarta EE 10, MicroProfile 6.0, Hibernate ORM 6.0, and Hibernate Reactive 2.0....
 [Read further^](https://www.infoq.com//news/2023/05/quarkus-improves-cloud-native/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
@@ -66,12 +71,12 @@ Just one week after the release of version 3.7.5,  the Micronaut Foundation rele
 [Read further^](https://www.infoq.com//news/2023/01/micronaut-released-3-8-0/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
 
 
-### GlassFish 7.0 Delivers Support for JDK 17 and Jakarta EE 10 (2023-01-06)
-The Eclipse Foundation has released the latest version of its open-source application server, GlassFish 7.0, which is now available. The new release includes support for the MicroProfile Config, MicroProfile JWT Propagation, and Jakarta MVC 2.1 specifications. Changes to the API and JSON parts of the Jakarta Standard Tag Library and new Jakarta Authentication methods are also essential features....
-[Read further^](https://www.infoq.com//news/2023/01/glassfish-delivers-support-jdk17/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
-
-
 ## <u>[Foojay.io](https://foojay.io/)</u>
+
+
+### Discovering the Secrets to Success: An Exclusive Interview with Java Champion Michael P. Redlich (2023-05-15)
+Discover valuable insights from Java Champion Michael P. Redlich and learn about continuous learning, open-source contributions, and adapting to new technologies in software development....
+[Read further^](https://foojay.io/today/discovering-the-secrets-to-success-an-exclusive-interview-with-java-champion-michael-p-redlich/)
 
 
 ### Unleashing the Power of Lightweight Concurrency: A Comprehensive Guide to Java Virtual Threads (Part 1) (2023-05-09)
@@ -124,11 +129,6 @@ Java sealed classes are a powerful feature that can help you create more robust 
 [Read further^](https://foojay.io/today/java-sealed-classes-in-action-building-robust-and-secure-applications/)
 
 
-### Optional in Java: A Swiss Army Knife for Handling Nulls and Improving Code Quality (2023-02-01)
-Optional is a Java class that provides a way to handle null values in a type-safe and efficient manner. It can help you avoid null pointer exceptions, simplify your code, and improve its readability and maintainability. This tutorial will cover the features and use cases of Optional in Java, with practical examples of how to use it for handling nulls...
-[Read further^](https://foojay.io/today/optional-in-java-a-swiss-army-knife-for-handling-nulls-and-improving-code-quality/)
-
-
 ## <u>Talks</u>
 
 
@@ -139,4 +139,4 @@ Optional is a Java class that provides a way to handle null values in a type-saf
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Mon, 15 May 2023 02:28:23 GMT*
+*This page was last updated on Tue, 16 May 2023 02:26:44 GMT*
