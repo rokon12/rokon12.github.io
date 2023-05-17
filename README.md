@@ -74,6 +74,11 @@ Just one week after the release of version 3.7.5,  the Micronaut Foundation rele
 ## <u>[Foojay.io](https://foojay.io/)</u>
 
 
+### Announcing “Java Unscripted: An Asynchronous Exploration of Excellence” (2023-05-16)
+Join us for “Java Unscripted,” an enlightening interview series spotlighting the wisdom of seasoned Java experts....
+[Read further^](https://foojay.io/today/announcing-java-unscripted-an-asynchronous-exploration-of-excellence/)
+
+
 ### Discovering the Secrets to Success: An Exclusive Interview with Java Champion Michael P. Redlich (2023-05-15)
 Discover valuable insights from Java Champion Michael P. Redlich and learn about continuous learning, open-source contributions, and adapting to new technologies in software development....
 [Read further^](https://foojay.io/today/discovering-the-secrets-to-success-an-exclusive-interview-with-java-champion-michael-p-redlich/)
@@ -124,11 +129,6 @@ I attended the ConFoo conference in Montreal for a day, gave two talks on Java, 
 [Read further^](https://foojay.io/today/java-friends-and-cold-weather-my-adventure-at-confoo-conference/)
 
 
-### Java Sealed Classes in Action: Building Robust and Secure Applications (2023-02-20)
-Java sealed classes are a powerful feature that can help you create more robust and maintainable code by restricting the inheritance hierarchy of your classes and interfaces....
-[Read further^](https://foojay.io/today/java-sealed-classes-in-action-building-robust-and-secure-applications/)
-
-
 ## <u>Talks</u>
 
 
@@ -139,4 +139,4 @@ Java sealed classes are a powerful feature that can help you create more robust 
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Tue, 16 May 2023 02:26:44 GMT*
+*This page was last updated on Wed, 17 May 2023 02:26:46 GMT*
