@@ -74,6 +74,16 @@ Just one week after the release of version 3.7.5,  the Micronaut Foundation rele
 ## <u>[Foojay.io](https://foojay.io/)</u>
 
 
+### Java Threads Reimagined: A Reflection on JConf Toronto 2023 and the Dawn of a New Era of Concurrency (2023-05-23)
+Experience the intersection of expertise, innovation, and camaraderie at JConf Toronto 2023, a unique platform....
+[Read further^](https://foojay.io/today/java-threads-reimagined-a-reflection-on-jconf-toronto-2023-and-the-dawn-of-a-new-era-of-concurrency/)
+
+
+### Decoding Success: An Industry Expert’s Guide to Thriving in Software Development and Security (2023-05-23)
+In our conversation with Erik, Senior Director at Azul, we explore the journey from engineering to product management....
+[Read further^](https://foojay.io/today/decoding-success-an-industry-experts-guide-to-thriving-in-software-development-and-security/)
+
+
 ### Announcing “Java Unscripted: An Asynchronous Exploration of Excellence” (2023-05-16)
 Join us for “Java Unscripted,” an enlightening interview series spotlighting the wisdom of seasoned Java experts....
 [Read further^](https://foojay.io/today/announcing-java-unscripted-an-asynchronous-exploration-of-excellence/)
@@ -119,16 +129,6 @@ Discussion of the use of Map.of() and new HashMap<>() in Java, the difference be
 [Read further^](https://foojay.io/today/speed-test-comparing-map-of-new-hashmap/)
 
 
-### From Law Degree to Java Champion: Geertjan Wielenga on the Success of Java and Navigating the Software Industry (2023-03-13)
-In this interview with Geertjan Wielenga, a Java Champion and developer advocate at Azul Systems, we learn about his unconventional journey into the software industry, his involvement with Java and its community, and what has made Java so successful. Wielenga also shares his proudest accomplishments and challenges in the industry, the importance of community involvement, and the benefits of contributing to open-source projects. As a Java Champion, Wielenga emphasizes the importance of sharing knowledge and enabling others to grow within the Java community. His advice to aspiring software developers is to follow their interests, be open to unconventional paths, and contribute to open-source projects....
-[Read further^](https://foojay.io/today/from-law-degree-to-java-champion-geertjan-wielenga-on-the-success-of-java-and-navigating-the-software-industry/)
-
-
-### Java, Friends, and Cold Weather: My Adventure at ConFoo Conference (2023-03-06)
-I attended the ConFoo conference in Montreal for a day, gave two talks on Java, and met with old and new friends, and had a great experience....
-[Read further^](https://foojay.io/today/java-friends-and-cold-weather-my-adventure-at-confoo-conference/)
-
-
 ## <u>Talks</u>
 
 
@@ -139,4 +139,4 @@ I attended the ConFoo conference in Montreal for a day, gave two talks on Java, 
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Tue, 23 May 2023 02:27:05 GMT*
+*This page was last updated on Wed, 24 May 2023 02:29:22 GMT*
