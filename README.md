@@ -21,6 +21,11 @@ I earned my bachelor's degree in Information Technology, majoring in Software En
 ## <u>[InfoQ](https://www.infoq.com/profile/A-N-M-Bazlur-Rahman/)</u>
 
 
+### Breaking down Barriers: Introducing JDK 21&rsquo;s Approach to Beginner-Friendly Java Programming (2023-05-24)
+JEP 445, Unnamed Classes and Instance Main Methods (Preview), has been promoted from its Proposed to Target to Targeted status. This feature of JEP, formerly entitled Implicit Classes and Enhanced Main Methods (Preview), proposes to &quot;evolve the Java language so that students can write their first programs without needing to understand language features designed for large programs.&rdquo;...
+[Read further^](https://www.infoq.com//news/2023/05/beginner-friendly-java/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
+
+
 ### Java Gets a Boost with the Record Pattern, Enabling More Expressive Coding (2023-05-15)
 JEP 440, finalizing Record Patterns, has been promoted from Proposed to Target to Targeted status for JDK 21, following feedback-driven enhancements in JEP 432 and JEP 405. Record patterns now allow for powerful data navigation and processing when used with type patterns. The main change from JEP 432 is the removal of record patterns in the header of an enhanced for statement....
 [Read further^](https://www.infoq.com//news/2023/05/java-gets-boost-with-record/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
@@ -64,11 +69,6 @@ Hilla, the type-safe web framework for Spring Boot, has announced the release of
 ### MicroProfile 6.0 Delivers Alignment with Jakarta EE 10 and a New Specification (2023-01-18)
 In a major move for the Java community, the MicroProfile Working Group has officially released MicroProfile 6.0. This anticipated release brings a host of new features and improvements, including alignment with the Jakarta 10 Core Profile and updates to several key specifications, such as Metrics, JWT Authentication, Open API, Reactive Messaging, and Reactive Streams Operators....
 [Read further^](https://www.infoq.com//news/2023/01/microprofile6-delivers-alignmens/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
-
-
-### Micronaut 3.8.0: Build Scalable Applications with the Updated CRaC Feature (2023-01-13)
-Just one week after the release of version 3.7.5,  the Micronaut Foundation released Micronaut 3.8.0. This new version brings several exciting features, including support for GraalVM 22.3.0, the ability to use @RequestBean annotations with Java records, and a new command that guides users in creating a Micronaut AWS Lambda project....
-[Read further^](https://www.infoq.com//news/2023/01/micronaut-released-3-8-0/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
 
 
 ## <u>[Foojay.io](https://foojay.io/)</u>
@@ -139,4 +139,4 @@ Discussion of the use of Map.of() and new HashMap<>() in Java, the difference be
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Wed, 24 May 2023 02:29:22 GMT*
+*This page was last updated on Thu, 25 May 2023 02:26:09 GMT*
