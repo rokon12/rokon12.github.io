@@ -74,6 +74,11 @@ In a major move for the Java community, the MicroProfile Working Group has offic
 ## <u>[Foojay.io](https://foojay.io/)</u>
 
 
+### Resilience in Coding: Miro Wengner on Thriving in the Software Industry (2023-05-31)
+In this insightful discussion, we sit down with Miro Wengner, an accomplished software engineer with a deep-rooted affinity for Java. Miro shares his professional journey, highlights the significant challenges in the field, and reflects on the key moments that shaped …...
+[Read further^](https://foojay.io/today/resilience-in-coding-miro-wengner-on-thriving-in-the-software-industry/)
+
+
 ### Java Threads Reimagined: A Reflection on JConf Toronto 2023 and the Dawn of a New Era of Concurrency (2023-05-23)
 Experience the intersection of expertise, innovation, and camaraderie at JConf Toronto 2023, a unique platform....
 [Read further^](https://foojay.io/today/java-threads-reimagined-a-reflection-on-jconf-toronto-2023-and-the-dawn-of-a-new-era-of-concurrency/)
@@ -124,11 +129,6 @@ In this engaging interview with Steve Poole, a seasoned Java developer and DevOp
 [Read further^](https://foojay.io/today/from-assembler-to-chat-gpt-steve-poole-on-the-shifting-landscape-of-programming/)
 
 
-### The Speed Test: Comparing Map.of() and new HashMap<>() in Java (2023-03-16)
-Discussion of the use of Map.of() and new HashMap<>() in Java, the difference between them, and the benefits of using Map.of()....
-[Read further^](https://foojay.io/today/speed-test-comparing-map-of-new-hashmap/)
-
-
 ## <u>Talks</u>
 
 
@@ -139,4 +139,4 @@ Discussion of the use of Map.of() and new HashMap<>() in Java, the difference be
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Wed, 31 May 2023 02:47:19 GMT*
+*This page was last updated on Thu, 1 Jun 2023 03:04:51 GMT*
