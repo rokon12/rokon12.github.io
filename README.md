@@ -74,6 +74,11 @@ In a major move for the Java community, the MicroProfile Working Group has offic
 ## <u>[Foojay.io](https://foojay.io/)</u>
 
 
+### Cracking Code and Conventions: An Exclusive Interview with Nicolas Fränkel (2023-06-05)
+Gain unique insights from Nicolas Fränkel, an adaptable software developer who shares thoughts on industry challenges, the future of coding, and the potential impact of AI....
+[Read further^](https://foojay.io/today/cracking-code-and-conventions-an-exclusive-interview-with-nicolas-frankel/)
+
+
 ### Resilience in Coding: Miro Wengner on Thriving in the Software Industry (2023-05-31)
 In this insightful discussion, we sit down with Miro Wengner, an accomplished software engineer with a deep-rooted affinity for Java. Miro shares his professional journey, highlights the significant challenges in the field, and reflects on the key moments that shaped …...
 [Read further^](https://foojay.io/today/resilience-in-coding-miro-wengner-on-thriving-in-the-software-industry/)
@@ -124,11 +129,6 @@ Discover the insights of Shai Almog, a Java expert and entrepreneur with over 20
 [Read further^](https://foojay.io/today/navigating-the-challenges-of-modern-software-development-an-exclusive-interview-with-shai-almog/)
 
 
-### From Assembler to Chat-GPT: Steve Poole on the Shifting Landscape of Programming (2023-03-20)
-In this engaging interview with Steve Poole, a seasoned Java developer and DevOps practitioner, we delve into his career journey, valuable insights, and the evolution of technology. Poole shares his experiences, highlighting the importance of critical thinking, adapting to change, and embracing innovation in the world of software development....
-[Read further^](https://foojay.io/today/from-assembler-to-chat-gpt-steve-poole-on-the-shifting-landscape-of-programming/)
-
-
 ## <u>Talks</u>
 
 
@@ -139,4 +139,4 @@ In this engaging interview with Steve Poole, a seasoned Java developer and DevOp
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Tue, 6 Jun 2023 02:49:09 GMT*
+*This page was last updated on Wed, 7 Jun 2023 02:47:34 GMT*
