@@ -21,6 +21,11 @@ I earned my bachelor's degree in Information Technology, majoring in Software En
 ## <u>[InfoQ](https://www.infoq.com/profile/A-N-M-Bazlur-Rahman/)</u>
 
 
+### Improving Sustainable Throughput: the Generational Upgrade of Shenandoah Garbage Collector (2023-06-07)
+JEP 404, Generational Shenandoah, has been promoted from Proposed to Target to Targeted for JDK 21. This JEP proposes to &quot;enhance the Shenandoah garbage collector with experimental generational collection capabilities to improve sustainable throughput, load-spike resilience, and memory utilization.&quot;...
+[Read further^](https://www.infoq.com//news/2023/06/improving-sustainable-throughput/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
+
+
 ### Breaking down Barriers: Introducing JDK 21&rsquo;s Approach to Beginner-Friendly Java Programming (2023-05-24)
 JEP 445, Unnamed Classes and Instance Main Methods (Preview), has been promoted from its Proposed to Target to Targeted status. This feature of JEP, formerly entitled Implicit Classes and Enhanced Main Methods (Preview), proposes to &quot;evolve the Java language so that students can write their first programs without needing to understand language features designed for large programs.&rdquo;...
 [Read further^](https://www.infoq.com//news/2023/05/beginner-friendly-java/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
@@ -64,11 +69,6 @@ JEP 431: Sequenced Collections has been promoted from Candidate to Proposed to T
 ### Introducing Hilla 2.0: Reactive Endpoints, Native Image, Simplified Theming, SSO Kit, and More (2023-03-10)
 Hilla, the type-safe web framework for Spring Boot, has announced the release of version 2.0. This release utilizes Spring Boot 3, Java 17, and Jakarta EE 10, providing access to the latest features in the Java ecosystem. It includes an improved TypeScript generator, web socket support for reactive endpoints, support for GraalVM native images, a simplified theming mechanism, and a new SSO kit....
 [Read further^](https://www.infoq.com//news/2023/03/introducing-hilla-20/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
-
-
-### MicroProfile 6.0 Delivers Alignment with Jakarta EE 10 and a New Specification (2023-01-18)
-In a major move for the Java community, the MicroProfile Working Group has officially released MicroProfile 6.0. This anticipated release brings a host of new features and improvements, including alignment with the Jakarta 10 Core Profile and updates to several key specifications, such as Metrics, JWT Authentication, Open API, Reactive Messaging, and Reactive Streams Operators....
-[Read further^](https://www.infoq.com//news/2023/01/microprofile6-delivers-alignmens/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
 
 
 ## <u>[Foojay.io](https://foojay.io/)</u>
@@ -139,4 +139,4 @@ Discover the insights of Shai Almog, a Java expert and entrepreneur with over 20
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Wed, 7 Jun 2023 02:47:34 GMT*
+*This page was last updated on Thu, 8 Jun 2023 02:47:07 GMT*
