@@ -21,6 +21,16 @@ I earned my bachelor's degree in Information Technology, majoring in Software En
 ## <u>[InfoQ](https://www.infoq.com/profile/A-N-M-Bazlur-Rahman/)</u>
 
 
+### Streamlining Java with JEP 443: Ushering in a New Era of Java Code Readability (2023-06-10)
+JEP 443, Unnamed Patterns and Variables (Preview), has been Completed from Targeted status for JDK 21. This preview JEP proposes to &quot;enhance the language with unnamed patterns, which match a record component without stating the component's name or type, and unnamed variables, which can be initialized but not used.&quot;...
+[Read further^](https://www.infoq.com//news/2023/06/streamlining-java-with-jep-443/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
+
+
+### Structured Concurrency in JDK 21: A Leap Forward in Concurrent Programming (2023-06-10)
+JEP 453, Structured Concurrency (Preview), has been Integrated from the Targeted status for JDK 21. Formerly an incubating API, this initial preview incorporates enhancements in response to feedback from the previous two rounds of incubation: JEP 428, Structured Concurrency (Incubator), delivered in JDK 19; and JEP 437, Structured Concurrency (Second Incubator), delivered in JDK 20....
+[Read further^](https://www.infoq.com//news/2023/06/structured-concurrency-jdk-21/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
+
+
 ### Breaking down Barriers: Introducing JDK 21&rsquo;s Approach to Beginner-Friendly Java Programming (2023-05-24)
 JEP 445, Unnamed Classes and Instance Main Methods (Preview), has been promoted from its Proposed to Target to Targeted status. This feature of JEP, formerly entitled Implicit Classes and Enhanced Main Methods (Preview), proposes to &quot;evolve the Java language so that students can write their first programs without needing to understand language features designed for large programs.&rdquo;...
 [Read further^](https://www.infoq.com//news/2023/05/beginner-friendly-java/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
@@ -59,16 +69,6 @@ JEP 444, Virtual Threads, was promoted from Candidate to Proposed to Target stat
 ### Java's Collections Framework Gets a Makeover with New Sequenced Collection Types (2023-03-13)
 JEP 431: Sequenced Collections has been promoted from Candidate to Proposed to Target status for JDK 21. It proposes introducing &quot;a new family of interfaces that represent the concept of a collection whose elements are arranged in a well-defined sequence or ordering, as a structural property of the collection.&quot;...
 [Read further^](https://www.infoq.com//news/2023/03/collections-framework-makeover/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
-
-
-### Introducing Hilla 2.0: Reactive Endpoints, Native Image, Simplified Theming, SSO Kit, and More (2023-03-10)
-Hilla, the type-safe web framework for Spring Boot, has announced the release of version 2.0. This release utilizes Spring Boot 3, Java 17, and Jakarta EE 10, providing access to the latest features in the Java ecosystem. It includes an improved TypeScript generator, web socket support for reactive endpoints, support for GraalVM native images, a simplified theming mechanism, and a new SSO kit....
-[Read further^](https://www.infoq.com//news/2023/03/introducing-hilla-20/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
-
-
-### MicroProfile 6.0 Delivers Alignment with Jakarta EE 10 and a New Specification (2023-01-18)
-In a major move for the Java community, the MicroProfile Working Group has officially released MicroProfile 6.0. This anticipated release brings a host of new features and improvements, including alignment with the Jakarta 10 Core Profile and updates to several key specifications, such as Metrics, JWT Authentication, Open API, Reactive Messaging, and Reactive Streams Operators....
-[Read further^](https://www.infoq.com//news/2023/01/microprofile6-delivers-alignmens/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
 
 
 ## <u>[Foojay.io](https://foojay.io/)</u>
@@ -139,4 +139,4 @@ Discover the insights of Shai Almog, a Java expert and entrepreneur with over 20
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Sat, 10 Jun 2023 02:38:14 GMT*
+*This page was last updated on Sun, 11 Jun 2023 02:56:38 GMT*
