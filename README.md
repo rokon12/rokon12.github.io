@@ -74,6 +74,11 @@ JEP 431: Sequenced Collections has been promoted from Candidate to Proposed to T
 ## <u>[Foojay.io](https://foojay.io/)</u>
 
 
+### Breaking the Code: How Chris Newland is Changing the Game in JVM Performance! (2023-06-12)
+In this enlightening interview, JVM performance specialist Chris Newland shares his journey in the Java universe....
+[Read further^](https://foojay.io/today/breaking-the-code-how-chris-newland-is-changing-the-game-in-jvm-performance/)
+
+
 ### Cracking Code and Conventions: An Exclusive Interview with Nicolas Fränkel (2023-06-05)
 Gain unique insights from Nicolas Fränkel, an adaptable software developer who shares thoughts on industry challenges, the future of coding, and the potential impact of AI....
 [Read further^](https://foojay.io/today/cracking-code-and-conventions-an-exclusive-interview-with-nicolas-frankel/)
@@ -124,11 +129,6 @@ In this article, we look at a discussion on Foojay’s Slack comparing Java and 
 [Read further^](https://foojay.io/today/competing-for-the-crown-a-friendly-debate-on-the-future-of-java-and-kotlin-on-foojay-io-today/)
 
 
-### Navigating the Challenges of Modern Software Development: An Exclusive Interview with Shai Almog (2023-03-27)
-Discover the insights of Shai Almog, a Java expert and entrepreneur with over 20 years of experience, as he shares his journey....
-[Read further^](https://foojay.io/today/navigating-the-challenges-of-modern-software-development-an-exclusive-interview-with-shai-almog/)
-
-
 ## <u>Talks</u>
 
 
@@ -139,4 +139,4 @@ Discover the insights of Shai Almog, a Java expert and entrepreneur with over 20
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Mon, 12 Jun 2023 02:47:25 GMT*
+*This page was last updated on Tue, 13 Jun 2023 02:35:17 GMT*
