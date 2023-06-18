@@ -21,7 +21,7 @@ I earned my bachelor's degree in Information Technology, majoring in Software En
 ## <u>[InfoQ](https://www.infoq.com/profile/A-N-M-Bazlur-Rahman/)</u>
 
 
-### Streamlining Java with JEP 443: Ushering in a New Era of Java Code Readability (2023-06-10)
+### JEP 443: Unnamed Patterns and Variables Aims to Improve Java Code Readability (2023-06-10)
 JEP 443, Unnamed Patterns and Variables (Preview), has been Completed from Targeted status for JDK 21. This preview JEP proposes to &quot;enhance the language with unnamed patterns, which match a record component without stating the component's name or type, and unnamed variables, which can be initialized but not used.&quot;...
 [Read further^](https://www.infoq.com//news/2023/06/streamlining-java-with-jep-443/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
 
@@ -139,4 +139,4 @@ In this article, we look at a discussion on Foojay’s Slack comparing Java and 
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Sat, 17 Jun 2023 02:29:48 GMT*
+*This page was last updated on Sun, 18 Jun 2023 02:47:08 GMT*
