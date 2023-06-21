@@ -74,6 +74,11 @@ JEP 431: Sequenced Collections has been promoted from Candidate to Proposed to T
 ## <u>[Foojay.io](https://foojay.io/)</u>
 
 
+### Exploring Java 21’s Intriguing Additions: Unveiling New Features (Part 1) (2023-06-20)
+Learn about a few notable features that stand out in the upcoming Java 21, in an overview of their functionalities and potential use cases....
+[Read further^](https://foojay.io/today/exploring-java-21s-intriguing-additions-unveiling-new-features-part-1/)
+
+
 ### Breaking the Code: How Chris Newland is Changing the Game in JVM Performance! (2023-06-12)
 In this enlightening interview, JVM performance specialist Chris Newland shares his journey in the Java universe....
 [Read further^](https://foojay.io/today/breaking-the-code-how-chris-newland-is-changing-the-game-in-jvm-performance/)
@@ -124,11 +129,6 @@ Otavio Santana shares his journey as a passionate software engineer and architec
 [Read further^](https://foojay.io/today/unlocking-the-secrets-to-a-successful-software-engineering-career-an-interview-with-otavio-santana/)
 
 
-### Competing for the Crown: A Friendly Debate on the Future of Java and Kotlin on Foojay.io Today (2023-03-29)
-In this article, we look at a discussion on Foojay’s Slack comparing Java and Kotlin, showing why developers should join the platform....
-[Read further^](https://foojay.io/today/competing-for-the-crown-a-friendly-debate-on-the-future-of-java-and-kotlin-on-foojay-io-today/)
-
-
 ## <u>Talks</u>
 
 
@@ -139,4 +139,4 @@ In this article, we look at a discussion on Foojay’s Slack comparing Java and 
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Tue, 20 Jun 2023 02:30:08 GMT*
+*This page was last updated on Wed, 21 Jun 2023 02:30:40 GMT*
