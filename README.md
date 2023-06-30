@@ -74,6 +74,11 @@ JEP 431: Sequenced Collections has been promoted from Candidate to Proposed to T
 ## <u>[Foojay.io](https://foojay.io/)</u>
 
 
+### Exploring the Depths of Java: A Comprehensive Conversation with Jakob Jenkov, Part-I (2023-06-29)
+Welcome to the first part of our deep dive with Jakob Jenkov, a seasoned software developer and AWS solution architect, whose love for coding began with a Commodore 128 in the late ’80s. Over the past decades, Jenkov has navigated …...
+[Read further^](https://foojay.io/today/exploring-the-depths-of-java-a-comprehensive-conversation-with-jakob-jenkov-part-i/)
+
+
 ### Exploring Java 21’s Intriguing Additions: Unveiling New Features (Part 1) (2023-06-20)
 Learn about a few notable features that stand out in the upcoming Java 21, in an overview of their functionalities and potential use cases....
 [Read further^](https://foojay.io/today/exploring-java-21s-intriguing-additions-unveiling-new-features-part-1/)
@@ -124,11 +129,6 @@ Dive into our insightful interview with Frank Delporte, Java Champion and Senior
 [Read further^](https://foojay.io/today/unlocking-java-secrets-with-frank-delporte-insights-stories-and-tips-for-success/)
 
 
-### Unlocking the Secrets to a Successful Software Engineering Career: An Interview with Otavio Santana (2023-04-03)
-Otavio Santana shares his journey as a passionate software engineer and architect, emphasizing the crucial roles of open-source contributions, and more....
-[Read further^](https://foojay.io/today/unlocking-the-secrets-to-a-successful-software-engineering-career-an-interview-with-otavio-santana/)
-
-
 ## <u>Talks</u>
 
 
@@ -139,4 +139,4 @@ Otavio Santana shares his journey as a passionate software engineer and architec
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Thu, 29 Jun 2023 02:47:57 GMT*
+*This page was last updated on Fri, 30 Jun 2023 02:44:47 GMT*
