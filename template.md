@@ -13,7 +13,7 @@ I earned my bachelor's degree in Information Technology, majoring in Software En
 <a href="https://www.linkedin.com/in/bazlur" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="shai-almog-81a42" height="30" width="40" /></a>
 <a href="https://stackoverflow.com/users/893197/rokonoid" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/stack-overflow.svg" alt="756809" height="30" width="40" /></a>
 <a href="https://www.youtube.com/c/ANMBazlurRahman" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg" alt="codenameone" height="30" width="40" /></a>
-<a href="/https://www.bazlur.com/feed.xml" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/rss.svg" alt="https://www.bazlur.com/feed.xml" height="30" width="40" /></a>
+<a href="https://www.bazlur.ca/feed" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/rss.svg" alt="https://www.bazlur.com/feed.xml" height="30" width="40" /></a>
 </p>
 
 
