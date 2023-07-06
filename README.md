@@ -21,6 +21,11 @@ I earned my bachelor's degree in Information Technology, majoring in Software En
 ## <u>[InfoQ](https://www.infoq.com/profile/A-N-M-Bazlur-Rahman/)</u>
 
 
+### Java Enhances Z Garbage Collector with Generational Capabilities (2023-07-05)
+JEP 439, Generational ZGC, has been promoted from Targeted to Completed for JDK 21. This JEP proposes to improve application performance by extending the Z Garbage Collector (ZGC) to maintain separate generations for young and old objects. This will allow ZGC to collect young objects, which tend to die young, more frequently....
+[Read further^](https://www.infoq.com//news/2023/07/java-enhance-zgc/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
+
+
 ### JEP 441: Transforming Java with Pattern Matching for switch (2023-07-03)
 JEP 441, Pattern Matching for the switch, is completed in JDK 21, following four previews in JDKs 17-20 (JEPs 406, 420, 427, 433). It finalizes the feature, addressing feedback from previews, and enhances the language with pattern matching for switch expressions and statements....
 [Read further^](https://www.infoq.com//news/2023/07/tranforming-java-pattern/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
@@ -66,12 +71,12 @@ Quarkus, the Kubernetes Native Java Framework, has switched its default garbage 
 [Read further^](https://www.infoq.com//news/2023/04/boosting-quarkus-native/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
 
 
-### JEP 444: Virtual Threads Arrive in JDK 21, Ushering a New Era of Concurrency (2023-04-09)
-JEP 444, Virtual Threads, was promoted from Candidate to Proposed to Target status for JDK 21. This feature offers a lightweight threading model to simplify the creation, management, and monitoring of high-throughput concurrent Java applications, allowing developers to efficiently handle millions of tasks and make better use of system resources....
-[Read further^](https://www.infoq.com//news/2023/04/virtual-threads-arrives-jdk21/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
-
-
 ## <u>[Foojay.io](https://foojay.io/)</u>
+
+
+### Exploring the Depths of Java: A Comprehensive Conversation with Jakob Jenkov, Part-II (2023-07-05)
+Welcome back to the second installment of our in-depth conversation with Jakob Jenkov, a leading figure in the world of Java. If you joined us for Part I, you’ll recall the insightful discussions around the evolving landscape of Java and …...
+[Read further^](https://foojay.io/today/exploring-the-depths-of-java-a-comprehensive-conversation-with-jakob-jenkov-part-ii/)
 
 
 ### Exploring the Depths of Java: A Comprehensive Conversation with Jakob Jenkov, Part-I (2023-06-29)
@@ -124,11 +129,6 @@ Java Virtual Threads, also known as lightweight threads, are a new feature in Ja
 [Read further^](https://foojay.io/today/unleashing-the-power-of-lightweight-concurrency-a-comprehensive-guide-to-java-virtual-threads-part-1/)
 
 
-### Unlocking Java Secrets with Frank Delporte: Insights, Stories, and Tips for Success (2023-04-10)
-Dive into our insightful interview with Frank Delporte, Java Champion and Senior Technical Writer at Azul Systems, as he shares his experiences in the software industry....
-[Read further^](https://foojay.io/today/unlocking-java-secrets-with-frank-delporte-insights-stories-and-tips-for-success/)
-
-
 ## <u>Talks</u>
 
 
@@ -139,4 +139,4 @@ Dive into our insightful interview with Frank Delporte, Java Champion and Senior
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Wed, 5 Jul 2023 02:51:45 GMT*
+*This page was last updated on Thu, 6 Jul 2023 02:54:24 GMT*
