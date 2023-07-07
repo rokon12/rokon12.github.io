@@ -13,7 +13,7 @@ I earned my bachelor's degree in Information Technology, majoring in Software En
 <a href="https://www.linkedin.com/in/bazlur" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="shai-almog-81a42" height="30" width="40" /></a>
 <a href="https://stackoverflow.com/users/893197/rokonoid" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/stack-overflow.svg" alt="756809" height="30" width="40" /></a>
 <a href="https://www.youtube.com/c/ANMBazlurRahman" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg" alt="codenameone" height="30" width="40" /></a>
-<a href="/https://www.bazlur.com/feed.xml" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/rss.svg" alt="https://www.bazlur.com/feed.xml" height="30" width="40" /></a>
+<a href="https://www.bazlur.ca/feed" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/rss.svg" alt="https://www.bazlur.com/feed.xml" height="30" width="40" /></a>
 </p>
 
 
@@ -139,4 +139,4 @@ Java Virtual Threads, also known as lightweight threads, are a new feature in Ja
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Thu, 6 Jul 2023 02:54:24 GMT*
+*This page was last updated on Fri, 7 Jul 2023 02:50:32 GMT*
