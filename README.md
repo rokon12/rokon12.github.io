@@ -21,6 +21,11 @@ I earned my bachelor's degree in Information Technology, majoring in Software En
 ## <u>[InfoQ](https://www.infoq.com/profile/A-N-M-Bazlur-Rahman/)</u>
 
 
+### Enhanced Testcontainers and Development-Time Containers Support in Spring Boot 3.1 (2023-07-07)
+Spring Boot 3.1, the latest version of the popular Java-based framework for building stand-alone, production-grade applications, introduces enhanced support for development-time containers. This new feature was the focus of a recent livestream by Josh Long, a Spring developer advocate, on his YouTube channel &quot;Coffee + Software with Josh Long.&quot;...
+[Read further^](https://www.infoq.com//news/2023/07/enhanced-testcontainers-support/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
+
+
 ### Java Enhances Z Garbage Collector with Generational Capabilities (2023-07-05)
 JEP 439, Generational ZGC, has been promoted from Targeted to Completed for JDK 21. This JEP proposes to improve application performance by extending the Z Garbage Collector (ZGC) to maintain separate generations for young and old objects. This will allow ZGC to collect young objects, which tend to die young, more frequently....
 [Read further^](https://www.infoq.com//news/2023/07/java-enhance-zgc/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
@@ -66,12 +71,12 @@ JEP 430, String Templates (Preview), has been promoted from Proposed to Target t
 [Read further^](https://www.infoq.com//news/2023/04/java-gets-a-boost-with-string/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
 
 
-### Boosting Quarkus Native Performance: Should You Stick with Space/Time or Switch to Adaptive GC? (2023-04-21)
-Quarkus, the Kubernetes Native Java Framework, has switched its default garbage collection policy from space/time to adaptive GC for native runtime in version 2.13.6.Final. Adaptive GC is designed to trigger GCs aggressively in order to keep memory consumption low. This makes it effective in situations where a low memory footprint is essential, and it appears to perform better under heavy stress....
-[Read further^](https://www.infoq.com//news/2023/04/boosting-quarkus-native/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
-
-
 ## <u>[Foojay.io](https://foojay.io/)</u>
+
+
+### The Evolution of Java: Challenging Stereotypes and Embracing Modernity (2023-07-07)
+Dive into the modern evolution of Java, challenging stereotypes and showcasing its transformative features. Discover how Java is becoming more versatile, expressive, and future-ready than ever before....
+[Read further^](https://foojay.io/today/the-evolution-of-java-challenging-stereotypes-and-embracing-modernity/)
 
 
 ### Exploring the Depths of Java: A Comprehensive Conversation with Jakob Jenkov, Part-II (2023-07-05)
@@ -124,11 +129,6 @@ Discover valuable insights from Java Champion Michael P. Redlich and learn about
 [Read further^](https://foojay.io/today/discovering-the-secrets-to-success-an-exclusive-interview-with-java-champion-michael-p-redlich/)
 
 
-### Unleashing the Power of Lightweight Concurrency: A Comprehensive Guide to Java Virtual Threads (Part 1) (2023-05-09)
-Java Virtual Threads, also known as lightweight threads, are a new feature in Java’s Project Loom that aim to simplify concurrent programming....
-[Read further^](https://foojay.io/today/unleashing-the-power-of-lightweight-concurrency-a-comprehensive-guide-to-java-virtual-threads-part-1/)
-
-
 ## <u>Talks</u>
 
 
@@ -139,4 +139,4 @@ Java Virtual Threads, also known as lightweight threads, are a new feature in Ja
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Fri, 7 Jul 2023 02:50:32 GMT*
+*This page was last updated on Sat, 8 Jul 2023 02:51:24 GMT*
