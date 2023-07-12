@@ -21,6 +21,11 @@ I earned my bachelor's degree in Information Technology, majoring in Software En
 ## <u>[InfoQ](https://www.infoq.com/profile/A-N-M-Bazlur-Rahman/)</u>
 
 
+### Modern Cryptography in OpenJDK: Introduction of Key Encapsulation Mechanisms API (2023-07-11)
+JEP 452, Key Encapsulation Mechanism API, has been marked as completed for JDK 21. This JEP introduces a modern encryption technique for securing symmetric keys using public key cryptography. The API supports various KEM algorithms, including RSA-KEM, ECIES, and those under NIST's Post-Quantum Cryptography standardization....
+[Read further^](https://www.infoq.com//news/2023/07/modern-cryptography-on-openjdk/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
+
+
 ### Enhanced Testcontainers and Development-Time Containers Support in Spring Boot 3.1 (2023-07-07)
 Spring Boot 3.1, the latest version of the popular Java-based framework for building stand-alone, production-grade applications, introduces enhanced support for development-time containers. This new feature was the focus of a recent livestream by Josh Long, a Spring developer advocate, on his YouTube channel &quot;Coffee + Software with Josh Long.&quot;...
 [Read further^](https://www.infoq.com//news/2023/07/enhanced-testcontainers-support/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
@@ -66,12 +71,12 @@ IBM unveiled Open Liberty 23.0.0.3, boasting support for Java SE 20, Jakarta EE 
 [Read further^](https://www.infoq.com//news/2023/05/open-liberty-23003-unveiled/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
 
 
-### Java Gets a Boost with String Templates: Simplifying Code and Improving Security (2023-04-28)
-JEP 430, String Templates (Preview), has been promoted from Proposed to Target to Targeted status for JDK 21, a feature JEP type that proposes to enhance the Java programming language with string templates, which are similar to string literals but contain embedded expressions incorporated into the string template at run time....
-[Read further^](https://www.infoq.com//news/2023/04/java-gets-a-boost-with-string/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
-
-
 ## <u>[Foojay.io](https://foojay.io/)</u>
+
+
+### Charting the Course of Java: An Insightful Conversation with Java Champion, Sebastian Daschner (2023-07-11)
+Explore the world of Java with Champion Sebastian Daschner, discussing his journey, future trends in Java, and tips for developer growth....
+[Read further^](https://foojay.io/today/charting-the-course-of-java-an-insightful-conversation-with-java-champion-sebastian-daschner/)
 
 
 ### The Evolution of Java: Challenging Stereotypes and Embracing Modernity (2023-07-07)
@@ -124,11 +129,6 @@ Join us for “Java Unscripted,” an enlightening interview series spotlighting
 [Read further^](https://foojay.io/today/announcing-java-unscripted-an-asynchronous-exploration-of-excellence/)
 
 
-### Discovering the Secrets to Success: An Exclusive Interview with Java Champion Michael P. Redlich (2023-05-15)
-Discover valuable insights from Java Champion Michael P. Redlich and learn about continuous learning, open-source contributions, and adapting to new technologies in software development....
-[Read further^](https://foojay.io/today/discovering-the-secrets-to-success-an-exclusive-interview-with-java-champion-michael-p-redlich/)
-
-
 ## <u>Talks</u>
 
 
@@ -139,4 +139,4 @@ Discover valuable insights from Java Champion Michael P. Redlich and learn about
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Tue, 11 Jul 2023 02:44:44 GMT*
+*This page was last updated on Wed, 12 Jul 2023 02:49:46 GMT*
