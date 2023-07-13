@@ -21,6 +21,11 @@ I earned my bachelor's degree in Information Technology, majoring in Software En
 ## <u>[InfoQ](https://www.infoq.com/profile/A-N-M-Bazlur-Rahman/)</u>
 
 
+### Vaadin 24.1.0: Enhancing Web Application Development with New Features and Optimizations (2023-07-12)
+Vaadin, the open-source platform for building business-oriented single-page web applications, has announced the release of Vaadin 24.1.0. This latest version brings a host of new features and improvements, further enhancing the platform's capabilities and providing developers with more tools to create robust, high-performing web applications....
+[Read further^](https://www.infoq.com//news/2023/07/vaadin-release-24/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
+
+
 ### Modern Cryptography in OpenJDK: Introduction of Key Encapsulation Mechanisms API (2023-07-11)
 JEP 452, Key Encapsulation Mechanism API, has been marked as completed for JDK 21. This JEP introduces a modern encryption technique for securing symmetric keys using public key cryptography. The API supports various KEM algorithms, including RSA-KEM, ECIES, and those under NIST's Post-Quantum Cryptography standardization....
 [Read further^](https://www.infoq.com//news/2023/07/modern-cryptography-on-openjdk/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
@@ -64,11 +69,6 @@ JEP 440, finalizing Record Patterns, has been promoted from Proposed to Target t
 ### Quarkus 3.0 Released: Improving Cloud-Native Java Development with Jakarta EE 10 Support (2023-05-09)
 Following six alpha releases, a beta release, and two release candidates, Red Hat has launched the highly anticipated Quarkus 3.0 release this past week. This update brings a host of new features, including support for Jakarta EE 10, MicroProfile 6.0, Hibernate ORM 6.0, and Hibernate Reactive 2.0....
 [Read further^](https://www.infoq.com//news/2023/05/quarkus-improves-cloud-native/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
-
-
-### Open Liberty 23.0.0.3 Unveiled: Embracing Cloud-Native Java Microservices, Jakarta EE 10 and beyond (2023-05-05)
-IBM unveiled Open Liberty 23.0.0.3, boasting support for Java SE 20, Jakarta EE 10, and MicroProfile 6.0. This significant release introduces the Jakarta EE 10 Core Profile, Web Profile, and Platform and enhancements to various features that comprise the profiles. Additionally, the release includes MicroProfile Telemetry 1.0 and updates to Metrics, OpenAPI, and JWT Authentication specifications....
-[Read further^](https://www.infoq.com//news/2023/05/open-liberty-23003-unveiled/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
 
 
 ## <u>[Foojay.io](https://foojay.io/)</u>
@@ -139,4 +139,4 @@ Join us for “Java Unscripted,” an enlightening interview series spotlighting
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Wed, 12 Jul 2023 02:49:46 GMT*
+*This page was last updated on Thu, 13 Jul 2023 02:53:35 GMT*
