@@ -21,6 +21,11 @@ I earned my bachelor's degree in Information Technology, majoring in Software En
 ## <u>[InfoQ](https://www.infoq.com/profile/A-N-M-Bazlur-Rahman/)</u>
 
 
+### Micronaut 4.0.0 Brings Java Virtual Threads, GraalVM Support and Experimental HTTP/3 Features (2023-07-17)
+The Micronaut Foundation has recently announced the general availability (GA) release of Micronaut Framework 4.0.0. This major release brings a plethora of updates and improvements to the popular JVM-based framework, enhancing its performance, modularity, and compatibility with other technologies....
+[Read further^](https://www.infoq.com//news/2023/07/micronaut-brings-virtual-thread/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
+
+
 ### Vaadin 24.1.0: Enhancing Web Application Development with New Features and Optimizations (2023-07-12)
 Vaadin, the open-source platform for building business-oriented single-page web applications, has announced the release of Vaadin 24.1.0. This latest version brings a host of new features and improvements, further enhancing the platform's capabilities and providing developers with more tools to create robust, high-performing web applications....
 [Read further^](https://www.infoq.com//news/2023/07/vaadin-release-24/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
@@ -64,11 +69,6 @@ JEP 445, Unnamed Classes and Instance Main Methods (Preview), has been promoted 
 ### Java Gets a Boost with the Record Pattern, Enabling More Expressive Coding (2023-05-15)
 JEP 440, finalizing Record Patterns, has been promoted from Proposed to Target to Targeted status for JDK 21, following feedback-driven enhancements in JEP 432 and JEP 405. Record patterns now allow for powerful data navigation and processing when used with type patterns. The main change from JEP 432 is the removal of record patterns in the header of an enhanced for statement....
 [Read further^](https://www.infoq.com//news/2023/05/java-gets-boost-with-record/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
-
-
-### Quarkus 3.0 Released: Improving Cloud-Native Java Development with Jakarta EE 10 Support (2023-05-09)
-Following six alpha releases, a beta release, and two release candidates, Red Hat has launched the highly anticipated Quarkus 3.0 release this past week. This update brings a host of new features, including support for Jakarta EE 10, MicroProfile 6.0, Hibernate ORM 6.0, and Hibernate Reactive 2.0....
-[Read further^](https://www.infoq.com//news/2023/05/quarkus-improves-cloud-native/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
 
 
 ## <u>[Foojay.io](https://foojay.io/)</u>
@@ -139,4 +139,4 @@ Join us for “Java Unscripted,” an enlightening interview series spotlighting
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Mon, 17 Jul 2023 02:57:22 GMT*
+*This page was last updated on Tue, 18 Jul 2023 02:53:08 GMT*
