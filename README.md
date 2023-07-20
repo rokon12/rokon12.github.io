@@ -74,6 +74,11 @@ JEP 440, finalizing Record Patterns, has been promoted from Proposed to Target t
 ## <u>[Foojay.io](https://foojay.io/)</u>
 
 
+### Dive into the OpenJDK: Top 10 Reads on Foojay.io (2023-07-19)
+Foojay.io is a community platform dedicated to the needs of developers who use the OpenJDK and related technologies....
+[Read further^](https://foojay.io/today/dive-into-the-openjdk-top-10-reads-on-foojay-io/)
+
+
 ### Charting the Course of Java: An Insightful Conversation with Java Champion, Sebastian Daschner (2023-07-11)
 Explore the world of Java with Champion Sebastian Daschner, discussing his journey, future trends in Java, and tips for developer growth....
 [Read further^](https://foojay.io/today/charting-the-course-of-java-an-insightful-conversation-with-java-champion-sebastian-daschner/)
@@ -124,11 +129,6 @@ In our conversation with Erik, Senior Director at Azul, we explore the journey f
 [Read further^](https://foojay.io/today/decoding-success-an-industry-experts-guide-to-thriving-in-software-development-and-security/)
 
 
-### Announcing “Java Unscripted: An Asynchronous Exploration of Excellence” (2023-05-16)
-Join us for “Java Unscripted,” an enlightening interview series spotlighting the wisdom of seasoned Java experts....
-[Read further^](https://foojay.io/today/announcing-java-unscripted-an-asynchronous-exploration-of-excellence/)
-
-
 ## <u>Talks</u>
 
 
@@ -139,4 +139,4 @@ Join us for “Java Unscripted,” an enlightening interview series spotlighting
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Wed, 19 Jul 2023 03:34:54 GMT*
+*This page was last updated on Thu, 20 Jul 2023 02:26:29 GMT*
