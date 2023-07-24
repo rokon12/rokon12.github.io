@@ -21,6 +21,11 @@ I earned my bachelor's degree in Information Technology, majoring in Software En
 ## <u>[InfoQ](https://www.infoq.com/profile/A-N-M-Bazlur-Rahman/)</u>
 
 
+### JetBrains Unveils AI Assistant for IntelliJ-based IDEs and .NET Tools (2023-07-24)
+JetBrains, the software development company known for creating the IntelliJ IDEA, has announced the introduction of a new AI Assistant in its Early Access Program (EAP) builds for all IntelliJ-based IDEs and .NET tools. This significant addition is aimed at transforming the landscape of software development tools by integrating generative AI and large language models into JetBrains' products....
+[Read further^](https://www.infoq.com//news/2023/07/jetbrains-unveils-ai-assistant/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
+
+
 ### Micronaut 4.0.0 Brings Java Virtual Threads, GraalVM Support and Experimental HTTP/3 Features (2023-07-17)
 The Micronaut Foundation has recently announced the general availability (GA) release of Micronaut Framework 4.0.0. This major release brings a plethora of updates and improvements to the popular JVM-based framework, enhancing its performance, modularity, and compatibility with other technologies....
 [Read further^](https://www.infoq.com//news/2023/07/micronaut-brings-virtual-thread/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
@@ -66,12 +71,12 @@ JEP 445, Unnamed Classes and Instance Main Methods (Preview), has been promoted 
 [Read further^](https://www.infoq.com//news/2023/05/beginner-friendly-java/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
 
 
-### Java Gets a Boost with the Record Pattern, Enabling More Expressive Coding (2023-05-15)
-JEP 440, finalizing Record Patterns, has been promoted from Proposed to Target to Targeted status for JDK 21, following feedback-driven enhancements in JEP 432 and JEP 405. Record patterns now allow for powerful data navigation and processing when used with type patterns. The main change from JEP 432 is the removal of record patterns in the header of an enhanced for statement....
-[Read further^](https://www.infoq.com//news/2023/05/java-gets-boost-with-record/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
-
-
 ## <u>[Foojay.io](https://foojay.io/)</u>
+
+
+### Busting Myths, Building Futures: A Conversation with Cay Horstmann on Java and Machine Learning (2023-07-24)
+Cay Horstmann shares his experiences with Java, his writing process for technical books, the challenges of teaching Java, and discusses its role in education....
+[Read further^](https://foojay.io/today/busting-myths-building-futures-a-conversation-with-cay-horstmann-on-java-and-machine-learning/)
 
 
 ### Dive into the OpenJDK: Top 10 Reads on Foojay.io (2023-07-19)
@@ -124,11 +129,6 @@ Experience the intersection of expertise, innovation, and camaraderie at JConf T
 [Read further^](https://foojay.io/today/java-threads-reimagined-a-reflection-on-jconf-toronto-2023-and-the-dawn-of-a-new-era-of-concurrency/)
 
 
-### Decoding Success: An Industry Expert’s Guide to Thriving in Software Development and Security (2023-05-23)
-In our conversation with Erik, Senior Director at Azul, we explore the journey from engineering to product management....
-[Read further^](https://foojay.io/today/decoding-success-an-industry-experts-guide-to-thriving-in-software-development-and-security/)
-
-
 ## <u>Talks</u>
 
 
@@ -139,4 +139,4 @@ In our conversation with Erik, Senior Director at Azul, we explore the journey f
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Mon, 24 Jul 2023 02:28:39 GMT*
+*This page was last updated on Mon, 24 Jul 2023 22:53:11 GMT*
