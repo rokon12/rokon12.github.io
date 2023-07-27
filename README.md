@@ -21,6 +21,11 @@ I earned my bachelor's degree in Information Technology, majoring in Software En
 ## <u>[InfoQ](https://www.infoq.com/profile/A-N-M-Bazlur-Rahman/)</u>
 
 
+### OpenJDK's JEP 451: Balancing Serviceability and Integrity in JVM (2023-07-26)
+JEP 451, Prepare to Disallow the Dynamic Loading of Agents, has been completed from Target status for JDK 21. This JEP has evolved from its original intent to disallow the dynamic loading of agents into a running JVM by default to issue warnings when agents are dynamically loaded into a running JVM....
+[Read further^](https://www.infoq.com//news/2023/07/jep-451-balancing-serviceability/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
+
+
 ### JetBrains Unveils AI Assistant for IntelliJ-based IDEs and .NET Tools (2023-07-24)
 JetBrains, the software development company known for creating the IntelliJ IDEA, has announced the introduction of a new AI Assistant in its Early Access Program (EAP) builds for all IntelliJ-based IDEs and .NET tools. This significant addition is aimed at transforming the landscape of software development tools by integrating generative AI and large language models into JetBrains' products....
 [Read further^](https://www.infoq.com//news/2023/07/jetbrains-unveils-ai-assistant/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
@@ -64,11 +69,6 @@ JEP 443, Unnamed Patterns and Variables (Preview), has been Completed from Targe
 ### Structured Concurrency in JDK 21: A Leap Forward in Concurrent Programming (2023-06-10)
 JEP 453, Structured Concurrency (Preview), has been Integrated from the Targeted status for JDK 21. Formerly an incubating API, this initial preview incorporates enhancements in response to feedback from the previous two rounds of incubation: JEP 428, Structured Concurrency (Incubator), delivered in JDK 19; and JEP 437, Structured Concurrency (Second Incubator), delivered in JDK 20....
 [Read further^](https://www.infoq.com//news/2023/06/structured-concurrency-jdk-21/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
-
-
-### Breaking down Barriers: Introducing JDK 21&rsquo;s Approach to Beginner-Friendly Java Programming (2023-05-24)
-JEP 445, Unnamed Classes and Instance Main Methods (Preview), has been promoted from its Proposed to Target to Targeted status. This feature of JEP, formerly entitled Implicit Classes and Enhanced Main Methods (Preview), proposes to &quot;evolve the Java language so that students can write their first programs without needing to understand language features designed for large programs.&rdquo;...
-[Read further^](https://www.infoq.com//news/2023/05/beginner-friendly-java/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
 
 
 ## <u>[Foojay.io](https://foojay.io/)</u>
@@ -139,4 +139,4 @@ Experience the intersection of expertise, innovation, and camaraderie at JConf T
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Wed, 26 Jul 2023 02:30:17 GMT*
+*This page was last updated on Thu, 27 Jul 2023 02:17:55 GMT*
