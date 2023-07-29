@@ -26,7 +26,7 @@ JEP 451, Prepare to Disallow the Dynamic Loading of Agents, has been completed f
 [Read further^](https://www.infoq.com//news/2023/07/jep-451-balancing-serviceability/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
 
 
-### JetBrains Unveils AI Assistant for IntelliJ-based IDEs and .NET Tools (2023-07-24)
+### JetBrains Unveils AI Assistant for IntelliJ-Based IDEs and .NET Tools (2023-07-24)
 JetBrains, the software development company known for creating the IntelliJ IDEA, has announced the introduction of a new AI Assistant in its Early Access Program (EAP) builds for all IntelliJ-based IDEs and .NET tools. This significant addition is aimed at transforming the landscape of software development tools by integrating generative AI and large language models into JetBrains' products....
 [Read further^](https://www.infoq.com//news/2023/07/jetbrains-unveils-ai-assistant/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
 
@@ -139,4 +139,4 @@ Experience the intersection of expertise, innovation, and camaraderie at JConf T
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Fri, 28 Jul 2023 02:22:24 GMT*
+*This page was last updated on Sat, 29 Jul 2023 02:18:01 GMT*
