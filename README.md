@@ -74,6 +74,11 @@ JEP 453, Structured Concurrency (Preview), has been Integrated from the Targeted
 ## <u>[Foojay.io](https://foojay.io/)</u>
 
 
+### Preparing for JDK 21: A Comprehensive Overview of Key Features and Enhancements (2023-08-02)
+As we inch to the release of JDK 21 in September (next month!), get familiar with the features and improvements this version will bring!...
+[Read further^](https://foojay.io/today/preparing-for-jdk-21-a-comprehensive-overview-of-key-features-and-enhancements/)
+
+
 ### Busting Myths, Building Futures: A Conversation with Cay Horstmann on Java and Machine Learning (2023-07-24)
 Cay Horstmann shares his experiences with Java, his writing process for technical books, the challenges of teaching Java, and discusses its role in education....
 [Read further^](https://foojay.io/today/busting-myths-building-futures-a-conversation-with-cay-horstmann-on-java-and-machine-learning/)
@@ -124,11 +129,6 @@ In this insightful discussion, we sit down with Miro Wengner, an accomplished so
 [Read further^](https://foojay.io/today/resilience-in-coding-miro-wengner-on-thriving-in-the-software-industry/)
 
 
-### Java Threads Reimagined: A Reflection on JConf Toronto 2023 and the Dawn of a New Era of Concurrency (2023-05-23)
-Experience the intersection of expertise, innovation, and camaraderie at JConf Toronto 2023, a unique platform....
-[Read further^](https://foojay.io/today/java-threads-reimagined-a-reflection-on-jconf-toronto-2023-and-the-dawn-of-a-new-era-of-concurrency/)
-
-
 ## <u>Talks</u>
 
 
@@ -139,4 +139,4 @@ Experience the intersection of expertise, innovation, and camaraderie at JConf T
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Wed, 2 Aug 2023 02:17:35 GMT*
+*This page was last updated on Thu, 3 Aug 2023 02:19:32 GMT*
