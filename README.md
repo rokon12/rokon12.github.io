@@ -74,6 +74,11 @@ JEP 453, Structured Concurrency (Preview), has been Integrated from the Targeted
 ## <u>[Foojay.io](https://foojay.io/)</u>
 
 
+### Book Review: “OpenJDK Migration for Dummies” (2023-08-04)
+Not just a technical manual, Simon Ritter’s new book is a companion on a journey through the complexities of OpenJDK migration....
+[Read further^](https://foojay.io/today/book-review-openjdk-migration-for-dummies/)
+
+
 ### Preparing for JDK 21: A Comprehensive Overview of Key Features and Enhancements (2023-08-02)
 As we inch to the release of JDK 21 in September (next month!), get familiar with the features and improvements this version will bring!...
 [Read further^](https://foojay.io/today/preparing-for-jdk-21-a-comprehensive-overview-of-key-features-and-enhancements/)
@@ -124,11 +129,6 @@ Gain unique insights from Nicolas Fränkel, an adaptable software developer who 
 [Read further^](https://foojay.io/today/cracking-code-and-conventions-an-exclusive-interview-with-nicolas-frankel/)
 
 
-### Resilience in Coding: Miro Wengner on Thriving in the Software Industry (2023-05-31)
-In this insightful discussion, we sit down with Miro Wengner, an accomplished software engineer with a deep-rooted affinity for Java. Miro shares his professional journey, highlights the significant challenges in the field, and reflects on the key moments that shaped …...
-[Read further^](https://foojay.io/today/resilience-in-coding-miro-wengner-on-thriving-in-the-software-industry/)
-
-
 ## <u>Talks</u>
 
 
@@ -139,4 +139,4 @@ In this insightful discussion, we sit down with Miro Wengner, an accomplished so
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Fri, 4 Aug 2023 02:20:52 GMT*
+*This page was last updated on Sat, 5 Aug 2023 02:18:13 GMT*
