@@ -74,6 +74,11 @@ JEP 453, Structured Concurrency (Preview), has been Integrated from the Targeted
 ## <u>[Foojay.io](https://foojay.io/)</u>
 
 
+### Sealed Interfaces and Pattern Matching: A Quick Dive into Java’s Modern Capabilities (2023-08-09)
+Sealed classes and interfaces, together with pattern matching, provide powerful new tools for more explicit, controlled, and flexible design in Java...
+[Read further^](https://foojay.io/today/sealed-interfaces-and-pattern-matching-a-quick-dive-into-javas-modern-capabilities/)
+
+
 ### Book Review: “OpenJDK Migration for Dummies” (2023-08-04)
 Not just a technical manual, Simon Ritter’s new book is a companion on a journey through the complexities of OpenJDK migration....
 [Read further^](https://foojay.io/today/book-review-openjdk-migration-for-dummies/)
@@ -124,11 +129,6 @@ In this enlightening interview, JVM performance specialist Chris Newland shares 
 [Read further^](https://foojay.io/today/breaking-the-code-how-chris-newland-is-changing-the-game-in-jvm-performance/)
 
 
-### Cracking Code and Conventions: An Exclusive Interview with Nicolas Fränkel (2023-06-05)
-Gain unique insights from Nicolas Fränkel, an adaptable software developer who shares thoughts on industry challenges, the future of coding, and the potential impact of AI....
-[Read further^](https://foojay.io/today/cracking-code-and-conventions-an-exclusive-interview-with-nicolas-frankel/)
-
-
 ## <u>Talks</u>
 
 
@@ -139,4 +139,4 @@ Gain unique insights from Nicolas Fränkel, an adaptable software developer who 
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Wed, 9 Aug 2023 02:21:23 GMT*
+*This page was last updated on Thu, 10 Aug 2023 02:27:10 GMT*
