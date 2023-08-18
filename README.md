@@ -74,6 +74,11 @@ JEP 453, Structured Concurrency (Preview), has been Integrated from the Targeted
 ## <u>[Foojay.io](https://foojay.io/)</u>
 
 
+### Thread-Safe Counter in Java: A Comprehensive Guide (2023-08-17)
+In this tutorial, we will explore the concept of thread safety in Java, specifically focusing on a simple counter....
+[Read further^](https://foojay.io/today/thread-safe-counter-in-java-a-comprehensive-guide/)
+
+
 ### Sealed Interfaces and Pattern Matching: A Quick Dive into Java’s Modern Capabilities (2023-08-09)
 Sealed classes and interfaces, together with pattern matching, provide powerful new tools for more explicit, controlled, and flexible design in Java...
 [Read further^](https://foojay.io/today/sealed-interfaces-and-pattern-matching-a-quick-dive-into-javas-modern-capabilities/)
@@ -124,11 +129,6 @@ Learn about a few notable features that stand out in the upcoming Java 21, in an
 [Read further^](https://foojay.io/today/exploring-java-21s-intriguing-additions-unveiling-new-features-part-1/)
 
 
-### Breaking the Code: How Chris Newland is Changing the Game in JVM Performance! (2023-06-12)
-In this enlightening interview, JVM performance specialist Chris Newland shares his journey in the Java universe....
-[Read further^](https://foojay.io/today/breaking-the-code-how-chris-newland-is-changing-the-game-in-jvm-performance/)
-
-
 ## <u>Talks</u>
 
 
@@ -139,4 +139,4 @@ In this enlightening interview, JVM performance specialist Chris Newland shares 
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Thu, 17 Aug 2023 02:04:21 GMT*
+*This page was last updated on Fri, 18 Aug 2023 02:07:48 GMT*
