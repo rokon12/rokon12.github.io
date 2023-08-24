@@ -21,6 +21,11 @@ I earned my bachelor's degree in Information Technology, majoring in Software En
 ## <u>[InfoQ](https://www.infoq.com/profile/A-N-M-Bazlur-Rahman/)</u>
 
 
+### Grails 6.0 Released: Embracing Modern Java, Enhanced Micronaut Integration, and More (2023-08-23)
+The Grails Foundation has released version 6.0 of Grails, delivering a minimal JDK 11 version; support for Spring Framework 5.3.28, Spring Boot 2.7.12, and Gradle 7.6.1; the debut of Grails Forge UI, a starter project similar to Spring Initializr, and others; and enhanced integration of the Micronaut Framework....
+[Read further^](https://www.infoq.com//news/2023/08/grails-6-released/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
+
+
 ### OpenJDK's JEP 451: Balancing Serviceability and Integrity in JVM (2023-07-26)
 JEP 451, Prepare to Disallow the Dynamic Loading of Agents, has been completed from Target status for JDK 21. This JEP has evolved from its original intent to disallow the dynamic loading of agents into a running JVM by default to issue warnings when agents are dynamically loaded into a running JVM....
 [Read further^](https://www.infoq.com//news/2023/07/jep-451-balancing-serviceability/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
@@ -66,12 +71,12 @@ JEP 443, Unnamed Patterns and Variables (Preview), has been Completed from Targe
 [Read further^](https://www.infoq.com//news/2023/06/streamlining-java-with-jep-443/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
 
 
-### Structured Concurrency in JDK 21: A Leap Forward in Concurrent Programming (2023-06-10)
-JEP 453, Structured Concurrency (Preview), has been Integrated from the Targeted status for JDK 21. Formerly an incubating API, this initial preview incorporates enhancements in response to feedback from the previous two rounds of incubation: JEP 428, Structured Concurrency (Incubator), delivered in JDK 19; and JEP 437, Structured Concurrency (Second Incubator), delivered in JDK 20....
-[Read further^](https://www.infoq.com//news/2023/06/structured-concurrency-jdk-21/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
-
-
 ## <u>[Foojay.io](https://foojay.io/)</u>
+
+
+### Exploring File Storage Solutions in Spring Boot: Database, Local Systems, Cloud Services, and Beyond (2023-08-23)
+In this article, we will cover how to store files in a database using Spring Boot and discuss some alternatives....
+[Read further^](https://foojay.io/today/exploring-file-storage-solutions-in-spring-boot-database-local-systems-cloud-services-and-beyond/)
 
 
 ### Thread-Safe Counter in Java: A Comprehensive Guide (2023-08-17)
@@ -124,11 +129,6 @@ Welcome to the first part of our deep dive with Jakob Jenkov, a seasoned softwar
 [Read further^](https://foojay.io/today/exploring-the-depths-of-java-a-comprehensive-conversation-with-jakob-jenkov-part-i/)
 
 
-### Exploring Java 21’s Intriguing Additions: Unveiling New Features (Part 1) (2023-06-20)
-Learn about a few notable features that stand out in the upcoming Java 21, in an overview of their functionalities and potential use cases....
-[Read further^](https://foojay.io/today/exploring-java-21s-intriguing-additions-unveiling-new-features-part-1/)
-
-
 ## <u>Talks</u>
 
 
@@ -139,4 +139,4 @@ Learn about a few notable features that stand out in the upcoming Java 21, in an
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Wed, 23 Aug 2023 02:07:10 GMT*
+*This page was last updated on Thu, 24 Aug 2023 02:08:59 GMT*
