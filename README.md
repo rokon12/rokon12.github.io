@@ -74,6 +74,11 @@ JEP 443, Unnamed Patterns and Variables (Preview), has been Completed from Targe
 ## <u>[Foojay.io](https://foojay.io/)</u>
 
 
+### Writing Testable Code: A Journey Through Consideration and Refactoring (2023-08-30)
+By considering real-world examples and learning from the process of refactoring and testing, we can create robust and maintainable code that stands the test of time....
+[Read further^](https://foojay.io/today/writing-testable-code-a-journey-through-consideration-and-refactoring/)
+
+
 ### Exploring File Storage Solutions in Spring Boot: Database, Local Systems, Cloud Services, and Beyond (2023-08-23)
 In this article, we will cover how to store files in a database using Spring Boot and discuss some alternatives....
 [Read further^](https://foojay.io/today/exploring-file-storage-solutions-in-spring-boot-database-local-systems-cloud-services-and-beyond/)
@@ -124,11 +129,6 @@ Welcome back to the second installment of our in-depth conversation with Jakob J
 [Read further^](https://foojay.io/today/exploring-the-depths-of-java-a-comprehensive-conversation-with-jakob-jenkov-part-ii/)
 
 
-### Exploring the Depths of Java: A Comprehensive Conversation with Jakob Jenkov, Part-I (2023-06-29)
-Welcome to the first part of our deep dive with Jakob Jenkov, a seasoned software developer and AWS solution architect, whose love for coding began with a Commodore 128 in the late ’80s. Over the past decades, Jenkov has navigated …...
-[Read further^](https://foojay.io/today/exploring-the-depths-of-java-a-comprehensive-conversation-with-jakob-jenkov-part-i/)
-
-
 ## <u>Talks</u>
 
 
@@ -139,4 +139,4 @@ Welcome to the first part of our deep dive with Jakob Jenkov, a seasoned softwar
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Wed, 30 Aug 2023 02:11:01 GMT*
+*This page was last updated on Thu, 31 Aug 2023 02:11:27 GMT*
