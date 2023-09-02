@@ -74,6 +74,11 @@ JEP 443, Unnamed Patterns and Variables (Preview), has been Completed from Targe
 ## <u>[Foojay.io](https://foojay.io/)</u>
 
 
+### Unlocking Java Wisdom: A Conversation with Oracle ACE Simon Martinelli (2023-09-01)
+In a recent insightful interview, Simon Martinelli, an Oracle ACE associate and veteran Java developer, shares his career experiences, software development philosophies, and views on mentoring. With over two decades in the industry, Martinelli offers a perspective that combines the …...
+[Read further^](https://foojay.io/today/unlocking-java-wisdom-a-conversation-with-oracle-ace-simon-martinelli/)
+
+
 ### Writing Testable Code: A Journey Through Consideration and Refactoring (2023-08-30)
 By considering real-world examples and learning from the process of refactoring and testing, we can create robust and maintainable code that stands the test of time....
 [Read further^](https://foojay.io/today/writing-testable-code-a-journey-through-consideration-and-refactoring/)
@@ -124,11 +129,6 @@ Dive into the modern evolution of Java, challenging stereotypes and showcasing i
 [Read further^](https://foojay.io/today/the-evolution-of-java-challenging-stereotypes-and-embracing-modernity/)
 
 
-### Exploring the Depths of Java: A Comprehensive Conversation with Jakob Jenkov, Part-II (2023-07-05)
-Welcome back to the second installment of our in-depth conversation with Jakob Jenkov, a leading figure in the world of Java. If you joined us for Part I, you’ll recall the insightful discussions around the evolving landscape of Java and …...
-[Read further^](https://foojay.io/today/exploring-the-depths-of-java-a-comprehensive-conversation-with-jakob-jenkov-part-ii/)
-
-
 ## <u>Talks</u>
 
 
@@ -139,4 +139,4 @@ Welcome back to the second installment of our in-depth conversation with Jakob J
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Fri, 1 Sep 2023 02:16:06 GMT*
+*This page was last updated on Sat, 2 Sep 2023 02:04:33 GMT*
