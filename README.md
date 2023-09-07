@@ -21,6 +21,11 @@ I earned my bachelor's degree in Information Technology, majoring in Software En
 ## <u>[InfoQ](https://www.infoq.com/profile/A-N-M-Bazlur-Rahman/)</u>
 
 
+### Delivery Hero Optimizes Member System with Event-Driven Architecture (2023-09-06)
+Baemin, a food delivery service experiencing rapid growth, has successfully navigated the transition from a monolithic architecture to a more flexible, microservices-based system. A cornerstone of this transformation is the implementation of an event-driven architecture....
+[Read further^](https://www.infoq.com//news/2023/09/delivery-hero-uses-eda/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
+
+
 ### Grails 6.0 Released: Embracing Modern Java, Enhanced Micronaut Integration, and More (2023-08-23)
 The Grails Foundation has released version 6.0 of Grails, delivering a minimal JDK 11 version; support for Spring Framework 5.3.28, Spring Boot 2.7.12, and Gradle 7.6.1; the debut of Grails Forge UI, a starter project similar to Spring Initializr, and others; and enhanced integration of the Micronaut Framework....
 [Read further^](https://www.infoq.com//news/2023/08/grails-6-released/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
@@ -64,11 +69,6 @@ JEP 439, Generational ZGC, has been promoted from Targeted to Completed for JDK 
 ### JEP 441: Transforming Java with Pattern Matching for switch (2023-07-03)
 JEP 441, Pattern Matching for the switch, is completed in JDK 21, following four previews in JDKs 17-20 (JEPs 406, 420, 427, 433). It finalizes the feature, addressing feedback from previews, and enhances the language with pattern matching for switch expressions and statements....
 [Read further^](https://www.infoq.com//news/2023/07/tranforming-java-pattern/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
-
-
-### JEP 443: Unnamed Patterns and Variables Aims to Improve Java Code Readability (2023-06-10)
-JEP 443, Unnamed Patterns and Variables (Preview), has been Completed from Targeted status for JDK 21. This preview JEP proposes to &quot;enhance the language with unnamed patterns, which match a record component without stating the component's name or type, and unnamed variables, which can be initialized but not used.&quot;...
-[Read further^](https://www.infoq.com//news/2023/06/streamlining-java-with-jep-443/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
 
 
 ## <u>[Foojay.io](https://foojay.io/)</u>
@@ -139,4 +139,4 @@ Dive into the modern evolution of Java, challenging stereotypes and showcasing i
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Wed, 6 Sep 2023 02:11:16 GMT*
+*This page was last updated on Thu, 7 Sep 2023 02:11:22 GMT*
