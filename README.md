@@ -21,8 +21,8 @@ I earned my bachelor's degree in Information Technology, majoring in Software En
 ## <u>[InfoQ](https://www.infoq.com/profile/A-N-M-Bazlur-Rahman/)</u>
 
 
-### Delivery Hero Optimizes Member System with Event-Driven Architecture (2023-09-06)
-Baemin, a food delivery service experiencing rapid growth, has successfully navigated the transition from a monolithic architecture to a more flexible, microservices-based system. A cornerstone of this transformation is the implementation of an event-driven architecture....
+### Delivery Hero Implements Event-Driven Architecture to Handle Baemin Growth (2023-09-06)
+Baemin, a South Korean food delivery service owned by Delivery Hero, successfully navigated the challenges of rapid customer member growth by moving from a monolithic architecture to a more flexible event-driven microservices-based system....
 [Read further^](https://www.infoq.com//news/2023/09/delivery-hero-uses-eda/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
 
 
@@ -139,4 +139,4 @@ Dive into the modern evolution of Java, challenging stereotypes and showcasing i
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Sun, 10 Sep 2023 02:13:18 GMT*
+*This page was last updated on Mon, 11 Sep 2023 02:12:40 GMT*
