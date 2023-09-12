@@ -74,6 +74,11 @@ JEP 441, Pattern Matching for the switch, is completed in JDK 21, following four
 ## <u>[Foojay.io](https://foojay.io/)</u>
 
 
+### Embracing Modernity: A Comprehensive Look at Sealed Classes, Pattern Matching, and Functional Paradigms in Java (2023-09-11)
+Let’s examine the principles and practical applications of Sealed Classes and pattern matching....
+[Read further^](https://foojay.io/today/embracing-modernity-a-comprehensive-look-at-sealed-classes-pattern-matching-and-functional-paradigms-in-java/)
+
+
 ### Unlocking Java Wisdom: A Conversation with Oracle ACE Simon Martinelli (2023-09-01)
 In a recent insightful interview, Simon Martinelli, an Oracle ACE associate and veteran Java developer, shares his career experiences, software development philosophies, and views on mentoring. With over two decades in the industry, Martinelli offers a perspective that combines the …...
 [Read further^](https://foojay.io/today/unlocking-java-wisdom-a-conversation-with-oracle-ace-simon-martinelli/)
@@ -124,11 +129,6 @@ Explore the world of Java with Champion Sebastian Daschner, discussing his journ
 [Read further^](https://foojay.io/today/charting-the-course-of-java-an-insightful-conversation-with-java-champion-sebastian-daschner/)
 
 
-### The Evolution of Java: Challenging Stereotypes and Embracing Modernity (2023-07-07)
-Dive into the modern evolution of Java, challenging stereotypes and showcasing its transformative features. Discover how Java is becoming more versatile, expressive, and future-ready than ever before....
-[Read further^](https://foojay.io/today/the-evolution-of-java-challenging-stereotypes-and-embracing-modernity/)
-
-
 ## <u>Talks</u>
 
 
@@ -139,4 +139,4 @@ Dive into the modern evolution of Java, challenging stereotypes and showcasing i
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Mon, 11 Sep 2023 02:12:40 GMT*
+*This page was last updated on Tue, 12 Sep 2023 02:10:51 GMT*
