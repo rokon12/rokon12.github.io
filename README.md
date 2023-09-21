@@ -74,6 +74,11 @@ JEP 441, Pattern Matching for the switch, is completed in JDK 21, following four
 ## <u>[Foojay.io](https://foojay.io/)</u>
 
 
+### Exploring the Impact of Stack Size on JVM Thread Creation: A Myth Debunked (2023-09-20)
+Does stack size have an impact on the number of native threads that can be created in a JVM environment?...
+[Read further^](https://foojay.io/today/exploring-the-impact-of-stack-size-on-jvm-thread-creation-a-myth-debunked/)
+
+
 ### Embracing Modernity: A Comprehensive Look at Sealed Classes, Pattern Matching, and Functional Paradigms in Java (2023-09-11)
 Let’s examine the principles and practical applications of Sealed Classes and pattern matching....
 [Read further^](https://foojay.io/today/embracing-modernity-a-comprehensive-look-at-sealed-classes-pattern-matching-and-functional-paradigms-in-java/)
@@ -124,11 +129,6 @@ Foojay.io is a community platform dedicated to the needs of developers who use t
 [Read further^](https://foojay.io/today/dive-into-the-openjdk-top-10-reads-on-foojay-io/)
 
 
-### Charting the Course of Java: An Insightful Conversation with Java Champion, Sebastian Daschner (2023-07-11)
-Explore the world of Java with Champion Sebastian Daschner, discussing his journey, future trends in Java, and tips for developer growth....
-[Read further^](https://foojay.io/today/charting-the-course-of-java-an-insightful-conversation-with-java-champion-sebastian-daschner/)
-
-
 ## <u>Talks</u>
 
 
@@ -139,4 +139,4 @@ Explore the world of Java with Champion Sebastian Daschner, discussing his journ
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Wed, 20 Sep 2023 02:12:15 GMT*
+*This page was last updated on Thu, 21 Sep 2023 02:11:21 GMT*
