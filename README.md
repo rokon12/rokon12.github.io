@@ -74,6 +74,11 @@ JEP 441, Pattern Matching for the switch, is completed in JDK 21, following four
 ## <u>[Foojay.io](https://foojay.io/)</u>
 
 
+### Web Crawling in Java: A Tale of Classical Threads and Virtual Threads (2023-09-29)
+A compelling narrative around web crawling in Java, contrasting classical threads with their newer counterpart: virtual threads....
+[Read further^](https://foojay.io/today/web-crawling-in-java-a-tale-of-classical-threads-and-virtual-threads/)
+
+
 ### Exploring the Impact of Stack Size on JVM Thread Creation: A Myth Debunked (2023-09-20)
 Does stack size have an impact on the number of native threads that can be created in a JVM environment?...
 [Read further^](https://foojay.io/today/exploring-the-impact-of-stack-size-on-jvm-thread-creation-a-myth-debunked/)
@@ -124,11 +129,6 @@ Cay Horstmann shares his experiences with Java, his writing process for technica
 [Read further^](https://foojay.io/today/busting-myths-building-futures-a-conversation-with-cay-horstmann-on-java-and-machine-learning/)
 
 
-### Dive into the OpenJDK: Top 10 Reads on Foojay.io (2023-07-19)
-Foojay.io is a community platform dedicated to the needs of developers who use the OpenJDK and related technologies....
-[Read further^](https://foojay.io/today/dive-into-the-openjdk-top-10-reads-on-foojay-io/)
-
-
 ## <u>Talks</u>
 
 
@@ -139,4 +139,4 @@ Foojay.io is a community platform dedicated to the needs of developers who use t
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Fri, 29 Sep 2023 02:12:51 GMT*
+*This page was last updated on Sat, 30 Sep 2023 02:10:09 GMT*
