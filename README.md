@@ -74,6 +74,11 @@ JEP 441, Pattern Matching for the switch, is completed in JDK 21, following four
 ## <u>[Foojay.io](https://foojay.io/)</u>
 
 
+### How to Diagnose and Mitigate Pinning in Java’s Virtual Thread Execution (2023-10-10)
+In the context of virtual threads, pinning refers to the condition where a virtual thread is “stuck” to its carrier thread (the platform thread on which it runs)....
+[Read further^](https://foojay.io/today/how-to-diagnose-and-mitigate-pinning-in-javas-virtual-thread-execution/)
+
+
 ### Web Crawling in Java: A Tale of Classical Threads and Virtual Threads (2023-09-29)
 A compelling narrative around web crawling in Java, contrasting classical threads with their newer counterpart: virtual threads....
 [Read further^](https://foojay.io/today/web-crawling-in-java-a-tale-of-classical-threads-and-virtual-threads/)
@@ -124,11 +129,6 @@ As we inch to the release of JDK 21 in September (next month!), get familiar wit
 [Read further^](https://foojay.io/today/preparing-for-jdk-21-a-comprehensive-overview-of-key-features-and-enhancements/)
 
 
-### Busting Myths, Building Futures: A Conversation with Cay Horstmann on Java and Machine Learning (2023-07-24)
-Cay Horstmann shares his experiences with Java, his writing process for technical books, the challenges of teaching Java, and discusses its role in education....
-[Read further^](https://foojay.io/today/busting-myths-building-futures-a-conversation-with-cay-horstmann-on-java-and-machine-learning/)
-
-
 ## <u>Talks</u>
 
 
@@ -139,4 +139,4 @@ Cay Horstmann shares his experiences with Java, his writing process for technica
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Tue, 10 Oct 2023 02:12:50 GMT*
+*This page was last updated on Wed, 11 Oct 2023 02:12:41 GMT*
