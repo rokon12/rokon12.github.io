@@ -21,6 +21,11 @@ I earned my bachelor's degree in Information Technology, majoring in Software En
 ## <u>[InfoQ](https://www.infoq.com/profile/A-N-M-Bazlur-Rahman/)</u>
 
 
+### Foreign Function &amp; Memory API to Bridge the Gap Between Java and Native Libraries (2023-10-25)
+After its review has concluded, JEP 454, Foreign Function &amp; Memory API, has been promoted from Targeted to Integrated for JDK 22. This JEP proposes to finalize this feature after two rounds of incubation and three rounds of preview. The API aims to replace traditional, complex methods like JNI, offering a more efficient and secure approach....
+[Read further^](https://www.infoq.com//news/2023/10/foreign-function-and-memory-api/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
+
+
 ### Delivery Hero Implements Event-Driven Architecture to Handle Baemin Growth (2023-09-06)
 Baemin, a South Korean food delivery service owned by Delivery Hero, successfully navigated the challenges of rapid customer member growth by moving from a monolithic architecture to a more flexible event-driven microservices-based system....
 [Read further^](https://www.infoq.com//news/2023/09/delivery-hero-uses-eda/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
@@ -64,11 +69,6 @@ Spring Boot 3.1, the latest version of the popular Java-based framework for buil
 ### Java Enhances Z Garbage Collector with Generational Capabilities (2023-07-05)
 JEP 439, Generational ZGC, has been promoted from Targeted to Completed for JDK 21. This JEP proposes to improve application performance by extending the Z Garbage Collector (ZGC) to maintain separate generations for young and old objects. This will allow ZGC to collect young objects, which tend to die young, more frequently....
 [Read further^](https://www.infoq.com//news/2023/07/java-enhance-zgc/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
-
-
-### JEP 441: Transforming Java with Pattern Matching for switch (2023-07-03)
-JEP 441, Pattern Matching for the switch, is completed in JDK 21, following four previews in JDKs 17-20 (JEPs 406, 420, 427, 433). It finalizes the feature, addressing feedback from previews, and enhances the language with pattern matching for switch expressions and statements....
-[Read further^](https://www.infoq.com//news/2023/07/tranforming-java-pattern/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
 
 
 ## <u>[Foojay.io](https://foojay.io/)</u>
@@ -139,4 +139,4 @@ As we inch to the release of JDK 21 in September (next month!), get familiar wit
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Wed, 25 Oct 2023 02:12:51 GMT*
+*This page was last updated on Thu, 26 Oct 2023 02:12:25 GMT*
