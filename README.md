@@ -1,6 +1,6 @@
 ## Bio:
 
-Hey there! I'm **Bazlur** and I work as a Senior Software Engineer at [Contrast Security](https://www.contrastsecurity.com/). I have over a decade of professional experience in the software industry, primarily in Java and Java-related technologies. Recently, I was honored with the title of [Java Champion](https://twitter.com/Java_Champions/status/1523728715368509440).
+Hey there! I'm **Bazlur** and I am a Software Engineer. I have over a decade of professional experience in the software industry, primarily in Java and Java-related technologies. Recently, I was honored with the title of [Java Champion](https://twitter.com/Java_Champions/status/1523728715368509440).
 
 Outside of my regular work hours, I love to mentor, write, speak at conferences, and contribute to open-source projects. I am the founder and current moderator of the [Java User Group in Bangladesh](https://jugbd.org/), and I have been organizing meetups and conferences to share Java-related knowledge with the community since 2013. I was named Most Valuable Blogger (MVP) at [DZone](https://dzone.com/users/1298119/bazlur_rahman.html), one of the most recognized technology publishers in the world. Additionally, I am an editor for the Java Queue at [InfoQ](https://www.infoq.com/profile/A-N-M-Bazlur-Rahman/), another leading technology content publisher and conference organizer, and an editor at [Foojay.io](https://foojay.io/today/author/bazlur-rahman/), a platform for OpenJDK enthusiasts. I have also published [five books](https://www.rokomari.com/book/author/47860/a-n-m-bazlur-rahman) about the Java programming language in Bengali, which were bestsellers in Bangladesh.
 
@@ -21,8 +21,8 @@ I earned my bachelor's degree in Information Technology, majoring in Software En
 ## <u>[InfoQ](https://www.infoq.com/profile/A-N-M-Bazlur-Rahman/)</u>
 
 
-### Foreign Function &amp; Memory API to Bridge the Gap Between Java and Native Libraries (2023-10-25)
-After its review has concluded, JEP 454, Foreign Function &amp; Memory API, has been promoted from Targeted to Integrated for JDK 22. This JEP proposes to finalize this feature after two rounds of incubation and three rounds of preview. The API aims to replace traditional, complex methods like JNI, offering a more efficient and secure approach....
+### Foreign Function &amp; Memory API to Bridge the Gap between Java and Native Libraries (2023-10-25)
+After its review concluded, JEP 454, Foreign Function &amp; Memory API has been promoted from Targeted to Integrated for JDK 22. This JEP proposes to finalize this feature after two rounds of incubation and three rounds of preview. The API aims to replace traditional, complex methods like JNI, offering a more efficient and secure approach....
 [Read further^](https://www.infoq.com//news/2023/10/foreign-function-and-memory-api/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
 
 
@@ -139,4 +139,4 @@ As we inch to the release of JDK 21 in September (next month!), get familiar wit
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Thu, 26 Oct 2023 02:12:25 GMT*
+*This page was last updated on Thu, 26 Oct 2023 17:58:03 GMT*
