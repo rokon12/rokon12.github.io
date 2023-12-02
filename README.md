@@ -21,6 +21,11 @@ I earned my bachelor's degree in Information Technology, majoring in Software En
 ## <u>[InfoQ](https://www.infoq.com/profile/A-N-M-Bazlur-Rahman/)</u>
 
 
+### Javet 3.0.2 Released: Bridging Java and JavaScript with Enhanced Features (2023-12-01)
+Javet, a fusion of Java and V8 (JAVa + V + EighT), has recently released its version 3.0.2, marking a significant advancement in embedding Node.js and V8 in Java. This version includes Node.js v20.10.0 and V8 v12.0.267.8, highlighting the project's commitment to staying current with the latest developments in these technologies....
+[Read further^](https://www.infoq.com//news/2023/12/javet-302-released/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
+
+
 ### Foreign Function &amp; Memory API to Bridge the Gap between Java and Native Libraries (2023-10-25)
 After its review concluded, JEP 454, Foreign Function &amp; Memory API has been promoted from Targeted to Integrated for JDK 22. This JEP proposes to finalize this feature after two rounds of incubation and three rounds of preview. The API aims to replace traditional, complex methods like JNI, offering a more efficient and secure approach....
 [Read further^](https://www.infoq.com//news/2023/10/foreign-function-and-memory-api/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
@@ -64,11 +69,6 @@ JEP 452, Key Encapsulation Mechanism API, has been marked as completed for JDK 2
 ### Enhanced Testcontainers and Development-Time Containers Support in Spring Boot 3.1 (2023-07-07)
 Spring Boot 3.1, the latest version of the popular Java-based framework for building stand-alone, production-grade applications, introduces enhanced support for development-time containers. This new feature was the focus of a recent livestream by Josh Long, a Spring developer advocate, on his YouTube channel &quot;Coffee + Software with Josh Long.&quot;...
 [Read further^](https://www.infoq.com//news/2023/07/enhanced-testcontainers-support/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
-
-
-### Java Enhances Z Garbage Collector with Generational Capabilities (2023-07-05)
-JEP 439, Generational ZGC, has been promoted from Targeted to Completed for JDK 21. This JEP proposes to improve application performance by extending the Z Garbage Collector (ZGC) to maintain separate generations for young and old objects. This will allow ZGC to collect young objects, which tend to die young, more frequently....
-[Read further^](https://www.infoq.com//news/2023/07/java-enhance-zgc/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
 
 
 ## <u>[Foojay.io](https://foojay.io/)</u>
@@ -139,4 +139,4 @@ As we inch to the release of JDK 21 in September (next month!), get familiar wit
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Fri, 1 Dec 2023 02:24:40 GMT*
+*This page was last updated on Sat, 2 Dec 2023 02:14:58 GMT*
