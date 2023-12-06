@@ -23,52 +23,52 @@ I earned my bachelor's degree in Information Technology, majoring in Software En
 
 ### Javet 3.0.2 Released: Bridging Java and JavaScript with Enhanced Features (2023-12-01)
 Javet, a fusion of Java and V8 (JAVa + V + EighT), has recently released its version 3.0.2, marking a significant advancement in embedding Node.js and V8 in Java. This version includes Node.js v20.10.0 and V8 v12.0.267.8, highlighting the project's commitment to staying current with the latest developments in these technologies....
-[Read further^](https://www.infoq.com//news/2023/12/javet-302-released/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
+[Read further^](https://www.infoq.com//news/2023/12/javet-302-released)
 
 
 ### Foreign Function &amp; Memory API to Bridge the Gap between Java and Native Libraries (2023-10-25)
 After its review concluded, JEP 454, Foreign Function &amp; Memory API has been promoted from Targeted to Integrated for JDK 22. This JEP proposes to finalize this feature after two rounds of incubation and three rounds of preview. The API aims to replace traditional, complex methods like JNI, offering a more efficient and secure approach....
-[Read further^](https://www.infoq.com//news/2023/10/foreign-function-and-memory-api/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
+[Read further^](https://www.infoq.com//news/2023/10/foreign-function-and-memory-api)
 
 
 ### Delivery Hero Implements Event-Driven Architecture to Handle Baemin Growth (2023-09-06)
 Baemin, a South Korean food delivery service owned by Delivery Hero, successfully navigated the challenges of rapid customer member growth by moving from a monolithic architecture to a more flexible event-driven microservices-based system....
-[Read further^](https://www.infoq.com//news/2023/09/delivery-hero-uses-eda/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
+[Read further^](https://www.infoq.com//news/2023/09/delivery-hero-uses-eda)
 
 
 ### Grails 6.0 Released: Embracing Modern Java, Enhanced Micronaut Integration, and More (2023-08-23)
 The Grails Foundation has released version 6.0 of Grails, delivering a minimal JDK 11 version; support for Spring Framework 5.3.28, Spring Boot 2.7.12, and Gradle 7.6.1; the debut of Grails Forge UI, a starter project similar to Spring Initializr, and others; and enhanced integration of the Micronaut Framework....
-[Read further^](https://www.infoq.com//news/2023/08/grails-6-released/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
+[Read further^](https://www.infoq.com//news/2023/08/grails-6-released)
 
 
 ### OpenJDK's JEP 451: Balancing Serviceability and Integrity in JVM (2023-07-26)
 JEP 451, Prepare to Disallow the Dynamic Loading of Agents, has been completed from Target status for JDK 21. This JEP has evolved from its original intent to disallow the dynamic loading of agents into a running JVM by default to issue warnings when agents are dynamically loaded into a running JVM....
-[Read further^](https://www.infoq.com//news/2023/07/jep-451-balancing-serviceability/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
+[Read further^](https://www.infoq.com//news/2023/07/jep-451-balancing-serviceability)
 
 
 ### JetBrains Unveils AI Assistant for IntelliJ-Based IDEs and .NET Tools (2023-07-24)
 JetBrains, the software development company known for creating the IntelliJ IDEA, has announced the introduction of a new AI Assistant in its Early Access Program (EAP) builds for all IntelliJ-based IDEs and .NET tools. This significant addition is aimed at transforming the landscape of software development tools by integrating generative AI and large language models into JetBrains' products....
-[Read further^](https://www.infoq.com//news/2023/07/jetbrains-unveils-ai-assistant/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
+[Read further^](https://www.infoq.com//news/2023/07/jetbrains-unveils-ai-assistant)
 
 
 ### Micronaut 4.0.0 Brings Java Virtual Threads, GraalVM Support and Experimental HTTP/3 Features (2023-07-17)
 The Micronaut Foundation has recently announced the general availability (GA) release of Micronaut Framework 4.0.0. This major release brings a plethora of updates and improvements to the popular JVM-based framework, enhancing its performance, modularity, and compatibility with other technologies....
-[Read further^](https://www.infoq.com//news/2023/07/micronaut-brings-virtual-thread/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
+[Read further^](https://www.infoq.com//news/2023/07/micronaut-brings-virtual-thread)
 
 
 ### Vaadin 24.1.0: Enhancing Web Application Development with New Features and Optimizations (2023-07-12)
 Vaadin, the open-source platform for building business-oriented single-page web applications, has announced the release of Vaadin 24.1.0. This latest version brings a host of new features and improvements, further enhancing the platform's capabilities and providing developers with more tools to create robust, high-performing web applications....
-[Read further^](https://www.infoq.com//news/2023/07/vaadin-release-24/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
+[Read further^](https://www.infoq.com//news/2023/07/vaadin-release-24)
 
 
 ### Modern Cryptography in OpenJDK: Introduction of Key Encapsulation Mechanisms API (2023-07-11)
 JEP 452, Key Encapsulation Mechanism API, has been marked as completed for JDK 21. This JEP introduces a modern encryption technique for securing symmetric keys using public key cryptography. The API supports various KEM algorithms, including RSA-KEM, ECIES, and those under NIST's Post-Quantum Cryptography standardization....
-[Read further^](https://www.infoq.com//news/2023/07/modern-cryptography-on-openjdk/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
+[Read further^](https://www.infoq.com//news/2023/07/modern-cryptography-on-openjdk)
 
 
 ### Enhanced Testcontainers and Development-Time Containers Support in Spring Boot 3.1 (2023-07-07)
 Spring Boot 3.1, the latest version of the popular Java-based framework for building stand-alone, production-grade applications, introduces enhanced support for development-time containers. This new feature was the focus of a recent livestream by Josh Long, a Spring developer advocate, on his YouTube channel &quot;Coffee + Software with Josh Long.&quot;...
-[Read further^](https://www.infoq.com//news/2023/07/enhanced-testcontainers-support/?itm_source=infoq&itm_campaign=user_page&itm_medium=link)
+[Read further^](https://www.infoq.com//news/2023/07/enhanced-testcontainers-support)
 
 
 ## <u>[Foojay.io](https://foojay.io/)</u>
@@ -139,4 +139,4 @@ As we inch to the release of JDK 21 in September (next month!), get familiar wit
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Tue, 5 Dec 2023 02:20:11 GMT*
+*This page was last updated on Wed, 6 Dec 2023 02:19:33 GMT*
