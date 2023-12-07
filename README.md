@@ -21,6 +21,11 @@ I earned my bachelor's degree in Information Technology, majoring in Software En
 ## <u>[InfoQ](https://www.infoq.com/profile/A-N-M-Bazlur-Rahman/)</u>
 
 
+### JEP 457: Streamlining Java Development with the Class-File API (2023-12-06)
+JEP 457, Class-File API (Preview), has been Integrated into JDK 22, proposing a new API for parsing, generating, and transforming Java class files. This API will initially replace ASM within the JDK with plans for a public API. Goetz, the Java language architect at Oracle, described ASM as outdated and provided details on the API's evolution....
+[Read further^](https://www.infoq.com//news/2023/12/jep-457-new-class-file-api)
+
+
 ### Javet 3.0.2 Released: Bridging Java and JavaScript with Enhanced Features (2023-12-01)
 Javet, a fusion of Java and V8 (JAVa + V + EighT), has recently released its version 3.0.2, marking a significant advancement in embedding Node.js and V8 in Java. This version includes Node.js v20.10.0 and V8 v12.0.267.8, highlighting the project's commitment to staying current with the latest developments in these technologies....
 [Read further^](https://www.infoq.com//news/2023/12/javet-302-released)
@@ -64,11 +69,6 @@ Vaadin, the open-source platform for building business-oriented single-page web 
 ### Modern Cryptography in OpenJDK: Introduction of Key Encapsulation Mechanisms API (2023-07-11)
 JEP 452, Key Encapsulation Mechanism API, has been marked as completed for JDK 21. This JEP introduces a modern encryption technique for securing symmetric keys using public key cryptography. The API supports various KEM algorithms, including RSA-KEM, ECIES, and those under NIST's Post-Quantum Cryptography standardization....
 [Read further^](https://www.infoq.com//news/2023/07/modern-cryptography-on-openjdk)
-
-
-### Enhanced Testcontainers and Development-Time Containers Support in Spring Boot 3.1 (2023-07-07)
-Spring Boot 3.1, the latest version of the popular Java-based framework for building stand-alone, production-grade applications, introduces enhanced support for development-time containers. This new feature was the focus of a recent livestream by Josh Long, a Spring developer advocate, on his YouTube channel &quot;Coffee + Software with Josh Long.&quot;...
-[Read further^](https://www.infoq.com//news/2023/07/enhanced-testcontainers-support)
 
 
 ## <u>[Foojay.io](https://foojay.io/)</u>
@@ -139,4 +139,4 @@ As we inch to the release of JDK 21 in September (next month!), get familiar wit
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Wed, 6 Dec 2023 02:19:33 GMT*
+*This page was last updated on Thu, 7 Dec 2023 02:19:46 GMT*
