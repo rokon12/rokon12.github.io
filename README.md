@@ -21,6 +21,11 @@ I earned my bachelor's degree in Information Technology, majoring in Software En
 ## <u>[InfoQ](https://www.infoq.com/profile/A-N-M-Bazlur-Rahman/)</u>
 
 
+### Stream API Evolution: A Closer Look at JEP 461's Stream Gatherers (2023-12-14)
+After its review concluded, JEP 461, Stream Gatherers (Preview), has been completed for JDK 22. This JEP proposes to enhance the Stream API to support custom intermediate operations. &quot;This will allow stream pipelines to transform data in ways that are not easily achievable with the existing built-in intermediate operations.&quot;...
+[Read further^](https://www.infoq.com//news/2023/12/stream-api-evolution)
+
+
 ### JEP 457: Streamlining Java Development with the Class-File API (2023-12-06)
 JEP 457, Class-File API (Preview), has been Integrated into JDK 22, proposing a new API for parsing, generating, and transforming Java class files. This API will initially replace ASM within the JDK with plans for a public API. Goetz, the Java language architect at Oracle, described ASM as outdated and provided details on the API's evolution....
 [Read further^](https://www.infoq.com//news/2023/12/jep-457-new-class-file-api)
@@ -64,11 +69,6 @@ The Micronaut Foundation has recently announced the general availability (GA) re
 ### Vaadin 24.1.0: Enhancing Web Application Development with New Features and Optimizations (2023-07-12)
 Vaadin, the open-source platform for building business-oriented single-page web applications, has announced the release of Vaadin 24.1.0. This latest version brings a host of new features and improvements, further enhancing the platform's capabilities and providing developers with more tools to create robust, high-performing web applications....
 [Read further^](https://www.infoq.com//news/2023/07/vaadin-release-24)
-
-
-### Modern Cryptography in OpenJDK: Introduction of Key Encapsulation Mechanisms API (2023-07-11)
-JEP 452, Key Encapsulation Mechanism API, has been marked as completed for JDK 21. This JEP introduces a modern encryption technique for securing symmetric keys using public key cryptography. The API supports various KEM algorithms, including RSA-KEM, ECIES, and those under NIST's Post-Quantum Cryptography standardization....
-[Read further^](https://www.infoq.com//news/2023/07/modern-cryptography-on-openjdk)
 
 
 ## <u>[Foojay.io](https://foojay.io/)</u>
@@ -139,4 +139,4 @@ As we inch to the release of JDK 21 in September (next month!), get familiar wit
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Wed, 13 Dec 2023 02:20:11 GMT*
+*This page was last updated on Thu, 14 Dec 2023 02:18:22 GMT*
