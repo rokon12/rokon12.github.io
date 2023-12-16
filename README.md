@@ -21,7 +21,12 @@ I earned my bachelor's degree in Information Technology, majoring in Software En
 ## <u>[InfoQ](https://www.infoq.com/profile/A-N-M-Bazlur-Rahman/)</u>
 
 
-### Stream API Evolution: A Closer Look at JEP 461's Stream Gatherers (2023-12-14)
+### JEP 423: Introducing Region Pinning to G1 Garbage Collector in OpenJDK (2023-12-15)
+After its review concluded, JEP 423, Region Pinning for G1, has been Integrated into JDK 22. This JEP proposes to reduce GC latency by implementing region pinning for the G1 garbage collector. This will extend G1 so that arbitrary regions may be pinned during both major and minor collection operations, so that disabling the garbage collection process may be avoided while implementing JNI....
+[Read further^](https://www.infoq.com//news/2023/12/region-pinning-to-g1-gc)
+
+
+### Stream API Evolution: a Closer Look at JEP 461's Stream Gatherers (2023-12-14)
 After its review concluded, JEP 461, Stream Gatherers (Preview), has been completed for JDK 22. This JEP proposes to enhance the Stream API to support custom intermediate operations. &quot;This will allow stream pipelines to transform data in ways that are not easily achievable with the existing built-in intermediate operations.&quot;...
 [Read further^](https://www.infoq.com//news/2023/12/stream-api-evolution)
 
@@ -64,11 +69,6 @@ JetBrains, the software development company known for creating the IntelliJ IDEA
 ### Micronaut 4.0.0 Brings Java Virtual Threads, GraalVM Support and Experimental HTTP/3 Features (2023-07-17)
 The Micronaut Foundation has recently announced the general availability (GA) release of Micronaut Framework 4.0.0. This major release brings a plethora of updates and improvements to the popular JVM-based framework, enhancing its performance, modularity, and compatibility with other technologies....
 [Read further^](https://www.infoq.com//news/2023/07/micronaut-brings-virtual-thread)
-
-
-### Vaadin 24.1.0: Enhancing Web Application Development with New Features and Optimizations (2023-07-12)
-Vaadin, the open-source platform for building business-oriented single-page web applications, has announced the release of Vaadin 24.1.0. This latest version brings a host of new features and improvements, further enhancing the platform's capabilities and providing developers with more tools to create robust, high-performing web applications....
-[Read further^](https://www.infoq.com//news/2023/07/vaadin-release-24)
 
 
 ## <u>[Foojay.io](https://foojay.io/)</u>
@@ -139,4 +139,4 @@ As we inch to the release of JDK 21 in September (next month!), get familiar wit
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Fri, 15 Dec 2023 02:20:36 GMT*
+*This page was last updated on Sat, 16 Dec 2023 02:17:34 GMT*
