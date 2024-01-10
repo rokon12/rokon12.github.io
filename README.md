@@ -21,6 +21,11 @@ I earned my bachelor's degree in Information Technology, majoring in Software En
 ## <u>[InfoQ](https://www.infoq.com/profile/A-N-M-Bazlur-Rahman/)</u>
 
 
+### JEP 447: Refining Java Constructors for Enhanced Flexibility (2024-01-09)
+After its review concluded, JEP 447, Statements before super(...) (Preview), was delivered for JDK 22. This JEP, under Project Amber, proposes to allow statements that do not reference an instance being created to appear before super() calls in a constructor and preserve existing safety and initialization guarantees for constructors....
+[Read further^](https://www.infoq.com//news/2024/01/java-constructors-enhancement)
+
+
 ### JEP 423: Introducing Region Pinning to G1 Garbage Collector in OpenJDK (2023-12-15)
 After its review concluded, JEP 423, Region Pinning for G1, has been Integrated into JDK 22. This JEP proposes to reduce GC latency by implementing region pinning for the G1 garbage collector. This will extend G1 so that arbitrary regions may be pinned during both major and minor collection operations, so that disabling the garbage collection process may be avoided while implementing JNI....
 [Read further^](https://www.infoq.com//news/2023/12/region-pinning-to-g1-gc)
@@ -64,11 +69,6 @@ JEP 451, Prepare to Disallow the Dynamic Loading of Agents, has been completed f
 ### JetBrains Unveils AI Assistant for IntelliJ-Based IDEs and .NET Tools (2023-07-24)
 JetBrains, the software development company known for creating the IntelliJ IDEA, has announced the introduction of a new AI Assistant in its Early Access Program (EAP) builds for all IntelliJ-based IDEs and .NET tools. This significant addition is aimed at transforming the landscape of software development tools by integrating generative AI and large language models into JetBrains' products....
 [Read further^](https://www.infoq.com//news/2023/07/jetbrains-unveils-ai-assistant)
-
-
-### Micronaut 4.0.0 Brings Java Virtual Threads, GraalVM Support and Experimental HTTP/3 Features (2023-07-17)
-The Micronaut Foundation has recently announced the general availability (GA) release of Micronaut Framework 4.0.0. This major release brings a plethora of updates and improvements to the popular JVM-based framework, enhancing its performance, modularity, and compatibility with other technologies....
-[Read further^](https://www.infoq.com//news/2023/07/micronaut-brings-virtual-thread)
 
 
 ## <u>[Foojay.io](https://foojay.io/)</u>
@@ -139,4 +139,4 @@ As we inch to the release of JDK 21 in September (next month!), get familiar wit
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Tue, 9 Jan 2024 02:20:50 GMT*
+*This page was last updated on Wed, 10 Jan 2024 02:20:45 GMT*
