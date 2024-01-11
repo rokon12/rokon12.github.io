@@ -74,6 +74,11 @@ JetBrains, the software development company known for creating the IntelliJ IDEA
 ## <u>[Foojay.io](https://foojay.io/)</u>
 
 
+### Journey of a Java Champion: Bert Jan Schrijver’s Path to Mastery and Community Leadership (2024-01-10)
+Explore the insightful journey of Bert Jan Schrijver, a Java Champion, as he discusses his path in software development, the role of community, and the evolution of Java in this enlightening interview....
+[Read further^](https://foojay.io/today/journey-of-a-java-champion-bert-jan-schrijvers-path-to-mastery-and-community-leadership/)
+
+
 ### How to Diagnose and Mitigate Pinning in Java’s Virtual Thread Execution (2023-10-10)
 In the context of virtual threads, pinning refers to the condition where a virtual thread is “stuck” to its carrier thread (the platform thread on which it runs)....
 [Read further^](https://foojay.io/today/how-to-diagnose-and-mitigate-pinning-in-javas-virtual-thread-execution/)
@@ -124,11 +129,6 @@ Not just a technical manual, Simon Ritter’s new book is a companion on a journ
 [Read further^](https://foojay.io/today/book-review-openjdk-migration-for-dummies/)
 
 
-### Preparing for JDK 21: A Comprehensive Overview of Key Features and Enhancements (2023-08-02)
-As we inch to the release of JDK 21 in September (next month!), get familiar with the features and improvements this version will bring!...
-[Read further^](https://foojay.io/today/preparing-for-jdk-21-a-comprehensive-overview-of-key-features-and-enhancements/)
-
-
 ## <u>Talks</u>
 
 
@@ -139,4 +139,4 @@ As we inch to the release of JDK 21 in September (next month!), get familiar wit
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Wed, 10 Jan 2024 02:20:45 GMT*
+*This page was last updated on Thu, 11 Jan 2024 02:20:53 GMT*
