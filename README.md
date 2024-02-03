@@ -21,6 +21,11 @@ I earned my bachelor's degree in Information Technology, majoring in Software En
 ## <u>[InfoQ](https://www.infoq.com/profile/A-N-M-Bazlur-Rahman/)</u>
 
 
+### Java Enhances Pattern Matching with Primitive Type Support in JEP 455 (2024-02-02)
+JEP 455, Primitive Types in Patterns, instanceof, and switch (Preview), has been promoted from Proposed to Target to Targeted for JDK 23. This JEP, under the auspices of Project Amber, proposes to enhance pattern matching by allowing primitive type patterns in all pattern contexts, and extend instanceof and switch to work with all primitive types....
+[Read further^](https://www.infoq.com//news/2024/02/java-enhances-pattern-matching)
+
+
 ### JEP 447: Refining Java Constructors for Enhanced Flexibility (2024-01-09)
 After its review concluded, JEP 447, Statements before super(...) (Preview), was delivered for JDK 22. This JEP, under Project Amber, proposes to allow statements that do not reference an instance being created to appear before super() calls in a constructor and preserve existing safety and initialization guarantees for constructors....
 [Read further^](https://www.infoq.com//news/2024/01/java-constructors-enhancement)
@@ -64,11 +69,6 @@ The Grails Foundation has released version 6.0 of Grails, delivering a minimal J
 ### OpenJDK's JEP 451: Balancing Serviceability and Integrity in JVM (2023-07-26)
 JEP 451, Prepare to Disallow the Dynamic Loading of Agents, has been completed from Target status for JDK 21. This JEP has evolved from its original intent to disallow the dynamic loading of agents into a running JVM by default to issue warnings when agents are dynamically loaded into a running JVM....
 [Read further^](https://www.infoq.com//news/2023/07/jep-451-balancing-serviceability)
-
-
-### JetBrains Unveils AI Assistant for IntelliJ-Based IDEs and .NET Tools (2023-07-24)
-JetBrains, the software development company known for creating the IntelliJ IDEA, has announced the introduction of a new AI Assistant in its Early Access Program (EAP) builds for all IntelliJ-based IDEs and .NET tools. This significant addition is aimed at transforming the landscape of software development tools by integrating generative AI and large language models into JetBrains' products....
-[Read further^](https://www.infoq.com//news/2023/07/jetbrains-unveils-ai-assistant)
 
 
 ## <u>[Foojay.io](https://foojay.io/)</u>
@@ -139,4 +139,4 @@ Not just a technical manual, Simon Ritter’s new book is a companion on a journ
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Fri, 2 Feb 2024 02:11:35 GMT*
+*This page was last updated on Sat, 3 Feb 2024 02:05:33 GMT*
