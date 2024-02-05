@@ -21,6 +21,11 @@ I earned my bachelor's degree in Information Technology, majoring in Software En
 ## <u>[InfoQ](https://www.infoq.com/profile/A-N-M-Bazlur-Rahman/)</u>
 
 
+### Simplifying Java Development: Introducing Multi-File Program Launching (2024-02-05)
+JEP 458, Launch Multi-File Source-Code Programs, has been Closed/Delivered for JDK 22. This JEP proposes to enhance the Java Launcher to execute an application supplied as one or more files of Java source code. This allows a more gradual transition from small applications to larger ones by postponing a full-blown project setup....
+[Read further^](https://www.infoq.com//news/2024/02/multi-file-program-launching)
+
+
 ### Java Enhances Pattern Matching with Primitive Type Support in JEP 455 (2024-02-02)
 JEP 455, Primitive Types in Patterns, instanceof, and switch (Preview), has been promoted from Proposed to Target to Targeted for JDK 23. This JEP, under the auspices of Project Amber, proposes to enhance pattern matching by allowing primitive type patterns in all pattern contexts, and extend instanceof and switch to work with all primitive types....
 [Read further^](https://www.infoq.com//news/2024/02/java-enhances-pattern-matching)
@@ -64,11 +69,6 @@ Baemin, a South Korean food delivery service owned by Delivery Hero, successfull
 ### Grails 6.0 Released: Embracing Modern Java, Enhanced Micronaut Integration, and More (2023-08-23)
 The Grails Foundation has released version 6.0 of Grails, delivering a minimal JDK 11 version; support for Spring Framework 5.3.28, Spring Boot 2.7.12, and Gradle 7.6.1; the debut of Grails Forge UI, a starter project similar to Spring Initializr, and others; and enhanced integration of the Micronaut Framework....
 [Read further^](https://www.infoq.com//news/2023/08/grails-6-released)
-
-
-### OpenJDK's JEP 451: Balancing Serviceability and Integrity in JVM (2023-07-26)
-JEP 451, Prepare to Disallow the Dynamic Loading of Agents, has been completed from Target status for JDK 21. This JEP has evolved from its original intent to disallow the dynamic loading of agents into a running JVM by default to issue warnings when agents are dynamically loaded into a running JVM....
-[Read further^](https://www.infoq.com//news/2023/07/jep-451-balancing-serviceability)
 
 
 ## <u>[Foojay.io](https://foojay.io/)</u>
@@ -139,4 +139,4 @@ Not just a technical manual, Simon Ritter’s new book is a companion on a journ
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Mon, 5 Feb 2024 02:19:00 GMT*
+*This page was last updated on Mon, 5 Feb 2024 18:38:27 GMT*
