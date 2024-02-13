@@ -21,6 +21,11 @@ I earned my bachelor's degree in Information Technology, majoring in Software En
 ## <u>[InfoQ](https://www.infoq.com/profile/A-N-M-Bazlur-Rahman/)</u>
 
 
+### Optimizing Java for Modern Hardware: The Continuous Evolution of the Vector API (2024-02-12)
+JEP 460, Vector API (Seventh Incubator), has been delivered for JDK 22, marking the culmination of iterative enhancements from its initial incubation in JDK 16 through to JEP 448 in JDK 21. This latest version, part of Project Panama, introduces significant improvements upon feedback from six previous rounds of incubation....
+[Read further^](https://www.infoq.com//news/2024/02/evolution-of-the-vector-api)
+
+
 ### Simplifying Java Development: Introducing Multi-File Program Launching (2024-02-05)
 JEP 458, Launch Multi-File Source-Code Programs, has been Closed/Delivered for JDK 22. This JEP proposes to enhance the Java Launcher to execute an application supplied as one or more files of Java source code. This allows a more gradual transition from small applications to larger ones by postponing a full-blown project setup....
 [Read further^](https://www.infoq.com//news/2024/02/multi-file-program-launching)
@@ -64,11 +69,6 @@ After its review concluded, JEP 454, Foreign Function &amp; Memory API has been 
 ### Delivery Hero Implements Event-Driven Architecture to Handle Baemin Growth (2023-09-06)
 Baemin, a South Korean food delivery service owned by Delivery Hero, successfully navigated the challenges of rapid customer member growth by moving from a monolithic architecture to a more flexible event-driven microservices-based system....
 [Read further^](https://www.infoq.com//news/2023/09/delivery-hero-uses-eda)
-
-
-### Grails 6.0 Released: Embracing Modern Java, Enhanced Micronaut Integration, and More (2023-08-23)
-The Grails Foundation has released version 6.0 of Grails, delivering a minimal JDK 11 version; support for Spring Framework 5.3.28, Spring Boot 2.7.12, and Gradle 7.6.1; the debut of Grails Forge UI, a starter project similar to Spring Initializr, and others; and enhanced integration of the Micronaut Framework....
-[Read further^](https://www.infoq.com//news/2023/08/grails-6-released)
 
 
 ## <u>[Foojay.io](https://foojay.io/)</u>
@@ -139,4 +139,4 @@ Not just a technical manual, Simon Ritter’s new book is a companion on a journ
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Mon, 12 Feb 2024 02:13:12 GMT*
+*This page was last updated on Tue, 13 Feb 2024 02:12:01 GMT*
