@@ -21,7 +21,7 @@ I earned my bachelor's degree in Information Technology, majoring in Software En
 ## <u>[InfoQ](https://www.infoq.com/profile/A-N-M-Bazlur-Rahman/)</u>
 
 
-### Optimizing Java for Modern Hardware: The Continuous Evolution of the Vector API (2024-02-12)
+### Optimizing Java for Modern Hardware: the Continuous Evolution of the Vector API (2024-02-12)
 JEP 460, Vector API (Seventh Incubator), has been delivered for JDK 22, marking the culmination of iterative enhancements from its initial incubation in JDK 16 through to JEP 448 in JDK 21. This latest version, part of Project Panama, introduces significant improvements upon feedback from six previous rounds of incubation....
 [Read further^](https://www.infoq.com//news/2024/02/evolution-of-the-vector-api)
 
@@ -139,4 +139,4 @@ Not just a technical manual, Simon Ritter’s new book is a companion on a journ
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Wed, 14 Feb 2024 02:11:58 GMT*
+*This page was last updated on Fri, 16 Feb 2024 02:11:45 GMT*
