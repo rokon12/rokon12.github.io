@@ -74,6 +74,11 @@ Baemin, a South Korean food delivery service owned by Delivery Hero, successfull
 ## <u>[Foojay.io](https://foojay.io/)</u>
 
 
+### Records for Cleaner and More Expressive Parameterized Tests in JUnit 5 (2024-04-03)
+Let’s examine how to leverage Java records for parameterized tests through a concrete example – testing an expression evaluator....
+[Read further^](https://foojay.io/today/records-for-cleaner-and-more-expressive-parameterized-tests-in-junit-5/)
+
+
 ### Journey of a Java Champion: Bert Jan Schrijver’s Path to Mastery and Community Leadership (2024-01-10)
 Explore the insightful journey of Bert Jan Schrijver, a Java Champion, as he discusses his path in software development, the role of community, and the evolution of Java in this enlightening interview....
 [Read further^](https://foojay.io/today/journey-of-a-java-champion-bert-jan-schrijvers-path-to-mastery-and-community-leadership/)
@@ -124,11 +129,6 @@ Sealed classes and interfaces, together with pattern matching, provide powerful 
 [Read further^](https://foojay.io/today/sealed-interfaces-and-pattern-matching-a-quick-dive-into-javas-modern-capabilities/)
 
 
-### Book Review: “OpenJDK Migration for Dummies” (2023-08-04)
-Not just a technical manual, Simon Ritter’s new book is a companion on a journey through the complexities of OpenJDK migration....
-[Read further^](https://foojay.io/today/book-review-openjdk-migration-for-dummies/)
-
-
 ## <u>Talks</u>
 
 
@@ -139,4 +139,4 @@ Not just a technical manual, Simon Ritter’s new book is a companion on a journ
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Wed, 3 Apr 2024 02:15:20 GMT*
+*This page was last updated on Thu, 4 Apr 2024 02:14:57 GMT*
