@@ -21,6 +21,11 @@ I earned my bachelor's degree in Information Technology, majoring in Software En
 ## <u>[InfoQ](https://www.infoq.com/profile/A-N-M-Bazlur-Rahman/)</u>
 
 
+### JEP 474: Generational Mode Now Standard for ZGC in Java (2024-05-03)
+JEP 474, ZGC: Generational Mode by Default, has also been targeted for JDK 23. This JEP proposes to use the Z Garbage Collector (ZGC) from non-generational to generational mode by default. The non-generational mode will be deprecated and removed in a future JDK release. This will reduce the cost of maintaining the two modes, so future development can primarily focus on Generational ZGC....
+[Read further^](https://www.infoq.com//news/2024/05/java-zgc-update)
+
+
 ### Optimizing Java for Modern Hardware: the Continuous Evolution of the Vector API (2024-02-12)
 JEP 460, Vector API (Seventh Incubator), has been delivered for JDK 22, marking the culmination of iterative enhancements from its initial incubation in JDK 16 through to JEP 448 in JDK 21. This latest version, part of Project Panama, introduces significant improvements upon feedback from six previous rounds of incubation....
 [Read further^](https://www.infoq.com//news/2024/02/evolution-of-the-vector-api)
@@ -64,11 +69,6 @@ Javet, a fusion of Java and V8 (JAVa + V + EighT), has recently released its ver
 ### Foreign Function &amp; Memory API to Bridge the Gap between Java and Native Libraries (2023-10-25)
 After its review concluded, JEP 454, Foreign Function &amp; Memory API has been promoted from Targeted to Integrated for JDK 22. This JEP proposes to finalize this feature after two rounds of incubation and three rounds of preview. The API aims to replace traditional, complex methods like JNI, offering a more efficient and secure approach....
 [Read further^](https://www.infoq.com//news/2023/10/foreign-function-and-memory-api)
-
-
-### Delivery Hero Implements Event-Driven Architecture to Handle Baemin Growth (2023-09-06)
-Baemin, a South Korean food delivery service owned by Delivery Hero, successfully navigated the challenges of rapid customer member growth by moving from a monolithic architecture to a more flexible event-driven microservices-based system....
-[Read further^](https://www.infoq.com//news/2023/09/delivery-hero-uses-eda)
 
 
 ## <u>[Foojay.io](https://foojay.io/)</u>
@@ -139,4 +139,4 @@ Sealed classes and interfaces, together with pattern matching, provide powerful 
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Fri, 3 May 2024 02:19:01 GMT*
+*This page was last updated on Sat, 4 May 2024 02:14:38 GMT*
