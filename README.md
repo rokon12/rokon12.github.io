@@ -14,7 +14,9 @@ I earned my bachelor's degree in Information Technology, majoring in Software En
 <a href="https://stackoverflow.com/users/893197/rokonoid" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/stack-overflow.svg" alt="756809" height="30" width="40" /></a>
 <a href="https://www.youtube.com/c/ANMBazlurRahman" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg" alt="codenameone" height="30" width="40" /></a>
 <a href="https://www.bazlur.ca/feed" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/rss.svg" alt="https://www.bazlur.com/feed.xml" height="30" width="40" /></a>
+<a href="https://sessionize.com/bazlur/" target="blank"><img align="center" src="https://sessionize.com/landing/images/sessionize-logo.svg" alt="https://www.bazlur.com/feed.xml" height="30" /></a>
 </p>
+
 
 
 ## ✍️ Most recent blog posts
@@ -129,7 +131,7 @@ Sealed classes and interfaces, together with pattern matching, provide powerful 
 [Read further^](https://foojay.io/today/sealed-interfaces-and-pattern-matching-a-quick-dive-into-javas-modern-capabilities/)
 
 
-## <u>Talks</u>
+## <u>[Talks](https://github.com/rokon12/confernece-talks)</u>
 
 
 
@@ -139,4 +141,4 @@ Sealed classes and interfaces, together with pattern matching, provide powerful 
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Sun, 12 May 2024 02:20:46 GMT*
+*This page was last updated on Sun, 12 May 2024 12:03:49 GMT*
