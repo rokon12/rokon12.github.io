@@ -1,6 +1,7 @@
-## Bio:
 
-Hey there! I'm **Bazlur** and I am a Software Engineer. I have over a decade of professional experience in the software industry, primarily in Java and Java-related technologies. Recently, I was honored with the title of [Java Champion](https://twitter.com/Java_Champions/status/1523728715368509440).
+![image](https://github.com/rokon12/rokon12/assets/429073/f2f6e775-2692-4db8-9491-3a91acdcaff4)
+
+Hey there! I'm **Bazlur**, and I am a Software Engineer. I have over a decade of professional experience in the software industry, primarily in Java and Java-related technologies. Recently, I was honoured with the title of [Java Champion](https://twitter.com/Java_Champions/status/1523728715368509440).
 
 Outside of my regular work hours, I love to mentor, write, speak at conferences, and contribute to open-source projects. I am the founder and current moderator of the [Java User Group in Bangladesh](https://jugbd.org/), and I have been organizing meetups and conferences to share Java-related knowledge with the community since 2013. I was named Most Valuable Blogger (MVP) at [DZone](https://dzone.com/users/1298119/bazlur_rahman.html), one of the most recognized technology publishers in the world. Additionally, I am an editor for the Java Queue at [InfoQ](https://www.infoq.com/profile/A-N-M-Bazlur-Rahman/), another leading technology content publisher and conference organizer, and an editor at [Foojay.io](https://foojay.io/today/author/bazlur-rahman/), a platform for OpenJDK enthusiasts. I have also published [five books](https://www.rokomari.com/book/author/47860/a-n-m-bazlur-rahman) about the Java programming language in Bengali, which were bestsellers in Bangladesh.
 
