@@ -26,6 +26,11 @@ I hold a bachelor's degree in Information Technology, with a major in Software E
 ## <u>[InfoQ](https://www.infoq.com/profile/A-N-M-Bazlur-Rahman/)</u>
 
 
+### JEP 467: Java Enhances Documentation with Markdown Support (2024-05-21)
+JEP 467, Markdown Documentation Comments, has been promoted from Proposed to Target to Targeted for JDK 23. This feature proposes to enable JavaDoc documentation comments to be written in Markdown rather than a mix of HTML and JavaDoc @ tags. This will allow for documentation comments that are easier to write and read in source form....
+[Read further^](https://www.infoq.com//news/2024/05/jep467-markdown-in-javadoc)
+
+
 ### JEP 476: Simplifying Java Development with Module Import (2024-05-13)
 JEP 476, Module Import Declarations (Preview), was integrated into JDK 23. This preview feature proposes to enhance the Java programming language with the ability to succinctly import all of the packages exported by a module, with the goal of simplifying the reuse of modular libraries without requiring code to be in a module itself....
 [Read further^](https://www.infoq.com//news/2024/05/simplifying-java-module-import)
@@ -69,11 +74,6 @@ After its review concluded, JEP 461, Stream Gatherers (Preview), has been comple
 ### JEP 457: Streamlining Java Development with the Class-File API (2023-12-06)
 JEP 457, Class-File API (Preview), has been Integrated into JDK 22, proposing a new API for parsing, generating, and transforming Java class files. This API will initially replace ASM within the JDK with plans for a public API. Goetz, the Java language architect at Oracle, described ASM as outdated and provided details on the API's evolution....
 [Read further^](https://www.infoq.com//news/2023/12/jep-457-new-class-file-api)
-
-
-### Javet 3.0.2 Released: Bridging Java and JavaScript with Enhanced Features (2023-12-01)
-Javet, a fusion of Java and V8 (JAVa + V + EighT), has recently released its version 3.0.2, marking a significant advancement in embedding Node.js and V8 in Java. This version includes Node.js v20.10.0 and V8 v12.0.267.8, highlighting the project's commitment to staying current with the latest developments in these technologies....
-[Read further^](https://www.infoq.com//news/2023/12/javet-302-released)
 
 
 ## <u>[Foojay.io](https://foojay.io/)</u>
@@ -144,4 +144,4 @@ Sealed classes and interfaces, together with pattern matching, provide powerful 
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Tue, 21 May 2024 02:19:23 GMT*
+*This page was last updated on Wed, 22 May 2024 02:20:26 GMT*
