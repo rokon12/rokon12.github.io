@@ -26,6 +26,11 @@ I hold a bachelor's degree in Information Technology, with a major in Software E
 ## <u>[InfoQ](https://www.infoq.com/profile/A-N-M-Bazlur-Rahman/)</u>
 
 
+### JEP 477 Enhances Beginner Experience with Implicitly Declared Classes and Instance Main Methods (2024-05-27)
+JEP 477, Implicitly Declared Classes and Instance Main Methods (Third Preview), has been promoted to Targeted status. This JEP proposes to &quot;evolve the Java language so that students can write their first programs without needing to understand language features designed for large programs.&quot; This JEP moves forward Brian Goetz's September 2022 blog post, Paving the on-ramp....
+[Read further^](https://www.infoq.com//news/2024/05/jep477-implicit-classes-main)
+
+
 ### JEP 467: Java Enhances Documentation with Markdown Support (2024-05-21)
 JEP 467, Markdown Documentation Comments, has been promoted from Proposed to Target to Targeted for JDK 23. This feature proposes to enable JavaDoc documentation comments to be written in Markdown rather than a mix of HTML and JavaDoc @ tags. This will allow for documentation comments that are easier to write and read in source form....
 [Read further^](https://www.infoq.com//news/2024/05/jep467-markdown-in-javadoc)
@@ -69,11 +74,6 @@ After its review concluded, JEP 423, Region Pinning for G1, has been Integrated 
 ### Stream API Evolution: a Closer Look at JEP 461's Stream Gatherers (2023-12-14)
 After its review concluded, JEP 461, Stream Gatherers (Preview), has been completed for JDK 22. This JEP proposes to enhance the Stream API to support custom intermediate operations. &quot;This will allow stream pipelines to transform data in ways that are not easily achievable with the existing built-in intermediate operations.&quot;...
 [Read further^](https://www.infoq.com//news/2023/12/stream-api-evolution)
-
-
-### JEP 457: Streamlining Java Development with the Class-File API (2023-12-06)
-JEP 457, Class-File API (Preview), has been Integrated into JDK 22, proposing a new API for parsing, generating, and transforming Java class files. This API will initially replace ASM within the JDK with plans for a public API. Goetz, the Java language architect at Oracle, described ASM as outdated and provided details on the API's evolution....
-[Read further^](https://www.infoq.com//news/2023/12/jep-457-new-class-file-api)
 
 
 ## <u>[Foojay.io](https://foojay.io/)</u>
@@ -144,4 +144,4 @@ Sealed classes and interfaces, together with pattern matching, provide powerful 
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Mon, 27 May 2024 02:21:36 GMT*
+*This page was last updated on Tue, 28 May 2024 02:21:50 GMT*
