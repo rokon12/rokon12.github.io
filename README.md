@@ -26,6 +26,11 @@ I hold a bachelor's degree in Information Technology, with a major in Software E
 ## <u>[InfoQ](https://www.infoq.com/profile/A-N-M-Bazlur-Rahman/)</u>
 
 
+### Rampdown Phase One: What's to Expect in JDK 23 (2024-06-06)
+As Iris Clark declared, JDK 23 is now in the crucial Rampdown Phase One, a significant milestone in the JDK development process. This phase started on Thursday, June 6, and the Java community eagerly anticipates the new features and enhancements that will be part of this release. This crucial phase marks the transition of changes intended for JDK 23 into the mainline repository....
+[Read further^](https://www.infoq.com//news/2024/06/jdk-23-rampdown-phase-one)
+
+
 ### JEP 477 Enhances Beginner Experience with Implicitly Declared Classes and Instance Main Methods (2024-05-27)
 JEP 477, Implicitly Declared Classes and Instance Main Methods (Third Preview), has been promoted to Targeted status. This JEP proposes to &quot;evolve the Java language so that students can write their first programs without needing to understand language features designed for large programs.&quot; This JEP moves forward Brian Goetz's September 2022 blog post, Paving the on-ramp....
 [Read further^](https://www.infoq.com//news/2024/05/jep477-implicit-classes-main)
@@ -71,12 +76,12 @@ After its review concluded, JEP 423, Region Pinning for G1, has been Integrated 
 [Read further^](https://www.infoq.com//news/2023/12/region-pinning-to-g1-gc)
 
 
-### Stream API Evolution: a Closer Look at JEP 461's Stream Gatherers (2023-12-14)
-After its review concluded, JEP 461, Stream Gatherers (Preview), has been completed for JDK 22. This JEP proposes to enhance the Stream API to support custom intermediate operations. &quot;This will allow stream pipelines to transform data in ways that are not easily achievable with the existing built-in intermediate operations.&quot;...
-[Read further^](https://www.infoq.com//news/2023/12/stream-api-evolution)
-
-
 ## <u>[Foojay.io](https://foojay.io/)</u>
+
+
+### Exploring New Features in JDK 23: Simplifying Java with Primitive Type Patterns with JEP 455 (2024-06-06)
+How JEP 455 can be utilized to handle complex decision-making scenarios more efficiently. We’ll examine a practical example to illustrate the benefits of this feature....
+[Read further^](https://foojay.io/today/exploring-new-features-in-jdk-23-simplifying-java-with-primitive-type-patterns-with-jep-455/)
 
 
 ### Records for Cleaner and More Expressive Parameterized Tests in JUnit 5 (2024-04-03)
@@ -129,11 +134,6 @@ In this tutorial, we will explore the concept of thread safety in Java, specific
 [Read further^](https://foojay.io/today/thread-safe-counter-in-java-a-comprehensive-guide/)
 
 
-### Sealed Interfaces and Pattern Matching: A Quick Dive into Java’s Modern Capabilities (2023-08-09)
-Sealed classes and interfaces, together with pattern matching, provide powerful new tools for more explicit, controlled, and flexible design in Java...
-[Read further^](https://foojay.io/today/sealed-interfaces-and-pattern-matching-a-quick-dive-into-javas-modern-capabilities/)
-
-
 ## <u>[Talks](https://github.com/rokon12/confernece-talks)</u>
 
 
@@ -144,4 +144,4 @@ Sealed classes and interfaces, together with pattern matching, provide powerful 
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Thu, 6 Jun 2024 02:22:08 GMT*
+*This page was last updated on Fri, 7 Jun 2024 02:24:40 GMT*
