@@ -26,6 +26,11 @@ I hold a bachelor's degree in Information Technology, with a major in Software E
 ## <u>[InfoQ](https://www.infoq.com/profile/A-N-M-Bazlur-Rahman/)</u>
 
 
+### WDL 1.2.0: Enhancing Workflow Description Language for Bioinformatics (2024-06-18)
+The Workflow Description Language (WDL) team has announced the release of WDL 1.2.0, a significant update to improve workflow descriptions' flexibility and usability in bioinformatics. This new version introduces several key features and enhancements that promise to streamline workflow management and execution, making it easier for developers and researchers to implement and manage workflows....
+[Read further^](https://www.infoq.com//news/2024/06/workflow-description-language)
+
+
 ### Rampdown Phase One: What's to Expect in JDK 23 (2024-06-06)
 As Iris Clark declared, JDK 23 is now in the crucial Rampdown Phase One, a significant milestone in the JDK development process. This phase started on Thursday, June 6, and the Java community eagerly anticipates the new features and enhancements that will be part of this release. This crucial phase marks the transition of changes intended for JDK 23 into the mainline repository....
 [Read further^](https://www.infoq.com//news/2024/06/jdk-23-rampdown-phase-one)
@@ -69,11 +74,6 @@ JEP 455, Primitive Types in Patterns, instanceof, and switch (Preview), has been
 ### JEP 447: Refining Java Constructors for Enhanced Flexibility (2024-01-09)
 After its review concluded, JEP 447, Statements before super(...) (Preview), was delivered for JDK 22. This JEP, under Project Amber, proposes to allow statements that do not reference an instance being created to appear before super() calls in a constructor and preserve existing safety and initialization guarantees for constructors....
 [Read further^](https://www.infoq.com//news/2024/01/java-constructors-enhancement)
-
-
-### JEP 423: Introducing Region Pinning to G1 Garbage Collector in OpenJDK (2023-12-15)
-After its review concluded, JEP 423, Region Pinning for G1, has been Integrated into JDK 22. This JEP proposes to reduce GC latency by implementing region pinning for the G1 garbage collector. This will extend G1 so that arbitrary regions may be pinned during both major and minor collection operations, so that disabling the garbage collection process may be avoided while implementing JNI....
-[Read further^](https://www.infoq.com//news/2023/12/region-pinning-to-g1-gc)
 
 
 ## <u>[Foojay.io](https://foojay.io/)</u>
@@ -144,4 +144,4 @@ In this tutorial, we will explore the concept of thread safety in Java, specific
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Tue, 18 Jun 2024 02:24:09 GMT*
+*This page was last updated on Wed, 19 Jun 2024 02:24:56 GMT*
