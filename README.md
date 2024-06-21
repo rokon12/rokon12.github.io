@@ -79,6 +79,11 @@ After its review concluded, JEP 447, Statements before super(...) (Preview), was
 ## <u>[Foojay.io](https://foojay.io/)</u>
 
 
+### Exploring New Features in JDK 23: Simplifying Java with Module Import Declarations with JEP 476 (2024-06-20)
+JEP 476 represents a significant step towards simplifying Java programming by reducing boilerplate code and improving readability....
+[Read further^](https://foojay.io/today/exploring-new-features-in-jdk-23-simplifying-java-with-module-import-declarations-with-jep-476/)
+
+
 ### Exploring New Features in JDK 23: Simplifying Java with Primitive Type Patterns with JEP 455 (2024-06-06)
 How JEP 455 can be utilized to handle complex decision-making scenarios more efficiently. We’ll examine a practical example to illustrate the benefits of this feature....
 [Read further^](https://foojay.io/today/exploring-new-features-in-jdk-23-simplifying-java-with-primitive-type-patterns-with-jep-455/)
@@ -129,11 +134,6 @@ In this article, we will cover how to store files in a database using Spring Boo
 [Read further^](https://foojay.io/today/exploring-file-storage-solutions-in-spring-boot-database-local-systems-cloud-services-and-beyond/)
 
 
-### Thread-Safe Counter in Java: A Comprehensive Guide (2023-08-17)
-In this tutorial, we will explore the concept of thread safety in Java, specifically focusing on a simple counter....
-[Read further^](https://foojay.io/today/thread-safe-counter-in-java-a-comprehensive-guide/)
-
-
 ## <u>[Talks](https://github.com/rokon12/confernece-talks)</u>
 
 
@@ -144,4 +144,4 @@ In this tutorial, we will explore the concept of thread safety in Java, specific
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Thu, 20 Jun 2024 02:22:38 GMT*
+*This page was last updated on Fri, 21 Jun 2024 02:22:40 GMT*
