@@ -6,7 +6,9 @@ Hello! I'm Bazlur, a Software Engineer with over a decade of professional experi
 
 Beyond my regular work, I am passionate about mentoring, writing, speaking at conferences, and contributing to open-source projects. I founded and currently moderate the [Java User Group in Bangladesh](https://jugbd.org/), organizing meetups and conferences to share Java-related knowledge with the community since 2013. I was named a Most Valuable Blogger (MVP) by [DZone](https://dzone.com/users/1298119/bazlur_rahman.html), one of the world's most recognized technology publishers. Additionally, I serve as an editor for the Java Queue at [InfoQ](https://www.infoq.com/profile/A-N-M-Bazlur-Rahman/), another leading technology content publisher and conference organizer, and at [Foojay.io](https://foojay.io/today/author/bazlur-rahman/), a platform for OpenJDK enthusiasts. I have also published [five bestselling books](https://www.rokomari.com/book/author/47860/a-n-m-bazlur-rahman) about the Java programming language in Bengali.
 
-I hold a bachelor's degree in Information Technology, with a major in Software Engineering, from the Institute of Information Technology, University of Dhaka, Bangladesh. I currently reside in Toronto, Canada.
+I am currently writing a new book with O'Reilly titled "[Modern Concurrency in Java.](https://learning.oreilly.com/library/view/modern-concurrency-in/9781098165406/)"
+
+I hold a bachelor's degree in Information Technology, majoring in Software Engineering, from the Institute of Information Technology, University of Dhaka, Bangladesh. I currently reside in Toronto, Canada.
 
 
 
