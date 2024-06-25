@@ -28,6 +28,11 @@ I hold a bachelor's degree in Information Technology, majoring in Software Engin
 ## <u>[InfoQ](https://www.infoq.com/profile/A-N-M-Bazlur-Rahman/)</u>
 
 
+### JEP 456: Preparing for the Removal of Unsafe Memory-Access Methods (2024-06-24)
+JEP 471, Deprecate the Memory-Access Methods in sun.misc.Unsafe for Removal, has been delivered for JDK 23. This JEP proposes to deprecate the memory access methods in the Unsafe class for removal in a future release. These unsupported methods have been superseded by standard APIs: JEP 193, Variable Handles, delivered in JDK 9; and JEP 454, Foreign Function &amp; Memory API, delivered in JDK 22....
+[Read further^](https://www.infoq.com//news/2024/06/jep-456-removing-unsafe-methods)
+
+
 ### WDL 1.2.0: Enhancing Workflow Description Language for Bioinformatics (2024-06-18)
 The Workflow Description Language (WDL) team has announced the release of WDL 1.2.0, a significant update to improve workflow descriptions' flexibility and usability in bioinformatics. This new version introduces several key features and enhancements that promise to streamline workflow management and execution, making it easier for developers and researchers to implement and manage workflows....
 [Read further^](https://www.infoq.com//news/2024/06/workflow-description-language)
@@ -71,11 +76,6 @@ JEP 458, Launch Multi-File Source-Code Programs, has been Closed/Delivered for J
 ### Java Enhances Pattern Matching with Primitive Type Support in JEP 455 (2024-02-02)
 JEP 455, Primitive Types in Patterns, instanceof, and switch (Preview), has been promoted from Proposed to Target to Targeted for JDK 23. This JEP, under the auspices of Project Amber, proposes to enhance pattern matching by allowing primitive type patterns in all pattern contexts, and extend instanceof and switch to work with all primitive types....
 [Read further^](https://www.infoq.com//news/2024/02/java-enhances-pattern-matching)
-
-
-### JEP 447: Refining Java Constructors for Enhanced Flexibility (2024-01-09)
-After its review concluded, JEP 447, Statements before super(...) (Preview), was delivered for JDK 22. This JEP, under Project Amber, proposes to allow statements that do not reference an instance being created to appear before super() calls in a constructor and preserve existing safety and initialization guarantees for constructors....
-[Read further^](https://www.infoq.com//news/2024/01/java-constructors-enhancement)
 
 
 ## <u>[Foojay.io](https://foojay.io/)</u>
@@ -146,4 +146,4 @@ In this article, we will cover how to store files in a database using Spring Boo
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Mon, 24 Jun 2024 02:25:29 GMT*
+*This page was last updated on Tue, 25 Jun 2024 02:24:23 GMT*
