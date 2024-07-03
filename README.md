@@ -28,6 +28,11 @@ I hold a bachelor's degree in Information Technology, majoring in Software Engin
 ## <u>[InfoQ](https://www.infoq.com/profile/A-N-M-Bazlur-Rahman/)</u>
 
 
+### Java in Education Initiative Aims to Empower the Next Generation of Developers (2024-07-02)
+The Java in Education, launched by the Java Community Process (JCP) Executive Committee, is making significant strides in promoting Java technology within educational institutions. This program seeks to bridge the gap between academia and industry, ensuring that Java remains a foundational skill for aspiring developers....
+[Read further^](https://www.infoq.com//news/2024/07/java-education-initiative)
+
+
 ### JEP 456: Preparing for the Removal of Unsafe Memory-Access Methods (2024-06-24)
 JEP 471, Deprecate the Memory-Access Methods in sun.misc.Unsafe for Removal, has been delivered for JDK 23. This JEP proposes to deprecate the memory access methods in the Unsafe class for removal in a future release. These unsupported methods have been superseded by standard APIs: JEP 193, Variable Handles, delivered in JDK 9; and JEP 454, Foreign Function &amp; Memory API, delivered in JDK 22....
 [Read further^](https://www.infoq.com//news/2024/06/jep-456-removing-unsafe-methods)
@@ -71,11 +76,6 @@ JEP 460, Vector API (Seventh Incubator), has been delivered for JDK 22, marking 
 ### Simplifying Java Development: Introducing Multi-File Program Launching (2024-02-05)
 JEP 458, Launch Multi-File Source-Code Programs, has been Closed/Delivered for JDK 22. This JEP proposes to enhance the Java Launcher to execute an application supplied as one or more files of Java source code. This allows a more gradual transition from small applications to larger ones by postponing a full-blown project setup....
 [Read further^](https://www.infoq.com//news/2024/02/multi-file-program-launching)
-
-
-### Java Enhances Pattern Matching with Primitive Type Support in JEP 455 (2024-02-02)
-JEP 455, Primitive Types in Patterns, instanceof, and switch (Preview), has been promoted from Proposed to Target to Targeted for JDK 23. This JEP, under the auspices of Project Amber, proposes to enhance pattern matching by allowing primitive type patterns in all pattern contexts, and extend instanceof and switch to work with all primitive types....
-[Read further^](https://www.infoq.com//news/2024/02/java-enhances-pattern-matching)
 
 
 ## <u>[Foojay.io](https://foojay.io/)</u>
@@ -146,4 +146,4 @@ In this article, we will cover how to store files in a database using Spring Boo
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Tue, 2 Jul 2024 02:24:53 GMT*
+*This page was last updated on Wed, 3 Jul 2024 02:23:27 GMT*
