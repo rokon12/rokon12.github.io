@@ -28,6 +28,11 @@ I hold a bachelor's degree in Information Technology, majoring in Software Engin
 ## <u>[InfoQ](https://www.infoq.com/profile/A-N-M-Bazlur-Rahman/)</u>
 
 
+### Project Leyden Announces Early Access Build: 2-3x Start-up Improvements for Java Applications (2024-07-08)
+The OpenJDK has reached a milestone by announcing the Early Access (EA) build for Project Leyden. This build represents over a year of development efforts to enhance Java application performance, particularly focusing on start-up times. The preliminary testing has shown impressive results, with popular application frameworks experiencing a 2-3x improvement in start-up times....
+[Read further^](https://www.infoq.com//news/2024/07/project-leyden-ea-release)
+
+
 ### Java in Education Initiative Aims to Empower the Next Generation of Developers (2024-07-02)
 The Java in Education, launched by the Java Community Process (JCP) Executive Committee, is making significant strides in promoting Java technology within educational institutions. This program seeks to bridge the gap between academia and industry, ensuring that Java remains a foundational skill for aspiring developers....
 [Read further^](https://www.infoq.com//news/2024/07/java-education-initiative)
@@ -71,11 +76,6 @@ JEP 474, ZGC: Generational Mode by Default, has also been targeted for JDK 23. T
 ### Optimizing Java for Modern Hardware: the Continuous Evolution of the Vector API (2024-02-12)
 JEP 460, Vector API (Seventh Incubator), has been delivered for JDK 22, marking the culmination of iterative enhancements from its initial incubation in JDK 16 through to JEP 448 in JDK 21. This latest version, part of Project Panama, introduces significant improvements upon feedback from six previous rounds of incubation....
 [Read further^](https://www.infoq.com//news/2024/02/evolution-of-the-vector-api)
-
-
-### Simplifying Java Development: Introducing Multi-File Program Launching (2024-02-05)
-JEP 458, Launch Multi-File Source-Code Programs, has been Closed/Delivered for JDK 22. This JEP proposes to enhance the Java Launcher to execute an application supplied as one or more files of Java source code. This allows a more gradual transition from small applications to larger ones by postponing a full-blown project setup....
-[Read further^](https://www.infoq.com//news/2024/02/multi-file-program-launching)
 
 
 ## <u>[Foojay.io](https://foojay.io/)</u>
@@ -146,4 +146,4 @@ In this article, we will cover how to store files in a database using Spring Boo
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Mon, 8 Jul 2024 02:26:35 GMT*
+*This page was last updated on Tue, 9 Jul 2024 02:26:18 GMT*
