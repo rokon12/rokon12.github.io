@@ -81,6 +81,11 @@ JEP 460, Vector API (Seventh Incubator), has been delivered for JDK 22, marking 
 ## <u>[Foojay.io](https://foojay.io/)</u>
 
 
+### Unsafe is Finally Going Away: Embracing Safer Memory Access with JEP 471 (2024-07-11)
+Java’s sun.misc.Unsafe is being phased out. Learn safer memory access using VarHandle and Foreign Function & Memory API to keep your applications secure and up-to-date....
+[Read further^](https://foojay.io/today/unsafe-is-finally-going-away-embracing-safer-memory-access-with-jep-471/)
+
+
 ### Exploring New Features in JDK 23: Simplifying Java with Module Import Declarations with JEP 476 (2024-06-20)
 JEP 476 represents a significant step towards simplifying Java programming by reducing boilerplate code and improving readability....
 [Read further^](https://foojay.io/today/exploring-new-features-in-jdk-23-simplifying-java-with-module-import-declarations-with-jep-476/)
@@ -131,11 +136,6 @@ By considering real-world examples and learning from the process of refactoring 
 [Read further^](https://foojay.io/today/writing-testable-code-a-journey-through-consideration-and-refactoring/)
 
 
-### Exploring File Storage Solutions in Spring Boot: Database, Local Systems, Cloud Services, and Beyond (2023-08-23)
-In this article, we will cover how to store files in a database using Spring Boot and discuss some alternatives....
-[Read further^](https://foojay.io/today/exploring-file-storage-solutions-in-spring-boot-database-local-systems-cloud-services-and-beyond/)
-
-
 ## <u>[Talks](https://github.com/rokon12/confernece-talks)</u>
 
 
@@ -146,4 +146,4 @@ In this article, we will cover how to store files in a database using Spring Boo
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Thu, 11 Jul 2024 02:27:57 GMT*
+*This page was last updated on Fri, 12 Jul 2024 02:24:56 GMT*
