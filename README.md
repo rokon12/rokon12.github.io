@@ -28,6 +28,11 @@ I hold a bachelor's degree in Information Technology, majoring in Software Engin
 ## <u>[InfoQ](https://www.infoq.com/profile/A-N-M-Bazlur-Rahman/)</u>
 
 
+### JEP 472: Prepare to Restrict the Use of JNI in JDK 24 (2024-07-15)
+JEP 472, now Proposed to Target, aims to issue warnings for using the Java Native Interface (JNI) and adjust the Foreign Function &amp; Memory (FFM) API for consistent warnings. This prepares developers for future releases that restrict JNI and the FFM API to ensure integrity by default....
+[Read further^](https://www.infoq.com//news/2024/07/jep-472-restrict-jni-jdk-24)
+
+
 ### Project Leyden Announces Early Access Build: 2-3x Start-up Improvements for Java Applications (2024-07-08)
 The OpenJDK has reached a milestone by announcing the Early Access (EA) build for Project Leyden. This build represents over a year of development efforts to enhance Java application performance, particularly focusing on start-up times. The preliminary testing has shown impressive results, with popular application frameworks experiencing a 2-3x improvement in start-up times....
 [Read further^](https://www.infoq.com//news/2024/07/project-leyden-ea-release)
@@ -71,11 +76,6 @@ JEP 476, Module Import Declarations (Preview), was integrated into JDK 23. This 
 ### JEP 474: Generational Mode Now Standard for ZGC in Java (2024-05-03)
 JEP 474, ZGC: Generational Mode by Default, has also been targeted for JDK 23. This JEP proposes to use the Z Garbage Collector (ZGC) from non-generational to generational mode by default. The non-generational mode will be deprecated and removed in a future JDK release. This will reduce the cost of maintaining the two modes, so future development can primarily focus on Generational ZGC....
 [Read further^](https://www.infoq.com//news/2024/05/java-zgc-update)
-
-
-### Optimizing Java for Modern Hardware: the Continuous Evolution of the Vector API (2024-02-12)
-JEP 460, Vector API (Seventh Incubator), has been delivered for JDK 22, marking the culmination of iterative enhancements from its initial incubation in JDK 16 through to JEP 448 in JDK 21. This latest version, part of Project Panama, introduces significant improvements upon feedback from six previous rounds of incubation....
-[Read further^](https://www.infoq.com//news/2024/02/evolution-of-the-vector-api)
 
 
 ## <u>[Foojay.io](https://foojay.io/)</u>
@@ -146,4 +146,4 @@ By considering real-world examples and learning from the process of refactoring 
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Mon, 15 Jul 2024 02:31:07 GMT*
+*This page was last updated on Tue, 16 Jul 2024 02:27:36 GMT*
