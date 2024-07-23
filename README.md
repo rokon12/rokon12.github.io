@@ -28,6 +28,11 @@ I hold a bachelor's degree in Information Technology, majoring in Software Engin
 ## <u>[InfoQ](https://www.infoq.com/profile/A-N-M-Bazlur-Rahman/)</u>
 
 
+### JEP 481: Third Preview of Scoped Values API Brings Key Enhancements in JDK 23 (2024-07-22)
+JEP 481, Scoped Values (Third Preview), formerly known as Extent-Local Variables (Incubator), offers a third preview, with one change, to gain additional experience and feedback from one round of incubation and two rounds of preview. This feature enables the sharing of immutable data within and across threads....
+[Read further^](https://www.infoq.com//news/2024/07/jep-481-enhanced-scoped-values)
+
+
 ### JEP 472: Prepare to Restrict the Use of JNI in JDK 24 (2024-07-15)
 JEP 472, now Proposed to Target, aims to issue warnings for using the Java Native Interface (JNI) and adjust the Foreign Function &amp; Memory (FFM) API for consistent warnings. This prepares developers for future releases that restrict JNI and the FFM API to ensure integrity by default....
 [Read further^](https://www.infoq.com//news/2024/07/jep-472-restrict-jni-jdk-24)
@@ -71,11 +76,6 @@ JEP 467, Markdown Documentation Comments, has been promoted from Proposed to Tar
 ### JEP 476: Simplifying Java Development with Module Import (2024-05-13)
 JEP 476, Module Import Declarations (Preview), was integrated into JDK 23. This preview feature proposes to enhance the Java programming language with the ability to succinctly import all of the packages exported by a module, with the goal of simplifying the reuse of modular libraries without requiring code to be in a module itself....
 [Read further^](https://www.infoq.com//news/2024/05/simplifying-java-module-import)
-
-
-### JEP 474: Generational Mode Now Standard for ZGC in Java (2024-05-03)
-JEP 474, ZGC: Generational Mode by Default, has also been targeted for JDK 23. This JEP proposes to use the Z Garbage Collector (ZGC) from non-generational to generational mode by default. The non-generational mode will be deprecated and removed in a future JDK release. This will reduce the cost of maintaining the two modes, so future development can primarily focus on Generational ZGC....
-[Read further^](https://www.infoq.com//news/2024/05/java-zgc-update)
 
 
 ## <u>[Foojay.io](https://foojay.io/)</u>
@@ -146,4 +146,4 @@ By considering real-world examples and learning from the process of refactoring 
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Mon, 22 Jul 2024 02:30:14 GMT*
+*This page was last updated on Tue, 23 Jul 2024 02:26:38 GMT*
