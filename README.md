@@ -81,6 +81,11 @@ JEP 476, Module Import Declarations (Preview), was integrated into JDK 23. This 
 ## <u>[Foojay.io](https://foojay.io/)</u>
 
 
+### Creating a Command Line Tool with JBang and PicoCLI to Generate Release Notes (2024-07-24)
+Learn how to create a Java command-line tool with JBang and PicoCLI to automate generating release notes from GitHub....
+[Read further^](https://foojay.io/today/creating-a-command-line-tool-with-jbang-and-picocli-to-generate-release-notes/)
+
+
 ### Unsafe is Finally Going Away: Embracing Safer Memory Access with JEP 471 (2024-07-11)
 Java’s sun.misc.Unsafe is being phased out. Learn safer memory access using VarHandle and Foreign Function & Memory API to keep your applications secure and up-to-date....
 [Read further^](https://foojay.io/today/unsafe-is-finally-going-away-embracing-safer-memory-access-with-jep-471/)
@@ -131,11 +136,6 @@ In a recent insightful interview, Simon Martinelli, an Oracle ACE associate and 
 [Read further^](https://foojay.io/today/unlocking-java-wisdom-a-conversation-with-oracle-ace-simon-martinelli/)
 
 
-### Writing Testable Code: A Journey Through Consideration and Refactoring (2023-08-30)
-By considering real-world examples and learning from the process of refactoring and testing, we can create robust and maintainable code that stands the test of time....
-[Read further^](https://foojay.io/today/writing-testable-code-a-journey-through-consideration-and-refactoring/)
-
-
 ## <u>[Talks](https://github.com/rokon12/confernece-talks)</u>
 
 
@@ -146,4 +146,4 @@ By considering real-world examples and learning from the process of refactoring 
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Wed, 24 Jul 2024 02:26:43 GMT*
+*This page was last updated on Thu, 25 Jul 2024 02:26:53 GMT*
