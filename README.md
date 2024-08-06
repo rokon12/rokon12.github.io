@@ -28,6 +28,11 @@ I hold a bachelor's degree in Information Technology, majoring in Software Engin
 ## <u>[InfoQ](https://www.infoq.com/profile/A-N-M-Bazlur-Rahman/)</u>
 
 
+### Netflix Adopts Virtual Threads: A Case Study on Performance and Pitfalls (2024-08-05)
+Netflix, a long-time Java adopter, recently upgraded to Java 21. They are now harnessing new features such as generational ZGC and virtual threads to improve performance across their extensive microservices fleet. While virtual threads, designed for high-throughput concurrent applications, showed early promise, they also brought unique challenges in real-world scenarios....
+[Read further^](https://www.infoq.com//news/2024/08/netflix-performance-case-study)
+
+
 ### JEP 481: Third Preview of Scoped Values API Brings Key Enhancements in JDK 23 (2024-07-22)
 JEP 481, Scoped Values (Third Preview), formerly known as Extent-Local Variables (Incubator), offers a third preview, with one change, to gain additional experience and feedback from one round of incubation and two rounds of preview. This feature enables the sharing of immutable data within and across threads....
 [Read further^](https://www.infoq.com//news/2024/07/jep-481-enhanced-scoped-values)
@@ -71,11 +76,6 @@ JEP 477, Implicitly Declared Classes and Instance Main Methods (Third Preview), 
 ### JEP 467: Java Enhances Documentation with Markdown Support (2024-05-21)
 JEP 467, Markdown Documentation Comments, has been promoted from Proposed to Target to Targeted for JDK 23. This feature proposes to enable JavaDoc documentation comments to be written in Markdown rather than a mix of HTML and JavaDoc @ tags. This will allow for documentation comments that are easier to write and read in source form....
 [Read further^](https://www.infoq.com//news/2024/05/jep467-markdown-in-javadoc)
-
-
-### JEP 476: Simplifying Java Development with Module Import (2024-05-13)
-JEP 476, Module Import Declarations (Preview), was integrated into JDK 23. This preview feature proposes to enhance the Java programming language with the ability to succinctly import all of the packages exported by a module, with the goal of simplifying the reuse of modular libraries without requiring code to be in a module itself....
-[Read further^](https://www.infoq.com//news/2024/05/simplifying-java-module-import)
 
 
 ## <u>[Foojay.io](https://foojay.io/)</u>
@@ -146,4 +146,4 @@ In a recent insightful interview, Simon Martinelli, an Oracle ACE associate and 
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Mon, 5 Aug 2024 02:29:23 GMT*
+*This page was last updated on Tue, 6 Aug 2024 02:32:06 GMT*
