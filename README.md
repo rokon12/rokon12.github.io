@@ -28,7 +28,7 @@ I hold a bachelor's degree in Information Technology, majoring in Software Engin
 ## <u>[InfoQ](https://www.infoq.com/profile/A-N-M-Bazlur-Rahman/)</u>
 
 
-### Netflix Adopts Virtual Threads: A Case Study on Performance and Pitfalls (2024-08-05)
+### Netflix Adopts Virtual Threads: a Case Study on Performance and Pitfalls (2024-08-05)
 Netflix, a long-time Java adopter, recently upgraded to Java 21. They are now harnessing new features such as generational ZGC and virtual threads to improve performance across their extensive microservices fleet. While virtual threads, designed for high-throughput concurrent applications, showed early promise, they also brought unique challenges in real-world scenarios....
 [Read further^](https://www.infoq.com//news/2024/08/netflix-performance-case-study)
 
@@ -146,4 +146,4 @@ In a recent insightful interview, Simon Martinelli, an Oracle ACE associate and 
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Fri, 9 Aug 2024 02:29:57 GMT*
+*This page was last updated on Sat, 10 Aug 2024 02:28:39 GMT*
