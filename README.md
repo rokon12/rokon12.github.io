@@ -81,6 +81,11 @@ JEP 467, Markdown Documentation Comments, has been promoted from Proposed to Tar
 ## <u>[Foojay.io](https://foojay.io/)</u>
 
 
+### Interview with a Java Champion: Reflections on a Storied Career and Insights for the Next Generation (2024-08-19)
+Java Champion Ben Evans shares his journey, insights on Java’s evolution, and advice for developers in this insightful interview....
+[Read further^](https://foojay.io/today/interview-with-a-java-champion-reflections-on-a-storied-career-and-insights-for-the-next-generation/)
+
+
 ### Creating a Command Line Tool with JBang and PicoCLI to Generate Release Notes (2024-07-24)
 Learn how to create a Java command-line tool with JBang and PicoCLI to automate generating release notes from GitHub....
 [Read further^](https://foojay.io/today/creating-a-command-line-tool-with-jbang-and-picocli-to-generate-release-notes/)
@@ -131,11 +136,6 @@ Let’s examine the principles and practical applications of Sealed Classes and 
 [Read further^](https://foojay.io/today/embracing-modernity-a-comprehensive-look-at-sealed-classes-pattern-matching-and-functional-paradigms-in-java/)
 
 
-### Unlocking Java Wisdom: A Conversation with Oracle ACE Simon Martinelli (2023-09-01)
-In a recent insightful interview, Simon Martinelli, an Oracle ACE associate and veteran Java developer, shares his career experiences, software development philosophies, and views on mentoring. With over two decades in the industry, Martinelli offers a perspective that combines the …...
-[Read further^](https://foojay.io/today/unlocking-java-wisdom-a-conversation-with-oracle-ace-simon-martinelli/)
-
-
 ## <u>[Talks](https://github.com/rokon12/confernece-talks)</u>
 
 
@@ -146,4 +146,4 @@ In a recent insightful interview, Simon Martinelli, an Oracle ACE associate and 
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Mon, 19 Aug 2024 02:32:05 GMT*
+*This page was last updated on Tue, 20 Aug 2024 02:28:13 GMT*
