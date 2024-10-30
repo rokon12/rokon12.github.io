@@ -81,6 +81,11 @@ JEP 467, Markdown Documentation Comments, has been promoted from Proposed to Tar
 ## <u>[Foojay.io](https://foojay.io/)</u>
 
 
+### Java Tips # 01 – Writing Shebang Scripts in Pure Java (2024-10-29)
+Did you know you can write a CLI script in Java just as easily as you would in a bash script, and run it directly from the shell? This is commonly called a shebang script, though we are mostly familiar …...
+[Read further^](https://foojay.io/today/java-tips-01-writing-shebang-scripts-in-pure-java/)
+
+
 ### Interview with a Java Champion: Reflections on a Storied Career and Insights for the Next Generation (2024-08-19)
 Java Champion Ben Evans shares his journey, insights on Java’s evolution, and advice for developers in this insightful interview....
 [Read further^](https://foojay.io/today/interview-with-a-java-champion-reflections-on-a-storied-career-and-insights-for-the-next-generation/)
@@ -131,11 +136,6 @@ Does stack size have an impact on the number of native threads that can be creat
 [Read further^](https://foojay.io/today/exploring-the-impact-of-stack-size-on-jvm-thread-creation-a-myth-debunked/)
 
 
-### Embracing Modernity: A Comprehensive Look at Sealed Classes, Pattern Matching, and Functional Paradigms in Java (2023-09-11)
-Let’s examine the principles and practical applications of Sealed Classes and pattern matching....
-[Read further^](https://foojay.io/today/embracing-modernity-a-comprehensive-look-at-sealed-classes-pattern-matching-and-functional-paradigms-in-java/)
-
-
 ## <u>[Talks](https://github.com/rokon12/confernece-talks)</u>
 
 
@@ -146,4 +146,4 @@ Let’s examine the principles and practical applications of Sealed Classes and 
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Tue, 29 Oct 2024 02:44:44 GMT*
+*This page was last updated on Wed, 30 Oct 2024 02:46:15 GMT*
