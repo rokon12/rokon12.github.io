@@ -28,6 +28,11 @@ I hold a bachelor's degree in Information Technology, majoring in Software Engin
 ## <u>[InfoQ](https://www.infoq.com/profile/A-N-M-Bazlur-Rahman/)</u>
 
 
+### Java Evolves to Tackle Pinning with JEP 491 (2024-11-04)
+JEP 491, &quot;Synchronize Virtual Threads without Pinning,&quot; is now Proposed to Target for JDK 24. This initiative aims to resolve Java's &quot;pinning&quot; issue, a limitation of the synchronized keyword, which restricts scalability with virtual threads.  JEP 491 eliminates this constraint, unlocking high-performance concurrency without extensive refactoring....
+[Read further^](https://www.infoq.com//news/2024/11/java-evolves-tackle-pinning)
+
+
 ### Netflix Adopts Virtual Threads: a Case Study on Performance and Pitfalls (2024-08-05)
 Netflix, a long-time Java adopter, recently upgraded to Java 21. They are now harnessing new features such as generational ZGC and virtual threads to improve performance across their extensive microservices fleet. While virtual threads, designed for high-throughput concurrent applications, showed early promise, they also brought unique challenges in real-world scenarios....
 [Read further^](https://www.infoq.com//news/2024/08/netflix-performance-case-study)
@@ -71,11 +76,6 @@ As Iris Clark declared, JDK 23 is now in the crucial Rampdown Phase One, a signi
 ### JEP 477 Enhances Beginner Experience with Implicitly Declared Classes and Instance Main Methods (2024-05-27)
 JEP 477, Implicitly Declared Classes and Instance Main Methods (Third Preview), has been promoted to Targeted status. This JEP proposes to &quot;evolve the Java language so that students can write their first programs without needing to understand language features designed for large programs.&quot; This JEP moves forward Brian Goetz's September 2022 blog post, Paving the on-ramp....
 [Read further^](https://www.infoq.com//news/2024/05/jep477-implicit-classes-main)
-
-
-### JEP 467: Java Enhances Documentation with Markdown Support (2024-05-21)
-JEP 467, Markdown Documentation Comments, has been promoted from Proposed to Target to Targeted for JDK 23. This feature proposes to enable JavaDoc documentation comments to be written in Markdown rather than a mix of HTML and JavaDoc @ tags. This will allow for documentation comments that are easier to write and read in source form....
-[Read further^](https://www.infoq.com//news/2024/05/jep467-markdown-in-javadoc)
 
 
 ## <u>[Foojay.io](https://foojay.io/)</u>
@@ -146,4 +146,4 @@ Does stack size have an impact on the number of native threads that can be creat
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Mon, 4 Nov 2024 02:46:45 GMT*
+*This page was last updated on Tue, 5 Nov 2024 02:39:58 GMT*
