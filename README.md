@@ -28,7 +28,7 @@ I hold a bachelor's degree in Information Technology, majoring in Software Engin
 ## <u>[InfoQ](https://www.infoq.com/profile/A-N-M-Bazlur-Rahman/)</u>
 
 
-### Java Evolves to Tackle Pinning with JEP 491 (2024-11-04)
+### Java Evolves to Tackle Virtual Threads Pinning with JEP 491 (2024-11-04)
 JEP 491, &quot;Synchronize Virtual Threads without Pinning,&quot; is now Proposed to Target for JDK 24. This initiative aims to resolve Java's &quot;pinning&quot; issue, a limitation of the synchronized keyword, which restricts scalability with virtual threads.  JEP 491 eliminates this constraint, unlocking high-performance concurrency without extensive refactoring....
 [Read further^](https://www.infoq.com//news/2024/11/java-evolves-tackle-pinning)
 
@@ -146,4 +146,4 @@ Does stack size have an impact on the number of native threads that can be creat
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Tue, 5 Nov 2024 02:39:58 GMT*
+*This page was last updated on Wed, 6 Nov 2024 02:38:55 GMT*
