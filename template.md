@@ -11,6 +11,15 @@ I am currently writing a new book with O'Reilly titled "[Modern Concurrency in J
 I hold a bachelor's degree in Information Technology, majoring in Software Engineering, from the Institute of Information Technology, University of Dhaka, Bangladesh. I currently reside in Toronto, Canada.
 
 
+---
+
+![Modern Concurrency in Java](https://learning.oreilly.com/library/cover/9781098165406/)
+
+*Modern Concurrency in Java* is now available on O'Reilly Media! 🎉
+[Read it on O'Reilly](https://learning.oreilly.com/library/view/modern-concurrency-in/9781098165406/)
+
+---
+
 
 <h3 align="left">Connect:</h3>
 <p align="left">
