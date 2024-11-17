@@ -11,6 +11,15 @@ I am currently writing a new book with O'Reilly titled "[Modern Concurrency in J
 I hold a bachelor's degree in Information Technology, majoring in Software Engineering, from the Institute of Information Technology, University of Dhaka, Bangladesh. I currently reside in Toronto, Canada.
 
 
+---
+
+![Modern Concurrency in Java](https://learning.oreilly.com/library/cover/9781098165406/)
+
+*Modern Concurrency in Java* is now available on O'Reilly Media! 🎉
+[Read it on O'Reilly](https://learning.oreilly.com/library/view/modern-concurrency-in/9781098165406/)
+
+---
+
 
 <h3 align="left">Connect:</h3>
 <p align="left">
@@ -146,4 +155,4 @@ Does stack size have an impact on the number of native threads that can be creat
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Sun, 17 Nov 2024 02:53:14 GMT*
+*This page was last updated on Sun, 17 Nov 2024 04:31:06 GMT*
