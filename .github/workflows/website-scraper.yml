@@ -1,0 +1,35 @@
+name: Daily Website Scraping
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Run at midnight every day
+  workflow_dispatch:  # Allow manual triggering
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up JDK
+      uses: actions/setup-java@v3
+      with:
+        java-version: '21'
+        distribution: 'temurin'
+
+    - name: Install JBang
+      run: |
+        curl -Ls https://sh.jbang.dev | bash -s - app setup
+        echo "${HOME}/.jbang/bin" >> $GITHUB_PATH
+
+    - name: Run WebsiteScraper
+      run: jbang WebsiteScraper.java
+
+    - name: Commit and push if there are changes
+      run: |
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        git add .
+        git diff --quiet && git diff --staged --quiet || (git commit -m "Update website backup [automated]" && git push)
