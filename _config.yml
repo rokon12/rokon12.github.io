@@ -6,8 +6,10 @@ url: ""
 
 # Build settings
 markdown: kramdown
-theme: jekyll-theme-cayman
-show_downloads: false
+theme: jekyll-theme-minimal
+show_downloads: true
+# Collections
+remote_theme: pages-themes/minimal@v0.2.0
 
 # Directory settings
 include: 
@@ -39,6 +41,7 @@ plugins:
   - jekyll-optional-front-matter
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-remote-theme
 
 # Additional settings
 relative_links:
