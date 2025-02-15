@@ -11,8 +11,8 @@ show_downloads: false
 
 # Directory settings
 include: 
-  - backup
-  - backup/images
+  - _posts
+  - _posts/images
 
 # Collections
 collections:
@@ -23,7 +23,7 @@ collections:
 # Default layout for markdown files
 defaults:
   - scope:
-      path: "backup"
+      path: "_posts"
       type: "pages"
     values:
       layout: "default"
