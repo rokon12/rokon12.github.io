@@ -27,8 +27,8 @@ public class WebsiteScraper {
     private static int processedArticles = 0;
     private static final ObjectMapper objectMapper = new ObjectMapper();
     private static final FlexmarkHtmlConverter htmlToMarkdownConverter = FlexmarkHtmlConverter.builder().build();
-    private static final int REQUEST_DELAY_MS = 100; // Reduced delay for testing
-    private static final int CONNECTION_TIMEOUT_MS = 5000; // 5 second timeout for testing
+    private static final int REQUEST_DELAY_MS = 1000; // Reduced delay for testing
+    private static final int CONNECTION_TIMEOUT_MS = 120000; // 120 second
 
     private static class Progress {
         @com.fasterxml.jackson.annotation.JsonTypeInfo(use = com.fasterxml.jackson.annotation.JsonTypeInfo.Id.CLASS)
