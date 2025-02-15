@@ -1,7 +1,7 @@
 ---
-title: Embracing Modernity: A Comprehensive Look at Sealed Classes, Pattern Matching, and Functional Paradigms in Java
-original_url: https://bazlur.ca/2023/09/11/embracing-modernity-a-comprehensive-look-at-sealed-classes-pattern-matching-and-functional-paradigms-in-java/
-date_scraped: 2025-02-15T09:05:31.020394775
+title: 'Embracing Modernity: A Comprehensive Look at Sealed Classes, Pattern Matching, and Functional Paradigms in Java'
+original_url: 'https://bazlur.ca/2023/09/11/embracing-modernity-a-comprehensive-look-at-sealed-classes-pattern-matching-and-functional-paradigms-in-java/'
+date_scraped: '2025-02-15T09:05:31.020394775'
 ---
 
 ![](images/23752bb0-5ca9-4418-9e6d-db51dded2e4e.jpeg)

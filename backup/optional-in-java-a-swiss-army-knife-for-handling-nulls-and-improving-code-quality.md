@@ -1,7 +1,7 @@
 ---
-title: Optional in Java: A Swiss Army Knife for Handling Nulls and Improving Code Quality
-original_url: https://bazlur.ca/2023/02/01/optional-in-java-a-swiss-army-knife-for-handling-nulls-and-improving-code-quality/
-date_scraped: 2025-02-15T09:08:23.051098725
+title: 'Optional in Java: A Swiss Army Knife for Handling Nulls and Improving Code Quality'
+original_url: 'https://bazlur.ca/2023/02/01/optional-in-java-a-swiss-army-knife-for-handling-nulls-and-improving-code-quality/'
+date_scraped: '2025-02-15T09:08:23.051098725'
 ---
 
 ![](images/denise-jans-j1cttvpj8k-unsplash-scaled.jpg)

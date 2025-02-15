@@ -1,7 +1,7 @@
 ---
-title: Discovering the Secrets to Success: An Exclusive Interview with Java Champion Michael P. Redlich
-original_url: https://bazlur.ca/2023/05/15/discovering-the-secrets-to-success-an-exclusive-interview-with-java-champion-michael-p-redlich/
-date_scraped: 2025-02-15T09:07:11.524128146
+title: 'Discovering the Secrets to Success: An Exclusive Interview with Java Champion Michael P. Redlich'
+original_url: 'https://bazlur.ca/2023/05/15/discovering-the-secrets-to-success-an-exclusive-interview-with-java-champion-michael-p-redlich/'
+date_scraped: '2025-02-15T09:07:11.524128146'
 ---
 
 Discovering the Secrets to Success: An Exclusive Interview with Java Champion Michael P. Redlich

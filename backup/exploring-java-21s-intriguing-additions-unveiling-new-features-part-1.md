@@ -1,7 +1,7 @@
 ---
-title: Exploring Java 21’s Intriguing Additions: Unveiling New Features (Part 1)
-original_url: https://bazlur.ca/2023/06/20/exploring-java-21s-intriguing-additions-unveiling-new-features-part-1/
-date_scraped: 2025-02-15T09:06:30.642639696
+title: 'Exploring Java 21’s Intriguing Additions: Unveiling New Features (Part 1)'
+original_url: 'https://bazlur.ca/2023/06/20/exploring-java-21s-intriguing-additions-unveiling-new-features-part-1/'
+date_scraped: '2025-02-15T09:06:30.642639696'
 ---
 
 ![](images/erik.jpeg)

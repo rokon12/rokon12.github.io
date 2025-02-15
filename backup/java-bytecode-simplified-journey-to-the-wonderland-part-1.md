@@ -1,7 +1,7 @@
 ---
-title: Java Bytecode Simplified: Journey to the Wonderland (Part 1)
-original_url: https://bazlur.ca/2022/03/08/java-bytecode-simplified-journey-to-the-wonderland-part-1/
-date_scraped: 2025-02-15T09:10:09.121674621
+title: 'Java Bytecode Simplified: Journey to the Wonderland (Part 1)'
+original_url: 'https://bazlur.ca/2022/03/08/java-bytecode-simplified-journey-to-the-wonderland-part-1/'
+date_scraped: '2025-02-15T09:10:09.121674621'
 ---
 
 ![](images/kenny-eliason-uecskkdb1pg-unsplash-scaled.jpg)

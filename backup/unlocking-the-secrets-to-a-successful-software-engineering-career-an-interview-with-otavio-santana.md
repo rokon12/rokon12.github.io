@@ -1,7 +1,7 @@
 ---
-title: Unlocking the Secrets to a Successful Software Engineering Career: An Interview with Otavio Santana
-original_url: https://bazlur.ca/2023/04/03/unlocking-the-secrets-to-a-successful-software-engineering-career-an-interview-with-otavio-santana/
-date_scraped: 2025-02-15T09:07:32.883224344
+title: 'Unlocking the Secrets to a Successful Software Engineering Career: An Interview with Otavio Santana'
+original_url: 'https://bazlur.ca/2023/04/03/unlocking-the-secrets-to-a-successful-software-engineering-career-an-interview-with-otavio-santana/'
+date_scraped: '2025-02-15T09:07:32.883224344'
 ---
 
 ![](images/4.png)

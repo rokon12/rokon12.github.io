@@ -1,7 +1,7 @@
 ---
-title: Top 7 Features in Jakarta EE 10
-original_url: https://bazlur.ca/2022/06/28/top-7-features-in-jakarta-ee-10/
-date_scraped: 2025-02-15T09:09:14.258800791
+title: 'Top 7 Features in Jakarta EE 10'
+original_url: 'https://bazlur.ca/2022/06/28/top-7-features-in-jakarta-ee-10/'
+date_scraped: '2025-02-15T09:09:14.258800791'
 ---
 
 ![](images/jakartaee-landscape.jpeg)

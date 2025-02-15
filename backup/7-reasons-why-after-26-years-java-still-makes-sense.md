@@ -1,7 +1,7 @@
 ---
-title: 7 Reasons Why, After 26 Years, Java Still Makes Sense!
-original_url: https://bazlur.ca/2022/03/15/7-reasons-why-after-26-years-java-still-makes-sense/
-date_scraped: 2025-02-15T09:10:05.391286771
+title: '7 Reasons Why, After 26 Years, Java Still Makes Sense!'
+original_url: 'https://bazlur.ca/2022/03/15/7-reasons-why-after-26-years-java-still-makes-sense/'
+date_scraped: '2025-02-15T09:10:05.391286771'
 ---
 
 7 Reasons Why, After 26 Years, Java Still Makes Sense!

@@ -1,7 +1,7 @@
 ---
-title: Charting the Course of Java: An Insightful Conversation with Java Champion, Sebastian Daschner
-original_url: https://bazlur.ca/2023/07/11/charting-the-course-of-java-an-insightful-conversation-with-java-champion-sebastian-daschner/
-date_scraped: 2025-02-15T09:06:12.010852746
+title: 'Charting the Course of Java: An Insightful Conversation with Java Champion, Sebastian Daschner'
+original_url: 'https://bazlur.ca/2023/07/11/charting-the-course-of-java-an-insightful-conversation-with-java-champion-sebastian-daschner/'
+date_scraped: '2025-02-15T09:06:12.010852746'
 ---
 
 ![](images/sebastian-daschner.png)

@@ -1,7 +1,7 @@
 ---
-title: Java Thread Programming (Part 15)
-original_url: https://bazlur.ca/2022/08/31/java-thread-programming-part-15/
-date_scraped: 2025-02-15T09:08:51.59378157
+title: 'Java Thread Programming (Part 15)'
+original_url: 'https://bazlur.ca/2022/08/31/java-thread-programming-part-15/'
+date_scraped: '2025-02-15T09:08:51.59378157'
 ---
 
 ![](images/bozhin-karaivanov-k6cc1d-k-g-unsplash-scaled.jpg)

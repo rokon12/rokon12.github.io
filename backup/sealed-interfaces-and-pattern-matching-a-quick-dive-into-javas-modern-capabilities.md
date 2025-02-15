@@ -1,7 +1,7 @@
 ---
-title: Sealed Interfaces and Pattern Matching: A Quick Dive into Java’s Modern Capabilities
-original_url: https://bazlur.ca/2023/08/09/sealed-interfaces-and-pattern-matching-a-quick-dive-into-javas-modern-capabilities/
-date_scraped: 2025-02-15T09:05:49.229817772
+title: 'Sealed Interfaces and Pattern Matching: A Quick Dive into Java’s Modern Capabilities'
+original_url: 'https://bazlur.ca/2023/08/09/sealed-interfaces-and-pattern-matching-a-quick-dive-into-javas-modern-capabilities/'
+date_scraped: '2025-02-15T09:05:49.229817772'
 ---
 
 ![](images/ae9ff0aa-e74c-4de4-92b3-e358ab55de0a.jpeg)

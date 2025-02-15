@@ -1,7 +1,7 @@
 ---
-title: In Bangladesh, I was featured in one of the country’s most widely read newspapers.
-original_url: https://bazlur.ca/2022/06/08/in-bangladesh-i-was-featured-in-one-of-the-countrys-most-widely-read-newspapers/
-date_scraped: 2025-02-15T09:09:21.435288575
+title: 'In Bangladesh, I was featured in one of the country’s most widely read newspapers.'
+original_url: 'https://bazlur.ca/2022/06/08/in-bangladesh-i-was-featured-in-one-of-the-countrys-most-widely-read-newspapers/'
+date_scraped: '2025-02-15T09:09:21.435288575'
 ---
 
 ![](images/jc-program-logo.png)

@@ -1,7 +1,7 @@
 ---
-title: I’m now officially a Java Champion
-original_url: https://bazlur.ca/2022/05/19/im-now-officially-a-java-champion/
-date_scraped: 2025-02-15T09:09:29.892670234
+title: 'I’m now officially a Java Champion'
+original_url: 'https://bazlur.ca/2022/05/19/im-now-officially-a-java-champion/'
+date_scraped: '2025-02-15T09:09:29.892670234'
 ---
 
 ![](images/jc-program-logo.png)

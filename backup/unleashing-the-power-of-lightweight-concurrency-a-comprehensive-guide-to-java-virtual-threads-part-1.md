@@ -1,7 +1,7 @@
 ---
-title: Unleashing the Power of Lightweight Concurrency: A Comprehensive Guide to Java Virtual Threads (Part 1)
-original_url: https://bazlur.ca/2023/05/09/unleashing-the-power-of-lightweight-concurrency-a-comprehensive-guide-to-java-virtual-threads-part-1/
-date_scraped: 2025-02-15T09:07:14.778040279
+title: 'Unleashing the Power of Lightweight Concurrency: A Comprehensive Guide to Java Virtual Threads (Part 1)'
+original_url: 'https://bazlur.ca/2023/05/09/unleashing-the-power-of-lightweight-concurrency-a-comprehensive-guide-to-java-virtual-threads-part-1/'
+date_scraped: '2025-02-15T09:07:14.778040279'
 ---
 
 Unleashing the Power of Lightweight Concurrency: A Comprehensive Guide to Java Virtual Threads (Part 1)

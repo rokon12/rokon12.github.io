@@ -1,7 +1,7 @@
 ---
-title: Java Thread Programming (Part 2)
-original_url: https://bazlur.ca/2021/10/12/java-thread-programming-part-2/
-date_scraped: 2025-02-15T09:10:54.953616689
+title: 'Java Thread Programming (Part 2)'
+original_url: 'https://bazlur.ca/2021/10/12/java-thread-programming-part-2/'
+date_scraped: '2025-02-15T09:10:54.953616689'
 ---
 
 ![](images/dall-e-2023-10-11-03.24.55-stylized-illustration-of-a-cloud-representing-cloud-bills-with-two-jars-beneath-it-labeled-java-8-and-java-11.-the-java-8-jar-is-filled-up-to-10.png)

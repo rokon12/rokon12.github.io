@@ -1,7 +1,7 @@
 ---
-title: From Assembler to Chat-GPT: Steve Poole on the Shifting Landscape of Programming
-original_url: https://bazlur.ca/2023/03/20/from-assembler-to-chat-gpt-steve-poole-on-the-shifting-landscape-of-programming/
-date_scraped: 2025-02-15T09:07:48.203272999
+title: 'From Assembler to Chat-GPT: Steve Poole on the Shifting Landscape of Programming'
+original_url: 'https://bazlur.ca/2023/03/20/from-assembler-to-chat-gpt-steve-poole-on-the-shifting-landscape-of-programming/'
+date_scraped: '2025-02-15T09:07:48.203272999'
 ---
 
 ![](images/7.png)

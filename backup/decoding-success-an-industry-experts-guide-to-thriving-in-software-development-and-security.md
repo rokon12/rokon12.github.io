@@ -1,7 +1,7 @@
 ---
-title: Decoding Success: An Industry Expert’s Guide to Thriving in Software Development and Security
-original_url: https://bazlur.ca/2023/05/23/decoding-success-an-industry-experts-guide-to-thriving-in-software-development-and-security/
-date_scraped: 2025-02-15T09:07:01.402371194
+title: 'Decoding Success: An Industry Expert’s Guide to Thriving in Software Development and Security'
+original_url: 'https://bazlur.ca/2023/05/23/decoding-success-an-industry-experts-guide-to-thriving-in-software-development-and-security/'
+date_scraped: '2025-02-15T09:07:01.402371194'
 ---
 
 ![](images/erik.jpeg)

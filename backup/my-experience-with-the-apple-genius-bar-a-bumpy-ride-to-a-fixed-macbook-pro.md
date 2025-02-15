@@ -1,7 +1,7 @@
 ---
-title: My Experience with the Apple Genius Bar: A Bumpy Ride to a Fixed MacBook Pro
-original_url: https://bazlur.ca/2023/04/30/my-experience-with-the-apple-genius-bar-a-bumpy-ride-to-a-fixed-macbook-pro/
-date_scraped: 2025-02-15T09:07:17.486276446
+title: 'My Experience with the Apple Genius Bar: A Bumpy Ride to a Fixed MacBook Pro'
+original_url: 'https://bazlur.ca/2023/04/30/my-experience-with-the-apple-genius-bar-a-bumpy-ride-to-a-fixed-macbook-pro/'
+date_scraped: '2025-02-15T09:07:17.486276446'
 ---
 
 ![](images/r121.jpeg)

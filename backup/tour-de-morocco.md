@@ -1,7 +1,7 @@
 ---
-title: Tour de Morocco!
-original_url: https://bazlur.ca/2022/10/14/tour-de-morocco/
-date_scraped: 2025-02-15T09:08:43.610553265
+title: 'Tour de Morocco!'
+original_url: 'https://bazlur.ca/2022/10/14/tour-de-morocco/'
+date_scraped: '2025-02-15T09:08:43.610553265'
 ---
 
 ![](images/devoxxma.jpeg)

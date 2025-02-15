@@ -1,7 +1,7 @@
 ---
-title: Java Tips # 01 – Writing Shebang Scripts in Pure Java
-original_url: https://bazlur.ca/2024/10/27/java-tips-01-writing-shebang-scripts-in-pure-java/
-date_scraped: 2025-02-15T09:04:09.751367415
+title: 'Java Tips # 01 – Writing Shebang Scripts in Pure Java'
+original_url: 'https://bazlur.ca/2024/10/27/java-tips-01-writing-shebang-scripts-in-pure-java/'
+date_scraped: '2025-02-15T09:04:09.751367415'
 ---
 
 ![](images/dall-e-2024-10-27-02.06.37-a-feature-photo-illustrating-the-concept-of-writing-a-java-cli-shebang-script.-the-image-shows-a-terminal-window-with-java-code-being-executed-in-a-sh.webp)

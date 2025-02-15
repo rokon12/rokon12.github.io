@@ -1,7 +1,7 @@
 ---
-title: Exploring the Impact of Stack Size on JVM Thread Creation: A Myth Debunked
-original_url: https://bazlur.ca/2023/09/20/exploring-the-impact-of-stack-size-on-jvm-thread-creation-a-myth-debunked/
-date_scraped: 2025-02-15T09:05:24.298787574
+title: 'Exploring the Impact of Stack Size on JVM Thread Creation: A Myth Debunked'
+original_url: 'https://bazlur.ca/2023/09/20/exploring-the-impact-of-stack-size-on-jvm-thread-creation-a-myth-debunked/'
+date_scraped: '2025-02-15T09:05:24.298787574'
 ---
 
 ![](images/jeremy-thomas-fo7bkvgetgq-unsplash-scaled.jpg)

@@ -1,7 +1,7 @@
 ---
-title: Book Review: “OpenJDK Migration for Dummies”
-original_url: https://bazlur.ca/2023/08/04/book-review-openjdk-migration-for-dummies/
-date_scraped: 2025-02-15T09:05:56.756966462
+title: 'Book Review: “OpenJDK Migration for Dummies”'
+original_url: 'https://bazlur.ca/2023/08/04/book-review-openjdk-migration-for-dummies/'
+date_scraped: '2025-02-15T09:05:56.756966462'
 ---
 
 Book Review: "OpenJDK Migration for Dummies"

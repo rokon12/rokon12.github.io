@@ -1,7 +1,7 @@
 ---
-title: Java Bytecode Simplified: Journey to the Wonderland (Part 3)
-original_url: https://bazlur.ca/2023/01/24/java-bytecode-simplified-journey-to-the-wonderland-part-3/
-date_scraped: 2025-02-15T09:08:25.064926214
+title: 'Java Bytecode Simplified: Journey to the Wonderland (Part 3)'
+original_url: 'https://bazlur.ca/2023/01/24/java-bytecode-simplified-journey-to-the-wonderland-part-3/'
+date_scraped: '2025-02-15T09:08:25.064926214'
 ---
 
 Java Bytecode Simplified: Journey to the Wonderland (Part 3)

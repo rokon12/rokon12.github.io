@@ -1,7 +1,7 @@
 ---
-title: Let’s Use Optional to Fix Method Contracts
-original_url: https://bazlur.ca/2021/11/10/lets-use-optional-to-fix-method-contracts/
-date_scraped: 2025-02-15T09:10:38.887401097
+title: 'Let’s Use Optional to Fix Method Contracts'
+original_url: 'https://bazlur.ca/2021/11/10/lets-use-optional-to-fix-method-contracts/'
+date_scraped: '2025-02-15T09:10:38.887401097'
 ---
 
 Let's Use Optional to Fix Method Contracts

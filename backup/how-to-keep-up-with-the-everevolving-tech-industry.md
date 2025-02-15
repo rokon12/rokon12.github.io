@@ -1,7 +1,7 @@
 ---
-title: How to Keep Up with the Ever-Evolving Tech Industry
-original_url: https://bazlur.ca/2023/03/12/how-to-keep-up-with-the-ever-evolving-tech-industry/
-date_scraped: 2025-02-15T09:07:57.505566301
+title: 'How to Keep Up with the Ever-Evolving Tech Industry'
+original_url: 'https://bazlur.ca/2023/03/12/how-to-keep-up-with-the-ever-evolving-tech-industry/'
+date_scraped: '2025-02-15T09:07:57.505566301'
 ---
 
 ![](images/kenny-eliason-uecskkdb1pg-unsplash-scaled.jpg)

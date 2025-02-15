@@ -1,7 +1,7 @@
 ---
-title: Java, Friends, and Cold Weather: My Adventure at ConFoo Conference
-original_url: https://bazlur.ca/2023/02/27/java-friends-and-cold-weather-my-adventure-at-confoo-conference/
-date_scraped: 2025-02-15T09:08:14.705108374
+title: 'Java, Friends, and Cold Weather: My Adventure at ConFoo Conference'
+original_url: 'https://bazlur.ca/2023/02/27/java-friends-and-cold-weather-my-adventure-at-confoo-conference/'
+date_scraped: '2025-02-15T09:08:14.705108374'
 ---
 
 ![](images/image-3.png)

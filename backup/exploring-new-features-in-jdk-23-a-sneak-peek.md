@@ -1,7 +1,7 @@
 ---
-title: Exploring New Features in JDK 23: A Sneak Peek
-original_url: https://bazlur.ca/2024/06/01/exploring-new-features-in-jdk-23-a-sneak-peek/
-date_scraped: 2025-02-15T09:04:50.185366936
+title: 'Exploring New Features in JDK 23: A Sneak Peek'
+original_url: 'https://bazlur.ca/2024/06/01/exploring-new-features-in-jdk-23-a-sneak-peek/'
+date_scraped: '2025-02-15T09:04:50.185366936'
 ---
 
 ![](images/dall-e-2024-05-31-04.10.40-an-elegant-and-simple-illustration-of-a-java-developer-working-on-a-computer-with-a-screen-displaying-a-jdk-23-code-example.-the-background-is-minimal.webp)

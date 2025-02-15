@@ -9,37 +9,31 @@ A comprehensive collection of articles on Java, Software Development, and Techno
 
 ## Recent Posts
 
-{% assign posts = site.static_files | where_exp: "file", "file.path contains 'backup' and file.extname == '.md' and file.path != '/backup/index.md'" | sort: "modified_time" | reverse %}
-
-{% for file in posts limit:10 %}
+{% assign sorted_files = site.static_files | sort: 'modified_time' | reverse %}
+{% assign post_count = 0 %}
+{% for file in sorted_files %}
+{% if file.path contains 'backup/' and file.extname == '.md' and file.name != 'index.md' and post_count < 10 %}
 {% capture post_content %}{% include_relative {{ file.path }} %}{% endcapture %}
-{% assign lines = post_content | newline_to_br | split: '<br />' %}
-{% assign front_matter = false %}
-{% assign title = "" %}
-{% assign date = "" %}
 
-{% for line in lines %}
-  {% if line contains "title: " %}
-    {% assign title = line | replace: "title: ", "" | strip %}
-  {% endif %}
-  {% if line contains "date_scraped: " %}
-    {% assign date = line | replace: "date_scraped: ", "" | strip %}
-  {% endif %}
-{% endfor %}
+{% assign lines = post_content | newline_to_br | split: '<br />' %}
+{% assign title = file.basename | replace: '-', ' ' | capitalize %}
 
 ### [{{ title }}]({{ site.baseurl }}{{ file.path | remove: '.md' }})
-*{{ date | date: "%B %d, %Y" }}*
 
+{% assign post_count = post_count | plus: 1 %}
+{% endif %}
 {% endfor %}
 
-## Categories
+[View More Posts →](./categories)
 
-- [Java Programming](./categories#java-programming)
-- [Thread Programming](./categories#thread-programming)
-- [Software Development](./categories#software-development)
-- [Technical Interviews](./categories#technical-interviews)
-- [Book Reviews](./categories#book-reviews)
-- [Personal Experiences](./categories#personal-experiences)
+## Browse by Category
+
+- [Java Programming](./categories#java-programming) - Core Java, JVM, and Java ecosystem
+- [Thread Programming](./categories#thread-programming) - Concurrency and parallel programming
+- [Software Development](./categories#software-development) - Best practices and architecture
+- [Technical Interviews](./categories#technical-interviews) - Career guidance and interview prep
+- [Book Reviews](./categories#book-reviews) - Technical and programming book reviews
+- [Personal Experiences](./categories#personal-experiences) - Journey and learning experiences
 
 ## About the Author
 

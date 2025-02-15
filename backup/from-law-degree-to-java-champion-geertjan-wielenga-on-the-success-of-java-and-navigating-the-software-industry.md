@@ -1,7 +1,7 @@
 ---
-title: From Law Degree to Java Champion: Geertjan Wielenga on the Success of Java and Navigating the Software Industry
-original_url: https://bazlur.ca/2023/03/13/from-law-degree-to-java-champion-geertjan-wielenga-on-the-success-of-java-and-navigating-the-software-industry/
-date_scraped: 2025-02-15T09:07:53.979234294
+title: 'From Law Degree to Java Champion: Geertjan Wielenga on the Success of Java and Navigating the Software Industry'
+original_url: 'https://bazlur.ca/2023/03/13/from-law-degree-to-java-champion-geertjan-wielenga-on-the-success-of-java-and-navigating-the-software-industry/'
+date_scraped: '2025-02-15T09:07:53.979234294'
 ---
 
 ![](images/wielenga-1024x576-1.png)

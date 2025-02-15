@@ -1,7 +1,7 @@
 ---
-title: What is a semaphore, and when to use it?
-original_url: https://bazlur.ca/2023/10/05/what-is-a-semaphore-and-when-to-use-it/
-date_scraped: 2025-02-15T09:05:11.473114411
+title: 'What is a semaphore, and when to use it?'
+original_url: 'https://bazlur.ca/2023/10/05/what-is-a-semaphore-and-when-to-use-it/'
+date_scraped: '2025-02-15T09:05:11.473114411'
 ---
 
 ![](images/b8ae274c-6229-4645-9a20-ef9412595531.jpeg)

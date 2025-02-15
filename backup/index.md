@@ -1,8 +1,8 @@
 ---
-layout: default
-title: Blog Archive
+title: 'Blog Archive'
+original_url: ''
+date_scraped: ''
 ---
-
 # Blog Archive
 
 Welcome to the archive of blog posts from bazlur.ca. Here you'll find a collection of articles covering various topics including Java programming, software development, and technical insights.

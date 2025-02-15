@@ -1,7 +1,7 @@
 ---
-title: Java Thread Programming (Part 8)
-original_url: https://bazlur.ca/2021/12/07/java-thread-programming-part-8/
-date_scraped: 2025-02-15T09:10:31.403912595
+title: 'Java Thread Programming (Part 8)'
+original_url: 'https://bazlur.ca/2021/12/07/java-thread-programming-part-8/'
+date_scraped: '2025-02-15T09:10:31.403912595'
 ---
 
 Java Thread Programming (Part 8)

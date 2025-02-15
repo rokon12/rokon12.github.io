@@ -1,7 +1,7 @@
 ---
-title: Exploring New Features in JDK 23: Simplifying Java with Primitive Type Patterns with JEP 455
-original_url: https://bazlur.ca/2024/06/01/exploring-new-features-in-jdk-23-simplifying-java-with-primitive-type-patterns-with-jep-455/
-date_scraped: 2025-02-15T09:04:47.142031183
+title: 'Exploring New Features in JDK 23: Simplifying Java with Primitive Type Patterns with JEP 455'
+original_url: 'https://bazlur.ca/2024/06/01/exploring-new-features-in-jdk-23-simplifying-java-with-primitive-type-patterns-with-jep-455/'
+date_scraped: '2025-02-15T09:04:47.142031183'
 ---
 
 ![](images/dall-e-2024-06-01-05.25.07-a-detailed-and-accurate-image-of-the-java-duke-mascot.-duke-is-a-triangular-character-with-a-white-body-black-arms-and-legs-and-a-red-nose.-the-ima.webp)

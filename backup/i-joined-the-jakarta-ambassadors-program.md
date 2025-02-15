@@ -1,7 +1,7 @@
 ---
-title: I joined the Jakarta Ambassadors program
-original_url: https://bazlur.ca/2022/06/09/i-joined-the-jakarta-ambassadors-program/
-date_scraped: 2025-02-15T09:09:17.300055671
+title: 'I joined the Jakarta Ambassadors program'
+original_url: 'https://bazlur.ca/2022/06/09/i-joined-the-jakarta-ambassadors-program/'
+date_scraped: '2025-02-15T09:09:17.300055671'
 ---
 
 ![](images/jakartaee-ambassadors-e1577035229941.png)

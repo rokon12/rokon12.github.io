@@ -271,17 +271,16 @@ public class WebsiteScraper {
                         String markdown = htmlToMarkdownConverter.convert(content.html());
 
                         // Prepare metadata
-                        StringBuilder fullContent = new StringBuilder();
-                        fullContent.append("---\n");
-                        fullContent.append("title: ").append(title).append("\n");
-                        fullContent.append("original_url: ").append(url).append("\n");
-                        fullContent.append("date_scraped: ").append(java.time.LocalDateTime.now().format(java.time.format.DateTimeFormatter.ISO_LOCAL_DATE_TIME)).append("\n");
-                        fullContent.append("---\n\n");
-                        fullContent.append(markdown);
+                        String fullContent = "---\n" +
+                                             "title: '" + title + "'\n" +
+                                             "original_url: '" + url + "'\n" +
+                                             "date_scraped: '" + java.time.LocalDateTime.now().format(java.time.format.DateTimeFormatter.ISO_LOCAL_DATE_TIME) + "'\n" +
+                                             "---\n\n" +
+                                             markdown;
 
                         // Save markdown file
                         String fileName = title.replaceAll("[^a-zA-Z0-9\\s]", "").replaceAll("\\s+", "-").toLowerCase() + ".md";
-                        Files.write(Paths.get(OUTPUT_DIR, fileName), fullContent.toString().getBytes());
+                        Files.write(Paths.get(OUTPUT_DIR, fileName), fullContent.getBytes());
 
                         // Update record
                         progress.existingArticles.put(url, fileName);

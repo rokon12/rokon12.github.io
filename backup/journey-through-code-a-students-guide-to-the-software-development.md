@@ -1,7 +1,7 @@
 ---
-title: Journey through Code: A Student’s Guide to the Software Development
-original_url: https://bazlur.ca/2023/06/17/journey-through-code-a-students-guide-to-the-software-development/
-date_scraped: 2025-02-15T09:06:33.883273583
+title: 'Journey through Code: A Student’s Guide to the Software Development'
+original_url: 'https://bazlur.ca/2023/06/17/journey-through-code-a-students-guide-to-the-software-development/'
+date_scraped: '2025-02-15T09:06:33.883273583'
 ---
 
 ![](images/1476e63e-153e-4186-b0a5-22add5e40990.jpeg)

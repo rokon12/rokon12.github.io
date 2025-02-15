@@ -1,7 +1,7 @@
 ---
-title: The 5 Most Pivotal and Innovative Additions to OpenJDK 19
-original_url: https://bazlur.ca/2022/09/20/the-5-most-pivotal-and-innovative-additions-to-openjdk-19/
-date_scraped: 2025-02-15T09:08:47.073255979
+title: 'The 5 Most Pivotal and Innovative Additions to OpenJDK 19'
+original_url: 'https://bazlur.ca/2022/09/20/the-5-most-pivotal-and-innovative-additions-to-openjdk-19/'
+date_scraped: '2025-02-15T09:08:47.073255979'
 ---
 
 ![](images/cafe-g56e2bcea6-1920.jpg)

@@ -1,7 +1,7 @@
 ---
-title: 5 ways to improve your communication skills
-original_url: https://bazlur.ca/2022/08/06/5-ways-to-improve-your-communication-skills/
-date_scraped: 2025-02-15T09:08:56.714300009
+title: '5 ways to improve your communication skills'
+original_url: 'https://bazlur.ca/2022/08/06/5-ways-to-improve-your-communication-skills/'
+date_scraped: '2025-02-15T09:08:56.714300009'
 ---
 
 5 ways to improve your communication skills

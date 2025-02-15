@@ -1,7 +1,7 @@
 ---
-title: Why Many Developers Don’t Write or Give Talks and How to Overcome Challenges
-original_url: https://bazlur.ca/2023/01/11/why-many-developers-dont-write-or-give-talks-and-how-to-overcome-challenges/
-date_scraped: 2025-02-15T09:08:30.004985134
+title: 'Why Many Developers Don’t Write or Give Talks and How to Overcome Challenges'
+original_url: 'https://bazlur.ca/2023/01/11/why-many-developers-dont-write-or-give-talks-and-how-to-overcome-challenges/'
+date_scraped: '2025-02-15T09:08:30.004985134'
 ---
 
 Why Many Developers Don't Write or Give Talks and How to Overcome Challenges

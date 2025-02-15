@@ -1,7 +1,7 @@
 ---
-title: Java Sealed Classes in Action: Building Robust and Secure Applications
-original_url: https://bazlur.ca/2023/02/20/java-sealed-classes-in-action-building-robust-and-secure-applications/
-date_scraped: 2025-02-15T09:08:18.214631409
+title: 'Java Sealed Classes in Action: Building Robust and Secure Applications'
+original_url: 'https://bazlur.ca/2023/02/20/java-sealed-classes-in-action-building-robust-and-secure-applications/'
+date_scraped: '2025-02-15T09:08:18.214631409'
 ---
 
 ![](images/sippakorn-yamkasikorn-eyyx5sdusno-unsplash-scaled.jpg)

@@ -1,7 +1,7 @@
 ---
-title: The complete glossary of my name
-original_url: https://bazlur.ca/2022/11/12/the-complete-glossary-of-my-name/
-date_scraped: 2025-02-15T09:08:32.248952754
+title: 'The complete glossary of my name'
+original_url: 'https://bazlur.ca/2022/11/12/the-complete-glossary-of-my-name/'
+date_scraped: '2025-02-15T09:08:32.248952754'
 ---
 
 The complete glossary of my name

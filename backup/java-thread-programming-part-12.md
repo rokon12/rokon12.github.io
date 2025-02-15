@@ -1,7 +1,7 @@
 ---
-title: Java Thread Programming (Part 12)
-original_url: https://bazlur.ca/2022/02/01/java-thread-programming-part-12/
-date_scraped: 2025-02-15T09:10:19.467333148
+title: 'Java Thread Programming (Part 12)'
+original_url: 'https://bazlur.ca/2022/02/01/java-thread-programming-part-12/'
+date_scraped: '2025-02-15T09:10:19.467333148'
 ---
 
 Java Thread Programming (Part 12)

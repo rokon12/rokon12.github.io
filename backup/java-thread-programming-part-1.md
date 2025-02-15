@@ -1,7 +1,7 @@
 ---
-title: Java Thread Programming (Part 1)
-original_url: https://bazlur.ca/2021/10/07/java-thread-programming-part-1/
-date_scraped: 2025-02-15T09:11:02.210901002
+title: 'Java Thread Programming (Part 1)'
+original_url: 'https://bazlur.ca/2021/10/07/java-thread-programming-part-1/'
+date_scraped: '2025-02-15T09:11:02.210901002'
 ---
 
 ![](images/dall-e-2023-10-11-03.21.06-illustration-of-a-cross-section-view-of-a-multi-core-processor.-each-core-is-labeled-and-depicted-as-a-circular-unit.-sprouting-from-each-core-are-mul.png)

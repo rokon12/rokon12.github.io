@@ -1,7 +1,7 @@
 ---
-title: Resilience in Coding: Miro Wengner on Thriving in the Software Industry
-original_url: https://bazlur.ca/2023/05/31/resilience-in-coding-miro-wengner-on-thriving-in-the-software-industry/
-date_scraped: 2025-02-15T09:06:46.933356201
+title: 'Resilience in Coding: Miro Wengner on Thriving in the Software Industry'
+original_url: 'https://bazlur.ca/2023/05/31/resilience-in-coding-miro-wengner-on-thriving-in-the-software-industry/'
+date_scraped: '2025-02-15T09:06:46.933356201'
 ---
 
 ![](images/miro.jpeg)

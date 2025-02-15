@@ -1,7 +1,7 @@
 ---
-title: Cracking Code and Conventions: An Exclusive Interview with Nicolas Fränkel
-original_url: https://bazlur.ca/2023/06/05/cracking-code-and-conventions-an-exclusive-interview-with-nicolas-frankel/
-date_scraped: 2025-02-15T09:06:43.332932518
+title: 'Cracking Code and Conventions: An Exclusive Interview with Nicolas Fränkel'
+original_url: 'https://bazlur.ca/2023/06/05/cracking-code-and-conventions-an-exclusive-interview-with-nicolas-frankel/'
+date_scraped: '2025-02-15T09:06:43.332932518'
 ---
 
 ![](images/nicols.jpeg)

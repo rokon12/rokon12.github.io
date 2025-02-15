@@ -1,7 +1,7 @@
 ---
-title: Weekly Java Newsletter – Issue #2
-original_url: https://bazlur.ca/2022/07/01/weekly-java-newsletter-issue-2/
-date_scraped: 2025-02-15T09:09:09.742563633
+title: 'Weekly Java Newsletter – Issue #2'
+original_url: 'https://bazlur.ca/2022/07/01/weekly-java-newsletter-issue-2/'
+date_scraped: '2025-02-15T09:09:09.742563633'
 ---
 
 ![](images/java-newsletters-1.png)

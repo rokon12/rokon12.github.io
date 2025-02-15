@@ -1,7 +1,7 @@
 ---
-title: My Committer Profile and Interview with the Eclipse Foundation
-original_url: https://bazlur.ca/2023/04/10/my-committer-profile-interview-with-the-eclipse-foundation/
-date_scraped: 2025-02-15T09:07:28.273272352
+title: 'My Committer Profile and Interview with the Eclipse Foundation'
+original_url: 'https://bazlur.ca/2023/04/10/my-committer-profile-interview-with-the-eclipse-foundation/'
+date_scraped: '2025-02-15T09:07:28.273272352'
 ---
 
 ![](images/screen-shot-2023-04-10-at-6.11.44-am.png)

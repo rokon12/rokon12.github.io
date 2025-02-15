@@ -1,7 +1,7 @@
 ---
-title: Code, Conferences, and the Swiss Alps: A Monthly Roundup
-original_url: https://bazlur.ca/2023/06/28/code-conferences-and-the-swiss-alps-a-monthly-roundup/
-date_scraped: 2025-02-15T09:06:27.306055343
+title: 'Code, Conferences, and the Swiss Alps: A Monthly Roundup'
+original_url: 'https://bazlur.ca/2023/06/28/code-conferences-and-the-swiss-alps-a-monthly-roundup/'
+date_scraped: '2025-02-15T09:06:27.306055343'
 ---
 
 ![](images/1687906864391.jpeg)

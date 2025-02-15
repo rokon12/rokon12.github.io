@@ -1,7 +1,7 @@
 ---
-title: Top 10 Java Language Features
-original_url: https://bazlur.ca/2022/04/12/top-10-java-language-features/
-date_scraped: 2025-02-15T09:09:53.434381725
+title: 'Top 10 Java Language Features'
+original_url: 'https://bazlur.ca/2022/04/12/top-10-java-language-features/'
+date_scraped: '2025-02-15T09:09:53.434381725'
 ---
 
 ![](images/top-10-java-language-features-1.png)

@@ -1,7 +1,7 @@
 ---
-title: Exploring File Storage Solutions in Spring Boot: Database, Local Systems, Cloud Services, and Beyond
-original_url: https://bazlur.ca/2023/08/17/exploring-file-storage-solutions-in-spring-boot-database-local-systems-cloud-services-and-beyond/
-date_scraped: 2025-02-15T09:05:46.376095893
+title: 'Exploring File Storage Solutions in Spring Boot: Database, Local Systems, Cloud Services, and Beyond'
+original_url: 'https://bazlur.ca/2023/08/17/exploring-file-storage-solutions-in-spring-boot-database-local-systems-cloud-services-and-beyond/'
+date_scraped: '2025-02-15T09:05:46.376095893'
 ---
 
 ![](images/cd03deb1-489d-4867-9b5b-2ffde99a3e20.jpeg)

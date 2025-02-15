@@ -1,7 +1,7 @@
 ---
-title: Breaking the Code: How Chris Newland is Changing the Game in JVM Performance!
-original_url: https://bazlur.ca/2023/06/12/breaking-the-code-how-chris-newland-is-changing-the-game-in-jvm-performance/
-date_scraped: 2025-02-15T09:06:39.603032331
+title: 'Breaking the Code: How Chris Newland is Changing the Game in JVM Performance!'
+original_url: 'https://bazlur.ca/2023/06/12/breaking-the-code-how-chris-newland-is-changing-the-game-in-jvm-performance/'
+date_scraped: '2025-02-15T09:06:39.603032331'
 ---
 
 ![](images/chris.png)
