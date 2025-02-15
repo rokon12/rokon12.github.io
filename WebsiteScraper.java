@@ -20,7 +20,7 @@ import java.util.*;
 
 public class WebsiteScraper {
     private static final String WEBSITE_URL = "https://bazlur.ca";
-    private static final String OUTPUT_DIR = "website_content";
+    private static final String OUTPUT_DIR = "backup";
     private static final String RECORD_FILE = "record.json";
     private static final String PROGRESS_FILE = "scraper_progress.json";
     private static final ObjectMapper objectMapper = new ObjectMapper();

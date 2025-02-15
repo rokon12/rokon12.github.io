@@ -1,7 +1,26 @@
 
 ![image](https://github.com/rokon12/rokon12/assets/429073/f2f6e775-2692-4db8-9491-3a91acdcaff4)
 
+# Blog Archive Repository
 
+This repository contains an archive of blog posts from [bazlur.ca](https://bazlur.ca). The content is served through GitHub Pages, making it easily accessible and searchable.
+
+## Structure
+- `backup/`: Contains all markdown blog posts
+- `backup/images/`: Contains all images referenced in the blog posts
+
+## Accessing the Blog Archive
+To view the blog archive:
+
+1. Go to repository Settings
+2. Navigate to "Pages" under "Code and automation"
+3. Under "Source", select "Deploy from a branch"
+4. Select "main" branch and "/" (root) folder
+5. Click Save
+
+The blog archive will be available at: `https://[username].github.io/[repository-name]`
+
+## Original Author
 Hello! I'm Bazlur, a Software Engineer with over a decade of professional experience in the software industry, primarily focused on Java and related technologies. I was recently honored with the title of [Java Champion](https://twitter.com/Java_Champions/status/1523728715368509440).
 
 Beyond my regular work, I am passionate about mentoring, writing, speaking at conferences, and contributing to open-source projects. I founded and currently moderate the [Java User Group in Bangladesh](https://jugbd.org/), organizing meetups and conferences to share Java-related knowledge with the community since 2013. I was named a Most Valuable Blogger (MVP) by [DZone](https://dzone.com/users/1298119/bazlur_rahman.html), one of the world's most recognized technology publishers. Additionally, I serve as an editor for the Java Queue at [InfoQ](https://www.infoq.com/profile/A-N-M-Bazlur-Rahman/), another leading technology content publisher and conference organizer, and at [Foojay.io](https://foojay.io/today/author/bazlur-rahman/), a platform for OpenJDK enthusiasts. I have also published [five bestselling books](https://www.rokomari.com/book/author/47860/a-n-m-bazlur-rahman) about the Java programming language in Bengali.

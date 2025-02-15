@@ -1,0 +1,39 @@
+# Jekyll configuration for GitHub Pages
+title: Bazlur's Blog Archive
+description: Archive of blog posts from bazlur.ca
+baseurl: ""
+url: ""
+
+# Build settings
+markdown: kramdown
+theme: jekyll-theme-minimal
+
+# Directory settings
+include: ["backup"]
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /:title/
+
+# Default layout for markdown files
+defaults:
+  - scope:
+      path: "backup"
+      type: "pages"
+    values:
+      layout: "default"
+
+# Plugins
+plugins:
+  - jekyll-relative-links
+  - jekyll-optional-front-matter
+
+# Additional settings
+relative_links:
+  enabled: true
+  collections: true
+
+optional_front_matter:
+  enabled: true

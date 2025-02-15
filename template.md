@@ -31,6 +31,12 @@ I hold a bachelor's degree in Information Technology, majoring in Software Engin
 <a href="https://sessionize.com/bazlur/" target="blank"><img align="center" src="https://sessionize.com/landing/images/sessionize-logo.svg" alt="https://www.bazlur.com/feed.xml" height="30" /></a>
 </p>
 
+# Blog Archive Repository
+
+This repository contains an archive of blog posts from [bazlur.ca](https://bazlur.ca). The content is served through GitHub Pages, making it easily accessible and searchable.
+
+## Structure
+- `backup/`: Contains all markdown blog posts
 
 
 ## ✍️ Most recent blog posts
