@@ -1,15 +1,18 @@
 # Jekyll configuration for GitHub Pages
 title: Bazlur's Blog Archive
-description: Archive of blog posts from bazlur.ca
+description: A collection of articles on Java, Software Development, and Technology
 baseurl: ""
 url: ""
 
 # Build settings
 markdown: kramdown
-theme: jekyll-theme-minimal
+theme: jekyll-theme-cayman
+show_downloads: false
 
 # Directory settings
-include: ["backup"]
+include: 
+  - backup
+  - backup/images
 
 # Collections
 collections:
@@ -25,10 +28,17 @@ defaults:
     values:
       layout: "default"
 
+# Navigation
+header_pages:
+  - about.md
+  - categories.md
+
 # Plugins
 plugins:
   - jekyll-relative-links
   - jekyll-optional-front-matter
+  - jekyll-seo-tag
+  - jekyll-sitemap
 
 # Additional settings
 relative_links:
@@ -37,3 +47,15 @@ relative_links:
 
 optional_front_matter:
   enabled: true
+
+# Site settings
+author:
+  name: Bazlur Rahman
+  email: bazlur@jugbd.org
+  website: https://bazlur.ca
+
+# Social media
+social:
+  twitter: bazlur_rahman
+  github: rokon12
+  linkedin: bazlur
