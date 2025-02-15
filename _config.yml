@@ -7,7 +7,7 @@ url: ""
 # Build settings
 markdown: kramdown
 theme: jekyll-theme-minimal
-show_downloads: true
+show_downloads: false
 # Collections
 remote_theme: pages-themes/minimal@v0.2.0
 
