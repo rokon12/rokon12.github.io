@@ -20,13 +20,15 @@ import java.util.*;
 
 public class WebsiteScraper {
     private static final String WEBSITE_URL = "https://bazlur.ca";
-    private static final String OUTPUT_DIR = "backup";
+    private static final String OUTPUT_DIR = "_posts";
     private static final String RECORD_FILE = "record.json";
     private static final String PROGRESS_FILE = "scraper_progress.json";
+    private static final int MAX_ARTICLES = Integer.MAX_VALUE; // Limit for testing
+    private static int processedArticles = 0;
     private static final ObjectMapper objectMapper = new ObjectMapper();
     private static final FlexmarkHtmlConverter htmlToMarkdownConverter = FlexmarkHtmlConverter.builder().build();
-    private static final int REQUEST_DELAY_MS = 1000; // Delay between requests
-    private static final int CONNECTION_TIMEOUT_MS = 60000; // 1 minute timeout
+    private static final int REQUEST_DELAY_MS = 100; // Reduced delay for testing
+    private static final int CONNECTION_TIMEOUT_MS = 5000; // 5 second timeout for testing
 
     private static class Progress {
         @com.fasterxml.jackson.annotation.JsonTypeInfo(use = com.fasterxml.jackson.annotation.JsonTypeInfo.Id.CLASS)
@@ -238,8 +240,12 @@ public class WebsiteScraper {
                             continue;
                         }
 
-                        // Remove sharing and related content
+                        // Remove sharing, related content, and subscription section
                         content.select(".sharedaddy, .jp-relatedposts, .entry-meta, .entry-footer").remove();
+                        content.select("h3:contains(Discover more from A N M Bazlur Rahman)").remove();
+                        content.select("p:contains(Subscribe to get the latest posts sent to your email)").remove();
+                        content.select("p:contains(Type your email...)").remove();
+                        content.select("p:contains(Subscribe)").remove();
 
                         // Download images
                         Elements images = content.select("img");
@@ -267,6 +273,18 @@ public class WebsiteScraper {
                             }
                         }
 
+                        // Extract publication date
+                        String publishDate = content.select("time.entry-date.published").attr("datetime");
+                        String fileDate;
+                        if (publishDate != null && !publishDate.isEmpty()) {
+                            // Use publication date (format: YYYY-MM-DD)
+                            fileDate = publishDate.substring(0, 10);
+                        } else {
+                            // Fallback to current date if publication date not found
+                            fileDate = java.time.LocalDate.now().format(java.time.format.DateTimeFormatter.ISO_LOCAL_DATE);
+                            publishDate = fileDate + "T00:00:00+00:00"; // Set a default timestamp
+                        }
+
                         // Convert to markdown
                         String markdown = htmlToMarkdownConverter.convert(content.html());
 
@@ -274,19 +292,28 @@ public class WebsiteScraper {
                         String fullContent = "---\n" +
                                              "title: '" + title + "'\n" +
                                              "original_url: '" + url + "'\n" +
+                                             "date_published: '" + publishDate + "'\n" +
                                              "date_scraped: '" + java.time.LocalDateTime.now().format(java.time.format.DateTimeFormatter.ISO_LOCAL_DATE_TIME) + "'\n" +
                                              "---\n\n" +
                                              markdown;
 
-                        // Save markdown file
-                        String fileName = title.replaceAll("[^a-zA-Z0-9\\s]", "").replaceAll("\\s+", "-").toLowerCase() + ".md";
+                        String sanitizedTitle = title.replaceAll("[^a-zA-Z0-9\\s]", "").replaceAll("\\s+", "-").toLowerCase();
+                        String fileName = fileDate + "-" + sanitizedTitle + ".md";
                         Files.write(Paths.get(OUTPUT_DIR, fileName), fullContent.getBytes());
 
                         // Update record
                         progress.existingArticles.put(url, fileName);
                         newArticles++;
+                        processedArticles++;
 
                         log("Successfully processed article: " + title);
+
+                        // Check if we've reached the article limit
+                        if (processedArticles >= MAX_ARTICLES) {
+                            log("Reached article limit of " + MAX_ARTICLES + ". Stopping.");
+                            progress.save();
+                            return;
+                        }
                     } catch (Exception e) {
                         log("Error processing article: " + e.getMessage());
                     }
