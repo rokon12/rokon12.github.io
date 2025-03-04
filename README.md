@@ -96,6 +96,11 @@ JEP 477, Implicitly Declared Classes and Instance Main Methods (Third Preview), 
 ## <u>[Foojay.io](https://foojay.io/)</u>
 
 
+### SummarizingTokenWindowChatMemory: Enhancing LLM’s Conversations with Efficient Summarization (2025-03-03)
+Table of Contents SummarizingTokenWindowChatMemoryThe Summarizer InterfaceSummarization LogicLLM SummarizationWhy This MattersConclusion LLM chat models have become an integral part of many applications today. We are all experimenting and exploring the best ways to utilize them effectively. For Java developers, LangChain4j has …...
+[Read further^](https://foojay.io/today/summarizingtokenwindowchatmemory-enhancing-llms-conversations-with-efficient-summarization/)
+
+
 ### Java Tips # 01 – Writing Shebang Scripts in Pure Java (2024-10-29)
 Table of Contents Getting StartedKey Point: Shebang LineMake It ExecutableBonus Tip: Running From Anywhere Did you know you can write a CLI script in Java just as easily as you would in a bash script, and run it directly from …...
 [Read further^](https://foojay.io/today/java-tips-01-writing-shebang-scripts-in-pure-java/)
@@ -146,11 +151,6 @@ A compelling narrative around web crawling in Java, contrasting classical thread
 [Read further^](https://foojay.io/today/web-crawling-in-java-a-tale-of-classical-threads-and-virtual-threads/)
 
 
-### Exploring the Impact of Stack Size on JVM Thread Creation: A Myth Debunked (2023-09-20)
-Does stack size have an impact on the number of native threads that can be created in a JVM environment?...
-[Read further^](https://foojay.io/today/exploring-the-impact-of-stack-size-on-jvm-thread-creation-a-myth-debunked/)
-
-
 ## <u>[Talks](https://github.com/rokon12/confernece-talks)</u>
 
 
@@ -161,4 +161,4 @@ Does stack size have an impact on the number of native threads that can be creat
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Mon, 3 Mar 2025 02:46:36 GMT*
+*This page was last updated on Tue, 4 Mar 2025 02:46:00 GMT*
