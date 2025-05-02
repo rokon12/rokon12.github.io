@@ -97,12 +97,12 @@ JEP 477, Implicitly Declared Classes and Instance Main Methods (Third Preview), 
 
 
 ### SummarizingTokenWindowChatMemory: Enhancing LLM’s Conversations with Efficient Summarization (2025-03-03)
-LLM chat models have become an integral part of many applications today. We are all experimenting and exploring the best ways to utilize them effectively. For Java developers, LangChain4j has been an incredible tool in this journey. By design, most …...
+Table of Contents SummarizingTokenWindowChatMemoryThe Summarizer InterfaceSummarization LogicLLM SummarizationWhy This MattersConclusion LLM chat models have become an integral part of many applications today. We are all experimenting and exploring the best ways to utilize them effectively. For Java developers, LangChain4j has …...
 [Read further^](https://foojay.io/today/summarizingtokenwindowchatmemory-enhancing-llms-conversations-with-efficient-summarization/)
 
 
 ### Java Tips # 01 – Writing Shebang Scripts in Pure Java (2024-10-29)
-Did you know you can write a CLI script in Java just as easily as you would in a bash script, and run it directly from the shell? This is commonly called a shebang script, though we are mostly familiar …...
+Table of Contents Getting StartedKey Point: Shebang LineMake It ExecutableBonus Tip: Running From Anywhere Did you know you can write a CLI script in Java just as easily as you would in a bash script, and run it directly from …...
 [Read further^](https://foojay.io/today/java-tips-01-writing-shebang-scripts-in-pure-java/)
 
 
@@ -161,4 +161,4 @@ A compelling narrative around web crawling in Java, contrasting classical thread
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Thu, 1 May 2025 03:10:10 GMT*
+*This page was last updated on Fri, 2 May 2025 03:01:40 GMT*
