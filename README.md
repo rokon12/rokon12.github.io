@@ -43,6 +43,11 @@ This repository contains an archive of blog posts from [bazlur.ca](https://bazlu
 ## <u>[InfoQ](https://www.infoq.com/profile/A-N-M-Bazlur-Rahman/)</u>
 
 
+### Instance Main Methods Move from Preview to Final in JDK&#8239;25 (2025-05-05)
+JEP 512 enhances Java with Compact Source Files and Instance Main Methods in JDK 25, easing the learning curve for beginners. Key features include simplified syntax, automatic imports, and a new IO helper class, empowering developers to create programs with minimal complexity. These changes solidify Java's commitment to accessibility and innovation in programming....
+[Read further^](https://www.infoq.com//news/2025/05/jdk25-instance-main-methods)
+
+
 ### Java Evolves to Tackle Virtual Threads Pinning with JEP 491 (2024-11-04)
 JEP 491, &quot;Synchronize Virtual Threads without Pinning,&quot; is now Proposed to Target for JDK 24. This initiative aims to resolve Java's &quot;pinning&quot; issue, a limitation of the synchronized keyword, which restricts scalability with virtual threads.  JEP 491 eliminates this constraint, unlocking high-performance concurrency without extensive refactoring....
 [Read further^](https://www.infoq.com//news/2024/11/java-evolves-tackle-pinning)
@@ -86,11 +91,6 @@ The Workflow Description Language (WDL) team has announced the release of WDL 1.
 ### Rampdown Phase One: What's to Expect in JDK 23 (2024-06-06)
 As Iris Clark declared, JDK 23 is now in the crucial Rampdown Phase One, a significant milestone in the JDK development process. This phase started on Thursday, June 6, and the Java community eagerly anticipates the new features and enhancements that will be part of this release. This crucial phase marks the transition of changes intended for JDK 23 into the mainline repository....
 [Read further^](https://www.infoq.com//news/2024/06/jdk-23-rampdown-phase-one)
-
-
-### JEP 477 Enhances Beginner Experience with Implicitly Declared Classes and Instance Main Methods (2024-05-27)
-JEP 477, Implicitly Declared Classes and Instance Main Methods (Third Preview), has been promoted to Targeted status. This JEP proposes to &quot;evolve the Java language so that students can write their first programs without needing to understand language features designed for large programs.&quot; This JEP moves forward Brian Goetz's September 2022 blog post, Paving the on-ramp....
-[Read further^](https://www.infoq.com//news/2024/05/jep477-implicit-classes-main)
 
 
 ## <u>[Foojay.io](https://foojay.io/)</u>
@@ -161,4 +161,4 @@ A compelling narrative around web crawling in Java, contrasting classical thread
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Mon, 5 May 2025 03:06:06 GMT*
+*This page was last updated on Tue, 6 May 2025 03:02:10 GMT*
