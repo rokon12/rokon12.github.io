@@ -96,6 +96,11 @@ As Iris Clark declared, JDK 23 is now in the crucial Rampdown Phase One, a signi
 ## <u>[Foojay.io](https://foojay.io/)</u>
 
 
+### Building FormPilot: My Journey Creating an AI-Powered Form Filler with RAG, LangChain4j, and Ollama (2025-05-06)
+Table of Contents The InspirationThe ArchitectureGetting Started: Setting Up Your EnvironmentPart 1: Installing and Running Ollama LocallyPart 2: Creating the Spring Boot Project via Spring InitializrImplementing RAG with LangChain4jThe Magic of LangChain4j’s @AiServiceIntegrating with OllamaBuilding the Chrome ExtensionSetting up the …...
+[Read further^](https://foojay.io/today/building-formpilot-my-journey-creating-an-ai-powered-form-filler-with-rag-langchain4j-and-ollama/)
+
+
 ### SummarizingTokenWindowChatMemory: Enhancing LLM’s Conversations with Efficient Summarization (2025-03-03)
 Table of Contents SummarizingTokenWindowChatMemoryThe Summarizer InterfaceSummarization LogicLLM SummarizationWhy This MattersConclusion LLM chat models have become an integral part of many applications today. We are all experimenting and exploring the best ways to utilize them effectively. For Java developers, LangChain4j has …...
 [Read further^](https://foojay.io/today/summarizingtokenwindowchatmemory-enhancing-llms-conversations-with-efficient-summarization/)
@@ -146,11 +151,6 @@ In the context of virtual threads, pinning refers to the condition where a virtu
 [Read further^](https://foojay.io/today/how-to-diagnose-and-mitigate-pinning-in-javas-virtual-thread-execution/)
 
 
-### Web Crawling in Java: A Tale of Classical Threads and Virtual Threads (2023-09-29)
-A compelling narrative around web crawling in Java, contrasting classical threads with their newer counterpart: virtual threads....
-[Read further^](https://foojay.io/today/web-crawling-in-java-a-tale-of-classical-threads-and-virtual-threads/)
-
-
 ## <u>[Talks](https://github.com/rokon12/confernece-talks)</u>
 
 
@@ -161,4 +161,4 @@ A compelling narrative around web crawling in Java, contrasting classical thread
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Tue, 6 May 2025 03:02:10 GMT*
+*This page was last updated on Wed, 7 May 2025 03:03:35 GMT*
