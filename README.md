@@ -43,6 +43,11 @@ This repository contains an archive of blog posts from [bazlur.ca](https://bazlu
 ## <u>[InfoQ](https://www.infoq.com/profile/A-N-M-Bazlur-Rahman/)</u>
 
 
+### JEP 505 Delivers Fifth Preview of Java's Structured Concurrency with Key API Refinements (2025-05-12)
+JEP 505, Structured Concurrency, has reached Targeted status in JDK 25. This refined API enhances parallel task management through static factory methods like StructuredTaskScope.open(). It improves cancellation, observability, and subtask lifetime handling, ensuring clearer, safer code. Developers are encouraged to explore and provide feedback on this innovative iteration....
+[Read further^](https://www.infoq.com//news/2025/05/jep-505-concurrency-preview-5)
+
+
 ### Instance Main Methods Move from Preview to Final in JDK&#8239;25 (2025-05-05)
 JEP 512 enhances Java with Compact Source Files and Instance Main Methods in JDK 25, easing the learning curve for beginners. Key features include simplified syntax, automatic imports, and a new IO helper class, empowering developers to create programs with minimal complexity. These changes solidify Java's commitment to accessibility and innovation in programming....
 [Read further^](https://www.infoq.com//news/2025/05/jdk25-instance-main-methods)
@@ -86,11 +91,6 @@ JEP 471, Deprecate the Memory-Access Methods in sun.misc.Unsafe for Removal, has
 ### WDL 1.2.0: Enhancing Workflow Description Language for Bioinformatics (2024-06-18)
 The Workflow Description Language (WDL) team has announced the release of WDL 1.2.0, a significant update to improve workflow descriptions' flexibility and usability in bioinformatics. This new version introduces several key features and enhancements that promise to streamline workflow management and execution, making it easier for developers and researchers to implement and manage workflows....
 [Read further^](https://www.infoq.com//news/2024/06/workflow-description-language)
-
-
-### Rampdown Phase One: What's to Expect in JDK 23 (2024-06-06)
-As Iris Clark declared, JDK 23 is now in the crucial Rampdown Phase One, a significant milestone in the JDK development process. This phase started on Thursday, June 6, and the Java community eagerly anticipates the new features and enhancements that will be part of this release. This crucial phase marks the transition of changes intended for JDK 23 into the mainline repository....
-[Read further^](https://www.infoq.com//news/2024/06/jdk-23-rampdown-phase-one)
 
 
 ## <u>[Foojay.io](https://foojay.io/)</u>
@@ -161,4 +161,4 @@ In the context of virtual threads, pinning refers to the condition where a virtu
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Mon, 12 May 2025 03:07:15 GMT*
+*This page was last updated on Tue, 13 May 2025 03:05:14 GMT*
