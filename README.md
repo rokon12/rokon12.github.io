@@ -43,6 +43,11 @@ This repository contains an archive of blog posts from [bazlur.ca](https://bazlu
 ## <u>[InfoQ](https://www.infoq.com/profile/A-N-M-Bazlur-Rahman/)</u>
 
 
+### Spring AI 1.0 Released, Streamlines AI Application Development with Broad Model Support (2025-05-20)
+Introducing Spring AI 1.0: a groundbreaking framework that streamlines the creation of AI-driven applications in Java. Seamlessly integrate with top AI models for chat, image generation, and more. With portable abstractions and support for Retrieval Augmented Generation, developers can build scalable, production-ready solutions while adhering to Spring standards. Start innovating today!...
+[Read further^](https://www.infoq.com//news/2025/05/spring-ai-1-0-streamlines-apps)
+
+
 ### JEP 505 Delivers Fifth Preview of Java's Structured Concurrency with Key API Refinements (2025-05-12)
 JEP 505, Structured Concurrency, has reached Targeted status in JDK 25. This refined API enhances parallel task management through static factory methods like StructuredTaskScope.open(). It improves cancellation, observability, and subtask lifetime handling, ensuring clearer, safer code. Developers are encouraged to explore and provide feedback on this innovative iteration....
 [Read further^](https://www.infoq.com//news/2025/05/jep-505-concurrency-preview-5)
@@ -86,11 +91,6 @@ The Java in Education, launched by the Java Community Process (JCP) Executive Co
 ### JEP 456: Preparing for the Removal of Unsafe Memory-Access Methods (2024-06-24)
 JEP 471, Deprecate the Memory-Access Methods in sun.misc.Unsafe for Removal, has been delivered for JDK 23. This JEP proposes to deprecate the memory access methods in the Unsafe class for removal in a future release. These unsupported methods have been superseded by standard APIs: JEP 193, Variable Handles, delivered in JDK 9; and JEP 454, Foreign Function &amp; Memory API, delivered in JDK 22....
 [Read further^](https://www.infoq.com//news/2024/06/jep-456-removing-unsafe-methods)
-
-
-### WDL 1.2.0: Enhancing Workflow Description Language for Bioinformatics (2024-06-18)
-The Workflow Description Language (WDL) team has announced the release of WDL 1.2.0, a significant update to improve workflow descriptions' flexibility and usability in bioinformatics. This new version introduces several key features and enhancements that promise to streamline workflow management and execution, making it easier for developers and researchers to implement and manage workflows....
-[Read further^](https://www.infoq.com//news/2024/06/workflow-description-language)
 
 
 ## <u>[Foojay.io](https://foojay.io/)</u>
@@ -161,4 +161,4 @@ In the context of virtual threads, pinning refers to the condition where a virtu
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Tue, 20 May 2025 03:05:51 GMT*
+*This page was last updated on Wed, 21 May 2025 03:05:22 GMT*
