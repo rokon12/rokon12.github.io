@@ -44,7 +44,7 @@ This repository contains an archive of blog posts from [bazlur.ca](https://bazlu
 
 
 ### Spring AI 1.0 Released, Streamlines AI Application Development with Broad Model Support (2025-05-20)
-Introducing Spring AI 1.0: a groundbreaking framework that streamlines the creation of AI-driven applications in Java. Seamlessly integrate with top AI models for chat, image generation, and more. With portable abstractions and support for Retrieval Augmented Generation, developers can build scalable, production-ready solutions while adhering to Spring standards. Start innovating today!...
+Introducing Spring AI 1.0: a groundbreaking framework that streamlines the creation of AI-driven applications in Java. Seamlessly integrate with top AI models for chat, image generation, and more. With portable abstractions and support for Retrieval Augmented Generation, developers can build scalable, production-ready solutions while adhering to Spring standards....
 [Read further^](https://www.infoq.com//news/2025/05/spring-ai-1-0-streamlines-apps)
 
 
@@ -161,4 +161,4 @@ In the context of virtual threads, pinning refers to the condition where a virtu
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Wed, 21 May 2025 03:05:22 GMT*
+*This page was last updated on Thu, 22 May 2025 03:05:36 GMT*
