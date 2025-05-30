@@ -2,517 +2,229 @@
   {
     "name": "Toronto Java Users Group",
     "date": "2025",
-    "location": "Not specified",
+    "location": "Toronto, ON, Canada",
+    "locationIcon": "🇨🇦",
     "role": "Speaker",
     "type": "talk",
     "talkTitle": "Building LLM Apps in Java with LangChain4j and Jakarta EE",
     "talkIcon": "🎤",
     "isUpcoming": true,
-    "eventUrl": null,
-    "links": []
+    "eventUrl": "https://www.meetup.com/toronto-java-users-group/events/307291866/?eventOrigin=group_events_list",
+    "links": [
+      {
+        "type": "event",
+        "url": "https://www.meetup.com/toronto-java-users-group/events/307291866/?eventOrigin=group_events_list",
+        "text": "Details"
+      }
+    ]
   },
   {
     "name": "Houston Java Users Group",
     "date": "2025",
-    "location": "Not specified",
+    "location": "Houston, TX, USA",
+    "locationIcon": "🇺🇸",
     "role": "Speaker",
     "type": "talk",
     "talkTitle": "Building LLM Apps in Java with LangChain4j and Jakarta EE",
     "talkIcon": "🎤",
     "isUpcoming": true,
-    "eventUrl": null,
-    "links": []
+    "eventUrl": "https://www.eventbrite.com/e/java-llms-a-hands-on-guide-with-bazlur-rahman-syed-m-shaaf-tickets-1309355159529?aff=ebdsoporgprofile",
+    "links": [
+      {
+        "type": "event",
+        "url": "https://www.eventbrite.com/e/java-llms-a-hands-on-guide-with-bazlur-rahman-syed-m-shaaf-tickets-1309355159529?aff=ebdsoporgprofile",
+        "text": "Details"
+      }
+    ]
   },
   {
     "name": "Jakarta Tech Talk",
     "date": "2025",
-    "location": "Not specified",
+    "location": "Jakarta, Indonesia",
+    "locationIcon": "🇮🇩",
     "role": "Speaker",
     "type": "talk",
-    "talkTitle": "Building LLM Apps in Java with LangChain4j and Jakarta EE",
+    "talkTitle": "TechTalk: Building LLM Apps in Java with LangChain4j and Jakarta EE",
     "talkIcon": "🎤",
     "isUpcoming": true,
-    "eventUrl": null,
-    "links": []
+    "eventUrl": "https://www.meetup.com/toronto-java-users-group/events/307291866/?eventOrigin=group_events_list",
+    "links": [
+      {
+        "type": "event",
+        "url": "https://www.meetup.com/toronto-java-users-group/events/307291866/?eventOrigin=group_events_list",
+        "text": "Details"
+      }
+    ]
   },
   {
-    "name": "JDConf Microsoft",
+    "name": "JDConf (Microsoft)",
     "date": "2025",
-    "location": "Not specified",
+    "location": "Online",
+    "locationIcon": "🌐",
     "role": "Speaker",
     "type": "talk",
     "talkTitle": "Building LLM Apps in Java with LangChain4j and Jakarta EE",
     "talkIcon": "🎤",
     "isUpcoming": true,
-    "eventUrl": null,
-    "links": []
+    "eventUrl": "https://jdconf.com/speakers-details.html#bazlur-rahman",
+    "links": [
+      {
+        "type": "event",
+        "url": "https://jdconf.com/speakers-details.html#bazlur-rahman",
+        "text": "Details"
+      }
+    ]
   },
   {
     "name": "Michigan Technology Conference 2025",
     "date": "2025",
-    "location": "Not specified",
+    "location": "Michigan, USA",
+    "locationIcon": "🇺🇸",
     "role": "Speaker",
     "type": "talk",
     "talkTitle": "Breaking Java Stereotypes: It's Not Your Dad's Language Anymore",
     "talkIcon": "🎤",
     "isUpcoming": true,
-    "eventUrl": null,
-    "links": []
+    "eventUrl": "https://www.mitechcon.events/MITechCon2025#/speakers?lang=en&sessionId=140801000000528077",
+    "links": [
+      {
+        "type": "event",
+        "url": "https://www.mitechcon.events/MITechCon2025#/speakers?lang=en&sessionId=140801000000528077",
+        "text": "Details"
+      }
+    ]
   },
   {
     "name": "DevNexus 2025",
     "date": "2025",
-    "location": "Not specified",
+    "location": "Atlanta, GA, USA",
+    "locationIcon": "🇺🇸",
     "role": "Speaker",
     "type": "talk",
     "talkTitle": "Java + LLMs: A Hands-On Guide to Building LLM Apps in Java with Jakarta EE",
     "talkIcon": "🎤",
     "isUpcoming": true,
-    "eventUrl": null,
-    "links": []
+    "eventUrl": "https://devnexus.com/presentations/java-llms-a-hands-on-guide-to-building-llm-apps-in-java-with-jakartaee",
+    "links": [
+      {
+        "type": "event",
+        "url": "https://devnexus.com/presentations/java-llms-a-hands-on-guide-to-building-llm-apps-in-java-with-jakartaee",
+        "text": "Details"
+      }
+    ]
   },
   {
-    "name": "JChampion Conference (2025)",
+    "name": "JChampions Conference 2025",
     "date": "2025",
-    "location": "Not specified",
+    "location": "Online",
+    "locationIcon": "🌐",
     "role": "Speaker",
     "type": "talk",
-    "talkTitle": "Java + LLMs: A Hands-On Guide to Building LLM Apps in Java with Jakarta EE",
+    "talkTitle": "Java + LLMs: A Hands-On Guide to Building LLM Apps in Java with Jakarta",
     "talkIcon": "🎤",
     "isUpcoming": true,
-    "eventUrl": null,
-    "links": []
+    "eventUrl": "https://jchampionsconf.com/sessions.html#rahmanCard",
+    "links": [
+      {
+        "type": "event",
+        "url": "https://jchampionsconf.com/sessions.html#rahmanCard",
+        "text": "Details"
+      }
+    ]
   },
   {
-    "name": "Geecon 2025",
+    "name": "GeeCON 2025",
     "date": "2025",
-    "location": "Not specified",
+    "location": "Kraków, Poland",
+    "locationIcon": "🇵🇱",
     "role": "Speaker",
     "type": "talk",
-    "talkTitle": "Java + LLMs: A Hands-On Guide to Building LLM Apps in Java with Jakarta EE",
+    "talkTitle": "Java + LLMs: A Hands‑On Guide to Building LLM Apps in Java",
     "talkIcon": "🎤",
     "isUpcoming": true,
-    "eventUrl": null,
-    "links": []
+    "eventUrl": "https://2025.geecon.org/speakers/info.html?id=1003",
+    "links": [
+      {
+        "type": "event",
+        "url": "https://2025.geecon.org/speakers/info.html?id=1003",
+        "text": "Details"
+      }
+    ]
   },
   {
-    "name": "RiyadhJUG",
-    "date": "2024",
-    "location": "Not specified",
+    "name": "Riyadh Java Users Group",
+    "date": "February 26 2024",
+    "location": "Riyadh, Saudi Arabia",
+    "locationIcon": "🇸🇦",
     "role": "Speaker",
     "type": "talk",
     "talkTitle": "Breaking Java Stereotypes: It's Not Your Dad's Language Anymore",
     "talkIcon": "🎤",
     "isUpcoming": false,
-    "eventUrl": null,
-    "links": []
+    "eventUrl": "https://www.youtube.com/live/sMA6e2fjubs",
+    "links": [
+      {
+        "type": "video",
+        "url": "https://www.youtube.com/live/sMA6e2fjubs",
+        "text": "Watch Recording"
+      }
+    ]
   },
   {
     "name": "Copenhagen Developers Festival 2024",
-    "date": "2024",
-    "location": "Not specified",
+    "date": "August 27‑29 2024",
+    "location": "Copenhagen, Denmark",
+    "locationIcon": "🇩🇰",
     "role": "Speaker",
     "type": "talk",
     "talkTitle": "Breaking Java Stereotypes: It's Not Your Dad's Language Anymore",
     "talkIcon": "🎤",
     "isUpcoming": false,
-    "eventUrl": null,
-    "links": []
+    "eventUrl": "https://cphdevfest.com/agenda/breaking-java-stereotypes-its-not-your-dads-language-anymore-0w5x/0exr9shappo",
+    "links": [
+      {
+        "type": "event",
+        "url": "https://cphdevfest.com/agenda/breaking-java-stereotypes-its-not-your-dads-language-anymore-0w5x/0exr9shappo",
+        "text": "Details"
+      }
+    ]
   },
   {
     "name": "ConFoo 2024",
-    "date": "2024",
-    "location": "Not specified",
+    "date": "February 21‑23 2024",
+    "location": "Montréal, QC, Canada",
+    "locationIcon": "🇨🇦",
+    "role": "Speaker",
+    "type": "talk",
+    "talkTitle": "A Tale of Two Cities: Blocking Code vs. Non‑Blocking Code",
+    "talkIcon": "🎤",
+    "isUpcoming": false,
+    "eventUrl": "https://confoo.ca/en/2024/session/a-tale-of-two-cities-blocking-code-vs-non-blocking-code",
+    "links": [
+      {
+        "type": "event",
+        "url": "https://confoo.ca/en/2024/session/a-tale-of-two-cities-blocking-code-vs-non-blocking-code",
+        "text": "Details"
+      }
+    ]
+  },
+  {
+    "name": "ConFoo 2024",
+    "date": "February 21‑23 2024",
+    "location": "Montréal, QC, Canada",
+    "locationIcon": "🇨🇦",
     "role": "Speaker",
     "type": "talk",
     "talkTitle": "Breaking Java Stereotypes: It's Not Your Dad's Language Anymore",
     "talkIcon": "🎤",
     "isUpcoming": false,
-    "eventUrl": null,
-    "links": []
-  },
-  {
-    "name": "ConFoo 2024",
-    "date": "2024",
-    "location": "Not specified",
-    "role": "Speaker",
-    "type": "talk",
-    "talkTitle": "A Tale of Two Cities: Blocking Code vs. Non-Blocking Code",
-    "talkIcon": "🎤",
-    "isUpcoming": false,
-    "eventUrl": null,
-    "links": []
-  },
-  {
-    "name": "JUG Bangalore",
-    "date": "2023",
-    "location": "Not specified",
-    "role": "Speaker",
-    "type": "talk",
-    "talkTitle": "Virtual Threads: Ushering a New Era of Concurrency",
-    "talkIcon": "🎤",
-    "isUpcoming": false,
-    "eventUrl": null,
-    "links": []
-  },
-  {
-    "name": "JCON WORLD 2023",
-    "date": "2023",
-    "location": "Not specified",
-    "role": "Speaker",
-    "type": "talk",
-    "talkTitle": "Virtual Threads: Ushering a New Era of Concurrency",
-    "talkIcon": "🎤",
-    "isUpcoming": false,
-    "eventUrl": null,
-    "links": []
-  },
-  {
-    "name": "JUG Istanbul",
-    "date": "2023",
-    "location": "Not specified",
-    "role": "Speaker",
-    "type": "talk",
-    "talkTitle": "Virtual Threads: Ushering a New Era of Concurrency",
-    "talkIcon": "🎤",
-    "isUpcoming": false,
-    "eventUrl": null,
-    "links": []
-  },
-  {
-    "name": "Toronto JUG",
-    "date": "2023",
-    "location": "Not specified",
-    "role": "Speaker",
-    "type": "talk",
-    "talkTitle": "Virtual Threads: Ushering a New Era of Concurrency",
-    "talkIcon": "🎤",
-    "isUpcoming": false,
-    "eventUrl": null,
-    "links": []
-  },
-  {
-    "name": "JConToronto",
-    "date": "2023",
-    "location": "Not specified",
-    "role": "Speaker",
-    "type": "talk",
-    "talkTitle": "Virtual Threads: Ushering a New Era of Concurrency",
-    "talkIcon": "🎤",
-    "isUpcoming": false,
-    "eventUrl": null,
-    "links": []
-  },
-  {
-    "name": "JCon Europe 2023",
-    "date": "2023",
-    "location": "Not specified",
-    "role": "Speaker",
-    "type": "talk",
-    "talkTitle": "A Tale of Two Cities: How Blocking Calls Are Treated",
-    "talkIcon": "🎤",
-    "isUpcoming": false,
-    "eventUrl": null,
-    "links": []
-  },
-  {
-    "name": "DevNexus",
-    "date": "2023",
-    "location": "Not specified",
-    "role": "Speaker",
-    "type": "talk",
-    "talkTitle": "A Tale of Two Cities: Blocking Code vs. Non-Blocking Code",
-    "talkIcon": "🎤",
-    "isUpcoming": false,
-    "eventUrl": null,
-    "links": []
-  },
-  {
-    "name": "Online Summit for Java Dev",
-    "date": "2023",
-    "location": "Not specified",
-    "role": "Speaker",
-    "type": "talk",
-    "talkTitle": "A Tale of Two Cities: Blocking Code vs. Non-Blocking Code",
-    "talkIcon": "🎤",
-    "isUpcoming": false,
-    "eventUrl": null,
-    "links": []
-  },
-  {
-    "name": "JChampion Conference",
-    "date": "2023",
-    "location": "Not specified",
-    "role": "Speaker",
-    "type": "talk",
-    "talkTitle": "A Tale of Two Cities: Blocking Code vs. Non-Blocking Code",
-    "talkIcon": "🎤",
-    "isUpcoming": false,
-    "eventUrl": null,
-    "links": []
-  },
-  {
-    "name": "ConFoo 2023",
-    "date": "2023",
-    "location": "Not specified",
-    "role": "Speaker",
-    "type": "talk",
-    "talkTitle": "Java Virtual Threads to Deliver Improved Throughput",
-    "talkIcon": "🎤",
-    "isUpcoming": false,
-    "eventUrl": null,
-    "links": []
-  },
-  {
-    "name": "ConFoo 2023",
-    "date": "2023",
-    "location": "Not specified",
-    "role": "Speaker",
-    "type": "talk",
-    "talkTitle": "Your Code on the Fastlane: Catch Up with Everyone",
-    "talkIcon": "🎤",
-    "isUpcoming": false,
-    "eventUrl": null,
-    "links": []
-  },
-  {
-    "name": "JakartaOne LIVESTREAM 2022",
-    "date": "2022",
-    "location": "Not specified",
-    "role": "Speaker",
-    "type": "talk",
-    "talkTitle": "Jakarta Starter: Create, Build, and Run Jakarta EE Applications in Under a Minute",
-    "talkIcon": "🎤",
-    "isUpcoming": false,
-    "eventUrl": null,
-    "links": []
-  },
-  {
-    "name": "PeruJUG",
-    "date": "2022",
-    "location": "Not specified",
-    "role": "Speaker",
-    "type": "talk",
-    "talkTitle": "Creating a Million Virtual Threads Using Project Loom",
-    "talkIcon": "🎤",
-    "isUpcoming": false,
-    "eventUrl": null,
-    "links": []
-  },
-  {
-    "name": "The Pittsburgh Java Meetup Group",
-    "date": "2022",
-    "location": "Not specified",
-    "role": "Speaker",
-    "type": "talk",
-    "talkTitle": "Creating a Million Virtual Threads Using Project Loom",
-    "talkIcon": "🎤",
-    "isUpcoming": false,
-    "eventUrl": null,
-    "links": []
-  },
-  {
-    "name": "SouJava",
-    "date": "2022",
-    "location": "Not specified",
-    "role": "Speaker",
-    "type": "talk",
-    "talkTitle": "Creating a Million Virtual Threads Using Project Loom",
-    "talkIcon": "🎤",
-    "isUpcoming": false,
-    "eventUrl": null,
-    "links": []
-  },
-  {
-    "name": "Devoxx Morocco",
-    "date": "2022",
-    "location": "Not specified",
-    "role": "Speaker",
-    "type": "talk",
-    "talkTitle": "Java Threading Essentials: Novice to Expert",
-    "talkIcon": "🎤",
-    "isUpcoming": false,
-    "eventUrl": null,
-    "links": []
-  },
-  {
-    "name": "JavaDay Istanbul 2022",
-    "date": "2022",
-    "location": "Not specified",
-    "role": "Speaker",
-    "type": "talk",
-    "talkTitle": "Java Threading Essentials: Novice to Expert",
-    "talkIcon": "🎤",
-    "isUpcoming": false,
-    "eventUrl": null,
-    "links": []
-  },
-  {
-    "name": "Arab Java User Group",
-    "date": "2022",
-    "location": "Not specified",
-    "role": "Speaker",
-    "type": "talk",
-    "talkTitle": "Your Java Code in the Fastlane: Project Loom",
-    "talkIcon": "🎤",
-    "isUpcoming": false,
-    "eventUrl": null,
-    "links": []
-  },
-  {
-    "name": "Star Meetup",
-    "date": "2022",
-    "location": "Not specified",
-    "role": "Speaker",
-    "type": "talk",
-    "talkTitle": "Your Java Code in the Fastlane: Project Loom",
-    "talkIcon": "🎤",
-    "isUpcoming": false,
-    "eventUrl": null,
-    "links": []
-  },
-  {
-    "name": "PhillyJUG",
-    "date": "2022",
-    "location": "Not specified",
-    "role": "Speaker",
-    "type": "talk",
-    "talkTitle": "Your Java Code in the Fastlane: Project Loom",
-    "talkIcon": "🎤",
-    "isUpcoming": false,
-    "eventUrl": null,
-    "links": []
-  },
-  {
-    "name": "Garden State Java User Group",
-    "date": "2022",
-    "location": "Not specified",
-    "role": "Speaker",
-    "type": "talk",
-    "talkTitle": "Your Java Code in the Fastlane: Project Loom",
-    "talkIcon": "🎤",
-    "isUpcoming": false,
-    "eventUrl": null,
-    "links": []
-  },
-  {
-    "name": "Geekle Online Java Summit",
-    "date": "2022",
-    "location": "Not specified",
-    "role": "Speaker",
-    "type": "talk",
-    "talkTitle": "Java Threading Essentials",
-    "talkIcon": "🎤",
-    "isUpcoming": false,
-    "eventUrl": null,
-    "links": []
-  },
-  {
-    "name": "FOSDEM 22",
-    "date": "2022",
-    "location": "Not specified",
-    "role": "Speaker",
-    "type": "talk",
-    "talkTitle": "Java Threading Essentials",
-    "talkIcon": "🎤",
-    "isUpcoming": false,
-    "eventUrl": null,
-    "links": []
-  },
-  {
-    "name": "JUGBD",
-    "date": "2022",
-    "location": "Not specified",
-    "role": "Speaker",
-    "type": "talk",
-    "talkTitle": "Advanced Java Memory Management",
-    "talkIcon": "🎤",
-    "isUpcoming": false,
-    "eventUrl": null,
-    "links": []
-  },
-  {
-    "name": "JUGBD",
-    "date": "2022",
-    "location": "Not specified",
-    "role": "Speaker",
-    "type": "talk",
-    "talkTitle": "Top 10 Questions Asked by Junior Java Developers",
-    "talkIcon": "🎤",
-    "isUpcoming": false,
-    "eventUrl": null,
-    "links": []
-  },
-  {
-    "name": "JUGBD",
-    "date": "2022",
-    "location": "Not specified",
-    "role": "Speaker",
-    "type": "talk",
-    "talkTitle": "Keynote Speech: Looking Back and Moving Forward",
-    "talkIcon": "🎤",
-    "isUpcoming": false,
-    "eventUrl": null,
-    "links": []
-  },
-  {
-    "name": "JUGBD",
-    "date": "2022",
-    "location": "Not specified",
-    "role": "Speaker",
-    "type": "talk",
-    "talkTitle": "What Does the Industry Expect from a Junior Software Developer",
-    "talkIcon": "🎤",
-    "isUpcoming": false,
-    "eventUrl": null,
-    "links": []
-  },
-  {
-    "name": "JUGBD",
-    "date": "2022",
-    "location": "Not specified",
-    "role": "Speaker",
-    "type": "talk",
-    "talkTitle": "Top 20 Reasons to Learn Java Now More Than Ever",
-    "talkIcon": "🎤",
-    "isUpcoming": false,
-    "eventUrl": null,
-    "links": []
-  },
-  {
-    "name": "Java Developers' Conference 21",
-    "date": "2021 & Earlier",
-    "location": "Not specified",
-    "role": "Panelist",
-    "type": "talk",
-    "talkTitle": "Panel Discussion",
-    "talkIcon": "🎤",
-    "isUpcoming": false,
-    "eventUrl": null,
-    "links": []
-  },
-  {
-    "name": "IEEE Computer Society",
-    "date": "2021 & Earlier",
-    "location": "Not specified",
-    "role": "Workshop Facilitator",
-    "type": "workshop",
-    "talkTitle": "Workshop on Basic Java Programming",
-    "talkIcon": "🛠️",
-    "isUpcoming": false,
-    "eventUrl": null,
-    "links": []
-  },
-  {
-    "name": "IEEE Computer Society",
-    "date": "2021 & Earlier",
-    "location": "Not specified",
-    "role": "Workshop Facilitator",
-    "type": "workshop",
-    "talkTitle": "Workshop on Advanced Java Programming: Thread & Lambda Expression",
-    "talkIcon": "🛠️",
-    "isUpcoming": false,
-    "eventUrl": null,
-    "links": []
+    "eventUrl": "https://confoo.ca/en/2024/session/breaking-java-stereotypes-it-s-not-your-dad-s-language",
+    "links": [
+      {
+        "type": "event",
+        "url": "https://confoo.ca/en/2024/session/breaking-java-stereotypes-it-s-not-your-dad-s-language",
+        "text": "Details"
+      }
+    ]
   }
 ]
