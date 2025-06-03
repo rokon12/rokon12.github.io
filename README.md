@@ -43,6 +43,11 @@ This repository contains an archive of blog posts from [bazlur.ca](https://bazlu
 ## <u>[InfoQ](https://www.infoq.com/profile/A-N-M-Bazlur-Rahman/)</u>
 
 
+### Java 25 Introduces Stable Values API for Deferred Immutability and Improved Application Startup (2025-06-02)
+JEP 502 introduces the Stable Values API in JDK 25, enhancing application startup performance by allowing deferred immutability. This feature enables thread-safe, at-most-once initialization of complex objects, combining the best of final fields with lazy initialization. It empowers developers to improve efficiency and reduce initialization pitfalls while leveraging JVM optimizations....
+[Read further^](https://www.infoq.com//news/2025/06/java25-stable-values-api-startup)
+
+
 ### Spring AI 1.0 Released, Streamlines AI Application Development with Broad Model Support (2025-05-20)
 Introducing Spring AI 1.0: a groundbreaking framework that streamlines the creation of AI-driven applications in Java. Seamlessly integrate with top AI models for chat, image generation, and more. With portable abstractions and support for Retrieval Augmented Generation, developers can build scalable, production-ready solutions while adhering to Spring standards....
 [Read further^](https://www.infoq.com//news/2025/05/spring-ai-1-0-streamlines-apps)
@@ -86,11 +91,6 @@ The OpenJDK has reached a milestone by announcing the Early Access (EA) build fo
 ### Java in Education Initiative Aims to Empower the Next Generation of Developers (2024-07-02)
 The Java in Education, launched by the Java Community Process (JCP) Executive Committee, is making significant strides in promoting Java technology within educational institutions. This program seeks to bridge the gap between academia and industry, ensuring that Java remains a foundational skill for aspiring developers....
 [Read further^](https://www.infoq.com//news/2024/07/java-education-initiative)
-
-
-### JEP 456: Preparing for the Removal of Unsafe Memory-Access Methods (2024-06-24)
-JEP 471, Deprecate the Memory-Access Methods in sun.misc.Unsafe for Removal, has been delivered for JDK 23. This JEP proposes to deprecate the memory access methods in the Unsafe class for removal in a future release. These unsupported methods have been superseded by standard APIs: JEP 193, Variable Handles, delivered in JDK 9; and JEP 454, Foreign Function &amp; Memory API, delivered in JDK 22....
-[Read further^](https://www.infoq.com//news/2024/06/jep-456-removing-unsafe-methods)
 
 
 ## <u>[Foojay.io](https://foojay.io/)</u>
@@ -161,4 +161,4 @@ In the context of virtual threads, pinning refers to the condition where a virtu
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Mon, 2 Jun 2025 03:13:39 GMT*
+*This page was last updated on Tue, 3 Jun 2025 03:09:12 GMT*
