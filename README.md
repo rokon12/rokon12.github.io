@@ -96,6 +96,11 @@ The Java in Education, launched by the Java Community Process (JCP) Executive Co
 ## <u>[Foojay.io](https://foojay.io/)</u>
 
 
+### Java’s Structured Concurrency: Finally Finding Its Footing (2025-06-04)
+Table of Contents What Actually Changed This TimeThe Core Concept Remains StrongThe headline change: static factory methodsJoiners: pick your success policyRolling your own JoinerBetter cancellation and deadlinesScoped values ride alongGuard-rails against misuseObservability improvementsSome more examples to try outFinal thoughts The …...
+[Read further^](https://foojay.io/today/javas-structured-concurrency-finally-finding-its-footing/)
+
+
 ### Building FormPilot: My Journey Creating an AI-Powered Form Filler with RAG, LangChain4j, and Ollama (2025-05-06)
 Table of Contents The InspirationThe ArchitectureGetting Started: Setting Up Your EnvironmentPart 1: Installing and Running Ollama LocallyPart 2: Creating the Spring Boot Project via Spring InitializrImplementing RAG with LangChain4jThe Magic of LangChain4j’s @AiServiceIntegrating with OllamaBuilding the Chrome ExtensionSetting up the …...
 [Read further^](https://foojay.io/today/building-formpilot-my-journey-creating-an-ai-powered-form-filler-with-rag-langchain4j-and-ollama/)
@@ -146,11 +151,6 @@ Explore the insightful journey of Bert Jan Schrijver, a Java Champion, as he dis
 [Read further^](https://foojay.io/today/journey-of-a-java-champion-bert-jan-schrijvers-path-to-mastery-and-community-leadership/)
 
 
-### How to Diagnose and Mitigate Pinning in Java’s Virtual Thread Execution (2023-10-10)
-In the context of virtual threads, pinning refers to the condition where a virtual thread is “stuck” to its carrier thread (the platform thread on which it runs)....
-[Read further^](https://foojay.io/today/how-to-diagnose-and-mitigate-pinning-in-javas-virtual-thread-execution/)
-
-
 ## <u>[Talks](https://github.com/rokon12/confernece-talks)</u>
 
 
@@ -161,4 +161,4 @@ In the context of virtual threads, pinning refers to the condition where a virtu
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Wed, 4 Jun 2025 03:09:36 GMT*
+*This page was last updated on Thu, 5 Jun 2025 03:09:18 GMT*
