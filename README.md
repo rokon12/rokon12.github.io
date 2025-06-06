@@ -43,6 +43,11 @@ This repository contains an archive of blog posts from [bazlur.ca](https://bazlu
 ## <u>[InfoQ](https://www.infoq.com/profile/A-N-M-Bazlur-Rahman/)</u>
 
 
+### Introducing Embabel: Advanced AI Agent Development for Java Applications (2025-06-05)
+Introducing the Embabel Agent Framework, a pioneering platform developed by Spring founder Rod Johnson, designed to revolutionize AI applications on the JVM. By integrating structured agent development and Goal-Oriented Action Planning, Embabel combines strong typing with dynamic planning, ensuring reliable, adaptable, and type-safe solutions for enterprise Java applications....
+[Read further^](https://www.infoq.com//news/2025/06/introducing-embabel-ai-agent)
+
+
 ### Java 25 Introduces Stable Values API for Deferred Immutability and Improved Application Startup (2025-06-02)
 JEP 502 introduces the Stable Values API in JDK 25, enhancing application startup performance by allowing deferred immutability. This feature enables thread-safe, at-most-once initialization of complex objects, combining the best of final fields with lazy initialization. It empowers developers to improve efficiency and reduce initialization pitfalls while leveraging JVM optimizations....
 [Read further^](https://www.infoq.com//news/2025/06/java25-stable-values-api-startup)
@@ -86,11 +91,6 @@ JEP 472, now Proposed to Target, aims to issue warnings for using the Java Nativ
 ### Project Leyden Announces Early Access Build: 2-3x Start-up Improvements for Java Applications (2024-07-08)
 The OpenJDK has reached a milestone by announcing the Early Access (EA) build for Project Leyden. This build represents over a year of development efforts to enhance Java application performance, particularly focusing on start-up times. The preliminary testing has shown impressive results, with popular application frameworks experiencing a 2-3x improvement in start-up times....
 [Read further^](https://www.infoq.com//news/2024/07/project-leyden-ea-release)
-
-
-### Java in Education Initiative Aims to Empower the Next Generation of Developers (2024-07-02)
-The Java in Education, launched by the Java Community Process (JCP) Executive Committee, is making significant strides in promoting Java technology within educational institutions. This program seeks to bridge the gap between academia and industry, ensuring that Java remains a foundational skill for aspiring developers....
-[Read further^](https://www.infoq.com//news/2024/07/java-education-initiative)
 
 
 ## <u>[Foojay.io](https://foojay.io/)</u>
@@ -161,4 +161,4 @@ Explore the insightful journey of Bert Jan Schrijver, a Java Champion, as he dis
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Thu, 5 Jun 2025 03:09:18 GMT*
+*This page was last updated on Fri, 6 Jun 2025 03:08:19 GMT*
