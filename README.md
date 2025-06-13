@@ -1,5 +1,5 @@
 
-![image](https://github.com/rokon12/rokon12/assets/429073/f2f6e775-2692-4db8-9491-3a91acdcaff4)
+![image](https://github.com/user-attachments/assets/8f8dbbe7-8676-4a55-83bb-7ee05ec315eb)
 
 
 Hello! I'm Bazlur, a Software Engineer with over a decade of professional experience in the software industry, primarily focused on Java and related technologies. I was recently honored with the title of [Java Champion](https://twitter.com/Java_Champions/status/1523728715368509440).
