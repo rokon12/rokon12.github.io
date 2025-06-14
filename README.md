@@ -1,5 +1,5 @@
 
-![image](https://github.com/user-attachments/assets/8f8dbbe7-8676-4a55-83bb-7ee05ec315eb)
+![image](https://github.com/rokon12/rokon12/assets/429073/f2f6e775-2692-4db8-9491-3a91acdcaff4)
 
 
 Hello! I'm Bazlur, a Software Engineer with over a decade of professional experience in the software industry, primarily focused on Java and related technologies. I was recently honored with the title of [Java Champion](https://twitter.com/Java_Champions/status/1523728715368509440).
@@ -161,4 +161,4 @@ Explore the insightful journey of Bert Jan Schrijver, a Java Champion, as he dis
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Fri, 13 Jun 2025 03:10:29 GMT*
+*This page was last updated on Sat, 14 Jun 2025 03:04:37 GMT*
