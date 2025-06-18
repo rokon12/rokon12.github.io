@@ -43,6 +43,11 @@ This repository contains an archive of blog posts from [bazlur.ca](https://bazlu
 ## <u>[InfoQ](https://www.infoq.com/profile/A-N-M-Bazlur-Rahman/)</u>
 
 
+### Java 25 Integrates Compact Object Headers with JEP 519 (2025-06-17)
+Java 25 introduces Compact Object Headers (JEP 519), delivering up to 30% CPU savings and reduced memory usage for applications with small objects. This user-friendly feature compresses object headers from 12 bytes to 8, requiring only a JVM flag to activate. Extensively validated by Amazon, it enhances performance, reduces GC pressure, and is ideal for modern cloud deployments....
+[Read further^](https://www.infoq.com//news/2025/06/java-25-compact-object-headers)
+
+
 ### Introducing Embabel: Advanced AI Agent Development for Java Applications (2025-06-05)
 Introducing the Embabel Agent Framework, a pioneering platform developed by Spring founder Rod Johnson, designed to revolutionize AI applications on the JVM. By integrating structured agent development and Goal-Oriented Action Planning, Embabel combines strong typing with dynamic planning, ensuring reliable, adaptable, and type-safe solutions for enterprise Java applications....
 [Read further^](https://www.infoq.com//news/2025/06/introducing-embabel-ai-agent)
@@ -86,11 +91,6 @@ JEP 481, Scoped Values (Third Preview), formerly known as Extent-Local Variables
 ### JEP 472: Prepare to Restrict the Use of JNI in JDK 24 (2024-07-15)
 JEP 472, now Proposed to Target, aims to issue warnings for using the Java Native Interface (JNI) and adjust the Foreign Function &amp; Memory (FFM) API for consistent warnings. This prepares developers for future releases that restrict JNI and the FFM API to ensure integrity by default....
 [Read further^](https://www.infoq.com//news/2024/07/jep-472-restrict-jni-jdk-24)
-
-
-### Project Leyden Announces Early Access Build: 2-3x Start-up Improvements for Java Applications (2024-07-08)
-The OpenJDK has reached a milestone by announcing the Early Access (EA) build for Project Leyden. This build represents over a year of development efforts to enhance Java application performance, particularly focusing on start-up times. The preliminary testing has shown impressive results, with popular application frameworks experiencing a 2-3x improvement in start-up times....
-[Read further^](https://www.infoq.com//news/2024/07/project-leyden-ea-release)
 
 
 ## <u>[Foojay.io](https://foojay.io/)</u>
@@ -161,4 +161,4 @@ Explore the insightful journey of Bert Jan Schrijver, a Java Champion, as he dis
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Tue, 17 Jun 2025 03:10:44 GMT*
+*This page was last updated on Wed, 18 Jun 2025 03:09:34 GMT*
