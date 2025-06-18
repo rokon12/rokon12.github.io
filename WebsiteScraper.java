@@ -142,6 +142,13 @@ public class WebsiteScraper {
                 progress.currentPage = 0;
             }
 
+            // Always check the front page for newly published articles
+            if (!progress.pagesToProcess.contains(WEBSITE_URL)) {
+                LinkedList<String> q = new LinkedList<>(progress.pagesToProcess);
+                q.addFirst(WEBSITE_URL);
+                progress.pagesToProcess = q;
+            }
+
             return progress;
         }
     }
@@ -175,7 +182,7 @@ public class WebsiteScraper {
 
             while (!progress.pagesToProcess.isEmpty()) {
                 String currentUrl = progress.pagesToProcess.poll();
-                if (progress.processedUrls.contains(currentUrl)) {
+                if (progress.processedUrls.contains(currentUrl) && !currentUrl.equals(WEBSITE_URL)) {
                     continue;
                 }
 
