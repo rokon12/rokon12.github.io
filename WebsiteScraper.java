@@ -182,10 +182,16 @@ public class WebsiteScraper {
                 progress.currentPage++;
                 log(String.format("Processing page %d/%d: %s", progress.currentPage, progress.totalPages, currentUrl));
                 sleep(REQUEST_DELAY_MS); // Rate limiting
-                Document doc = Jsoup.connect(currentUrl)
+                Document doc;
+                try {
+                    doc = Jsoup.connect(currentUrl)
                                   .userAgent("Mozilla/5.0")
                                   .timeout(CONNECTION_TIMEOUT_MS)
                                   .get();
+                } catch (IOException e) {
+                    log("Warning: Failed to fetch page " + currentUrl + ": " + e.getMessage());
+                    continue;
+                }
                 progress.processedUrls.add(currentUrl);
 
                 // Save progress periodically
