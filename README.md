@@ -43,6 +43,11 @@ This repository contains an archive of blog posts from [bazlur.ca](https://bazlu
 ## <u>[InfoQ](https://www.infoq.com/profile/A-N-M-Bazlur-Rahman/)</u>
 
 
+### GPULlama3.java Brings GPU-Accelerated LLM Inference to Pure Java (2025-06-24)
+...
+[Read further^](https://www.infoq.com//news/2025/06/gpullama3-java-gpu-llm)
+
+
 ### Java 25 Integrates Compact Object Headers with JEP 519 (2025-06-17)
 Java 25 introduces Compact Object Headers (JEP 519), delivering up to 30% CPU savings and reduced memory usage for applications with small objects. This user-friendly feature compresses object headers from 12 bytes to 8, requiring only a JVM flag to activate. Extensively validated by Amazon, it enhances performance, reduces GC pressure, and is ideal for modern cloud deployments....
 [Read further^](https://www.infoq.com//news/2025/06/java-25-compact-object-headers)
@@ -86,11 +91,6 @@ Netflix, a long-time Java adopter, recently upgraded to Java 21. They are now ha
 ### JEP 481: Third Preview of Scoped Values API Brings Key Enhancements in JDK 23 (2024-07-22)
 JEP 481, Scoped Values (Third Preview), formerly known as Extent-Local Variables (Incubator), offers a third preview, with one change, to gain additional experience and feedback from one round of incubation and two rounds of preview. This feature enables the sharing of immutable data within and across threads....
 [Read further^](https://www.infoq.com//news/2024/07/jep-481-enhanced-scoped-values)
-
-
-### JEP 472: Prepare to Restrict the Use of JNI in JDK 24 (2024-07-15)
-JEP 472, now Proposed to Target, aims to issue warnings for using the Java Native Interface (JNI) and adjust the Foreign Function &amp; Memory (FFM) API for consistent warnings. This prepares developers for future releases that restrict JNI and the FFM API to ensure integrity by default....
-[Read further^](https://www.infoq.com//news/2024/07/jep-472-restrict-jni-jdk-24)
 
 
 ## <u>[Foojay.io](https://foojay.io/)</u>
@@ -161,4 +161,4 @@ Explore the insightful journey of Bert Jan Schrijver, a Java Champion, as he dis
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Tue, 24 Jun 2025 03:11:50 GMT*
+*This page was last updated on Wed, 25 Jun 2025 03:12:11 GMT*
