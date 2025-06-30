@@ -44,7 +44,7 @@ This repository contains an archive of blog posts from [bazlur.ca](https://bazlu
 
 
 ### GPULlama3.java Brings GPU-Accelerated LLM Inference to Pure Java (2025-06-24)
-...
+The University of Manchester's Beehive Lab has released GPULlama3.java, marking the first Java-native implementation of Llama3 with automatic GPU acceleration. This project leverages TornadoVM to enable GPU-accelerated large language model inference without requiring developers to write CUDA or native code, potentially transforming how Java developers approach AI apps in enterprise environments....
 [Read further^](https://www.infoq.com//news/2025/06/gpullama3-java-gpu-llm)
 
 
@@ -161,4 +161,4 @@ Explore the insightful journey of Bert Jan Schrijver, a Java Champion, as he dis
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Sun, 29 Jun 2025 03:20:56 GMT*
+*This page was last updated on Mon, 30 Jun 2025 03:17:17 GMT*
