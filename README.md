@@ -53,16 +53,6 @@ Java 25 introduces Compact Object Headers (JEP 519), delivering up to 30% CPU sa
 [Read further^](https://www.infoq.com//news/2025/06/java-25-compact-object-headers)
 
 
-### Introducing Embabel: Advanced AI Agent Development for Java Applications (2025-06-05)
-Introducing the Embabel Agent Framework, a pioneering platform developed by Spring founder Rod Johnson, designed to revolutionize AI applications on the JVM. By integrating structured agent development and Goal-Oriented Action Planning, Embabel combines strong typing with dynamic planning, ensuring reliable, adaptable, and type-safe solutions for enterprise Java applications....
-[Read further^](https://www.infoq.com//news/2025/06/introducing-embabel-ai-agent)
-
-
-### Java 25 Introduces Stable Values API for Deferred Immutability and Improved Application Startup (2025-06-02)
-JEP 502 introduces the Stable Values API in JDK 25, enhancing application startup performance by allowing deferred immutability. This feature enables thread-safe, at-most-once initialization of complex objects, combining the best of final fields with lazy initialization. It empowers developers to improve efficiency and reduce initialization pitfalls while leveraging JVM optimizations....
-[Read further^](https://www.infoq.com//news/2025/06/java25-stable-values-api-startup)
-
-
 ### Spring AI 1.0 Released, Streamlines AI Application Development with Broad Model Support (2025-05-20)
 Introducing Spring AI 1.0: a groundbreaking framework that streamlines the creation of AI-driven applications in Java. Seamlessly integrate with top AI models for chat, image generation, and more. With portable abstractions and support for Retrieval Augmented Generation, developers can build scalable, production-ready solutions while adhering to Spring standards....
 [Read further^](https://www.infoq.com//news/2025/05/spring-ai-1-0-streamlines-apps)
@@ -91,6 +81,16 @@ Netflix, a long-time Java adopter, recently upgraded to Java 21. They are now ha
 ### JEP 481: Third Preview of Scoped Values API Brings Key Enhancements in JDK 23 (2024-07-22)
 JEP 481, Scoped Values (Third Preview), formerly known as Extent-Local Variables (Incubator), offers a third preview, with one change, to gain additional experience and feedback from one round of incubation and two rounds of preview. This feature enables the sharing of immutable data within and across threads....
 [Read further^](https://www.infoq.com//news/2024/07/jep-481-enhanced-scoped-values)
+
+
+### JEP 472: Prepare to Restrict the Use of JNI in JDK 24 (2024-07-15)
+JEP 472, now Proposed to Target, aims to issue warnings for using the Java Native Interface (JNI) and adjust the Foreign Function &amp; Memory (FFM) API for consistent warnings. This prepares developers for future releases that restrict JNI and the FFM API to ensure integrity by default....
+[Read further^](https://www.infoq.com//news/2024/07/jep-472-restrict-jni-jdk-24)
+
+
+### Project Leyden Announces Early Access Build: 2-3x Start-up Improvements for Java Applications (2024-07-08)
+The OpenJDK has reached a milestone by announcing the Early Access (EA) build for Project Leyden. This build represents over a year of development efforts to enhance Java application performance, particularly focusing on start-up times. The preliminary testing has shown impressive results, with popular application frameworks experiencing a 2-3x improvement in start-up times....
+[Read further^](https://www.infoq.com//news/2024/07/project-leyden-ea-release)
 
 
 ## <u>[Foojay.io](https://foojay.io/)</u>
@@ -161,4 +161,4 @@ Explore the insightful journey of Bert Jan Schrijver, a Java Champion, as he dis
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Sat, 19 Jul 2025 03:15:37 GMT*
+*This page was last updated on Sun, 20 Jul 2025 03:28:35 GMT*
