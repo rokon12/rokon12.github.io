@@ -96,6 +96,11 @@ JEP 481, Scoped Values (Third Preview), formerly known as Extent-Local Variables
 ## <u>[Foojay.io](https://foojay.io/)</u>
 
 
+### Robust AI Applications with LangChain4j Guardrails and Spring Boot (2025-07-29)
+Table of Contents Understanding LangChain4j GuardrailsSetting Up a Spring Boot Project with LangChain4jImplementing Input GuardrailsContent Safety Input GuardrailSmart Context-Aware GuardrailIntelligent Input SanitizerImplementing Output GuardrailsProfessional Tone Output GuardrailHallucination Detection GuardrailTesting Your GuardrailsCreating AI Services with GuardrailsRest endpointDemoConclusion As AI applications become …...
+[Read further^](https://foojay.io/today/building-robust-ai-applications-with-langchain4j-guardrails-and-spring-boot/)
+
+
 ### Java’s Structured Concurrency: Finally Finding Its Footing (2025-06-04)
 Table of Contents What Actually Changed This TimeThe Core Concept Remains StrongThe headline change: static factory methodsJoiners: pick your success policyRolling your own JoinerBetter cancellation and deadlinesScoped values ride alongGuard-rails against misuseObservability improvementsSome more examples to try outFinal thoughts The …...
 [Read further^](https://foojay.io/today/javas-structured-concurrency-finally-finding-its-footing/)
@@ -146,11 +151,6 @@ Let’s examine how to leverage Java records for parameterized tests through a c
 [Read further^](https://foojay.io/today/records-for-cleaner-and-more-expressive-parameterized-tests-in-junit-5/)
 
 
-### Journey of a Java Champion: Bert Jan Schrijver’s Path to Mastery and Community Leadership (2024-01-10)
-Explore the insightful journey of Bert Jan Schrijver, a Java Champion, as he discusses his path in software development, the role of community, and the evolution of Java in this enlightening interview....
-[Read further^](https://foojay.io/today/journey-of-a-java-champion-bert-jan-schrijvers-path-to-mastery-and-community-leadership/)
-
-
 ## <u>[Talks](https://github.com/rokon12/confernece-talks)</u>
 
 
@@ -161,4 +161,4 @@ Explore the insightful journey of Bert Jan Schrijver, a Java Champion, as he dis
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=rokon12&show_icons=true&include_all_commits=true&title_color=2aa889&text_color=99d1ce&icon_color=2bbc8a&bg_color=0c1014&" alt="Chandra's Technologies on GitHub" width="400"/></a>
 
 
-*This page was last updated on Tue, 29 Jul 2025 03:31:37 GMT*
+*This page was last updated on Wed, 30 Jul 2025 03:26:07 GMT*
