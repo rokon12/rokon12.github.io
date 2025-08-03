@@ -35,8 +35,9 @@ I hold a bachelor's degree in Information Technology, majoring in Software Engin
 
 This repository contains an archive of blog posts from [bazlur.ca](https://bazlur.ca). The content is served through GitHub Pages, making it easily accessible and searchable.
 
+Accessible through:  [https://bazlur.com/rokon12/](https://bazlur.com/rokon12/)
 ## Structure
-- `backup/`: Contains all markdown blog posts
+- ``: Contains all markdown blog posts
 
 
 ## ✍️ Most recent blog posts
