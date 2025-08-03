@@ -36,15 +36,20 @@ layout: default
         </div>
     </div>
     
-    <div class="wrapper">
+    <div class="wrapper post-wrapper-with-toc">
         {% if page.original_url %}
         <div class="original-article-notice">
             <p>✨ This article was originally published at <a href="{{ page.original_url }}" target="_blank" rel="noopener">{{ page.original_url }}</a></p>
         </div>
         {% endif %}
 
-        <div class="post-content e-content" itemprop="articleBody">
-            {{ content }}
+        <div class="post-container">
+            <div class="post-content e-content" itemprop="articleBody">
+                {{ content }}
+            </div>
+            
+            {% comment %} Table of Contents {% endcomment %}
+            {% include toc.html %}
         </div>
 
         <footer class="post-footer">

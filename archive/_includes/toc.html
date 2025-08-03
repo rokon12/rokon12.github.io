@@ -1,0 +1,163 @@
+{% comment %}
+Table of Contents (TOC) include
+Generates a sticky sidebar TOC from h2 and h3 headings in the post content
+Includes mobile-responsive collapsible design
+{% endcomment %}
+
+{% assign toc_items = '' | split: '' %}
+{% assign heading_count = 0 %}
+
+{% comment %} Extract h2 and h3 headings using a more reliable method {% endcomment %}
+{% assign content_lines = content | split: '<h' %}
+{% for line in content_lines %}
+  {% if line contains '</h2>' %}
+    {% assign heading_content = line | split: '>' | slice: 1 | join: '>' | split: '</h2>' | first | strip_html %}
+    {% assign heading_id = heading_content | slugify %}
+    {% assign toc_item = '2|' | append: heading_id | append: '|' | append: heading_content %}
+    {% assign toc_items = toc_items | push: toc_item %}
+    {% assign heading_count = heading_count | plus: 1 %}
+  {% elsif line contains '</h3>' %}
+    {% assign heading_content = line | split: '>' | slice: 1 | join: '>' | split: '</h3>' | first | strip_html %}
+    {% assign heading_id = heading_content | slugify %}
+    {% assign toc_item = '3|' | append: heading_id | append: '|' | append: heading_content %}
+    {% assign toc_items = toc_items | push: toc_item %}
+    {% assign heading_count = heading_count | plus: 1 %}
+  {% endif %}
+{% endfor %}
+
+{% comment %} Only show TOC if there are 3 or more headings {% endcomment %}
+{% if heading_count >= 3 %}
+<nav class="toc" id="toc">
+  <div class="toc-header">
+    <button class="toc-toggle" id="toc-toggle" aria-label="Toggle table of contents">
+      <span class="toc-title">Table of Contents</span>
+      <svg class="toc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="6,9 12,15 18,9"></polyline>
+      </svg>
+    </button>
+  </div>
+  
+  <div class="toc-content" id="toc-content">
+    <ul class="toc-list">
+      {% for item in toc_items %}
+        {% assign item_parts = item | split: '|' %}
+        {% assign level = item_parts[0] %}
+        {% assign id = item_parts[1] %}
+        {% assign text = item_parts[2] | strip_html %}
+        
+        <li class="toc-item toc-level-{{ level }}">
+          <a href="#{{ id }}" class="toc-link" data-target="{{ id }}">{{ text }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</nav>
+
+{% comment %} Add anchor IDs to headings in content {% endcomment %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Add IDs to headings
+  var headings = document.querySelectorAll('.post-content h2, .post-content h3');
+  headings.forEach(function(heading) {
+    if (!heading.id) {
+      var id = heading.textContent.trim()
+        .toLowerCase()
+        .replace(/[^a-z0-9\s-]/g, '')
+        .replace(/\s+/g, '-')
+        .replace(/-+/g, '-')
+        .replace(/^-|-$/g, '');
+      
+      // Ensure unique IDs
+      var originalId = id;
+      var counter = 1;
+      while (document.getElementById(id)) {
+        id = originalId + '-' + counter;
+        counter++;
+      }
+      
+      heading.id = id;
+    }
+  });
+  
+  // TOC functionality
+  var toc = document.getElementById('toc');
+  var tocToggle = document.getElementById('toc-toggle');
+  var tocContent = document.getElementById('toc-content');
+  var tocLinks = document.querySelectorAll('.toc-link');
+  
+  // Toggle functionality for mobile
+  if (tocToggle) {
+    tocToggle.addEventListener('click', function() {
+      toc.classList.toggle('toc-expanded');
+      var isExpanded = toc.classList.contains('toc-expanded');
+      tocToggle.setAttribute('aria-expanded', isExpanded);
+    });
+  }
+  
+  // Smooth scrolling
+  tocLinks.forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      var targetId = this.getAttribute('data-target');
+      var targetElement = document.getElementById(targetId);
+      
+      if (targetElement) {
+        var yOffset = -80; // Offset for fixed header
+        var y = targetElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        
+        window.scrollTo({
+          top: y,
+          behavior: 'smooth'
+        });
+        
+        // Close mobile TOC after navigation
+        if (window.innerWidth <= 768) {
+          toc.classList.remove('toc-expanded');
+          tocToggle.setAttribute('aria-expanded', 'false');
+        }
+      }
+    });
+  });
+  
+  // Highlight current section
+  function highlightCurrentSection() {
+    var scrollPos = window.scrollY + 100;
+    var currentSection = null;
+    
+    headings.forEach(function(heading) {
+      if (heading.offsetTop <= scrollPos) {
+        currentSection = heading.id;
+      }
+    });
+    
+    // Remove active class from all links
+    tocLinks.forEach(function(link) {
+      link.classList.remove('active');
+    });
+    
+    // Add active class to current section link
+    if (currentSection) {
+      var activeLink = document.querySelector('.toc-link[data-target="' + currentSection + '"]');
+      if (activeLink) {
+        activeLink.classList.add('active');
+      }
+    }
+  }
+  
+  // Throttled scroll handler
+  var isScrolling = false;
+  window.addEventListener('scroll', function() {
+    if (!isScrolling) {
+      window.requestAnimationFrame(function() {
+        highlightCurrentSection();
+        isScrolling = false;
+      });
+      isScrolling = true;
+    }
+  });
+  
+  // Initial highlight
+  highlightCurrentSection();
+});
+</script>
+{% endif %}
