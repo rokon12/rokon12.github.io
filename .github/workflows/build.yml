@@ -13,7 +13,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Pull latest changes
+        run: |
+          git config --global user.name 'Bazlur Rahman'
+          git config --global user.email 'bazlur@jugbd.org'
+          git pull origin main --rebase
       - name: Install Kotlin
         run: sudo snap install --classic --channel=1.7/stable kotlin
       - name: Update README
@@ -25,3 +32,4 @@ jobs:
           author_name: Bazlur Rahman
           author_email: bazlur@jugbd.org
           message: Automatically update README.md
+          pull: '--rebase --autostash'
