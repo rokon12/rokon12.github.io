@@ -3,6 +3,7 @@ title: 'In Bangladesh, I was featured in one of the country’s most widely read
 original_url: 'https://bazlur.ca/2022/06/08/in-bangladesh-i-was-featured-in-one-of-the-countrys-most-widely-read-newspapers/'
 date_published: '2022-06-08T00:00:00+00:00'
 date_scraped: '2025-02-15T11:29:36.474143867'
+tags: ["tools", "ai", "java"]
 featured_image: images/jc-program-logo.png
 ---
 

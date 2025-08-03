@@ -3,6 +3,7 @@ title: 'Exploring Java 21’s Intriguing Additions: Unveiling New Features (Part
 original_url: 'https://bazlur.ca/2023/06/20/exploring-java-21s-intriguing-additions-unveiling-new-features-part-1/'
 date_published: '2023-06-20T00:00:00+00:00'
 date_scraped: '2025-02-15T11:26:53.329708671'
+tags: ["java", "ai", "tools", "programming", "tutorial"]
 featured_image: images/erik.jpeg
 ---
 

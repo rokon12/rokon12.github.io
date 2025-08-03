@@ -3,6 +3,7 @@ title: 'Turning Over a New Leaf: Java Updates and Journeys as Summer Ends'
 original_url: 'https://bazlur.ca/2023/09/13/turning-over-a-new-leaf-java-updates-and-journeys-as-summer-ends/'
 date_published: '2023-09-13T00:00:00+00:00'
 date_scraped: '2025-02-15T11:25:51.10579717'
+tags: ["java", "ai", "concurrency", "tools", "tutorial"]
 featured_image: images/4c0e8e25-b0da-401c-9fa9-125711f1490e.png
 ---
 

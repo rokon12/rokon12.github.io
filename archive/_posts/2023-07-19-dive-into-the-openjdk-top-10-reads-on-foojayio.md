@@ -3,6 +3,7 @@ title: 'Dive into the OpenJDK: Top 10 Reads on Foojay.io'
 original_url: 'https://bazlur.ca/2023/07/19/dive-into-the-openjdk-top-10-reads-on-foojay-io/'
 date_published: '2023-07-19T00:00:00+00:00'
 date_scraped: '2025-02-15T11:26:31.118602099'
+tags: ["java", "tools", "programming", "tutorial", "spring"]
 ---
 
 Dive into the OpenJDK: Top 10 Reads on Foojay.io

@@ -3,6 +3,7 @@ title: 'Three Mistakes Junior Software Developers Make Preventing Getting Hired 
 original_url: 'https://bazlur.ca/2022/04/06/three-mistakes-junior-software-developers-make-preventing-getting-hired-on-amazing-projects/'
 date_published: '2022-04-06T00:00:00+00:00'
 date_scraped: '2025-02-15T11:30:10.490409711'
+tags: ["career", "programming", "tutorial", "tools", "ai"]
 ---
 
 Three Mistakes Junior Software Developers Make Preventing Getting Hired On Amazing Projects

@@ -3,6 +3,7 @@ title: 'Building Robust AI Applications with LangChain4j Guardrails and Spring B
 original_url: 'https://bazlur.ca/2025/06/21/building-robust-ai-applications-with-langchain4j-guardrails-and-spring-boot/'
 date_published: '2025-06-21T00:00:00+00:00'
 date_scraped: '2025-06-22T00:46:44.523888982'
+tags: ["ai", "spring", "tools", "performance", "tutorial"]
 featured_image: images/u6131494527-1.-shield-ai-brain-concept-a-modern-minimalist-c6366e07-45bb-4d60-8f31-a4380e8e1bd8-0.png
 ---
 

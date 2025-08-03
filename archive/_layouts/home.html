@@ -45,6 +45,16 @@ layout: default
                         <p>{{ post.excerpt | strip_html | truncate: 120 }}</p>
                     </div>
                     <div class="post-card-footer">
+                        {% if post.tags and post.tags.size > 0 %}
+                        <div class="post-card-tags">
+                            {% for tag in post.tags limit: 3 %}
+                                <a href="{{ '/tags/' | append: tag | append: '/' | relative_url }}" class="tag-badge">{{ tag }}</a>
+                            {% endfor %}
+                            {% if post.tags.size > 3 %}
+                                <span class="tag-more">+{{ post.tags.size | minus: 3 }}</span>
+                            {% endif %}
+                        </div>
+                        {% endif %}
                         <a href="{{ post.url | relative_url }}" class="read-more">Read article</a>
                     </div>
                 </div>

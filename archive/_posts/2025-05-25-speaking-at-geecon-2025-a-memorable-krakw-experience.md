@@ -3,6 +3,7 @@ title: 'Speaking at GeeCON 2025: A Memorable Kraków Experience'
 original_url: 'https://bazlur.ca/2025/05/25/speaking-at-geecon-2025-krakow-experience/'
 date_published: '2025-05-25T00:00:00+00:00'
 date_scraped: '2025-06-18T01:15:07.476903596'
+tags: ["personal", "ai", "java", "tools", "tutorial"]
 featured_image: images/dscf8739-scaled.jpg
 ---
 

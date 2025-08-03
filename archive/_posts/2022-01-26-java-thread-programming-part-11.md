@@ -3,6 +3,7 @@ title: 'Java Thread Programming (Part 11)'
 original_url: 'https://bazlur.ca/2022/01/26/java-thread-programming-part-11/'
 date_published: '2022-01-26T00:00:00+00:00'
 date_scraped: '2025-02-15T11:30:38.125505302'
+tags: ["concurrency", "java", "ai", "tools", "performance"]
 featured_image: images/thread-pool-700x370.png
 ---
 

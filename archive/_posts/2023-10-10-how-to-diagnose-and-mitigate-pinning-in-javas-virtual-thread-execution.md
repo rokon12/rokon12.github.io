@@ -3,6 +3,7 @@ title: 'How to Diagnose and Mitigate Pinning in Java’s Virtual Thread Executio
 original_url: 'https://bazlur.ca/2023/10/10/how-to-diagnose-and-mitigate-pinning-in-javas-virtual-thread-execution/'
 date_published: '2023-10-10T00:00:00+00:00'
 date_scraped: '2025-02-15T11:25:31.217798639'
+tags: ["java", "concurrency", "ai", "tools", "security"]
 featured_image: images/dall-e-2023-10-11-04.52.12-photo-of-a-virtual-thread-being-anchored-or-attached-to-its-carrier-thread-visualizing-the-concept-of-pinning.png
 ---
 

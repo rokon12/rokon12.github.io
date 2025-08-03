@@ -3,6 +3,7 @@ title: 'How to Enable Java Preview Features and Run Code from IntelliJ IDEA'
 original_url: 'https://bazlur.ca/2022/05/08/how-to-run-project-loom-from-intellij-idea/'
 date_published: '2022-05-08T00:00:00+00:00'
 date_scraped: '2025-02-15T11:30:01.632161243'
+tags: ["java", "concurrency", "tools", "ai", "tutorial"]
 featured_image: images/idea-overview-5-1-2x.webp
 ---
 

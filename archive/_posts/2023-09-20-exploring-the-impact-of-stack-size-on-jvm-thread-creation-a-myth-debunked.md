@@ -3,6 +3,7 @@ title: 'Exploring the Impact of Stack Size on JVM Thread Creation: A Myth Debunk
 original_url: 'https://bazlur.ca/2023/09/20/exploring-the-impact-of-stack-size-on-jvm-thread-creation-a-myth-debunked/'
 date_published: '2023-09-20T00:00:00+00:00'
 date_scraped: '2025-02-15T11:25:45.950619535'
+tags: ["concurrency", "java", "ai", "performance", "testing"]
 featured_image: images/jeremy-thomas-fo7bkvgetgq-unsplash-scaled.jpg
 ---
 

@@ -3,6 +3,7 @@ title: 'The Speed Test: Comparing Map.of() and new HashMap<>() in Java'
 original_url: 'https://bazlur.ca/2023/03/16/speed-test-comparing-map-of-new-hashmap/'
 date_published: '2023-03-16T00:00:00+00:00'
 date_scraped: '2025-02-15T11:28:09.417709881'
+tags: ["java", "performance", "tools", "testing", "ai"]
 ---
 
 The Speed Test: Comparing Map.of() and new HashMap\<\>() in Java

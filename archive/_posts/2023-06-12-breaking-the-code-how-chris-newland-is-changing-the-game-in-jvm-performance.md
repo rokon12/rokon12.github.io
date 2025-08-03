@@ -3,6 +3,7 @@ title: 'Breaking the Code: How Chris Newland is Changing the Game in JVM Perform
 original_url: 'https://bazlur.ca/2023/06/12/breaking-the-code-how-chris-newland-is-changing-the-game-in-jvm-performance/'
 date_published: '2023-06-12T00:00:00+00:00'
 date_scraped: '2025-02-15T11:27:01.430046986'
+tags: ["java", "performance", "ai", "tools", "programming"]
 featured_image: images/chris.png
 ---
 

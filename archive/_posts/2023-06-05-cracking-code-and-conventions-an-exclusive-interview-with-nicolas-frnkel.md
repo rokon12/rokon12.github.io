@@ -3,6 +3,7 @@ title: 'Cracking Code and Conventions: An Exclusive Interview with Nicolas Frän
 original_url: 'https://bazlur.ca/2023/06/05/cracking-code-and-conventions-an-exclusive-interview-with-nicolas-frankel/'
 date_published: '2023-06-05T00:00:00+00:00'
 date_scraped: '2025-02-15T11:27:04.964654463'
+tags: ["programming", "ai", "career", "architecture", "personal"]
 featured_image: images/nicols.jpeg
 ---
 

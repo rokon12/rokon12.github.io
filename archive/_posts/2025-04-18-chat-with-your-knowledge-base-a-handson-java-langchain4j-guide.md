@@ -3,6 +3,7 @@ title: 'Chat with Your Knowledge Base: A Hands-On Java & LangChain4j Guide'
 original_url: 'https://bazlur.ca/2025/04/18/chat-with-your-knowledge-base-a-hands-on-java-langchain4j-guide/'
 date_published: '2025-04-18T00:00:00+00:00'
 date_scraped: '2025-06-18T01:15:21.806411325'
+tags: ["ai", "tools", "java", "performance", "tutorial"]
 featured_image: images/chatgpt-image-apr-18-2025-02-34-23-am.png
 ---
 

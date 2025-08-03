@@ -3,6 +3,7 @@ title: 'Busting Myths, Building Futures: A Conversation with Cay Horstmann on Ja
 original_url: 'https://bazlur.ca/2023/07/24/busting-myths-building-futures-a-conversation-with-cay-horstmann-on-java-and-machine-learning/'
 date_published: '2023-07-24T00:00:00+00:00'
 date_scraped: '2025-02-15T11:26:29.03583781'
+tags: ["java", "ai", "programming", "tutorial", "tools"]
 featured_image: images/simon-martinelli-1.png
 ---
 

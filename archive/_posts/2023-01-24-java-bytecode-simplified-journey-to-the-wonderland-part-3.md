@@ -3,6 +3,7 @@ title: 'Java Bytecode Simplified: Journey to the Wonderland (Part 3)'
 original_url: 'https://bazlur.ca/2023/01/24/java-bytecode-simplified-journey-to-the-wonderland-part-3/'
 date_published: '2023-01-24T00:00:00+00:00'
 date_scraped: '2025-02-15T11:28:41.38046835'
+tags: ["java", "ai", "tools", "performance", "testing"]
 ---
 
 Java Bytecode Simplified: Journey to the Wonderland (Part 3)

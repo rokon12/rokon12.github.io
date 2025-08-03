@@ -25,6 +25,14 @@ layout: default
                     </span>
                 {% endif %}
             </p>
+            
+            {% if page.tags and page.tags.size > 0 %}
+            <div class="post-tags-header">
+                {% for tag in page.tags %}
+                    <a href="{{ '/tags/' | append: tag | append: '/' | relative_url }}" class="post-tag-badge">{{ tag }}</a>
+                {% endfor %}
+            </div>
+            {% endif %}
         </div>
     </div>
     
@@ -40,6 +48,17 @@ layout: default
         </div>
 
         <footer class="post-footer">
+            {% if page.tags and page.tags.size > 0 %}
+            <div class="post-tags-footer">
+                <h4>Topics covered in this article:</h4>
+                <div class="post-tags-list">
+                    {% for tag in page.tags %}
+                        <a href="{{ '/tags/' | append: tag | append: '/' | relative_url }}" class="post-tag-pill">{{ tag }}</a>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+            
             <div class="post-meta-footer">
                 <p><em>Article archived on {{ page.date_scraped | date: "%B %d, %Y at %I:%M %p" }}</em></p>
             </div>

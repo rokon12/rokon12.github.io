@@ -3,6 +3,7 @@ title: 'Resilience in Coding: Miro Wengner on Thriving in the Software Industry'
 original_url: 'https://bazlur.ca/2023/05/31/resilience-in-coding-miro-wengner-on-thriving-in-the-software-industry/'
 date_published: '2023-05-31T00:00:00+00:00'
 date_scraped: '2025-02-15T11:27:08.798753305'
+tags: ["programming", "java", "ai", "tutorial", "tools"]
 featured_image: images/miro.jpeg
 ---
 

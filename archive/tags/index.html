@@ -1,0 +1,151 @@
+---
+layout: default
+title: "All Tags"
+description: "Browse all tags and topics covered in the blog articles"
+---
+
+<div class="tags-page-header">
+    <div class="wrapper">
+        <div class="tags-hero">
+            <h1 class="tags-title">Explore by Tags</h1>
+            <p class="tags-description">
+                Discover articles organized by topic and technology. 
+                {% assign all_posts = site.posts | where_exp: "post", "post.tags" %}
+                {{ all_posts.size }} articles across 
+                {% assign all_tags = site.posts | map: "tags" | join: "," | split: "," | uniq | sort %}
+                {% assign filtered_tags = all_tags | where_exp: "tag", "tag != ''" %}
+                {{ filtered_tags.size }} different topics.
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="wrapper">
+    <!-- Tag Cloud Section -->
+    <section class="tag-cloud-section">
+        <h2 class="section-title">Tag Cloud</h2>
+        <div class="tag-cloud">
+            {% assign all_tags = site.posts | map: "tags" | join: "," | split: "," | uniq | sort %}
+            {% assign filtered_tags = all_tags | where_exp: "tag", "tag != ''" %}
+            {% assign max_posts = 0 %}
+            
+            <!-- Calculate max posts for any tag to normalize sizes -->
+            {% for tag in filtered_tags %}
+                {% assign tag_posts_count = site.posts | where: "tags", tag | size %}
+                {% if tag_posts_count > max_posts %}
+                    {% assign max_posts = tag_posts_count %}
+                {% endif %}
+            {% endfor %}
+            
+            {% for tag in filtered_tags %}
+                {% assign tag_posts = site.posts | where: "tags", tag %}
+                {% assign tag_count = tag_posts.size %}
+                {% assign size_class = "tag-size-1" %}
+                
+                {% comment %} Calculate relative size based on post count {% endcomment %}
+                {% assign size_ratio = tag_count | times: 100 | divided_by: max_posts %}
+                {% if size_ratio >= 80 %}
+                    {% assign size_class = "tag-size-5" %}
+                {% elsif size_ratio >= 60 %}
+                    {% assign size_class = "tag-size-4" %}
+                {% elsif size_ratio >= 40 %}
+                    {% assign size_class = "tag-size-3" %}
+                {% elsif size_ratio >= 20 %}
+                    {% assign size_class = "tag-size-2" %}
+                {% endif %}
+                
+                <a href="{{ '/tags/' | append: tag | append: '/' | relative_url }}" 
+                   class="tag-cloud-item {{ size_class }}"
+                   title="{{ tag_count }} article{% if tag_count != 1 %}s{% endif %}">
+                    {{ tag }}
+                    <span class="tag-count">({{ tag_count }})</span>
+                </a>
+            {% endfor %}
+        </div>
+    </section>
+    
+    <!-- Alphabetical Tag List -->
+    <section class="tag-list-section">
+        <h2 class="section-title">All Tags (A-Z)</h2>
+        <div class="tag-grid">
+            {% for tag in filtered_tags %}
+                {% assign tag_posts = site.posts | where: "tags", tag %}
+                {% assign tag_count = tag_posts.size %}
+                
+                <div class="tag-card">
+                    <div class="tag-card-header">
+                        <h3 class="tag-card-title">
+                            <a href="{{ '/tags/' | append: tag | append: '/' | relative_url }}">{{ tag | capitalize }}</a>
+                        </h3>
+                        <span class="tag-card-count">{{ tag_count }} article{% if tag_count != 1 %}s{% endif %}</span>
+                    </div>
+                    
+                    <div class="tag-card-posts">
+                        {% assign recent_posts = tag_posts | sort: 'date_published' | reverse | limit: 3 %}
+                        {% for post in recent_posts %}
+                            <div class="tag-post-preview">
+                                <a href="{{ post.url | relative_url }}">{{ post.title | truncate: 60 }}</a>
+                                <time datetime="{{ post.date_published }}">{{ post.date_published | date: "%b %Y" }}</time>
+                            </div>
+                        {% endfor %}
+                        {% if tag_count > 3 %}
+                            <div class="tag-more-posts">
+                                <a href="{{ '/tags/' | append: tag | append: '/' | relative_url }}">
+                                    +{{ tag_count | minus: 3 }} more articles →
+                                </a>
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+    
+    <!-- Popular Tags -->
+    <section class="popular-tags-section">
+        <h2 class="section-title">Most Popular Tags</h2>
+        <div class="popular-tags-grid">
+            {% comment %} Create array of tags with counts for sorting {% endcomment %}
+            {% assign tag_counts = "" | split: "" %}
+            {% for tag in filtered_tags %}
+                {% assign tag_posts = site.posts | where: "tags", tag %}
+                {% assign tag_count = tag_posts.size %}
+                {% assign tag_data = tag | append: "|" | append: tag_count %}
+                {% assign tag_counts = tag_counts | push: tag_data %}
+            {% endfor %}
+            
+            {% comment %} Sort by count (descending) and take top 6 {% endcomment %}
+            {% assign sorted_tags = tag_counts | sort | reverse | slice: 0, 6 %}
+            
+            {% for tag_data in sorted_tags %}
+                {% assign tag_parts = tag_data | split: "|" %}
+                {% assign tag = tag_parts[0] %}
+                {% assign tag_count = tag_parts[1] | plus: 0 %}
+                {% assign tag_posts = site.posts | where: "tags", tag %}
+                
+                <div class="popular-tag-card">
+                    <div class="popular-tag-header">
+                        <h3 class="popular-tag-title">
+                            <a href="{{ '/tags/' | append: tag | append: '/' | relative_url }}">{{ tag | capitalize }}</a>
+                        </h3>
+                        <div class="popular-tag-meta">
+                            <span class="popular-tag-count">{{ tag_count }}</span>
+                            <span class="popular-tag-label">articles</span>
+                        </div>
+                    </div>
+                    
+                    <div class="popular-tag-bar">
+                        <div class="popular-tag-progress" style="width: {{ tag_count | times: 100 | divided_by: max_posts }}%"></div>
+                    </div>
+                    
+                    <div class="popular-tag-preview">
+                        {% assign latest_post = tag_posts | sort: 'date_published' | reverse | first %}
+                        <a href="{{ latest_post.url | relative_url }}" class="popular-tag-latest">
+                            Latest: {{ latest_post.title | truncate: 50 }}
+                        </a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+</div>

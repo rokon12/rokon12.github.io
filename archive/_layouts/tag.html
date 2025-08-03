@@ -1,0 +1,82 @@
+---
+layout: default
+---
+
+<div class="tag-page-header">
+    <div class="wrapper">
+        <div class="tag-hero">
+            <div class="tag-icon">
+                <span class="tag-symbol">#</span>
+            </div>
+            <h1 class="tag-title">{{ page.tag | capitalize }}</h1>
+            <p class="tag-description">
+                {% assign tag_posts = site.posts | where: "tags", page.tag %}
+                {{ tag_posts.size }} article{% if tag_posts.size != 1 %}s{% endif %} tagged with "{{ page.tag }}"
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="wrapper">
+    <section class="tag-posts">
+        {% assign tag_posts = site.posts | where: "tags", page.tag | sort: 'date_published' | reverse %}
+        
+        {% if tag_posts.size > 0 %}
+            <div class="post-grid">
+                {% for post in tag_posts %}
+                <article class="post-card">
+                    {% if post.featured_image %}
+                    <a href="{{ post.url | relative_url }}" class="post-card-image">
+                        <img src="{{ post.featured_image | replace: 'images/', '/rokon12/images/' }}" 
+                             alt="{{ post.title | escape }}" 
+                             loading="lazy">
+                    </a>
+                    {% else %}
+                    <div class="post-card-image placeholder">
+                        <div class="placeholder-content">
+                            <span>{{ post.title | truncate: 1, "" }}</span>
+                        </div>
+                    </div>
+                    {% endif %}
+                    
+                    <div class="post-card-content">
+                        <div class="post-card-header">
+                            <h3 class="post-card-title">
+                                <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+                            </h3>
+                            <p class="post-card-meta">
+                                <time datetime="{{ post.date_published }}">{{ post.date_published | date: "%B %-d, %Y" }}</time>
+                            </p>
+                        </div>
+                        
+                        <div class="post-card-body">
+                            <p>{{ post.excerpt | strip_html | truncate: 120 }}</p>
+                        </div>
+                        
+                        <div class="post-card-footer">
+                            <div class="post-tags">
+                                {% for tag in post.tags limit: 3 %}
+                                    <a href="{{ '/tags/' | append: tag | append: '/' | relative_url }}" class="tag-badge">{{ tag }}</a>
+                                {% endfor %}
+                                {% if post.tags.size > 3 %}
+                                    <span class="tag-more">+{{ post.tags.size | minus: 3 }} more</span>
+                                {% endif %}
+                            </div>
+                            <a href="{{ post.url | relative_url }}" class="read-more">Read article</a>
+                        </div>
+                    </div>
+                </article>
+                {% endfor %}
+            </div>
+        {% else %}
+            <div class="no-posts">
+                <p>No articles found for this tag.</p>
+                <a href="{{ '/tags/' | relative_url }}" class="btn-primary">Browse all tags</a>
+            </div>
+        {% endif %}
+    </section>
+    
+    <div class="tag-navigation">
+        <a href="{{ '/tags/' | relative_url }}" class="btn-secondary">← All Tags</a>
+    </div>
+</div>
