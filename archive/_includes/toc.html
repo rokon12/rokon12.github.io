@@ -4,29 +4,10 @@ Generates a sticky sidebar TOC from h2 and h3 headings in the post content
 Includes mobile-responsive collapsible design
 {% endcomment %}
 
-{% assign toc_items = '' | split: '' %}
-{% assign heading_count = 0 %}
+{% comment %} Only show TOC if we have rendered HTML content {% endcomment %}
+{% if content contains '<h2' or content contains '<h3' %}
+{% assign toc_html = '' %}
 
-{% comment %} Extract h2 and h3 headings using a more reliable method {% endcomment %}
-{% assign content_lines = content | split: '<h' %}
-{% for line in content_lines %}
-  {% if line contains '</h2>' %}
-    {% assign heading_content = line | split: '>' | slice: 1 | join: '>' | split: '</h2>' | first | strip_html %}
-    {% assign heading_id = heading_content | slugify %}
-    {% assign toc_item = '2|' | append: heading_id | append: '|' | append: heading_content %}
-    {% assign toc_items = toc_items | push: toc_item %}
-    {% assign heading_count = heading_count | plus: 1 %}
-  {% elsif line contains '</h3>' %}
-    {% assign heading_content = line | split: '>' | slice: 1 | join: '>' | split: '</h3>' | first | strip_html %}
-    {% assign heading_id = heading_content | slugify %}
-    {% assign toc_item = '3|' | append: heading_id | append: '|' | append: heading_content %}
-    {% assign toc_items = toc_items | push: toc_item %}
-    {% assign heading_count = heading_count | plus: 1 %}
-  {% endif %}
-{% endfor %}
-
-{% comment %} Only show TOC if there are 3 or more headings {% endcomment %}
-{% if heading_count >= 3 %}
 <nav class="toc" id="toc">
   <div class="toc-header">
     <button class="toc-toggle" id="toc-toggle" aria-label="Toggle table of contents">
@@ -38,54 +19,70 @@ Includes mobile-responsive collapsible design
   </div>
   
   <div class="toc-content" id="toc-content">
-    <ul class="toc-list">
-      {% for item in toc_items %}
-        {% assign item_parts = item | split: '|' %}
-        {% assign level = item_parts[0] %}
-        {% assign id = item_parts[1] %}
-        {% assign text = item_parts[2] | strip_html %}
-        
-        <li class="toc-item toc-level-{{ level }}">
-          <a href="#{{ id }}" class="toc-link" data-target="{{ id }}">{{ text }}</a>
-        </li>
-      {% endfor %}
+    <ul class="toc-list" id="toc-list">
+      <!-- TOC items will be populated by JavaScript -->
     </ul>
   </div>
 </nav>
 
-{% comment %} Add anchor IDs to headings in content {% endcomment %}
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  // Add IDs to headings
-  var headings = document.querySelectorAll('.post-content h2, .post-content h3');
-  headings.forEach(function(heading) {
+  // Find all h2 and h3 headings in the post content
+  var contentElement = document.querySelector('.post-content');
+  if (!contentElement) return;
+  
+  var headings = contentElement.querySelectorAll('h2, h3');
+  var tocList = document.getElementById('toc-list');
+  var toc = document.getElementById('toc');
+  
+  // Hide TOC if less than 3 headings
+  if (headings.length < 3) {
+    if (toc) toc.style.display = 'none';
+    return;
+  }
+  
+  // Build TOC and add IDs to headings
+  headings.forEach(function(heading, index) {
+    // Skip empty headings
+    var text = heading.textContent.trim();
+    if (!text) return;
+    
+    // Generate ID if not present
     if (!heading.id) {
-      var id = heading.textContent.trim()
+      var id = text
         .toLowerCase()
-        .replace(/[^a-z0-9\s-]/g, '')
-        .replace(/\s+/g, '-')
-        .replace(/-+/g, '-')
-        .replace(/^-|-$/g, '');
+        .replace(/[^\w\s-]/g, '') // Remove special characters
+        .replace(/\s+/g, '-')      // Replace spaces with hyphens
+        .replace(/-+/g, '-')       // Replace multiple hyphens with single
+        .replace(/^-|-$/g, '');    // Remove leading/trailing hyphens
       
-      // Ensure unique IDs
-      var originalId = id;
+      // Ensure unique ID
+      var baseId = id || 'heading';
       var counter = 1;
-      while (document.getElementById(id)) {
-        id = originalId + '-' + counter;
+      while (document.getElementById(id || baseId)) {
+        id = baseId + '-' + counter;
         counter++;
       }
       
-      heading.id = id;
+      heading.id = id || baseId;
     }
+    
+    // Create TOC item
+    var li = document.createElement('li');
+    li.className = 'toc-item toc-level-' + heading.tagName.toLowerCase();
+    
+    var a = document.createElement('a');
+    a.href = '#' + heading.id;
+    a.className = 'toc-link';
+    a.setAttribute('data-target', heading.id);
+    a.textContent = text;
+    
+    li.appendChild(a);
+    tocList.appendChild(li);
   });
   
-  // TOC functionality
-  var toc = document.getElementById('toc');
+  // TOC toggle functionality
   var tocToggle = document.getElementById('toc-toggle');
-  var tocContent = document.getElementById('toc-content');
-  var tocLinks = document.querySelectorAll('.toc-link');
-  
-  // Toggle functionality for mobile
   if (tocToggle) {
     tocToggle.addEventListener('click', function() {
       toc.classList.toggle('toc-expanded');
@@ -94,7 +91,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
   
-  // Smooth scrolling
+  // Smooth scrolling for TOC links
+  var tocLinks = tocList.querySelectorAll('.toc-link');
   tocLinks.forEach(function(link) {
     link.addEventListener('click', function(e) {
       e.preventDefault();
@@ -102,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function() {
       var targetElement = document.getElementById(targetId);
       
       if (targetElement) {
-        var yOffset = -80; // Offset for fixed header
+        var yOffset = -100; // Offset for fixed header
         var y = targetElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
         
         window.scrollTo({
@@ -111,37 +109,32 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         
         // Close mobile TOC after navigation
-        if (window.innerWidth <= 768) {
+        if (window.innerWidth <= 1199) {
           toc.classList.remove('toc-expanded');
-          tocToggle.setAttribute('aria-expanded', 'false');
+          if (tocToggle) tocToggle.setAttribute('aria-expanded', 'false');
         }
       }
     });
   });
   
-  // Highlight current section
+  // Highlight current section on scroll
   function highlightCurrentSection() {
-    var scrollPos = window.scrollY + 100;
+    var scrollPos = window.scrollY + 120;
     var currentSection = null;
     
     headings.forEach(function(heading) {
-      if (heading.offsetTop <= scrollPos) {
+      if (heading.getBoundingClientRect().top + window.scrollY <= scrollPos) {
         currentSection = heading.id;
       }
     });
     
-    // Remove active class from all links
+    // Update active states
     tocLinks.forEach(function(link) {
       link.classList.remove('active');
-    });
-    
-    // Add active class to current section link
-    if (currentSection) {
-      var activeLink = document.querySelector('.toc-link[data-target="' + currentSection + '"]');
-      if (activeLink) {
-        activeLink.classList.add('active');
+      if (currentSection && link.getAttribute('data-target') === currentSection) {
+        link.classList.add('active');
       }
-    }
+    });
   }
   
   // Throttled scroll handler
