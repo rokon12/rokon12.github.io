@@ -20,7 +20,7 @@ import java.util.*;
 
 public class WebsiteScraper {
     private static final String WEBSITE_URL = "https://bazlur.ca";
-    private static final String OUTPUT_DIR = "_posts";
+    private static final String OUTPUT_DIR = "archive/_posts";
     private static final String RECORD_FILE = "record.json";
     private static final String PROGRESS_FILE = "scraper_progress.json";
     private static final int MAX_ARTICLES = Integer.MAX_VALUE; // Limit for testing
@@ -271,9 +271,9 @@ public class WebsiteScraper {
                                     .replaceAll("[^a-zA-Z0-9.-]", "-") // Replace special characters with dash
                                     .replaceAll("-+", "-") // Replace multiple dashes with single dash
                                     .toLowerCase();
-                                String imgPath = OUTPUT_DIR + "/images/" + imgName;
+                                String imgPath = "archive/images/" + imgName;
 
-                                Files.createDirectories(Paths.get(OUTPUT_DIR, "images"));
+                                Files.createDirectories(Paths.get("archive", "images"));
 
                                 log("Downloading image: " + imgUrl);
                                 sleep(REQUEST_DELAY_MS / 2); // Shorter delay for images

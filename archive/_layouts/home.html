@@ -1,0 +1,55 @@
+---
+layout: default
+---
+
+<div class="home">
+    <div class="hero-section">
+        <h1 class="hero-title">{{ site.title }}</h1>
+        <p class="hero-description">{{ site.description }}</p>
+        <div class="archive-notice">
+            <p>This is an archive of articles originally published on <a href="https://bazlur.ca">bazlur.ca</a>. All content remains the property of the original author and is preserved here for reference.</p>
+        </div>
+    </div>
+
+    <h2 class="post-list-heading">Recent Articles</h2>
+    
+    <ul class="post-list">
+        {% for post in paginator.posts %}
+        <li>
+            <span class="post-meta">{{ post.date_published | date: "%b %-d, %Y" }}</span>
+            <h3>
+                <a class="post-link" href="{{ post.url | relative_url }}">
+                    {{ post.title | escape }}
+                </a>
+            </h3>
+            {{ post.excerpt }}
+        </li>
+        {% endfor %}
+    </ul>
+
+    <!-- Pagination links -->
+    {% if paginator.total_pages > 1 %}
+    <div class="pagination">
+        {% if paginator.previous_page %}
+            <a href="{{ paginator.previous_page_path | relative_url }}" class="previous">← Newer</a>
+        {% else %}
+            <span class="previous">← Newer</span>
+        {% endif %}
+        
+        <span class="page_number">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+        
+        {% if paginator.next_page %}
+            <a href="{{ paginator.next_page_path | relative_url }}" class="next">Older →</a>
+        {% else %}
+            <span class="next">Older →</span>
+        {% endif %}
+    </div>
+    {% endif %}
+
+    <p class="feed-subscribe">
+        <a href="{{ "/feed.xml" | relative_url }}">
+            <svg class="svg-icon orange"><use xlink:href="{{ "/assets/minima-social-icons.svg#rss" | relative_url }}"></use></svg>
+            <span>Subscribe via RSS</span>
+        </a>
+    </p>
+</div>

@@ -1,0 +1,81 @@
+# Site settings
+title: Bazlur's Blog Archive
+description: A comprehensive archive of articles on Java, Software Development, and Technology
+author:
+  name: A N M Bazlur Rahman
+  email: bazlur@jugbd.org
+  url: https://bazlur.ca
+
+# URL settings
+url: "https://bazlur.com"
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# Theme
+theme: minima
+minima:
+  skin: classic
+  date_format: "%B %d, %Y"
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-paginate
+
+# Pagination
+paginate: 10
+paginate_path: "/page/:num/"
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /:year/:month/:day/:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "A N M Bazlur Rahman"
+  - scope:
+      path: ""
+    values:
+      image: "/assets/img/default-og.jpg"
+
+# Exclude files
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - .jekyll-cache
+  - .sass-cache
+  - vendor
+
+# Include files
+include:
+  - _pages
+
+# SEO settings
+twitter:
+  username: bazlur_rahman
+  card: summary
+
+social:
+  name: A N M Bazlur Rahman
+  links:
+    - https://twitter.com/bazlur_rahman
+    - https://github.com/rokon12
+    - https://linkedin.com/in/bazlur
+
+# Google Analytics (if you have one)
+# google_analytics: UA-XXXXXXXXX-X

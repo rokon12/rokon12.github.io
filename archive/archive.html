@@ -1,0 +1,26 @@
+---
+layout: default
+title: Archive
+permalink: /archive/
+---
+
+<div class="archive-page">
+    <h1>Article Archive</h1>
+    <p class="archive-description">Browse all {{ site.posts | size }} articles archived from <a href="https://bazlur.ca">bazlur.ca</a></p>
+
+    {% assign postsByYear = site.posts | sort: 'date_published' | reverse | group_by_exp: 'post', 'post.date_published | date: "%Y"' %}
+    
+    {% for year in postsByYear %}
+        <div class="archive-year">
+            <h2>{{ year.name }}</h2>
+            <ul class="archive-list">
+                {% for post in year.items %}
+                <li>
+                    <span class="archive-date">{{ post.date_published | date: "%b %d" }}</span>
+                    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endfor %}
+</div>
