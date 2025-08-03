@@ -8,7 +8,7 @@ author:
 
 # URL settings
 url: "https://bazlur.com"
-baseurl: ""
+baseurl: "/rokon12"
 
 # Build settings
 markdown: kramdown
@@ -37,7 +37,7 @@ paginate_path: "/page/:num/"
 collections:
   posts:
     output: true
-    permalink: /:year/:month/:day/:title/
+    permalink: /archive/:year/:month/:day/:title/
 
 # Defaults
 defaults:
