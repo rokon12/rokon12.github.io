@@ -17,6 +17,8 @@ import java.io.*;
 import java.net.URL;
 import java.nio.file.*;
 import java.util.*;
+import java.util.Set;
+import java.util.HashSet;
 
 public class WebsiteScraper {
     private static final String WEBSITE_URL = "https://bazlur.ca";
@@ -260,26 +262,105 @@ public class WebsiteScraper {
                         content.select("p:contains(Type your email...)").remove();
                         content.select("p:contains(Subscribe)").remove();
 
-                        // Download images
-                        Elements images = content.select("img");
-                        for (Element img : images) {
+                        // Download images - also check in the full article document for lazy-loaded images
+                        Elements allImages = articleDoc.select("article img, .entry-content img, .post-content img, figure img");
+                        Set<String> downloadedImages = new HashSet<>();
+                        
+                        for (Element img : allImages) {
                             try {
+                                // Try different attributes for image URL
                                 String imgUrl = img.attr("abs:src");
-                                String imgName = new File(imgUrl).getName()
-                                    .replaceAll("\\?.*$", "") // Remove URL parameters
-                                    .replaceAll("%[0-9A-F]{2}", "-") // Replace URL encoded characters with dash
-                                    .replaceAll("[^a-zA-Z0-9.-]", "-") // Replace special characters with dash
-                                    .replaceAll("-+", "-") // Replace multiple dashes with single dash
+                                if (imgUrl.isEmpty()) {
+                                    imgUrl = img.attr("abs:data-src"); // Lazy loading
+                                }
+                                if (imgUrl.isEmpty()) {
+                                    imgUrl = img.attr("abs:data-lazy-src"); // WordPress lazy loading
+                                }
+                                if (imgUrl.isEmpty()) {
+                                    imgUrl = img.attr("abs:srcset"); // Responsive images
+                                    if (!imgUrl.isEmpty()) {
+                                        // Extract the first URL from srcset
+                                        imgUrl = imgUrl.split(" ")[0];
+                                    }
+                                }
+                                
+                                // Skip if no URL or already downloaded
+                                if (imgUrl.isEmpty() || downloadedImages.contains(imgUrl)) {
+                                    continue;
+                                }
+                                
+                                // Skip data URLs
+                                if (imgUrl.startsWith("data:")) {
+                                    continue;
+                                }
+                                
+                                // Generate safe filename
+                                String imgName = "";
+                                try {
+                                    URL imageUrl = new URL(imgUrl);
+                                    imgName = new File(imageUrl.getPath()).getName();
+                                } catch (Exception e) {
+                                    // Fallback to extracting from full URL
+                                    imgName = imgUrl.substring(imgUrl.lastIndexOf('/') + 1);
+                                }
+                                
+                                // Clean filename
+                                imgName = imgName.replaceAll("\\?.*$", "") // Remove URL parameters
+                                    .replaceAll("%[0-9A-F]{2}", "-") // Replace URL encoded characters
+                                    .replaceAll("[^a-zA-Z0-9.-]", "-") // Replace special characters
+                                    .replaceAll("-+", "-") // Replace multiple dashes
+                                    .replaceAll("^-|-$", "") // Remove leading/trailing dashes
                                     .toLowerCase();
+                                
+                                // Ensure we have a valid filename
+                                if (imgName.isEmpty() || !imgName.contains(".")) {
+                                    imgName = "image-" + System.currentTimeMillis() + ".jpg";
+                                }
+                                
                                 String imgPath = "archive/images/" + imgName;
+                                File imgFile = new File(imgPath);
+                                
+                                // Skip if already exists
+                                if (imgFile.exists()) {
+                                    log("Image already exists, skipping: " + imgName);
+                                    img.attr("src", "images/" + imgName);
+                                    // Also update in content
+                                    for (Element contentImg : content.select("img[src*='" + imgUrl.replace("https://", "").replace("http://", "") + "']")) {
+                                        contentImg.attr("src", "images/" + imgName);
+                                    }
+                                    continue;
+                                }
 
                                 Files.createDirectories(Paths.get("archive", "images"));
 
-                                log("Downloading image: " + imgUrl);
+                                log("Downloading image: " + imgUrl + " -> " + imgName);
                                 sleep(REQUEST_DELAY_MS / 2); // Shorter delay for images
-                                FileUtils.copyURLToFile(new URL(imgUrl), new File(imgPath), CONNECTION_TIMEOUT_MS, CONNECTION_TIMEOUT_MS);
-
+                                
+                                // Download with retry logic
+                                int maxRetries = 3;
+                                for (int retry = 0; retry < maxRetries; retry++) {
+                                    try {
+                                        FileUtils.copyURLToFile(new URL(imgUrl), imgFile, CONNECTION_TIMEOUT_MS, CONNECTION_TIMEOUT_MS);
+                                        break; // Success
+                                    } catch (Exception e) {
+                                        if (retry == maxRetries - 1) {
+                                            throw e; // Last retry failed
+                                        }
+                                        log("Retry " + (retry + 1) + " for image: " + imgUrl);
+                                        sleep(1000); // Wait before retry
+                                    }
+                                }
+                                
+                                // Update all references to this image
                                 img.attr("src", "images/" + imgName);
+                                for (Element contentImg : content.select("img")) {
+                                    String contentImgUrl = contentImg.attr("src");
+                                    if (contentImgUrl.contains(imgUrl.replace("https://", "").replace("http://", ""))) {
+                                        contentImg.attr("src", "images/" + imgName);
+                                    }
+                                }
+                                
+                                downloadedImages.add(imgUrl);
                                 processedImages++;
                             } catch (Exception e) {
                                 log("Warning: Failed to download image: " + e.getMessage());
