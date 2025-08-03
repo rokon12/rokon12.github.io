@@ -2,7 +2,7 @@
 title: Bazlur's Blog Archive
 description: A collection of articles on Java, Software Development, and Technology
 baseurl: ""
-url: ""
+url: "https://bazlur.com"
 
 # Build settings
 markdown: kramdown
@@ -24,9 +24,9 @@ collections:
 defaults:
   - scope:
       path: "_posts"
-      type: "pages"
+      type: "posts"
     values:
-      layout: "default"
+      layout: "post"
 
 # Navigation
 header_pages:

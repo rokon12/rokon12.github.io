@@ -1,0 +1,98 @@
+/* Base styles */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Header */
+header nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 2rem;
+}
+
+header nav a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Article styles */
+article header {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 1rem;
+}
+
+article h1 {
+    margin-bottom: 0.5rem;
+}
+
+article time {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.original-link {
+    margin-top: 0.5rem;
+}
+
+.original-link a {
+    color: #0066cc;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.original-link a:hover {
+    text-decoration: underline;
+}
+
+/* Content */
+.content {
+    margin: 2rem 0;
+}
+
+.content img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Footer */
+article footer {
+    border-top: 1px solid #eee;
+    padding-top: 1rem;
+    margin-top: 2rem;
+}
+
+.meta {
+    color: #666;
+    font-size: 0.85rem;
+    font-style: italic;
+}
+
+/* Code blocks */
+pre {
+    background: #f5f5f5;
+    padding: 1rem;
+    overflow-x: auto;
+    border-radius: 4px;
+}
+
+code {
+    background: #f5f5f5;
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+}
+
+pre code {
+    background: none;
+    padding: 0;
+}
