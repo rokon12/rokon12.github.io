@@ -286,16 +286,72 @@ public class WebsiteScraper {
                             }
                         }
 
-                        // Extract publication date
-                        String publishDate = content.select("time.entry-date.published").attr("datetime");
-                        String fileDate;
+                        // Extract publication date - try multiple selectors
+                        String publishDate = null;
+                        String fileDate = null;
+                        
+                        // Try different date selectors
+                        Elements dateElements = content.select("time[datetime], .entry-date, .published, .post-date, meta[property='article:published_time']");
+                        if (!dateElements.isEmpty()) {
+                            publishDate = dateElements.first().attr("datetime");
+                            if (publishDate == null || publishDate.isEmpty()) {
+                                publishDate = dateElements.first().attr("content");
+                            }
+                            if (publishDate == null || publishDate.isEmpty()) {
+                                publishDate = dateElements.first().text();
+                            }
+                        }
+                        
+                        // Also check the whole document for date meta tags
+                        if (publishDate == null || publishDate.isEmpty()) {
+                            Elements metaDates = doc.select("meta[property='article:published_time'], meta[name='publish_date'], meta[name='date']");
+                            if (!metaDates.isEmpty()) {
+                                publishDate = metaDates.first().attr("content");
+                            }
+                        }
+                        
+                        // Also check for date in URL pattern (e.g., /2023/10/15/)
+                        if (publishDate == null || publishDate.isEmpty()) {
+                            java.util.regex.Pattern urlDatePattern = java.util.regex.Pattern.compile("/(\\d{4})/(\\d{2})/(\\d{2})/");
+                            java.util.regex.Matcher matcher = urlDatePattern.matcher(url);
+                            if (matcher.find()) {
+                                publishDate = matcher.group(1) + "-" + matcher.group(2) + "-" + matcher.group(3);
+                            }
+                        }
+                        
                         if (publishDate != null && !publishDate.isEmpty()) {
-                            // Use publication date (format: YYYY-MM-DD)
-                            fileDate = publishDate.substring(0, 10);
+                            // Extract just the date part (YYYY-MM-DD)
+                            if (publishDate.length() >= 10) {
+                                fileDate = publishDate.substring(0, 10);
+                            } else {
+                                fileDate = publishDate;
+                            }
+                            // Ensure we have a full datetime
+                            if (!publishDate.contains("T")) {
+                                publishDate = fileDate + "T00:00:00+00:00";
+                            }
                         } else {
                             // Fallback to current date if publication date not found
                             fileDate = java.time.LocalDate.now().format(java.time.format.DateTimeFormatter.ISO_LOCAL_DATE);
-                            publishDate = fileDate + "T00:00:00+00:00"; // Set a default timestamp
+                            publishDate = fileDate + "T00:00:00+00:00";
+                            log("Warning: Could not extract publication date for " + url + ", using current date");
+                        }
+
+                        // Extract featured image
+                        String featuredImage = null;
+                        Elements articleImages = content.select("img");
+                        if (!articleImages.isEmpty()) {
+                            String firstImageUrl = articleImages.first().attr("src");
+                            if (!firstImageUrl.isEmpty() && (firstImageUrl.endsWith(".jpg") || 
+                                firstImageUrl.endsWith(".jpeg") || firstImageUrl.endsWith(".png") || 
+                                firstImageUrl.endsWith(".webp"))) {
+                                // Extract filename from URL
+                                String imageName = firstImageUrl.substring(firstImageUrl.lastIndexOf('/') + 1);
+                                if (imageName.contains("?")) {
+                                    imageName = imageName.substring(0, imageName.indexOf('?'));
+                                }
+                                featuredImage = "images/" + imageName;
+                            }
                         }
 
                         // Convert to markdown
@@ -307,6 +363,7 @@ public class WebsiteScraper {
                                              "original_url: '" + url + "'\n" +
                                              "date_published: '" + publishDate + "'\n" +
                                              "date_scraped: '" + java.time.LocalDateTime.now().format(java.time.format.DateTimeFormatter.ISO_LOCAL_DATE_TIME) + "'\n" +
+                                             (featuredImage != null ? "featured_image: '" + featuredImage + "'\n" : "") +
                                              "---\n\n" +
                                              markdown;
 

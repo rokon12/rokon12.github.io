@@ -1,6 +1,9 @@
 ---
 ---
 
+// Import syntax highlighting
+@import "syntax-highlighting";
+
 // Variables
 $primary-color: #2563eb;
 $primary-dark: #1e40af;
@@ -572,27 +575,20 @@ a {
     margin: 2rem 0;
   }
   
+  // Remove default pre/code styles in favor of syntax highlighting
   pre {
-    background: $bg-dark;
-    color: #e5e7eb;
-    padding: 1.5rem;
-    border-radius: 0.5rem;
-    overflow-x: auto;
     margin: 2rem 0;
-    box-shadow: $shadow-lg;
   }
   
-  code {
-    background: rgba($primary-color, 0.1);
+  // Inline code (non-highlighted)
+  p code, li code {
+    background: #f6f8fa;
+    color: #0969da;
     padding: 0.2rem 0.4rem;
     border-radius: 0.25rem;
-    font-family: 'SF Mono', Monaco, monospace;
-    font-size: 0.9em;
-  }
-  
-  pre code {
-    background: none;
-    padding: 0;
+    font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', monospace;
+    font-size: 0.85em;
+    font-weight: 500;
   }
   
   blockquote {
