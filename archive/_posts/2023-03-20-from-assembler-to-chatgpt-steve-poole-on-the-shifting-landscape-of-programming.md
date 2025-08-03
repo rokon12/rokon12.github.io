@@ -3,7 +3,7 @@ title: 'From Assembler to Chat-GPT: Steve Poole on the Shifting Landscape of Pro
 original_url: 'https://bazlur.ca/2023/03/20/from-assembler-to-chat-gpt-steve-poole-on-the-shifting-landscape-of-programming/'
 date_published: '2023-03-20T00:00:00+00:00'
 date_scraped: '2025-02-15T11:28:07.282460396'
-tags: ["programming", "career", "ai", "tutorial", "java"]
+tags: ['programming']
 featured_image: images/7.png
 ---
 

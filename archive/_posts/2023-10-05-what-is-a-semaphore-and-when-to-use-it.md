@@ -3,7 +3,7 @@ title: 'What is a semaphore, and when to use it?'
 original_url: 'https://bazlur.ca/2023/10/05/what-is-a-semaphore-and-when-to-use-it/'
 date_published: '2023-10-05T00:00:00+00:00'
 date_scraped: '2025-02-15T11:25:33.872565937'
-tags: ["concurrency", "database", "testing", "java", "ai"]
+tags: ['concurrency', 'java', 'tutorial']
 featured_image: images/b8ae274c-6229-4645-9a20-ef9412595531.jpeg
 ---
 

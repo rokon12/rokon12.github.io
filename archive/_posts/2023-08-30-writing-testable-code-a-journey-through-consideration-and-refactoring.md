@@ -3,7 +3,7 @@ title: 'Writing Testable Code: A Journey Through Consideration and Refactoring'
 original_url: 'https://bazlur.ca/2023/08/30/writing-testable-code-a-journey-through-consideration-and-refactoring/'
 date_published: '2023-08-30T00:00:00+00:00'
 date_scraped: '2025-02-15T11:26:04.628916284'
-tags: ["tools", "testing", "cloud", "ai", "tutorial"]
+tags: ['testing', 'programming', 'tutorial']
 featured_image: images/8a588ade-2fff-41d7-9407-1b10f524271d.jpeg
 ---
 

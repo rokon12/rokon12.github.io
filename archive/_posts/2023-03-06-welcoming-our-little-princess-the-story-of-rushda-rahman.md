@@ -3,7 +3,7 @@ title: 'Welcoming Our Little Princess: The Story of Rushda Rahman'
 original_url: 'https://bazlur.ca/2023/03/06/welcoming-our-little-princess-the-story-of-rushda-rahman/'
 date_published: '2023-03-06T00:00:00+00:00'
 date_scraped: '2025-02-15T11:28:18.618784984'
-tags: ["ai", "tools", "personal", "tutorial"]
+tags: ['personal']
 featured_image: images/img-20230202-wa0000.jpg
 ---
 

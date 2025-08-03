@@ -3,7 +3,7 @@ title: 'A Journey to DevNexus: Challenges, Friendships, and Java'
 original_url: 'https://bazlur.ca/2025/03/08/a-journey-to-devnexus-challenges-friendships-and-java/'
 date_published: '2025-03-08T00:00:00+00:00'
 date_scraped: '2025-06-18T01:15:37.091988544'
-tags: ["ai", "java", "personal", "tools", "career"]
+tags: ['personal', 'java']
 featured_image: images/482058307-10232003967115777-7301803814855188745-n.jpg
 ---
 

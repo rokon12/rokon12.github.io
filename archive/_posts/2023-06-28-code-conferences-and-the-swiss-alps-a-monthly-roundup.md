@@ -3,7 +3,7 @@ title: 'Code, Conferences, and the Swiss Alps: A Monthly Roundup'
 original_url: 'https://bazlur.ca/2023/06/28/code-conferences-and-the-swiss-alps-a-monthly-roundup/'
 date_published: '2023-06-28T00:00:00+00:00'
 date_scraped: '2025-02-15T11:26:50.366647795'
-tags: ["java", "career", "ai", "performance", "programming"]
+tags: ['programming']
 featured_image: images/1687906864391.jpeg
 ---
 

@@ -3,7 +3,7 @@ title: 'Java Thread Programming (Part 9)'
 original_url: 'https://bazlur.ca/2021/12/14/java-thread-programming-part-9/'
 date_published: '2021-12-14T00:00:00+00:00'
 date_scraped: '2025-02-15T11:30:44.115671863'
-tags: ["concurrency", "java", "ai", "tools", "programming"]
+tags: ['concurrency', 'java', 'tutorial']
 ---
 
 Java Thread Programming (Part 9)

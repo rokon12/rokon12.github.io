@@ -3,7 +3,7 @@ title: 'Creating a Command Line Tool with JBang and PicoCLI to Generate Release 
 original_url: 'https://bazlur.ca/2024/07/18/creating-a-command-line-tool-with-jbang-and-picocli-to-generate-release-notes/'
 date_published: '2024-07-18T00:00:00+00:00'
 date_scraped: '2025-02-15T11:25:05.924911232'
-tags: ["tools", "ai", "java", "tutorial", "concurrency"]
+tags: ['tools', 'java', 'tutorial']
 featured_image: images/dall-e-2024-07-18-21.31.00-a-clean-and-simple-illustration-featuring-a-command-line-interface-with-java-code-on-the-screen.-the-background-shows-small-minimalist-logos-of-jbang.webp
 ---
 

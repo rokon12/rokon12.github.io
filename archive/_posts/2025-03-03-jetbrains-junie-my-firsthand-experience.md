@@ -3,7 +3,7 @@ title: 'JetBrains Junie: My Firsthand Experience'
 original_url: 'https://bazlur.ca/2025/03/03/jetbrains-junie-my-firsthand-experience/'
 date_published: '2025-03-03T00:00:00+00:00'
 date_scraped: '2025-06-18T01:15:42.830591141'
-tags: ["ai", "jakarta", "tools", "personal", "programming"]
+tags: ['personal', 'tools']
 featured_image: images/gemini-generated-image-aczqicaczqicaczq.jpeg
 ---
 

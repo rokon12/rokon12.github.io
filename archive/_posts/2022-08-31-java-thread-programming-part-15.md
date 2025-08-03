@@ -3,7 +3,7 @@ title: 'Java Thread Programming (Part 15)'
 original_url: 'https://bazlur.ca/2022/08/31/java-thread-programming-part-15/'
 date_published: '2022-08-31T00:00:00+00:00'
 date_scraped: '2025-02-15T11:29:06.769599975'
-tags: ["concurrency", "java", "ai", "programming", "tools"]
+tags: ['concurrency', 'java', 'tutorial']
 featured_image: images/bozhin-karaivanov-k6cc1d-k-g-unsplash-scaled.jpg
 ---
 

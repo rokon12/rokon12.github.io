@@ -3,7 +3,7 @@ title: 'Announcing “Java Unscripted: An Asynchronous Exploration of Excellence
 original_url: 'https://bazlur.ca/2023/05/16/announcing-java-unscripted-an-asynchronous-exploration-of-excellence/'
 date_published: '2023-05-16T00:00:00+00:00'
 date_scraped: '2025-02-15T11:27:30.413278183'
-tags: ["career", "java", "programming", "ai", "personal"]
+tags: ['java', 'programming']
 featured_image: images/ca3a69fe-9a17-4917-b8b8-07bdf6c9e4b6.jpeg
 ---
 

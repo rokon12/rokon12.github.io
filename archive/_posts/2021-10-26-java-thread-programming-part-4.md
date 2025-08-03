@@ -3,7 +3,7 @@ title: 'Java Thread Programming (Part 4)'
 original_url: 'https://bazlur.ca/2021/10/26/java-thread-programming-part-4/'
 date_published: '2021-10-26T00:00:00+00:00'
 date_scraped: '2025-02-15T11:31:00.589845489'
-tags: ["concurrency", "ai", "java", "performance", "tutorial"]
+tags: ['concurrency', 'java', 'tutorial']
 featured_image: images/dall-e-2023-10-11-03.28.56-graphical-representation-of-a-computers-cpu-and-memory.-threads-labeled-thread-1-and-thread-2-move-from-the-cpu-towards-the-memory-and-back-sh.png
 ---
 

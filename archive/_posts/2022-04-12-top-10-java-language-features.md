@@ -3,7 +3,7 @@ title: 'Top 10 Java Language Features'
 original_url: 'https://bazlur.ca/2022/04/12/top-10-java-language-features/'
 date_published: '2022-04-12T00:00:00+00:00'
 date_scraped: '2025-02-15T11:30:08.506169712'
-tags: ["java", "ai", "tutorial", "concurrency", "programming"]
+tags: ['java', 'tutorial']
 featured_image: images/top-10-java-language-features-1.png
 ---
 

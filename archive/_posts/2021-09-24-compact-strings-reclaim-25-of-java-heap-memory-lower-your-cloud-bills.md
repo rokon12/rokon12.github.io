@@ -3,7 +3,7 @@ title: 'Compact Strings: Reclaim 25% of Java Heap Memory & Lower Your Cloud Bill
 original_url: 'https://bazlur.ca/2021/09/24/compact-strings-reclaim-25-of-java-heap-memory-lower-your-cloud-bills/'
 date_published: '2021-09-24T00:00:00+00:00'
 date_scraped: '2025-02-15T11:31:18.101908844'
-tags: ["java", "performance", "ai", "cloud", "testing"]
+tags: ['java', 'performance', 'cloud']
 ---
 
 Compact Strings: Reclaim 25% of Java Heap Memory \& Lower Your Cloud Bills

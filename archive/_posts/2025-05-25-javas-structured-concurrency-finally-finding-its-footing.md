@@ -3,7 +3,7 @@ title: 'Java’s Structured Concurrency: Finally Finding Its Footing'
 original_url: 'https://bazlur.ca/2025/05/25/javas-structured-concurrency-finally-finding-its-footing/'
 date_published: '2025-05-25T00:00:00+00:00'
 date_scraped: '2025-06-18T01:15:10.341798485'
-tags: ["concurrency", "ai", "java", "tools", "tutorial"]
+tags: ['concurrency', 'java']
 featured_image: images/u6131494527-an-image-showcasing-a-strong-modern-architectural-add760f3-7c45-4096-bb86-40dfac334ca1-2.png
 ---
 

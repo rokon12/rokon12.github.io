@@ -3,7 +3,7 @@ title: 'Top 7 Features in Jakarta EE 10'
 original_url: 'https://bazlur.ca/2022/06/28/top-7-features-in-jakarta-ee-10/'
 date_published: '2022-06-28T00:00:00+00:00'
 date_scraped: '2025-02-15T11:29:29.36003239'
-tags: ["jakarta", "concurrency", "java", "tools", "testing"]
+tags: ['jakarta', 'java']
 featured_image: images/jakartaee-landscape.jpeg
 ---
 

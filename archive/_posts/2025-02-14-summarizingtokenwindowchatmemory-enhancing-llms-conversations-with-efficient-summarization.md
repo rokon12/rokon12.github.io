@@ -3,7 +3,7 @@ title: 'SummarizingTokenWindowChatMemory: Enhancing LLM’s Conversations with E
 original_url: 'https://bazlur.ca/2025/02/14/summarizingtokenwindowchatmemory-enhancing-llms-conversations-with-efficient-summarization/'
 date_published: '2025-02-14T00:00:00+00:00'
 date_scraped: '2025-02-15T11:24:23.165696046'
-tags: ["ai", "performance", "tools", "java", "personal"]
+tags: ['ai', 'tutorial']
 featured_image: images/gemini-generated-image-6ad3g46ad3g46ad3.jpeg
 ---
 

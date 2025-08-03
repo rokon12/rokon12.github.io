@@ -3,7 +3,7 @@ title: 'Let’s Use Optional to Fix Method Contracts'
 original_url: 'https://bazlur.ca/2021/11/10/lets-use-optional-to-fix-method-contracts/'
 date_published: '2021-11-10T00:00:00+00:00'
 date_scraped: '2025-02-15T11:30:53.132539901'
-tags: ["java", "programming", "ai", "tutorial", "book-review"]
+tags: ['programming']
 ---
 
 Let's Use Optional to Fix Method Contracts

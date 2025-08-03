@@ -3,7 +3,7 @@ title: 'Book Review: Monolith to Microservices (Part 1)'
 original_url: 'https://bazlur.ca/2022/05/18/book-review-monolith-to-microservices-part-1/'
 date_published: '2022-05-18T00:00:00+00:00'
 date_scraped: '2025-02-15T11:29:47.747480343'
-tags: ["architecture", "ai", "tools", "book-review", "programming"]
+tags: ['book-review']
 featured_image: images/monolith-to-microservice.jpeg
 ---
 

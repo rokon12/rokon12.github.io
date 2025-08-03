@@ -3,7 +3,7 @@ title: '7 Ways to Improve Your Code Reading Skills'
 original_url: 'https://bazlur.ca/2022/02/18/7-ways-to-improve-your-code-reading-skills/'
 date_published: '2022-02-18T00:00:00+00:00'
 date_scraped: '2025-02-15T11:30:30.216177338'
-tags: ["programming", "tutorial", "ai", "tools", "architecture"]
+tags: ['programming', 'tutorial']
 ---
 
 7 Ways to Improve Your Code Reading Skills

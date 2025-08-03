@@ -3,7 +3,7 @@ title: 'Book Review: Klara and the Sun'
 original_url: 'https://bazlur.ca/2022/07/07/book-review-klara-and-the-sun/'
 date_published: '2022-07-07T00:00:00+00:00'
 date_scraped: '2025-02-15T11:29:19.908574916'
-tags: ["tools", "book-review", "personal", "ai", "interview"]
+tags: ['book-review']
 featured_image: images/klara-and-sun.jpeg
 ---
 

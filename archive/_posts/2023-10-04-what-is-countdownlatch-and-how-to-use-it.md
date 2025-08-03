@@ -3,7 +3,7 @@ title: 'What is CountDownLatch and How to Use It?'
 original_url: 'https://bazlur.ca/2023/10/04/what-is-countdownlatch-and-how-to-use-it/'
 date_published: '2023-10-04T00:00:00+00:00'
 date_scraped: '2025-02-15T11:25:39.358357387'
-tags: ["concurrency", "ai", "java", "tutorial", "tools"]
+tags: ['concurrency', 'java', 'tutorial']
 featured_image: images/f8ce2ee3-e5e4-4fc4-91ea-47f05eb997b7.jpeg
 ---
 

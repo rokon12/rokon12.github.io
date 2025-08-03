@@ -3,7 +3,7 @@ title: '5 Things You Probably Didn’t Know About Java Concurrency'
 original_url: 'https://bazlur.ca/2022/03/25/5-things-you-probably-didnt-know-about-java-concurrency/'
 date_published: '2022-03-25T00:00:00+00:00'
 date_scraped: '2025-02-15T11:30:17.813052772'
-tags: ["concurrency", "ai", "java", "performance", "tools"]
+tags: ['java', 'programming']
 featured_image: images/dall-e-2023-10-11-03.34.35-photo-representation-of-a-hello-world-java-program-with-the-main-thread-emphasized-and-other-threads-branching-off-from-it.-background-shows-a-web-s.png
 ---
 

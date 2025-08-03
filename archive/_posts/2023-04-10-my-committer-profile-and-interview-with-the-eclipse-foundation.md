@@ -3,7 +3,7 @@ title: 'My Committer Profile and Interview with the Eclipse Foundation'
 original_url: 'https://bazlur.ca/2023/04/10/my-committer-profile-interview-with-the-eclipse-foundation/'
 date_published: '2023-04-10T00:00:00+00:00'
 date_scraped: '2025-02-15T11:27:48.532813076'
-tags: ["tools", "career", "jakarta", "ai", "interview"]
+tags: ['interview', 'career', 'java']
 featured_image: images/screen-shot-2023-04-10-at-6.11.44-am.png
 ---
 

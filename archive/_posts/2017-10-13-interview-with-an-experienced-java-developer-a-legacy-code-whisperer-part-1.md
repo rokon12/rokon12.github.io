@@ -3,7 +3,7 @@ title: 'Interview with an experienced Java developer – a legacy code whisperer
 original_url: 'https://bazlur.ca/2017/10/13/interview-with-an-experienced-java-developer-a-legacy-code-whisperer-part-1/'
 date_published: '2017-10-13T00:00:00+00:00'
 date_scraped: '2025-02-15T11:31:31.026450186'
-tags: ["ai", "programming", "testing", "tutorial", "career"]
+tags: ['interview', 'career', 'java']
 featured_image: images/interviews.jpeg
 ---
 

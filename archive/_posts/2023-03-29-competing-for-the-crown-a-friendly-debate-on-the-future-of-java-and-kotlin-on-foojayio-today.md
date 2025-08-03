@@ -3,7 +3,7 @@ title: 'Competing for the Crown: A Friendly Debate on the Future of Java and Kot
 original_url: 'https://bazlur.ca/2023/03/29/competing-for-the-crown-a-friendly-debate-on-the-future-of-java-and-kotlin-on-foojay-io-today/'
 date_published: '2023-03-29T00:00:00+00:00'
 date_scraped: '2025-02-15T11:27:54.653265073'
-tags: ["java", "kotlin", "programming", "tutorial", "ai"]
+tags: ['java', 'programming']
 ---
 
 Competing for the Crown: A Friendly Debate on the Future of Java and Kotlin on Foojay.io Today

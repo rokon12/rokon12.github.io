@@ -3,7 +3,7 @@ title: 'DIY JVM Part 1: Decoding the Magic – Parsing Java'
 original_url: 'https://bazlur.ca/2025/02/21/diy-jvm-part-1-decoding-the-magic-parsing-java/'
 date_published: '2025-02-21T00:00:00+00:00'
 date_scraped: '2025-06-18T01:15:48.115349287'
-tags: ["java", "ai", "performance", "testing", "programming"]
+tags: ['java', 'tutorial']
 featured_image: images/dall-e-2025-02-21-00.27.42-a-close-up-shot-of-a-computer-terminal-displaying-a-hex-dump-of-a-java-.class-file.-the-magic-number-0xcafebabe-is-prominently-visible-at-the-start-of.webp
 ---
 
