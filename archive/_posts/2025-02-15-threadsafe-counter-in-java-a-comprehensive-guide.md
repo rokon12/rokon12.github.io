@@ -3,6 +3,7 @@ title: 'Thread-Safe Counter in Java: A Comprehensive Guide'
 original_url: 'https://bazlur.ca/2023/08/17/thread-safe-counter-in-java-a-comprehensive-guide/'
 date_published: '2025-02-15T00:00:00+00:00'
 date_scraped: '2025-02-15T11:26:07.46506737'
+featured_image: images/4738b5a0-8697-4b56-aa36-d13fcb47dd8a.jpeg
 ---
 
 ![](images/4738b5a0-8697-4b56-aa36-d13fcb47dd8a.jpeg)

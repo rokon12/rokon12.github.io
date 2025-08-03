@@ -3,6 +3,7 @@ title: 'Building FormPilot: My Journey Creating an AI-Powered Form Filler with R
 original_url: 'https://bazlur.ca/2025/04/06/building-formpilot-my-journey-creating-an-ai-powered-form-filler-with-rag-langchain4j-and-ollama/'
 date_published: '2025-06-18T00:00:00+00:00'
 date_scraped: '2025-06-18T01:15:29.245002935'
+featured_image: images/chatgpt-image-apr-6-2025-06-10-38-pm.png
 ---
 
 ![](images/chatgpt-image-apr-6-2025-06-10-38-pm.png)

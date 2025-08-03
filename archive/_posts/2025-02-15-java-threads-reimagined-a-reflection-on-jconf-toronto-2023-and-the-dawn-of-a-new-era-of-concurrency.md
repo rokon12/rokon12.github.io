@@ -3,6 +3,7 @@ title: 'Java Threads Reimagined: A Reflection on JConf Toronto 2023 and the Dawn
 original_url: 'https://bazlur.ca/2023/05/23/java-threads-reimagined-a-reflection-on-jconf-toronto-2023-and-the-dawn-of-a-new-era-of-concurrency/'
 date_published: '2025-02-15T00:00:00+00:00'
 date_scraped: '2025-02-15T11:27:17.255439241'
+featured_image: images/pxl-20230503-140737421-scaled.jpg
 ---
 
 ![](images/pxl-20230503-140737421-scaled.jpg)

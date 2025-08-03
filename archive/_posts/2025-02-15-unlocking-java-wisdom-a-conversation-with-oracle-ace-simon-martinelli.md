@@ -3,6 +3,7 @@ title: 'Unlocking Java Wisdom: A Conversation with Oracle ACE Simon Martinelli'
 original_url: 'https://bazlur.ca/2023/09/01/unlocking-java-wisdom-a-conversation-with-oracle-ace-simon-martinelli/'
 date_published: '2025-02-15T00:00:00+00:00'
 date_scraped: '2025-02-15T11:25:59.021645566'
+featured_image: images/simon-martinelli.png
 ---
 
 ![](images/simon-martinelli.png)

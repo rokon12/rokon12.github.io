@@ -3,6 +3,7 @@ title: 'Family, Castles, and Code: Exploring Europe’s Old Cities'
 original_url: 'https://bazlur.ca/2024/09/11/family-castles-and-code-exploring-europes-old-cities/'
 date_published: '2025-02-15T00:00:00+00:00'
 date_scraped: '2025-02-15T11:24:58.026810907'
+featured_image: images/53987206804-87983e572b-k-1.jpg
 ---
 
 ![](images/53987206804-87983e572b-k-1.jpg)

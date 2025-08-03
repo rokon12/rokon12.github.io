@@ -3,6 +3,7 @@ title: 'The Evolution of Java: Challenging Stereotypes and Embracing Modernity'
 original_url: 'https://bazlur.ca/2023/07/07/the-evolution-of-java-challenging-stereotypes-and-embracing-modernity/'
 date_published: '2025-02-15T00:00:00+00:00'
 date_scraped: '2025-02-15T11:26:40.8107578'
+featured_image: images/19d24567-abd1-47f8-ab6d-1a8f05cd3801.jpeg
 ---
 
 ![](images/19d24567-abd1-47f8-ab6d-1a8f05cd3801.jpeg)

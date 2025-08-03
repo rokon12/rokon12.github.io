@@ -3,6 +3,7 @@ title: 'A Journey of the Heart: Visiting Madinah and Makkah'
 original_url: 'https://bazlur.ca/2025/01/07/a-journey-of-the-heart-visiting-madinah-and-makkah/'
 date_published: '2025-02-15T00:00:00+00:00'
 date_scraped: '2025-02-15T11:24:33.88814616'
+featured_image: images/img-2263-effects-scaled.jpg
 ---
 
 ![](images/img-2263-effects-scaled.jpg)

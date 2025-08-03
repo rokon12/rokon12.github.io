@@ -3,6 +3,7 @@ title: 'How to run the Java Incubator Module from the Command Line and IntelliJ 
 original_url: 'https://bazlur.ca/2022/05/10/how-to-run-the-java-incubator-module-from-the-command-line-and-intellij-idea/'
 date_published: '2025-02-15T00:00:00+00:00'
 date_scraped: '2025-02-15T11:29:55.12286936'
+featured_image: images/idea-overview-5-1-2x.webp
 ---
 
 ![](images/idea-overview-5-1-2x.webp)

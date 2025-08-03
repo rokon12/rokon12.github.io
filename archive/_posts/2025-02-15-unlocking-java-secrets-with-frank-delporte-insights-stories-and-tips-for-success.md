@@ -3,6 +3,7 @@ title: 'Unlocking Java Secrets with Frank Delporte: Insights, Stories, and Tips 
 original_url: 'https://bazlur.ca/2023/04/10/unlocking-java-secrets-with-frank-delporte-insights-stories-and-tips-for-success/'
 date_published: '2025-02-15T00:00:00+00:00'
 date_scraped: '2025-02-15T11:27:44.83211919'
+featured_image: images/5.png
 ---
 
 ![](images/5.png)

@@ -3,6 +3,7 @@ title: 'Exploring the Depths of Java: A Comprehensive Conversation with Jakob Je
 original_url: 'https://bazlur.ca/2023/07/05/exploring-the-depths-of-java-a-comprehensive-conversation-with-jakob-jenkov-part-ii/'
 date_published: '2025-02-15T00:00:00+00:00'
 date_scraped: '2025-02-15T11:26:43.622075312'
+featured_image: images/jekov.jpeg
 ---
 
 Exploring the Depths of Java: A Comprehensive Conversation with Jakob Jenkov, Part-II

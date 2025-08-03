@@ -3,6 +3,7 @@ title: 'Embracing Modernity: A Comprehensive Look at Sealed Classes, Pattern Mat
 original_url: 'https://bazlur.ca/2023/09/11/embracing-modernity-a-comprehensive-look-at-sealed-classes-pattern-matching-and-functional-paradigms-in-java/'
 date_published: '2025-02-15T00:00:00+00:00'
 date_scraped: '2025-02-15T11:25:54.209227709'
+featured_image: images/23752bb0-5ca9-4418-9e6d-db51dded2e4e.jpeg
 ---
 
 ![](images/23752bb0-5ca9-4418-9e6d-db51dded2e4e.jpeg)

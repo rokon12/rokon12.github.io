@@ -3,6 +3,7 @@ title: 'Records for Cleaner and More Expressive Parameterized Tests in JUnit 5'
 original_url: 'https://bazlur.ca/2024/03/22/records-for-cleaner-and-more-expressive-parameterized-tests-in-junit-5/'
 date_published: '2025-02-15T00:00:00+00:00'
 date_scraped: '2025-02-15T11:25:17.469705684'
+featured_image: images/gemini-generated-image-2.jpeg
 ---
 
 ![](images/gemini-generated-image-2.jpeg)

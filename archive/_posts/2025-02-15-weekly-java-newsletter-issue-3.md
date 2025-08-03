@@ -3,6 +3,7 @@ title: 'Weekly Java Newsletter – Issue #3'
 original_url: 'https://bazlur.ca/2022/07/11/weekly-java-newsletter-issue-3/'
 date_published: '2025-02-15T00:00:00+00:00'
 date_scraped: '2025-02-15T11:29:16.705107874'
+featured_image: images/java-newsletters-1.png
 ---
 
 ![](images/java-newsletters-1.png)
