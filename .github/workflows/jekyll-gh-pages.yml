@@ -41,8 +41,6 @@ jobs:
         with:
           source: ./
           destination: ./_site
-      - name: Add CNAME file for custom domain
-        run: echo "bazlur.com" > ./_site/CNAME
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 
