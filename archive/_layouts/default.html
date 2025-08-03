@@ -52,4 +52,52 @@
     </footer>
 
 </body>
+    <script>
+    // Fade-in animations on scroll
+    document.addEventListener('DOMContentLoaded', function() {
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Observe fade-in elements
+        document.querySelectorAll('.fade-in, .fade-in-up, .fade-in-left, .fade-in-right, .stagger-animation').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Add fade-in classes to post cards
+        document.querySelectorAll('.post-card').forEach((card, index) => {
+            card.classList.add('fade-in-up');
+            card.style.transitionDelay = `${index * 0.1}s`;
+        });
+
+        // Lazy loading for images
+        const imageObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.classList.add('lazy-loading');
+                    img.onload = function() {
+                        img.classList.remove('lazy-loading');
+                        img.classList.add('lazy-loaded');
+                    };
+                    imageObserver.unobserve(img);
+                }
+            });
+        });
+
+        document.querySelectorAll('img').forEach(img => {
+            imageObserver.observe(img);
+        });
+    });
+    </script>
 </html>
