@@ -1,6 +1,9 @@
-- title: About
-  url: /about.md
-- title: Categories
-  url: /categories.md
-- title: Blog
+- title: Home
   url: /
+- title: Archive
+  url: /archive
+- title: About
+  url: /about
+- title: Original Site
+  url: https://bazlur.ca
+  external: true

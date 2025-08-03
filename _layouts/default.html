@@ -17,7 +17,13 @@
     <nav>
         <ul>
             {% for item in site.data.navigation %}
-            <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+            <li>
+                {% if item.external %}
+                <a href="{{ item.url }}" target="_blank" rel="noopener">{{ item.title }} ↗</a>
+                {% else %}
+                <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+                {% endif %}
+            </li>
             {% endfor %}
         </ul>
     </nav>
