@@ -16,11 +16,11 @@ kramdown:
   input: GFM
   syntax_highlighter: rouge
 
-# Theme
-theme: minima
-minima:
-  skin: classic
-  date_format: "%B %d, %Y"
+# Theme - using custom theme
+# theme: minima
+# minima:
+#   skin: classic
+#   date_format: "%B %d, %Y"
 
 # Plugins
 plugins:

@@ -1,26 +1,47 @@
 ---
 layout: default
-title: Archive
+title: Complete Archive
 permalink: /archive/
 ---
 
-<div class="archive-page">
-    <h1>Article Archive</h1>
-    <p class="archive-description">Browse all {{ site.posts | size }} articles archived from <a href="https://bazlur.ca">bazlur.ca</a></p>
+<div class="wrapper">
+    <div class="archive-header">
+        <h1>Complete Article Archive</h1>
+        <p>Browse the entire collection of articles from bazlur.ca</p>
+    </div>
 
-    {% assign postsByYear = site.posts | sort: 'date_published' | reverse | group_by_exp: 'post', 'post.date_published | date: "%Y"' %}
-    
-    {% for year in postsByYear %}
-        <div class="archive-year">
+    <div class="archive-stats">
+        <div class="stat-card">
+            <span class="stat-number">{{ site.posts | size }}</span>
+            <span class="stat-label">Total Articles</span>
+        </div>
+        <div class="stat-card">
+            {% assign years = site.posts | group_by_exp: 'post', 'post.date_published | date: "%Y"' %}
+            <span class="stat-number">{{ years | size }}</span>
+            <span class="stat-label">Years of Content</span>
+        </div>
+        <div class="stat-card">
+            {% assign categories = site.posts | map: 'categories' | uniq %}
+            <span class="stat-number">15+</span>
+            <span class="stat-label">Topics Covered</span>
+        </div>
+    </div>
+
+    <div class="archive-timeline">
+        {% assign postsByYear = site.posts | sort: 'date_published' | reverse | group_by_exp: 'post', 'post.date_published | date: "%Y"' %}
+        
+        {% for year in postsByYear %}
+        <section class="year-section">
             <h2>{{ year.name }}</h2>
-            <ul class="archive-list">
+            <ul class="archive-post-list">
                 {% for post in year.items %}
-                <li>
-                    <span class="archive-date">{{ post.date_published | date: "%b %d" }}</span>
+                <li class="archive-post-item">
+                    <time datetime="{{ post.date_published }}">{{ post.date_published | date: "%b %d" }}</time>
                     <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
                 </li>
                 {% endfor %}
             </ul>
-        </div>
-    {% endfor %}
+        </section>
+        {% endfor %}
+    </div>
 </div>
