@@ -1,0 +1,490 @@
+---
+layout: default
+title: Search
+permalink: /search/
+---
+
+<div class="wrapper">
+  <div class="search-container">
+    <h1 class="terminal-header">Search Archive</h1>
+    
+    <div class="search-box">
+      <input type="text" 
+             id="search-input" 
+             class="search-input" 
+             placeholder="Search for articles, topics, or keywords..." 
+             autocomplete="off"
+             autofocus>
+      <div class="search-shortcuts">
+        <kbd>/</kbd> to focus • <kbd>ESC</kbd> to clear
+      </div>
+    </div>
+    
+    <div class="search-stats" id="search-stats"></div>
+    
+    <div class="search-results" id="search-results">
+      <div class="search-placeholder">
+        <div class="search-suggestions">
+          <h3>Try searching for:</h3>
+          <div class="suggestion-chips">
+            <button class="chip" onclick="searchFor('java')">Java</button>
+            <button class="chip" onclick="searchFor('concurrency')">Concurrency</button>
+            <button class="chip" onclick="searchFor('spring')">Spring</button>
+            <button class="chip" onclick="searchFor('thread')">Threads</button>
+            <button class="chip" onclick="searchFor('performance')">Performance</button>
+            <button class="chip" onclick="searchFor('langchain')">LangChain4j</button>
+            <button class="chip" onclick="searchFor('interview')">Interviews</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+.search-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.search-box {
+  position: relative;
+  margin: 30px 0;
+}
+
+.search-input {
+  width: 100%;
+  padding: 20px 25px;
+  font-size: 18px;
+  font-family: 'JetBrains Mono', monospace;
+  background: #1a1a2e;
+  border: 2px solid #313244;
+  border-radius: 12px;
+  color: #fff;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.search-input::placeholder {
+  color: #666;
+}
+
+.search-shortcuts {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12px;
+  color: #666;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.search-shortcuts kbd {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2px 6px;
+  border-radius: 4px;
+  border: 1px solid #333;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.search-stats {
+  text-align: center;
+  color: #999;
+  font-size: 14px;
+  margin: 20px 0;
+  font-family: 'JetBrains Mono', monospace;
+  min-height: 20px;
+}
+
+.search-results {
+  margin-top: 30px;
+}
+
+.search-placeholder {
+  text-align: center;
+  padding: 60px 20px;
+  color: #666;
+}
+
+.search-suggestions h3 {
+  color: #999;
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+
+.suggestion-chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.chip {
+  background: rgba(102, 126, 234, 0.1);
+  border: 1px solid rgba(102, 126, 234, 0.3);
+  color: #667eea;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.chip:hover {
+  background: rgba(102, 126, 234, 0.2);
+  transform: translateY(-2px);
+}
+
+.search-result-item {
+  background: #1a1a2e;
+  border: 1px solid #313244;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+  animation: fadeInUp 0.3s ease;
+}
+
+.search-result-item:hover {
+  border-color: #667eea;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(102, 126, 234, 0.1);
+}
+
+.search-result-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.search-result-title a {
+  color: #667eea;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.search-result-title a:hover {
+  color: #764ba2;
+}
+
+.search-result-meta {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 15px;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.search-result-excerpt {
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.search-result-excerpt mark {
+  background: rgba(102, 126, 234, 0.3);
+  color: #fff;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+.search-result-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.search-result-tag {
+  background: rgba(102, 126, 234, 0.1);
+  color: #667eea;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.search-result-tag:hover {
+  background: rgba(102, 126, 234, 0.2);
+}
+
+.search-loading {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+}
+
+.search-loading::after {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #667eea;
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: spin 0.8s linear infinite;
+  margin-left: 10px;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.no-results {
+  text-align: center;
+  padding: 60px 20px;
+  color: #666;
+}
+
+.no-results h3 {
+  color: #999;
+  margin-bottom: 10px;
+}
+</style>
+
+<script src="https://unpkg.com/lunr/lunr.js"></script>
+<script>
+// Search index data
+const searchData = [
+  {% for post in site.posts %}
+  {
+    id: {{ forloop.index }},
+    title: {{ post.title | jsonify }},
+    content: {{ post.content | strip_html | truncate: 500 | jsonify }},
+    excerpt: {{ post.excerpt | strip_html | truncate: 200 | jsonify }},
+    url: {{ post.url | relative_url | jsonify }},
+    date: {{ post.date_published | date: "%B %-d, %Y" | jsonify }},
+    tags: {{ post.tags | jsonify }}
+  }{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+];
+
+let searchIndex;
+let searchResults = [];
+
+// Initialize Lunr search index
+function initializeSearch() {
+  searchIndex = lunr(function() {
+    this.ref('id');
+    this.field('title', { boost: 10 });
+    this.field('content');
+    this.field('tags', { boost: 5 });
+    
+    searchData.forEach(function(doc) {
+      this.add(doc);
+    }, this);
+  });
+}
+
+// Perform search
+function performSearch(query) {
+  if (!query || query.trim() === '') {
+    displayPlaceholder();
+    return;
+  }
+  
+  const startTime = performance.now();
+  
+  try {
+    // Search with Lunr
+    const results = searchIndex.search(query);
+    
+    // Map results to full documents
+    searchResults = results.map(result => {
+      const doc = searchData.find(d => d.id === parseInt(result.ref));
+      return {
+        ...doc,
+        score: result.score
+      };
+    });
+    
+    const endTime = performance.now();
+    const searchTime = (endTime - startTime).toFixed(2);
+    
+    displayResults(searchResults, query, searchTime);
+  } catch (e) {
+    // Fallback to simple search if Lunr fails
+    const lowerQuery = query.toLowerCase();
+    searchResults = searchData.filter(doc => 
+      doc.title.toLowerCase().includes(lowerQuery) ||
+      doc.content.toLowerCase().includes(lowerQuery) ||
+      (doc.tags && doc.tags.some(tag => tag.toLowerCase().includes(lowerQuery)))
+    );
+    
+    const endTime = performance.now();
+    const searchTime = (endTime - startTime).toFixed(2);
+    
+    displayResults(searchResults, query, searchTime);
+  }
+}
+
+// Display search results
+function displayResults(results, query, searchTime) {
+  const resultsContainer = document.getElementById('search-results');
+  const statsContainer = document.getElementById('search-stats');
+  
+  // Update stats
+  statsContainer.innerHTML = `Found <strong>${results.length}</strong> result${results.length !== 1 ? 's' : ''} for "<strong>${escapeHtml(query)}</strong>" in ${searchTime}ms`;
+  
+  if (results.length === 0) {
+    resultsContainer.innerHTML = `
+      <div class="no-results">
+        <h3>No results found</h3>
+        <p>Try different keywords or check the spelling</p>
+      </div>
+    `;
+    return;
+  }
+  
+  // Build results HTML
+  const resultsHTML = results.map(result => {
+    const highlightedExcerpt = highlightText(result.excerpt, query);
+    const highlightedTitle = highlightText(result.title, query);
+    
+    const tagsHTML = result.tags ? result.tags.map(tag => 
+      `<a href="{{ site.baseurl }}/tags/${tag}/" class="search-result-tag">${tag}</a>`
+    ).join('') : '';
+    
+    return `
+      <div class="search-result-item">
+        <h2 class="search-result-title">
+          <a href="{{ site.baseurl }}${result.url}">${highlightedTitle}</a>
+        </h2>
+        <div class="search-result-meta">
+          ${result.date}
+        </div>
+        <div class="search-result-excerpt">
+          ${highlightedExcerpt}...
+        </div>
+        ${tagsHTML ? `<div class="search-result-tags">${tagsHTML}</div>` : ''}
+      </div>
+    `;
+  }).join('');
+  
+  resultsContainer.innerHTML = resultsHTML;
+}
+
+// Display placeholder
+function displayPlaceholder() {
+  document.getElementById('search-results').innerHTML = `
+    <div class="search-placeholder">
+      <div class="search-suggestions">
+        <h3>Try searching for:</h3>
+        <div class="suggestion-chips">
+          <button class="chip" onclick="searchFor('java')">Java</button>
+          <button class="chip" onclick="searchFor('concurrency')">Concurrency</button>
+          <button class="chip" onclick="searchFor('spring')">Spring</button>
+          <button class="chip" onclick="searchFor('thread')">Threads</button>
+          <button class="chip" onclick="searchFor('performance')">Performance</button>
+          <button class="chip" onclick="searchFor('langchain')">LangChain4j</button>
+          <button class="chip" onclick="searchFor('interview')">Interviews</button>
+        </div>
+      </div>
+    </div>
+  `;
+  document.getElementById('search-stats').innerHTML = '';
+}
+
+// Highlight search terms in text
+function highlightText(text, query) {
+  if (!query) return text;
+  
+  const terms = query.split(/\s+/);
+  let highlighted = text;
+  
+  terms.forEach(term => {
+    const regex = new RegExp(`(${escapeRegex(term)})`, 'gi');
+    highlighted = highlighted.replace(regex, '<mark>$1</mark>');
+  });
+  
+  return highlighted;
+}
+
+// Helper functions
+function escapeHtml(text) {
+  const div = document.createElement('div');
+  div.textContent = text;
+  return div.innerHTML;
+}
+
+function escapeRegex(string) {
+  return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+// Search for a specific term
+function searchFor(term) {
+  document.getElementById('search-input').value = term;
+  performSearch(term);
+}
+
+// Debounce function
+function debounce(func, wait) {
+  let timeout;
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}
+
+// Initialize on page load
+document.addEventListener('DOMContentLoaded', function() {
+  const searchInput = document.getElementById('search-input');
+  
+  // Initialize search index
+  initializeSearch();
+  
+  // Debounced search
+  const debouncedSearch = debounce((e) => {
+    performSearch(e.target.value);
+  }, 300);
+  
+  // Search input handler
+  searchInput.addEventListener('input', debouncedSearch);
+  
+  // Keyboard shortcuts
+  document.addEventListener('keydown', function(e) {
+    // Focus search with /
+    if (e.key === '/' && document.activeElement !== searchInput) {
+      e.preventDefault();
+      searchInput.focus();
+    }
+    
+    // Clear search with ESC
+    if (e.key === 'Escape' && document.activeElement === searchInput) {
+      searchInput.value = '';
+      displayPlaceholder();
+      searchInput.blur();
+    }
+  });
+  
+  // Check for search query in URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const query = urlParams.get('q');
+  if (query) {
+    searchInput.value = query;
+    performSearch(query);
+  }
+});
+</script>

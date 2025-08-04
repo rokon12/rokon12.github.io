@@ -2719,6 +2719,71 @@ pre {
   }
 }
 
+// Quick Search Styles
+.quick-search {
+  margin: 30px auto 0;
+  max-width: 500px;
+  
+  form {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .quick-search-input {
+    flex: 1;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-family: 'JetBrains Mono', monospace;
+    background: rgba(26, 26, 46, 0.8);
+    border: 2px solid rgba(102, 126, 234, 0.3);
+    border-radius: 8px;
+    color: #fff;
+    outline: none;
+    transition: all 0.3s ease;
+    
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.4);
+    }
+    
+    &:focus {
+      border-color: #667eea;
+      background: rgba(26, 26, 46, 1);
+      box-shadow: 0 0 20px rgba(102, 126, 234, 0.2);
+    }
+  }
+  
+  .quick-search-button {
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+    font-family: 'JetBrains Mono', monospace;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+    }
+    
+    &:active {
+      transform: translateY(0);
+    }
+  }
+}
+
+// Global search shortcut
+body {
+  &.search-focused {
+    .quick-search-input {
+      border-color: #667eea !important;
+      box-shadow: 0 0 30px rgba(102, 126, 234, 0.4) !important;
+    }
+  }
+}
+
 // Theme variations
 [data-theme="dracula"] {
   --bg-primary: #282a36;

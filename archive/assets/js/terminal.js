@@ -136,6 +136,11 @@ document.addEventListener('DOMContentLoaded', function() {
                             <span>Browse Tags</span>
                             <span class="command-shortcut">Alt+T</span>
                         </div>
+                        <div class="command-item" data-action="search">
+                            <span class="command-icon">🔍</span>
+                            <span>Search Articles</span>
+                            <span class="command-shortcut">Alt+S</span>
+                        </div>
                         <div class="command-item" data-action="random">
                             <span class="command-icon">🎲</span>
                             <span>Random Post</span>
@@ -216,6 +221,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 break;
             case 'tags':
                 window.location.href = '{{ site.baseurl }}/tags/';
+                break;
+            case 'search':
+                window.location.href = '{{ site.baseurl }}/search/';
                 break;
             case 'random':
                 // Get random post

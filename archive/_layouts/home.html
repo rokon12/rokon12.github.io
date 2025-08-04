@@ -23,6 +23,20 @@ layout: default
         <div class="archive-notice">
             <p>📚 A comprehensive archive originally published on <a href="https://bazlur.ca">bazlur.ca</a>. Press <kbd>Cmd+K</kbd> or <kbd>Ctrl+K</kbd> to open command palette.</p>
         </div>
+        
+        <!-- Quick Search -->
+        <div class="quick-search">
+            <form action="{{ site.baseurl }}/search/" method="get">
+                <input type="text" 
+                       name="q" 
+                       class="quick-search-input" 
+                       placeholder="Quick search... (press / to focus)"
+                       autocomplete="off">
+                <button type="submit" class="quick-search-button">
+                    <span>Search</span>
+                </button>
+            </form>
+        </div>
     </div>
 </div>
 

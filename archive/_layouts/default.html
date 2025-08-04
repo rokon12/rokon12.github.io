@@ -29,6 +29,7 @@
                 <a class="nav-link" href="{{ "/" | relative_url }}">Home</a>
                 <a class="nav-link" href="{{ "/archive" | relative_url }}">Archive</a>
                 <a class="nav-link" href="{{ "/tags" | relative_url }}">Tags</a>
+                <a class="nav-link" href="{{ "/search" | relative_url }}">Search</a>
                 <a class="nav-link" href="{{ "/about" | relative_url }}">About</a>
                 <a class="nav-link nav-link-external" href="https://bazlur.ca" target="_blank" rel="noopener">Original Site →</a>
             </nav>
@@ -144,6 +145,31 @@
         // Initialize theme
         const savedTheme = localStorage.getItem('theme') || 'dark';
         document.documentElement.setAttribute('data-theme', savedTheme);
+        
+        // Global search shortcut
+        document.addEventListener('keydown', function(e) {
+          // Focus search with /
+          if (e.key === '/' && !e.metaKey && !e.ctrlKey) {
+            const searchInput = document.querySelector('.quick-search-input') || 
+                              document.querySelector('#search-input');
+            if (searchInput && document.activeElement !== searchInput) {
+              e.preventDefault();
+              searchInput.focus();
+              document.body.classList.add('search-focused');
+            }
+          }
+          
+          // Clear focus on ESC
+          if (e.key === 'Escape') {
+            const searchInput = document.querySelector('.quick-search-input') || 
+                              document.querySelector('#search-input');
+            if (searchInput && document.activeElement === searchInput) {
+              searchInput.blur();
+              searchInput.value = '';
+              document.body.classList.remove('search-focused');
+            }
+          }
+        });
       });
     </script>
 </html>
