@@ -1,0 +1,112 @@
+---
+layout: default
+---
+
+<!-- ASCII Art Banner -->
+<pre class="ascii-banner">
+╔═══════════════════════════════════════════════════════════════════════════════╗
+║  ____               _                  _             _     _                 ║
+║ | __ )  __ _ _____ | |_   _ _ __      / \   _ __ ___| |__ (_)_   _____       ║
+║ |  _ \ / _` |_  / || | | | | '__|    / _ \ | '__/ __| '_ \| \ \ / / _ \      ║
+║ | |_) | (_| |/ /| || | |_| | |      / ___ \| | | (__| | | | |\ V /  __/      ║
+║ |____/ \__,_/___|_| _|\__,_|_|     /_/   \_\_|  \___|_| |_|_| \_/ \___|      ║
+║                                                                               ║
+║                        > Java | Code | Architecture <                        ║
+╚═══════════════════════════════════════════════════════════════════════════════╝
+</pre>
+
+<div class="hero-section crt-effect">
+    <div class="hero-content">
+        <h1 class="hero-title terminal-header">{{ site.title }}</h1>
+        <p class="hero-description">{{ site.description }}</p>
+        
+        <div class="archive-notice">
+            <p>📚 A comprehensive archive originally published on <a href="https://bazlur.ca">bazlur.ca</a>. Press <kbd>Cmd+K</kbd> or <kbd>Ctrl+K</kbd> to open command palette.</p>
+        </div>
+        
+        <!-- Quick Search -->
+        <div class="quick-search">
+            <form action="{{ site.baseurl }}/search/" method="get">
+                <input type="text" 
+                       name="q" 
+                       class="quick-search-input" 
+                       placeholder="Quick search... (press / to focus)"
+                       autocomplete="off">
+                <button type="submit" class="quick-search-button">
+                    <span>Search</span>
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="wrapper">
+    <section class="recent-posts">
+        <h2 class="terminal-header" style="text-align: center; font-size: 2.5rem; margin: 3rem 0; font-family: 'JetBrains Mono', monospace;">Recent Articles</h2>
+        
+        <div class="post-grid">
+            {% for post in paginator.posts %}
+            <article class="post-card">
+                {% if post.featured_image %}
+                <a href="{{ post.url | relative_url }}" class="post-card-image">
+                    <img src="{{ post.featured_image | replace: 'images/', '/rokon12/images/' }}" 
+                         alt="{{ post.title | escape }}" 
+                         loading="lazy">
+                </a>
+                {% else %}
+                <div class="post-card-image placeholder">
+                    <div class="placeholder-content">
+                        <span>{{ post.title | truncate: 1, "" }}</span>
+                    </div>
+                </div>
+                {% endif %}
+                <div class="post-card-content">
+                    <div class="post-card-header">
+                        <h3 class="post-card-title">
+                            <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+                        </h3>
+                        <p class="post-card-meta">
+                            <time datetime="{{ post.date_published }}">{{ post.date_published | date: "%B %-d, %Y" }}</time>
+                        </p>
+                    </div>
+                    <div class="post-card-body">
+                        <p>{{ post.excerpt | strip_html | truncate: 120 }}</p>
+                    </div>
+                    <div class="post-card-footer">
+                        {% if post.tags and post.tags.size > 0 %}
+                        <div class="post-card-tags">
+                            {% for tag in post.tags limit: 3 %}
+                                <a href="{{ '/tags/' | append: tag | append: '/' | relative_url }}" class="tag-badge">{{ tag }}</a>
+                            {% endfor %}
+                            {% if post.tags.size > 3 %}
+                                <span class="tag-more">+{{ post.tags.size | minus: 3 }}</span>
+                            {% endif %}
+                        </div>
+                        {% endif %}
+                        <a href="{{ post.url | relative_url }}" class="read-more">Read article</a>
+                    </div>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+
+        <!-- Pagination -->
+        {% if paginator.total_pages > 1 %}
+        <div class="pagination">
+            {% if paginator.previous_page %}
+                <a href="{{ paginator.previous_page_path | relative_url }}" class="previous">← Newer</a>
+            {% else %}
+                <span class="previous">← Newer</span>
+            {% endif %}
+            
+            <span class="page_number">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+            
+            {% if paginator.next_page %}
+                <a href="{{ paginator.next_page_path | relative_url }}" class="next">Older →</a>
+            {% else %}
+                <span class="next">Older →</span>
+            {% endif %}
+        </div>
+        {% endif %}
+    </section>
+</div>

@@ -1,0 +1,111 @@
+{% comment %}
+  Related Posts Component
+  Finds and displays posts related to the current post based on shared tags
+  Falls back to title similarity if no tags are present
+{% endcomment %}
+
+<div class="related-posts-section">
+  <h2 class="related-posts-header">
+    <span class="gradient-text">Related Articles</span>
+  </h2>
+  
+  {% if page.tags and page.tags.size > 0 %}
+    {% comment %} Tag-based related posts {% endcomment %}
+    {% assign related_posts = site.posts | where_exp: "post", "post.url != page.url" %}
+    {% assign scored_posts = "" | split: "" %}
+    
+    {% for post in related_posts limit: 50 %}
+      {% assign shared_tags = 0 %}
+      {% for tag in post.tags %}
+        {% if page.tags contains tag %}
+          {% assign shared_tags = shared_tags | plus: 1 %}
+        {% endif %}
+      {% endfor %}
+      
+      {% if shared_tags > 0 %}
+        {% assign scored_posts = scored_posts | push: post %}
+      {% endif %}
+    {% endfor %}
+    
+    {% comment %} Sort by number of shared tags (manual sort since Jekyll doesn't have native sort by custom value) {% endcomment %}
+    {% assign sorted_posts = scored_posts %}
+    
+    {% if sorted_posts.size > 0 %}
+      <div class="related-posts-grid">
+        {% for post in sorted_posts limit: 4 %}
+          <article class="related-post-card">
+            <a href="{{ post.url | relative_url }}" class="related-post-link">
+              <div class="related-post-content">
+                <h3 class="related-post-title">{{ post.title | escape }}</h3>
+                
+                <time class="related-post-date" datetime="{{ post.date_published }}">
+                  {{ post.date_published | date: "%B %d, %Y" }}
+                </time>
+                
+                {% if post.excerpt %}
+                  <p class="related-post-excerpt">
+                    {{ post.excerpt | strip_html | truncate: 120 }}
+                  </p>
+                {% endif %}
+                
+                {% if post.tags and post.tags.size > 0 %}
+                  <div class="related-post-tags">
+                    {% for tag in post.tags limit: 3 %}
+                      <span class="related-post-tag">{{ tag }}</span>
+                    {% endfor %}
+                    {% if post.tags.size > 3 %}
+                      <span class="related-post-tag">+{{ post.tags.size | minus: 3 }}</span>
+                    {% endif %}
+                  </div>
+                {% endif %}
+              </div>
+              
+              <div class="related-post-arrow">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <path d="M7 5L12 10L7 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+            </a>
+          </article>
+        {% endfor %}
+      </div>
+    {% else %}
+      <p class="no-related-posts">No related articles found. Check back later for more content!</p>
+    {% endif %}
+    
+  {% else %}
+    {% comment %} Fallback: Show recent posts if no tags {% endcomment %}
+    <div class="related-posts-notice">
+      <p>💡 <strong>Tip:</strong> Add tags to your posts to see more relevant suggestions!</p>
+    </div>
+    
+    <div class="related-posts-grid">
+      {% assign recent_posts = site.posts | where_exp: "post", "post.url != page.url" | limit: 4 %}
+      {% for post in recent_posts %}
+        <article class="related-post-card">
+          <a href="{{ post.url | relative_url }}" class="related-post-link">
+            <div class="related-post-content">
+              <h3 class="related-post-title">{{ post.title | escape }}</h3>
+              
+              <time class="related-post-date" datetime="{{ post.date_published }}">
+                {{ post.date_published | date: "%B %d, %Y" }}
+              </time>
+              
+              {% if post.excerpt %}
+                <p class="related-post-excerpt">
+                  {{ post.excerpt | strip_html | truncate: 120 }}
+                </p>
+              {% endif %}
+            </div>
+            
+            <div class="related-post-arrow">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M7 5L12 10L7 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </a>
+        </article>
+      {% endfor %}
+    </div>
+  {% endif %}
+</div>

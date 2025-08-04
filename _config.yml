@@ -1,61 +1,80 @@
-# Jekyll configuration for GitHub Pages
+# Site settings
 title: Bazlur's Blog Archive
-description: A collection of articles on Java, Software Development, and Technology
-baseurl: ""
+description: A comprehensive archive of articles on Java, Software Development, and Technology
+author:
+  name: A N M Bazlur Rahman
+  email: bazlur@jugbd.org
+  url: https://bazlur.ca
+
+# URL settings
 url: "https://bazlur.com"
+baseurl: ""
 
 # Build settings
 markdown: kramdown
-theme: jekyll-theme-minimal
-show_downloads: false
 
-# Directory settings
-include: 
-  - _posts
-  - _posts/images
+# Theme - no theme (using custom layouts)
+# Explicitly set no theme for GitHub Pages
+theme: null
+
+# Plugins (GitHub Pages compatible)
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-relative-links
+  - jekyll-optional-front-matter
+
+# Pagination
+paginate: 10
+paginate_path: "/page/:num/"
 
 # Collections
 collections:
   posts:
     output: true
-    permalink: /:title/
+    permalink: /:year/:month/:day/:title/
 
-# Default layout for markdown files
+# Defaults
 defaults:
   - scope:
-      path: "_posts"
+      path: ""
       type: "posts"
     values:
       layout: "post"
+      author: "A N M Bazlur Rahman"
+  - scope:
+      path: ""
+    values:
+      image: "/assets/img/default-og.jpg"
 
-# Navigation
-header_pages:
-  - about.md
-  - categories.md
+# Exclude files
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - .jekyll-cache
+  - .sass-cache
+  - vendor
+  - archive
+  - vendor/bundle
 
-# Plugins
-plugins:
-  - jekyll-relative-links
-  - jekyll-optional-front-matter
-  - jekyll-seo-tag
-  - jekyll-sitemap
+# Include files
+# include:
+#   - _pages
 
-# Additional settings
-relative_links:
-  enabled: true
-  collections: true
+# SEO settings
+twitter:
+  username: bazlur_rahman
+  card: summary
 
-optional_front_matter:
-  enabled: true
-
-# Site settings
-author:
-  name: Bazlur Rahman
-  email: bazlur@jugbd.org
-  website: https://bazlur.ca
-
-# Social media
 social:
-  twitter: bazlur_rahman
-  github: rokon12
-  linkedin: bazlur
+  name: A N M Bazlur Rahman
+  links:
+    - https://twitter.com/bazlur_rahman
+    - https://github.com/rokon12
+    - https://linkedin.com/in/bazlur
+
+# Google Analytics (if you have one)
+# google_analytics: UA-XXXXXXXXX-X
