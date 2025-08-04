@@ -13,11 +13,9 @@ baseurl: ""
 # Build settings
 markdown: kramdown
 
-# Theme - using custom theme
-# theme: minima
-# minima:
-#   skin: classic
-#   date_format: "%B %d, %Y"
+# Theme - no theme (using custom layouts)
+# Explicitly set no theme for GitHub Pages
+theme: null
 
 # Plugins (GitHub Pages compatible)
 plugins:
