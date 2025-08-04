@@ -1,0 +1,93 @@
+---
+layout: default
+---
+
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+    {% if page.featured_image %}
+    <div class="post-hero-image">
+        <img src="{{ page.featured_image | replace: 'images/', '/rokon12/images/' }}" 
+             alt="{{ page.title | escape }}" 
+             itemprop="image">
+        <div class="hero-overlay"></div>
+    </div>
+    {% endif %}
+    
+    <div class="post-header {% if page.featured_image %}with-hero{% endif %}">
+        <div class="wrapper">
+            <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
+            <p class="post-meta">
+                <time class="dt-published" datetime="{{ page.date_published | date_to_xmlschema }}" itemprop="datePublished">
+                    {{ page.date_published | date: "%B %-d, %Y" }}
+                </time>
+                {% if page.author %}
+                    • <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+                        <span class="p-author h-card" itemprop="name">{{ page.author }}</span>
+                    </span>
+                {% endif %}
+            </p>
+            
+            {% if page.tags and page.tags.size > 0 %}
+            <div class="post-tags-header">
+                {% for tag in page.tags %}
+                    <a href="{{ '/tags/' | append: tag | append: '/' | relative_url }}" class="post-tag-badge">{{ tag }}</a>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+    </div>
+    
+    <div class="wrapper post-wrapper-with-toc">
+        {% if page.original_url %}
+        <div class="original-article-notice">
+            <p>✨ This article was originally published at <a href="{{ page.original_url }}" target="_blank" rel="noopener">{{ page.original_url }}</a></p>
+        </div>
+        {% endif %}
+
+        <div class="post-container">
+            <div class="post-content e-content" itemprop="articleBody">
+                {{ content }}
+            </div>
+            
+            {% comment %} Table of Contents {% endcomment %}
+            {% include toc.html %}
+        </div>
+
+        <footer class="post-footer">
+            {% if page.tags and page.tags.size > 0 %}
+            <div class="post-tags-footer">
+                <h4>Topics covered in this article:</h4>
+                <div class="post-tags-list">
+                    {% for tag in page.tags %}
+                        <a href="{{ '/tags/' | append: tag | append: '/' | relative_url }}" class="post-tag-pill">{{ tag }}</a>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+            
+            <div class="post-meta-footer">
+                <p><em>Article archived on {{ page.date_scraped | date: "%B %d, %Y at %I:%M %p" }}</em></p>
+            </div>
+            
+            <div class="post-nav">
+                {% if page.previous.url %}
+                    <a class="prev" href="{{ page.previous.url | relative_url }}">
+                        <span style="font-size: 0.9rem; color: #6b7280;">← Previous</span><br>
+                        <strong>{{ page.previous.title | truncate: 50 }}</strong>
+                    </a>
+                {% endif %}
+                {% if page.next.url %}
+                    <a class="next" href="{{ page.next.url | relative_url }}">
+                        <span style="font-size: 0.9rem; color: #6b7280;">Next →</span><br>
+                        <strong>{{ page.next.title | truncate: 50 }}</strong>
+                    </a>
+                {% endif %}
+            </div>
+        </footer>
+        
+        {% comment %} Share Buttons {% endcomment %}
+        {% include share-buttons.html %}
+        
+        {% comment %} Related Posts Section {% endcomment %}
+        {% include related-posts.html %}
+    </div>
+</article>

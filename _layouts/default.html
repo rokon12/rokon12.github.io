@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    {% if page.original_url %}
+    <link rel="canonical" href="{{ page.original_url }}">
+    {% endif %}
+    
+    {% seo %}
+    
+    <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="header-wrapper">
+            <a class="site-title" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+            <nav class="site-nav">
+                <a class="nav-link" href="{{ "/" | relative_url }}">Home</a>
+                <a class="nav-link" href="{{ "/archive" | relative_url }}">Archive</a>
+                <a class="nav-link" href="{{ "/tags" | relative_url }}">Tags</a>
+                <a class="nav-link" href="{{ "/search" | relative_url }}">Search</a>
+                <a class="nav-link" href="{{ "/about" | relative_url }}">About</a>
+                <a class="nav-link nav-link-external" href="https://bazlur.ca" target="_blank" rel="noopener">Original Site →</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page-content" aria-label="Content">
+        {{ content }}
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>{{ site.description | escape }}</p>
+            <p>© {{ site.time | date: '%Y' }} {{ site.author.name }}. All articles are archived from <a href="https://bazlur.ca">bazlur.ca</a></p>
+            <p>
+                <a href="{{ "/feed.xml" | relative_url }}">RSS Feed</a> • 
+                <a href="https://twitter.com/{{ site.twitter.username }}">Twitter</a> • 
+                <a href="https://github.com/{{ site.social.links[1] | split: '/' | last }}">GitHub</a>
+            </p>
+        </div>
+    </footer>
+
+</body>
+    <script>
+    // Fade-in animations on scroll
+    document.addEventListener('DOMContentLoaded', function() {
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Observe fade-in elements
+        document.querySelectorAll('.fade-in, .fade-in-up, .fade-in-left, .fade-in-right, .stagger-animation').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Add fade-in classes to post cards
+        document.querySelectorAll('.post-card').forEach((card, index) => {
+            card.classList.add('fade-in-up');
+            card.style.transitionDelay = `${index * 0.1}s`;
+        });
+
+        // Lazy loading for images
+        const imageObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.classList.add('lazy-loading');
+                    img.onload = function() {
+                        img.classList.remove('lazy-loading');
+                        img.classList.add('lazy-loaded');
+                    };
+                    imageObserver.unobserve(img);
+                }
+            });
+        });
+
+        document.querySelectorAll('img').forEach(img => {
+            imageObserver.observe(img);
+        });
+    });
+    </script>
+    
+    <!-- Terminal effects and nerdy features -->
+    <script src="{{ site.baseurl }}/assets/js/terminal.js"></script>
+    
+    <!-- Reading progress bar for posts -->
+    {% if page.layout == 'post' %}
+    <div class="reading-progress" id="reading-progress"></div>
+    <script>
+      document.addEventListener('scroll', function() {
+        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (winScroll / height) * 100;
+        document.getElementById("reading-progress").style.width = scrolled + "%";
+      });
+    </script>
+    {% endif %}
+    
+    <!-- Copy code functionality -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Add copy buttons to all code blocks
+        document.querySelectorAll('pre').forEach(function(pre) {
+          if (pre.querySelector('code')) {
+            const button = document.createElement('button');
+            button.className = 'copy-button';
+            button.textContent = 'Copy';
+            button.addEventListener('click', function() {
+              const code = pre.querySelector('code').textContent;
+              navigator.clipboard.writeText(code).then(function() {
+                button.classList.add('copied');
+                button.textContent = 'Copied';
+                setTimeout(function() {
+                  button.classList.remove('copied');
+                  button.textContent = 'Copy';
+                }, 2000);
+              });
+            });
+            pre.appendChild(button);
+          }
+        });
+        
+        // Initialize theme
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        
+        // Global search shortcut
+        document.addEventListener('keydown', function(e) {
+          // Focus search with /
+          if (e.key === '/' && !e.metaKey && !e.ctrlKey) {
+            const searchInput = document.querySelector('.quick-search-input') || 
+                              document.querySelector('#search-input');
+            if (searchInput && document.activeElement !== searchInput) {
+              e.preventDefault();
+              searchInput.focus();
+              document.body.classList.add('search-focused');
+            }
+          }
+          
+          // Clear focus on ESC
+          if (e.key === 'Escape') {
+            const searchInput = document.querySelector('.quick-search-input') || 
+                              document.querySelector('#search-input');
+            if (searchInput && document.activeElement === searchInput) {
+              searchInput.blur();
+              searchInput.value = '';
+              document.body.classList.remove('search-focused');
+            }
+          }
+        });
+      });
+    </script>
+</html>
