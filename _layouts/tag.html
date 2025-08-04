@@ -27,7 +27,7 @@ layout: default
                 <article class="post-card">
                     {% if post.featured_image %}
                     <a href="{{ post.url | relative_url }}" class="post-card-image">
-                        <img src="{{ post.featured_image | replace: 'images/', '/rokon12/images/' }}" 
+                        <img src="{{ post.featured_image | replace: 'images/', '/images/' }}" 
                              alt="{{ post.title | escape }}" 
                              loading="lazy">
                     </a>

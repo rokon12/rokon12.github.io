@@ -45,11 +45,11 @@ layout: default
         <h2 class="terminal-header" style="text-align: center; font-size: 2.5rem; margin: 3rem 0; font-family: 'JetBrains Mono', monospace;">Recent Articles</h2>
         
         <div class="post-grid">
-            {% for post in paginator.posts %}
+            {% for post in site.posts limit:12 %}
             <article class="post-card">
                 {% if post.featured_image %}
                 <a href="{{ post.url | relative_url }}" class="post-card-image">
-                    <img src="{{ post.featured_image | replace: 'images/', '/rokon12/images/' }}" 
+                    <img src="{{ post.featured_image | replace: 'images/', '/images/' }}" 
                          alt="{{ post.title | escape }}" 
                          loading="lazy">
                 </a>
