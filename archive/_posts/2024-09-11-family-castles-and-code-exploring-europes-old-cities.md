@@ -46,4 +46,8 @@ Overall, this trip was a mix of personal and professional highlights, from reuni
 
 ---
 
-📬 **Stay Updated**: Subscribe to my newsletter at [bazlur.substack.com](https://bazlur.substack.com/) for more articles on Java, Software Architecture, and Technology.
+📬 **Stay Updated**: Subscribe to my newsletter at [bazlur.substack.com](https://bazlur.substack.com/) for more articles on:
+- ☕ Java & all the new features coming along
+- 🧵 Concurrency & Virtual Threads
+- 🧠 LLMs, LangChain4j & AI Integration
+- 🚀 Quarkus, Spring & Jakarta EE
