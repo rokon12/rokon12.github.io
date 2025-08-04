@@ -1,0 +1,156 @@
+{% comment %}
+Table of Contents (TOC) include
+Generates a sticky sidebar TOC from h2 and h3 headings in the post content
+Includes mobile-responsive collapsible design
+{% endcomment %}
+
+{% comment %} Only show TOC if we have rendered HTML content {% endcomment %}
+{% if content contains '<h2' or content contains '<h3' %}
+{% assign toc_html = '' %}
+
+<nav class="toc" id="toc">
+  <div class="toc-header">
+    <button class="toc-toggle" id="toc-toggle" aria-label="Toggle table of contents">
+      <span class="toc-title">Table of Contents</span>
+      <svg class="toc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="6,9 12,15 18,9"></polyline>
+      </svg>
+    </button>
+  </div>
+  
+  <div class="toc-content" id="toc-content">
+    <ul class="toc-list" id="toc-list">
+      <!-- TOC items will be populated by JavaScript -->
+    </ul>
+  </div>
+</nav>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Find all h2 and h3 headings in the post content
+  var contentElement = document.querySelector('.post-content');
+  if (!contentElement) return;
+  
+  var headings = contentElement.querySelectorAll('h2, h3');
+  var tocList = document.getElementById('toc-list');
+  var toc = document.getElementById('toc');
+  
+  // Hide TOC if less than 3 headings
+  if (headings.length < 3) {
+    if (toc) toc.style.display = 'none';
+    return;
+  }
+  
+  // Build TOC and add IDs to headings
+  headings.forEach(function(heading, index) {
+    // Skip empty headings
+    var text = heading.textContent.trim();
+    if (!text) return;
+    
+    // Generate ID if not present
+    if (!heading.id) {
+      var id = text
+        .toLowerCase()
+        .replace(/[^\w\s-]/g, '') // Remove special characters
+        .replace(/\s+/g, '-')      // Replace spaces with hyphens
+        .replace(/-+/g, '-')       // Replace multiple hyphens with single
+        .replace(/^-|-$/g, '');    // Remove leading/trailing hyphens
+      
+      // Ensure unique ID
+      var baseId = id || 'heading';
+      var counter = 1;
+      while (document.getElementById(id || baseId)) {
+        id = baseId + '-' + counter;
+        counter++;
+      }
+      
+      heading.id = id || baseId;
+    }
+    
+    // Create TOC item
+    var li = document.createElement('li');
+    li.className = 'toc-item toc-level-' + heading.tagName.toLowerCase();
+    
+    var a = document.createElement('a');
+    a.href = '#' + heading.id;
+    a.className = 'toc-link';
+    a.setAttribute('data-target', heading.id);
+    a.textContent = text;
+    
+    li.appendChild(a);
+    tocList.appendChild(li);
+  });
+  
+  // TOC toggle functionality
+  var tocToggle = document.getElementById('toc-toggle');
+  if (tocToggle) {
+    tocToggle.addEventListener('click', function() {
+      toc.classList.toggle('toc-expanded');
+      var isExpanded = toc.classList.contains('toc-expanded');
+      tocToggle.setAttribute('aria-expanded', isExpanded);
+    });
+  }
+  
+  // Smooth scrolling for TOC links
+  var tocLinks = tocList.querySelectorAll('.toc-link');
+  tocLinks.forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      var targetId = this.getAttribute('data-target');
+      var targetElement = document.getElementById(targetId);
+      
+      if (targetElement) {
+        var yOffset = -100; // Offset for fixed header
+        var y = targetElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        
+        window.scrollTo({
+          top: y,
+          behavior: 'smooth'
+        });
+        
+        // Close mobile TOC after navigation
+        if (window.innerWidth <= 1199) {
+          toc.classList.remove('toc-expanded');
+          if (tocToggle) tocToggle.setAttribute('aria-expanded', 'false');
+        }
+      }
+    });
+  });
+  
+  // Highlight current section on scroll
+  function highlightCurrentSection() {
+    var scrollPos = window.scrollY + 120;
+    var currentSection = null;
+    
+    headings.forEach(function(heading) {
+      if (heading.getBoundingClientRect().top + window.scrollY <= scrollPos) {
+        currentSection = heading.id;
+      }
+    });
+    
+    // Update active states
+    tocLinks.forEach(function(link) {
+      link.classList.remove('active');
+      if (currentSection && link.getAttribute('data-target') === currentSection) {
+        link.classList.add('active');
+      }
+    });
+  }
+  
+  // Throttled scroll handler
+  var isScrolling = false;
+  window.addEventListener('scroll', function() {
+    if (!isScrolling) {
+      window.requestAnimationFrame(function() {
+        highlightCurrentSection();
+        isScrolling = false;
+      });
+      isScrolling = true;
+    }
+  });
+  
+  // Initial highlight
+  highlightCurrentSection();
+});
+</script>
+{% endif %}
