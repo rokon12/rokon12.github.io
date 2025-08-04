@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  jekyll:
+    image: jekyll/jekyll:latest
+    container_name: rokon12-archive
+    command: jekyll serve --baseurl "" --force_polling --livereload
+    ports:
+      - "4000:4000"
+      - "35729:35729"
+    volumes:
+      - .:/srv/jekyll
+      - jekyll_bundle:/usr/local/bundle
+    environment:
+      - JEKYLL_ENV=development
+
+volumes:
+  jekyll_bundle:
