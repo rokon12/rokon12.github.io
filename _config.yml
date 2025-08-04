@@ -12,9 +12,6 @@ baseurl: ""
 
 # Build settings
 markdown: kramdown
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
 
 # Theme - using custom theme
 # theme: minima
@@ -22,12 +19,14 @@ kramdown:
 #   skin: classic
 #   date_format: "%B %d, %Y"
 
-# Plugins
+# Plugins (GitHub Pages compatible)
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-paginate
+  - jekyll-relative-links
+  - jekyll-optional-front-matter
 
 # Pagination
 paginate: 10
@@ -64,8 +63,8 @@ exclude:
   - vendor/bundle
 
 # Include files
-include:
-  - _pages
+# include:
+#   - _pages
 
 # SEO settings
 twitter:
