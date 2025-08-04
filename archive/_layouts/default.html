@@ -100,4 +100,50 @@
         });
     });
     </script>
+    
+    <!-- Terminal effects and nerdy features -->
+    <script src="{{ site.baseurl }}/assets/js/terminal.js"></script>
+    
+    <!-- Reading progress bar for posts -->
+    {% if page.layout == 'post' %}
+    <div class="reading-progress" id="reading-progress"></div>
+    <script>
+      document.addEventListener('scroll', function() {
+        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (winScroll / height) * 100;
+        document.getElementById("reading-progress").style.width = scrolled + "%";
+      });
+    </script>
+    {% endif %}
+    
+    <!-- Copy code functionality -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Add copy buttons to all code blocks
+        document.querySelectorAll('pre').forEach(function(pre) {
+          if (pre.querySelector('code')) {
+            const button = document.createElement('button');
+            button.className = 'copy-button';
+            button.textContent = 'Copy';
+            button.addEventListener('click', function() {
+              const code = pre.querySelector('code').textContent;
+              navigator.clipboard.writeText(code).then(function() {
+                button.classList.add('copied');
+                button.textContent = 'Copied';
+                setTimeout(function() {
+                  button.classList.remove('copied');
+                  button.textContent = 'Copy';
+                }, 2000);
+              });
+            });
+            pre.appendChild(button);
+          }
+        });
+        
+        // Initialize theme
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+      });
+    </script>
 </html>

@@ -2,19 +2,55 @@
 layout: default
 ---
 
-<div class="hero-section">
+<!-- ASCII Art Banner -->
+<pre class="ascii-banner">
+╔═══════════════════════════════════════════════════════════════════════════════╗
+║  ____               _                  _             _     _                 ║
+║ | __ )  __ _ _____ | |_   _ _ __      / \   _ __ ___| |__ (_)_   _____       ║
+║ |  _ \ / _` |_  / || | | | | '__|    / _ \ | '__/ __| '_ \| \ \ / / _ \      ║
+║ | |_) | (_| |/ /| || | |_| | |      / ___ \| | | (__| | | | |\ V /  __/      ║
+║ |____/ \__,_/___|_| _|\__,_|_|     /_/   \_\_|  \___|_| |_|_| \_/ \___|      ║
+║                                                                               ║
+║                        > Java | Code | Architecture <                        ║
+╚═══════════════════════════════════════════════════════════════════════════════╝
+</pre>
+
+<div class="hero-section crt-effect">
     <div class="hero-content">
-        <h1 class="hero-title">{{ site.title }}</h1>
+        <h1 class="hero-title terminal-header">{{ site.title }}</h1>
         <p class="hero-description">{{ site.description }}</p>
+        
+        <!-- Stats Dashboard -->
+        <div class="stats-dashboard">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-value">{{ site.posts | size }}</div>
+                    <div class="stat-label">Articles</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">{{ site.data.tags | size }}</div>
+                    <div class="stat-label">Topics</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">7+</div>
+                    <div class="stat-label">Years</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">∞</div>
+                    <div class="stat-label">Learning</div>
+                </div>
+            </div>
+        </div>
+        
         <div class="archive-notice">
-            <p>📚 A comprehensive archive of <strong>{{ site.posts | size }}+ articles</strong> originally published on <a href="https://bazlur.ca">bazlur.ca</a>. All content remains the property of the original author and is preserved here for reference.</p>
+            <p>📚 A comprehensive archive originally published on <a href="https://bazlur.ca">bazlur.ca</a>. Press <kbd>Cmd+K</kbd> or <kbd>Ctrl+K</kbd> to open command palette.</p>
         </div>
     </div>
 </div>
 
 <div class="wrapper">
     <section class="recent-posts">
-        <h2 style="text-align: center; font-size: 2.5rem; margin: 3rem 0;">Recent Articles</h2>
+        <h2 class="terminal-header" style="text-align: center; font-size: 2.5rem; margin: 3rem 0; font-family: 'JetBrains Mono', monospace;">Recent Articles</h2>
         
         <div class="post-grid">
             {% for post in paginator.posts %}
