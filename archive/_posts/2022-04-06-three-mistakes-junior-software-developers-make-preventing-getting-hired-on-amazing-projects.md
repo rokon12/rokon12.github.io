@@ -72,4 +72,6 @@ I will keep posting more detail in later articles in this series, so stay tuned!
 
 *** ** * ** ***
 
-Type your email... {#subscribe-email}
+---
+
+📬 **Stay Updated**: Subscribe to my newsletter at [bazlur.substack.com](https://bazlur.substack.com/) for more articles on Java, Software Architecture, and Technology.

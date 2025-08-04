@@ -38,4 +38,6 @@ Note that, you're not just getting updates---you're joining a network of softwar
 
 *** ** * ** ***
 
-Type your email... {#subscribe-email}
+---
+
+📬 **Stay Updated**: Subscribe to my newsletter at [bazlur.substack.com](https://bazlur.substack.com/) for more articles on Java, Software Architecture, and Technology.

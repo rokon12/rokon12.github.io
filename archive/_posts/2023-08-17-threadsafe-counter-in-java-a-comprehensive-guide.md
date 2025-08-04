@@ -284,4 +284,6 @@ It's worth noting that achieving accurate results through benchmarking can be ch
 
 *** ** * ** ***
 
-Type your email... {#subscribe-email}
+---
+
+📬 **Stay Updated**: Subscribe to my newsletter at [bazlur.substack.com](https://bazlur.substack.com/) for more articles on Java, Software Architecture, and Technology.

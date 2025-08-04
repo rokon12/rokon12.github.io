@@ -260,4 +260,6 @@ Finally, if you want to know more about what's going on with Jakarta EE, please 
 
 *** ** * ** ***
 
-Type your email... {#subscribe-email}
+---
+
+📬 **Stay Updated**: Subscribe to my newsletter at [bazlur.substack.com](https://bazlur.substack.com/) for more articles on Java, Software Architecture, and Technology.

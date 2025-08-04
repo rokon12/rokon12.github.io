@@ -60,4 +60,6 @@ More about this can be found here: <https://www.infoq.com/news/2024/05/jep477-im
 
 *** ** * ** ***
 
-Type your email... {#subscribe-email}
+---
+
+📬 **Stay Updated**: Subscribe to my newsletter at [bazlur.substack.com](https://bazlur.substack.com/) for more articles on Java, Software Architecture, and Technology.

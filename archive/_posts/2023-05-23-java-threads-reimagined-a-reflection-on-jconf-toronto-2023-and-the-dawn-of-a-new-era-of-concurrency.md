@@ -64,4 +64,6 @@ In conclusion, JConf Toronto 2023 was a confluence of minds and ideas, weaving t
 
 *** ** * ** ***
 
-Type your email... {#subscribe-email}
+---
+
+📬 **Stay Updated**: Subscribe to my newsletter at [bazlur.substack.com](https://bazlur.substack.com/) for more articles on Java, Software Architecture, and Technology.

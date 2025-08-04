@@ -61,4 +61,6 @@ Bazlur Rahman: ***It's good that you mentioned the book Clean Code. I see a tend
 
 *** ** * ** ***
 
-Type your email... {#subscribe-email}
+---
+
+📬 **Stay Updated**: Subscribe to my newsletter at [bazlur.substack.com](https://bazlur.substack.com/) for more articles on Java, Software Architecture, and Technology.

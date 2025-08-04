@@ -95,4 +95,6 @@ In this example, we initialize a CountDownLatch with a count of 4. Then, we crea
 
 *** ** * ** ***
 
-Type your email... {#subscribe-email}
+---
+
+📬 **Stay Updated**: Subscribe to my newsletter at [bazlur.substack.com](https://bazlur.substack.com/) for more articles on Java, Software Architecture, and Technology.

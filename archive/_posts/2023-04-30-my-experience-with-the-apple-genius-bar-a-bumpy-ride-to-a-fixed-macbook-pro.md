@@ -36,4 +36,6 @@ In conclusion, while my MacBook Pro was ultimately fixed, the experience was far
 
 *** ** * ** ***
 
-Type your email... {#subscribe-email}
+---
+
+📬 **Stay Updated**: Subscribe to my newsletter at [bazlur.substack.com](https://bazlur.substack.com/) for more articles on Java, Software Architecture, and Technology.
